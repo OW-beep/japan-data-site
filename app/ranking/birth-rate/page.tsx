@@ -1,11 +1,11 @@
-import cities from "@/data/cities.json";
-
 export default function Page() {
   return (
-    <main>
-      <h1>出生率ランキング（未実装）</h1>
+    <main className="p-8">
+      <h1 className="text-2xl font-bold">
+        出生率ランキング（準備中）
+      </h1>
 
-      <p>※まだデータ取得が未完成です</p>
+      <p>自動データ生成待ち</p>
     </main>
   );
 }
