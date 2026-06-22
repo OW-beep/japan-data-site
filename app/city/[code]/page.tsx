@@ -7,12 +7,20 @@ export default function Page({
 }) {
   const city = cities.find((c) => c.code === params.code);
 
-  if (!city) return <div>Not Found</div>;
+  if (!city) {
+    return <div>Not Found</div>;
+  }
 
   return (
     <main style={{ padding: 20 }}>
       <h1>{city.name}</h1>
-      <p>{city.population?.toLocaleString()}</p>
+
+      <p>
+        値:{" "}
+        {city.value
+          ? Number(city.value).toLocaleString()
+          : "データなし"}
+      </p>
     </main>
   );
 }
