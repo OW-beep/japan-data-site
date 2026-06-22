@@ -1,22 +1,18 @@
-import Link from "next/link";
 import cities from "@/data/cities.json";
 
 export default function Page() {
+  const ranking = [...cities].sort(
+    (a, b) => (b.population ?? 0) - (a.population ?? 0)
+  );
+
   return (
     <main className="p-8">
-      <h1 className="text-3xl font-bold mb-6">
-        全国データ一覧
-      </h1>
+      <h1>人口ランキング</h1>
 
-      <ul className="space-y-2">
-        {cities.map((c) => (
+      <ul>
+        {ranking.map((c) => (
           <li key={c.code}>
-            <Link
-              className="text-blue-600 underline"
-              href={`/city/${c.code}`}
-            >
-              {c.name}
-            </Link>
+            {c.name}：{c.population?.toLocaleString()}
           </li>
         ))}
       </ul>

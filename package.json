@@ -6,9 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
     "update:data": "ts-node scripts/buildCities.ts"
-  },
+  }
   "dependencies": {
     "csv-parser": "^3.2.1",
     "dotenv": "^17.4.2",

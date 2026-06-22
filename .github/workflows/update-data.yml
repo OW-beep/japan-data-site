@@ -1,8 +1,8 @@
-name: update-data
+name: update-e-stat-data
 
 on:
   schedule:
-    - cron: "0 3 * * 1"
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 jobs:
@@ -26,5 +26,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add data/cities.json
-          git commit -m "auto update" || exit 0
+          git commit -m "auto update e-stat data" || exit 0
           git push
