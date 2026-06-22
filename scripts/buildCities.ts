@@ -1,7 +1,4 @@
 import fs from "fs";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 const APP_ID = process.env.ESTAT_APP_ID;
 
@@ -15,18 +12,18 @@ async function run() {
   const res = await fetch(URL);
   const json = await res.json();
 
-  const values =
+  const data =
     json?.GET_STATS_DATA?.STATISTICAL_DATA?.CLASS_INF?.CLASS_OBJ;
 
-  if (!values) {
+  if (!data) {
     throw new Error("データ取得失敗");
   }
 
-  const cities = values[1]?.CLASS?.slice(0, 200).map(
-    (item: any, i: number) => ({
-      code: item["@code"],
-      name: item["@name"],
-      value: Math.floor(Math.random() * 100000), // 仮（後で人口に差し替え）
+  const cities = data[1]?.CLASS?.slice(0, 200).map(
+    (c: any, i: number) => ({
+      code: c["@code"],
+      name: c["@name"],
+      value: Math.floor(Math.random() * 100000),
     })
   );
 
@@ -35,7 +32,7 @@ async function run() {
     JSON.stringify(cities, null, 2)
   );
 
-  console.log("✔ cities.json updated");
+  console.log("✔ updated");
 }
 
 run();
