@@ -9,13 +9,13 @@ export default function Page() {
       </h1>
 
       <ul className="space-y-2">
-        {cities.map((city) => (
-          <li key={city.code}>
+        {cities.map((c) => (
+          <li key={c.code}>
             <Link
               className="text-blue-600 underline"
-              href={`/city/${city.code}`}
+              href={`/city/${c.code}`}
             >
-              {city.name}
+              {c.name}
             </Link>
           </li>
         ))}
