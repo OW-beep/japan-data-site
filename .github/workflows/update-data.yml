@@ -1,0 +1,35 @@
+name: Update City Data
+
+on:
+  schedule:
+    - cron: "0 3 * * *"  # 毎日12時（日本時間）
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run data update script
+        run: npm run update:data
+        env:
+          ESTAT_APP_ID: ${{ secrets.ESTAT_APP_ID }}
+
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "auto update data" || exit 0
+          git push
