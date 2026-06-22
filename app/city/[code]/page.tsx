@@ -1,20 +1,5 @@
 import cities from "@/data/cities.json";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { code: string };
-}) {
-  const city = cities.find((c) => c.code === params.code);
-
-  return {
-    title: city ? `${city.name}の人口・基本データ` : "データなし",
-    description: city
-      ? `${city.name}の人口や基本情報を掲載しています。`
-      : "データが見つかりません",
-  };
-}
-
 export default function Page({
   params,
 }: {
@@ -22,14 +7,12 @@ export default function Page({
 }) {
   const city = cities.find((c) => c.code === params.code);
 
-  if (!city) {
-    return <div>データが見つかりません</div>;
-  }
+  if (!city) return <div>Not Found</div>;
 
   return (
-    <main className="p-8">
-      <h1 className="text-2xl font-bold">{city.name}</h1>
-      <p>人口: {city.population?.toLocaleString()}</p>
+    <main style={{ padding: 20 }}>
+      <h1>{city.name}</h1>
+      <p>{city.population?.toLocaleString()}</p>
     </main>
   );
 }
