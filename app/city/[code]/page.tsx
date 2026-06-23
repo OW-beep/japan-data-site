@@ -1,6 +1,25 @@
 import cities from "@/data/cities.json";
 import Link from "next/link";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { code: string };
+}) {
+  const city = cities.find(
+    (c) => c.code === params.code
+  );
+
+  return {
+    title: city
+      ? `${city.name}の人口・データ`
+      : "自治体データ",
+    description: city
+      ? `${city.name}の人口は${city.population.toLocaleString()}人です。全国自治体データを比較できます。`
+      : "自治体データページ",
+  };
+}
+
 export default function Page({
   params,
 }: {
@@ -14,8 +33,6 @@ export default function Page({
     return <main>データなし</main>;
   }
 
-  const prefCode = city.code.slice(0, 2);
-
   return (
     <main
       style={{
@@ -24,40 +41,28 @@ export default function Page({
         padding: 24,
       }}
     >
-      <h1 style={{ fontSize: 26 }}>
-        {city.name}
-      </h1>
+      <h1>{city.name}</h1>
 
-      <div
-        style={{
-          marginTop: 20,
-          padding: 16,
-          background: "white",
-          borderRadius: 12,
-          boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
-        }}
-      >
-        <p>
-          👥 人口：
-          <strong>
-            {city.population?.toLocaleString()}
-          </strong>
-        </p>
+      <div style={box}>
+        👥 人口：
+        <strong>
+          {city.population.toLocaleString()}
+        </strong>
       </div>
 
-      <h2 style={{ marginTop: 30 }}>
-        🔗 関連リンク
-      </h2>
-
-      <div style={{ marginTop: 10 }}>
-        <Link href={`/pref/${prefCode}`}>
-          👉 同じ都道府県を見る
-        </Link>
-        <br />
+      <div style={{ marginTop: 20 }}>
         <Link href="/ranking/population">
-          👉 人口ランキング
+          ← 人口ランキングへ
         </Link>
       </div>
     </main>
   );
 }
+
+const box = {
+  marginTop: 20,
+  padding: 16,
+  background: "white",
+  borderRadius: 12,
+  boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+};
