@@ -1,33 +1,30 @@
 import Link from "next/link";
+import cities from "@/data/cities.json";
 
-export default function Page() {
+export default function Home() {
   return (
-    <main className="p-8">
-      <h1 className="text-3xl font-bold">
-        Japan Data Site
+    <main className="max-w-5xl mx-auto p-8">
+      <h1 className="text-4xl font-bold mb-4">
+        日本自治体データベース
       </h1>
 
-      <p className="mt-4">
-        データランキングサイト
+      <p className="mb-8">
+        全国 {cities.length} 自治体の人口データを掲載
       </p>
 
-      <div className="mt-6 space-y-2">
-        <Link className="text-blue-600 underline" href="/ranking">
-          全国一覧
-        </Link>
+      <ul className="space-y-4">
+        <li>
+          <Link href="/ranking/population">
+            人口ランキング
+          </Link>
+        </li>
 
-        <br />
-
-        <Link className="text-blue-600 underline" href="/ranking/population">
-          人口ランキング
-        </Link>
-
-        <br />
-
-        <Link className="text-blue-600 underline" href="/ranking/birth-rate">
-          出生率ランキング
-        </Link>
-      </div>
+        <li>
+          <Link href="/city/12204">
+            船橋市を見る
+          </Link>
+        </li>
+      </ul>
     </main>
   );
 }
