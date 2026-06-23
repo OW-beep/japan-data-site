@@ -1,11 +1,5 @@
-// @ts-nocheck
-
-import dotenv from "dotenv";
+import "dotenv/config";
 import fs from "fs";
-
-dotenv.config({
-  path: ".env.local",
-});
 
 const APP_ID = process.env.ESTAT_APP_ID;
 
@@ -14,6 +8,8 @@ if (!APP_ID) {
 }
 
 async function run() {
+  console.log("fetching...");
+
   const url =
     "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData" +
     `?appId=${APP_ID}` +
@@ -21,163 +17,83 @@ async function run() {
     "&cdCat01=A1101" +
     "&metaGetFlg=Y";
 
-  console.log("fetching...");
-
   const res = await fetch(url);
-
-  if (!res.ok) {
-    throw new Error(`HTTP ${res.status}`);
-  }
-
   const json = await res.json();
 
-  const statData =
-    json?.GET_STATS_DATA?.STATISTICAL_DATA;
+  const statData = json?.GET_STATS_DATA?.STATISTICAL_DATA;
 
   if (!statData) {
     console.log(JSON.stringify(json, null, 2));
-    throw new Error("統計データ取得失敗");
+    throw new Error("データ取得失敗");
   }
 
-  // -------------------------
-  // 自治体コード → 自治体名
-  // -------------------------
+  const classObj = statData?.CLASS_INF?.CLASS_OBJ ?? [];
 
-  const classObj =
-    statData?.CLASS_INF?.CLASS_OBJ ?? [];
+  const areaClass = Array.isArray(classObj)
+    ? classObj.find((x) => x?.["@id"] === "area")
+    : null;
 
-  const classList = Array.isArray(classObj)
-    ? classObj
-    : [classObj];
+  const areaListRaw = areaClass?.CLASS ?? [];
 
-  const areaClass = classList.find(
-    (x) => x?.["@id"] === "area"
-  );
+  const areaList = Array.isArray(areaListRaw)
+    ? areaListRaw
+    : [areaListRaw];
 
-  const areaItems =
-    areaClass?.CLASS ?? [];
-
-  const areaList = Array.isArray(areaItems)
-    ? areaItems
-    : [areaItems];
-
-  const areaMap = new Map();
+  const areaMap = new Map<string, string>();
 
   for (const area of areaList) {
-    areaMap.set(
-      String(area["@code"]),
-      String(area["@name"])
-    );
+    if (!area?.["@code"]) continue;
+    areaMap.set(String(area["@code"]), String(area["$"]));
   }
 
-  console.log(
-    "船橋市確認:",
-    areaMap.get("12204")
-  );
+  const values = statData?.DATA_INF?.VALUE ?? [];
+  const rows = Array.isArray(values) ? values : [values];
 
-  // -------------------------
-  // 人口データ
-  // -------------------------
-
-  const values =
-    statData?.DATA_INF?.VALUE ?? [];
-
-  const rows = Array.isArray(values)
-    ? values
-    : [values];
-
-  console.log(
-    "rows =",
-    rows.length
-  );
-
-  // 自治体ごとに最新年だけ残す
-
-  const latestMap = new Map();
+  // 最新値だけ抽出
+  const latestMap = new Map<string, any>();
 
   for (const row of rows) {
-    const area = String(
-      row["@area"]
-    );
+    const area = String(row?.["@area"] ?? "");
+    const time = Number(row?.["@time"] ?? 0);
 
-    const time = Number(
-      row["@time"] ?? 0
-    );
+    if (!area) continue;
 
-    const current =
-      latestMap.get(area);
+    const current = latestMap.get(area);
 
-    if (
-      !current ||
-      time >
-        Number(
-          current["@time"] ?? 0
-        )
-    ) {
-      latestMap.set(
-        area,
-        row
-      );
+    if (!current || time > Number(current?.["@time"] ?? 0)) {
+      latestMap.set(area, row);
     }
   }
 
   const cities = [];
 
   for (const row of latestMap.values()) {
-    const code = String(
-      row["@area"]
-    );
+    const code = String(row?.["@area"] ?? "");
+    const name = areaMap.get(code) ?? code;
 
-    const fullName =
-      areaMap.get(code) ?? code;
-
-    const cityName =
-      fullName.includes(" ")
-        ? fullName.split(" ").slice(1).join(" ")
-        : fullName;
+    // ❌ 特別区まとめ除外
+    if (name.includes("特別区部")) continue;
 
     cities.push({
       code,
-      name: cityName,
-      population: Number(
-        row["$"] ?? 0
-      ),
+      name,
+      population: Number(row?.["$"] ?? 0),
     });
   }
 
   const filtered = cities
-    .filter(
-      (c) => c.population > 0
-    )
-    .sort(
-      (a, b) =>
-        b.population -
-        a.population
-    );
+    .filter((c) => c.population > 0)
+    .sort((a, b) => b.population - a.population);
 
-  fs.mkdirSync("data", {
-    recursive: true,
-  });
+  fs.mkdirSync("data", { recursive: true });
 
   fs.writeFileSync(
     "data/cities.json",
-    JSON.stringify(
-      filtered,
-      null,
-      2
-    ),
+    JSON.stringify(filtered, null, 2),
     "utf8"
   );
 
-  console.log(
-    "generated",
-    filtered.length,
-    "cities"
-  );
-
-  console.log(
-    filtered.slice(0, 20)
-  );
+  console.log("generated", filtered.length, "cities");
 }
 
 run().catch((err) => {
