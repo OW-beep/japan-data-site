@@ -1,21 +1,30 @@
 import cities from "@/data/cities.json";
 
+type City = {
+  code: string;
+  name: string;
+  population?: number;
+  birthRate?: number;
+};
+
 export default function Page() {
-  const ranking = [...cities].sort(
+  const ranking = [...(cities as City[])].sort(
     (a, b) => (b.population ?? 0) - (a.population ?? 0)
   );
 
   return (
-    <main className="p-8">
+    <main style={{ padding: 20 }}>
       <h1>人口ランキング</h1>
 
-      <ul>
-        {ranking.map((c) => (
-          <li key={c.code}>
-            {c.name}：{c.population?.toLocaleString()}
+      <ol>
+        {ranking.slice(0, 50).map((city) => (
+          <li key={city.code}>
+            {city.name}
+            {" "}
+            {(city.population ?? 0).toLocaleString()}人
           </li>
         ))}
-      </ul>
+      </ol>
     </main>
   );
 }

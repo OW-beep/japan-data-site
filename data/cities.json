@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "code": "12204",
+    "name": "船橋市",
+    "population": 647955,
+    "birthRate": 1.18
+  },
+  {
+    "code": "13101",
+    "name": "千代田区",
+    "population": 68324,
+    "birthRate": 1.09
+  }
+]

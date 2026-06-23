@@ -1,41 +1,58 @@
 import cities from "@/data/cities.json";
 
+type City = {
+  code: string;
+  name: string;
+  population?: number;
+  birthRate?: number;
+};
+
 export async function generateMetadata({
   params,
 }: {
-  params: { code: string };
+  params: Promise<{ code: string }>;
 }) {
-  const city = cities.find((c) => c.code === params.code);
+  const { code } = await params;
+
+  const city = (cities as City[]).find(
+    (c) => c.code === code
+  );
 
   return {
-    title: city ? `${city.name}のデータ` : "都市データ",
-    description: city
-      ? `${city.name}の統計データ`
-      : "都市データページ",
+    title: city
+      ? `${city.name}のデータ`
+      : "都市データ",
   };
 }
 
-export default function Page({
+export default async function Page({
   params,
 }: {
-  params: { code: string };
+  params: Promise<{ code: string }>;
 }) {
-  const city = cities.find((c) => c.code === params.code);
+  const { code } = await params;
+
+  const city = (cities as City[]).find(
+    (c) => c.code === code
+  );
 
   if (!city) {
-    return <div className="p-8">データが見つかりません</div>;
+    return <main>データがありません</main>;
   }
 
   return (
-    <main className="p-8">
-      <h1 className="text-2xl font-bold">{city.name}</h1>
+    <main style={{ padding: 20 }}>
+      <h1>{city.name}</h1>
 
-      <p className="mt-4">
-        コード: {city.code}
+      <p>
+        人口：
+        {city.population?.toLocaleString() ??
+          "-"}
       </p>
 
       <p>
-        データ: {city.value ?? "未設定"}
+        出生率：
+        {city.birthRate ?? "-"}
       </p>
     </main>
   );
