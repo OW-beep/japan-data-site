@@ -1,10 +1,5 @@
 import "./globals.css";
 
-export const metadata = {
-  title: "日本自治体データ",
-  description: "全国自治体の人口・ランキングを可視化",
-};
-
 export default function RootLayout({
   children,
 }: {
@@ -12,8 +7,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body style={{ margin: 0, background: "#0b0f19", color: "white" }}>
-        {children}
+      <body>
+        <div
+          style={{
+            fontFamily: "system-ui",
+            background: "#f6f7fb",
+            minHeight: "100vh",
+            color: "#111",
+          }}
+        >
+          <header
+            style={{
+              background: "white",
+              padding: "16px 24px",
+              borderBottom: "1px solid #eee",
+              position: "sticky",
+              top: 0,
+            }}
+          >
+            <h1 style={{ fontSize: 18, margin: 0 }}>
+              🇯🇵 日本データランキング
+            </h1>
+          </header>
+
+          {children}
+        </div>
       </body>
     </html>
   );

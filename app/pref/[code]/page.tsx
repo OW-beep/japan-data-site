@@ -1,32 +1,55 @@
 import cities from "@/data/cities.json";
+import Link from "next/link";
 
 export default function Page({
   params,
 }: {
   params: { code: string };
 }) {
-  const prefCode = params.code;
-
-  const filtered = cities.filter((c) =>
-    c.code.startsWith(prefCode)
+  const list = cities.filter((c) =>
+    c.code.startsWith(params.code)
   );
 
-  const total = filtered.reduce(
+  const total = list.reduce(
     (sum, c) => sum + (c.population ?? 0),
     0
   );
 
   return (
-    <main style={{ padding: 20 }}>
-      <h1>都道府県コード：{prefCode}</h1>
+    <main
+      style={{
+        maxWidth: 900,
+        margin: "0 auto",
+        padding: 24,
+      }}
+    >
+      <h1>🗾 都道府県コード：{params.code}</h1>
 
-      <p>自治体数：{filtered.length}</p>
-      <p>人口合計：{total.toLocaleString()}</p>
+      <div
+        style={{
+          marginTop: 16,
+          background: "white",
+          padding: 16,
+          borderRadius: 12,
+        }}
+      >
+        <p>自治体数：{list.length}</p>
+        <p>
+          人口合計：{total.toLocaleString()}
+        </p>
+      </div>
 
-      <h2>自治体一覧</h2>
+      <h2 style={{ marginTop: 24 }}>
+        自治体一覧
+      </h2>
+
       <ul>
-        {filtered.map((c) => (
-          <li key={c.code}>{c.name}</li>
+        {list.map((c) => (
+          <li key={c.code}>
+            <Link href={`/city/${c.code}`}>
+              {c.name}
+            </Link>
+          </li>
         ))}
       </ul>
     </main>

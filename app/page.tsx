@@ -2,44 +2,53 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <main style={{ padding: 24, maxWidth: 900, margin: "0 auto" }}>
-      <h1 style={{ fontSize: 28, fontWeight: 700 }}>
-        日本自治体データ
-      </h1>
-
-      <p style={{ color: "#aaa" }}>
-        全国1,900+自治体の人口・ランキングをリアルタイム可視化
-      </p>
-
-      <div style={{ marginTop: 30, display: "grid", gap: 12 }}>
-        <LinkCard href="/ranking/population" title="人口ランキング" />
-        <LinkCard href="/search" title="自治体検索" />
-      </div>
-    </main>
-  );
-}
-
-function LinkCard({
-  href,
-  title,
-}: {
-  href: string;
-  title: string;
-}) {
-  return (
-    <Link
-      href={href}
+    <main
       style={{
-        padding: 16,
-        borderRadius: 12,
-        background: "#121a2a",
-        border: "1px solid #24324d",
-        display: "block",
-        textDecoration: "none",
-        color: "white",
+        maxWidth: 900,
+        margin: "0 auto",
+        padding: 24,
       }}
     >
-      {title}
-    </Link>
+      <h1 style={{ fontSize: 28 }}>
+        🇯🇵 日本自治体データランキング
+      </h1>
+
+      <p style={{ color: "#555", marginTop: 10 }}>
+        全国1,900以上の市区町村データを可視化した統計サイト
+      </p>
+
+      <div style={{ marginTop: 30 }}>
+        <Link
+          href="/ranking/population"
+          style={{
+            display: "block",
+            padding: 16,
+            background: "white",
+            borderRadius: 12,
+            boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+            marginBottom: 12,
+            textDecoration: "none",
+            color: "#111",
+          }}
+        >
+          📊 人口ランキングを見る
+        </Link>
+
+        <Link
+          href="/pref/13"
+          style={{
+            display: "block",
+            padding: 16,
+            background: "white",
+            borderRadius: 12,
+            boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+            textDecoration: "none",
+            color: "#111",
+          }}
+        >
+          🗾 東京都データを見る
+        </Link>
+      </div>
+    </main>
   );
 }

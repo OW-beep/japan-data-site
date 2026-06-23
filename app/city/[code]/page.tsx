@@ -1,80 +1,62 @@
 import cities from "@/data/cities.json";
+import Link from "next/link";
 
-type City = {
-  code: string;
-  name: string;
-  population: number;
-};
-
-export async function generateStaticParams() {
-  return cities.map((city) => ({
-    code: city.code,
-  }));
-}
-
-export async function generateMetadata({
+export default function Page({
   params,
 }: {
-  params: Promise<{ code: string }>;
+  params: { code: string };
 }) {
-  const { code } = await params;
-
-  const city = (cities as City[]).find(
-    (c) => c.code === code
-  );
-
-  return {
-    title: city
-      ? `${city.name}の人口データ`
-      : "自治体データ",
-    description: city
-      ? `${city.name}の人口は${city.population.toLocaleString()}人です。`
-      : "",
-  };
-}
-
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ code: string }>;
-}) {
-  const { code } = await params;
-
-  const city = (cities as City[]).find(
-    (c) => c.code === code
+  const city = cities.find(
+    (c) => c.code === params.code
   );
 
   if (!city) {
-    return <main>データがありません</main>;
+    return <main>データなし</main>;
   }
 
-  const ranking =
-    [...(cities as City[])].sort(
-      (a, b) =>
-        b.population - a.population
-    );
-
-  const rank =
-    ranking.findIndex(
-      (c) => c.code === city.code
-    ) + 1;
+  const prefCode = city.code.slice(0, 2);
 
   return (
-    <main className="max-w-4xl mx-auto p-8">
-      <h1 className="text-4xl font-bold">
+    <main
+      style={{
+        maxWidth: 700,
+        margin: "0 auto",
+        padding: 24,
+      }}
+    >
+      <h1 style={{ fontSize: 26 }}>
         {city.name}
       </h1>
 
-      <div className="mt-6 space-y-4">
+      <div
+        style={{
+          marginTop: 20,
+          padding: 16,
+          background: "white",
+          borderRadius: 12,
+          boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
+        }}
+      >
         <p>
-          人口：
-          {city.population.toLocaleString()}人
+          👥 人口：
+          <strong>
+            {city.population?.toLocaleString()}
+          </strong>
         </p>
+      </div>
 
-        <p>
-          全国順位：
-          {rank}位
-        </p>
+      <h2 style={{ marginTop: 30 }}>
+        🔗 関連リンク
+      </h2>
+
+      <div style={{ marginTop: 10 }}>
+        <Link href={`/pref/${prefCode}`}>
+          👉 同じ都道府県を見る
+        </Link>
+        <br />
+        <Link href="/ranking/population">
+          👉 人口ランキング
+        </Link>
       </div>
     </main>
   );
