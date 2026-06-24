@@ -1,25 +1,6 @@
 import cities from "@/data/cities.json";
 import Link from "next/link";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { code: string };
-}) {
-  const city = cities.find(
-    (c) => c.code === params.code
-  );
-
-  return {
-    title: city
-      ? `${city.name}の人口・データ`
-      : "自治体データ",
-    description: city
-      ? `${city.name}の人口は${city.population.toLocaleString()}人です。全国自治体データを比較できます。`
-      : "自治体データページ",
-  };
-}
-
 export default function Page({
   params,
 }: {
@@ -34,20 +15,14 @@ export default function Page({
   }
 
   return (
-    <main
-      style={{
-        maxWidth: 700,
-        margin: "0 auto",
-        padding: 24,
-      }}
-    >
-      <h1>{city.name}</h1>
+    <main style={page}>
+      <h1 style={h1}>{city.name}</h1>
 
       <div style={box}>
-        👥 人口：
-        <strong>
-          {city.population.toLocaleString()}
-        </strong>
+        👥 人口：{" "}
+        <b>
+          {city.population?.toLocaleString()}人
+        </b>
       </div>
 
       <div style={{ marginTop: 20 }}>
@@ -58,6 +33,17 @@ export default function Page({
     </main>
   );
 }
+
+const page = {
+  maxWidth: 700,
+  margin: "0 auto",
+  padding: 24,
+};
+
+const h1 = {
+  fontSize: 28,
+  fontWeight: 800,
+};
 
 const box = {
   marginTop: 20,

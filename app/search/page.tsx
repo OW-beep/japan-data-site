@@ -11,16 +11,10 @@ export default function Page() {
     .filter((c) =>
       c.name.includes(q)
     )
-    .slice(0, 50);
+    .slice(0, 30);
 
   return (
-    <main
-      style={{
-        maxWidth: 800,
-        margin: "0 auto",
-        padding: 24,
-      }}
-    >
+    <main style={page}>
       <h1>🔎 自治体検索</h1>
 
       <input
@@ -28,29 +22,16 @@ export default function Page() {
         onChange={(e) =>
           setQ(e.target.value)
         }
-        placeholder="例：船橋市 / 大阪"
-        style={{
-          width: "100%",
-          padding: 12,
-          marginTop: 12,
-          borderRadius: 8,
-          border: "1px solid #ccc",
-        }}
+        placeholder="例：船橋 / 大阪 / 横浜"
+        style={input}
       />
 
-      <div style={{ marginTop: 20 }}>
+      <div>
         {results.map((c) => (
           <Link
             key={c.code}
             href={`/city/${c.code}`}
-            style={{
-              display: "block",
-              padding: 12,
-              background: "white",
-              marginBottom: 8,
-              borderRadius: 8,
-              textDecoration: "none",
-            }}
+            style={card}
           >
             {c.name}
           </Link>
@@ -59,3 +40,29 @@ export default function Page() {
     </main>
   );
 }
+
+const page = {
+  maxWidth: 800,
+  margin: "0 auto",
+  padding: 24,
+};
+
+const input = {
+  width: "100%",
+  padding: 14,
+  marginTop: 10,
+  borderRadius: 10,
+  border: "1px solid #ddd",
+  fontSize: 16,
+};
+
+const card = {
+  display: "block",
+  padding: 12,
+  marginTop: 10,
+  background: "white",
+  borderRadius: 10,
+  textDecoration: "none",
+  color: "#111",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+};
