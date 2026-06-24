@@ -6,15 +6,20 @@ export default function RankCard({
 }: any) {
   return (
     <div style={card}>
+      {/* 左：順位 */}
       <div style={rankBox}>
         {rank}
       </div>
 
-      <div style={{ flex: 1 }}>
-        <div style={{ fontWeight: 700 }}>{name}</div>
-        <div style={valueText}>
-          {value?.toLocaleString()} {unit}
-        </div>
+      {/* 中央：自治体名 */}
+      <div style={nameBox}>
+        {name}
+      </div>
+
+      {/* 右：数値（重要KPI） */}
+      <div style={valueBox}>
+        {value?.toLocaleString()}
+        <span style={unitStyle}>{unit}</span>
       </div>
     </div>
   );
@@ -23,11 +28,12 @@ export default function RankCard({
 const card: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
-  padding: 12,
+  justifyContent: "space-between",
+  padding: "12px 14px",
   marginBottom: 8,
   background: "#fff",
   borderRadius: 10,
-  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+  boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
 };
 
 const rankBox: React.CSSProperties = {
@@ -38,11 +44,25 @@ const rankBox: React.CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
   fontWeight: 800,
-  marginRight: 10,
   background: "#e5e7eb",
+  flexShrink: 0,
 };
 
-const valueText: React.CSSProperties = {
-  fontSize: 13,
+const nameBox: React.CSSProperties = {
+  flex: 1,
+  marginLeft: 12,
+  fontWeight: 700,
+};
+
+const valueBox: React.CSSProperties = {
+  fontWeight: 800,
+  fontSize: 14,
+  textAlign: "right",
+  minWidth: 90,
+};
+
+const unitStyle: React.CSSProperties = {
+  fontSize: 11,
   color: "#666",
+  marginLeft: 4,
 };

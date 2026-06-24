@@ -8,15 +8,16 @@ export default function Page() {
 
   return (
     <div>
-      <h1 style={{ fontSize: 22, fontWeight: 900 }}>
-        人口ランキング TOP50
-      </h1>
+      {/* タイトル */}
+      <h1 style={title}>人口ランキング</h1>
 
-      <p style={{ fontSize: 12, color: "#666" }}>
-        ※最新公開統計ベース（推計値）
+      {/* 説明（重要） */}
+      <p style={note}>
+        ※総務省・e-Stat公開データをもとにした人口規模ランキング
       </p>
 
-      <div style={{ marginTop: 16 }}>
+      {/* ランキング即表示（ここが重要） */}
+      <div style={{ marginTop: 12 }}>
         {ranking.map((c, i) => (
           <RankCard
             key={c.code}
@@ -24,10 +25,21 @@ export default function Page() {
             name={c.name}
             value={c.population}
             unit="人"
-            highlight={i < 3}
           />
         ))}
       </div>
     </div>
   );
 }
+
+const title: React.CSSProperties = {
+  fontSize: 22,
+  fontWeight: 900,
+  marginBottom: 4,
+};
+
+const note: React.CSSProperties = {
+  fontSize: 12,
+  color: "#666",
+  marginBottom: 12,
+};
