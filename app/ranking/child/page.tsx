@@ -4,7 +4,7 @@ import cities from "../../../data/cities.json";
 
 export default function Page() {
   const ranking = [...cities]
-    .filter((c) => c.childPopulation)
+    .filter((c) => c.childPopulation && c.population)
     .map((c) => ({
       ...c,
       rate: (c.childPopulation / c.population) * 100,
@@ -16,21 +16,28 @@ export default function Page() {
     <div>
       <h1>子ども人口ランキング</h1>
 
-      <MetricNote
+      <MetricBox
         title="指標定義"
-        description="総人口に対する15歳未満人口の割合"
+        unit="%"
+        definition="総人口に対する15歳未満人口の割合"
         formula="子ども比率(%) = 子ども人口 ÷ 総人口 × 100"
+        example={{
+          name: "例：〇〇市",
+          value: Number(ranking[0]?.rate?.toFixed(2) ?? 0),
+        }}
       />
 
-      {ranking.map((c, i) => (
-        <RankCard
-          key={c.code}
-          rank={i + 1}
-          name={c.name}
-          value={c.rate.toFixed(2)}
-          unit="%"
-        />
-      ))}
+      <div style={{ marginTop: 12 }}>
+        {ranking.map((c, i) => (
+          <RankCard
+            key={c.code}
+            rank={i + 1}
+            name={c.name}
+            value={c.rate.toFixed(2)}
+            unit="%"
+          />
+        ))}
+      </div>
     </div>
   );
 }

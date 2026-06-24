@@ -16,21 +16,28 @@ export default function Page() {
     <div>
       <h1>人口減少ランキング</h1>
 
-      <MetricNote
+      <MetricBox
         title="指標定義"
-        description="一定期間における人口増減率（自然増減＋社会増減）"
+        unit="%"
+        definition="一定期間における人口増減率（自然増減＋社会増減）"
         formula="人口増減率(%) = (今年人口 - 前年人口) ÷ 前年人口 × 100"
+        example={{
+          name: "例：〇〇市",
+          value: Number(ranking[0]?.rate?.toFixed(2) ?? 0),
+        }}
       />
 
-      {ranking.map((c, i) => (
-        <RankCard
-          key={c.code}
-          rank={i + 1}
-          name={c.name}
-          value={c.rate.toFixed(2)}
-          unit="%"
-        />
-      ))}
+      <div style={{ marginTop: 12 }}>
+        {ranking.map((c, i) => (
+          <RankCard
+            key={c.code}
+            rank={i + 1}
+            name={c.name}
+            value={c.rate.toFixed(2)}
+            unit="%"
+          />
+        ))}
+      </div>
     </div>
   );
 }
