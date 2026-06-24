@@ -3,70 +3,46 @@ export default function RankCard({
   name,
   value,
   unit,
-  highlight,
-}: {
-  rank: number;
-  name: string;
-  value: number;
-  unit: string;
-  highlight?: boolean;
-}) {
+}: any) {
   return (
-    <div style={card(highlight)}>
-      <div style={badge(rank)}>
+    <div style={card}>
+      <div style={rankBox}>
         {rank}
       </div>
 
       <div style={{ flex: 1 }}>
-        <div style={{ fontWeight: 800 }}>{name}</div>
-        <div style={{ fontSize: 13, color: "#555" }}>
+        <div style={{ fontWeight: 700 }}>{name}</div>
+        <div style={valueText}>
           {value?.toLocaleString()} {unit}
         </div>
       </div>
-
-      {rank <= 3 && (
-        <div style={topTag(rank)}>
-          TOP
-        </div>
-      )}
     </div>
   );
 }
 
-const card = (h?: boolean): React.CSSProperties => ({
+const card: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
-  padding: 14,
-  marginBottom: 10,
-  borderRadius: 14,
-  background: h ? "#fff7d6" : "white",
-  boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
-});
-
-const badge = (rank: number): React.CSSProperties => ({
-  width: 38,
-  height: 38,
+  padding: 12,
+  marginBottom: 8,
+  background: "#fff",
   borderRadius: 10,
+  boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
+};
+
+const rankBox: React.CSSProperties = {
+  width: 36,
+  height: 36,
+  borderRadius: 8,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontWeight: 900,
-  marginRight: 12,
-  background:
-    rank === 1
-      ? "#facc15"
-      : rank === 2
-      ? "#cbd5e1"
-      : rank === 3
-      ? "#fb923c"
-      : "#e2e8f0",
-});
+  fontWeight: 800,
+  marginRight: 10,
+  background: "#e5e7eb",
+};
 
-const topTag = (rank: number): React.CSSProperties => ({
-  fontSize: 11,
-  fontWeight: 700,
-  color: rank === 1 ? "#b45309" : "#334155",
-  background: "#fff",
-  padding: "4px 8px",
-  borderRadius: 999,
-});
+const valueText: React.CSSProperties = {
+  fontSize: 13,
+  color: "#666",
+};
