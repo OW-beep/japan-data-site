@@ -1,6 +1,6 @@
-import RankCard from "@/components/RankCard";
-import MetricNote from "@/components/MetricNote";
-import cities from "@/data/cities.json";
+import RankCard from "../../components/RankCard";
+import MetricBox from "../../components/MetricBox";
+import cities from "../../../data/cities.json";
 
 export default function Page() {
   const ranking = [...cities]
