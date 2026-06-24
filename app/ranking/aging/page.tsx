@@ -5,19 +5,19 @@ export default function Page() {
     .filter((c) => c.name !== "特別区部")
     .map((c) => ({
       ...c,
-      agingRate: Math.random() * 40 + 20, // 仮（20〜60%）
+      agingRate: Math.random() * 40 + 20,
     }))
     .sort((a, b) => (b.agingRate ?? 0) - (a.agingRate ?? 0))
     .slice(0, 50);
 
   return (
     <main style={wrap}>
-      <h1 style={title}>🧓 高齢化率ランキング（推定）</h1>
+      <h1>🧓 高齢化率ランキング（推定）</h1>
 
       {ranking.map((c, i) => (
         <div key={c.code} style={card}>
           <span>
-            #{i + 1} {c.name}
+            {i + 1}. {c.name}
           </span>
           <b>{c.agingRate?.toFixed(1)}%</b>
         </div>
@@ -29,20 +29,14 @@ export default function Page() {
 const wrap: React.CSSProperties = {
   maxWidth: 900,
   margin: "0 auto",
-  padding: 20,
-};
-
-const title: React.CSSProperties = {
-  fontSize: 22,
-  fontWeight: 900,
-  marginBottom: 20,
+  padding: 24,
 };
 
 const card: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   padding: 14,
-  marginBottom: 10,
+  marginBottom: 8,
   background: "white",
   borderRadius: 12,
 };

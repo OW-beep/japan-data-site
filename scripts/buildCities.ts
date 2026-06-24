@@ -6,81 +6,91 @@ dotenv.config({ path: ".env.local" });
 const APP_ID = process.env.ESTAT_APP_ID;
 if (!APP_ID) throw new Error("ESTAT_APP_IDが未設定です");
 
-const BASE_URL =
+const URL =
   "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData";
 
-async function fetchData(cat: string) {
-  const url =
-    `${BASE_URL}?appId=${APP_ID}` +
-    `&statsDataId=0000020201` +
-    `&cdCat01=${cat}` +
-    `&metaGetFlg=Y`;
+async function fetch(cat: string) {
+  const res = await fetch(
+    `${URL}?appId=${APP_ID}` +
+      `&statsDataId=0000020201` +
+      `&cdCat01=${cat}` +
+      `&metaGetFlg=Y`
+  );
 
-  const res = await fetch(url);
   const json = await res.json();
-
-  return json?.GET_STATS_DATA?.STATISTICAL_DATA?.DATA_INF?.VALUE ?? [];
+  return json?.GET_STATS_DATA?.STATISTICAL_DATA;
 }
 
-function normalize(values: any[]) {
-  const rows = Array.isArray(values) ? values : [values];
+function toMap(values: any[]) {
+  const arr = Array.isArray(values) ? values : [values];
+  const map = new Map();
 
-  const latest = new Map<string, any>();
-
-  for (const r of rows) {
+  for (const r of arr) {
     const area = r["@area"];
     const time = Number(r["@time"] ?? 0);
 
     if (!area) continue;
 
-    const current = latest.get(area);
+    const current = map.get(area);
 
     if (!current || time > Number(current["@time"] ?? 0)) {
-      latest.set(area, r);
+      map.set(area, r);
     }
   }
 
-  return latest;
+  return map;
+}
+
+function buildAreaMap(statData: any) {
+  const classObj = statData?.CLASS_INF?.CLASS_OBJ ?? [];
+
+  const areaObj = classObj.find(
+    (x: any) => x?.["@id"] === "area"
+  );
+
+  const list = areaObj?.CLASS ?? [];
+
+  const arr = Array.isArray(list) ? list : [list];
+
+  const map = new Map<string, string>();
+
+  for (const a of arr) {
+    map.set(String(a["@code"]), String(a["@name"]));
+  }
+
+  return map;
 }
 
 async function run() {
-  console.log("fetching real e-Stat data...");
+  console.log("fetching...");
 
-  // 👶 子ども人口
-  const childRaw = await fetchData("A1301");
-  const childMap = normalize(childRaw);
+  const stat = await fetch("A1101");
 
-  // 🧓 高齢者人口
-  const agedRaw = await fetchData("A1303");
-  const agedMap = normalize(agedRaw);
+  if (!stat) throw new Error("データ取得失敗");
 
-  // 🧍 総人口
-  const popRaw = await fetchData("A1101");
-  const popMap = normalize(popRaw);
+  const areaMap = buildAreaMap(stat);
+
+  const values = stat?.DATA_INF?.VALUE ?? [];
+  const rows = Array.isArray(values) ? values : [values];
+
+  const latest = toMap(rows);
 
   const cities: any[] = [];
 
-  for (const [code, row] of popMap.entries()) {
+  for (const [code, row] of latest.entries()) {
     const population = Number(row["$"] ?? 0);
-
-    const child = Number(childMap.get(code)?.["$"] ?? 0);
-    const aged = Number(agedMap.get(code)?.["$"] ?? 0);
 
     if (!population) continue;
 
     cities.push({
       code,
-      name: String(row["@areaName"] ?? code),
+      name: areaMap.get(code) ?? "不明", // ★ここが修正ポイント
       population,
-      childPopulation: child,
-      agedPopulation: aged,
-      childRate: child / population,
-      agedRate: aged / population,
     });
   }
 
   const filtered = cities
-    .filter((c) => c.population > 0)
+    .filter((c) => c.name && c.name !== "不明")
     .sort((a, b) => b.population - a.population);
 
   fs.mkdirSync("data", { recursive: true });
@@ -91,7 +101,7 @@ async function run() {
     "utf8"
   );
 
-  console.log("generated:", filtered.length);
+  console.log("generated", filtered.length);
 }
 
 run().catch((e) => {
