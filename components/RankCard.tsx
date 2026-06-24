@@ -1,55 +1,36 @@
-export default function RankCard({
+export default function RankingCard({
   rank,
   name,
   value,
-  unit,
 }: {
   rank: number;
   name: string;
   value: number;
-  unit: string;
 }) {
-  return (
-    <div style={card}>
-      <div style={left}>
-        <span style={rankBox}>{rank}</span>
-        <span style={{ fontWeight: 600 }}>{name}</span>
-      </div>
+  const bg =
+    rank === 1
+      ? "#FFD700"
+      : rank === 2
+      ? "#C0C0C0"
+      : rank === 3
+      ? "#CD7F32"
+      : "white";
 
-      <div style={valueStyle}>
-        {value.toLocaleString()} {unit}
+  return (
+    <div style={{ ...box, background: bg }}>
+      <div>
+        {rank}. {name}
       </div>
+      <div>{value.toLocaleString()}</div>
     </div>
   );
 }
 
-const card: React.CSSProperties = {
+const box: React.CSSProperties = {
+  padding: 14,
+  marginBottom: 8,
+  borderRadius: 12,
   display: "flex",
   justifyContent: "space-between",
-  padding: 14,
-  background: "#fff",
-  borderRadius: 12,
-  border: "1px solid #e5e7eb",
-  marginBottom: 8,
-};
-
-const left: React.CSSProperties = {
-  display: "flex",
-  gap: 10,
-  alignItems: "center",
-};
-
-const rankBox: React.CSSProperties = {
-  width: 28,
-  height: 28,
-  background: "#111827",
-  color: "white",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  borderRadius: 6,
-};
-
-const valueStyle: React.CSSProperties = {
-  fontWeight: 700,
+  fontWeight: 600,
 };

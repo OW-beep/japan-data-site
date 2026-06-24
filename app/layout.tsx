@@ -1,5 +1,7 @@
-import Link from "next/link";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import AdSense from "@/components/AdSense";
 
 export default function RootLayout({
   children,
@@ -8,56 +10,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <body
-        style={{
-          margin: 0,
-          fontFamily: "system-ui",
-          background: "#f4f7ff",
-          color: "#111",
-        }}
-      >
-        <header
-          style={{
-            padding: 16,
-            background: "white",
-            borderBottom: "1px solid #eee",
-            position: "sticky",
-            top: 0,
-            zIndex: 10,
-          }}
-        >
-          <div style={{ fontWeight: 900 }}>
-            🇯🇵 日本自治体データランキング
-          </div>
+      <body style={body}>
+        <Header />
 
-          <nav style={{ marginTop: 8, fontSize: 14 }}>
-            <Link href="/ranking" style={link}>
-              ランキング一覧
-            </Link>
-            <Link href="/ranking/population" style={link}>
-              人口
-            </Link>
-            <Link href="/ranking/child" style={link}>
-              子ども
-            </Link>
-            <Link href="/ranking/aging" style={link}>
-              高齢化
-            </Link>
-            <Link href="/ranking/decline" style={link}>
-              少人口
-            </Link>
-          </nav>
-        </header>
+        {/* 上部広告枠 */}
+        <AdSense />
 
-        <div>{children}</div>
+        <main style={main}>{children}</main>
+
+        {/* 下部広告枠 */}
+        <AdSense />
+
+        <Footer />
       </body>
     </html>
   );
 }
 
-const link: React.CSSProperties = {
-  marginRight: 12,
-  textDecoration: "none",
-  color: "#2563eb",
-  fontWeight: 600,
+const body: React.CSSProperties = {
+  margin: 0,
+  fontFamily: "system-ui",
+  background: "#f4f6fb",
+  color: "#111",
+};
+
+const main: React.CSSProperties = {
+  maxWidth: 960,
+  margin: "0 auto",
+  padding: 20,
 };
