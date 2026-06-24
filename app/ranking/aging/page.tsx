@@ -16,7 +16,7 @@ export default function Page() {
     <div>
       <h1>高齢化率ランキング</h1>
 
-      <MetricNote
+      <MetricBox
         title="指標定義"
         description="総人口に対する65歳以上人口の割合"
         formula="高齢化率(%) = 高齢者人口 ÷ 総人口 × 100"
