@@ -1,10 +1,4 @@
 import "./globals.css";
-import Script from "next/script";
-
-export const metadata = {
-  title: "日本自治体データランキング",
-  description: "人口・子ども・高齢化などの自治体データランキング",
-};
 
 export default function RootLayout({
   children,
@@ -13,24 +7,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
-      <head>
-        {/* AdSense */}
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4630812027939211"
-          crossOrigin="anonymous"
-        />
-      </head>
-
       <body style={body}>
         <header style={header}>
-          🇯🇵 日本自治体データランキング
+          <div style={{ fontWeight: 900 }}>
+            🇯🇵 日本自治体データランキング
+          </div>
+          <div style={sub}>
+            人口・子ども・高齢化を可視化
+          </div>
         </header>
 
-        <main style={{ padding: 20 }}>{children}</main>
+        <main style={main}>{children}</main>
 
         <footer style={footer}>
-          <a href="/privacy">プライバシー</a> |{" "}
+          <a href="/privacy">プライバシー</a> ｜ 
           <a href="/contact">お問い合わせ</a>
         </footer>
       </body>
@@ -39,24 +29,33 @@ export default function RootLayout({
 }
 
 const body: React.CSSProperties = {
+  margin: 0,
   fontFamily: "system-ui",
-  background: "#f7f9ff",
+  background: "#f5f7ff",
   color: "#111",
 };
 
 const header: React.CSSProperties = {
-  background: "#fff",
-  padding: "16px 20px",
-  borderBottom: "1px solid #eee",
-  position: "sticky",
-  top: 0,
-  fontWeight: 800,
+  padding: "18px 20px",
+  background: "linear-gradient(135deg,#4f46e5,#06b6d4)",
+  color: "white",
+};
+
+const sub: React.CSSProperties = {
+  fontSize: 12,
+  opacity: 0.9,
+  marginTop: 4,
+};
+
+const main: React.CSSProperties = {
+  maxWidth: 900,
+  margin: "0 auto",
+  padding: 20,
 };
 
 const footer: React.CSSProperties = {
-  marginTop: 40,
-  padding: 20,
   textAlign: "center",
   fontSize: 12,
+  padding: 30,
   color: "#666",
 };
