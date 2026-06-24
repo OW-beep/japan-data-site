@@ -4,7 +4,7 @@ import cities from "../../../data/cities.json";
 
 export default function Page() {
   const ranking = [...cities]
-    .filter((c) => c.elderlyPopulation)
+    .filter((c) => c.elderlyPopulation && c.population)
     .map((c) => ({
       ...c,
       rate: (c.elderlyPopulation / c.population) * 100,
@@ -18,19 +18,26 @@ export default function Page() {
 
       <MetricBox
         title="指標定義"
-        description="総人口に対する65歳以上人口の割合"
+        definition="総人口に対する65歳以上人口の割合"
+        unit="%"
         formula="高齢化率(%) = 高齢者人口 ÷ 総人口 × 100"
+        example={{
+          name: "例：〇〇市",
+          value: Number(ranking[0]?.rate?.toFixed(2) ?? 0),
+        }}
       />
 
-      {ranking.map((c, i) => (
-        <RankCard
-          key={c.code}
-          rank={i + 1}
-          name={c.name}
-          value={c.rate.toFixed(2)}
-          unit="%"
-        />
-      ))}
+      <div style={{ marginTop: 12 }}>
+        {ranking.map((c, i) => (
+          <RankCard
+            key={c.code}
+            rank={i + 1}
+            name={c.name}
+            value={c.rate.toFixed(2)}
+            unit="%"
+          />
+        ))}
+      </div>
     </div>
   );
 }
