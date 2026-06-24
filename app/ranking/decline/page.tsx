@@ -1,28 +1,25 @@
-import cities from "@/data/cities.json";
-import RankingLayout from "@/components/RankingLayout";
 import RankCard from "@/components/RankCard";
-import MetricBox from "@/components/MetricBox";
+import MetricNote from "@/components/MetricNote";
+import cities from "@/data/cities.json";
 
 export default function Page() {
   const ranking = [...cities]
-    .filter((c) => c.population)
+    .filter((c) => c.populationChange !== undefined)
     .map((c) => ({
       ...c,
-      diff: (c.population ?? 0) - (c.childPopulation ?? 0),
+      rate: c.populationChange,
     }))
-    .sort((a, b) => a.diff - b.diff)
+    .sort((a, b) => a.rate - b.rate)
     .slice(0, 50);
 
   return (
-    <RankingLayout
-      title="📉 人口構造リスクランキング"
-      description="人口構造の偏り（実データ差分）"
-    >
-      <MetricBox
-        title="人口差分"
-        unit="人"
-        definition="総人口 − 子ども人口（構造分析指標）"
-        example={{ name: "地方都市例", value: 50000 }}
+    <div>
+      <h1>人口減少ランキング</h1>
+
+      <MetricNote
+        title="指標定義"
+        description="一定期間における人口増減率（自然増減＋社会増減）"
+        formula="人口増減率(%) = (今年人口 - 前年人口) ÷ 前年人口 × 100"
       />
 
       {ranking.map((c, i) => (
@@ -30,10 +27,10 @@ export default function Page() {
           key={c.code}
           rank={i + 1}
           name={c.name}
-          value={c.diff}
-          unit="人"
+          value={c.rate.toFixed(2)}
+          unit="%"
         />
       ))}
-    </RankingLayout>
+    </div>
   );
 }
