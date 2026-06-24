@@ -1,41 +1,27 @@
 import cities from "@/data/cities.json";
-import DataNote from "@/components/DataNote";
+import RankingLayout from "@/components/RankingLayout";
+import RankCard from "@/components/RankCard";
 
 export default function Page() {
   const ranking = [...cities]
-    .filter((c) => c.name !== "特別区部")
+    .filter((c) => c.code !== "13100")
     .sort((a, b) => (a.population ?? 0) - (b.population ?? 0))
     .slice(0, 50);
 
   return (
-    <main style={wrap}>
-      <h1>📉 少人口ランキング TOP50</h1>
-
+    <RankingLayout
+      title="📉 人口減少ランキング TOP50"
+      description="人口が少ない自治体を可視化したランキング。"
+    >
       {ranking.map((c, i) => (
-        <div key={c.code} style={card}>
-          <span>
-            {i + 1}. {c.name}
-          </span>
-          <b>{c.population?.toLocaleString()}</b>
-        </div>
+        <RankCard
+          key={c.code}
+          rank={i + 1}
+          name={c.name}
+          value={c.population}
+          unit="人"
+        />
       ))}
-
-      <DataNote />
-    </main>
+    </RankingLayout>
   );
 }
-
-const wrap: React.CSSProperties = {
-  maxWidth: 900,
-  margin: "0 auto",
-  padding: 24,
-};
-
-const card: React.CSSProperties = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: 14,
-  marginBottom: 8,
-  background: "white",
-  borderRadius: 12,
-};
