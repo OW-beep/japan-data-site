@@ -1,6 +1,7 @@
 import cities from "@/data/cities.json";
 import RankingLayout from "@/components/RankingLayout";
 import RankCard from "@/components/RankCard";
+import MetricBox from "@/components/MetricBox";
 
 export default function Page() {
   const ranking = [...cities]
@@ -11,8 +12,15 @@ export default function Page() {
   return (
     <RankingLayout
       title="📉 人口減少ランキング TOP50"
-      description="人口が少ない自治体を可視化したランキング。"
+      description="人口が少ない自治体ランキング"
     >
+      <MetricBox
+        title="人口（少ない順）"
+        unit="人"
+        definition="自治体人口を少ない順に並べた指標"
+        example={{ name: "青ヶ島村", value: 160 }}
+      />
+
       {ranking.map((c, i) => (
         <RankCard
           key={c.code}

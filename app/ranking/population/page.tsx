@@ -1,7 +1,7 @@
-import cities from "../../../data/cities.json";
-import RankingLayout from "../../../components/RankingLayout";
-import RankCard from "../../../components/RankCard";
-import DataNote from "../../../components/DataNote";
+import cities from "@/data/cities.json";
+import RankingLayout from "@/components/RankingLayout";
+import RankCard from "@/components/RankCard";
+import MetricBox from "@/components/MetricBox";
 
 export default function Page() {
   const ranking = [...cities]
@@ -12,8 +12,15 @@ export default function Page() {
   return (
     <RankingLayout
       title="🏙 人口ランキング TOP50"
-      description="最新e-Statデータによる自治体ランキング"
+      description="自治体人口の最新ランキング"
     >
+      <MetricBox
+        title="人口とは"
+        unit="人"
+        definition="各自治体に居住する総人口（e-Stat統計）"
+        example={{ name: "横浜市", value: 3777491 }}
+      />
+
       {ranking.map((c, i) => (
         <RankCard
           key={c.code}

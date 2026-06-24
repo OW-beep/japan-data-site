@@ -2,27 +2,27 @@ export default function RankCard({
   rank,
   name,
   value,
-  unit = "",
+  unit,
 }: {
   rank: number;
   name: string;
   value: number;
-  unit?: string;
+  unit: string;
 }) {
-  const isTop3 = rank <= 3;
+  const top3 = rank <= 3;
 
   return (
-    <div style={{ ...card, ...(isTop3 ? topCard : {}) }}>
+    <div style={{ ...card, ...(top3 ? top : {}) }}>
       <div style={left}>
-        <div style={{ ...badge, ...(isTop3 ? topBadge : {}) }}>
+        <div style={{ ...badge, ...(top3 ? badgeTop : {}) }}>
           {rank}
         </div>
-        <div style={nameStyle}>{name}</div>
+        <div style={{ fontWeight: 600 }}>{name}</div>
       </div>
 
       <div style={valueStyle}>
         {value.toLocaleString()}
-        {unit}
+        <span style={{ fontSize: 12, marginLeft: 4 }}>{unit}</span>
       </div>
     </div>
   );
@@ -32,29 +32,28 @@ const card: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  padding: "16px 18px",
-  marginBottom: 10,
-  borderRadius: 14,
-  background: "white",
+  padding: 14,
+  marginBottom: 8,
+  background: "#fff",
+  borderRadius: 12,
   border: "1px solid #e5e7eb",
-  boxShadow: "0 1px 2px rgba(0,0,0,0.04)",
 };
 
-const topCard: React.CSSProperties = {
-  background: "linear-gradient(90deg, #fff7ed, #fff)",
+const top: React.CSSProperties = {
+  background: "#fff7ed",
   border: "1px solid #fed7aa",
 };
 
 const left: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
-  gap: 12,
+  gap: 10,
 };
 
 const badge: React.CSSProperties = {
-  width: 32,
-  height: 32,
-  borderRadius: 8,
+  width: 28,
+  height: 28,
+  borderRadius: 6,
   background: "#e5e7eb",
   display: "flex",
   alignItems: "center",
@@ -62,17 +61,11 @@ const badge: React.CSSProperties = {
   fontWeight: 700,
 };
 
-const topBadge: React.CSSProperties = {
+const badgeTop: React.CSSProperties = {
   background: "#f59e0b",
   color: "white",
 };
 
-const nameStyle: React.CSSProperties = {
-  fontWeight: 600,
-  fontSize: 15,
-};
-
 const valueStyle: React.CSSProperties = {
   fontWeight: 800,
-  fontSize: 16,
 };

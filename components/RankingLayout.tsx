@@ -1,5 +1,3 @@
-import DataNote from "@/components/DataNote";
-
 export default function RankingLayout({
   title,
   description,
@@ -13,52 +11,37 @@ export default function RankingLayout({
     <main style={wrap}>
       <div style={hero}>
         <h1 style={h1}>{title}</h1>
-        {description && <p style={desc}>{description}</p>}
+        <p style={desc}>{description}</p>
       </div>
 
-      <div style={grid}>{children}</div>
-
-      <DataNote />
-
-      <footer style={footer}>
-        Japan Data Ranking · powered by e-Stat
-      </footer>
+      <div style={body}>{children}</div>
     </main>
   );
 }
 
 const wrap: React.CSSProperties = {
   minHeight: "100vh",
-  background:
-    "linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%)",
-  padding: "40px 16px",
+  background: "linear-gradient(180deg,#f8fafc,#eef2ff)",
+  padding: 24,
 };
 
 const hero: React.CSSProperties = {
-  maxWidth: 1000,
-  margin: "0 auto 24px",
+  maxWidth: 900,
+  margin: "0 auto 20px",
 };
 
 const h1: React.CSSProperties = {
-  fontSize: 32,
+  fontSize: 30,
   fontWeight: 800,
-  letterSpacing: "-0.03em",
 };
 
 const desc: React.CSSProperties = {
   color: "#555",
-  marginTop: 8,
+  marginTop: 6,
   lineHeight: 1.6,
 };
 
-const grid: React.CSSProperties = {
-  maxWidth: 1000,
+const body: React.CSSProperties = {
+  maxWidth: 900,
   margin: "0 auto",
-};
-
-const footer: React.CSSProperties = {
-  marginTop: 40,
-  textAlign: "center",
-  fontSize: 12,
-  color: "#888",
 };

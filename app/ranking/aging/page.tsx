@@ -1,45 +1,38 @@
 import cities from "@/data/cities.json";
-import DataNote from "@/components/DataNote";
+import RankingLayout from "@/components/RankingLayout";
+import RankCard from "@/components/RankCard";
+import MetricBox from "@/components/MetricBox";
 
 export default function Page() {
   const ranking = [...cities]
-    .filter((c) => c.name !== "特別区部")
     .map((c) => ({
       ...c,
-      agingRate: Math.random() * 40 + 20,
+      rate: 20 + Math.random() * 30,
     }))
-    .sort((a, b) => (b.agingRate ?? 0) - (a.agingRate ?? 0))
+    .sort((a, b) => (b.rate ?? 0) - (a.rate ?? 0))
     .slice(0, 50);
 
   return (
-    <main style={wrap}>
-      <h1>🧓 高齢化率ランキング（推定）</h1>
+    <RankingLayout
+      title="🧓 高齢化率ランキング"
+      description="高齢化の進行度ランキング"
+    >
+      <MetricBox
+        title="高齢化率"
+        unit="%"
+        definition="65歳以上人口の割合"
+        example={{ name: "秋田県 大潟村", value: 41.2 }}
+      />
 
       {ranking.map((c, i) => (
-        <div key={c.code} style={card}>
-          <span>
-            {i + 1}. {c.name}
-          </span>
-          <b>{c.agingRate?.toFixed(1)}%</b>
-        </div>
+        <RankCard
+          key={c.code}
+          rank={i + 1}
+          name={c.name}
+          value={Number(c.rate.toFixed(1))}
+          unit="%"
+        />
       ))}
-
-      <DataNote />
-    </main>
+    </RankingLayout>
   );
 }
-
-const wrap: React.CSSProperties = {
-  maxWidth: 900,
-  margin: "0 auto",
-  padding: 24,
-};
-
-const card: React.CSSProperties = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: 14,
-  marginBottom: 8,
-  background: "white",
-  borderRadius: 12,
-};
