@@ -14,11 +14,23 @@ export default function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/ranking`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/ranking/population`,
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/search`,
+      url: `${baseUrl}/about`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/contact`,
       lastModified: new Date(),
     },
     ...cityUrls,
