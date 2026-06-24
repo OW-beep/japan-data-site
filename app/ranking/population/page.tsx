@@ -1,5 +1,5 @@
 import cities from "@/data/cities.json";
-import RankingCard from "@/components/RankingCard";
+import RankingCard from "@/components/RankCard";
 
 export default function Page() {
   const ranking = [...cities]
@@ -16,7 +16,7 @@ export default function Page() {
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (
-          <RankingCard
+          <RankCard
             key={c.code}
             rank={i + 1}
             name={c.name}
