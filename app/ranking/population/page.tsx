@@ -1,6 +1,7 @@
-import cities from "@/data/cities.json";
-import RankingLayout from "@/components/RankingLayout";
-import RankCard from "@/components/RankCard";
+import cities from "../../../data/cities.json";
+import RankingLayout from "../../../components/RankingLayout";
+import RankCard from "../../../components/RankCard";
+import DataNote from "../../../components/DataNote";
 
 export default function Page() {
   const ranking = [...cities]
@@ -10,8 +11,8 @@ export default function Page() {
 
   return (
     <RankingLayout
-      title="🏙 日本人口ランキング TOP50"
-      description="最新のe-Statデータをもとにした自治体人口ランキング。"
+      title="🏙 人口ランキング TOP50"
+      description="最新e-Statデータによる自治体ランキング"
     >
       {ranking.map((c, i) => (
         <RankCard
