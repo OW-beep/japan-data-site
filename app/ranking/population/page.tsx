@@ -1,5 +1,5 @@
-import RankCard from "../../components/RankCard";
-import MetricBox from "../../components/MetricBox";
+import RankCard from "../../../components/RankCard";
+import MetricBox from "../../../components/MetricBox";
 import cities from "../../../data/cities.json";
 
 export default function Page() {
