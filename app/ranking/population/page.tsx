@@ -12,12 +12,12 @@ export default function Page() {
   return (
     <RankingLayout
       title="🏙 人口ランキング TOP50"
-      description="自治体人口の最新ランキング"
+      description="e-Stat実測データ"
     >
       <MetricBox
-        title="人口とは"
+        title="人口"
         unit="人"
-        definition="各自治体に居住する総人口（e-Stat統計）"
+        definition="住民基本台帳・国勢調査に基づく総人口"
         example={{ name: "横浜市", value: 3777491 }}
       />
 

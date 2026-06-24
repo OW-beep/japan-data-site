@@ -9,20 +9,15 @@ export default function RankCard({
   value: number;
   unit: string;
 }) {
-  const top3 = rank <= 3;
-
   return (
-    <div style={{ ...card, ...(top3 ? top : {}) }}>
+    <div style={card}>
       <div style={left}>
-        <div style={{ ...badge, ...(top3 ? badgeTop : {}) }}>
-          {rank}
-        </div>
-        <div style={{ fontWeight: 600 }}>{name}</div>
+        <span style={rankBox}>{rank}</span>
+        <span style={{ fontWeight: 600 }}>{name}</span>
       </div>
 
       <div style={valueStyle}>
-        {value.toLocaleString()}
-        <span style={{ fontSize: 12, marginLeft: 4 }}>{unit}</span>
+        {value.toLocaleString()} {unit}
       </div>
     </div>
   );
@@ -31,41 +26,30 @@ export default function RankCard({
 const card: React.CSSProperties = {
   display: "flex",
   justifyContent: "space-between",
-  alignItems: "center",
   padding: 14,
-  marginBottom: 8,
   background: "#fff",
   borderRadius: 12,
   border: "1px solid #e5e7eb",
-};
-
-const top: React.CSSProperties = {
-  background: "#fff7ed",
-  border: "1px solid #fed7aa",
+  marginBottom: 8,
 };
 
 const left: React.CSSProperties = {
   display: "flex",
-  alignItems: "center",
   gap: 10,
+  alignItems: "center",
 };
 
-const badge: React.CSSProperties = {
+const rankBox: React.CSSProperties = {
   width: 28,
   height: 28,
-  borderRadius: 6,
-  background: "#e5e7eb",
+  background: "#111827",
+  color: "white",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  fontWeight: 700,
-};
-
-const badgeTop: React.CSSProperties = {
-  background: "#f59e0b",
-  color: "white",
+  borderRadius: 6,
 };
 
 const valueStyle: React.CSSProperties = {
-  fontWeight: 800,
+  fontWeight: 700,
 };
