@@ -1,4 +1,5 @@
 import cities from "@/data/cities.json";
+import DataNote from "@/components/DataNote";
 
 export default function Page() {
   const ranking = [...cities]
@@ -18,6 +19,8 @@ export default function Page() {
           <b>{c.population?.toLocaleString()}</b>
         </div>
       ))}
+
+      <DataNote />
     </main>
   );
 }

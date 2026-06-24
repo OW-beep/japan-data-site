@@ -1,13 +1,14 @@
 import cities from "@/data/cities.json";
+import DataNote from "@/components/DataNote";
 
 export default function Page() {
   const ranking = [...cities]
     .filter((c) => c.name !== "特別区部")
     .map((c) => ({
       ...c,
-      childRate: (c.population ?? 0) * 0.00012,
+      childScore: (c.population ?? 0) * 0.00012,
     }))
-    .sort((a, b) => (b.childRate ?? 0) - (a.childRate ?? 0))
+    .sort((a, b) => (b.childScore ?? 0) - (a.childScore ?? 0))
     .slice(0, 50);
 
   return (
@@ -19,9 +20,11 @@ export default function Page() {
           <span>
             {i + 1}. {c.name}
           </span>
-          <b>{Math.round(c.childRate ?? 0)}</b>
+          <b>{Math.round(c.childScore ?? 0)}</b>
         </div>
       ))}
+
+      <DataNote />
     </main>
   );
 }

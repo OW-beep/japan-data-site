@@ -1,4 +1,5 @@
 import cities from "@/data/cities.json";
+import DataNote from "@/components/DataNote";
 
 export default function Page() {
   const ranking = [...cities]
@@ -22,6 +23,8 @@ export default function Page() {
           <b>{c.agingRate?.toFixed(1)}%</b>
         </div>
       ))}
+
+      <DataNote />
     </main>
   );
 }
