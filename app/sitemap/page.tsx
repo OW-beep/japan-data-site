@@ -1,28 +1,61 @@
 import Link from "next/link";
 
 const pages = [
-  { href: "/", label: "トップ" },
-  { href: "/ranking/population", label: "人口ランキング" },
-  { href: "/ranking/child", label: "子どもランキング" },
-  { href: "/ranking/aging", label: "高齢化ランキング" },
-  { href: "/ranking/decline", label: "人口減少ランキング" },
-  { href: "/privacy", label: "プライバシーポリシー" },
-  { href: "/contact", label: "お問い合わせ" },
+  {
+    title: "人口ランキング",
+    href: "/ranking/population",
+    desc: "人口が多い自治体ランキング",
+  },
+  {
+    title: "子ども人口ランキング",
+    href: "/ranking/child",
+    desc: "子ども割合が高い自治体ランキング",
+  },
+  {
+    title: "高齢化率ランキング",
+    href: "/ranking/aging",
+    desc: "高齢化率が高い自治体ランキング",
+  },
+  {
+    title: "人口減少ランキング",
+    href: "/ranking/decline",
+    desc: "人口減少率のランキング",
+  },
+  {
+    title: "プライバシーポリシー",
+    href: "/privacy",
+    desc: "個人情報保護方針",
+  },
+  {
+    title: "お問い合わせ",
+    href: "/contact",
+    desc: "お問い合わせフォーム",
+  },
 ];
 
-export default function Page() {
+export default function SitemapPage() {
   return (
-    <div style={wrap}>
+    <div>
       <h1 style={title}>サイトマップ</h1>
 
-      <p style={note}>
-        各ページ一覧（データランキングサイト内ナビゲーション）
+      <p style={lead}>
+        日本自治体データランキング内のページ一覧です。
       </p>
 
-      <div style={list}>
-        {pages.map((p) => (
-          <Link key={p.href} href={p.href} style={item}>
-            {p.label}
+      <div style={grid}>
+        {pages.map((page) => (
+          <Link
+            key={page.href}
+            href={page.href}
+            style={card}
+          >
+            <div style={cardTitle}>
+              {page.title}
+            </div>
+
+            <div style={cardDesc}>
+              {page.desc}
+            </div>
           </Link>
         ))}
       </div>
@@ -30,33 +63,40 @@ export default function Page() {
   );
 }
 
-const wrap: React.CSSProperties = {
-  padding: 20,
-};
-
 const title: React.CSSProperties = {
-  fontSize: 22,
+  fontSize: 32,
   fontWeight: 800,
-  marginBottom: 10,
+  marginBottom: 12,
 };
 
-const note: React.CSSProperties = {
-  fontSize: 12,
+const lead: React.CSSProperties = {
   color: "#666",
-  marginBottom: 20,
+  marginBottom: 24,
 };
 
-const list: React.CSSProperties = {
-  display: "flex",
-  flexDirection: "column",
-  gap: 10,
+const grid: React.CSSProperties = {
+  display: "grid",
+  gridTemplateColumns:
+    "repeat(auto-fit,minmax(280px,1fr))",
+  gap: 16,
 };
 
-const item: React.CSSProperties = {
-  padding: 12,
+const card: React.CSSProperties = {
+  display: "block",
+  padding: 20,
   background: "#fff",
-  borderRadius: 8,
-  boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+  border: "1px solid #e5e7eb",
+  borderRadius: 12,
   textDecoration: "none",
-  color: "#111",
+};
+
+const cardTitle: React.CSSProperties = {
+  fontWeight: 700,
+  color: "#111827",
+  marginBottom: 8,
+};
+
+const cardDesc: React.CSSProperties = {
+  color: "#6b7280",
+  fontSize: 14,
 };
