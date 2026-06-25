@@ -6,7 +6,7 @@ export default function Footer() {
       <div style={links}>
         <Link href="/privacy">プライバシーポリシー</Link>
         <Link href="/contact">お問い合わせ</Link>
-        <Link href="/sitemap.xml">サイトマップ</Link>
+        <Link href="/sitemap">サイトマップ</Link>
       </div>
 
       <p style={note}>
