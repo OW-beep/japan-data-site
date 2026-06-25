@@ -1,68 +1,88 @@
 export default function MetricBox({
-  title,
-  unit,
-  definition,
-  formula,
-  example,
+title,
+unit,
+definition,
+formula,
+example,
 }: {
-  title: string;
-  unit: string;
-  definition: string;
-  formula?: string;
-  example: { name: string; value: number };
+title: string;
+unit: string;
+definition: string;
+formula?: string;
+example: {
+name: string;
+value: number;
+};
 }) {
-  return (
-    <div style={box}>
-      <h2 style={titleStyle}>{title}</h2>
+return ( <div style={box}> <h2 style={titleStyle}>
+📖 {title} </h2>
 
-      <p style={p}>{definition}</p>
 
-      {formula && <div style={formulaStyle}>{formula}</div>}
+  <p style={definitionStyle}>
+    {definition}
+  </p>
 
-      <div style={meta}>
-        <div>単位：{unit}</div>
-        <div>
-          例：{example.name} →{" "}
-          {example.value.toLocaleString()} {unit}
-        </div>
-      </div>
+  {formula && (
+    <div style={formulaStyle}>
+      {formula}
     </div>
-  );
+  )}
+
+  <div style={exampleBox}>
+    <div>
+      <strong>単位</strong>
+      <br />
+      {unit}
+    </div>
+
+    <div>
+      <strong>例</strong>
+      <br />
+      {example.name}
+    </div>
+
+    <div>
+      <strong>値</strong>
+      <br />
+      {example.value.toLocaleString()}
+      {unit}
+    </div>
+  </div>
+</div>
+
+
+);
 }
 
 const box: React.CSSProperties = {
-  background: "#fff",
-  border: "1px solid #e5e7eb",
-  padding: 14,
-  borderRadius: 12,
-  marginBottom: 16,
+background: "#ffffff",
+borderRadius: 16,
+border: "1px solid #e5e7eb",
+padding: 20,
+marginBottom: 24,
 };
 
 const titleStyle: React.CSSProperties = {
-  fontSize: 16,
-  fontWeight: 800,
-  marginBottom: 8,
+marginBottom: 10,
 };
 
-const p: React.CSSProperties = {
-  color: "#555",
-  lineHeight: 1.6,
+const definitionStyle: React.CSSProperties = {
+color: "#4b5563",
+lineHeight: 1.8,
 };
 
 const formulaStyle: React.CSSProperties = {
-  marginTop: 8,
-  fontSize: 13,
-  color: "#111",
-  background: "#f8fafc",
-  padding: 8,
-  borderRadius: 6,
+marginTop: 12,
+background: "#eff6ff",
+padding: 12,
+borderRadius: 8,
+fontWeight: 600,
 };
 
-const meta: React.CSSProperties = {
-  marginTop: 10,
-  fontSize: 13,
-  display: "flex",
-  gap: 20,
-  flexWrap: "wrap",
-  color: "#333",
+const exampleBox: React.CSSProperties = {
+marginTop: 16,
+display: "grid",
+gridTemplateColumns:
+"repeat(auto-fit,minmax(150px,1fr))",
+gap: 12,
 };

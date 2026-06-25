@@ -3,64 +3,83 @@ export default function RankCard({
   name,
   value,
   unit,
-}: any) {
+}: {
+  rank: number;
+  name: string;
+  value: string | number;
+  unit: string;
+}) {
   return (
     <div style={card}>
-      <div style={rankBox(rank)}>{rank}</div>
+      <div style={left}>
+        <div style={rankStyle}>
+          #{rank}
+        </div>
 
-      <div style={nameBox}>{name}</div>
+        <div style={nameStyle}>
+          {name}
+        </div>
+      </div>
 
-      <div style={valueBox}>
-        {value?.toLocaleString()}
-        <span style={unitStyle}>{unit}</span>
+      <div style={valueStyle}>
+        {typeof value === "number"
+          ? value.toLocaleString()
+          : value}
+
+        <span style={unitStyle}>
+          {unit}
+        </span>
       </div>
     </div>
   );
 }
 
 const card: React.CSSProperties = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "space-between",
-  padding: "12px 14px",
-  marginBottom: 8,
   background: "#fff",
-  borderRadius: 10,
-  boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+  borderRadius: 16,
+  border: "1px solid #e5e7eb",
+
+  padding: 18,
+  marginBottom: 12,
+
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+
+  boxShadow:
+    "0 1px 3px rgba(0,0,0,0.05)",
 };
 
-const rankBox = (rank: number): React.CSSProperties => ({
-  width: 36,
-  height: 36,
-  borderRadius: 8,
+const left: React.CSSProperties = {
   display: "flex",
   alignItems: "center",
-  justifyContent: "center",
-  fontWeight: 800,
-  background:
-    rank === 1
-      ? "#facc15"
-      : rank === 2
-      ? "#e5e7eb"
-      : rank === 3
-      ? "#fdba74"
-      : "#f3f4f6",
-});
-
-const nameBox: React.CSSProperties = {
-  flex: 1,
-  marginLeft: 12,
-  fontWeight: 700,
+  gap: 14,
 };
 
-const valueBox: React.CSSProperties = {
+const rankStyle: React.CSSProperties = {
+  minWidth: 50,
+
+  fontSize: 18,
   fontWeight: 800,
-  minWidth: 100,
-  textAlign: "right",
+
+  color: "#2563eb",
+};
+
+const nameStyle: React.CSSProperties = {
+  fontSize: 17,
+  fontWeight: 600,
+};
+
+const valueStyle: React.CSSProperties = {
+  fontSize: 24,
+  fontWeight: 800,
+
+  color: "#111827",
 };
 
 const unitStyle: React.CSSProperties = {
-  fontSize: 11,
-  color: "#666",
+  fontSize: 14,
   marginLeft: 4,
+
+  color: "#6b7280",
 };
