@@ -1,99 +1,117 @@
 import Link from "next/link";
 
 export default function Page() {
-  return (
-    <main
-      style={{
-        maxWidth: 1000,
-        margin: "0 auto",
-        padding: 24,
-      }}
+return (
+<main
+style={{
+maxWidth: 1100,
+margin: "0 auto",
+padding: 24,
+}}
+> <section style={hero}> <h1 style={heroTitle}>
+日本の自治体データをランキングで見る </h1>
+
+
+    <p style={heroText}>
+      人口・子ども人口・高齢化率など、
+      全国の自治体データをランキング形式で公開しています。
+    </p>
+  </section>
+
+  <h2>ランキング</h2>
+
+  <div style={grid}>
+    <Link href="/ranking/population" style={card}>
+      <h3>人口ランキング</h3>
+      <p>人口の多い自治体TOP50</p>
+    </Link>
+
+    <Link href="/ranking/child" style={card}>
+      <h3>子ども人口ランキング</h3>
+      <p>子ども比率が高い自治体TOP50</p>
+    </Link>
+
+    <Link href="/ranking/aging" style={card}>
+      <h3>高齢化率ランキング</h3>
+      <p>高齢化率が高い自治体TOP50</p>
+    </Link>
+
+    <Link href="/ranking/decline" style={card}>
+      <h3>人口減少ランキング</h3>
+      <p>人口減少率が高い自治体TOP50</p>
+    </Link>
+  </div>
+
+  <h2 style={{ marginTop: 40 }}>
+    特集記事
+  </h2>
+
+  <div style={grid}>
+    <Link
+      href="/articles/population-top50"
+      style={card}
     >
-      <p
-        style={{
-          color: "#555",
-          fontSize: 18,
-          marginBottom: 24,
-        }}
-      >
-        全国約1700自治体のオープンデータを分析・ランキング化
+      <h3>人口ランキングTOP50分析</h3>
+      <p>
+        人口上位自治体の特徴を分析
       </p>
+    </Link>
 
-      <section>
-        <h2 style={sectionTitle}>ランキング</h2>
+    <Link
+      href="/articles/aging-top50"
+      style={card}
+    >
+      <h3>高齢化率TOP50分析</h3>
+      <p>
+        高齢化率上位自治体を分析
+      </p>
+    </Link>
 
-        <div style={grid}>
-          <Link href="/ranking/population" style={card}>
-            <h3>📊 人口ランキング</h3>
-            <p>人口が多い自治体TOP50</p>
-          </Link>
+    <Link
+      href="/articles/million-cities"
+      style={card}
+    >
+      <h3>人口100万人超自治体一覧</h3>
+      <p>
+        人口100万人以上の自治体を紹介
+      </p>
+    </Link>
+  </div>
+</main>
 
-          <Link href="/ranking/child" style={card}>
-            <h3>👶 子ども人口ランキング</h3>
-            <p>子ども比率が高い自治体TOP50</p>
-          </Link>
 
-          <Link href="/ranking/aging" style={card}>
-            <h3>👴 高齢化率ランキング</h3>
-            <p>高齢化率が高い自治体TOP50</p>
-          </Link>
-
-          <Link href="/ranking/decline" style={card}>
-            <h3>📉 人口減少ランキング</h3>
-            <p>人口減少率が高い自治体TOP50</p>
-          </Link>
-
-          <Link href="/search" style={card}>
-            <h3>🔎 自治体検索</h3>
-            <p>自治体データを検索</p>
-          </Link>
-        </div>
-      </section>
-
-      <section style={{ marginTop: 40 }}>
-        <h2 style={sectionTitle}>データ分析記事</h2>
-
-        <div style={grid}>
-          <Link
-            href="/articles/population-about"
-            style={card}
-          >
-            <h3>人口ランキングとは？</h3>
-            <p>人口データの見方を解説</p>
-          </Link>
-
-          <Link
-            href="/articles/population-concentration"
-            style={card}
-          >
-            <h3>人口集中地域を分析</h3>
-            <p>日本の人口分布を解説</p>
-          </Link>
-        </div>
-      </section>
-    </main>
-  );
+);
 }
 
-const sectionTitle: React.CSSProperties = {
-  fontSize: 24,
-  fontWeight: 700,
-  marginBottom: 16,
+const hero: React.CSSProperties = {
+background: "#2563eb",
+color: "white",
+borderRadius: 20,
+padding: 30,
+marginBottom: 40,
+};
+
+const heroTitle: React.CSSProperties = {
+fontSize: 36,
+marginBottom: 12,
+};
+
+const heroText: React.CSSProperties = {
+fontSize: 18,
 };
 
 const grid: React.CSSProperties = {
-  display: "grid",
-  gridTemplateColumns:
-    "repeat(auto-fit,minmax(280px,1fr))",
-  gap: 16,
+display: "grid",
+gridTemplateColumns:
+"repeat(auto-fit,minmax(260px,1fr))",
+gap: 20,
 };
 
 const card: React.CSSProperties = {
-  display: "block",
-  padding: 20,
-  background: "white",
-  borderRadius: 12,
-  boxShadow: "0 2px 10px rgba(0,0,0,0.05)",
-  textDecoration: "none",
-  color: "#111",
+background: "white",
+border: "1px solid #e5e7eb",
+borderRadius: 16,
+padding: 20,
+textDecoration: "none",
+color: "#111",
 };

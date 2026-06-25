@@ -11,10 +11,24 @@ export default function Page() {
       ranking.length
   );
 
+  const totalPopulation =
+    ranking.reduce(
+      (s, c) => s + c.population,
+      0
+    );
+
+  const top10Population =
+    ranking
+      .slice(0, 10)
+      .reduce(
+        (s, c) => s + c.population,
+        0
+      );
+
   return (
     <ArticleLayout
       title="人口ランキングTOP50分析"
-      summary="人口上位自治体をデータから分析しました。"
+      summary="全国自治体の人口データを分析しました。"
       heroLabel="TOP50平均人口"
       heroValue={`${average.toLocaleString()}人`}
       rankingLink="/ranking/population"
@@ -36,15 +50,65 @@ export default function Page() {
         },
       ]}
     >
-      <h2>分析結果</h2>
+      <div style={box}>
+        <h2>主要データ</h2>
 
-      <p>
-        人口上位自治体は首都圏・関西圏・中京圏に集中しています。
-      </p>
+        <ul>
+          <li>
+            TOP10人口合計：
+            {top10Population.toLocaleString()}人
+          </li>
 
-      <p>
-        大都市圏への人口集中傾向がデータから確認できます。
-      </p>
+          <li>
+            TOP50人口合計：
+            {totalPopulation.toLocaleString()}人
+          </li>
+
+          <li>
+            最大人口：
+            {ranking[0].population.toLocaleString()}人
+          </li>
+        </ul>
+      </div>
+
+      <div style={box}>
+        <h2>人口TOP10</h2>
+
+        <ol>
+          {ranking
+            .slice(0, 10)
+            .map((c) => (
+              <li key={c.code}>
+                {c.name}
+                （
+                {c.population.toLocaleString()}
+                人）
+              </li>
+            ))}
+        </ol>
+      </div>
+
+      <div style={box}>
+        <h2>分析ポイント</h2>
+
+        <p>
+          上位自治体は大都市圏に集中しています。
+        </p>
+
+        <p>
+          首都圏・関西圏・中京圏が
+          全国人口を支えていることが
+          分かります。
+        </p>
+      </div>
     </ArticleLayout>
   );
 }
+
+const box: React.CSSProperties = {
+  background: "#fff",
+  padding: 16,
+  borderRadius: 12,
+  border: "1px solid #e5e7eb",
+  marginBottom: 20,
+};
