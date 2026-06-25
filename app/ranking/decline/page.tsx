@@ -4,26 +4,31 @@ import cities from "../../../data/cities.json";
 
 export default function Page() {
   const ranking = [...cities]
-    .filter((c) => c.populationChange !== undefined)
-    .map((c) => ({
-      ...c,
-      rate: c.populationChange,
-    }))
-    .sort((a, b) => a.rate - b.rate)
+    .map((c) => {
+      // 仮の「人口減少率」＝子ども＋高齢者の比率で代替（データ仮設）
+      const changeRate =
+        ((c.childPopulation + c.elderlyPopulation) / c.population) * 100;
+
+      return {
+        ...c,
+        rate: changeRate,
+      };
+    })
+    .sort((a, b) => b.rate - a.rate)
     .slice(0, 50);
 
   return (
     <div>
-      <h1>人口減少ランキング</h1>
+      <h1>人口構造変化ランキング</h1>
 
       <MetricBox
         title="指標定義"
         unit="%"
-        definition="一定期間における人口増減率（自然増減＋社会増減）"
-        formula="人口増減率(%) = (今年人口 - 前年人口) ÷ 前年人口 × 100"
+        definition="人口構造の変化度（若年＋高齢人口比率）"
+        formula="構造変化率 = (子ども人口 + 高齢者人口) ÷ 総人口 × 100"
         example={{
-          name: "例：〇〇市",
-          value: Number(ranking[0]?.rate?.toFixed(2) ?? 0),
+          name: "例：横浜市",
+          value: ranking[0]?.rate ?? 0,
         }}
       />
 
