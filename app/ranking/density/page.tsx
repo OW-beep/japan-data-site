@@ -1,11 +1,11 @@
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
-import cities from "../../../data/cities.json";
-import type { City } from "../../../types/city";
+import { getCities } from "../../../lib/getCities";
 
 export default function Page() {
-  const ranking = [...(cities as City[])]
-    .filter((c) => c.populationDensity != null)
+
+  const ranking = getCities()
+    .filter(c => c.populationDensity != null)
     .sort(
       (a, b) =>
         (b.populationDensity ?? 0) -
@@ -20,7 +20,7 @@ export default function Page() {
       <MetricBox
         title="指標定義"
         unit="人/km²"
-        definition="人口密度は1平方キロメートル当たりの人口を表します。"
+        definition="人口密度は1平方キロメートル当たりの人口です。"
         formula="人口密度 = 人口 ÷ 面積"
         example={{
           name: ranking[0]?.name ?? "",

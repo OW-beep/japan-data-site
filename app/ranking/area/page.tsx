@@ -1,11 +1,11 @@
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
-import cities from "../../../data/cities.json";
-import type { City } from "../../../types/city";
+import { getCities } from "../../../lib/getCities";
 
 export default function Page() {
-  const ranking = [...(cities as City[])]
-    .filter((c) => c.area != null)
+
+  const ranking = getCities()
+    .filter(c => c.area != null)
     .sort((a, b) => (b.area ?? 0) - (a.area ?? 0))
     .slice(0, 50);
 
@@ -16,7 +16,7 @@ export default function Page() {
       <MetricBox
         title="指標定義"
         unit="km²"
-        definition="国土地理院が公表している自治体面積です。"
+        definition="国土地理院が公表する自治体面積です。"
         formula="自治体面積（平方キロメートル）"
         example={{
           name: ranking[0]?.name ?? "",

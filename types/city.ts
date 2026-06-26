@@ -1,4 +1,4 @@
-export type City = {
+export interface City {
   code: string;
   name: string;
 
@@ -6,12 +6,8 @@ export type City = {
   childPopulation: number;
   elderlyPopulation: number;
 
-  // 面積(km²)
   area: number | null;
-
-  // 人口密度(人/km²)
   populationDensity: number | null;
 
-  // 今後追加予定
-  financialIndex?: number | null;
-};
+  financialIndex: number | null;
+}
