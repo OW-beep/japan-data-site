@@ -1,9 +1,10 @@
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import cities from "../../../data/cities.json";
+import type { City } from "../../../types/city";
 
 export default function Page() {
-  const ranking = [...cities]
+  const ranking = [...(cities as City[])]
     .sort((a, b) => b.population - a.population)
     .slice(0, 50);
 
@@ -14,10 +15,10 @@ export default function Page() {
       <MetricBox
         title="指標定義"
         unit="人"
-        definition="各自治体の総人口（住民基本台帳ベース）を集計した値"
-        formula="人口 = 住民登録人口（外国人含む場合あり）"
+        definition="各自治体の総人口です。"
+        formula="住民基本台帳人口"
         example={{
-          name: "例：横浜市",
+          name: ranking[0]?.name ?? "",
           value: ranking[0]?.population ?? 0,
         }}
       />
