@@ -1,4 +1,3 @@
-```tsx
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import { getCities } from "../../../lib/getCities";
@@ -50,4 +49,3 @@ export default function Page() {
     </div>
   );
 }
-```
