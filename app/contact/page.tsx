@@ -8,7 +8,7 @@ export default function Page() {
       </p>
 
       <p>
-        Email: example@example.com
+        Email: openwave25@gmail.com
       </p>
     </main>
   );
