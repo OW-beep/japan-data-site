@@ -1,6 +1,6 @@
 import cities from "@/data/cities.json";
-import { City } from "@/types/City";
+import type { City } from "@/lib/City";
 
 export function getCity(code: string): City | undefined {
-  return (cities as City[]).find((c) => c.code === code);
+  return (cities as City[]).find((city) => city.code === code);
 }
