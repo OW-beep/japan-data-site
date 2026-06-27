@@ -8,26 +8,24 @@ function normalize(str: string) {
     .replace(/之/g, "ノ");
 }
 
-const cities = JSON.parse(
+const cities: any[] = JSON.parse(
   fs.readFileSync("data/cities.json", "utf8")
 );
 
-const areas = JSON.parse(
+const areas: any[] = JSON.parse(
   fs.readFileSync("data/area.json", "utf8")
 );
 
-const areaMap = new Map(
+const areaMap = new Map<string, number>(
   areas.map((a: any) => [
     normalize(a.name),
-    a.area,
+    Number(a.area),
   ])
 );
 
 const merged = cities.map((city: any) => {
-  let area =
-    areaMap.get(
-      normalize(city.name)
-    ) ?? null;
+  let area: number | null =
+    areaMap.get(normalize(city.name)) ?? null;
 
   // 東京都特別区部のみ補完
   if (city.name === "東京都 特別区部") {
@@ -40,10 +38,8 @@ const merged = cities.map((city: any) => {
     area,
 
     populationDensity:
-      area && area > 0
-        ? Math.round(
-            city.population / area
-          )
+      area !== null && area > 0
+        ? Math.round(city.population / area)
         : null,
   };
 });
