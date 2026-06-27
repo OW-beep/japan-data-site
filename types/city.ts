@@ -1,5 +1,6 @@
 export type City = {
   code: string;
+
   name: string;
 
   population: number;
