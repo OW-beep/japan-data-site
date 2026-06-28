@@ -40,9 +40,10 @@ export function getCityRanking(code: string) {
 
   // 都道府県順位
 
-  const prefCities = cities.filter(
-    (c: any) =>
-      c.prefecture === city.prefecture
+  const pref = city.name.split(" ")[0];
+
+  const prefCities = cities.filter((c: any) =>
+  c.name.startsWith(pref)
   );
 
   const prefPopulationRank =
