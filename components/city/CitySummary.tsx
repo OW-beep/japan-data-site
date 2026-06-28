@@ -1,7 +1,6 @@
 type Props = {
   city: {
     name: string;
-    prefecture: string;
     population: number;
     area?: number | null;
     populationDensity?: number | null;
@@ -11,6 +10,9 @@ type Props = {
 };
 
 export default function CitySummary({ city }: Props) {
+  const pref = city.name.split(" ")[0];
+  const cityName = city.name.replace(pref, "").trim();
+
   return (
     <section
       style={{
@@ -28,7 +30,7 @@ export default function CitySummary({ city }: Props) {
           marginBottom: 22,
         }}
       >
-        {city.name}とは？
+        {cityName}とは？
       </h2>
 
       <p
@@ -38,7 +40,7 @@ export default function CitySummary({ city }: Props) {
           color: "#374151",
         }}
       >
-        {city.name}は{city.prefecture}に位置する自治体です。
+        {cityName}は{pref}に位置する自治体です。
         人口は
         <strong>{city.population.toLocaleString()}人</strong>
         で、地域の中心都市として暮らし・産業・行政サービスを支えています。
@@ -68,7 +70,7 @@ export default function CitySummary({ city }: Props) {
         </p>
       )}
 
-      {city.agingRate && (
+      {city.agingRate != null && (
         <p
           style={{
             marginTop: 18,
@@ -79,11 +81,11 @@ export default function CitySummary({ city }: Props) {
         >
           高齢化率は
           <strong>{city.agingRate}%</strong>
-          で、地域の人口構成を知る重要な指標となっています。
+          で、地域の人口構成を知る重要な指標です。
         </p>
       )}
 
-      {city.birthRate && (
+      {city.birthRate != null && (
         <p
           style={{
             marginTop: 18,
