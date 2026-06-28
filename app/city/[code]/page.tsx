@@ -3,10 +3,19 @@ import { notFound } from "next/navigation";
 
 import { getCity } from "@/lib/getCity";
 import { getCities } from "@/lib/getCities";
+import { getCityRanking } from "@/lib/getCityRanking";
 
 import Breadcrumb from "@/components/Breadcrumb";
-import RelatedArticles from "@/components/RelatedArticles";
 import JsonLd from "@/components/JsonLd";
+import RelatedArticles from "@/components/RelatedArticles";
+
+import CitySummary from "@/components/city/CitySummary";
+import CityStats from "@/components/city/CityStats";
+import CityHighlights from "@/components/city/CityHighlights";
+import CityRanking from "@/components/city/CityRanking";
+import NearbyCities from "@/components/city/NearbyCities";
+import CityFAQ from "@/components/city/CityFAQ";
+import RelatedRankings from "@/components/city/RelatedRankings";
 
 type Props = {
   params: Promise<{
@@ -31,7 +40,7 @@ export async function generateMetadata({
 
   return {
     title: city.name,
-    description: `${city.name}の人口・面積・人口密度・子ども人口・高齢化率を掲載しています。`,
+    description: `${city.name}の人口・面積・人口密度・出生率・高齢化率などを掲載しています。`,
   };
 }
 
@@ -46,15 +55,32 @@ export default async function Page({
     notFound();
   }
 
-  const pref = city.name.split(" ")[0];
-  const cityName = city.name.split(" ")[1];
+  const ranking = getCityRanking(code);
+
+  const allCities = getCities();
+
+  const nearbyCities = allCities
+    .filter(
+      (c) =>
+        c.prefecture === city.prefecture &&
+        c.code !== city.code
+    )
+    .sort((a, b) => b.population - a.population)
+    .slice(0, 8)
+    .map((c) => ({
+      code: c.code,
+      name: c.name,
+    }));
+
+  const pref = city.prefecture;
+  const cityName = city.name;
 
   return (
     <main
       style={{
-        maxWidth: 1000,
+        maxWidth: 1100,
         margin: "0 auto",
-        padding: "40px 24px",
+        padding: "40px 24px 80px",
       }}
     >
       <JsonLd
@@ -84,130 +110,55 @@ export default async function Page({
 
       <h1
         style={{
-          fontSize: 42,
+          fontSize: 44,
+          fontWeight: 800,
           marginBottom: 30,
         }}
       >
         {city.name}
       </h1>
 
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns:
-            "repeat(auto-fit,minmax(220px,1fr))",
-          gap: 20,
-        }}
-      >
-        <Card
-          title="人口"
-          value={`${city.population.toLocaleString()} 人`}
-        />
+      <CitySummary city={city} />
 
-        <Card
-          title="面積"
-          value={
-            city.area
-              ? `${city.area.toLocaleString()} km²`
-              : "-"
-          }
-        />
+      <CityStats city={city} />
 
-        <Card
-          title="人口密度"
-          value={
-            city.populationDensity
-              ? `${city.populationDensity.toLocaleString()} 人/km²`
-              : "-"
-          }
-        />
+      <CityHighlights city={city} />
 
-        <Card
-          title="子ども人口"
-          value={`${city.childPopulation.toLocaleString()} 人`}
-        />
+      <CityRanking
+        national={ranking?.national ?? []}
+        prefecture={ranking?.prefecture ?? []}
+      />
 
-        <Card
-          title="高齢者人口"
-          value={`${city.elderlyPopulation.toLocaleString()} 人`}
-        />
+      <NearbyCities
+        prefecture={city.prefecture}
+        cities={nearbyCities}
+      />
 
-        <Card
-          title="財政力指数"
-          value={
-            city.financialIndex
-              ? city.financialIndex.toString()
-              : "-"
-          }
-        />
-      </div>
+      <CityFAQ city={city} />
 
-      <section
-        style={{
-          marginTop: 60,
-        }}
-      >
-        <h2>概要</h2>
-
-        <p
-          style={{
-            lineHeight: 2,
-          }}
-        >
-          {city.name}
-          の人口・面積・人口密度・子ども人口・高齢化率などを掲載しています。
-          全国1747自治体を同じ基準で比較できます。
-        </p>
-      </section>
+      <RelatedRankings
+        prefecture={city.prefecture}
+      />
 
       <RelatedArticles />
 
       <div
         style={{
           marginTop: 50,
+          textAlign: "center",
         }}
       >
-        <Link href="/">
-          ← トップへ戻る
+        <Link
+          href="/"
+          style={{
+            color: "#2563eb",
+            textDecoration: "none",
+            fontWeight: 700,
+          }}
+        >
+          ← トップページへ戻る
         </Link>
       </div>
     </main>
-  );
-}
-
-function Card({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
-  return (
-    <div
-      style={{
-        background: "#fff",
-        border: "1px solid #e5e7eb",
-        borderRadius: 16,
-        padding: 24,
-      }}
-    >
-      <div
-        style={{
-          color: "#6b7280",
-          marginBottom: 8,
-        }}
-      >
-        {title}
-      </div>
-
-      <div
-        style={{
-          fontSize: 30,
-          fontWeight: 700,
-        }}
-      >
-        {value}
-      </div>
-    </div>
   );
 }
