@@ -1,11 +1,22 @@
 import Hero from "@/components/home/Hero";
+import SiteIntroduction from "@/components/home/SiteIntroduction";
+import WhyTrust from "@/components/home/WhyTrust";
+
 import Stats from "@/components/home/Stats";
+
 import RankingSection from "@/components/home/RankingSection";
-import ArticleSection from "@/components/home/ArticleSection";
+
 import CategorySection from "@/components/home/CategorySection";
+
+import ArticleSection from "@/components/home/ArticleSection";
+import LatestArticles from "@/components/home/LatestArticles";
+
 import PrefectureSection from "@/components/home/PrefectureSection";
+
 import SearchSection from "@/components/home/SearchSection";
+
 import OpenDataSection from "@/components/home/OpenDataSection";
+
 import SitemapSection from "@/components/home/SitemapSection";
 
 export default function Home() {
@@ -19,13 +30,19 @@ export default function Home() {
     >
       <Hero />
 
+      <SiteIntroduction />
+
+      <WhyTrust />
+
       <Stats />
+
+      <CategorySection />
 
       <RankingSection />
 
-      <ArticleSection />
+      <LatestArticles />
 
-      <CategorySection />
+      <ArticleSection />
 
       <PrefectureSection />
 
