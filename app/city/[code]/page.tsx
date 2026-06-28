@@ -59,21 +59,18 @@ export default async function Page({
 
   const allCities = getCities();
 
-  const nearbyCities = allCities
-    .filter(
-      (c) =>
-        c.prefecture === city.prefecture &&
-        c.code !== city.code
-    )
-    .sort((a, b) => b.population - a.population)
-    .slice(0, 8)
-    .map((c) => ({
-      code: c.code,
-      name: c.name,
-    }));
+  const pref = city.name.split(" ")[0];
+  const cityName = city.name.replace(pref, "").trim();
 
-  const pref = city.prefecture;
-  const cityName = city.name;
+  const nearbyCities = allCities
+  .filter((c) => c.name.startsWith(pref))
+  .filter((c) => c.code !== city.code)
+  .sort((a, b) => b.population - a.population)
+  .slice(0, 8)
+  .map((c) => ({
+    code: c.code,
+    name: c.name.replace(pref, "").trim(),
+  }));
 
   return (
     <main
@@ -130,14 +127,14 @@ export default async function Page({
       />
 
       <NearbyCities
-        prefecture={city.prefecture}
+        prefecture={pref}
         cities={nearbyCities}
       />
 
       <CityFAQ city={city} />
 
       <RelatedRankings
-        prefecture={city.prefecture}
+        prefecture={pref}
       />
 
       <RelatedArticles />
