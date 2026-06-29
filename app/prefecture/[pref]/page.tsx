@@ -19,7 +19,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: Props) {
-  const { pref } = await params;
+  const { pref: rawPref } = await params;
+
+  const pref = decodeURIComponent(rawPref);
 
   return {
     title: `${pref}の自治体一覧`,
@@ -30,11 +32,23 @@ export async function generateMetadata({
 export default async function Page({
   params,
 }: Props) {
-  const { pref } = await params;
+  const { pref: rawPref } = await params;
 
-  const cities = getCities().filter((c) =>
+  const pref = decodeURIComponent(rawPref);
+
+  console.log("==========");
+  console.log("pref =", pref);
+
+  const allCities = getCities();
+
+  console.log("cities.length =", allCities.length);
+  console.log("first city =", allCities[0]);
+
+  const cities = allCities.filter((c) =>
     c.name.startsWith(pref + " ")
   );
+
+  console.log("matched =", cities.length);
 
   if (cities.length === 0) {
     notFound();
