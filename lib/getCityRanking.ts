@@ -5,55 +5,63 @@ export function getCityRanking(code: string) {
 
   if (!city) return null;
 
-  const rank = (
-    list: any[],
-    key: string
-  ) =>
-    [...list]
-      .filter((c) => c[key] != null)
-      .sort(
-        (a, b) =>
-          (b[key] ?? 0) - (a[key] ?? 0)
-      )
-      .findIndex((c) => c.code === code) + 1;
-
-  // -------------------
+  // =========================
   // 全国順位
-  // -------------------
+  // =========================
 
-  const populationRank = rank(
-    cities,
-    "population"
-  );
+  const populationRank =
+    [...cities]
+      .sort((a: any, b: any) => b.population - a.population)
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const areaRank = rank(
-    cities,
-    "area"
-  );
+  const areaRank =
+    [...cities]
+      .sort((a: any, b: any) => (b.area ?? 0) - (a.area ?? 0))
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const densityRank = rank(
-    cities,
-    "populationDensity"
-  );
+  const densityRank =
+    [...cities]
+      .sort(
+        (a: any, b: any) =>
+          (b.populationDensity ?? 0) -
+          (a.populationDensity ?? 0)
+      )
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const childRank = rank(
-    cities,
-    "childPopulation"
-  );
+  const childRank =
+    [...cities]
+      .sort(
+        (a: any, b: any) =>
+          (b.childPopulation ?? 0) -
+          (a.childPopulation ?? 0)
+      )
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const agingRank = rank(
-    cities,
-    "agingRate"
-  );
+  const birthRateRank =
+    city.birthRate == null
+      ? 0
+      : [...cities]
+          .filter((c: any) => c.birthRate != null)
+          .sort(
+            (a: any, b: any) =>
+              b.birthRate - a.birthRate
+          )
+          .findIndex((c: any) => c.code === code) + 1;
 
-  const birthRank = rank(
-    cities,
-    "birthRate"
-  );
+  const agingRateRank =
+    city.agingRate == null
+      ? 0
+      : [...cities]
+          .filter((c: any) => c.agingRate != null)
+          .sort(
+            (a: any, b: any) =>
+              b.agingRate - a.agingRate
+          )
+          .findIndex((c: any) => c.code === code) + 1;
 
-  // -------------------
+  // =========================
   // 都道府県順位
-  // -------------------
+  // =========================
 
   const pref = city.name.split(" ")[0];
 
@@ -61,36 +69,59 @@ export function getCityRanking(code: string) {
     c.name.startsWith(pref + " ")
   );
 
-  const prefPopulationRank = rank(
-    prefCities,
-    "population"
-  );
+  const prefPopulationRank =
+    [...prefCities]
+      .sort((a: any, b: any) => b.population - a.population)
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const prefAreaRank = rank(
-    prefCities,
-    "area"
-  );
+  const prefAreaRank =
+    [...prefCities]
+      .sort(
+        (a: any, b: any) =>
+          (b.area ?? 0) - (a.area ?? 0)
+      )
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const prefDensityRank = rank(
-    prefCities,
-    "populationDensity"
-  );
+  const prefDensityRank =
+    [...prefCities]
+      .sort(
+        (a: any, b: any) =>
+          (b.populationDensity ?? 0) -
+          (a.populationDensity ?? 0)
+      )
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const prefChildRank = rank(
-    prefCities,
-    "childPopulation"
-  );
+  const prefChildRank =
+    [...prefCities]
+      .sort(
+        (a: any, b: any) =>
+          (b.childPopulation ?? 0) -
+          (a.childPopulation ?? 0)
+      )
+      .findIndex((c: any) => c.code === code) + 1;
 
-  const prefAgingRank = rank(
-    prefCities,
-    "agingRate"
-  );
+  const prefBirthRateRank =
+    city.birthRate == null
+      ? 0
+      : [...prefCities]
+          .filter((c: any) => c.birthRate != null)
+          .sort(
+            (a: any, b: any) =>
+              b.birthRate - a.birthRate
+          )
+          .findIndex((c: any) => c.code === code) + 1;
 
-  const prefBirthRank = rank(
-    prefCities,
-    "birthRate"
-  );
-
+  const prefAgingRateRank =
+    city.agingRate == null
+      ? 0
+      : [...prefCities]
+          .filter((c: any) => c.agingRate != null)
+          .sort(
+            (a: any, b: any) =>
+              b.agingRate - a.agingRate
+          )
+          .findIndex((c: any) => c.code === code) + 1;
+  
   return {
     national: [
       {
@@ -110,17 +141,17 @@ export function getCityRanking(code: string) {
         value: `${childRank}位`,
       },
       {
-        label: "高齢化率",
+        label: "出生率",
         value:
-          agingRank > 0
-            ? `${agingRank}位`
+          birthRateRank > 0
+            ? `${birthRateRank}位`
             : "-",
       },
       {
-        label: "出生率",
+        label: "高齢化率",
         value:
-          birthRank > 0
-            ? `${birthRank}位`
+          agingRateRank > 0
+            ? `${agingRateRank}位`
             : "-",
       },
     ],
@@ -143,19 +174,39 @@ export function getCityRanking(code: string) {
         value: `${prefChildRank}位`,
       },
       {
-        label: "高齢化率",
+        label: "出生率",
         value:
-          prefAgingRank > 0
-            ? `${prefAgingRank}位`
+          prefBirthRateRank > 0
+            ? `${prefBirthRateRank}位`
             : "-",
       },
       {
-        label: "出生率",
+        label: "高齢化率",
         value:
-          prefBirthRank > 0
-            ? `${prefBirthRank}位`
+          prefAgingRateRank > 0
+            ? `${prefAgingRateRank}位`
             : "-",
       },
     ],
+
+    summary: {
+      national: {
+        population: populationRank,
+        area: areaRank,
+        density: densityRank,
+        child: childRank,
+        birthRate: birthRateRank,
+        agingRate: agingRateRank,
+      },
+
+      prefecture: {
+        population: prefPopulationRank,
+        area: prefAreaRank,
+        density: prefDensityRank,
+        child: prefChildRank,
+        birthRate: prefBirthRateRank,
+        agingRate: prefAgingRateRank,
+      },
+    },
   };
 }

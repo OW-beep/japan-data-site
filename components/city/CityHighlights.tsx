@@ -5,14 +5,18 @@ type Props = {
     area?: number | null;
     populationDensity?: number | null;
     childPopulation?: number | null;
+    birthRate?: number | null;
+    agingRate?: number | null;
   };
 
   ranking?: {
     national: {
-      population?: number;
-      area?: number;
-      density?: number;
-      child?: number;
+      population: number;
+      area: number;
+      density: number;
+      child: number;
+      birthRate: number;
+      agingRate: number;
     };
   };
 };
@@ -27,12 +31,9 @@ export default function CityHighlights({
 }: Props) {
   const comments: string[] = [];
 
-  // 人口
-  if (ranking?.national.population) {
-    comments.push(
-      `${city.name}は全国約1,900自治体の中で人口第${ranking.national.population}位です。`
-    );
-  }
+  comments.push(
+    `${city.name}は全国約1,900自治体の中で人口第${ranking?.national.population}位です。`
+  );
 
   if (city.population > AVG_POPULATION) {
     comments.push(
@@ -44,44 +45,34 @@ export default function CityHighlights({
     );
   } else {
     comments.push(
-      "人口規模は全国平均よりやや小さく、地域に密着した自治体です。"
+      "人口規模は全国平均よりやや小さく、地域密着型の自治体です。"
     );
   }
 
-  // 面積
   if (city.area != null) {
-    if (ranking?.national.area) {
-      comments.push(
-        `面積は全国第${ranking.national.area}位です。`
-      );
-    }
+    comments.push(
+      `面積は全国第${ranking?.national.area}位です。`
+    );
 
     if (city.area > AVG_AREA) {
       comments.push(
-        `面積は約${(
-          city.area / AVG_AREA
-        ).toFixed(
-          1
-        )}倍あり、比較的広い自治体です。`
+        `面積は全国平均より広く、多様な地域特性を持っています。`
       );
     } else {
       comments.push(
-        "全国平均と比べるとコンパクトな面積です。"
+        "全国平均よりコンパクトな面積となっています。"
       );
     }
   }
 
-  // 人口密度
   if (city.populationDensity != null) {
-    if (ranking?.national.density) {
-      comments.push(
-        `人口密度は全国第${ranking.national.density}位です。`
-      );
-    }
+    comments.push(
+      `人口密度は全国第${ranking?.national.density}位です。`
+    );
 
     if (city.populationDensity > AVG_DENSITY) {
       comments.push(
-        "人口密度が高く、市街地が発達した都市型の自治体です。"
+        "人口密度が高く、市街地が発達した都市型自治体です。"
       );
     } else {
       comments.push(
@@ -90,27 +81,31 @@ export default function CityHighlights({
     }
   }
 
-  // 子ども人口
   if (city.childPopulation != null) {
     const rate =
-      (city.childPopulation / city.population) *
-      100;
-
-    if (ranking?.national.child) {
-      comments.push(
-        `子ども人口は全国第${ranking.national.child}位です。`
-      );
-    }
+      (city.childPopulation / city.population) * 100;
 
     comments.push(
-      `子ども人口は約${city.childPopulation.toLocaleString()}人で、人口全体の約${rate.toFixed(
+      `子ども人口は全国第${ranking?.national.child}位で、約${city.childPopulation.toLocaleString()}人（人口の約${rate.toFixed(
         1
-      )}%を占めています。`
+      )}%）です。`
+    );
+  }
+
+  if (city.birthRate != null && ranking?.national.birthRate > 0) {
+    comments.push(
+      `出生率は全国第${ranking.national.birthRate}位です。`
+    );
+  }
+
+  if (city.agingRate != null && ranking?.national.agingRate > 0) {
+    comments.push(
+      `高齢化率は全国第${ranking.national.agingRate}位です。`
     );
   }
 
   comments.push(
-    "人口・面積・人口密度などのデータを活用することで、全国の自治体との比較や地域の特徴を把握できます。"
+    "人口・面積・人口密度などのデータを比較することで、この自治体の特徴や全国での位置づけを把握できます。"
   );
 
   return (
