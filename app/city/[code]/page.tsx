@@ -119,7 +119,25 @@ export default async function Page({
 
       <CityStats city={city} />
 
-      <CityHighlights city={city} />
+      <CityHighlights
+        city={city}
+        ranking={{
+    national: {
+      population: parseInt(
+        ranking?.national.find((x) => x.label === "人口")?.value ?? "0"
+      ),
+      area: parseInt(
+        ranking?.national.find((x) => x.label === "面積")?.value ?? "0"
+      ),
+      density: parseInt(
+        ranking?.national.find((x) => x.label === "人口密度")?.value ?? "0"
+      ),
+      child: parseInt(
+        ranking?.national.find((x) => x.label === "子ども人口")?.value ?? "0"
+      ),
+        },
+        }}
+      />
 
       <CityRanking
         national={ranking?.national ?? []}
