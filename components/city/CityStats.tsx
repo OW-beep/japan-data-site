@@ -6,6 +6,7 @@ type Props = {
     childPopulation?: number | null;
     agingRate?: number | null;
     birthRate?: number | null;
+    financeIndex?: number | null;
   };
 };
 
@@ -18,30 +19,33 @@ export default function CityStats({ city }: Props) {
     },
     {
       title: "面積",
-      value: city.area
-        ? city.area.toLocaleString() + " km²"
-        : "-",
+      value:
+        city.area != null
+          ? city.area.toLocaleString() + " km²"
+          : "-",
       icon: "🗺️",
     },
     {
       title: "人口密度",
-      value: city.populationDensity
-        ? city.populationDensity.toLocaleString() + " 人/km²"
-        : "-",
+      value:
+        city.populationDensity != null
+          ? city.populationDensity.toLocaleString() + " 人/km²"
+          : "-",
       icon: "🏙️",
     },
     {
       title: "子ども人口",
-      value: city.childPopulation
-        ? city.childPopulation.toLocaleString() + " 人"
-        : "-",
+      value:
+        city.childPopulation != null
+          ? city.childPopulation.toLocaleString() + " 人"
+          : "-",
       icon: "👶",
     },
     {
       title: "高齢化率",
       value:
         city.agingRate != null
-          ? city.agingRate + "%"
+          ? city.agingRate.toFixed(1) + "%"
           : "-",
       icon: "👴",
     },
@@ -49,9 +53,17 @@ export default function CityStats({ city }: Props) {
       title: "出生率",
       value:
         city.birthRate != null
-          ? city.birthRate.toString()
+          ? city.birthRate.toFixed(2)
           : "-",
       icon: "🍼",
+    },
+    {
+      title: "財政力指数",
+      value:
+        city.financeIndex != null
+          ? city.financeIndex.toFixed(3)
+          : "-",
+      icon: "💰",
     },
   ];
 

@@ -7,6 +7,7 @@ type Props = {
     childPopulation?: number | null;
     birthRate?: number | null;
     agingRate?: number | null;
+    financeIndex?: number | null;
   };
 
   ranking?: {
@@ -17,6 +18,7 @@ type Props = {
       child: number;
       birthRate: number;
       agingRate: number;
+      finance: number;
     };
   };
 };
@@ -29,6 +31,7 @@ export default function CityHighlights({
   city,
   ranking,
 }: Props) {
+
   const comments: string[] = [];
 
   comments.push(
@@ -37,75 +40,118 @@ export default function CityHighlights({
 
   if (city.population > AVG_POPULATION) {
     comments.push(
-      `人口は約${(
+      `人口は全国平均の約${(
         city.population / AVG_POPULATION
-      ).toFixed(
-        1
-      )}倍で、全国平均を大きく上回る自治体です。`
+      ).toFixed(1)}倍となっています。`
     );
   } else {
     comments.push(
-      "人口規模は全国平均よりやや小さく、地域密着型の自治体です。"
+      "人口規模は全国平均よりやや小さい自治体です。"
     );
   }
 
   if (city.area != null) {
+
     comments.push(
       `面積は全国第${ranking?.national.area}位です。`
     );
 
-    if (city.area > AVG_AREA) {
-      comments.push(
-        `面積は全国平均より広く、多様な地域特性を持っています。`
-      );
-    } else {
-      comments.push(
-        "全国平均よりコンパクトな面積となっています。"
-      );
-    }
+    comments.push(
+      city.area > AVG_AREA
+        ? "全国平均より広い面積を持っています。"
+        : "比較的コンパクトな自治体です。"
+    );
+
   }
 
   if (city.populationDensity != null) {
+
     comments.push(
       `人口密度は全国第${ranking?.national.density}位です。`
     );
 
-    if (city.populationDensity > AVG_DENSITY) {
-      comments.push(
-        "人口密度が高く、市街地が発達した都市型自治体です。"
-      );
-    } else {
-      comments.push(
-        "人口密度は比較的低く、ゆとりある住環境が特徴です。"
-      );
-    }
+    comments.push(
+      city.populationDensity > AVG_DENSITY
+        ? "人口密度が高く、市街地が発達しています。"
+        : "人口密度は低めで、ゆとりある住環境となっています。"
+    );
+
   }
 
   if (city.childPopulation != null) {
+
     const rate =
-      (city.childPopulation / city.population) * 100;
+      city.population === 0
+        ? 0
+        : city.childPopulation / city.population * 100;
 
     comments.push(
-      `子ども人口は全国第${ranking?.national.child}位で、約${city.childPopulation.toLocaleString()}人（人口の約${rate.toFixed(
+      `子ども人口は約${city.childPopulation.toLocaleString()}人（人口の約${rate.toFixed(
         1
-      )}%）です。`
+      )}%）で、全国第${ranking?.national.child}位です。`
     );
+
   }
 
-  if (city.birthRate != null && ranking?.national.birthRate > 0) {
+  if (
+    city.birthRate != null &&
+    ranking?.national.birthRate
+  ) {
+
     comments.push(
-      `出生率は全国第${ranking.national.birthRate}位です。`
+      `出生率は${city.birthRate.toFixed(2)}で、全国第${ranking.national.birthRate}位です。`
     );
+
   }
 
-  if (city.agingRate != null && ranking?.national.agingRate > 0) {
+  if (
+    city.agingRate != null &&
+    ranking?.national.agingRate
+  ) {
+
     comments.push(
-      `高齢化率は全国第${ranking.national.agingRate}位です。`
+      `高齢化率は${city.agingRate.toFixed(1)}%で、全国第${ranking.national.agingRate}位です。`
     );
+
   }
+
+  if (
+  city.financeIndex != null &&
+  ranking?.national.finance
+) {
+
+  const finance = city.financeIndex / 100;
 
   comments.push(
-    "人口・面積・人口密度などのデータを比較することで、この自治体の特徴や全国での位置づけを把握できます。"
+    `財政力指数は${finance.toFixed(
+      2
+    )}で、全国第${ranking.national.finance}位です。`
+  );
+
+  if (finance >= 1) {
+
+    comments.push(
+      "財政力指数が1.00以上であり、地方交付税に依存しない比較的財政力の高い自治体です。"
+    );
+
+  } else if (finance >= 0.7) {
+
+    comments.push(
+      "全国的に見ても比較的財政基盤が安定した自治体です。"
+    );
+
+  } else {
+
+    comments.push(
+      "財政力指数は全国平均より低く、地方交付税への依存度が比較的高い自治体です。"
+    );
+
+  }
+
+}
+
+  comments.push(
+    "人口・出生率・高齢化率・財政力指数などを比較することで、この自治体の特徴を多角的に把握できます。"
   );
 
   return (

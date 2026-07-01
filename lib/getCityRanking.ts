@@ -42,10 +42,7 @@ export function getCityRanking(code: string) {
       ? 0
       : [...cities]
           .filter((c: any) => c.birthRate != null)
-          .sort(
-            (a: any, b: any) =>
-              b.birthRate - a.birthRate
-          )
+          .sort((a: any, b: any) => b.birthRate - a.birthRate)
           .findIndex((c: any) => c.code === code) + 1;
 
   const agingRateRank =
@@ -53,9 +50,22 @@ export function getCityRanking(code: string) {
       ? 0
       : [...cities]
           .filter((c: any) => c.agingRate != null)
+          .sort((a: any, b: any) => b.agingRate - a.agingRate)
+          .findIndex((c: any) => c.code === code) + 1;
+
+  const financeRank =
+    city.financeIndex == null ||
+    Number.isNaN(city.financeIndex)
+      ? 0
+      : [...cities]
+          .filter(
+            (c: any) =>
+              c.financeIndex != null &&
+              !Number.isNaN(c.financeIndex)
+          )
           .sort(
             (a: any, b: any) =>
-              b.agingRate - a.agingRate
+              b.financeIndex - a.financeIndex
           )
           .findIndex((c: any) => c.code === code) + 1;
 
@@ -76,10 +86,7 @@ export function getCityRanking(code: string) {
 
   const prefAreaRank =
     [...prefCities]
-      .sort(
-        (a: any, b: any) =>
-          (b.area ?? 0) - (a.area ?? 0)
-      )
+      .sort((a: any, b: any) => (b.area ?? 0) - (a.area ?? 0))
       .findIndex((c: any) => c.code === code) + 1;
 
   const prefDensityRank =
@@ -105,10 +112,7 @@ export function getCityRanking(code: string) {
       ? 0
       : [...prefCities]
           .filter((c: any) => c.birthRate != null)
-          .sort(
-            (a: any, b: any) =>
-              b.birthRate - a.birthRate
-          )
+          .sort((a: any, b: any) => b.birthRate - a.birthRate)
           .findIndex((c: any) => c.code === code) + 1;
 
   const prefAgingRateRank =
@@ -116,76 +120,61 @@ export function getCityRanking(code: string) {
       ? 0
       : [...prefCities]
           .filter((c: any) => c.agingRate != null)
+          .sort((a: any, b: any) => b.agingRate - a.agingRate)
+          .findIndex((c: any) => c.code === code) + 1;
+
+  const prefFinanceRank =
+    city.financeIndex == null ||
+    Number.isNaN(city.financeIndex)
+      ? 0
+      : [...prefCities]
+          .filter(
+            (c: any) =>
+              c.financeIndex != null &&
+              !Number.isNaN(c.financeIndex)
+          )
           .sort(
             (a: any, b: any) =>
-              b.agingRate - a.agingRate
+              b.financeIndex - a.financeIndex
           )
           .findIndex((c: any) => c.code === code) + 1;
-  
+
   return {
     national: [
-      {
-        label: "人口",
-        value: `${populationRank}位`,
-      },
-      {
-        label: "面積",
-        value: `${areaRank}位`,
-      },
-      {
-        label: "人口密度",
-        value: `${densityRank}位`,
-      },
-      {
-        label: "子ども人口",
-        value: `${childRank}位`,
-      },
+      { label: "人口", value: `${populationRank}位` },
+      { label: "面積", value: `${areaRank}位` },
+      { label: "人口密度", value: `${densityRank}位` },
+      { label: "子ども人口", value: `${childRank}位` },
       {
         label: "出生率",
-        value:
-          birthRateRank > 0
-            ? `${birthRateRank}位`
-            : "-",
+        value: birthRateRank > 0 ? `${birthRateRank}位` : "-",
       },
       {
         label: "高齢化率",
-        value:
-          agingRateRank > 0
-            ? `${agingRateRank}位`
-            : "-",
+        value: agingRateRank > 0 ? `${agingRateRank}位` : "-",
+      },
+      {
+        label: "財政力指数",
+        value: financeRank > 0 ? `${financeRank}位` : "-",
       },
     ],
 
     prefecture: [
-      {
-        label: "人口",
-        value: `${prefPopulationRank}位`,
-      },
-      {
-        label: "面積",
-        value: `${prefAreaRank}位`,
-      },
-      {
-        label: "人口密度",
-        value: `${prefDensityRank}位`,
-      },
-      {
-        label: "子ども人口",
-        value: `${prefChildRank}位`,
-      },
+      { label: "人口", value: `${prefPopulationRank}位` },
+      { label: "面積", value: `${prefAreaRank}位` },
+      { label: "人口密度", value: `${prefDensityRank}位` },
+      { label: "子ども人口", value: `${prefChildRank}位` },
       {
         label: "出生率",
-        value:
-          prefBirthRateRank > 0
-            ? `${prefBirthRateRank}位`
-            : "-",
+        value: prefBirthRateRank > 0 ? `${prefBirthRateRank}位` : "-",
       },
       {
         label: "高齢化率",
-        value:
-          prefAgingRateRank > 0
-            ? `${prefAgingRateRank}位`
-            : "-",
+        value: prefAgingRateRank > 0 ? `${prefAgingRateRank}位` : "-",
+      },
+      {
+        label: "財政力指数",
+        value: prefFinanceRank > 0 ? `${prefFinanceRank}位` : "-",
       },
     ],
 
@@ -197,6 +186,7 @@ export function getCityRanking(code: string) {
         child: childRank,
         birthRate: birthRateRank,
         agingRate: agingRateRank,
+        finance: financeRank,
       },
 
       prefecture: {
@@ -206,6 +196,7 @@ export function getCityRanking(code: string) {
         child: prefChildRank,
         birthRate: prefBirthRateRank,
         agingRate: prefAgingRateRank,
+        finance: prefFinanceRank,
       },
     },
   };

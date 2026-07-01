@@ -6,28 +6,30 @@ dotenv.config({ path: ".env.local" });
 const APP_ID = process.env.ESTAT_APP_ID;
 
 if (!APP_ID) {
-  throw new Error("ESTAT_APP_IDが未設定です");
+  throw new Error("ESTAT_APP_ID がありません");
 }
 
-/**
- * e-Stat statsDataId（人口系）
- * ※このIDはデータセットで変わる可能性あり
- */
-const STATS_ID = "0000020201";
+// 社会・人口統計体系
+const POP_STATS = "0000020201";
 
-/**
- * カテゴリ（重要）
- * A1101 = 総人口
- * A5101 = 年少人口（0-14歳）
- * A5102 = 老年人口（65歳以上）
- */
+// 地方財政状況調査
+const FINANCE_STATS = "0003172920";
 
-async function fetchData(cat: string) {
+async function fetchStats(
+  statsId: string,
+  code: string,
+  type: "cat" | "tab"
+) {
+  const key =
+    type === "cat"
+      ? "cdCat01"
+      : "cdTab";
+
   const url =
     "https://api.e-stat.go.jp/rest/3.0/app/json/getStatsData" +
     `?appId=${APP_ID}` +
-    `&statsDataId=${STATS_ID}` +
-    `&cdCat01=${cat}` +
+    `&statsDataId=${statsId}` +
+    `&${key}=${code}` +
     "&metaGetFlg=Y";
 
   const res = await fetch(url);
@@ -39,129 +41,169 @@ async function fetchData(cat: string) {
   return res.json();
 }
 
-function toArray(v: any) {
+function arr(v: any) {
   if (!v) return [];
   return Array.isArray(v) ? v : [v];
 }
 
+type City = {
+  code: string;
+  name: string;
+  population: number;
+  childPopulation: number;
+  elderlyPopulation: number;
+  financeIndex: number;
+};
+
+const map = new Map<string, City>();
+
+function ensure(code: string) {
+  if (!map.has(code)) {
+    map.set(code, {
+      code,
+      name: "",
+      population: 0,
+      childPopulation: 0,
+      elderlyPopulation: 0,
+      financeIndex: 0,
+    });
+  }
+
+  return map.get(code)!;
+}
+
 async function run() {
-  console.log("fetching e-Stat...");
+  console.log("人口取得...");
 
-  const popJson = await fetchData("A1101");
-  const childJson = await fetchData("A5101");
-  const elderlyJson = await fetchData("A5102");
-
-  const popRows =
-    toArray(popJson?.GET_STATS_DATA?.STATISTICAL_DATA?.DATA_INF?.VALUE);
-
-  const childRows =
-    toArray(childJson?.GET_STATS_DATA?.STATISTICAL_DATA?.DATA_INF?.VALUE);
-
-  const elderlyRows =
-    toArray(elderlyJson?.GET_STATS_DATA?.STATISTICAL_DATA?.DATA_INF?.VALUE);
-
-  const popClass =
-    popJson?.GET_STATS_DATA?.STATISTICAL_DATA?.CLASS_INF?.CLASS_OBJ;
-
-  const classList = toArray(popClass);
-
-  const areaClass = classList.find(
-    (x: any) => x?.["@id"] === "area"
+  const pop = await fetchStats(
+    POP_STATS,
+    "A1101",
+    "cat"
   );
 
-  const areaList = toArray(areaClass?.CLASS);
+  const child = await fetchStats(
+    POP_STATS,
+    "A5101",
+    "cat"
+  );
+
+  const old = await fetchStats(
+    POP_STATS,
+    "A5102",
+    "cat"
+  );
+
+  console.log("財政力指数取得...");
+
+  const finance = await fetchStats(
+    FINANCE_STATS,
+    "100700",
+    "tab"
+  );
+
+  const financeRows = arr(
+    finance.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  );
+
+  console.log("財政力指数サンプル");
+  console.log(
+    JSON.stringify(
+      financeRows[0],
+      null,
+      2
+    )
+  );
+
+  const classObj = arr(
+    pop.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .CLASS_INF
+      .CLASS_OBJ
+  );
+
+  const areaObj = classObj.find(
+    (x: any) => x["@id"] === "area"
+  );
 
   const areaMap = new Map<string, string>();
 
-  for (const a of areaList) {
-    if (!a) continue;
-
+  for (const c of arr(areaObj.CLASS)) {
     areaMap.set(
-      String(a["@code"]),
-      String(a["@name"])
+      String(c["@code"]),
+      String(c["@name"])
     );
   }
 
-  /**
-   * 統合マップ
-   */
-  const map = new Map<
-    string,
-    {
-      code: string;
-      population: number;
-      childPopulation: number;
-      elderlyPopulation: number;
-    }
-  >();
-
-  function ensure(code: string) {
-    if (!map.has(code)) {
-      map.set(code, {
-        code,
-        population: 0,
-        childPopulation: 0,
-        elderlyPopulation: 0,
-      });
-    }
-    return map.get(code)!;
+  // 総人口
+  for (const r of arr(
+    pop.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+    const city = ensure(String(r["@area"]));
+    city.population = Number(r["$"]);
   }
 
-  /**
-   * 総人口
-   */
-  for (const r of popRows) {
-    const code = String(r["@area"]);
-    ensure(code).population = Number(r["$"] ?? 0);
+  // 子ども人口
+  for (const r of arr(
+    child.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+    const city = ensure(String(r["@area"]));
+    city.childPopulation = Number(r["$"]);
   }
 
-  /**
-   * 子ども人口
-   */
-  for (const r of childRows) {
-    const code = String(r["@area"]);
-    ensure(code).childPopulation = Number(r["$"] ?? 0);
+  // 高齢者人口
+  for (const r of arr(
+    old.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+    const city = ensure(String(r["@area"]));
+    city.elderlyPopulation = Number(r["$"]);
   }
 
-  /**
-   * 高齢者人口
-   */
-  for (const r of elderlyRows) {
-    const code = String(r["@area"]);
-    ensure(code).elderlyPopulation = Number(r["$"] ?? 0);
-  }
+  // 財政力指数
+  for (const r of financeRows) {
+
+  if (r["@time"] !== "2018100000") continue;
+
+  const city = ensure(String(r["@area"]));
+
+  city.financeIndex = Number(r["$"]) / 100;
+
+}
 
   const cities = Array.from(map.values())
     .map((c) => ({
-      code: c.code,
+      ...c,
       name: areaMap.get(c.code) ?? c.code,
-      population: c.population,
-      childPopulation: c.childPopulation,
-      elderlyPopulation: c.elderlyPopulation,
     }))
-    .filter((c) => c.population > 0);
+    .filter((c) => c.population > 0)
+    .sort(
+      (a, b) => b.population - a.population
+    );
 
-  /**
-   * ソートはUIでやらない（重要）
-   * → データ側で整形
-   */
-  const sorted = cities.sort(
-    (a, b) => b.population - a.population
-  );
-
-  fs.mkdirSync("data", { recursive: true });
+  fs.mkdirSync("data", {
+    recursive: true,
+  });
 
   fs.writeFileSync(
     "data/cities.json",
-    JSON.stringify(sorted, null, 2),
+    JSON.stringify(cities, null, 2),
     "utf8"
   );
 
-  console.log("generated:", sorted.length, "cities");
-  console.log(sorted.slice(0, 10));
+  console.log(
+    `generated ${cities.length} cities`
+  );
 }
 
-run().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+run().catch(console.error);
