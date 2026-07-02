@@ -9,11 +9,11 @@ if (!APP_ID) {
   throw new Error("ESTAT_APP_ID がありません");
 }
 
-// 社会・人口統計体系
-const POP_STATS = "0000020201";
+// ------------------------------------
+// e-Stat ID
+// ------------------------------------
 
-// 地方財政状況調査
-const FINANCE_STATS = "0003172920";
+const POP_STATS = "0000020201";
 
 async function fetchStats(
   statsId: string,
@@ -49,10 +49,14 @@ function arr(v: any) {
 type City = {
   code: string;
   name: string;
+
   population: number;
+
   childPopulation: number;
+
   elderlyPopulation: number;
-  financeIndex: number;
+
+  financeIndex: number | null;
 };
 
 const map = new Map<string, City>();
@@ -62,10 +66,14 @@ function ensure(code: string) {
     map.set(code, {
       code,
       name: "",
+
       population: 0,
+
       childPopulation: 0,
+
       elderlyPopulation: 0,
-      financeIndex: 0,
+
+      financeIndex: null,
     });
   }
 
@@ -73,6 +81,7 @@ function ensure(code: string) {
 }
 
 async function run() {
+
   console.log("人口取得...");
 
   const pop = await fetchStats(
@@ -91,30 +100,6 @@ async function run() {
     POP_STATS,
     "A5102",
     "cat"
-  );
-
-  console.log("財政力指数取得...");
-
-  const finance = await fetchStats(
-    FINANCE_STATS,
-    "100700",
-    "tab"
-  );
-
-  const financeRows = arr(
-    finance.GET_STATS_DATA
-      .STATISTICAL_DATA
-      .DATA_INF
-      .VALUE
-  );
-
-  console.log("財政力指数サンプル");
-  console.log(
-    JSON.stringify(
-      financeRows[0],
-      null,
-      2
-    )
   );
 
   const classObj = arr(
@@ -137,58 +122,82 @@ async function run() {
     );
   }
 
+  // --------------------
   // 総人口
+  // --------------------
+
   for (const r of arr(
     pop.GET_STATS_DATA
       .STATISTICAL_DATA
       .DATA_INF
       .VALUE
   )) {
-    const city = ensure(String(r["@area"]));
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
     city.population = Number(r["$"]);
+
   }
 
+  // --------------------
   // 子ども人口
+  // --------------------
+
   for (const r of arr(
     child.GET_STATS_DATA
       .STATISTICAL_DATA
       .DATA_INF
       .VALUE
   )) {
-    const city = ensure(String(r["@area"]));
-    city.childPopulation = Number(r["$"]);
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
+    city.childPopulation =
+      Number(r["$"]);
+
   }
 
+  // --------------------
   // 高齢者人口
+  // --------------------
+
   for (const r of arr(
     old.GET_STATS_DATA
       .STATISTICAL_DATA
       .DATA_INF
       .VALUE
   )) {
-    const city = ensure(String(r["@area"]));
-    city.elderlyPopulation = Number(r["$"]);
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
+    city.elderlyPopulation =
+      Number(r["$"]);
+
   }
-
-  // 財政力指数
-  for (const r of financeRows) {
-
-  if (r["@time"] !== "2018100000") continue;
-
-  const city = ensure(String(r["@area"]));
-
-  city.financeIndex = Number(r["$"]) / 100;
-
-}
+  // --------------------
+  // JSON生成
+  // --------------------
 
   const cities = Array.from(map.values())
     .map((c) => ({
       ...c,
-      name: areaMap.get(c.code) ?? c.code,
+
+      name:
+        areaMap.get(c.code) ??
+        c.code,
     }))
-    .filter((c) => c.population > 0)
+    .filter(
+      (c) => c.population > 0
+    )
     .sort(
-      (a, b) => b.population - a.population
+      (a, b) =>
+        b.population - a.population
     );
 
   fs.mkdirSync("data", {
@@ -197,13 +206,18 @@ async function run() {
 
   fs.writeFileSync(
     "data/cities.json",
-    JSON.stringify(cities, null, 2),
+    JSON.stringify(
+      cities,
+      null,
+      2
+    ),
     "utf8"
   );
 
   console.log(
     `generated ${cities.length} cities`
   );
+
 }
 
 run().catch(console.error);

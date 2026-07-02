@@ -1,7 +1,10 @@
-import cities from "@/data/cities.json";
+import citiesData from "@/data/cities.json";
+import type { City } from "./City";
+
+const cities = citiesData as City[];
 
 export function getCityRanking(code: string) {
-  const city = cities.find((c: any) => c.code === code);
+  const city = cities.find((c) => c.code === code);
 
   if (!city) return null;
 
@@ -11,63 +14,67 @@ export function getCityRanking(code: string) {
 
   const populationRank =
     [...cities]
-      .sort((a: any, b: any) => b.population - a.population)
-      .findIndex((c: any) => c.code === code) + 1;
+      .sort((a, b) => b.population - a.population)
+      .findIndex((c) => c.code === code) + 1;
 
   const areaRank =
     [...cities]
-      .sort((a: any, b: any) => (b.area ?? 0) - (a.area ?? 0))
-      .findIndex((c: any) => c.code === code) + 1;
+      .sort((a, b) => (b.area ?? 0) - (a.area ?? 0))
+      .findIndex((c) => c.code === code) + 1;
 
   const densityRank =
     [...cities]
       .sort(
-        (a: any, b: any) =>
+        (a, b) =>
           (b.populationDensity ?? 0) -
           (a.populationDensity ?? 0)
       )
-      .findIndex((c: any) => c.code === code) + 1;
+      .findIndex((c) => c.code === code) + 1;
 
   const childRank =
     [...cities]
       .sort(
-        (a: any, b: any) =>
+        (a, b) =>
           (b.childPopulation ?? 0) -
           (a.childPopulation ?? 0)
       )
-      .findIndex((c: any) => c.code === code) + 1;
+      .findIndex((c) => c.code === code) + 1;
 
   const birthRateRank =
     city.birthRate == null
       ? 0
       : [...cities]
-          .filter((c: any) => c.birthRate != null)
-          .sort((a: any, b: any) => b.birthRate - a.birthRate)
-          .findIndex((c: any) => c.code === code) + 1;
+          .filter((c) => c.birthRate != null)
+          .sort(
+            (a, b) =>
+              (b.birthRate ?? 0) -
+              (a.birthRate ?? 0)
+          )
+          .findIndex((c) => c.code === code) + 1;
 
   const agingRateRank =
     city.agingRate == null
       ? 0
       : [...cities]
-          .filter((c: any) => c.agingRate != null)
-          .sort((a: any, b: any) => b.agingRate - a.agingRate)
-          .findIndex((c: any) => c.code === code) + 1;
+          .filter((c) => c.agingRate != null)
+          .sort(
+            (a, b) =>
+              (b.agingRate ?? 0) -
+              (a.agingRate ?? 0)
+          )
+          .findIndex((c) => c.code === code) + 1;
 
   const financeRank =
-    city.financeIndex == null ||
-    Number.isNaN(city.financeIndex)
+    city.financeIndex == null
       ? 0
       : [...cities]
-          .filter(
-            (c: any) =>
-              c.financeIndex != null &&
-              !Number.isNaN(c.financeIndex)
-          )
+          .filter((c) => c.financeIndex != null)
           .sort(
-            (a: any, b: any) =>
-              b.financeIndex - a.financeIndex
+            (a, b) =>
+              (b.financeIndex ?? 0) -
+              (a.financeIndex ?? 0)
           )
-          .findIndex((c: any) => c.code === code) + 1;
+          .findIndex((c) => c.code === code) + 1;
 
   // =========================
   // 都道府県順位
@@ -75,69 +82,73 @@ export function getCityRanking(code: string) {
 
   const pref = city.name.split(" ")[0];
 
-  const prefCities = cities.filter((c: any) =>
+  const prefCities = cities.filter((c) =>
     c.name.startsWith(pref + " ")
   );
 
   const prefPopulationRank =
     [...prefCities]
-      .sort((a: any, b: any) => b.population - a.population)
-      .findIndex((c: any) => c.code === code) + 1;
+      .sort((a, b) => b.population - a.population)
+      .findIndex((c) => c.code === code) + 1;
 
   const prefAreaRank =
     [...prefCities]
-      .sort((a: any, b: any) => (b.area ?? 0) - (a.area ?? 0))
-      .findIndex((c: any) => c.code === code) + 1;
+      .sort((a, b) => (b.area ?? 0) - (a.area ?? 0))
+      .findIndex((c) => c.code === code) + 1;
 
   const prefDensityRank =
     [...prefCities]
       .sort(
-        (a: any, b: any) =>
+        (a, b) =>
           (b.populationDensity ?? 0) -
           (a.populationDensity ?? 0)
       )
-      .findIndex((c: any) => c.code === code) + 1;
+      .findIndex((c) => c.code === code) + 1;
 
   const prefChildRank =
     [...prefCities]
       .sort(
-        (a: any, b: any) =>
+        (a, b) =>
           (b.childPopulation ?? 0) -
           (a.childPopulation ?? 0)
       )
-      .findIndex((c: any) => c.code === code) + 1;
+      .findIndex((c) => c.code === code) + 1;
 
   const prefBirthRateRank =
     city.birthRate == null
       ? 0
       : [...prefCities]
-          .filter((c: any) => c.birthRate != null)
-          .sort((a: any, b: any) => b.birthRate - a.birthRate)
-          .findIndex((c: any) => c.code === code) + 1;
+          .filter((c) => c.birthRate != null)
+          .sort(
+            (a, b) =>
+              (b.birthRate ?? 0) -
+              (a.birthRate ?? 0)
+          )
+          .findIndex((c) => c.code === code) + 1;
 
   const prefAgingRateRank =
     city.agingRate == null
       ? 0
       : [...prefCities]
-          .filter((c: any) => c.agingRate != null)
-          .sort((a: any, b: any) => b.agingRate - a.agingRate)
-          .findIndex((c: any) => c.code === code) + 1;
+          .filter((c) => c.agingRate != null)
+          .sort(
+            (a, b) =>
+              (b.agingRate ?? 0) -
+              (a.agingRate ?? 0)
+          )
+          .findIndex((c) => c.code === code) + 1;
 
   const prefFinanceRank =
-    city.financeIndex == null ||
-    Number.isNaN(city.financeIndex)
+    city.financeIndex == null
       ? 0
       : [...prefCities]
-          .filter(
-            (c: any) =>
-              c.financeIndex != null &&
-              !Number.isNaN(c.financeIndex)
-          )
+          .filter((c) => c.financeIndex != null)
           .sort(
-            (a: any, b: any) =>
-              b.financeIndex - a.financeIndex
+            (a, b) =>
+              (b.financeIndex ?? 0) -
+              (a.financeIndex ?? 0)
           )
-          .findIndex((c: any) => c.code === code) + 1;
+          .findIndex((c) => c.code === code) + 1;
 
   return {
     national: [

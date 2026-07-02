@@ -39,15 +39,19 @@ export default function CityHighlights({
   );
 
   if (city.population > AVG_POPULATION) {
+
     comments.push(
       `人口は全国平均の約${(
         city.population / AVG_POPULATION
       ).toFixed(1)}倍となっています。`
     );
+
   } else {
+
     comments.push(
       "人口規模は全国平均よりやや小さい自治体です。"
     );
+
   }
 
   if (city.area != null) {
@@ -72,8 +76,8 @@ export default function CityHighlights({
 
     comments.push(
       city.populationDensity > AVG_DENSITY
-        ? "人口密度が高く、市街地が発達しています。"
-        : "人口密度は低めで、ゆとりある住環境となっています。"
+        ? "人口密度が高く、市街地が発達した都市型自治体です。"
+        : "人口密度は比較的低く、ゆとりある住環境となっています。"
     );
 
   }
@@ -116,42 +120,58 @@ export default function CityHighlights({
   }
 
   if (
-  city.financeIndex != null &&
-  ranking?.national.finance
-) {
-
-  const finance = city.financeIndex / 100;
-
-  comments.push(
-    `財政力指数は${finance.toFixed(
-      2
-    )}で、全国第${ranking.national.finance}位です。`
-  );
-
-  if (finance >= 1) {
+    city.financeIndex != null &&
+    ranking?.national.finance
+  ) {
 
     comments.push(
-      "財政力指数が1.00以上であり、地方交付税に依存しない比較的財政力の高い自治体です。"
+      `財政力指数は${city.financeIndex.toFixed(
+        2
+      )}で、全国第${ranking.national.finance}位です。`
     );
 
-  } else if (finance >= 0.7) {
+    if (city.financeIndex >= 1.0) {
 
-    comments.push(
-      "全国的に見ても比較的財政基盤が安定した自治体です。"
-    );
+      comments.push(
+        "財政力指数が1.00以上であり、地方交付税に依存せず自前の税収で行政運営できる財政力の高い自治体です。"
+      );
+
+    } else if (city.financeIndex >= 0.9) {
+
+      comments.push(
+        "全国でも上位クラスの財政基盤を持ち、安定した行政運営が期待できる自治体です。"
+      );
+
+    } else if (city.financeIndex >= 0.7) {
+
+      comments.push(
+        "比較的安定した財政基盤を持つ自治体です。"
+      );
+
+    } else if (city.financeIndex >= 0.5) {
+
+      comments.push(
+        "地方交付税に一定程度依存しながら行政運営を行っています。"
+      );
+
+    } else {
+
+      comments.push(
+        "地方交付税への依存度が高く、財政基盤は比較的弱い自治体です。"
+      );
+
+    }
 
   } else {
 
     comments.push(
-      "財政力指数は全国平均より低く、地方交付税への依存度が比較的高い自治体です。"
+      "財政力指数は公表対象外、または取得できない自治体です。"
     );
 
   }
 
-}
-
   comments.push(
-    "人口・出生率・高齢化率・財政力指数などを比較することで、この自治体の特徴を多角的に把握できます。"
+    "人口規模・人口構成・財政力などを総合的に見ることで、この自治体の特徴や全国での位置づけを把握できます。"
   );
 
   return (

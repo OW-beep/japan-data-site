@@ -10,11 +10,35 @@ type Props = {
   };
 };
 
+function financeComment(index: number | null | undefined) {
+  if (index == null) return "-";
+
+  if (index >= 1.0) {
+    return "★★★★★ 自立財政";
+  }
+
+  if (index >= 0.9) {
+    return "★★★★☆ 財政力が高い";
+  }
+
+  if (index >= 0.7) {
+    return "★★★☆☆ 全国平均";
+  }
+
+  if (index >= 0.5) {
+    return "★★☆☆☆ やや弱い";
+  }
+
+  return "★☆☆☆☆ 地方交付税依存";
+}
+
 export default function CityStats({ city }: Props) {
+
   const cards = [
     {
       title: "人口",
       value: city.population.toLocaleString() + " 人",
+      sub: "",
       icon: "👥",
     },
     {
@@ -23,6 +47,7 @@ export default function CityStats({ city }: Props) {
         city.area != null
           ? city.area.toLocaleString() + " km²"
           : "-",
+      sub: "",
       icon: "🗺️",
     },
     {
@@ -31,6 +56,7 @@ export default function CityStats({ city }: Props) {
         city.populationDensity != null
           ? city.populationDensity.toLocaleString() + " 人/km²"
           : "-",
+      sub: "",
       icon: "🏙️",
     },
     {
@@ -39,6 +65,7 @@ export default function CityStats({ city }: Props) {
         city.childPopulation != null
           ? city.childPopulation.toLocaleString() + " 人"
           : "-",
+      sub: "",
       icon: "👶",
     },
     {
@@ -47,6 +74,7 @@ export default function CityStats({ city }: Props) {
         city.agingRate != null
           ? city.agingRate.toFixed(1) + "%"
           : "-",
+      sub: "",
       icon: "👴",
     },
     {
@@ -55,14 +83,16 @@ export default function CityStats({ city }: Props) {
         city.birthRate != null
           ? city.birthRate.toFixed(2)
           : "-",
+      sub: "",
       icon: "🍼",
     },
     {
       title: "財政力指数",
       value:
         city.financeIndex != null
-          ? city.financeIndex.toFixed(3)
+          ? city.financeIndex.toFixed(2)
           : "-",
+      sub: financeComment(city.financeIndex),
       icon: "💰",
     },
   ];
@@ -125,11 +155,24 @@ export default function CityStats({ city }: Props) {
                 fontSize: 28,
                 fontWeight: 800,
                 color: "#111827",
-                lineHeight: 1.4,
+                lineHeight: 1.3,
               }}
             >
               {card.value}
             </div>
+
+            {card.sub && (
+              <div
+                style={{
+                  marginTop: 8,
+                  fontSize: 14,
+                  color: "#2563eb",
+                  fontWeight: 600,
+                }}
+              >
+                {card.sub}
+              </div>
+            )}
           </div>
         ))}
       </div>

@@ -8,8 +8,10 @@ export type City = {
 
   area: number | null;
   populationDensity: number | null;
-  financialIndex: number | null;
+
+  financeIndex: number | null;
 
   birthRate?: number | null;
+  agingRate?: number | null;
   declineRate?: number | null;
 };
