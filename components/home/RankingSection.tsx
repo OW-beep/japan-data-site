@@ -78,6 +78,13 @@ export default function RankingSection() {
           title="子ども人口ランキング"
           desc="子ども人口が多い自治体を比較できます。"
         />
+
+        <Card
+          href="/ranking/finance"
+          emoji="💰"
+          title="財政力指数ランキング"
+          desc="財政力指数が高い自治体をランキング形式で比較できます。"
+        />
       </div>
     </section>
   );
