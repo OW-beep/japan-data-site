@@ -38,8 +38,8 @@ const categories = [
   },
   {
     href:"/ranking/finance",
-    title="💰 財政力指数",
-    desc="自治体の財政力指数を比較できます。",
+    title:"💰 財政力指数",
+    desc:"自治体の財政力指数を比較できます。",
   },
 ];
 
