@@ -23,8 +23,11 @@ const areaMap = new Map<string, number>(
   ])
 );
 
+const notFound: string[] = [];
+
 const merged = cities.map((city: any) => {
-  let area: number | null =
+
+  let area =
     areaMap.get(normalize(city.name)) ?? null;
 
   // 東京都特別区部のみ補完
@@ -32,16 +35,23 @@ const merged = cities.map((city: any) => {
     area = 627.53;
   }
 
+  if (area == null) {
+    notFound.push(city.name);
+  }
+
   return {
+
     ...city,
 
     area,
 
     populationDensity:
-      area !== null && area > 0
+      area != null && area > 0
         ? Math.round(city.population / area)
         : null,
+
   };
+
 });
 
 fs.writeFileSync(
@@ -53,5 +63,23 @@ fs.writeFileSync(
   ),
   "utf8"
 );
+
+console.log(
+  `面積取得成功: ${
+    merged.length - notFound.length
+  }自治体`
+);
+
+console.log(
+  `面積取得失敗: ${notFound.length}自治体`
+);
+
+if (notFound.length) {
+
+  console.log("取得できなかった自治体");
+
+  console.log(notFound);
+
+}
 
 console.log("cities updated");

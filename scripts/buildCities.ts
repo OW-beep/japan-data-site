@@ -56,7 +56,6 @@ type City = {
 
   elderlyPopulation: number;
 
-  financeIndex: number | null;
 };
 
 const map = new Map<string, City>();
@@ -73,7 +72,6 @@ function ensure(code: string) {
 
       elderlyPopulation: 0,
 
-      financeIndex: null,
     });
   }
 

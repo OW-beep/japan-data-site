@@ -12,12 +12,20 @@ async function run() {
 
   const json = await getFinanceIndex();
 
+// console.log(JSON.stringify(json, null, 2));
+
   const rows = toArray(
     json?.GET_STATS_DATA
       ?.STATISTICAL_DATA
       ?.DATA_INF
       ?.VALUE
   );
+
+console.log(rows.length);
+
+console.log(
+  rows.filter((r: any) => r["@area"] === "13101")
+);
 
   const financeMap = new Map<string, number>();
 console.log(rows.filter((x: any) => x["@area"] === "13100"));

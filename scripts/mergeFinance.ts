@@ -18,22 +18,33 @@ async function run() {
       ?.VALUE
   );
 
-  // areaコード → 財政力指数
-  const financeMap = new Map<string, number>();
+  // 最新年度を自動取得
+const latestTime = Math.max(
+  ...rows
+    .map((r) => Number(r["@time"]))
+    .filter((v) => !Number.isNaN(v))
+).toString();
 
-  for (const r of rows) {
-    // 最新年度のみ
-    if (r["@time"] !== "2018100000") continue;
+console.log(`最新年度: ${latestTime}`);
 
-    const code = String(r["@area"]);
+// areaコード → 財政力指数
+const financeMap = new Map<string, number>();
 
-    const raw = Number(r["$"]);
+for (const r of rows) {
 
-    if (Number.isNaN(raw)) continue;
+  // 最新年度のみ採用
+  if (String(r["@time"]) !== latestTime) continue;
 
-    // e-Statは95→0.95なので100で割る
-    financeMap.set(code, raw / 100);
-  }
+  const code = String(r["@area"]);
+
+  const raw = Number(r["$"]);
+
+  if (Number.isNaN(raw)) continue;
+
+  // e-Statは95→0.95なので100で割る
+  financeMap.set(code, raw / 100);
+
+}
 
   const merged = (cities as any[]).map((city) => ({
     ...city,

@@ -5,13 +5,20 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
+
     "update:data": "tsx scripts/buildCities.ts",
+
     "find:finance": "tsx scripts/findFinanceMeta.ts",
     "find:table": "tsx scripts/findFinanceTable.ts",
+
     "merge:finance": "tsx scripts/mergeSocialStat.ts",
+
     "convert:area": "tsx scripts/convertAreaCsv.ts",
+
     "merge": "tsx scripts/mergeData.ts",
-    "refresh:data": "npm run update:data && npm run merge:finance && npm run convert:area && npm run merge",
+
+    "refresh:data": "npm run update:data && npm run merge:finance && npm run merge",
+
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
