@@ -5,64 +5,46 @@ export default function Footer() {
     <footer style={footer}>
       <div style={container}>
 
-        <section style={column}>
+        <section>
           <h3>全国自治体データランキング</h3>
 
           <p style={text}>
-            全国1747自治体の人口・面積・人口密度・
-            子ども人口・高齢化率などを
-            オープンデータから比較しています。
+            全国1747自治体の人口・出生率・高齢化率・
+            面積・人口密度・財政などを
+            オープンデータから分かりやすく可視化しています。
           </p>
         </section>
 
-        <section style={column}>
-          <h3>ランキング</h3>
+        <section>
+          <h3>人気ランキング</h3>
 
           <ul style={list}>
             <li><Link href="/ranking/population">人口ランキング</Link></li>
-
-            <li><Link href="/ranking/area">面積ランキング</Link></li>
-
-            <li><Link href="/ranking/density">人口密度ランキング</Link></li>
-
-            <li><Link href="/ranking/child">子ども人口ランキング</Link></li>
-
+            <li><Link href="/ranking/birth-rate">出生率ランキング</Link></li>
             <li><Link href="/ranking/aging">高齢化率ランキング</Link></li>
+            <li><Link href="/ranking/child">子ども人口ランキング</Link></li>
+            <li><Link href="/ranking/density">人口密度ランキング</Link></li>
+            <li><Link href="/ranking/area">面積ランキング</Link></li>
           </ul>
         </section>
 
-        <section style={column}>
-          <h3>記事</h3>
+        <section>
+          <h3>探す</h3>
 
           <ul style={list}>
-            <li><Link href="/articles/population-about">人口とは？</Link></li>
-
-            <li><Link href="/articles/population-top50">人口TOP50</Link></li>
-
-            <li><Link href="/articles/child-top50">子ども人口TOP50</Link></li>
-
-            <li><Link href="/articles/aging-top50">高齢化率TOP50</Link></li>
-
-            <li><Link href="/articles/million-cities">100万人都市</Link></li>
-
-            <li><Link href="/articles/youngest-municipalities">若い自治体</Link></li>
-
-            <li><Link href="/articles/birth-rate">出生率とは</Link></li>
-
-            <li><Link href="/articles/decline">人口減少とは</Link></li>
+            <li><Link href="/prefecture">都道府県から探す</Link></li>
+            <li><Link href="/search">市区町村検索</Link></li>
+            <li><Link href="/articles">データ分析記事</Link></li>
           </ul>
         </section>
 
-        <section style={column}>
+        <section>
           <h3>サイト情報</h3>
 
           <ul style={list}>
-            <li><Link href="/search">自治体検索</Link></li>
-
+            <li><Link href="/about">サイトについて</Link></li>
             <li><Link href="/privacy">プライバシーポリシー</Link></li>
-
             <li><Link href="/contact">お問い合わせ</Link></li>
-
             <li><Link href="/sitemap">サイトマップ</Link></li>
           </ul>
         </section>
@@ -70,43 +52,43 @@ export default function Footer() {
       </div>
 
       <div style={bottom}>
+
         <p>
-          本サイトはe-Statなどの公開データを利用しています。
-          数値は公開時点の情報です。
+          本サイトは
+          e-Stat（政府統計の総合窓口）等の公開データを利用しています。
+        </p>
+
+        <p>
+          データは公開時点の情報であり、
+          最新情報は各自治体・総務省・関係省庁をご確認ください。
         </p>
 
         <p>
           © 2026 全国自治体データランキング
         </p>
+
       </div>
     </footer>
   );
 }
 
 const footer: React.CSSProperties = {
-  marginTop: 60,
+  marginTop: 80,
   background: "#111827",
   color: "#fff",
 };
 
 const container: React.CSSProperties = {
-  maxWidth: 1200,
+  maxWidth: 1280,
   margin: "0 auto",
+
+  padding: "56px 24px",
 
   display: "grid",
   gridTemplateColumns:
     "repeat(auto-fit,minmax(220px,1fr))",
 
-  gap: 30,
-
-  padding: "50px 24px",
-};
-
-const column: React.CSSProperties = {};
-
-const text: React.CSSProperties = {
-  lineHeight: 1.8,
-  color: "#d1d5db",
+  gap: 36,
 };
 
 const list: React.CSSProperties = {
@@ -116,17 +98,24 @@ const list: React.CSSProperties = {
 
   display: "flex",
   flexDirection: "column",
+
   gap: 10,
+};
+
+const text: React.CSSProperties = {
+  color: "#d1d5db",
+  lineHeight: 1.8,
 };
 
 const bottom: React.CSSProperties = {
   borderTop: "1px solid #374151",
 
-  padding: 20,
+  padding: "24px",
 
   textAlign: "center",
 
   color: "#9ca3af",
 
   fontSize: 13,
+  lineHeight: 1.8,
 };

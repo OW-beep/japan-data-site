@@ -10,6 +10,7 @@
 
     "find:finance": "tsx scripts/findFinanceMeta.ts",
     "find:table": "tsx scripts/findFinanceTable.ts",
+    "find:birth": "tsx scripts/findBirthMeta.ts",
 
     "merge:finance": "tsx scripts/mergeSocialStat.ts",
 

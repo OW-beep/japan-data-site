@@ -5,14 +5,17 @@ export default function Hero() {
     <section
       style={{
         background:
-          "linear-gradient(135deg,#eff6ff 0%,#ffffff 100%)",
-        padding: "70px 20px",
-        borderBottom: "1px solid #e5e7eb",
+          "linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%)",
+        color: "#fff",
+        borderRadius: 28,
+        padding: "70px 28px",
+        marginBottom: 50,
+        boxShadow: "0 20px 40px rgba(37,99,235,.18)",
       }}
     >
       <div
         style={{
-          maxWidth: 1100,
+          maxWidth: 1000,
           margin: "0 auto",
           textAlign: "center",
         }}
@@ -20,108 +23,88 @@ export default function Hero() {
         <div
           style={{
             display: "inline-block",
-            background: "#2563eb",
-            color: "#fff",
-            padding: "8px 16px",
+            background: "rgba(255,255,255,.15)",
+            padding: "8px 18px",
             borderRadius: 999,
-            fontSize: 14,
             fontWeight: 700,
-            marginBottom: 20,
+            marginBottom: 24,
           }}
         >
-          🇯🇵 全国1741自治体データベース
+          🇯🇵 全国1741自治体データを毎年更新
         </div>
 
         <h1
           style={{
-            fontSize: 46,
-            lineHeight: 1.25,
+            fontSize: 54,
+            lineHeight: 1.2,
             fontWeight: 800,
-            color: "#111827",
             marginBottom: 24,
           }}
         >
           日本全国の自治体データを
           <br />
-          ひと目で比較できる
+          ランキングとグラフで比較
         </h1>
 
         <p
           style={{
-            fontSize: 19,
-            color: "#4b5563",
-            lineHeight: 1.9,
-            maxWidth: 860,
+            maxWidth: 820,
             margin: "0 auto",
+            fontSize: 20,
+            lineHeight: 1.9,
+            opacity: .95,
           }}
         >
-          人口・出生率・人口密度・高齢化率・子ども人口・面積など、
-          政府オープンデータをもとに全国1741自治体を比較できます。
-          ランキングや自治体ごとの特徴も掲載しています。
+          人口・出生率・人口密度・高齢化率・子ども人口・面積・財政など、
+          政府オープンデータをわかりやすく可視化。
+          全国1741自治体をランキング・比較・分析できます。
         </p>
-
-        {/* ボタン */}
 
         <div
           style={{
             display: "flex",
             justifyContent: "center",
-            gap: 16,
             flexWrap: "wrap",
-            marginTop: 34,
+            gap: 16,
+            marginTop: 42,
           }}
         >
           <Link
-            href="/search"
-            style={{
-              background: "#2563eb",
-              color: "#fff",
-              padding: "14px 24px",
-              borderRadius: 12,
-              textDecoration: "none",
-              fontWeight: 700,
-            }}
+            href="/ranking/population"
+            style={primaryButton}
           >
-            🔍 自治体を探す
+            👑 人口ランキング
           </Link>
 
           <Link
-            href="/ranking/population"
-            style={{
-              background: "#fff",
-              color: "#2563eb",
-              padding: "14px 24px",
-              border: "1px solid #2563eb",
-              borderRadius: 12,
-              textDecoration: "none",
-              fontWeight: 700,
-            }}
+            href="/ranking/birth-rate"
+            style={secondaryButton}
           >
-            📊 人気ランキング
+            👶 出生率ランキング
+          </Link>
+
+          <Link
+            href="/search"
+            style={secondaryButton}
+          >
+            🔍 自治体検索
           </Link>
         </div>
 
-        {/* データ件数 */}
-
         <div
           style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: 40,
-            flexWrap: "wrap",
-            marginTop: 46,
+            display: "grid",
+            gridTemplateColumns:
+              "repeat(auto-fit,minmax(180px,1fr))",
+            gap: 24,
+            marginTop: 60,
           }}
         >
           <Info number="1741+" label="自治体" />
-
-          <Info number="8+" label="ランキング" />
-
-          <Info number="2000+" label="ページ" />
-
-          <Info number="100%" label="オープンデータ" />
+          <Info number="20+" label="ランキング" />
+          <Info number="2000+" label="データページ" />
+          <Info number="毎年更新" label="政府データ" />
         </div>
-
-        {/* タグ */}
 
         <div
           style={{
@@ -129,29 +112,29 @@ export default function Hero() {
             justifyContent: "center",
             flexWrap: "wrap",
             gap: 12,
-            marginTop: 40,
+            marginTop: 48,
           }}
         >
           {[
             "人口",
             "出生率",
-            "人口密度",
             "高齢化率",
             "子ども人口",
+            "人口密度",
             "面積",
-          ].map((item) => (
+            "財政",
+            "教育",
+          ].map((x) => (
             <span
-              key={item}
+              key={x}
               style={{
-                background: "#fff",
-                border: "1px solid #dbeafe",
-                borderRadius: 999,
                 padding: "10px 18px",
-                fontWeight: 600,
-                color: "#2563eb",
+                background: "rgba(255,255,255,.15)",
+                borderRadius: 999,
+                fontWeight: 700,
               }}
             >
-              {item}
+              {x}
             </span>
           ))}
         </div>
@@ -159,6 +142,25 @@ export default function Hero() {
     </section>
   );
 }
+
+const primaryButton = {
+  background: "#fff",
+  color: "#2563eb",
+  textDecoration: "none",
+  padding: "16px 26px",
+  borderRadius: 14,
+  fontWeight: 800,
+} as const;
+
+const secondaryButton = {
+  background: "rgba(255,255,255,.15)",
+  color: "#fff",
+  border: "1px solid rgba(255,255,255,.35)",
+  textDecoration: "none",
+  padding: "16px 26px",
+  borderRadius: 14,
+  fontWeight: 700,
+} as const;
 
 function Info({
   number,
@@ -171,9 +173,8 @@ function Info({
     <div>
       <div
         style={{
-          fontSize: 34,
+          fontSize: 40,
           fontWeight: 800,
-          color: "#2563eb",
         }}
       >
         {number}
@@ -181,8 +182,8 @@ function Info({
 
       <div
         style={{
-          color: "#6b7280",
           marginTop: 6,
+          opacity: .9,
         }}
       >
         {label}
