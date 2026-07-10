@@ -8,15 +8,18 @@ import { getCities } from "../../../lib/getCities";
 
 export default function Page() {
   const ranking = getCities()
-    .filter(
-      (c) =>
-        c.birthRate !== null &&
-        c.birthRate !== undefined &&
-        c.birthRate > 0
-    )
-    .sort((a, b) => b.birthRate - a.birthRate);
+  .filter(
+    (c) =>
+      c.birthRate != null &&
+      c.birthRate > 0
+  )
+  .sort(
+    (a, b) =>
+      (b.birthRate ?? 0) -
+      (a.birthRate ?? 0)
+  );
 
-  const top50 = ranking.slice(0, 50);
+const top50 = ranking.slice(0, 50);
 
   const average =
     ranking.reduce(
