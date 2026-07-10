@@ -1,5 +1,6 @@
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import RankingAnalysis from "../../../components/ranking/RankingAnalysis";
 import { getCities } from "../../../lib/getCities";
 
 export default function Page() {
@@ -33,6 +34,15 @@ export default function Page() {
           name: ranking[0]?.name ?? "",
           value: ranking[0]?.population ?? 0,
         }}
+      />
+
+      {/* 追加 */}
+      <RankingAnalysis
+        type="population"
+        ranking={ranking.map((city) => ({
+          name: city.name,
+          value: city.population,
+        }))}
       />
 
       <div style={{ marginTop: 20 }}>
