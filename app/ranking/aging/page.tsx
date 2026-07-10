@@ -1,5 +1,9 @@
+import Link from "next/link";
+
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import AgingSummary from "../../../components/ranking/AgingSummary";
+
 import cities from "../../../data/cities.json";
 
 export default function Page() {
@@ -7,37 +11,114 @@ export default function Page() {
     .filter((c) => c.elderlyPopulation && c.population)
     .map((c) => ({
       ...c,
-      rate: (c.elderlyPopulation / c.population) * 100,
+      rate:
+        (c.elderlyPopulation / c.population) * 100,
     }))
-    .sort((a, b) => b.rate - a.rate)
-    .slice(0, 50);
+    .sort((a, b) => b.rate - a.rate);
+
+  const top50 = ranking.slice(0, 50);
+
+  const average =
+    ranking.reduce(
+      (sum, c) => sum + c.rate,
+      0
+    ) / ranking.length;
 
   return (
-    <div>
-      <h1>高齢化率ランキング</h1>
+    <main
+      style={{
+        maxWidth: 980,
+        margin: "0 auto",
+        padding: "40px 24px",
+      }}
+    >
+      <h1
+        style={{
+          fontSize: 38,
+          fontWeight: 800,
+          marginBottom: 10,
+        }}
+      >
+        全国自治体 高齢化率ランキング
+      </h1>
+
+      <p
+        style={{
+          color: "#4b5563",
+          lineHeight: 1.8,
+          marginBottom: 30,
+        }}
+      >
+        全国自治体の高齢化率を比較しています。
+        高齢化率は65歳以上人口が総人口に占める割合です。
+      </p>
 
       <MetricBox
-        title="指標定義"
-        definition="総人口に対する65歳以上人口の割合"
+        title="高齢化率とは？"
+        definition="総人口に占める65歳以上人口の割合"
         unit="%"
-        formula="高齢化率(%) = 高齢者人口 ÷ 総人口 × 100"
+        formula="高齢化率 = 高齢者人口 ÷ 総人口 ×100"
         example={{
-          name: "例：〇〇市",
-          value: Number(ranking[0]?.rate?.toFixed(2) ?? 0),
+          name: top50[0].name,
+          value: Number(
+            top50[0].rate.toFixed(2)
+          ),
         }}
       />
 
-      <div style={{ marginTop: 12 }}>
-        {ranking.map((c, i) => (
+      <AgingSummary
+        average={average}
+        cityCount={ranking.length}
+      />
+
+      <div
+        style={{
+          marginTop: 40,
+        }}
+      >
+        {top50.map((city, index) => (
           <RankCard
-            key={c.code}
-            rank={i + 1}
-            name={c.name}
-            value={c.rate.toFixed(2)}
+            key={city.code}
+            rank={index + 1}
+            name={city.name}
+            value={city.rate.toFixed(2)}
             unit="%"
           />
         ))}
       </div>
-    </div>
+
+      <section
+        style={{
+          marginTop: 60,
+        }}
+      >
+        <h2>関連ランキング</h2>
+
+        <div
+          style={{
+            display: "flex",
+            gap: 15,
+            flexWrap: "wrap",
+            marginTop: 20,
+          }}
+        >
+          <Link href="/ranking/population">
+            人口ランキング
+          </Link>
+
+          <Link href="/ranking/birth-rate">
+            出生率ランキング
+          </Link>
+
+          <Link href="/ranking/child">
+            子ども人口ランキング
+          </Link>
+
+          <Link href="/ranking/density">
+            人口密度ランキング
+          </Link>
+        </div>
+      </section>
+    </main>
   );
 }
