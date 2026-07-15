@@ -15,20 +15,35 @@ export default function AreaSummary({
   return (
     <section
       style={{
-        margin: "32px 0",
-        padding: 24,
+        marginTop: 35,
+        background: "#f8fafc",
         border: "1px solid #e5e7eb",
-        borderRadius: 12,
-        background: "#fafafa",
+        borderRadius: 16,
+        padding: 30,
       }}
     >
-      <h2
+      <div
         style={{
-          fontSize: 24,
-          marginBottom: 20,
+          display: "inline-block",
+          background: "#dbeafe",
+          color: "#1d4ed8",
+          padding: "4px 12px",
+          borderRadius: 999,
+          fontSize: 12,
+          fontWeight: 700,
+          marginBottom: 18,
         }}
       >
         運営者コメント
+      </div>
+
+      <h2
+        style={{
+          marginTop: 0,
+          fontSize: 24,
+        }}
+      >
+        面積ランキングから見える傾向
       </h2>
 
       <p style={{ lineHeight: 1.9 }}>
@@ -57,26 +72,16 @@ export default function AreaSummary({
         単純な面積ランキングとは異なる姿が見えてきます。
       </p>
 
-      <div
+      <p
         style={{
-          marginTop: 20,
-          padding: 16,
-          background: "#fff",
-          borderRadius: 8,
+          lineHeight: 1.9,
+          marginBottom: 0,
         }}
       >
-        <strong>TOP50平均</strong>
-
-        <div
-          style={{
-            fontSize: 30,
-            color: "#2563eb",
-            marginTop: 8,
-          }}
-        >
-          {avg.toFixed(1)} km²
-        </div>
-      </div>
+        全国平均（対象自治体平均）は
+        <strong> {avg.toFixed(1)}km²</strong>
+        です。
+      </p>
     </section>
   );
 }

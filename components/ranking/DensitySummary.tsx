@@ -14,75 +14,62 @@ export default function DensitySummary({
     ranking.reduce((s, r) => s + r.value, 0) /
     ranking.length;
 
+  const tenth = ranking[Math.min(9, ranking.length - 1)];
+
   return (
     <section
       style={{
-        margin: "32px 0",
-        padding: 24,
+        marginTop: 35,
         background: "#f8fafc",
-        borderRadius: 16,
         border: "1px solid #e5e7eb",
+        borderRadius: 16,
+        padding: 30,
       }}
     >
-      <h2
+      <div
         style={{
-          fontSize: 24,
+          display: "inline-block",
+          background: "#dbeafe",
+          color: "#1d4ed8",
+          padding: "4px 12px",
+          borderRadius: 999,
+          fontSize: 12,
+          fontWeight: 700,
           marginBottom: 18,
         }}
       >
         運営者コメント
+      </div>
+
+      <h2
+        style={{
+          marginTop: 0,
+          fontSize: 24,
+        }}
+      >
+        人口密度ランキングから見える傾向
       </h2>
 
       <p
         style={{
           lineHeight: 1.9,
-          color: "#374151",
         }}
       >
-        人口密度は、1平方キロメートルあたりに何人住んでいるかを表す指標です。
-        数値が高いほど都市部、低いほど郊外・山間部の傾向があります。
+        人口密度は、1平方キロメートルあたりに何人住んでいるかを表す
+        指標です。数値が高いほど都市部、低いほど郊外・山間部の
+        傾向があります。今回のランキングでは
+        <strong>{ranking[0].name}</strong>
+        が1平方キロメートルあたり
+        {ranking[0].value.toLocaleString()}人で最も高く、
+        10位の<strong>{tenth.name}</strong>
+        でも{tenth.value.toLocaleString()}人/km²と、
+        上位には東京都特別区や大都市中心部が多く、
+        面積が小さく人口が集中する自治体が目立ちます。
       </p>
-
-      <ul
-        style={{
-          marginTop: 18,
-          lineHeight: 2,
-        }}
-      >
-        <li>
-          TOP50平均：
-          <strong>{avg.toFixed(0)} 人/km²</strong>
-        </li>
-
-        <li>
-          1位：
-          <strong>{ranking[0].name}</strong>
-          （{ranking[0].value.toLocaleString()} 人/km²）
-        </li>
-
-        <li>
-          10位：
-          <strong>
-            {ranking[Math.min(9, ranking.length - 1)].name}
-          </strong>
-          （
-          {ranking[
-            Math.min(9, ranking.length - 1)
-          ].value.toLocaleString()}
-          人/km²）
-        </li>
-
-        <li>
-          上位には東京都特別区や大都市中心部が多く、
-          面積が小さく人口が集中する自治体が目立ちます。
-        </li>
-      </ul>
 
       <p
         style={{
           lineHeight: 1.9,
-          color: "#374151",
-          marginTop: 18,
         }}
       >
         なお、横浜市・大阪市など政令指定都市の「区」は独立した自治体
@@ -94,12 +81,13 @@ export default function DensitySummary({
 
       <p
         style={{
-          marginTop: 18,
-          color: "#6b7280",
-          fontSize: 14,
+          lineHeight: 1.9,
+          marginBottom: 0,
         }}
       >
-        ※本コメントは公開データをもとに運営者が作成しています。
+        全国平均（対象自治体平均）は
+        <strong> {avg.toFixed(0)}人/km²</strong>
+        です。
       </p>
     </section>
   );

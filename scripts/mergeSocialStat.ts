@@ -12,8 +12,6 @@ async function run() {
 
   const json = await getFinanceIndex();
 
-// console.log(JSON.stringify(json, null, 2));
-
   const rows = toArray(
     json?.GET_STATS_DATA
       ?.STATISTICAL_DATA
@@ -21,25 +19,13 @@ async function run() {
       ?.VALUE
   );
 
-console.log(rows.length);
-
-console.log(
-  rows.filter((r: any) => r["@area"] === "13101")
-);
-
   const financeMap = new Map<string, number>();
-console.log(rows.filter((x: any) => x["@area"] === "13100"));
+
   for (const r of rows) {
     const code = String(r["@area"]);
     const raw = Number(r["$"]);
 
     if (Number.isNaN(raw)) continue;
-
-    // 東京都だけ確認用（あとで消してOK）
-    if (code === "13100") {
-      console.log("東京都元データ");
-      console.log(r);
-    }
 
     // 候補を2つ作る
     const by100 = raw / 100;

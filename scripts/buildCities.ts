@@ -11,6 +11,20 @@ if (!APP_ID) {
 
 // ------------------------------------
 // e-Stat ID
+//
+// 0000020201 は「社会・人口統計体系」の市区町村データ(通称
+// SSDSE-市区町村)そのもの。項目コードは統計センターの公式解説
+// (SSDSE-A の解説PDF)で確認済み:
+//   A1101 総人口
+//   A1301 15歳未満人口 (子ども人口)
+//   A1303 65歳以上人口 (高齢者人口)
+// 以前はA5101/A5102を使っていましたが、これらは実際には
+// 「転入者数」「転出者数」(住民基本台帳人口移動報告)のコードで、
+// 子ども人口・高齢者人口としては誤りでした。
+//
+// なお、合計特殊出生率(A4103)はこの市区町村データセットには
+// 含まれておらず、別の出典(人口動態統計 市区町村編、5年に1度公表)
+// が必要です。birthRateフィールドが常にnullなのはこのためです。
 // ------------------------------------
 
 const POP_STATS = "0000020201";
@@ -90,13 +104,13 @@ async function run() {
 
   const child = await fetchStats(
     POP_STATS,
-    "A5101",
+    "A1301",
     "cat"
   );
 
   const old = await fetchStats(
     POP_STATS,
-    "A5102",
+    "A1303",
     "cat"
   );
 
@@ -215,6 +229,51 @@ async function run() {
   console.log(
     `generated ${cities.length} cities`
   );
+
+  // --------------------
+  // 簡易サニティチェック
+  // 実際の日本は 子ども比率 約11%、高齢化率 約29% 前後のはず。
+  // この範囲から大きく外れる場合はカテゴリコードが
+  // 間違っている可能性が高い。
+  // --------------------
+
+  const totalPop = cities.reduce(
+    (s, c) => s + c.population,
+    0
+  );
+
+  const totalChild = cities.reduce(
+    (s, c) => s + c.childPopulation,
+    0
+  );
+
+  const totalElderly = cities.reduce(
+    (s, c) => s + c.elderlyPopulation,
+    0
+  );
+
+  const childRatio = (totalChild / totalPop) * 100;
+  const elderlyRatio = (totalElderly / totalPop) * 100;
+
+  console.log(
+    `子ども比率(全国計): ${childRatio.toFixed(2)}% (目安: 8〜13%)`
+  );
+
+  console.log(
+    `高齢化率(全国計): ${elderlyRatio.toFixed(2)}% (目安: 25〜35%)`
+  );
+
+  if (childRatio < 5 || childRatio > 20) {
+    console.warn(
+      "⚠ 子ども比率が目安から大きく外れています。A1301のカテゴリコードを再確認してください。"
+    );
+  }
+
+  if (elderlyRatio < 15 || elderlyRatio > 45) {
+    console.warn(
+      "⚠ 高齢化率が目安から大きく外れています。A1303のカテゴリコードを再確認してください。"
+    );
+  }
 
 }
 
