@@ -1,6 +1,12 @@
 import cities from "@/data/cities.json";
 import ArticleLayout from "@/components/ArticleLayout";
 
+export const metadata = {
+  title: "子ども人口割合が高い自治体TOP50｜全国自治体データ",
+  description:
+    "15歳未満人口の割合が高い自治体トップ50を紹介。子育て世代が多い自治体の特徴がわかります。",
+};
+
 export default function Page() {
   const ranking = [...cities]
     .map((c) => ({

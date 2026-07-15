@@ -1,6 +1,15 @@
+import { notFound } from "next/navigation";
 import cities from "@/data/cities.json";
 
-export default function Page() {
+// ⚠️ 一時的に非公開にしています。
+// 内容が「人口ランキング」と重複気味な上、
+// 政令指定都市の区を除いていないなど未整理のため、
+// 整理してから再公開する予定です。
+export default function Page(): never {
+  notFound();
+}
+
+function _UnpublishedOriginalPage() {
   const list = [...cities]
     .filter((c) => c.population > 0)
     .sort(

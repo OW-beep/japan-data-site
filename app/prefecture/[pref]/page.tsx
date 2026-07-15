@@ -36,19 +36,11 @@ export default async function Page({
 
   const pref = decodeURIComponent(rawPref);
 
-  console.log("==========");
-  console.log("pref =", pref);
-
   const allCities = getCities();
-
-  console.log("cities.length =", allCities.length);
-  console.log("first city =", allCities[0]);
 
   const cities = allCities.filter((c) =>
     c.name.startsWith(pref + " ")
   );
-
-  console.log("matched =", cities.length);
 
   if (cities.length === 0) {
     notFound();

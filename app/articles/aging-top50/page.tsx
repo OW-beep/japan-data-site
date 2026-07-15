@@ -1,6 +1,12 @@
 import cities from "@/data/cities.json";
 import ArticleLayout from "@/components/ArticleLayout";
 
+export const metadata = {
+  title: "高齢化率が高い自治体TOP50｜全国自治体データ",
+  description:
+    "高齢化率(65歳以上人口の割合)が高い自治体トップ50を紹介。地方の高齢化が進む地域の特徴を解説します。",
+};
+
 export default function Page() {
   const ranking = [...cities]
     .map((c) => ({

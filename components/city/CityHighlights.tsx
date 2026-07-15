@@ -34,8 +34,15 @@ export default function CityHighlights({
 
   const comments: string[] = [];
 
+  const rankText = (rank: number | undefined) =>
+    rank && rank > 0 ? `第${rank}位` : "対象外";
+
   comments.push(
-    `${city.name}は全国約1,900自治体の中で人口第${ranking?.national.population}位です。`
+    ranking && ranking.national.population > 0
+      ? `${city.name}は全国の実在する自治体(約1,741)の中で人口${rankText(
+          ranking?.national.population
+        )}です。`
+      : `${city.name}は政令指定都市の区のため、全国ランキングの対象外です(内訳として掲載しています)。`
   );
 
   if (city.population > AVG_POPULATION) {
@@ -57,7 +64,7 @@ export default function CityHighlights({
   if (city.area != null) {
 
     comments.push(
-      `面積は全国第${ranking?.national.area}位です。`
+      `面積は全国${rankText(ranking?.national.area)}です。`
     );
 
     comments.push(
@@ -71,7 +78,7 @@ export default function CityHighlights({
   if (city.populationDensity != null) {
 
     comments.push(
-      `人口密度は全国第${ranking?.national.density}位です。`
+      `人口密度は全国${rankText(ranking?.national.density)}です。`
     );
 
     comments.push(
@@ -92,7 +99,7 @@ export default function CityHighlights({
     comments.push(
       `子ども人口は約${city.childPopulation.toLocaleString()}人（人口の約${rate.toFixed(
         1
-      )}%）で、全国第${ranking?.national.child}位です。`
+      )}%）で、全国${rankText(ranking?.national.child)}です。`
     );
 
   }

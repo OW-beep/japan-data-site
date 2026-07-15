@@ -1,6 +1,12 @@
 import cities from "@/data/cities.json";
 import ArticleLayout from "@/components/ArticleLayout";
 
+export const metadata = {
+  title: "人口が多い自治体TOP50｜全国自治体データ",
+  description:
+    "全国自治体の人口ランキングトップ50を紹介。政令指定都市・県庁所在地を中心に人口分布の特徴を解説します。",
+};
+
 export default function Page() {
   const ranking = [...cities]
     .sort((a, b) => b.population - a.population)

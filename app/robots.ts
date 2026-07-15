@@ -1,4 +1,7 @@
-export default function robots() {
+import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
+
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
@@ -6,6 +9,6 @@ export default function robots() {
         allow: "/",
       },
     ],
-    sitemap: "https://your-domain.com/sitemap.xml",
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

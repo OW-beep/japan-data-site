@@ -1,10 +1,16 @@
 import citiesData from "@/data/cities.json";
 import type { City } from "./City";
+import { getMunicipalities } from "./municipalities";
 
-const cities = citiesData as City[];
+const allCities = citiesData as City[];
+
+// ランキングページと同じ基準(区・東京都特別区部の集計行を除いた
+// 実在する自治体だけ)で順位を計算する。政令指定都市の区自体の
+// ページでは、全国・都道府県ランキングの対象外として "-" を表示する。
+const cities = getMunicipalities();
 
 export function getCityRanking(code: string) {
-  const city = cities.find((c) => c.code === code);
+  const city = allCities.find((c) => c.code === code);
 
   if (!city) return null;
 
@@ -152,10 +158,22 @@ export function getCityRanking(code: string) {
 
   return {
     national: [
-      { label: "人口", value: `${populationRank}位` },
-      { label: "面積", value: `${areaRank}位` },
-      { label: "人口密度", value: `${densityRank}位` },
-      { label: "子ども人口", value: `${childRank}位` },
+      {
+        label: "人口",
+        value: populationRank > 0 ? `${populationRank}位` : "-",
+      },
+      {
+        label: "面積",
+        value: areaRank > 0 ? `${areaRank}位` : "-",
+      },
+      {
+        label: "人口密度",
+        value: densityRank > 0 ? `${densityRank}位` : "-",
+      },
+      {
+        label: "子ども人口",
+        value: childRank > 0 ? `${childRank}位` : "-",
+      },
       {
         label: "出生率",
         value: birthRateRank > 0 ? `${birthRateRank}位` : "-",
@@ -171,10 +189,22 @@ export function getCityRanking(code: string) {
     ],
 
     prefecture: [
-      { label: "人口", value: `${prefPopulationRank}位` },
-      { label: "面積", value: `${prefAreaRank}位` },
-      { label: "人口密度", value: `${prefDensityRank}位` },
-      { label: "子ども人口", value: `${prefChildRank}位` },
+      {
+        label: "人口",
+        value: prefPopulationRank > 0 ? `${prefPopulationRank}位` : "-",
+      },
+      {
+        label: "面積",
+        value: prefAreaRank > 0 ? `${prefAreaRank}位` : "-",
+      },
+      {
+        label: "人口密度",
+        value: prefDensityRank > 0 ? `${prefDensityRank}位` : "-",
+      },
+      {
+        label: "子ども人口",
+        value: prefChildRank > 0 ? `${prefChildRank}位` : "-",
+      },
       {
         label: "出生率",
         value: prefBirthRateRank > 0 ? `${prefBirthRateRank}位` : "-",

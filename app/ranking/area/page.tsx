@@ -1,17 +1,26 @@
+import type { Metadata } from "next";
+
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 
 import AreaSummary from "../../../components/ranking/AreaSummary";
+import AdSense from "../../../components/AdSense";
 
-import { getCities } from "../../../lib/getCities";
+import { getMunicipalities } from "../../../lib/municipalities";
+
+export const metadata: Metadata = {
+  title: "全国自治体 面積ランキング",
+  description:
+    "全国自治体の面積(国土地理院公表値)をランキング形式で比較。面積が広い自治体・狭い自治体の特徴がわかります。",
+  openGraph: {
+    title: "全国自治体 面積ランキング",
+    description: "国土地理院公表の自治体面積を自治体別にランキング。",
+  },
+};
 
 export default function Page() {
-  const ranking = getCities()
-    .filter(
-      (c) =>
-        c.area &&
-        !c.name.includes("特別区部")
-    )
+  const ranking = getMunicipalities()
+    .filter((c) => c.area)
     .sort(
       (a, b) =>
         (b.area ?? 0) - (a.area ?? 0)
@@ -52,6 +61,8 @@ export default function Page() {
           value: c.area ?? 0,
         }))}
       />
+
+      <AdSense />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

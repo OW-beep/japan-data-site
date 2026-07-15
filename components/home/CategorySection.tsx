@@ -32,11 +32,6 @@ const categories = [
     desc: "出生率が高い自治体を比較できます。",
   },
   {
-    href: "/ranking/decline",
-    title: "📉 人口減少",
-    desc: "人口減少率が高い自治体ランキングです。",
-  },
-  {
     href:"/ranking/finance",
     title:"💰 財政力指数",
     desc:"自治体の財政力指数を比較できます。",

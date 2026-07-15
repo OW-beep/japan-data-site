@@ -1,6 +1,12 @@
 import cities from "@/data/cities.json";
 import ArticleLayout from "@/components/ArticleLayout";
 
+export const metadata = {
+  title: "人口100万人超の自治体一覧｜全国自治体データ",
+  description:
+    "全国で人口100万人を超える自治体をまとめて紹介します。政令指定都市を中心に、大都市の人口規模を比較できます。",
+};
+
 export default function Page() {
 const ranking = [...cities]
 .filter((c) => c.population >= 1000000)

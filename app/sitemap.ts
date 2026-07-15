@@ -1,16 +1,27 @@
 import type { MetadataRoute } from "next";
 import cities from "@/data/cities.json";
+import { getPrefectures } from "@/lib/getPrefecture";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://japan-data-site.vercel.app";
+  const baseUrl = SITE_URL;
 
   const staticPages = [
     "",
+    "/ranking",
     "/ranking/population",
+    "/ranking/birth-rate",
     "/ranking/child",
     "/ranking/aging",
-    "/ranking/decline",
+    "/ranking/density",
+    "/ranking/area",
+    "/ranking/finance",
+    "/prefecture",
+    "/search",
+    "/articles",
+    "/about",
     "/privacy",
+    "/terms",
     "/contact",
   ];
 
@@ -19,11 +30,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
   }));
 
+  const prefecturePages = getPrefectures().map((pref) => ({
+    url: `${baseUrl}/prefecture/${encodeURIComponent(pref)}`,
+    lastModified: new Date(),
+  }));
+
+  const articlePages = [
+    "/articles/birth-rate",
+    "/articles/population-concentration",
+    "/articles/million-cities",
+    "/articles/youngest-municipalities",
+    "/articles/child-top50",
+    "/articles/population-about",
+    "/articles/population-top50",
+    "/articles/aging-top50",
+    "/articles/decline",
+  ].map((p) => ({
+    url: `${baseUrl}${p}`,
+    lastModified: new Date(),
+  }));
+
   return [
     ...staticPages.map((p) => ({
       url: `${baseUrl}${p}`,
       lastModified: new Date(),
     })),
+    ...articlePages,
+    ...prefecturePages,
     ...cityPages,
   ];
 }

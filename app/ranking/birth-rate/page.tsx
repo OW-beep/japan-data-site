@@ -1,13 +1,26 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import BirthRateSummary from "../../../components/ranking/BirthRateSummary";
+import AdSense from "../../../components/AdSense";
 
-import { getCities } from "../../../lib/getCities";
+import { getMunicipalities } from "../../../lib/municipalities";
+
+export const metadata: Metadata = {
+  title: "全国自治体 出生率ランキング【合計特殊出生率】",
+  description:
+    "全国自治体の合計特殊出生率をランキング形式で比較。出生率が高い自治体・低い自治体の傾向や地域差がわかります。",
+  openGraph: {
+    title: "全国自治体 出生率ランキング【合計特殊出生率】",
+    description:
+      "合計特殊出生率を自治体別にランキング。子育て環境の地域差を比較。",
+  },
+};
 
 export default function Page() {
-  const ranking = getCities()
+  const ranking = getMunicipalities()
   .filter(
     (c) =>
       c.birthRate != null &&
@@ -23,7 +36,7 @@ const top50 = ranking.slice(0, 50);
 
   const average =
     ranking.reduce(
-      (sum, c) => sum + c.birthRate,
+      (sum, c) => sum + (c.birthRate ?? 0),
       0
     ) / ranking.length;
 
@@ -72,7 +85,13 @@ const top50 = ranking.slice(0, 50);
       <BirthRateSummary
         average={average}
         cityCount={ranking.length}
+        top3={top50.slice(0, 3).map((c) => ({
+          name: c.name,
+          rate: c.birthRate ?? 0,
+        }))}
       />
+
+      <AdSense />
 
       <div
         style={{
@@ -84,7 +103,7 @@ const top50 = ranking.slice(0, 50);
             key={city.code}
             rank={index + 1}
             name={city.name}
-            value={city.birthRate.toFixed(2)}
+            value={(city.birthRate ?? 0).toFixed(2)}
             unit=""
           />
         ))}

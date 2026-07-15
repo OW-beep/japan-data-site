@@ -52,10 +52,10 @@ export default function RankingSection() {
         />
 
         <Card
-          href="/ranking/decline"
-          emoji="📉"
-          title="人口減少率ランキング"
-          desc="人口減少が進んでいる自治体を比較できます。"
+          href="/ranking/area"
+          emoji="🗺️"
+          title="面積ランキング"
+          desc="面積が広い自治体をランキング形式で比較できます。"
         />
 
         <Card

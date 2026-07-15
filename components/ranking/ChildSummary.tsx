@@ -85,6 +85,19 @@ export default function ChildSummary({
 
       <p
         style={{
+          lineHeight: 1.9,
+          color: "#374151",
+          marginTop: 18,
+        }}
+      >
+        子ども人口割合が高い自治体は、必ずしも出生率そのものが高いとは
+        限りません。子育て世代の転入が多いベッドタウンや、大規模な
+        宅地開発が進んだ地域では、若い世帯が集まることで割合が
+        押し上げられているケースも多く見られます。
+      </p>
+
+      <p
+        style={{
           marginTop: 18,
           color: "#6b7280",
           fontSize: 14,

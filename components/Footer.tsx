@@ -44,6 +44,7 @@ export default function Footer() {
           <ul style={list}>
             <li><Link href="/about">サイトについて</Link></li>
             <li><Link href="/privacy">プライバシーポリシー</Link></li>
+            <li><Link href="/terms">利用規約</Link></li>
             <li><Link href="/contact">お問い合わせ</Link></li>
             <li><Link href="/sitemap">サイトマップ</Link></li>
           </ul>

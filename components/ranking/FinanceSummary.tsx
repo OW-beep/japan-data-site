@@ -85,6 +85,20 @@ export default function FinanceSummary({
 
       <p
         style={{
+          lineHeight: 1.9,
+          color: "#374151",
+          marginTop: 18,
+        }}
+      >
+        財政力指数が高いからといって、住民サービスの水準が
+        高いとは限りません。地方交付税は財政力の弱い自治体の
+        歳入を補う仕組みのため、指数が低い自治体でも、
+        制度を通じて一定の行政サービス水準が維持されています。
+
+      </p>
+
+      <p
+        style={{
           marginTop: 18,
           color: "#6b7280",
           fontSize: 14,

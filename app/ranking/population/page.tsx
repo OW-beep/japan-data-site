@@ -1,19 +1,28 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import PopulationSummary from "../../../components/ranking/PopulationSummary";
+import AdSense from "../../../components/AdSense";
 
-import { getCities } from "../../../lib/getCities";
+import { getMunicipalities } from "../../../lib/municipalities";
+
+export const metadata: Metadata = {
+  title: "全国自治体 人口ランキング【最新版】",
+  description:
+    "全国の市区町村の人口を多い順にランキング。政令指定都市・県庁所在地から町村まで、住民基本台帳ベースの最新人口データを比較できます。",
+  openGraph: {
+    title: "全国自治体 人口ランキング【最新版】",
+    description:
+      "全国の市区町村の人口を多い順にランキング。住民基本台帳ベースの最新データで比較。",
+  },
+};
 
 export default function Page() {
-  const ranking = getCities()
-    // 東京都特別区除外
-    .filter(
-      (city) =>
-        !(city.code >= "13101" && city.code <= "13123")
-    )
-    .sort((a, b) => b.population - a.population);
+  const ranking = getMunicipalities().sort(
+    (a, b) => b.population - a.population
+  );
 
   const top50 = ranking.slice(0, 50);
 
@@ -48,7 +57,8 @@ export default function Page() {
       >
         全国の自治体人口をランキング形式で掲載しています。
         <br />
-        比較しやすさを考慮し、東京都特別区（23区）はランキング対象外です。
+        東京都の特別区(千代田区など)は独立した自治体として個別に、
+        政令指定都市の区(横浜市港北区など)は市の内訳として、各市のページに掲載しています。
       </p>
 
       <MetricBox
@@ -65,7 +75,13 @@ export default function Page() {
       <PopulationSummary
         average={average}
         cityCount={ranking.length}
+        top3={top50.slice(0, 3).map((c) => ({
+          name: c.name,
+          population: c.population,
+        }))}
       />
+
+      <AdSense />
 
       <div
         style={{

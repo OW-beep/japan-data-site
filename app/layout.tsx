@@ -1,15 +1,18 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
+import Script from "next/script";
+
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE_URL, SITE_NAME, ADSENSE_CLIENT_ID } from "@/lib/site";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://wakutan.com"),
+  metadataBase: new URL(SITE_URL),
 
   title: {
-    default: "全国自治体データランキング",
-    template: "%s | 全国自治体データランキング",
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
   },
 
   description:
@@ -28,14 +31,14 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "全国自治体データランキング",
+    title: SITE_NAME,
 
     description:
       "人口・出生率・高齢化率・財政力指数など全国1747自治体を比較",
 
-    url: "https://wakutan.com",
+    url: SITE_URL,
 
-    siteName: "全国自治体データランキング",
+    siteName: SITE_NAME,
 
     locale: "ja_JP",
 
@@ -59,6 +62,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        {/*
+          AdSense読み込みスクリプト。
+          審査通過前でもタグ自体は設置しておいて問題ありません
+          (審査botが検出しやすくなります)。承認前は広告は表示されません。
+        */}
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
 
       <body
         style={{

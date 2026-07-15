@@ -1,18 +1,31 @@
+import type { Metadata } from "next";
+
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import FinanceSummary from "../../../components/ranking/FinanceSummary";
-import cities from "../../../data/cities.json";
+import AdSense from "../../../components/AdSense";
+import { getMunicipalities } from "../../../lib/municipalities";
+
+export const metadata: Metadata = {
+  title: "全国自治体 財政力指数ランキング",
+  description:
+    "全国自治体の財政力指数をランキング形式で比較。自主財源だけで行政サービスをまかなえる「稼げる自治体」がわかります。",
+  openGraph: {
+    title: "全国自治体 財政力指数ランキング",
+    description:
+      "基準財政収入額と基準財政需要額から算出する財政力指数を自治体別にランキング。",
+  },
+};
 
 export default function FinanceRankingPage() {
-  const ranking = [...cities]
+  const ranking = getMunicipalities()
     .filter(
-      (c: any) =>
+      (c) =>
         c.financeIndex != null &&
-        !Number.isNaN(c.financeIndex) &&
-        !c.name.includes("特別区部")
+        !Number.isNaN(c.financeIndex)
     )
     .sort(
-      (a: any, b: any) =>
+      (a, b) =>
         (b.financeIndex ?? 0) -
         (a.financeIndex ?? 0)
     )
@@ -43,29 +56,31 @@ export default function FinanceRankingPage() {
         example={{
           name: ranking[0]?.name ?? "",
           value:
-            ranking[0]?.financeIndex.toFixed(2) ??
+            ranking[0]?.financeIndex?.toFixed(2) ??
             "0.00",
         }}
       />
 
       <FinanceSummary
-        ranking={ranking.map((c: any) => ({
+        ranking={ranking.map((c) => ({
           name: c.name,
-          value: c.financeIndex,
+          value: c.financeIndex ?? 0,
         }))}
       />
+
+      <AdSense />
 
       <div
         style={{
           marginTop: 20,
         }}
       >
-        {ranking.map((city: any, index) => (
+        {ranking.map((city, index) => (
           <RankCard
             key={city.code}
             rank={index + 1}
             name={city.name}
-            value={city.financeIndex.toFixed(2)}
+            value={(city.financeIndex ?? 0).toFixed(2)}
             unit=""
           />
         ))}

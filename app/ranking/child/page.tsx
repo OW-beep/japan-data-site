@@ -1,15 +1,28 @@
+import type { Metadata } from "next";
+
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import ChildSummary from "../../../components/ranking/ChildSummary";
-import { getCities } from "../../../lib/getCities";
+import AdSense from "../../../components/AdSense";
+import { getMunicipalities } from "../../../lib/municipalities";
+
+export const metadata: Metadata = {
+  title: "全国自治体 子ども人口割合ランキング",
+  description:
+    "全国自治体の子ども人口割合(15歳未満人口の割合)をランキング形式で比較。子育て世代が多い自治体・少子高齢化が進む自治体がわかります。",
+  openGraph: {
+    title: "全国自治体 子ども人口割合ランキング",
+    description:
+      "15歳未満人口の割合を自治体別にランキング。子育て世代の分布を比較。",
+  },
+};
 
 export default function Page() {
-  const ranking = getCities()
+  const ranking = getMunicipalities()
     .filter(
       (c) =>
         c.childPopulation != null &&
-        c.population > 0 &&
-        !c.name.includes("特別区部")
+        c.population > 0
     )
     .map((c) => ({
       ...c,
@@ -58,6 +71,8 @@ export default function Page() {
           value: c.rate,
         }))}
       />
+
+      <AdSense />
 
       <div
         style={{
