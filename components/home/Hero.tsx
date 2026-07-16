@@ -7,10 +7,10 @@ export default function Hero() {
         background:
           "linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%)",
         color: "#fff",
-        borderRadius: 28,
-        padding: "70px 28px",
-        marginBottom: 50,
-        boxShadow: "0 20px 40px rgba(37,99,235,.18)",
+        borderRadius: 24,
+        padding: "40px 28px",
+        marginBottom: 40,
+        boxShadow: "0 16px 32px rgba(37,99,235,.16)",
       }}
     >
       <div
@@ -24,10 +24,11 @@ export default function Hero() {
           style={{
             display: "inline-block",
             background: "rgba(255,255,255,.15)",
-            padding: "8px 18px",
+            padding: "6px 16px",
             borderRadius: 999,
             fontWeight: 700,
-            marginBottom: 24,
+            fontSize: 13,
+            marginBottom: 16,
           }}
         >
           🇯🇵 全国1741自治体データを毎年更新
@@ -35,10 +36,10 @@ export default function Hero() {
 
         <h1
           style={{
-            fontSize: 54,
-            lineHeight: 1.2,
+            fontSize: 36,
+            lineHeight: 1.35,
             fontWeight: 800,
-            marginBottom: 24,
+            marginBottom: 14,
           }}
         >
           日本全国の自治体データを
@@ -48,11 +49,11 @@ export default function Hero() {
 
         <p
           style={{
-            maxWidth: 820,
+            maxWidth: 720,
             margin: "0 auto",
-            fontSize: 20,
-            lineHeight: 1.9,
-            opacity: .95,
+            fontSize: 16,
+            lineHeight: 1.8,
+            opacity: 0.95,
           }}
         >
           人口・出生率・人口密度・高齢化率・子ども人口・面積・財政など、
@@ -65,8 +66,8 @@ export default function Hero() {
             display: "flex",
             justifyContent: "center",
             flexWrap: "wrap",
-            gap: 16,
-            marginTop: 42,
+            gap: 12,
+            marginTop: 26,
           }}
         >
           <Link
@@ -93,50 +94,19 @@ export default function Hero() {
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns:
-              "repeat(auto-fit,minmax(180px,1fr))",
-            gap: 24,
-            marginTop: 60,
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "10px 28px",
+            marginTop: 28,
+            paddingTop: 24,
+            borderTop: "1px solid rgba(255,255,255,.2)",
           }}
         >
           <Info number="1741+" label="自治体" />
           <Info number="20+" label="ランキング" />
           <Info number="2000+" label="データページ" />
           <Info number="毎年更新" label="政府データ" />
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: 12,
-            marginTop: 48,
-          }}
-        >
-          {[
-            "人口",
-            "出生率",
-            "高齢化率",
-            "子ども人口",
-            "人口密度",
-            "面積",
-            "財政",
-            "教育",
-          ].map((x) => (
-            <span
-              key={x}
-              style={{
-                padding: "10px 18px",
-                background: "rgba(255,255,255,.15)",
-                borderRadius: 999,
-                fontWeight: 700,
-              }}
-            >
-              {x}
-            </span>
-          ))}
         </div>
       </div>
     </section>
@@ -147,9 +117,10 @@ const primaryButton = {
   background: "#fff",
   color: "#2563eb",
   textDecoration: "none",
-  padding: "16px 26px",
-  borderRadius: 14,
+  padding: "12px 20px",
+  borderRadius: 12,
   fontWeight: 800,
+  fontSize: 14,
 } as const;
 
 const secondaryButton = {
@@ -157,9 +128,10 @@ const secondaryButton = {
   color: "#fff",
   border: "1px solid rgba(255,255,255,.35)",
   textDecoration: "none",
-  padding: "16px 26px",
-  borderRadius: 14,
+  padding: "12px 20px",
+  borderRadius: 12,
   fontWeight: 700,
+  fontSize: 14,
 } as const;
 
 function Info({
@@ -170,10 +142,16 @@ function Info({
   label: string;
 }) {
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "baseline",
+        gap: 8,
+      }}
+    >
       <div
         style={{
-          fontSize: 40,
+          fontSize: 22,
           fontWeight: 800,
         }}
       >
@@ -182,8 +160,8 @@ function Info({
 
       <div
         style={{
-          marginTop: 6,
-          opacity: .9,
+          fontSize: 13,
+          opacity: 0.85,
         }}
       >
         {label}
