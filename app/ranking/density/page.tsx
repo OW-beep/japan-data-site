@@ -4,17 +4,13 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import DensitySummary from "../../../components/ranking/DensitySummary";
 import AdSense from "../../../components/AdSense";
+import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
   title: "全国自治体 人口密度ランキング",
   description:
     "全国自治体の人口密度(1平方キロメートルあたりの人口)をランキング形式で比較。都市部の過密と地方の過疎の差がわかります。",
-  openGraph: {
-    title: "全国自治体 人口密度ランキング",
-    description:
-      "1平方キロメートルあたりの人口を自治体別にランキング。都市の過密度を比較。",
-  },
 };
 
 export default function Page() {
@@ -43,6 +39,8 @@ export default function Page() {
       >
         🏙️ 人口密度ランキング
       </h1>
+
+      <DataAsOf />
 
       <MetricBox
         title="指標定義"

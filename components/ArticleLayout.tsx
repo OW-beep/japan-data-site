@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DataAsOf from "@/components/DataAsOf";
 
 type TopItem = {
 rank: number;
@@ -30,6 +31,8 @@ return ( <main style={container}> <h1 style={titleStyle}>
   <p style={summaryStyle}>
     {summary}
   </p>
+
+  <DataAsOf />
 
   <div style={hero}>
     <div style={heroLabelStyle}>

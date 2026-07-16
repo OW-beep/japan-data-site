@@ -2,13 +2,20 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 
 export const metadata = {
-  title: "人口が多い自治体TOP50｜全国自治体データ",
+  title: "人口が多い自治体TOP50",
   description:
     "全国自治体の人口ランキングトップ50を紹介。政令指定都市・県庁所在地を中心に人口分布の特徴を解説します。",
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const municipalities = getMunicipalities();
+
+  const totalNationalPopulation = municipalities.reduce(
+    (s, c) => s + c.population,
+    0
+  );
+
+  const ranking = [...municipalities]
     .sort((a, b) => b.population - a.population)
     .slice(0, 50);
 
@@ -31,6 +38,19 @@ export default function Page() {
   );
 
   const gap = ranking[0].population - ranking[1].population;
+
+  const sortedAll = [...municipalities].sort(
+    (a, b) => a.population - b.population
+  );
+
+  const median =
+    sortedAll[Math.floor(sortedAll.length / 2)];
+
+  const top50Share =
+    (totalPopulation / totalNationalPopulation) * 100;
+
+  const top50CountShare =
+    (50 / municipalities.length) * 100;
 
   return (
     <ArticleLayout
@@ -69,11 +89,7 @@ export default function Page() {
           <li>
             TOP50人口合計：
             {totalPopulation.toLocaleString()}人
-            (全国自治体人口の約
-            {((totalPopulation / 126146099) * 100).toFixed(
-              1
-            )}
-            %)
+            (全国自治体人口の約{top50Share.toFixed(1)}%)
           </li>
 
           <li>
@@ -108,50 +124,39 @@ export default function Page() {
         <h2>分析ポイント</h2>
 
         <p>
-          全国{50 - 0 + 0}位まで見ても、上位自治体は
-          ほぼすべて三大都市圏(首都圏・中京圏・関西圏)か、
-          各地方の中心都市(札幌市・福岡市・仙台市・広島市など)に
-          集中しています。特に1位の
-          {ranking[0].name}は、2位の{ranking[1].name}
-          と比べて人口が約{Math.round(gap / 10000)}万人多く、
-          単独で突出した規模を持っています。
+          TOP50自治体の人口は{totalPopulation.toLocaleString()}
+          人で、全国人口({totalNationalPopulation.toLocaleString()}
+          人)の約{top50Share.toFixed(1)}%を占めています。
+          一方でTOP50自治体数は、全
+          {municipalities.length.toLocaleString()}
+          自治体の約{top50CountShare.toFixed(1)}
+          %に過ぎません。自治体数では2%に満たない
+          グループに、人口の3割近くが集中している
+          ことになります。
         </p>
 
         <p>
-          TOP50自治体の人口を合計すると
-          {totalPopulation.toLocaleString()}人となり、
-          これは全国{" "}
-          {getMunicipalities().length.toLocaleString()}
-          自治体の総人口のおよそ
-          {((totalPopulation / 126146099) * 100).toFixed(0)}
-          %にあたります。つまり、全自治体のわずか
-          {(
-            (50 / getMunicipalities().length) *
-            100
-          ).toFixed(1)}
-          %にすぎない上位50自治体に、人口の3割近くが
-          集中している計算になり、日本の人口分布が
-          いかに偏っているかが分かります。
+          1位の{ranking[0].name}
+          （{ranking[0].population.toLocaleString()}人）は、
+          2位の{ranking[1].name}
+          （{ranking[1].population.toLocaleString()}人）と
+          比べて人口が{gap.toLocaleString()}人多く、
+          TOP50の中でも単独で突出した規模です。上位10自治体は
+          いずれも政令指定都市または東京都特別区であり、
+          三大都市圏(首都圏・中京圏・関西圏)と、各地方の
+          広域中心都市(札幌市・福岡市・仙台市・広島市)に
+          集中しています。
         </p>
 
         <p>
-          また、人口100万人を超える自治体は全国でわずか
-          {million.length}にとどまります。
-          政令指定都市は全国に20市ありますが、
-          そのうち人口100万人を超えているのは半数程度で、
-          「政令指定都市だから人口が多い」とは限らない点にも
-          注意が必要です。たとえば同じ政令指定都市でも、
-          人口規模には数倍の差があります。
-        </p>
-
-        <p>
-          こうした偏りは、明治期以降の産業集積、
-          戦後の高度経済成長期における工業化、
-          そして近年の金融・IT・サービス業の都市集中という、
-          複数の時代の要因が積み重なって形成されたものです。
-          人口ランキングの上位自治体を見ることは、
-          日本の産業構造や都市形成の歴史を映し出す
-          鏡でもあると言えます。
+          人口100万人を超える自治体は全国で{million.length}
+          にとどまります。全国の政令指定都市は20市ある
+          一方、実際に人口100万人を超えているのは
+          {million.length}市のみで、半数以上は100万人に
+          届いていません。「政令指定都市だから人口が
+          多い」とは必ずしも言えず、同じ政令指定都市でも
+          最大の{ranking[0].name}と最小規模の指定都市との
+          間には数倍の人口差があります。
         </p>
       </div>
 
@@ -171,26 +176,25 @@ export default function Page() {
         </p>
 
         <p>
-          興味深いのは、TOP50の中には県庁所在地ではない
-          自治体も少なからず含まれている点です。神奈川県の
-          川崎市(県庁所在地は横浜市)や、埼玉県のさいたま市は
-          県庁所在地ですが、兵庫県の姫路市や東京都の八王子市
-          のように、県庁所在地でなくても独自の産業基盤や
-          交通結節点としての機能を持つことで、人口規模を
-          維持・拡大している自治体も存在します。人口の多さは
-          必ずしも「行政上の中心地」であることとイコールでは
-          なく、産業立地や交通インフラといった経済的な要因が
-          大きく影響していることが読み取れます。
+          TOP50の中には県庁所在地ではない自治体も含まれて
+          います。神奈川県の川崎市(県庁所在地は横浜市)が
+          その代表例です。人口の多さは必ずしも
+          「都道府県庁の所在地であること」とイコールでは
+          なく、産業立地や交通インフラといった経済的な
+          要因が大きく影響しています。
         </p>
 
         <p>
-          TOP50平均人口は{average.toLocaleString()}人であり、
-          これは全国の市区町村の中央値(秋田県にかほ市、
-          約23,400人)のおよそ
-          {Math.round(average / 23435)}
-          倍にあたります。上位50自治体と、それ以外
-          約1,690自治体との間には、これほど大きな
-          人口規模の差が存在しているのです。
+          TOP50平均人口は{average.toLocaleString()}人で、
+          全国の中央値である{median.name}
+          （{median.population.toLocaleString()}人）の
+          約{Math.round(average / median.population)}倍に
+          あたります。TOP50に入る自治体と、それ以外
+          約{(
+            municipalities.length - 50
+          ).toLocaleString()}
+          自治体との間には、これだけの人口規模の差が
+          あります。
         </p>
       </div>
 
@@ -204,22 +208,19 @@ export default function Page() {
           行政需要(道路や上下水道の維持、教育・福祉サービスの
           提供など)も比例して増えるため、人口規模がそのまま
           「財政的な余裕」を意味するわけではありません。
-          実際、財政力指数(自治体がどの程度自前の税収だけで
+          財政力指数(自治体がどの程度自前の税収だけで
           行政サービスをまかなえるかを示す指標)で見ると、
           必ずしも人口上位の自治体が最上位に来るとは限らず、
           工業・商業が盛んな中規模都市が高い指数を示すことも
-          珍しくありません。
+          あります。
         </p>
 
         <p>
-          このように、人口ランキングは自治体の「規模」を
-          示す指標であり、「豊かさ」や「住みやすさ」を
-          直接示すものではありません。人口ランキングを
-          出発点として、財政力指数や人口密度、高齢化率など
-          他の指標もあわせて確認することで、より正確に
-          自治体の実態を把握することができます。本サイトの
-          各ランキングページでは、こうした複数の視点から
-          自治体を比較できるようにしています。
+          人口ランキングは自治体の「規模」を示す指標で
+          あり、財政力指数や人口密度、高齢化率といった
+          指標とは異なる側面を表しています。本サイトの
+          各ランキングページでは、これらの指標を個別に
+          確認できます。
         </p>
       </div>
 
@@ -227,16 +228,14 @@ export default function Page() {
         <h2>順位の変動をどう捉えるか</h2>
 
         <p>
-          人口ランキングの順位は、毎年少しずつ入れ替わります。
-          特にTOP10からTOP20あたりの自治体は、大規模な
-          宅地開発や工場誘致、あるいは近隣自治体との合併の
-          有無によって、数年単位で順位が変動することがあります。
-          そのため、単年のランキングだけを見るのではなく、
-          複数年の推移を追うことで、その自治体が
-          「成長している」のか「縮小している」のかという
-          トレンドをより正確に把握できます。本サイトでは
-          定期的にデータを更新しているため、時期を変えて
-          ランキングを見比べていただくのもおすすめです。
+          人口ランキングの順位は、大規模な宅地開発や
+          工場誘致、近隣自治体との合併の有無によって、
+          数年単位で変動することがあります。特にTOP10から
+          TOP20あたりの自治体で入れ替わりが起きやすい
+          傾向があります。本サイトはe-Statの公開データを
+          定期的に取得し直しているため、ページ上部の
+          「データ更新日」を確認いただくことで、
+          いつ時点の順位かを把握できます。
         </p>
       </div>
 
@@ -245,14 +244,13 @@ export default function Page() {
 
         <p>
           本記事ではTOP50に注目しましたが、全国
-          1,741自治体の97%以上は、このランキングには
-          登場しません。人口規模では目立たなくても、
-          出生率や人口密度、財政力指数といった別の
-          指標で見れば上位に来る自治体は数多くあります。
-          「人口が多い」という一面だけで自治体を
-          評価するのではなく、目的に応じて複数の
-          ランキングを参照することで、より多角的に
-          日本の自治体の姿を理解できるはずです。
+          {municipalities.length.toLocaleString()}
+          自治体のうち{(100 - top50CountShare).toFixed(1)}
+          %はこのランキングには登場しません。人口規模では
+          目立たなくても、出生率や人口密度、財政力指数と
+          いった別の指標で見れば上位に来る自治体は数多く
+          あります。本サイトでは人口以外のランキングも
+          掲載していますので、あわせてご確認ください。
         </p>
       </div>
     </ArticleLayout>

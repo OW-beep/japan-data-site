@@ -5,6 +5,7 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import PopulationSummary from "../../../components/ranking/PopulationSummary";
 import AdSense from "../../../components/AdSense";
+import DataAsOf from "../../../components/DataAsOf";
 
 import { getMunicipalities } from "../../../lib/municipalities";
 
@@ -12,11 +13,6 @@ export const metadata: Metadata = {
   title: "全国自治体 人口ランキング【最新版】",
   description:
     "全国の市区町村の人口を多い順にランキング。政令指定都市・県庁所在地から町村まで、住民基本台帳ベースの最新人口データを比較できます。",
-  openGraph: {
-    title: "全国自治体 人口ランキング【最新版】",
-    description:
-      "全国の市区町村の人口を多い順にランキング。住民基本台帳ベースの最新データで比較。",
-  },
 };
 
 export default function Page() {
@@ -47,6 +43,8 @@ export default function Page() {
       >
         全国自治体 人口ランキング
       </h1>
+
+      <DataAsOf />
 
       <p
         style={{

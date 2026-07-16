@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "人口減少ランキング｜全国自治体データ",
+  title: "人口減少ランキング",
   description:
     "人口減少が進む自治体をランキング形式で紹介します。",
 };

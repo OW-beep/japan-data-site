@@ -5,6 +5,7 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import AgingSummary from "../../../components/ranking/AgingSummary";
 import AdSense from "../../../components/AdSense";
+import DataAsOf from "../../../components/DataAsOf";
 
 import { getMunicipalities } from "../../../lib/municipalities";
 
@@ -12,11 +13,6 @@ export const metadata: Metadata = {
   title: "全国自治体 高齢化率ランキング【最新版】",
   description:
     "全国自治体の高齢化率(65歳以上人口の割合)をランキング形式で比較。地方と都市部の差、高齢化が進む自治体の特徴がわかります。",
-  openGraph: {
-    title: "全国自治体 高齢化率ランキング【最新版】",
-    description:
-      "65歳以上人口の割合を自治体別にランキング。地方と都市部の高齢化格差を比較。",
-  },
 };
 
 export default function Page() {
@@ -54,6 +50,8 @@ export default function Page() {
       >
         全国自治体 高齢化率ランキング
       </h1>
+
+      <DataAsOf />
 
       <p
         style={{

@@ -83,3 +83,18 @@ if (notFound.length) {
 }
 
 console.log("cities updated");
+
+fs.writeFileSync(
+  "data/meta.json",
+  JSON.stringify(
+    {
+      updatedAt: new Date().toISOString(),
+      cityCount: merged.length,
+    },
+    null,
+    2
+  ),
+  "utf8"
+);
+
+console.log("data/meta.json updated");

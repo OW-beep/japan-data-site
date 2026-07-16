@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "出生率ランキング｜全国自治体データ",
+  title: "出生率ランキング",
   description:
     "合計特殊出生率とは何か、全国・都道府県別の最新の傾向を解説します。市区町村別ランキングは準備中です。",
 };

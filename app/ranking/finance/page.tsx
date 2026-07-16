@@ -4,17 +4,13 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import FinanceSummary from "../../../components/ranking/FinanceSummary";
 import AdSense from "../../../components/AdSense";
+import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
   title: "全国自治体 財政力指数ランキング",
   description:
     "全国自治体の財政力指数をランキング形式で比較。自主財源だけで行政サービスをまかなえる「稼げる自治体」がわかります。",
-  openGraph: {
-    title: "全国自治体 財政力指数ランキング",
-    description:
-      "基準財政収入額と基準財政需要額から算出する財政力指数を自治体別にランキング。",
-  },
 };
 
 export default function FinanceRankingPage() {
@@ -47,6 +43,8 @@ export default function FinanceRankingPage() {
       >
         💰 財政力指数ランキング
       </h1>
+
+      <DataAsOf />
 
       <MetricBox
         title="指標定義"

@@ -5,6 +5,7 @@ import MetricBox from "../../../components/MetricBox";
 
 import AreaSummary from "../../../components/ranking/AreaSummary";
 import AdSense from "../../../components/AdSense";
+import DataAsOf from "../../../components/DataAsOf";
 
 import { getMunicipalities } from "../../../lib/municipalities";
 
@@ -12,10 +13,6 @@ export const metadata: Metadata = {
   title: "全国自治体 面積ランキング",
   description:
     "全国自治体の面積(国土地理院公表値)をランキング形式で比較。面積が広い自治体・狭い自治体の特徴がわかります。",
-  openGraph: {
-    title: "全国自治体 面積ランキング",
-    description: "国土地理院公表の自治体面積を自治体別にランキング。",
-  },
 };
 
 export default function Page() {
@@ -43,6 +40,8 @@ export default function Page() {
       >
         🗺️ 面積ランキング
       </h1>
+
+      <DataAsOf />
 
       <MetricBox
         title="指標定義"

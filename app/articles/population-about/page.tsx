@@ -1,35 +1,107 @@
 import Link from "next/link";
+import DataAsOf from "@/components/DataAsOf";
+import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
-  title: "人口ランキングとは？ | 日本自治体データランキング",
+  title: "人口ランキングとは？",
   description:
     "人口ランキングの見方や集計方法、人口データから分かることを、実際の数字とともに解説します。",
 };
 
 export default function Page() {
+  const municipalities = getMunicipalities();
+
+  const totalPopulation = municipalities.reduce(
+    (s, c) => s + c.population,
+    0
+  );
+
+  const sorted = [...municipalities].sort(
+    (a, b) => a.population - b.population
+  );
+
+  const largest = sorted[sorted.length - 1];
+  const smallest = sorted[0];
+
+  const median =
+    sorted[Math.floor(sorted.length / 2)];
+
+  const over100k = municipalities.filter(
+    (c) => c.population >= 100000
+  ).length;
+
+  const under5000 = municipalities.filter(
+    (c) => c.population < 5000
+  ).length;
+
+  const under1000 = municipalities.filter(
+    (c) => c.population < 1000
+  ).length;
+
+  const prefTotals: Record<string, number> = {};
+  municipalities.forEach((c) => {
+    const pref = c.name.split(" ")[0];
+    prefTotals[pref] = (prefTotals[pref] || 0) + c.population;
+  });
+
+  const prefRanking = Object.entries(prefTotals).sort(
+    (a, b) => b[1] - a[1]
+  );
+
+  const top6PrefTotal = prefRanking
+    .slice(0, 6)
+    .reduce((s, [, v]) => s + v, 0);
+
+  const gtokyo = ["東京都", "神奈川県", "埼玉県", "千葉県"];
+  const gtokyoTotal = gtokyo.reduce(
+    (s, p) => s + (prefTotals[p] || 0),
+    0
+  );
+
+  const million = municipalities.filter(
+    (c) => c.population >= 1000000
+  );
+
   return (
     <div style={container}>
       <h1 style={title}>人口ランキングとは？</h1>
 
+      <DataAsOf />
+
       <p style={lead}>
         人口ランキングは、各自治体の総人口を比較したランキングです。
-        日本には現在1,741の市区町村があり(本サイトでは政令指定都市の区を除いた実在する自治体の数で集計しています)、
-        その人口規模は最大の横浜市(約378万人)から最小の東京都青ヶ島村(169人)まで、
-        実に2万倍以上の開きがあります。
+        日本には現在{municipalities.length.toLocaleString()}
+        の市区町村があり(本サイトでは政令指定都市の区を除いた実在する自治体の数で集計しています)、
+        その人口規模は最大の{largest.name}(約
+        {Math.round(largest.population / 10000).toLocaleString()}
+        万人)から最小の{smallest.name}(
+        {smallest.population.toLocaleString()}人)まで、
+        実に{Math.round(largest.population / smallest.population).toLocaleString()}
+        倍の開きがあります。
       </p>
 
       <h2 style={heading}>まず全体像を数字で見る</h2>
 
       <p>
-        本サイトが集計している1,741自治体の総人口は約1億2,615万人です。
-        このうち人口10万人を超える自治体は283、
-        逆に人口5,000人未満の自治体は290あり、
-        全体のおよそ6分の1が「小規模自治体」に分類されます。
-        人口1,000人未満という、かなり小さな自治体も34存在します。
-        ちなみに、全自治体を人口順に並べたときにちょうど真ん中に来る
-        「中央値の自治体」は秋田県にかほ市(人口約23,400人)です。
-        平均値ではなく中央値で見ると、日本の「典型的な自治体」の姿が
-        見えてきます。
+        本サイトが集計している{municipalities.length.toLocaleString()}
+        自治体の総人口は
+        {totalPopulation.toLocaleString()}人です。このうち
+        人口10万人を超える自治体は{over100k}
+        (全体の{((over100k / municipalities.length) * 100).toFixed(1)}
+        %)、人口5,000人未満の自治体は{under5000}
+        (全体の{((under5000 / municipalities.length) * 100).toFixed(1)}
+        %)です。人口1,000人未満の自治体も{under1000}
+        あります。全自治体を人口順に並べたとき、
+        ちょうど真ん中に位置する自治体(中央値)は{median.name}
+        (人口{median.population.toLocaleString()}人)です。
+        平均値(
+        {Math.round(
+          totalPopulation / municipalities.length
+        ).toLocaleString()}
+        人)と中央値を比べると、平均値の方が大きくなります。
+        これは、人口の多い一部の自治体が平均値を押し上げている
+        ためで、日本の自治体人口の分布が一様ではないことを
+        示しています。
       </p>
 
       <h2 style={heading}>人口ランキングで分かること</h2>
@@ -37,9 +109,8 @@ export default function Page() {
       <p>
         人口が多い自治体は、商業施設や公共交通、医療機関などの
         インフラが整いやすく、雇用の受け皿も大きくなる傾向があります。
-        実際、人口上位10自治体(横浜市・大阪市・名古屋市・札幌市・福岡市など)は
-        いずれも政令指定都市であり、企業の本社機能や大学、
-        大規模な商業施設が集積しています。
+        実際、人口上位10自治体はいずれも政令指定都市であり、
+        企業の本社機能や大学、大規模な商業施設が集積しています。
       </p>
 
       <p>
@@ -53,12 +124,27 @@ export default function Page() {
       <h2 style={heading}>地域による偏り</h2>
 
       <p>
-        都道府県別に人口を集計すると、東京都が約1,405万人で最も多く、
-        全国の11.1%を占めています。神奈川県・大阪府・愛知県・埼玉県・千葉県が
-        これに続き、上位6都府県だけで全国人口の4割以上を占めています。
-        特に東京都・神奈川県・埼玉県・千葉県の「1都3県」を合計すると
-        約3,691万人、全国の29.3%に達し、日本の人口のおよそ3割が
-        この4都県に集中している計算になります。
+        都道府県別に人口を集計すると、{prefRanking[0][0]}が
+        {prefRanking[0][1].toLocaleString()}人
+        (全国の{((prefRanking[0][1] / totalPopulation) * 100).toFixed(1)}
+        %)で最も多く、{prefRanking[1][0]}・{prefRanking[2][0]}・
+        {prefRanking[3][0]}・{prefRanking[4][0]}・{prefRanking[5][0]}
+        が続きます。上位6都府県の合計は
+        {top6PrefTotal.toLocaleString()}人で、全国人口の
+        {((top6PrefTotal / totalPopulation) * 100).toFixed(1)}
+        %を占めます。特に東京都・神奈川県・埼玉県・千葉県の
+        「1都3県」を合計すると{gtokyoTotal.toLocaleString()}人、
+        全国の{((gtokyoTotal / totalPopulation) * 100).toFixed(1)}
+        %です。市区町村の数で見た1都3県の割合は
+        {(
+          (municipalities.filter((c) =>
+            gtokyo.some((p) => c.name.startsWith(p))
+          ).length /
+            municipalities.length) *
+          100
+        ).toFixed(1)}
+        %にとどまるため、少ない自治体数に人口が集中している
+        ことが数字の差から読み取れます。
       </p>
 
       <h2 style={heading}>データの出典</h2>
@@ -91,22 +177,23 @@ export default function Page() {
 
       <p>
         上位には政令指定都市や東京都特別区を含む大都市圏が多く並びます。
-        特に首都圏・中京圏・関西圏という三大都市圏に人口が集中する傾向があり、
-        これは高度経済成長期以降、産業と雇用がこれらの地域に集積した
-        結果と考えられています。人口100万人を超える自治体は
-        全国で11のみで、横浜市・大阪市・名古屋市・札幌市・福岡市・
-        川崎市・神戸市・京都市・さいたま市・広島市・仙台市が該当します
-        (詳しくは「100万人都市一覧」でも紹介しています)。
-      </p>
-
-      <h2 style={heading}>まとめ</h2>
-
-      <p>
-        人口ランキングは自治体の規模を知るための基本的な指標です。
-        面積や財政力指数、人口密度など他の指標と組み合わせることで、
-        より立体的に地域の特徴を理解できます。本サイトでは
-        それぞれのランキングページで実際のデータをもとにした
-        傾向を解説していますので、あわせてご覧ください。
+        人口100万人を超える自治体は全国で{million.length}
+        のみで、全{municipalities.length.toLocaleString()}
+        自治体のうち
+        {((million.length / municipalities.length) * 100).toFixed(2)}
+        %にすぎません。それでもこの{million.length}自治体の
+        合計人口は
+        {million
+          .reduce((s, c) => s + c.population, 0)
+          .toLocaleString()}
+        人に達し、全国人口の
+        {(
+          (million.reduce((s, c) => s + c.population, 0) /
+            totalPopulation) *
+          100
+        ).toFixed(1)}
+        %を占めています(詳しくは「100万人都市一覧」でも
+        紹介しています)。
       </p>
 
       <h2 style={heading}>人口だけでは分からないこと</h2>
@@ -117,23 +204,17 @@ export default function Page() {
         早計です。たとえば人口が同じ規模の自治体でも、
         面積が大きく異なれば人口密度はまったく違ってきますし、
         高齢化率や子ども人口の割合が異なれば、必要な
-        行政サービスの内容も変わってきます。また、
-        昼間人口(通勤・通学で流入する人を含めた実際の
-        活動人口)と夜間人口(住民登録上の人口)の差が
-        大きい自治体では、単純な人口ランキングの順位以上に
-        経済的な存在感を持っていることもあります。
+        行政サービスの内容も変わってきます。
       </p>
 
       <p>
         本サイトでは人口ランキングのほかにも、出生率・
         高齢化率・人口密度・面積・財政力指数といった
-        複数の指標を掲載しています。一つの指標だけでなく、
-        複数の指標を組み合わせて見ることで、
-        「人口は多いが高齢化率も高い自治体」
-        「人口は少ないが出生率が高い自治体」など、
-        単純な人口ランキングだけでは見えてこない
-        地域の個性を発見できます。ぜひ他のランキングページも
-        あわせてご覧ください。
+        複数の指標を掲載しています。人口・高齢化率・
+        財政力指数を組み合わせて見ることで、「人口は
+        多いが高齢化率も高い自治体」のような、単一の
+        ランキングだけでは分からない自治体の特徴を
+        数字で比較できます。
       </p>
 
       <h2 style={heading}>人口ランキングの活用例</h2>
@@ -142,26 +223,20 @@ export default function Page() {
         人口ランキングは、引っ越しや移住を検討する際の
         参考情報としてはもちろん、ビジネスにおける
         出店計画や商圏分析、自治体自身による政策立案の
-        基礎資料としても活用されています。たとえば
-        小売業やサービス業では、出店候補地の人口規模や
-        人口密度が売上予測の重要な変数になりますし、
-        自治体の政策担当者にとっては、近隣自治体との
-        人口規模の比較が、広域連携や施設の共同設置を
-        検討する際の判断材料になります。
+        基礎資料としても活用されています。人口規模は
+        売上予測や施設需要の推計における基礎的な変数の
+        一つであり、近隣自治体との比較は広域連携の
+        検討材料にもなります。
       </p>
 
       <p>
-        また、進学や就職で新しい土地への引っ越しを
-        考えている方にとっても、人口規模は生活の
-        イメージをつかむ手がかりになります。人口が
-        多い自治体は生活インフラが充実している一方、
+        人口が多い自治体は生活インフラが充実している一方、
         家賃や物価がやや高くなる傾向があり、人口が
         少ない自治体は自然環境に恵まれる一方、
         商業施設や公共交通の利便性では都市部に
         及ばないことが一般的です。人口ランキングと
         あわせて、面積や人口密度のランキングも
-        確認することで、より自分の希望に合った
-        地域を見つけやすくなります。
+        確認することをおすすめします。
       </p>
     </div>
   );
