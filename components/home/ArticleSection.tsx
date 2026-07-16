@@ -1,4 +1,15 @@
 import ArticleCard from "../ArticleCard";
+import {
+  CityIcon,
+  BarsIcon,
+  MapIcon,
+  SkylineIcon,
+  ChildIcon,
+  ElderlyIcon,
+  SproutIcon,
+  BirthIcon,
+  DeclineIcon,
+} from "../icons/ArticleIcons";
 
 export default function ArticleSection() {
   return (
@@ -28,54 +39,63 @@ export default function ArticleSection() {
           href="/articles/population-about"
           title="人口とは？"
           desc="人口データの見方や集計方法をわかりやすく解説します。"
+          icon={<CityIcon />}
         />
 
         <ArticleCard
           href="/articles/population-top50"
           title="人口ランキングTOP50"
           desc="人口が多い自治体をランキング形式で紹介します。"
+          icon={<BarsIcon />}
         />
 
         <ArticleCard
           href="/articles/population-concentration"
           title="人口集中はどこで起きている？"
           desc="都市への人口集中をデータから分析します。"
+          icon={<MapIcon />}
         />
 
         <ArticleCard
           href="/articles/million-cities"
           title="100万人都市一覧"
           desc="人口100万人以上の都市を一覧で比較できます。"
+          icon={<SkylineIcon />}
         />
 
         <ArticleCard
           href="/articles/child-top50"
           title="子ども人口ランキング"
           desc="子ども人口が多い自治体ランキングです。"
+          icon={<ChildIcon />}
         />
 
         <ArticleCard
           href="/articles/aging-top50"
           title="高齢化率ランキング"
           desc="高齢化率が高い自治体ランキングです。"
+          icon={<ElderlyIcon />}
         />
 
         <ArticleCard
           href="/articles/youngest-municipalities"
           title="若い自治体ランキング"
           desc="平均年齢が若い自治体を紹介します。"
+          icon={<SproutIcon />}
         />
 
         <ArticleCard
           href="/articles/birth-rate"
           title="出生率ランキング"
           desc="出生率が高い自治体ランキングです。"
+          icon={<BirthIcon />}
         />
 
         <ArticleCard
           href="/articles/decline"
           title="人口減少ランキング"
           desc="人口減少が進む自治体を比較します。"
+          icon={<DeclineIcon />}
         />
       </div>
     </section>

@@ -1,5 +1,6 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
+import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
   title: "若い自治体ランキング",
@@ -57,14 +58,13 @@ export default function Page() {
           まったく異なります。
         </p>
 
-        <ol>
-          {ranking.slice(0, 15).map((c) => (
-            <li key={c.code}>
-              {c.name}（高齢化率{c.rate.toFixed(1)}%、人口
-              {c.population.toLocaleString()}人）
-            </li>
-          ))}
-        </ol>
+        <RankingBarChart
+          items={ranking.slice(0, 15).map((c) => ({
+            name: c.name,
+            value: c.rate,
+            displayValue: `高齢化率${c.rate.toFixed(1)}%`,
+          }))}
+        />
       </div>
 
       <div style={box}>

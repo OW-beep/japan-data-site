@@ -1,15 +1,18 @@
 import Link from "next/link";
+import { IconThumb } from "./icons/ArticleIcons";
 
 type Props = {
   href: string;
   title: string;
   desc: string;
+  icon?: React.ReactNode;
 };
 
 export default function ArticleCard({
   href,
   title,
   desc,
+  icon,
 }: Props) {
   return (
     <Link
@@ -28,15 +31,19 @@ export default function ArticleCard({
           height: "100%",
         }}
       >
-        <div
-          style={{
-            width: "100%",
-            height: 140,
-            background: "#eff6ff",
-            borderRadius: 12,
-            marginBottom: 18,
-          }}
-        />
+        {icon ? (
+          <IconThumb icon={icon} />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: 140,
+              background: "#eff6ff",
+              borderRadius: 12,
+              marginBottom: 18,
+            }}
+          />
+        )}
 
         <h3>{title}</h3>
 

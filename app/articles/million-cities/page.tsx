@@ -1,5 +1,6 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
+import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
   title: "人口100万人超の自治体一覧",
@@ -47,13 +48,13 @@ export default function Page() {
       <div style={box}>
         <h2>人口100万人超自治体一覧</h2>
 
-        <ol>
-          {ranking.map((c) => (
-            <li key={c.code}>
-              {c.name}（{c.population.toLocaleString()}人）
-            </li>
-          ))}
-        </ol>
+        <RankingBarChart
+          items={ranking.map((c) => ({
+            name: c.name,
+            value: c.population,
+            displayValue: `${c.population.toLocaleString()}人`,
+          }))}
+        />
       </div>
 
       <div style={box}>
