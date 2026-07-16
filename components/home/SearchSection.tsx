@@ -6,15 +6,15 @@ export default function SearchSection() {
       style={{
         background: "#eff6ff",
         borderRadius: 20,
-        padding: 36,
-        marginBottom: 70,
+        padding: 26,
+        marginBottom: 46,
         textAlign: "center",
       }}
     >
       <h2
         style={{
           fontSize: 34,
-          marginBottom: 18,
+          marginBottom: 14,
         }}
       >
         🔍 自治体を検索
@@ -24,7 +24,7 @@ export default function SearchSection() {
         style={{
           color: "#555",
           lineHeight: 1.8,
-          marginBottom: 28,
+          marginBottom: 20,
         }}
       >
         全国1747自治体を検索できます。

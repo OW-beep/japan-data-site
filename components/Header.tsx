@@ -47,7 +47,7 @@ const header: React.CSSProperties = {
 const container: React.CSSProperties = {
   maxWidth: 1280,
   margin: "0 auto",
-  padding: "18px 24px",
+  padding: "12px 24px",
 
   display: "flex",
   justifyContent: "space-between",
@@ -62,14 +62,14 @@ const logo: React.CSSProperties = {
   color: "#111827",
 
   fontWeight: 800,
-  fontSize: 24,
+  fontSize: 19,
 };
 
 const nav: React.CSSProperties = {
   display: "flex",
   flexWrap: "wrap",
-  gap: 18,
+  gap: 16,
 
-  fontSize: 15,
+  fontSize: 14,
   fontWeight: 600,
 };

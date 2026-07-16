@@ -2,16 +2,16 @@ export default function OpenDataSection() {
   return (
     <section
       style={{
-        marginBottom: 70,
+        marginBottom: 46,
         background: "#f9fafb",
         borderRadius: 20,
-        padding: 36,
+        padding: 26,
       }}
     >
       <h2
         style={{
           fontSize: 34,
-          marginBottom: 18,
+          marginBottom: 14,
         }}
       >
         🌏 オープンデータについて

@@ -15,13 +15,13 @@ export default function ArticleSection() {
   return (
     <section
       style={{
-        marginBottom: 70,
+        marginBottom: 46,
       }}
     >
       <h2
         style={{
           fontSize: 34,
-          marginBottom: 24,
+          marginBottom: 14,
         }}
       >
         📖 人気記事

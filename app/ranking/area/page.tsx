@@ -43,6 +43,23 @@ export default function Page() {
 
       <DataAsOf />
 
+      <a
+        href="/articles/area-analysis"
+        style={{
+          display: "inline-block",
+          marginBottom: 20,
+          padding: "10px 16px",
+          background: "#eff6ff",
+          color: "#1d4ed8",
+          borderRadius: 10,
+          fontWeight: 700,
+          fontSize: 14,
+          textDecoration: "none",
+        }}
+      >
+        📖 なぜ北海道と山間部が上位に多いのか、分析記事を読む →
+      </a>
+
       <MetricBox
         title="指標定義"
         unit="km²"

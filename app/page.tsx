@@ -26,7 +26,7 @@ export default function Home() {
       style={{
         maxWidth: 1200,
         margin: "0 auto",
-        padding: "24px 20px 80px",
+        padding: "20px 20px 56px",
       }}
     >
       <Hero />

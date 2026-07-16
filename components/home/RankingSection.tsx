@@ -4,14 +4,14 @@ export default function RankingSection() {
   return (
     <section
       style={{
-        marginBottom: 70,
+        marginBottom: 46,
       }}
     >
       <h2
         style={{
           fontSize: 34,
           fontWeight: 800,
-          marginBottom: 18,
+          marginBottom: 14,
         }}
       >
         📊 人気ランキング
@@ -20,7 +20,7 @@ export default function RankingSection() {
       <p
         style={{
           color: "#6b7280",
-          marginBottom: 28,
+          marginBottom: 20,
           lineHeight: 1.8,
           fontSize: 17,
         }}

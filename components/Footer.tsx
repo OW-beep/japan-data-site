@@ -83,7 +83,7 @@ const container: React.CSSProperties = {
   maxWidth: 1280,
   margin: "0 auto",
 
-  padding: "56px 24px",
+  padding: "36px 24px",
 
   display: "grid",
   gridTemplateColumns:

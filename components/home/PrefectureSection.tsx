@@ -16,13 +16,13 @@ export default function PrefectureSection() {
   return (
     <section
       style={{
-        marginBottom: 70,
+        marginBottom: 46,
       }}
     >
       <h2
         style={{
           fontSize: 34,
-          marginBottom: 24,
+          marginBottom: 14,
         }}
       >
         🗾 都道府県から探す
@@ -31,7 +31,7 @@ export default function PrefectureSection() {
       <p
         style={{
           color: "#6b7280",
-          marginBottom: 24,
+          marginBottom: 14,
           lineHeight: 1.8,
         }}
       >

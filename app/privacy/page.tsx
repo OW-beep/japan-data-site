@@ -100,7 +100,7 @@ export default function Page() {
 const wrap: React.CSSProperties = {
   maxWidth: 800,
   margin: "0 auto",
-  padding: "40px 24px",
+  padding: "28px 24px",
   lineHeight: 1.9,
 };
 

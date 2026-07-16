@@ -155,6 +155,38 @@ export function DeclineIcon({ size = 48 }: IconProps) {
   );
 }
 
+// 硬貨・財政(財政力指数)
+export function CoinIcon({ size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
+      <circle cx="24" cy="36" r="16" fill={PALE} />
+      <circle cx="24" cy="36" r="16" stroke={LIGHT} strokeWidth="2" />
+      <text
+        x="24"
+        y="42"
+        fontSize="16"
+        fontWeight="700"
+        fill={BLUE}
+        textAnchor="middle"
+      >
+        ¥
+      </text>
+      <circle cx="42" cy="22" r="12" fill={LIGHT} />
+      <circle cx="42" cy="22" r="12" stroke={BLUE} strokeWidth="2" />
+      <text
+        x="42"
+        y="27"
+        fontSize="12"
+        fontWeight="700"
+        fill="#fff"
+        textAnchor="middle"
+      >
+        ¥
+      </text>
+    </svg>
+  );
+}
+
 export function IconThumb({
   icon,
   bg = "#eff6ff",

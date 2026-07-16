@@ -53,6 +53,21 @@ const articles = [
     title: "人口減少ランキング",
     desc: "人口減少が進む自治体を比較します。",
   },
+  {
+    href: "/articles/density-analysis",
+    title: "人口密度ランキング分析",
+    desc: "なぜ東京都特別区が上位を独占するのかを分析します。",
+  },
+  {
+    href: "/articles/area-analysis",
+    title: "面積ランキング分析",
+    desc: "北海道と山間部の市町村が上位を占める理由を分析します。",
+  },
+  {
+    href: "/articles/finance-analysis",
+    title: "財政力指数ランキング分析",
+    desc: "なぜ小さな村が全国トップなのかを分析します。",
+  },
 ];
 
 export default function Page() {
@@ -61,7 +76,7 @@ export default function Page() {
       style={{
         maxWidth: 980,
         margin: "0 auto",
-        padding: "40px 24px",
+        padding: "28px 24px",
       }}
     >
       <h1

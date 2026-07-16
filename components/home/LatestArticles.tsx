@@ -58,7 +58,7 @@ export default function LatestArticles() {
         style={{
           fontSize: 34,
           fontWeight: 800,
-          marginBottom: 18,
+          marginBottom: 14,
         }}
       >
         おすすめ記事・人気ランキング
@@ -68,7 +68,7 @@ export default function LatestArticles() {
         style={{
           color: "#6b7280",
           lineHeight: 1.8,
-          marginBottom: 30,
+          marginBottom: 22,
           fontSize: 17,
         }}
       >

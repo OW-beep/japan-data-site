@@ -61,7 +61,7 @@ export default async function Page({
       style={{
         maxWidth: 1000,
         margin: "0 auto",
-        padding: "40px 24px",
+        padding: "28px 24px",
       }}
     >
       <h1

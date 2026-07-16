@@ -34,7 +34,7 @@ export default function WhyTrust() {
         style={{
           fontSize: 34,
           fontWeight: 800,
-          marginBottom: 18,
+          marginBottom: 14,
           color: "#111827",
         }}
       >
@@ -45,7 +45,7 @@ export default function WhyTrust() {
         style={{
           color: "#6b7280",
           lineHeight: 1.8,
-          marginBottom: 30,
+          marginBottom: 22,
           fontSize: 17,
         }}
       >
@@ -124,7 +124,7 @@ export default function WhyTrust() {
           style={{
             color: "#6b7280",
             lineHeight: 1.8,
-            marginBottom: 18,
+            marginBottom: 14,
           }}
         >
           e-Stat（政府統計の総合窓口）、

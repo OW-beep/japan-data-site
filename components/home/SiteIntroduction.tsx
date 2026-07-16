@@ -11,7 +11,7 @@ export default function SiteIntroduction() {
         style={{
           fontSize: 34,
           fontWeight: 800,
-          marginBottom: 28,
+          marginBottom: 20,
           color: "#111827",
         }}
       >
@@ -23,7 +23,7 @@ export default function SiteIntroduction() {
           background: "#ffffff",
           border: "1px solid #e5e7eb",
           borderRadius: 18,
-          padding: 36,
+          padding: 26,
           lineHeight: 2,
           fontSize: 18,
           color: "#374151",
@@ -50,7 +50,7 @@ export default function SiteIntroduction() {
           <h3
             style={{
               fontSize: 22,
-              marginBottom: 18,
+              marginBottom: 14,
             }}
           >
             このサイトで分かること

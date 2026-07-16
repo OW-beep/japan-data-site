@@ -4,7 +4,7 @@ export default function Stats() {
   return (
     <section
       style={{
-        marginBottom: 70,
+        marginBottom: 46,
       }}
     >
       <div

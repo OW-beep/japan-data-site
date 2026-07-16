@@ -4,13 +4,13 @@ export default function SitemapSection() {
   return (
     <section
       style={{
-        marginBottom: 60,
+        marginBottom: 40,
       }}
     >
       <h2
         style={{
           fontSize: 34,
-          marginBottom: 24,
+          marginBottom: 14,
         }}
       >
         🗂 サイトマップ

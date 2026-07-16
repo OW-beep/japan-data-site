@@ -45,6 +45,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/population-top50",
     "/articles/aging-top50",
     "/articles/decline",
+    "/articles/density-analysis",
+    "/articles/area-analysis",
+    "/articles/finance-analysis",
   ].map((p) => ({
     url: `${baseUrl}${p}`,
     lastModified: new Date(),

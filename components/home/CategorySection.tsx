@@ -42,14 +42,14 @@ export default function CategorySection() {
   return (
     <section
       style={{
-        marginBottom: 70,
+        marginBottom: 46,
       }}
     >
       <h2
         style={{
           fontSize: 34,
           fontWeight: 800,
-          marginBottom: 18,
+          marginBottom: 14,
         }}
       >
         📂 カテゴリから探す
@@ -58,7 +58,7 @@ export default function CategorySection() {
       <p
         style={{
           color: "#6b7280",
-          marginBottom: 30,
+          marginBottom: 22,
           lineHeight: 1.8,
           fontSize: 17,
         }}
