@@ -10,7 +10,7 @@ type IconProps = {
 };
 
 // 都市・建物(人口全般)
-export function CityIcon({ size = 64 }: IconProps) {
+export function CityIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <rect x="8" y="26" width="12" height="30" rx="1.5" fill={PALE} />
@@ -29,7 +29,7 @@ export function CityIcon({ size = 64 }: IconProps) {
 }
 
 // 積み上がる棒グラフ(TOP50・集計系)
-export function BarsIcon({ size = 64 }: IconProps) {
+export function BarsIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <rect x="8" y="38" width="9" height="18" rx="2" fill={PALE} />
@@ -41,7 +41,7 @@ export function BarsIcon({ size = 64 }: IconProps) {
 }
 
 // 地図・集中(人口集中)
-export function MapIcon({ size = 64 }: IconProps) {
+export function MapIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <circle cx="32" cy="32" r="22" fill={PALE} />
@@ -52,7 +52,7 @@ export function MapIcon({ size = 64 }: IconProps) {
 }
 
 // 高層ビル(100万人都市)
-export function SkylineIcon({ size = 64 }: IconProps) {
+export function SkylineIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <rect x="10" y="30" width="10" height="26" fill={LIGHT} />
@@ -67,7 +67,7 @@ export function SkylineIcon({ size = 64 }: IconProps) {
 }
 
 // 子ども(親子・子育て)
-export function ChildIcon({ size = 64 }: IconProps) {
+export function ChildIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <circle cx="24" cy="20" r="7" fill={LIGHT} />
@@ -85,7 +85,7 @@ export function ChildIcon({ size = 64 }: IconProps) {
 }
 
 // 高齢者・杖(高齢化)
-export function ElderlyIcon({ size = 64 }: IconProps) {
+export function ElderlyIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <circle cx="28" cy="18" r="8" fill={LIGHT} />
@@ -100,7 +100,7 @@ export function ElderlyIcon({ size = 64 }: IconProps) {
 }
 
 // 新芽・若さ(若い自治体)
-export function SproutIcon({ size = 64 }: IconProps) {
+export function SproutIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <rect x="30" y="30" width="4" height="26" rx="2" fill={BLUE} />
@@ -117,7 +117,7 @@ export function SproutIcon({ size = 64 }: IconProps) {
 }
 
 // ハート・出生(出生率)
-export function BirthIcon({ size = 64 }: IconProps) {
+export function BirthIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <path
@@ -130,7 +130,7 @@ export function BirthIcon({ size = 64 }: IconProps) {
 }
 
 // 下降(人口減少)
-export function DeclineIcon({ size = 64 }: IconProps) {
+export function DeclineIcon({ size = 48 }: IconProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
       <rect x="8" y="14" width="9" height="16" rx="2" fill={BLUE} />
@@ -166,10 +166,10 @@ export function IconThumb({
     <div
       style={{
         width: "100%",
-        height: 140,
+        height: 88,
         background: bg,
         borderRadius: 12,
-        marginBottom: 18,
+        marginBottom: 12,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",

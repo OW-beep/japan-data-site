@@ -27,7 +27,7 @@ export default function ArticleCard({
           background: "#fff",
           border: "1px solid #e5e7eb",
           borderRadius: 18,
-          padding: 22,
+          padding: 18,
           height: "100%",
         }}
       >
@@ -37,10 +37,10 @@ export default function ArticleCard({
           <div
             style={{
               width: "100%",
-              height: 140,
+              height: 88,
               background: "#eff6ff",
               borderRadius: 12,
-              marginBottom: 18,
+              marginBottom: 12,
             }}
           />
         )}
