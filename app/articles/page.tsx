@@ -50,8 +50,8 @@ const articles = [
   },
   {
     href: "/articles/decline",
-    title: "人口減少ランキング",
-    desc: "人口減少が進む自治体を比較します。",
+    title: "社会増減率分析",
+    desc: "転入超過1位はなぜ人口847人の町なのかを分析します。",
   },
   {
     href: "/articles/density-analysis",
@@ -67,6 +67,11 @@ const articles = [
     href: "/articles/finance-analysis",
     title: "財政力指数ランキング分析",
     desc: "なぜ小さな村が全国トップなのかを分析します。",
+  },
+  {
+    href: "/articles/household-analysis",
+    title: "単独世帯割合分析",
+    desc: "都心と被災地、正反対の理由で1人暮らしが多い自治体を分析します。",
   },
 ];
 

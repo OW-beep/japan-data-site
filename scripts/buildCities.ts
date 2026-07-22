@@ -18,13 +18,16 @@ if (!APP_ID) {
 //   A1101 総人口
 //   A1301 15歳未満人口 (子ども人口)
 //   A1303 65歳以上人口 (高齢者人口)
-// 以前はA5101/A5102を使っていましたが、これらは実際には
-// 「転入者数」「転出者数」(住民基本台帳人口移動報告)のコードで、
-// 子ども人口・高齢者人口としては誤りでした。
+//   A5101 転入者数(日本人移動者)
+//   A5102 転出者数(日本人移動者)
+//   A7101 世帯数
+//   A810105 単独世帯数
+// 以前はA5101/A5102を「子ども人口」「高齢者人口」として誤用して
+// いましたが、正しくは上記の通り転入・転出者数です。
 //
-// なお、合計特殊出生率(A4103)はこの市区町村データセットには
-// 含まれておらず、別の出典(人口動態統計 市区町村編、5年に1度公表)
-// が必要です。birthRateフィールドが常にnullなのはこのためです。
+// なお、合計特殊出生率(A4103)や昼夜間人口比率はこの市区町村
+// データセットには含まれておらず、別の出典(いずれもe-Statの
+// 「ファイル」区分で公開される不定期報告)が必要です。
 // ------------------------------------
 
 const POP_STATS = "0000020201";
@@ -70,6 +73,14 @@ type City = {
 
   elderlyPopulation: number;
 
+  inMigrants: number;
+
+  outMigrants: number;
+
+  households: number;
+
+  singleHouseholds: number;
+
 };
 
 const map = new Map<string, City>();
@@ -85,6 +96,14 @@ function ensure(code: string) {
       childPopulation: 0,
 
       elderlyPopulation: 0,
+
+      inMigrants: 0,
+
+      outMigrants: 0,
+
+      households: 0,
+
+      singleHouseholds: 0,
 
     });
   }
@@ -111,6 +130,30 @@ async function run() {
   const old = await fetchStats(
     POP_STATS,
     "A1303",
+    "cat"
+  );
+
+  const inMigrants = await fetchStats(
+    POP_STATS,
+    "A5101",
+    "cat"
+  );
+
+  const outMigrants = await fetchStats(
+    POP_STATS,
+    "A5102",
+    "cat"
+  );
+
+  const households = await fetchStats(
+    POP_STATS,
+    "A7101",
+    "cat"
+  );
+
+  const singleHouseholds = await fetchStats(
+    POP_STATS,
+    "A810105",
     "cat"
   );
 
@@ -192,9 +235,114 @@ async function run() {
       Number(r["$"]);
 
   }
+
+  // --------------------
+  // 転入者数
+  // --------------------
+
+  for (const r of arr(
+    inMigrants.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
+    city.inMigrants =
+      Number(r["$"]);
+
+  }
+
+  // --------------------
+  // 転出者数
+  // --------------------
+
+  for (const r of arr(
+    outMigrants.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
+    city.outMigrants =
+      Number(r["$"]);
+
+  }
+
+  // --------------------
+  // 世帯数
+  // --------------------
+
+  for (const r of arr(
+    households.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
+    city.households =
+      Number(r["$"]);
+
+  }
+
+  // --------------------
+  // 単独世帯数
+  // --------------------
+
+  for (const r of arr(
+    singleHouseholds.GET_STATS_DATA
+      .STATISTICAL_DATA
+      .DATA_INF
+      .VALUE
+  )) {
+
+    const city = ensure(
+      String(r["@area"])
+    );
+
+    city.singleHouseholds =
+      Number(r["$"]);
+
+  }
   // --------------------
   // JSON生成
   // --------------------
+
+  // birthRate は e-Stat APIではなく別の出典(厚労省PDF)を手動で
+  // マージしたものなので、このスクリプトを再実行しても消えない
+  // ように、既存の data/cities.json から引き継ぐ。
+  const previousBirthRate = new Map<string, number>();
+
+  try {
+    const previous = JSON.parse(
+      fs.readFileSync("data/cities.json", "utf8")
+    ) as { code: string; birthRate?: number | null }[];
+
+    for (const c of previous) {
+      if (c.birthRate != null) {
+        previousBirthRate.set(c.code, c.birthRate);
+      }
+    }
+
+    console.log(
+      `既存データから出生率を${previousBirthRate.size}件引き継ぎます`
+    );
+  } catch {
+    console.log(
+      "既存の data/cities.json が見つからないため、出生率の引き継ぎはスキップします"
+    );
+  }
 
   const cities = Array.from(map.values())
     .map((c) => ({
@@ -203,6 +351,9 @@ async function run() {
       name:
         areaMap.get(c.code) ??
         c.code,
+
+      birthRate:
+        previousBirthRate.get(c.code) ?? null,
     }))
     .filter(
       (c) => c.population > 0
@@ -274,6 +425,56 @@ async function run() {
       "⚠ 高齢化率が目安から大きく外れています。A1303のカテゴリコードを再確認してください。"
     );
   }
+
+  const totalHouseholds = cities.reduce(
+    (s, c) => s + c.households,
+    0
+  );
+
+  const totalSingleHouseholds = cities.reduce(
+    (s, c) => s + c.singleHouseholds,
+    0
+  );
+
+  const avgHouseholdSize = totalPop / totalHouseholds;
+  const singleRatio =
+    (totalSingleHouseholds / totalHouseholds) * 100;
+
+  console.log(
+    `平均世帯人員(全国計): ${avgHouseholdSize.toFixed(2)}人 (目安: 2.0〜2.5人)`
+  );
+
+  console.log(
+    `単独世帯割合(全国計): ${singleRatio.toFixed(2)}% (目安: 30〜40%)`
+  );
+
+  if (avgHouseholdSize < 1.5 || avgHouseholdSize > 3.5) {
+    console.warn(
+      "⚠ 平均世帯人員が目安から大きく外れています。A7101のカテゴリコードを再確認してください。"
+    );
+  }
+
+  const totalInMigrants = cities.reduce(
+    (s, c) => s + c.inMigrants,
+    0
+  );
+
+  const totalOutMigrants = cities.reduce(
+    (s, c) => s + c.outMigrants,
+    0
+  );
+
+  console.log(
+    `転入者数(全国計): ${totalInMigrants.toLocaleString()}人`
+  );
+
+  console.log(
+    `転出者数(全国計): ${totalOutMigrants.toLocaleString()}人`
+  );
+
+  console.log(
+    "(全国計の転入・転出はおおむね近い数字になるはずです。大きくズレる場合はA5101/A5102を再確認してください)"
+  );
 
 }
 

@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/density",
     "/ranking/area",
     "/ranking/finance",
+    "/ranking/decline",
+    "/ranking/household",
     "/prefecture",
     "/search",
     "/articles",
@@ -48,6 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/density-analysis",
     "/articles/area-analysis",
     "/articles/finance-analysis",
+    "/articles/household-analysis",
   ].map((p) => ({
     url: `${baseUrl}${p}`,
     lastModified: new Date(),

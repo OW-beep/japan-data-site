@@ -187,6 +187,31 @@ export function CoinIcon({ size = 48 }: IconProps) {
   );
 }
 
+// 世帯・一人暮らし(世帯数・単独世帯)
+export function HouseholdIcon({ size = 48 }: IconProps) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 64 64" fill="none">
+      <path
+        d="M12 30 L32 14 L52 30 V50 A2 2 0 0 1 50 52 H14 A2 2 0 0 1 12 50 Z"
+        fill={PALE}
+      />
+      <path
+        d="M12 30 L32 14 L52 30"
+        stroke={BLUE}
+        strokeWidth="3"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle cx="32" cy="36" r="5" fill={BLUE} />
+      <path
+        d="M24 50c0-5 3.6-8 8-8s8 3 8 8"
+        fill={LIGHT}
+      />
+    </svg>
+  );
+}
+
 export function IconThumb({
   icon,
   bg = "#eff6ff",

@@ -60,12 +60,42 @@ const top50 = ranking.slice(0, 50);
         style={{
           color: "#4b5563",
           lineHeight: 1.8,
-          marginBottom: 30,
+          marginBottom: 12,
         }}
       >
         全国自治体の合計特殊出生率を比較しています。
         数値が高いほど、女性一人あたりが生涯に産む子どもの人数が多いことを示します。
       </p>
+
+      <p
+        style={{
+          fontSize: 13,
+          color: "#9ca3af",
+          marginBottom: 20,
+        }}
+      >
+        出典：厚生労働省「人口動態保健所・市区町村別統計」(平成30年〜令和4年)。
+        市区町村別の出生率はこの統計が数年に1度公表するもので、
+        毎年更新されるものではありません。人口の少ない自治体では、
+        統計的な変動を抑えるためベイズ推定という手法で補正された値です。
+      </p>
+
+      <a
+        href="/articles/birth-rate"
+        style={{
+          display: "inline-block",
+          marginBottom: 20,
+          padding: "10px 16px",
+          background: "#eff6ff",
+          color: "#1d4ed8",
+          borderRadius: 10,
+          fontWeight: 700,
+          fontSize: 14,
+          textDecoration: "none",
+        }}
+      >
+        📖 なぜ鹿児島・沖縄の島しょ部が上位なのか、分析記事を読む →
+      </a>
 
       <MetricBox
         title="指標定義"

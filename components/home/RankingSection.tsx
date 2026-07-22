@@ -85,6 +85,20 @@ export default function RankingSection() {
           title="財政力指数ランキング"
           desc="財政力指数が高い自治体をランキング形式で比較できます。"
         />
+
+        <Card
+          href="/ranking/decline"
+          emoji="📊"
+          title="社会増減率ランキング"
+          desc="転入超過・転出超過の自治体をランキング形式で比較できます。"
+        />
+
+        <Card
+          href="/ranking/household"
+          emoji="🏠"
+          title="単独世帯割合ランキング"
+          desc="一人暮らし世帯の割合が高い自治体を比較できます。"
+        />
       </div>
     </section>
   );

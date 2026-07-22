@@ -14,4 +14,9 @@ export type City = {
   birthRate?: number | null;
   agingRate?: number | null;
   declineRate?: number | null;
+
+  inMigrants?: number | null;
+  outMigrants?: number | null;
+  households?: number | null;
+  singleHouseholds?: number | null;
 };

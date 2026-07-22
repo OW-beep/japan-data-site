@@ -43,6 +43,16 @@ const pages = [
     desc: "財政力指数ランキング",
   },
   {
+    title: "社会増減率ランキング",
+    href: "/ranking/decline",
+    desc: "転入超過・転出超過ランキング",
+  },
+  {
+    title: "単独世帯割合ランキング",
+    href: "/ranking/household",
+    desc: "一人暮らし世帯の割合ランキング",
+  },
+  {
     title: "都道府県から探す",
     href: "/prefecture",
     desc: "都道府県別に自治体データを見る",
