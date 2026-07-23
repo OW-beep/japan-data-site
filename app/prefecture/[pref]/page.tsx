@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { getCities } from "@/lib/getCities";
+import { getMunicipalities } from "@/lib/municipalities";
 import { getPrefectures } from "@/lib/getPrefecture";
+import DataAsOf from "@/components/DataAsOf";
+import PrefectureRankingTabs from "@/components/PrefectureRankingTabs";
 
 type Props = {
   params: Promise<{
@@ -24,8 +26,8 @@ export async function generateMetadata({
   const pref = decodeURIComponent(rawPref);
 
   return {
-    title: `${pref}の自治体一覧`,
-    description: `${pref}の人口・面積・人口密度などを掲載しています。`,
+    title: `${pref}の自治体ランキング`,
+    description: `${pref}内の市区町村を、人口・面積・人口密度・高齢化率など複数の指標でランキング比較できます。`,
   };
 }
 
@@ -36,9 +38,9 @@ export default async function Page({
 
   const pref = decodeURIComponent(rawPref);
 
-  const allCities = getCities();
-
-  const cities = allCities.filter((c) =>
+  // 政令指定都市の区(独立した自治体ではない)を除いた
+  // 実在する自治体だけを対象にする
+  const cities = getMunicipalities().filter((c) =>
     c.name.startsWith(pref + " ")
   );
 
@@ -67,11 +69,13 @@ export default async function Page({
       <h1
         style={{
           fontSize: 42,
-          marginBottom: 30,
+          marginBottom: 10,
         }}
       >
         {pref}
       </h1>
+
+      <DataAsOf />
 
       <div
         style={{
@@ -97,6 +101,11 @@ export default async function Page({
           value={`${area.toLocaleString()} km²`}
         />
       </div>
+
+      <PrefectureRankingTabs
+        cities={cities}
+        prefName={pref}
+      />
 
       <h2>自治体一覧</h2>
 
