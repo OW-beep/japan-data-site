@@ -65,7 +65,7 @@ export default function Page() {
       heroLabel="空き家率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].vacancyRate.toFixed(1)}%`}
       rankingLink="/ranking/vacant-house"
-      tags={["area"]}
+      tags={["geography"]}
       publishedAt="2026-08-07"
       top3={[
         { rank: 1, name: top15[0].name, value: `${top15[0].vacancyRate.toFixed(1)}%` },

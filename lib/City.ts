@@ -57,8 +57,14 @@ export type City = {
   accommodationFoodEstablishments?: number | null;
   daycareCount?: number | null;
 
+  // scripts/fetchDaytimePopulation.ts 実行後に追加される項目。
+  daytimePopulation?: number | null; // 昼間人口(令和2年国勢調査)
+  nighttimePopulation?: number | null; // 夜間人口(常住人口、同調査での参考値)
+
   // scripts/fetchVacantHouseRate.ts 実行後に追加される項目。
-  // 実行前は undefined のまま(要: statsDataId の確認と設定)。
   vacantHouseCount?: number | null; // 空き家数
   totalHousingCount?: number | null; // 総住宅数
+
+  // scripts/fetchElderlyFacilities.ts 実行後に追加される項目。
+  elderlyHomeCount?: number | null; // 老人ホーム数
 };

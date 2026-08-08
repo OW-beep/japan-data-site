@@ -36,6 +36,8 @@ const rankings = [
   { href: "/ranking/restaurant", emoji: "🍜", label: "飲食店密度ランキング" },
   { href: "/ranking/library", emoji: "📚", label: "図書館数ランキング" },
   { href: "/ranking/vacant-house", emoji: "🏚️", label: "空き家率ランキング" },
+  { href: "/ranking/daytime-ratio", emoji: "🌆", label: "昼夜間人口比率ランキング" },
+  { href: "/ranking/elderly-home", emoji: "🏡", label: "高齢者施設数ランキング" },
 ];
 
 export default function Page() {

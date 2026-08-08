@@ -193,6 +193,16 @@ const articles = [
     title: "空き家率ランキング分析",
     desc: "軽井沢町と夕張市、上位に並ぶ「性質の違う空き家」。",
   },
+  {
+    href: "/articles/daytime-ratio-analysis",
+    title: "昼夜間人口比率ランキング分析",
+    desc: "千代田区が1355%になる理由と、福島県の被災地が上位に入った背景。",
+  },
+  {
+    href: "/articles/elderly-home-analysis",
+    title: "高齢者施設数ランキング分析",
+    desc: "旭川市が「福祉の街」と呼ばれる理由、東京23区が手薄になりがちな背景。",
+  },
 ];
 
 export default function Page() {

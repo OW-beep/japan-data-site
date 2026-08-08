@@ -37,6 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/restaurant",
     "/ranking/library",
     "/ranking/vacant-house",
+    "/ranking/daytime-ratio",
+    "/ranking/elderly-home",
     "/prefecture",
     "/search",
     "/compare",
@@ -95,6 +97,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/balance-ratio-analysis",
     "/articles/marriage-rate-analysis",
     "/articles/vacant-house-analysis",
+    "/articles/daytime-ratio-analysis",
+    "/articles/elderly-home-analysis",
   ].map((p) => ({
     url: `${baseUrl}${p}`,
     lastModified: new Date(),

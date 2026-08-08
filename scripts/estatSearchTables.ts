@@ -56,19 +56,29 @@ async function main() {
 
   const result = json.GET_STATS_LIST?.DATALIST_INF;
 
-  if (!result) {
-    console.log("結果が見つかりませんでした。レスポンス:");
-    console.log(JSON.stringify(json, null, 2));
+  const hitCount = Number(
+    json.GET_STATS_LIST?.RESULT_INF?.TOTAL_NUMBER ??
+      result?.NUMBER ??
+      0
+  );
+
+  if (!result || !result.TABLE_INF || hitCount === 0) {
+    console.log(`0 件ヒット(検索条件に一致する統計表がありませんでした)`);
+    console.log(
+      "キーワードを変えて再検索してください。レスポンス概要:"
+    );
+    console.log(JSON.stringify(json.GET_STATS_LIST?.RESULT_INF ?? json, null, 2));
     return;
   }
 
-  const tables = Array.isArray(result.TABLE_INF)
-    ? result.TABLE_INF
-    : [result.TABLE_INF];
+  const tables = (
+    Array.isArray(result.TABLE_INF) ? result.TABLE_INF : [result.TABLE_INF]
+  ).filter(Boolean);
 
-  console.log(`${tables.length} 件ヒット\n`);
+  console.log(`${hitCount} 件ヒット(表示: ${tables.length} 件)\n`);
 
   for (const t of tables) {
+    if (!t || !t["@id"]) continue;
     console.log("----------------------------------------");
     console.log("statsDataId :", t["@id"]);
     console.log("統計名      :", t.STAT_NAME?.$ ?? t.STAT_NAME);
