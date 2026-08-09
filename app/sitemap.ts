@@ -39,6 +39,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/vacant-house",
     "/ranking/daytime-ratio",
     "/ranking/elderly-home",
+    "/ranking/dentist",
+    "/ranking/retail-store",
+    "/ranking/young-adult-migration",
     "/prefecture",
     "/search",
     "/compare",
@@ -99,6 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/vacant-house-analysis",
     "/articles/daytime-ratio-analysis",
     "/articles/elderly-home-analysis",
+    "/articles/young-adult-migration-analysis",
   ].map((p) => ({
     url: `${baseUrl}${p}`,
     lastModified: new Date(),

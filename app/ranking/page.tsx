@@ -38,6 +38,9 @@ const rankings = [
   { href: "/ranking/vacant-house", emoji: "🏚️", label: "空き家率ランキング" },
   { href: "/ranking/daytime-ratio", emoji: "🌆", label: "昼夜間人口比率ランキング" },
   { href: "/ranking/elderly-home", emoji: "🏡", label: "高齢者施設数ランキング" },
+  { href: "/ranking/dentist", emoji: "🦷", label: "歯科医師数ランキング" },
+  { href: "/ranking/retail-store", emoji: "🏬", label: "大型小売店数ランキング" },
+  { href: "/ranking/young-adult-migration", emoji: "🎒", label: "20代純移動率ランキング" },
 ];
 
 export default function Page() {

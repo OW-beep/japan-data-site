@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   title: "財政の中身分析｜自主財源比率63.8%の村",
@@ -228,6 +229,20 @@ export default function Page() {
           確保されている自治体も多く、自主財源比率の低さを
           そのまま「財政が苦しい」と読み替えるのは早計です。
         </p>
+
+        <PersonalNote>
+          行政の内側で統計データに触れていた経験から言うと、
+          財政データは「正しいけれど完全ではない」という
+          性質を特に強く持つ分野です。数字は各部署が公式に
+          報告した値である一方、老朽化した施設の更新費用の
+          ように将来発生する負担は、単年度の決算数値には
+          表れません。また、統計はどうしても市区町村単位の
+          「全体像」として公表されるため、同じ自治体内でも
+          地域ごとの財政的な優先順位の違いまでは見えてきません。
+          データを見るときは、その数字が「今の一時点を切り
+          取ったもの」であることを、常に意識しておく必要が
+          あると感じています。
+        </PersonalNote>
       </div>
 
       <div style={box}>

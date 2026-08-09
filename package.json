@@ -21,6 +21,7 @@
     "merge:vacant-house": "tsx scripts/fetchVacantHouseRate.ts",
     "merge:daytime-population": "tsx scripts/fetchDaytimePopulation.ts",
     "merge:elderly-facilities": "tsx scripts/fetchElderlyFacilities.ts",
+    "merge:young-adult-migration": "tsx scripts/fetchYoungAdultMigration.ts",
 
     "convert:area": "tsx scripts/convertAreaCsv.ts",
 

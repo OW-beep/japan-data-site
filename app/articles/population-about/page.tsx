@@ -2,6 +2,7 @@ import Link from "next/link";
 import DataAsOf from "@/components/DataAsOf";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
+import PersonalNote from "@/components/PersonalNote";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -221,6 +222,19 @@ export default function Page() {
         ランキングだけでは分からない自治体の特徴を
         数字で比較できます。
       </p>
+
+      <PersonalNote>
+        自治体でデータを扱っていた経験から付け加えると、
+        統計は「市区町村単位の全体の数字」として公表される
+        ものであり、同じ自治体内でもエリアごとの実情までは
+        表れません。また、あまり細かい単位まで公開すると
+        個人が特定されてしまうリスクがあるため、行政の
+        現場では公開する統計の粒度に配慮しています。この
+        サイトのランキングも、あくまで「自治体単位で見た
+        傾向」であり、その自治体に住む一人ひとりの暮らしを
+        正確に表すものではない、という前提で見ていただけると
+        嬉しいです。
+      </PersonalNote>
 
       <h2 style={heading}>人口ランキングの活用例</h2>
 

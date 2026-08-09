@@ -67,4 +67,7 @@ export type City = {
 
   // scripts/fetchElderlyFacilities.ts 実行後に追加される項目。
   elderlyHomeCount?: number | null; // 老人ホーム数
+
+  // scripts/fetchYoungAdultMigration.ts 実行後に追加される項目。
+  youngAdultNetMigration?: number | null; // 20代(20〜29歳)の転入超過数
 };

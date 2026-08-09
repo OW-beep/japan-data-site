@@ -203,6 +203,11 @@ const articles = [
     title: "高齢者施設数ランキング分析",
     desc: "旭川市が「福祉の街」と呼ばれる理由、東京23区が手薄になりがちな背景。",
   },
+  {
+    href: "/articles/young-adult-migration-analysis",
+    title: "20代純移動率ランキング分析",
+    desc: "若者に選ばれる街、東京だけでなく大阪市の各区が上位に。",
+  },
 ];
 
 export default function Page() {
