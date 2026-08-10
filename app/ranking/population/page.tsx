@@ -6,6 +6,7 @@ import MetricBox from "../../../components/MetricBox";
 import PopulationSummary from "../../../components/ranking/PopulationSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import CompareCTA from "../../../components/CompareCTA";
 
 import { getMunicipalities } from "../../../lib/municipalities";
 
@@ -78,6 +79,8 @@ export default function Page() {
           population: c.population,
         }))}
       />
+
+      <CompareCTA />
 
       <AdSense />
 

@@ -34,6 +34,7 @@ const rankings = [
   { href: "/ranking/dentist", emoji: "🦷", title: "歯科医師数" },
   { href: "/ranking/retail-store", emoji: "🏬", title: "大型小売店数" },
   { href: "/ranking/young-adult-migration", emoji: "🎒", title: "20代純移動率" },
+  { href: "/ranking/recycling-rate", emoji: "♻️", title: "ごみのリサイクル率" },
 ];
 
 export default function RankingSection() {

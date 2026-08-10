@@ -70,4 +70,7 @@ export type City = {
 
   // scripts/fetchYoungAdultMigration.ts 実行後に追加される項目。
   youngAdultNetMigration?: number | null; // 20代(20〜29歳)の転入超過数
+
+  // scripts/fetchRecyclingRate.ts 実行後に追加される項目。
+  recyclingRate?: number | null; // ごみのリサイクル率(%)
 };

@@ -208,6 +208,11 @@ const articles = [
     title: "20代純移動率ランキング分析",
     desc: "若者に選ばれる街、東京だけでなく大阪市の各区が上位に。",
   },
+  {
+    href: "/articles/recycling-rate-analysis",
+    title: "ごみのリサイクル率ランキング分析",
+    desc: "大崎町はなぜ「日本一」と呼ばれるのか。",
+  },
 ];
 
 export default function Page() {

@@ -22,6 +22,7 @@
     "merge:daytime-population": "tsx scripts/fetchDaytimePopulation.ts",
     "merge:elderly-facilities": "tsx scripts/fetchElderlyFacilities.ts",
     "merge:young-adult-migration": "tsx scripts/fetchYoungAdultMigration.ts",
+    "merge:recycling-rate": "tsx scripts/fetchRecyclingRate.ts",
 
     "convert:area": "tsx scripts/convertAreaCsv.ts",
 

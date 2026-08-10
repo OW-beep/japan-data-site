@@ -2,6 +2,7 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
+import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
 export const metadata = {
@@ -319,6 +320,8 @@ export default function Page() {
             人口ランキングとは？を見る
           </Link>
         </p>
+
+        <CompareCTA />
       </div>
     </ArticleLayout>
   );

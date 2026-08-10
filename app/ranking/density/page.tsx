@@ -5,6 +5,7 @@ import MetricBox from "../../../components/MetricBox";
 import DensitySummary from "../../../components/ranking/DensitySummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import CompareCTA from "../../../components/CompareCTA";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
@@ -77,6 +78,8 @@ export default function Page() {
           value: c.populationDensity ?? 0,
         }))}
       />
+
+      <CompareCTA />
 
       <AdSense />
 

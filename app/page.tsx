@@ -1,5 +1,9 @@
 import Hero from "@/components/home/Hero";
 
+import PurposeSection from "@/components/home/PurposeSection";
+
+import NewArrivalsSection from "@/components/home/NewArrivalsSection";
+
 import ArticlesSection from "@/components/home/ArticlesSection";
 
 import RankingSection from "@/components/home/RankingSection";
@@ -20,6 +24,10 @@ export default function Home() {
       }}
     >
       <Hero />
+
+      <PurposeSection />
+
+      <NewArrivalsSection />
 
       <ArticlesSection />
 
