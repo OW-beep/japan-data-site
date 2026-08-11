@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/manufacturing" },
   title: "全国自治体 製造業就業者比率ランキング",
   description:
     "全国自治体の就業者に占める第2次産業(製造業・建設業など)の割合をランキング形式で比較。ファナックやSUBARU、トヨタ系部品メーカーなど、特定企業が地域経済を支える「ものづくりの町」を紹介します。",

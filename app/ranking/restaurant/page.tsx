@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/restaurant" },
   title: "全国自治体 飲食店密度ランキング｜オフィス街と温泉地が上位に",
   description:
     "全国自治体の人口1,000人あたり飲食店数をランキング形式で比較。東京都心のオフィス街と、箱根町・白馬村など観光地・温泉地が上位を占める理由を解説します。",

@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/foreign-population" },
   title: "外国人人口比率ランキング分析｜1位は19%の村",
   description:
     "全国自治体の外国人人口比率を分析。高原野菜の産地・自動車部品の企業城下町・東京都心の区という、性質の異なる3つのパターンが上位を占める理由を、これまでの記事とあわせて解説します。",

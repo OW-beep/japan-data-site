@@ -14,7 +14,13 @@ import PrefectureSection from "@/components/home/PrefectureSection";
 
 import AboutSection from "@/components/home/AboutSection";
 
+export const metadata = {
+  alternates: { canonical: "/" },
+};
+
 import SitemapSection from "@/components/home/SitemapSection";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export default function Home() {
   return (
@@ -25,6 +31,15 @@ export default function Home() {
         padding: "20px 20px 56px",
       }}
     >
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: SITE_NAME,
+          url: SITE_URL,
+        }}
+      />
+
       <Hero />
 
       <PurposeSection />

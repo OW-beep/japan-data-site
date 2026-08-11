@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/recycling-rate-analysis" },
   title: "ごみのリサイクル率ランキング分析｜大崎町はなぜ日本一なのか",
   description:
     "ごみのリサイクル率ランキングを分析。全国的に知られる鹿児島県大崎町の28品目分別の仕組みと、上位自治体に共通する住民参加型の取り組みを、2023年度の最新データから読み解きます。",

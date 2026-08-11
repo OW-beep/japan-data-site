@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/retail-access" },
   title: "全国自治体 高齢者あたり小売店数ランキング",
   description:
     "高齢者人口1,000人あたりの小売店数が少ない自治体をランキング。「買い物難民」問題の実態を、都市近郊のニュータウンを中心に紹介します。",

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/area-analysis" },
   title: "面積ランキング分析：日本の国土はなぜ山がちなのか",
   description:
     "面積ランキング上位を北海道と山間部の市が占める理由を、可住地面積など国の統計データとともに分析します。",

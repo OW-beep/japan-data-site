@@ -5,12 +5,14 @@ import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import meta from "@/data/meta.json";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
+  alternates: { canonical: "/articles/birth-rate" },
   title: "出生率ランキング分析：なぜ鹿児島・沖縄の島しょ部が上位なのか",
   description:
     "市区町村別の合計特殊出生率で、鹿児島県徳之島町が全国1位。厚生労働省の統計をもとに、離島の出生率が高い理由を分析します。",
@@ -92,6 +94,13 @@ export default function Page() {
   return (
     <div style={container}>
       <ArticleTags tags={["child"]} />
+
+      <Breadcrumbs
+        items={[
+          { name: "記事一覧", href: "/articles" },
+          { name: "出生率ランキング分析：なぜ鹿児島・沖縄の島しょ部が上位なのか" },
+        ]}
+      />
 
       <h1 style={title}>
         出生率ランキング分析：なぜ鹿児島・沖縄の島しょ部が上位なのか

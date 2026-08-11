@@ -9,6 +9,7 @@ import CompareCTA from "../../../components/CompareCTA";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/density" },
   title: "全国自治体 人口密度ランキング",
   description:
     "全国自治体の人口密度(1平方キロメートルあたりの人口)をランキング形式で比較。都市部の過密と地方の過疎の差がわかります。",

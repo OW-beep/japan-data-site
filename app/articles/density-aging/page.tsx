@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/density-aging" },
   title: "人口密度と高齢化率の相関分析｜相関係数-0.72",
   description:
     "全国の自治体データで人口密度と高齢化率の相関を分析。人口密度が高いほど高齢化率は低い傾向が明確な一方、旧産炭都市や高度成長期の郊外団地など、密度が高いのに高齢化も進む自治体には共通点がありました。",

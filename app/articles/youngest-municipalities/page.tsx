@@ -4,6 +4,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/articles/youngest-municipalities" },
   title: "若い自治体ランキング",
   description:
     "高齢化率が低く、若い世代の割合が高い自治体を紹介します。都心のタワーマンション立地から震災復興地域まで、その背景を解説します。",

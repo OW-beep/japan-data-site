@@ -6,6 +6,7 @@ import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/articles/million-cities" },
   title: "人口100万人以上の都市は12市｜一覧",
   description:
     "日本で人口100万人を超える都市は12市。政令指定都市20市のうち実際に100万人を超えているのは半数程度です。東京都特別区部から仙台市まで、人口順にランキング形式で一覧比較できます。",

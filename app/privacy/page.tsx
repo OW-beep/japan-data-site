@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/privacy" },
   title: "プライバシーポリシー",
   description:
     "全国自治体データランキングのプライバシーポリシーです。広告配信、Cookie、アクセス解析、掲載データについて説明しています。",

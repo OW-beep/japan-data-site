@@ -6,6 +6,7 @@ import Link from "next/link";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/finance-analysis" },
   title: "財政力指数ランキング分析：なぜ小さな村が全国トップなのか",
   description:
     "財政力指数ランキング1位は人口4,600人ほどの村。原発・工場立地と自治体財政の知られざる関係を、公的資料をもとに分析します。",

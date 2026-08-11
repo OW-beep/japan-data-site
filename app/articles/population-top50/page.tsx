@@ -4,6 +4,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/articles/population-top50" },
   title: "人口が多い自治体TOP50",
   description:
     "全国自治体の人口ランキングトップ50を紹介。政令指定都市・県庁所在地を中心に人口分布の特徴を解説します。",

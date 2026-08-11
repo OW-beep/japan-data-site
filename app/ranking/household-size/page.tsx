@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/household-size" },
   title: "全国自治体 平均世帯人員ランキング",
   description:
     "全国自治体の平均世帯人員(1世帯あたりの人数)をランキング形式で比較。3世代同居が多い東北の農村部と、単身世帯が多い都市部の違いを解説します。",

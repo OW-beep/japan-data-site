@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/terms" },
   title: "利用規約",
   description:
     "全国自治体データランキングの利用規約です。ご利用の前に必ずお読みください。",

@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/aging-finance" },
   title: "高齢化率と財政力指数の関係｜相関係数-0.71",
   description:
     "全国の自治体データで高齢化率と財政力指数の相関を分析。高齢化が進むほど財政力は弱くなる傾向がある一方、熱海市や伊方町など高齢化率が高くても財政力指数が高い自治体には共通点がありました。",

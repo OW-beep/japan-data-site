@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/unemployment-analysis" },
   title: "完全失業率ランキング分析｜筑豊地方が上位に",
   description:
     "全国自治体の完全失業率をランキング分析。全国平均3.6%に対し上位は8〜10%台に達し、特に福岡県筑豊地方の旧産炭地が15位以内に6自治体もランクインする構造的な背景を解説します。",

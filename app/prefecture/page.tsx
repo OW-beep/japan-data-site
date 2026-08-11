@@ -5,6 +5,7 @@ import { getPrefectures } from "@/lib/getPrefecture";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/prefecture" },
   title: "都道府県から探す",
   description:
     "全国47都道府県から、自治体データ・ランキングを探せます。",

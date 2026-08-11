@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/industry-structure" },
   title: "産業構造分析｜農業・製造業・サービス業の町",
   description:
     "全国自治体の産業別就業者数から、農業中心・製造業中心・サービス業中心という3つの経済タイプを分析。長野県川上村の農業、山梨県忍野村や群馬県大泉町のものづくり、箱根町のサービス業など、地域経済の個性を紹介します。",

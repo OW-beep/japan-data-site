@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/articles" },
   title: "データ分析記事一覧",
   description:
     "全国自治体データランキングが公開している、データ分析記事の一覧です。",

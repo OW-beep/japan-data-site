@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/vacant-house-analysis" },
   title: "空き家率ランキング分析｜軽井沢町と夕張市、2つの空き家率",
   description:
     "空き家率ランキングを分析。別荘地の軽井沢町・那須町・熱海市と、旧産炭地の夕張市・三笠市が上位に並ぶ一方、この2つは性質がまったく異なる「空き家」であることを、e-Statの一次データから読み解きます。",

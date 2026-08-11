@@ -6,6 +6,7 @@ import Link from "next/link";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/household-analysis" },
   title: "単独世帯割合分析｜都心と被災地に共通点",
   description:
     "単独世帯割合ランキングの上位に共通するのは、東京都心の特別区と東日本大震災の被災地域。まったく異なる背景を分析します。",

@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/balance-ratio-analysis" },
   title: "経常収支比率ランキング分析｜原発立地自治体と夕張市の対極",
   description:
     "財政の余裕度を示す経常収支比率をランキング分析。原子力発電所を抱える町村が上位を占める一方、財政破綻した北海道夕張市が最下位となった背景、大都市の中では東京23区と豊田市が強い理由を解説します。",

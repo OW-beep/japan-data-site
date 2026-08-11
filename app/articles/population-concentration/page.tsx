@@ -7,6 +7,7 @@ import AuthorByline from "@/components/AuthorByline";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
+  alternates: { canonical: "/articles/population-concentration" },
   title: "日本で最も人口が集中している地域は？",
   description:
     "人口データから日本の人口集中地域を、都道府県別の実数とともに分析します。",

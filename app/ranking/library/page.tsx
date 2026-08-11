@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/library" },
   title: "全国自治体 図書館数ランキング｜人口10万人以上の都市で比較",
   description:
     "人口10万人以上の自治体を対象に、図書館1館あたりの人口をランキング形式で比較。図書館へのアクセスが良い自治体、人口の割に図書館が少ない自治体がわかります。",

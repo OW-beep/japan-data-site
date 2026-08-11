@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/foreign-population" },
   title: "全国自治体 外国人人口比率ランキング",
   description:
     "全国自治体の人口に占める外国人住民の割合をランキング形式で比較。農業・製造業の担い手として外国人労働者が多い町から、多国籍化が進む都心の区まで紹介します。",

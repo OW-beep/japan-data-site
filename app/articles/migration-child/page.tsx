@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/migration-child" },
   title: "転入超過と子ども人口割合の関係｜相関0.30",
   description:
     "転入超過率(社会増減率)と子ども人口割合の相関を全国データで分析。相関係数は0.30にとどまり、転入超過が大きくても子どもの割合が低い自治体と、本当の意味で子育て世代を集めている自治体には明確な違いがありました。",

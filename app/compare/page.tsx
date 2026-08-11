@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import CompareClient from "@/components/CompareClient";
 
 export const metadata = {
+  alternates: { canonical: "/compare" },
   title: "自治体比較ツール｜2つの街を比べる",
   description:
     "2つの自治体を選んで、人口・高齢化率・財政力指数・医師数など16項目を横並びで比較できます。全国1741自治体に対応。",

@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/density-finance" },
   title: "人口密度と財政力指数の関係｜相関係数0.73",
   description:
     "人口密度と財政力指数の相関係数は0.73と強い正の相関。しかし青森県六ヶ所村や北海道泊村など、人口密度が極めて低いのに財政力指数が1を超える自治体には、原子力発電関連施設という共通点がありました。",

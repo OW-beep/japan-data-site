@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/welfare-ratio" },
   title: "全国自治体 民生費比率ランキング",
   description:
     "全国自治体の歳入に占める民生費(福祉関連支出)の割合をランキング形式で比較。高齢化率が高い自治体ほど比率が高いとは限らない、意外な実態を紹介します。",

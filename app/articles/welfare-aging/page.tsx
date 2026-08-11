@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/welfare-aging" },
   title: "民生費と高齢化率の関係｜相関係数-0.61",
   description:
     "歳入に占める民生費(福祉関連支出)の割合と高齢化率の関係を分析。直感に反して相関係数は-0.61と負の相関になり、東京都練馬区・大田区など若い都市部の区が上位を占める理由を解説します。",

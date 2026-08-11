@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/aging-gap" },
   title: "少子高齢化ギャップ分析｜最大62.9ポイント差",
   description:
     "高齢化率から子ども人口割合を引いた「少子高齢化ギャップ」を全国の自治体で比較。群馬県南牧村が62.9ポイント差で全国最大の一方、全国でわずか6自治体だけが子どもの割合が高齢者の割合を上回る「逆転」を維持しています。",

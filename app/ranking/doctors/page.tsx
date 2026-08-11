@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/doctors" },
   title: "全国自治体 医師数ランキング(人口10万人あたり)",
   description:
     "全国自治体の人口10万人あたり医師数をランキング形式で比較。医科大学の附属病院がある町が上位を独占する理由や、医師が1人もいない自治体の実態を解説します。",

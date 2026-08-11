@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/habitable-density" },
   title: "可住地人口密度ランキング分析｜尾鷲市の実態",
   description:
     "山地・湖沼などを除いた可住地面積あたりの人口密度を分析。単純な人口密度ランキングでは目立たない三重県尾鷲市や和歌山県新宮市が、可住地ベースで見ると大きく順位を上げる理由を解説します。",

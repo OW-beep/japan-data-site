@@ -6,6 +6,7 @@ import Link from "next/link";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/density-analysis" },
   title: "人口密度ランキング分析：なぜ東京都特別区が上位を独占するのか",
   description:
     "人口密度ランキング上位を東京都特別区が独占する理由を、国土交通省のコンパクトシティ政策の議論もふまえて分析します。",

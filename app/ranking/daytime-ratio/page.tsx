@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/daytime-ratio" },
   title: "全国自治体 昼夜間人口比率ランキング｜千代田区は1355%",
   description:
     "夜間人口(常住人口)に対する昼間人口の割合(昼夜間人口比率)をランキング形式で比較。通勤・通学による人口移動の実態がわかります。",

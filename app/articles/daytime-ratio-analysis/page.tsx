@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/daytime-ratio-analysis" },
   title: "昼夜間人口比率ランキング分析｜千代田区が1355%になる理由",
   description:
     "昼夜間人口比率ランキングを分析。東京都心のオフィス街が上位を占める一方、福島県の被災地では震災復興作業員の日中滞在が比率を押し上げていました。ベッドタウンとの対比から「通勤」の実態を読み解きます。",

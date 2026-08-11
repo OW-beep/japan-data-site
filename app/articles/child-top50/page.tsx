@@ -4,6 +4,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/articles/child-top50" },
   title: "子ども人口割合が高い自治体TOP50",
   description:
     "15歳未満人口の割合が高い自治体トップ50を紹介。子育て世代が多い自治体の特徴がわかります。",

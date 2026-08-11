@@ -4,6 +4,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/articles/decline" },
   title: "社会増減率分析：転入超過1位はなぜ人口847人の町なのか",
   description:
     "転入・転出データから見る社会増減率ランキング。震災復興地域と都心再開発、正反対の背景を持つ自治体を分析します。",

@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/unemployment" },
   title: "全国自治体 完全失業率ランキング",
   description:
     "全国自治体の完全失業率をランキング形式で比較。福岡県筑豊地方の旧産炭地がなぜ上位に並ぶのか、その背景を解説します。",

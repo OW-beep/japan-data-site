@@ -11,6 +11,7 @@ import CompareCTA from "../../../components/CompareCTA";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/population" },
   title: "全国自治体 人口ランキング【最新版】",
   description:
     "全国の市区町村の人口を多い順にランキング。政令指定都市・県庁所在地から町村まで、住民基本台帳ベースの最新人口データを比較できます。",

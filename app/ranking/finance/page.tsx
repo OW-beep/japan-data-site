@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/finance" },
   title: "全国自治体 財政力指数ランキング",
   description:
     "全国自治体の財政力指数をランキング形式で比較。自主財源だけで行政サービスをまかなえる「稼げる自治体」がわかります。",

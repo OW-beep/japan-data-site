@@ -32,6 +32,7 @@ export async function generateMetadata({
   return {
     title: `${pref}の人口ランキング｜市区町村別データ`,
     description: `${pref}内の市区町村を人口が多い順にランキング。面積・人口密度・高齢化率など複数の指標でも比較できます。`,
+    alternates: { canonical: `/prefecture/${encodeURIComponent(pref)}` },
     // /city と同様、手書きコメントがあるのは千葉県のみで大半が
     // 集計値だけの薄いページのため、審査期間中は一時的にnoindex。
     // follow: true でクロール導線は維持。合格後にこのブロックを外す。

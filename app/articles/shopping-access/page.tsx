@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/shopping-access" },
   title: "買い物難民ランキング分析｜郊外の落とし穴",
   description:
     "高齢者人口あたりの小売店数を分析し、「買い物難民」問題が深刻な自治体を紹介。過疎の山村よりも、車移動を前提に開発された都市近郊のニュータウンで、買い物の難しさが際立つ実態を解説します。",

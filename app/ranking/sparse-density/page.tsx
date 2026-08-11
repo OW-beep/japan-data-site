@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/sparse-density" },
   title: "全国自治体 人口密度が低い自治体ランキング",
   description:
     "全国の市区町村を人口密度が低い順にランキング。広大な面積に対して人口が非常に少ない、日本で最も人口が希薄な自治体を比較できます。",

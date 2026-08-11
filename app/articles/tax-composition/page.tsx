@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/tax-composition" },
   title: "財政の中身分析｜自主財源比率63.8%の村",
   description:
     "全国自治体の歳入に占める地方税の割合(自主財源比率)を分析。企業城下町・リゾート地・原子力研究施設の町が上位を占める一方、離島・山村は国からの財政移転にほぼ全面依存している実態を、これまでの財政関連記事とあわせて解説します。",

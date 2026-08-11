@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking" },
   title: "ランキング一覧",
   description:
     "全国自治体の人口・出生率・高齢化率・人口密度・面積・財政力指数など、全ランキングの一覧ページです。",
@@ -31,6 +32,8 @@ const rankings = [
   { href: "/ranking/foreign-population", emoji: "🌏", label: "外国人人口比率ランキング" },
   { href: "/ranking/retail-access", emoji: "🛒", label: "高齢者あたり小売店数ランキング" },
   { href: "/ranking/balance-ratio", emoji: "🧮", label: "経常収支比率ランキング" },
+  { href: "/ranking/debt-service-ratio", emoji: "💳", label: "実質公債費比率ランキング" },
+  { href: "/ranking/education-expense", emoji: "🏫", label: "教育費ランキング(住民一人あたり)" },
   { href: "/ranking/marriage-rate", emoji: "💍", label: "婚姻率ランキング" },
   { href: "/ranking/daycare", emoji: "🧸", label: "保育園あたり子ども人口ランキング" },
   { href: "/ranking/restaurant", emoji: "🍜", label: "飲食店密度ランキング" },

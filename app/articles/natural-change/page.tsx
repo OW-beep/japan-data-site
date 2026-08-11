@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/natural-change" },
   title: "自然増減率ランキング分析｜自然増はわずか34",
   description:
     "出生数から死亡数を引いた自然増減率を全国自治体で分析。全国のわずか2%の自治体でしか自然増加が起きていない実態と、社会増減率(転入出)との違いを、これまでの記事とあわせて解説します。",

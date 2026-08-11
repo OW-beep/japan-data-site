@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/tax-ratio" },
   title: "全国自治体 地方税自主財源比率ランキング",
   description:
     "全国自治体の歳入に占める地方税の割合(自主財源比率)をランキング形式で比較。企業城下町やリゾート地が上位を占める一方、離島・山村は国からの財政移転への依存度が高い実態を紹介します。",

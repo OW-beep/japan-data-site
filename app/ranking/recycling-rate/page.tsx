@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/recycling-rate" },
   title: "全国自治体 ごみのリサイクル率ランキング｜大崎町など優等生自治体",
   description:
     "ごみのリサイクル率をランキング形式で比較。全国的に知られる鹿児島県大崎町など、住民参加型の分別収集で高い数値を出している自治体がわかります。",

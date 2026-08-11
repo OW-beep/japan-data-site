@@ -6,6 +6,7 @@ import PersonalNote from "@/components/PersonalNote";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
+  alternates: { canonical: "/articles/doctors-analysis" },
   title: "医師数ランキング分析｜千代田区が全国1位",
   description:
     "全国自治体の人口10万人あたり医師数をランキング分析。医科大学の附属病院がある町が上位を独占する一方、医師が1人も登録されていない自治体が29町村ある実態を解説します。",

@@ -7,6 +7,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/decline" },
   title: "全国自治体 社会増減率ランキング(転入超過・転出超過)",
   description:
     "総務省「住民基本台帳人口移動報告」の転入者数・転出者数から算出した、社会増減率(人口移動による増減)のランキングです。",

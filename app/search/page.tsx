@@ -1,6 +1,7 @@
 import SearchBox from "@/components/SearchBox";
 
 export const metadata = {
+  alternates: { canonical: "/search" },
   title: "自治体検索",
   description: "全国1747自治体を検索できます。",
 };

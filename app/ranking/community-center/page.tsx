@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/community-center" },
   title: "全国自治体 公民館数ランキング｜集落ごとに1館の町も",
   description:
     "公民館1館あたりの人口をランキング形式で比較。長野県など、集落ごとに公民館が置かれている地域と、公民館が1館もない都市部の違いを紹介します。",

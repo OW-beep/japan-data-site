@@ -5,6 +5,7 @@ import Link from "next/link";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/population-finance" },
   title: "人口規模と財政力の関係：大都市は本当に財政が強いのか",
   description:
     "人口規模が大きい自治体ほど財政力指数が高い傾向がある一方、東京都特別区は例外的に低くなります。その理由をデータと制度の両面から分析します。",

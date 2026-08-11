@@ -6,6 +6,7 @@ import Link from "next/link";
 
 
 export const metadata = {
+  alternates: { canonical: "/articles/prefecture-composite" },
   title: "都道府県総合スコア：4指標を組み合わせて比較すると見えるもの",
   description:
     "子ども人口割合・高齢化率・財政力指数・出生率の4指標を組み合わせた独自の総合スコアで、都道府県を比較・分析します。",

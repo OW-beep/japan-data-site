@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/household" },
   title: "全国自治体 単独世帯割合ランキング",
   description:
     "全国自治体の単独世帯割合(一人暮らし世帯の割合)をランキング形式で比較。都市部と震災復興地域、それぞれ異なる背景を解説します。",

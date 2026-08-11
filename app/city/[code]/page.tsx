@@ -42,6 +42,7 @@ export async function generateMetadata({
   return {
     title: `${city.name}の人口・面積・人口密度`,
     description: `${city.name}の人口・面積・人口密度・出生率・高齢化率などを掲載しています。`,
+    alternates: { canonical: `/city/${code}` },
     // 審査期間中の一時対応:自治体ページはテンプレ生成の薄いコンテンツと
     // 判断されやすいため、noindexにして分析記事・ランキングページを
     // 評価対象の中心に見せる。follow: true でクロール導線とリンク評価は維持。

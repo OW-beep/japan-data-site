@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/habitable-density" },
   title: "全国自治体 可住地人口密度ランキング",
   description:
     "山地・湖沼などを除いた「住める土地(可住地)」あたりの人口密度で全国自治体をランキング。単純な人口密度では目立たない、山と海に挟まれた自治体の本当の混雑度が分かります。",

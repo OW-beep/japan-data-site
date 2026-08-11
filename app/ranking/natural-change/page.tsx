@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/natural-change" },
   title: "全国自治体 自然増減率ランキング（出生数-死亡数）",
   description:
     "出生数から死亡数を引いた自然増減率を全国自治体でランキング。全国1740自治体のうち自然増加なのはわずか34自治体だけという実態を、社会増減率(転入出)とあわせて紹介します。",

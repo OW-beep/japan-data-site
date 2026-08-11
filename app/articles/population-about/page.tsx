@@ -7,6 +7,7 @@ import AuthorByline from "@/components/AuthorByline";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
+  alternates: { canonical: "/articles/population-about" },
   title: "人口ランキングとは？",
   description:
     "人口ランキングの見方や集計方法、人口データから分かることを、実際の数字とともに解説します。",

@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/community-center-analysis" },
   title: "公民館数ランキング分析｜集落ごとに公民館がある町、長野県が上位独占",
   description:
     "公民館数ランキングを分析。長野県の町村が上位を独占する理由と、大都市の多くで公民館がゼロになっている背景を、令和3年度社会教育調査の最新データから読み解きます。",

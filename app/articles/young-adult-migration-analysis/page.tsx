@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/young-adult-migration-analysis" },
   title: "20代純移動率ランキング分析｜若者に選ばれる街、大阪市の各区が上位に",
   description:
     "20代の純移動率をランキング分析。東京23区だけでなく大阪市の各区が上位に多数入る一方、全国の8割近い自治体で若者の流出が続いている実態を、2025年の最新データから読み解きます。",

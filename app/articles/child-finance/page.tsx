@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/child-finance" },
   title: "子ども人口割合と財政力指数の関係｜相関0.40",
   description:
     "子ども人口割合と財政力指数の相関係数は0.40。一方、千葉県芝山町(成田空港)や宮城県女川町(原発)など、子どもの割合が低いのに財政力指数が高い自治体には、空港・発電所・観光地といった共通点がありました。",

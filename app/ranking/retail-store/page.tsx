@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/retail-store" },
   title: "全国自治体 大型小売店数ランキング｜人口1万人あたりで比較",
   description:
     "人口1万人あたりの大型小売店数をランキング形式で比較。1店舗の有無で数値が大きく動く小規模自治体と、買い物難民ランキングとの関係を解説します。",

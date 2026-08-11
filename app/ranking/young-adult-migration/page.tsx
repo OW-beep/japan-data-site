@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/young-adult-migration" },
   title: "全国自治体 20代純移動率ランキング｜若者に選ばれる街は？",
   description:
     "人口1,000人あたりの20代(20〜29歳)純移動数をランキング形式で比較。2025年の最新データで、進学・就職を機に若者がどこへ移動しているかがわかります。",

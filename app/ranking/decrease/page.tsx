@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/decrease" },
   title: "全国自治体 人口が少ない自治体ランキング",
   description:
     "全国の市区町村を人口が少ない順にランキング。離島や山村など、日本で最も人口規模の小さな自治体を比較できます。",

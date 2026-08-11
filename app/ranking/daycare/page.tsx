@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/daycare" },
   title: "全国自治体 保育園あたり子ども人口ランキング｜保育の余裕度",
   description:
     "全国自治体の保育園1施設あたりの子ども人口をランキング形式で比較。数字が小さいほど、子どもの数に対して保育施設に余裕があることを意味します。データ上の注意点もあわせて解説します。",

@@ -10,6 +10,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/birth-rate" },
   title: "全国自治体 出生率ランキング【合計特殊出生率】",
   description:
     "全国自治体の合計特殊出生率をランキング形式で比較。出生率が高い自治体・低い自治体の傾向や地域差がわかります。",

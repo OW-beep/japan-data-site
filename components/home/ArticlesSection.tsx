@@ -10,6 +10,22 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "実質公債費比率ランキング分析",
+    href: "/articles/debt-service-ratio-analysis",
+    emoji: "💳",
+    desc: "夕張市が突出。東京23区は軒並みマイナスの好対照。",
+    tag: "finance",
+    fresh: true,
+  },
+  {
+    title: "教育費ランキング分析",
+    href: "/articles/education-expense-analysis",
+    emoji: "🏫",
+    desc: "北海道の小さな町が上位独占。人口規模との関係を解説。",
+    tag: "child",
+    fresh: true,
+  },
+  {
     title: "外国人人口比率ランキング分析",
     href: "/articles/foreign-population",
     emoji: "🌏",
@@ -22,7 +38,6 @@ const articles: {
     emoji: "🛒",
     desc: "過疎の山村より郊外ニュータウンが危ない、意外な実態。",
     tag: "aging",
-    fresh: true,
   },
   {
     title: "出生率ランキング分析",

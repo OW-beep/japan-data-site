@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/about" },
   title: "このサイトについて",
   description:
     "全国自治体データランキングの目的、データの出典、更新頻度、運営者情報について説明しています。",

@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/dentist" },
   title: "全国自治体 歯科医師数ランキング｜人口10万人あたりで比較",
   description:
     "人口10万人あたりの歯科医師数をランキング形式で比較。医師数ランキングと同様、都市部や大学病院を抱える自治体が上位に入る一方、歯科医師が1人もいない自治体もあります。",

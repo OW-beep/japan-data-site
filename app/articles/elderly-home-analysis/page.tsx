@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/elderly-home-analysis" },
   title: "高齢者施設数ランキング分析｜旭川市が「福祉の街」の理由",
   description:
     "老人ホーム1施設あたりの高齢者人口をランキング分析。北海道旭川市が大都市の中で突出して施設に余裕がある理由と、東京23区で施設が手薄になりがちな背景を解説します。",

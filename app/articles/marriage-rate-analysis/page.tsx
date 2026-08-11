@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/marriage-rate-analysis" },
   title: "婚姻率ランキング分析｜東京都心とその郊外、同じ東京でなぜ差が",
   description:
     "人口1,000人あたりの婚姻件数(婚姻率)をランキング分析。台東区・墨田区など東京都心の特別区が上位を占める一方、同じ東京都でも八王子市・町田市など郊外の都市は低い水準にとどまる理由を解説します。",

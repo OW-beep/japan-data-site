@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/elderly-home" },
   title: "全国自治体 高齢者施設数ランキング｜旭川市が「福祉の街」の理由",
   description:
     "老人ホーム1施設あたりの高齢者人口をランキング形式で比較。介護老人福祉施設・養護老人ホーム・有料老人ホームを合算した、最新(2023年度)のデータです。",

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/sitemap" },
   title: "サイトマップ",
   description: "全国自治体データランキング内のページ一覧です。",
 };

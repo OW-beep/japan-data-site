@@ -3,6 +3,7 @@ import DataAsOf from "@/components/DataAsOf";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import AuthorByline from "@/components/AuthorByline";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import meta from "@/data/meta.json";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
@@ -40,6 +41,15 @@ publishedAt?: string;
 path?: string;
 }) {
 return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
+
+  {path && (
+    <Breadcrumbs
+      items={[
+        { name: "記事一覧", href: "/articles" },
+        { name: title },
+      ]}
+    />
+  )}
 
   <h1 style={titleStyle}>
 {title} </h1>

@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
 export const metadata = {
+  alternates: { canonical: "/articles/household-aging-ushape" },
   title: "単独世帯割合と高齢化率のU字関係を分析",
   description:
     "単独世帯割合と高齢化率の相関係数を計算するとわずか-0.10。しかし年齢層ごとに見ると、実際には都市部の若い単身者と、地方の高齢単身者という、まったく性質の異なる2つの山からなるU字型の関係が隠れていました。",

@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/daycare-access" },
   title: "保育園あたり子ども人口ランキング分析｜東京23区と大阪の差",
   description:
     "保育園1施設あたりの子ども人口をランキング分析。小規模町村が上位を占める一方、人口20万人以上の都市だけで比較すると東京23区と大阪府内の自治体で驚くほど差が開く理由を、元自治体職員の視点も交えて解説します。",

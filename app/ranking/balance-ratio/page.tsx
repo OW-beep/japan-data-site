@@ -8,6 +8,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/ranking/balance-ratio" },
   title: "全国自治体 経常収支比率ランキング｜財政の余裕度がわかる",
   description:
     "全国自治体の経常収支比率をランキング形式で比較。財政力指数だけでは見えない「新しい事業に回せる財政的な余裕」がある自治体、逆に自転車操業状態の自治体がわかります。",

@@ -5,6 +5,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
+  alternates: { canonical: "/articles/restaurant-density" },
   title: "飲食店密度ランキング分析｜千代田区とベッドタウンの対極",
   description:
     "人口1,000人あたりの飲食店数をランキング分析。東京都心のオフィス街と、箱根町・白馬村など観光地・温泉地が上位を占める一方、都市近郊のベッドタウンが軒並み下位に沈む理由を解説します。",
