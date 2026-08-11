@@ -213,6 +213,11 @@ const articles = [
     title: "ごみのリサイクル率ランキング分析",
     desc: "大崎町はなぜ「日本一」と呼ばれるのか。",
   },
+  {
+    href: "/articles/community-center-analysis",
+    title: "公民館数ランキング分析",
+    desc: "集落ごとに公民館がある町、長野県が上位を独占。",
+  },
 ];
 
 export default function Page() {

@@ -3,6 +3,7 @@ import DataAsOf from "@/components/DataAsOf";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
+import AuthorByline from "@/components/AuthorByline";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -267,6 +268,8 @@ export default function Page() {
           100万人都市一覧を見る
         </Link>
       </p>
+
+      <AuthorByline />
     </div>
   );
 }

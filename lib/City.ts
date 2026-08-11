@@ -73,4 +73,7 @@ export type City = {
 
   // scripts/fetchRecyclingRate.ts 実行後に追加される項目。
   recyclingRate?: number | null; // ごみのリサイクル率(%)
+
+  // scripts/fetchCommunityCenters.ts 実行後に追加される項目。
+  communityCenterCount?: number | null; // 公民館数
 };

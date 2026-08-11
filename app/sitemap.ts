@@ -43,6 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/retail-store",
     "/ranking/young-adult-migration",
     "/ranking/recycling-rate",
+    "/ranking/community-center",
     "/prefecture",
     "/search",
     "/compare",
@@ -53,15 +54,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/contact",
   ];
 
-  const cityPages = cities.map((c) => ({
-    url: `${baseUrl}/city/${c.code}`,
-    lastModified: new Date(),
-  }));
-
-  const prefecturePages = getPrefectures().map((pref) => ({
-    url: `${baseUrl}/prefecture/${encodeURIComponent(pref)}`,
-    lastModified: new Date(),
-  }));
+  // /city と /prefecture は審査期間中 noindex にしているため、
+  // sitemap からも一時的に除外する(cities.json / getPrefectures は
+  // 現在未使用だが、noindex解除時にすぐ復元できるよう import は残す)。
+  const cityPages: MetadataRoute.Sitemap = [];
+  const prefecturePages: MetadataRoute.Sitemap = [];
+  void cities;
+  void getPrefectures;
 
   const articlePages = [
     "/articles/birth-rate",
@@ -105,6 +104,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/elderly-home-analysis",
     "/articles/young-adult-migration-analysis",
     "/articles/recycling-rate-analysis",
+    "/articles/community-center-analysis",
   ].map((p) => ({
     url: `${baseUrl}${p}`,
     lastModified: new Date(),

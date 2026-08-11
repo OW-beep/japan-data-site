@@ -1,12 +1,12 @@
 import Link from "next/link";
 
 const newItems = [
+  { href: "/ranking/community-center", emoji: "🏘️", title: "公民館数" },
   { href: "/ranking/recycling-rate", emoji: "♻️", title: "ごみのリサイクル率" },
   { href: "/ranking/young-adult-migration", emoji: "🎒", title: "20代純移動率" },
   { href: "/ranking/dentist", emoji: "🦷", title: "歯科医師数" },
   { href: "/ranking/retail-store", emoji: "🏬", title: "大型小売店数" },
   { href: "/ranking/elderly-home", emoji: "🏡", title: "高齢者施設数" },
-  { href: "/ranking/daytime-ratio", emoji: "🌆", title: "昼夜間人口比率" },
 ];
 
 export default function NewArrivalsSection() {

@@ -3,6 +3,7 @@ import DataAsOf from "@/components/DataAsOf";
 import RankingBarChart from "@/components/RankingBarChart";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
+import AuthorByline from "@/components/AuthorByline";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -236,6 +237,8 @@ export default function Page() {
         集中傾向も、あわせて見てみると新たな発見が
         あるはずです。
       </p>
+
+      <AuthorByline />
     </div>
   );
 }

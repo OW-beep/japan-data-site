@@ -4,6 +4,7 @@ import RankingBarChart from "@/components/RankingBarChart";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
+import AuthorByline from "@/components/AuthorByline";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -217,6 +218,8 @@ export default function Page() {
           いる点にご留意ください。
         </p>
       </div>
+
+      <AuthorByline />
     </div>
   );
 }

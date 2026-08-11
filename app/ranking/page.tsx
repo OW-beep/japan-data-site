@@ -42,6 +42,7 @@ const rankings = [
   { href: "/ranking/retail-store", emoji: "🏬", label: "大型小売店数ランキング" },
   { href: "/ranking/young-adult-migration", emoji: "🎒", label: "20代純移動率ランキング" },
   { href: "/ranking/recycling-rate", emoji: "♻️", label: "ごみのリサイクル率ランキング" },
+  { href: "/ranking/community-center", emoji: "🏘️", label: "公民館数ランキング" },
 ];
 
 export default function Page() {

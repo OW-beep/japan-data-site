@@ -2,6 +2,7 @@ import Link from "next/link";
 import DataAsOf from "@/components/DataAsOf";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
+import AuthorByline from "@/components/AuthorByline";
 import type { TagKey } from "@/lib/articleTags";
 
 type TopItem = {
@@ -82,6 +83,8 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
   <div>
     {children}
   </div>
+
+  <AuthorByline />
 
   <Link
     href={rankingLink}
