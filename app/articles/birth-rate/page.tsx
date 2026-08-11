@@ -5,6 +5,7 @@ import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
+import JsonLd from "@/components/JsonLd";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -33,6 +34,29 @@ export default function Page() {
   const tokyoWardsInBottom10 = bottom10.filter((c) =>
     c.name.startsWith("東京都")
   ).length;
+
+  const faq = [
+    {
+      q: "出生率が全国1位の自治体はどこですか？",
+      a: `鹿児島県徳之島町が${top15[0].birthRate?.toFixed(
+        2
+      )}で全国1位です。2位も同じ徳之島の天城町で、3位以下も沖縄県の自治体が多数を占めています。`,
+    },
+    {
+      q: "なぜ鹿児島・沖縄の島しょ部は出生率が高いのですか？",
+      a: "晩婚化・晩産化の影響が本土より小さいこと、三世代同居や地域の子育て支援ネットワークが比較的強く残っていること、子育てにかかる住宅費の負担が大都市圏より軽いことなどが背景として指摘されています。ただし人口が少ない自治体は出生数の少しの増減で数値が大きく振れやすいという統計上の特性も影響しています。",
+    },
+    {
+      q: "出生率が最も低い自治体はどこですか？",
+      a: `全体では埼玉県毛呂山町(${bottom10[0].birthRate?.toFixed(
+        2
+      )})が最も低く、下位10自治体のうち${tokyoWardsInBottom10}自治体を東京都特別区が占めています。子どものいない単身世帯・共働き世帯の割合が高いことが背景にあると考えられます。`,
+    },
+    {
+      q: "出生率と子ども人口割合はどう違いますか？",
+      a: "出生率(合計特殊出生率)は「今、その地域で子どもが何人生まれているか」を示す指標で、子ども人口割合は「過去に生まれた子どもが今どれだけその地域に住んでいるか」を示す指標です。出生率が高くても子育て世帯が転出すれば子ども人口割合は上がらず、逆に出生率がそれほど高くなくても子育て世帯の転入が続けば子ども人口割合は高くなります。",
+    },
+  ];
 
   return (
     <div style={container}>
@@ -218,6 +242,33 @@ export default function Page() {
           いる点にご留意ください。
         </p>
       </div>
+
+      <div style={box}>
+        <h2>Q&amp;A：出生率ランキングについてよくある質問</h2>
+
+        {faq.map((item) => (
+          <p key={item.q}>
+            <strong>Q. {item.q}</strong>
+            <br />
+            A. {item.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
 
       <AuthorByline />
     </div>

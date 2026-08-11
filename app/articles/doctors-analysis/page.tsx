@@ -3,6 +3,7 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
+import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
   title: "医師数ランキング分析｜千代田区が全国1位",
@@ -40,6 +41,29 @@ export default function Page() {
   const universityCount = ranking.filter((c) =>
     universityTowns.some((k) => c.name.includes(k))
   ).length;
+
+  const faq = [
+    {
+      q: "医師数(人口10万人あたり)が全国1位の自治体はどこですか？",
+      a: `東京都千代田区が${ranking[0].per10k.toFixed(
+        1
+      )}人で全国1位です。全国平均(${average.toFixed(
+        1
+      )}人)の16倍以上にあたり、大学病院や大規模総合病院の集積が主な要因です。`,
+    },
+    {
+      q: "なぜ人口数万人規模の町が医師数ランキング上位に入るのですか？",
+      a: "医科大学の附属病院を抱える町では、大学病院1つに数百〜千人規模の医師が勤務しているため、人口あたりの医師数が跳ね上がります。福井県永平寺町、岩手県矢巾町、愛媛県東温市などが代表例で、大規模な医療機関がたまたま立地していることが要因であり、必ずしも住民あたりの医療サービスが手厚いことを意味するわけではありません。",
+    },
+    {
+      q: "医師が1人もいない自治体はありますか？",
+      a: "今回の集計では、医師数が0人として登録されている自治体が29町村ありました。人口数千人規模の小さな町村が多く、自前の診療所を持たず近隣市町村の医療機関に頼っている地域です。ただし医師数がゼロだからといって医療が全く受けられないわけではありません。",
+    },
+    {
+      q: "医師数ランキングだけで「医療が充実した自治体」と判断できますか？",
+      a: "できません。この統計は医師の勤務先で計上されるため、大学病院がある自治体に数値が集中しやすい構造になっています。実際にその地域に住む人がどれだけ医療を受けやすいかは、隣接自治体までの距離や交通事情もあわせて考慮する必要があります。",
+    },
+  ];
 
   return (
     <ArticleLayout
@@ -228,6 +252,33 @@ export default function Page() {
           存在まで含めて読み解くことをおすすめします。
         </p>
       </div>
+
+      <div style={box}>
+        <h2>Q&amp;A：医師数ランキングについてよくある質問</h2>
+
+        {faq.map((item) => (
+          <p key={item.q}>
+            <strong>Q. {item.q}</strong>
+            <br />
+            A. {item.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
 
       <div style={box}>
         <h2>まとめ</h2>
