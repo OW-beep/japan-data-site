@@ -3,6 +3,9 @@ import DataAsOf from "@/components/DataAsOf";
 import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import AuthorByline from "@/components/AuthorByline";
+import JsonLd from "@/components/JsonLd";
+import meta from "@/data/meta.json";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 import type { TagKey } from "@/lib/articleTags";
 
 type TopItem = {
@@ -21,6 +24,7 @@ children,
 rankingLink,
 tags,
 publishedAt,
+path,
 }: {
 title: string;
 summary: string;
@@ -31,6 +35,9 @@ children: React.ReactNode;
 rankingLink: string;
 tags?: TagKey[];
 publishedAt?: string;
+/** 記事のURLパス(例: "/articles/million-cities")。
+ *  渡すと Article 構造化データに mainEntityOfPage / url を含める。 */
+path?: string;
 }) {
 return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
 
@@ -44,6 +51,37 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
 
   {publishedAt && <PublishedDate date={publishedAt} />}
   <DataAsOf />
+
+  {publishedAt && (
+    <JsonLd
+      data={{
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: title,
+        description: summary,
+        datePublished: publishedAt,
+        dateModified: meta.updatedAt,
+        ...(path
+          ? {
+              mainEntityOfPage: {
+                "@type": "WebPage",
+                "@id": `${SITE_URL}${path}`,
+              },
+            }
+          : {}),
+        author: {
+          "@type": "Person",
+          name: `${SITE_NAME} 運営者`,
+          url: `${SITE_URL}/about`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: SITE_NAME,
+          url: SITE_URL,
+        },
+      }}
+    />
+  )}
 
   <div style={hero}>
     <div style={heroLabelStyle}>

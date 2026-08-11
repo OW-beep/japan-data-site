@@ -80,6 +80,21 @@ export default function Page() {
         }))}
       />
 
+      <div
+        style={{
+          background: "#eff6ff",
+          border: "1px solid #bfdbfe",
+          borderRadius: 12,
+          padding: "16px 20px",
+          marginBottom: 24,
+        }}
+      >
+        📊{" "}
+        <Link href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+          人口100万人以上の都市は全国に何市あるか、詳しい分析記事はこちら →
+        </Link>
+      </div>
+
       <CompareCTA />
 
       <AdSense />

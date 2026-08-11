@@ -2,6 +2,8 @@ import Hero from "@/components/home/Hero";
 
 import PurposeSection from "@/components/home/PurposeSection";
 
+import FeaturedArticlesSection from "@/components/home/FeaturedArticlesSection";
+
 import NewArrivalsSection from "@/components/home/NewArrivalsSection";
 
 import ArticlesSection from "@/components/home/ArticlesSection";
@@ -26,6 +28,8 @@ export default function Home() {
       <Hero />
 
       <PurposeSection />
+
+      <FeaturedArticlesSection />
 
       <NewArrivalsSection />
 

@@ -23,6 +23,29 @@ export default function Page() {
     0
   );
 
+  const metroAreas: { label: string; prefs: string[] }[] = [
+    { label: "首都圏(東京・神奈川・埼玉・千葉)", prefs: ["東京都", "神奈川県", "埼玉県", "千葉県"] },
+    { label: "近畿圏(大阪・京都・兵庫・奈良)", prefs: ["大阪府", "京都府", "兵庫県", "奈良県"] },
+    { label: "中京圏(愛知・岐阜・三重)", prefs: ["愛知県", "岐阜県", "三重県"] },
+  ];
+
+  const regionBreakdown = metroAreas.map((area) => {
+    const cities = ranking.filter((c) =>
+      area.prefs.some((pref) => c.name.startsWith(pref))
+    );
+    return {
+      label: area.label,
+      count: cities.length,
+      cities: cities.map((c) => c.name).join("・"),
+      population: cities.reduce((s, c) => s + c.population, 0),
+    };
+  });
+
+  const metroTotal = regionBreakdown.reduce((s, r) => s + r.count, 0);
+  const otherCities = ranking.filter(
+    (c) => !metroAreas.some((a) => a.prefs.some((p) => c.name.startsWith(p)))
+  );
+
   const faq = [
     {
       q: "政令指定都市は人口100万人以上ですか？",
@@ -55,6 +78,7 @@ export default function Page() {
       heroLabel="100万人超自治体数"
       heroValue={`${ranking.length}自治体`}
       rankingLink="/ranking/population"
+      path="/articles/million-cities"
       tags={["population"]}
       publishedAt="2026-02-13"
       top3={[
@@ -152,6 +176,50 @@ export default function Page() {
           輩出しているのは首都圏のみです。関西圏も大阪市・
           神戸市・京都市の3市がランクインしており、
           首都圏に次ぐ集積度を持っています。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>三大都市圏 vs それ以外：内訳データ</h2>
+
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr>
+              <th style={th}>都市圏</th>
+              <th style={th}>該当市数</th>
+              <th style={th}>合計人口</th>
+              <th style={th}>該当都市</th>
+            </tr>
+          </thead>
+          <tbody>
+            {regionBreakdown.map((r) => (
+              <tr key={r.label}>
+                <td style={td}>{r.label}</td>
+                <td style={td}>{r.count}市</td>
+                <td style={td}>{r.population.toLocaleString()}人</td>
+                <td style={td}>{r.cities || "―"}</td>
+              </tr>
+            ))}
+            <tr>
+              <td style={td}>その他の地方中心都市</td>
+              <td style={td}>{otherCities.length}市</td>
+              <td style={td}>
+                {otherCities
+                  .reduce((s, c) => s + c.population, 0)
+                  .toLocaleString()}
+                人
+              </td>
+              <td style={td}>
+                {otherCities.map((c) => c.name).join("・")}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style={{ marginTop: 12, fontSize: 14, color: "#6b7280" }}>
+          三大都市圏(首都圏・近畿圏・中京圏)だけで{metroTotal}市、全{ranking.length}
+          市中の{Math.round((metroTotal / ranking.length) * 100)}%を占めています。
+          残る{otherCities.length}市は、いずれも各地方ブロックで唯一の100万人都市です。
         </p>
       </div>
 
@@ -333,6 +401,20 @@ const box: React.CSSProperties = {
   borderRadius: 12,
   border: "1px solid #e5e7eb",
   marginBottom: 20,
+};
+
+const th: React.CSSProperties = {
+  textAlign: "left",
+  padding: "8px 10px",
+  borderBottom: "2px solid #e5e7eb",
+  fontSize: 13,
+  color: "#6b7280",
+};
+
+const td: React.CSSProperties = {
+  padding: "8px 10px",
+  borderBottom: "1px solid #f1f5f9",
+  fontSize: 14,
 };
 
 const link: React.CSSProperties = {

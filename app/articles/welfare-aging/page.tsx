@@ -246,6 +246,10 @@ export default function Page() {
           <Link href="/articles/density-finance" style={link}>
             人口密度と財政力指数の関係を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/doctors-analysis" style={link}>
+            医師数ランキング分析を見る
+          </Link>
         </p>
       </div>
 

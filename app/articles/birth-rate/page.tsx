@@ -6,6 +6,8 @@ import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
 import JsonLd from "@/components/JsonLd";
+import meta from "@/data/meta.json";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -34,6 +36,35 @@ export default function Page() {
   const tokyoWardsInBottom10 = bottom10.filter((c) =>
     c.name.startsWith("東京都")
   ).length;
+
+  const PREFECTURES = [
+    "北海道","青森県","岩手県","宮城県","秋田県","山形県","福島県",
+    "茨城県","栃木県","群馬県","埼玉県","千葉県","東京都","神奈川県",
+    "新潟県","富山県","石川県","福井県","山梨県","長野県","岐阜県",
+    "静岡県","愛知県","三重県","滋賀県","京都府","大阪府","兵庫県",
+    "奈良県","和歌山県","鳥取県","島根県","岡山県","広島県","山口県",
+    "徳島県","香川県","愛媛県","高知県","福岡県","佐賀県","長崎県",
+    "熊本県","大分県","宮崎県","鹿児島県","沖縄県",
+  ];
+
+  const prefectureAverages = PREFECTURES.map((pref) => {
+    const cities = ranking.filter((c) => c.name.startsWith(pref));
+    const avg =
+      cities.length > 0
+        ? cities.reduce((s, c) => s + (c.birthRate ?? 0), 0) / cities.length
+        : null;
+    return { pref, avg, count: cities.length };
+  }).filter((p) => p.avg != null) as {
+    pref: string;
+    avg: number;
+    count: number;
+  }[];
+
+  const prefRankingDesc = [...prefectureAverages].sort(
+    (a, b) => b.avg - a.avg
+  );
+  const prefTop5 = prefRankingDesc.slice(0, 5);
+  const prefBottom5 = prefRankingDesc.slice(-5).reverse();
 
   const faq = [
     {
@@ -68,6 +99,32 @@ export default function Page() {
 
       <PublishedDate date="2026-03-20" />
       <DataAsOf />
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "出生率ランキング分析：なぜ鹿児島・沖縄の島しょ部が上位なのか",
+          description:
+            "市区町村別の合計特殊出生率で、鹿児島県徳之島町が全国1位。厚生労働省の統計をもとに、離島の出生率が高い理由を分析します。",
+          datePublished: "2026-03-20",
+          dateModified: meta.updatedAt,
+          mainEntityOfPage: {
+            "@type": "WebPage",
+            "@id": `${SITE_URL}/articles/birth-rate`,
+          },
+          author: {
+            "@type": "Person",
+            name: `${SITE_NAME} 運営者`,
+            url: `${SITE_URL}/about`,
+          },
+          publisher: {
+            "@type": "Organization",
+            name: SITE_NAME,
+            url: SITE_URL,
+          },
+        }}
+      />
 
       <p style={lead}>
         市区町村別の合計特殊出生率で全国1位となったのは、
@@ -169,6 +226,51 @@ export default function Page() {
           高齢化率が低い都心区は「子育て世代の流入」ではなく
           「単身・DINKs世帯の集中」によって若さが保たれている
           ケースが多く、出生率の低さはその裏返しと言えます。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>都道府県別 平均出生率ランキング</h2>
+
+        <p>
+          市区町村単位では人口の少ない自治体の数値が
+          振れやすいため、都道府県単位で市区町村の出生率を
+          平均すると、より安定した傾向が見えてきます。
+        </p>
+
+        <table style={{ width: "100%", borderCollapse: "collapse" }}>
+          <thead>
+            <tr>
+              <th style={th}>順位</th>
+              <th style={th}>都道府県</th>
+              <th style={th}>平均出生率</th>
+            </tr>
+          </thead>
+          <tbody>
+            {prefTop5.map((p, i) => (
+              <tr key={p.pref}>
+                <td style={td}>上位{i + 1}位</td>
+                <td style={td}>{p.pref}</td>
+                <td style={td}>{p.avg.toFixed(2)}</td>
+              </tr>
+            ))}
+            {prefBottom5.map((p, i) => (
+              <tr key={p.pref}>
+                <td style={td}>下位{i + 1}位</td>
+                <td style={td}>{p.pref}</td>
+                <td style={td}>{p.avg.toFixed(2)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <p style={{ marginTop: 12, fontSize: 14, color: "#6b7280" }}>
+          都道府県単位で見ても、上位は沖縄県・鹿児島県・宮崎県などの
+          九州・沖縄勢が占め、下位は東京都・北海道など大都市圏・
+          寒冷地が並ぶ傾向がはっきり出ています。市区町村単位の
+          ランキングと同じ傾向が、より大きな単位でも再現されている
+          ことから、これは特定の自治体だけの特殊事情ではなく、
+          地域全体の構造的な傾向だと考えられます。
         </p>
       </div>
 
@@ -280,6 +382,20 @@ const container: React.CSSProperties = {
   margin: "0 auto",
   padding: "28px 24px",
   lineHeight: 1.9,
+};
+
+const th: React.CSSProperties = {
+  textAlign: "left",
+  padding: "8px 10px",
+  borderBottom: "2px solid #e5e7eb",
+  fontSize: 13,
+  color: "#6b7280",
+};
+
+const td: React.CSSProperties = {
+  padding: "8px 10px",
+  borderBottom: "1px solid #f1f5f9",
+  fontSize: 14,
 };
 
 const title: React.CSSProperties = {
