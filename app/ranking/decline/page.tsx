@@ -2,8 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
+import MetricBox from "../../../components/MetricBox";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import DeclineSummary from "../../../components/ranking/DeclineSummary";
+import { dataSources } from "../../../lib/dataSources";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
@@ -68,6 +71,18 @@ export default function Page() {
         プラスが大きいほど転入が転出を上回る「転入超過」、マイナスが大きいほど
         「転出超過」を意味します。
       </p>
+
+      <MetricBox
+        title="社会増減率とは？"
+        unit="%"
+        definition="転入者数から転出者数を引いた差を、人口で割った割合です。出生・死亡による自然増減は含みません。"
+        formula="社会増減率 = (転入者数 − 転出者数) ÷ 人口 × 100"
+        example={{
+          name: top50[0].name,
+          value: Number(top50[0].rate.toFixed(2)),
+        }}
+        source={dataSources.decline}
+      />
 
       <p
         style={{
@@ -156,6 +171,8 @@ export default function Page() {
         全国平均：{average.toFixed(2)}%(対象自治体
         {ranking.length.toLocaleString()})
       </p>
+
+      <DeclineSummary top50={top50} bottom50={bottom50} average={average} />
 
       <div style={{ marginTop: 30 }}>
         <Link href="/ranking" style={{ color: "#2563eb" }}>

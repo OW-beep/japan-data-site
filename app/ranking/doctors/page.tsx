@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import DoctorsSummary from "../../../components/ranking/DoctorsSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -63,6 +64,7 @@ export default function Page() {
           name: `例：${ranking[0].name}`,
           value: Number(ranking[0].per10k.toFixed(0)),
         }}
+      source={dataSources["doctors"]}
       />
 
       <DoctorsSummary

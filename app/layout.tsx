@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "全国1747自治体の人口・出生率・高齢化率・財政力指数・教育・税収などをランキング形式で比較できるデータサイト。",
+    "全国1741自治体の人口・出生率・高齢化率・財政力指数・教育・税収などをランキング形式で比較できるデータサイト。",
 
   keywords: [
     "自治体",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     title: SITE_NAME,
 
     description:
-      "人口・出生率・高齢化率・財政力指数など全国1747自治体を比較",
+      "人口・出生率・高齢化率・財政力指数など全国1741自治体を比較",
 
     url: SITE_URL,
 

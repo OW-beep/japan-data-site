@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import CommunityCenterSummary from "../../../components/ranking/CommunityCenterSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -75,6 +76,7 @@ export default function CommunityCenterRankingPage() {
           name: ranking[0]?.name ?? "",
           value: `${Math.round(ranking[0]?.perFacility ?? 0).toLocaleString()}`,
         }}
+      source={dataSources["community-center"]}
       />
 
       <CommunityCenterSummary

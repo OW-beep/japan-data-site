@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import SmallestPopulationSummary from "../../../components/ranking/SmallestPopulationSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -31,12 +32,13 @@ export default function Page() {
       <MetricBox
         title="指標定義"
         unit="人"
-        definition="住民基本台帳ベースの総人口が少ない順に並べたランキング"
+        definition="国勢調査による人口が少ない順に並べたランキング"
         formula="人口が少ない順にソート"
         example={{
           name: `例：${ranking[0].name}`,
           value: ranking[0].population,
         }}
+      source={dataSources["decrease"]}
       />
 
       <SmallestPopulationSummary

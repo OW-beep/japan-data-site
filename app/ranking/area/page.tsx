@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 
 import AreaSummary from "../../../components/ranking/AreaSummary";
 import AdSense from "../../../components/AdSense";
@@ -70,6 +71,7 @@ export default function Page() {
           name: ranking[0].name,
           value: ranking[0].area ?? 0,
         }}
+      source={dataSources["area"]}
       />
 
       <AreaSummary

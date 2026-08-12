@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import RetailStoreSummary from "../../../components/ranking/RetailStoreSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -75,6 +76,7 @@ export default function RetailStoreRankingPage() {
           name: ranking[0]?.name ?? "",
           value: `${ranking[0]?.storesPer10k?.toFixed(2) ?? "0.00"}`,
         }}
+      source={dataSources["retail-store"]}
       />
 
       <RetailStoreSummary

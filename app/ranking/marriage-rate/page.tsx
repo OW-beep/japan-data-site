@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import MarriageRateSummary from "../../../components/ranking/MarriageRateSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -74,6 +75,7 @@ export default function MarriageRateRankingPage() {
           name: ranking[0]?.name ?? "",
           value: `${ranking[0]?.marriageRate?.toFixed(2) ?? "0.00"}`,
         }}
+      source={dataSources["marriage-rate"]}
       />
 
       <MarriageRateSummary

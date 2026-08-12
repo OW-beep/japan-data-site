@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import BirthRateSummary from "../../../components/ranking/BirthRateSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -109,6 +110,7 @@ const top50 = ranking.slice(0, 50);
             top50[0]?.birthRate?.toFixed(2) ?? 0
           ),
         }}
+      source={dataSources["birth-rate"]}
       />
 
       <BirthRateSummary

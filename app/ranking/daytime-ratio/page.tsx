@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import DaytimeRatioSummary from "../../../components/ranking/DaytimeRatioSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -74,6 +75,7 @@ export default function DaytimeRatioRankingPage() {
           name: ranking[0]?.name ?? "",
           value: `${ranking[0]?.daytimeRatio?.toFixed(1) ?? "0.0"}`,
         }}
+      source={dataSources["daytime-ratio"]}
       />
 
       <DaytimeRatioSummary

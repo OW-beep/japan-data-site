@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import DentistSummary from "../../../components/ranking/DentistSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -75,6 +76,7 @@ export default function DentistRankingPage() {
           name: ranking[0]?.name ?? "",
           value: `${ranking[0]?.dentistsPer100k?.toFixed(1) ?? "0.0"}`,
         }}
+      source={dataSources["dentist"]}
       />
 
       <DentistSummary

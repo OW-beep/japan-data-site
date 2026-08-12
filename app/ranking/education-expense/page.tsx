@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import EducationExpenseSummary from "../../../components/ranking/EducationExpenseSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -74,6 +75,7 @@ export default function EducationExpenseRankingPage() {
           name: ranking[0]?.name ?? "",
           value: Math.round(ranking[0]?.perCapita ?? 0),
         }}
+      source={dataSources["education-expense"]}
       />
 
       <EducationExpenseSummary

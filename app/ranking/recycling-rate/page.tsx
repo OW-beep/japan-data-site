@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import RecyclingRateSummary from "../../../components/ranking/RecyclingRateSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -65,6 +66,7 @@ export default function RecyclingRateRankingPage() {
           name: ranking[0]?.name ?? "",
           value: `${ranking[0]?.recyclingRate?.toFixed(1) ?? "0.0"}`,
         }}
+      source={dataSources["recycling-rate"]}
       />
 
       <RecyclingRateSummary

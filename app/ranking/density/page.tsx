@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import DensitySummary from "../../../components/ranking/DensitySummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -71,6 +72,7 @@ export default function Page() {
           value:
             ranking[0]?.populationDensity ?? 0,
         }}
+      source={dataSources["density"]}
       />
 
       <DensitySummary

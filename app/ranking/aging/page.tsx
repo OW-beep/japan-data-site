@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import AgingSummary from "../../../components/ranking/AgingSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -76,6 +77,7 @@ export default function Page() {
             top50[0].rate.toFixed(2)
           ),
         }}
+      source={dataSources["aging"]}
       />
 
       <AgingSummary

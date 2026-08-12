@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import ChildSummary from "../../../components/ranking/ChildSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -62,6 +63,7 @@ export default function Page() {
               0
           ),
         }}
+      source={dataSources["child"]}
       />
 
       <ChildSummary

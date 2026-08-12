@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 
 import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
+import { dataSources } from "../../../lib/dataSources";
 import PopulationSummary from "../../../components/ranking/PopulationSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
@@ -64,12 +65,13 @@ export default function Page() {
       <MetricBox
         title="人口とは？"
         unit="人"
-        definition="住民基本台帳をもとにした人口です。"
-        formula="人口 = 住民登録人口"
+        definition="国勢調査による人口です。住民基本台帳人口(役所への届出ベース)とは異なり、調査時点の実際の居住実態に基づいています。"
+        formula="人口 = 国勢調査人口"
         example={{
           name: top50[0].name,
           value: top50[0].population,
         }}
+        source={dataSources.population}
       />
 
       <PopulationSummary

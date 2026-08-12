@@ -6,6 +6,7 @@ export default function MetricBox({
   definition,
   formula,
   example,
+  source,
 }: {
   title: string;
   unit: string;
@@ -14,6 +15,15 @@ export default function MetricBox({
   example: {
     name: string;
     value: ExampleValue;
+  };
+  /** データの出所・年度・対象範囲などを統一フォーマットで表示する。
+   *  全ランキングページ共通の「データについて」欄。 */
+  source?: {
+    sourceName: string; // 元データの統計名(例:「令和2年国勢調査」)
+    dataYear: string; // データの年度(例:「2020年」)
+    scope?: string; // 対象範囲(例:「全国1,741市区町村」)
+    excluded?: string; // 除外条件(例:「人口3,000人未満の自治体を除く」)
+    notes?: string; // 読み解く際の注意点
   };
 }) {
   return (
@@ -53,6 +63,37 @@ export default function MetricBox({
             : example.value}
         </div>
       </div>
+
+      {source && (
+        <div style={sourceBox}>
+          <div style={sourceTitle}>データについて</div>
+          <dl style={sourceGrid}>
+            <dt style={dt}>出典</dt>
+            <dd style={dd}>{source.sourceName}</dd>
+
+            <dt style={dt}>データ年度</dt>
+            <dd style={dd}>{source.dataYear}</dd>
+
+            {source.scope && (
+              <>
+                <dt style={dt}>対象範囲</dt>
+                <dd style={dd}>{source.scope}</dd>
+              </>
+            )}
+
+            {source.excluded && (
+              <>
+                <dt style={dt}>除外条件</dt>
+                <dd style={dd}>{source.excluded}</dd>
+              </>
+            )}
+          </dl>
+
+          {source.notes && (
+            <p style={sourceNotes}>⚠️ {source.notes}</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -87,4 +128,46 @@ const exampleBox: React.CSSProperties = {
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit,minmax(150px,1fr))",
   gap: 12,
+};
+
+const sourceBox: React.CSSProperties = {
+  marginTop: 20,
+  paddingTop: 16,
+  borderTop: "1px dashed #e5e7eb",
+};
+
+const sourceTitle: React.CSSProperties = {
+  fontSize: 13,
+  fontWeight: 700,
+  color: "#6b7280",
+  marginBottom: 10,
+};
+
+const sourceGrid: React.CSSProperties = {
+  display: "grid",
+  gridTemplateColumns: "auto 1fr",
+  columnGap: 12,
+  rowGap: 6,
+  margin: 0,
+  fontSize: 13,
+};
+
+const dt: React.CSSProperties = {
+  color: "#9ca3af",
+  whiteSpace: "nowrap",
+};
+
+const dd: React.CSSProperties = {
+  margin: 0,
+  color: "#374151",
+};
+
+const sourceNotes: React.CSSProperties = {
+  marginTop: 10,
+  marginBottom: 0,
+  fontSize: 13,
+  color: "#92400e",
+  background: "#fffbeb",
+  padding: "8px 12px",
+  borderRadius: 8,
 };
