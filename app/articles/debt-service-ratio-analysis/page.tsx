@@ -262,6 +262,10 @@ export default function Page() {
           <Link href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/fiscal-health-composite" style={link}>
+            4指標統合の財政健全度スコアを見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

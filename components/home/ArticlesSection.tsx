@@ -10,12 +10,19 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "財政健全度スコア(4指標統合)",
+    href: "/articles/fiscal-health-composite",
+    emoji: "🏅",
+    desc: "独自の複合指標で算出。夕張市が桁違いの最下位という結果に。",
+    tag: "finance",
+    fresh: true,
+  },
+  {
     title: "実質公債費比率ランキング分析",
     href: "/articles/debt-service-ratio-analysis",
     emoji: "💳",
     desc: "夕張市が突出。東京23区は軒並みマイナスの好対照。",
     tag: "finance",
-    fresh: true,
   },
   {
     title: "教育費ランキング分析",
@@ -23,7 +30,6 @@ const articles: {
     emoji: "🏫",
     desc: "北海道の小さな町が上位独占。人口規模との関係を解説。",
     tag: "child",
-    fresh: true,
   },
   {
     title: "外国人人口比率ランキング分析",

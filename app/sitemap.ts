@@ -101,6 +101,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/restaurant-density",
     "/articles/balance-ratio-analysis",
     "/articles/debt-service-ratio-analysis",
+    "/articles/fiscal-health-composite",
     "/articles/education-expense-analysis",
     "/articles/marriage-rate-analysis",
     "/articles/vacant-house-analysis",
