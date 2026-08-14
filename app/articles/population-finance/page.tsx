@@ -1,6 +1,7 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 import Link from "next/link";
 
 
@@ -198,6 +199,16 @@ export default function Page() {
           強化する道筋があることも示しています。
         </p>
 
+        <PersonalNote>
+          行政にいた頃から今のデータコンサルの仕事まで通じて
+          感じているのは、財政力指数のような1つの数字だけでは
+          意思決定できないということです。同じ財政力指数の
+          低さでも、税収基盤が弱いのか、人口規模のわりに
+          維持すべき施設が多いのか、一時的な要因なのかで、
+          必要な対策は全く変わります。このサイトでも、
+          ランキングを示すだけでなく「その数字の裏側に何が
+          あるのか」まで考察することを意識しています。
+        </PersonalNote>
 
         <p>
           <Link href="/articles/tax-composition" style={link}>

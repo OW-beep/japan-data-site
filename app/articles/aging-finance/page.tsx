@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 
 export const metadata = {
@@ -288,6 +289,17 @@ export default function Page() {
           背景にある産業構造まで見なければ、将来の持続性を
           正しく評価することはできません。
         </p>
+
+        <PersonalNote>
+          自治体の仕事をしていた頃、財政力指数が低い自治体を
+          「行政サービスが悪い自治体」と単純に見てはいけないと
+          感じたことがあります。人口が減っても、学校・公民館・
+          道路といった施設は簡単には減らせず、住民一人あたりで
+          見ると維持コストがむしろ重くなっていくからです。
+          財政力指数の低さは「サービスが悪い」のではなく、
+          「必要なものを維持するだけでもお金がかかる」という
+          構造的な問題を映していることが多いと感じています。
+        </PersonalNote>
 
         <p>
           本サイトの財政力指数ランキング分析や、人口規模と

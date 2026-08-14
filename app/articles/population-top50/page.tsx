@@ -1,6 +1,7 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import JsonLd from "@/components/JsonLd";
 import Link from "next/link";
 
 export const metadata = {
@@ -55,13 +56,43 @@ export default function Page() {
   const top50CountShare =
     (50 / municipalities.length) * 100;
 
+  const lowDensityInTop50 = [...ranking]
+    .filter((c) => c.populationDensity != null)
+    .sort((a, b) => (a.populationDensity ?? 0) - (b.populationDensity ?? 0))
+    .slice(0, 5);
+
+  const highAgingInTop50 = [...ranking]
+    .filter((c) => c.elderlyPopulation != null)
+    .map((c) => ({
+      ...c,
+      agingRate: (c.elderlyPopulation ?? 0) / c.population * 100,
+    }))
+    .sort((a, b) => b.agingRate - a.agingRate)
+    .slice(0, 5);
+
+  const faq = [
+    {
+      q: "人口TOP50の自治体だけで、全国人口の何%を占めていますか？",
+      a: `約${top50Share.toFixed(1)}%です。全国${municipalities.length.toLocaleString()}自治体のうち、わずか${top50CountShare.toFixed(1)}%にあたる50自治体に、これだけの人口が集中しています。`,
+    },
+    {
+      q: "人口が多いのに人口密度が低い自治体はありますか？",
+      a: `あります。人口TOP50の中で最も人口密度が低いのは${lowDensityInTop50[0].name}(人口${lowDensityInTop50[0].population.toLocaleString()}人、人口密度${lowDensityInTop50[0].populationDensity?.toLocaleString()}人/km²)です。合併によって広大な面積を持つに至った政令指定都市に、この傾向が見られます。`,
+    },
+    {
+      q: "人口が多いのに高齢化率が高い自治体はありますか？",
+      a: `あります。人口TOP50の中で高齢化率が最も高いのは${highAgingInTop50[0].name}(人口${highAgingInTop50[0].population.toLocaleString()}人、高齢化率${highAgingInTop50[0].agingRate.toFixed(1)}%)です。かつて工業都市として栄えた大都市ほど、この傾向が強く出ています。`,
+    },
+  ];
+
   return (
     <ArticleLayout
       title="人口ランキングTOP50分析"
-      summary="全国自治体の人口データを分析しました。上位50自治体だけで全国人口の何割を占めているのか、実際の数字で見ていきます。"
+      summary={`全国自治体のわずか${top50CountShare.toFixed(1)}%にあたる50自治体に、人口の${top50Share.toFixed(1)}%が集中しています。さらに人口TOP50の中身を見ると、${lowDensityInTop50[0].name}のように人口は多いのに人口密度が低い都市や、${highAgingInTop50[0].name}のように大都市なのに高齢化率が30%を超える都市もあり、「人口が多い=都会的で若い」とは限らないことが分かりました。`}
       heroLabel="TOP50平均人口"
       heroValue={`${average.toLocaleString()}人`}
       rankingLink="/ranking/population"
+      path="/articles/population-top50"
       tags={["population"]}
       publishedAt="2026-02-06"
       top3={[
@@ -243,6 +274,78 @@ export default function Page() {
           いつ時点の順位かを把握できます。
         </p>
       </div>
+
+      <div style={box}>
+        <h2>人口は多いのに、中身は全然違う</h2>
+
+        <p>
+          人口TOP50は一見「都会的で豊かな都市」の集まりに
+          見えますが、中身を見ると意外な多様性があります。
+          人口密度が最も低いのは{lowDensityInTop50[0].name}
+          (人口{lowDensityInTop50[0].population.toLocaleString()}
+          人、人口密度{lowDensityInTop50[0].populationDensity?.toLocaleString()}
+          人/km²)で、これは平成の大合併で広大な山間部を
+          市域に取り込んだことが主な要因です。人口規模と
+          「都会らしさ」は、必ずしも一致しません。
+        </p>
+
+        <RankingBarChart
+          items={lowDensityInTop50.map((c) => ({
+            name: c.name,
+            value: c.populationDensity ?? 0,
+            displayValue: `${(c.populationDensity ?? 0).toLocaleString()}人/km²`,
+          }))}
+          barColor="#059669"
+        />
+
+        <p style={{ marginTop: 16 }}>
+          高齢化率で見ても意外な結果が出ます。人口TOP50の
+          中で高齢化率が最も高いのは{highAgingInTop50[0].name}
+          (高齢化率{highAgingInTop50[0].agingRate.toFixed(1)}%)
+          で、これは地方の過疎地域とほぼ同水準です。かつて
+          炭鉱・製鉄などの重工業で急速に人口が増えた都市
+          ほど、当時流入した世代がそのまま高齢化し、
+          高齢化率を押し上げる傾向があります。「人口が
+          多い都市は若い」という直感は、必ずしも正しく
+          ありません。
+        </p>
+
+        <RankingBarChart
+          items={highAgingInTop50.map((c) => ({
+            name: c.name,
+            value: c.agingRate,
+            displayValue: `${c.agingRate.toFixed(1)}%`,
+          }))}
+          barColor="#dc2626"
+        />
+      </div>
+
+      <div style={box}>
+        <h2>Q&amp;A：人口ランキングTOP50についてよくある質問</h2>
+
+        {faq.map((item) => (
+          <p key={item.q}>
+            <strong>Q. {item.q}</strong>
+            <br />
+            A. {item.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
 
       <div style={box}>
         <h2>TOP50以外の自治体にも目を向ける</h2>

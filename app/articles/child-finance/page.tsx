@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/child-finance" },
@@ -251,6 +252,16 @@ export default function Page() {
           財源の中でいかに子育て支援を維持するかという
           課題が続いているのが実情です。
         </p>
+
+        <PersonalNote>
+          自治体を見ていて意外だったのは、「子育て世帯が
+          増えている=財政が楽になる」わけではないという点です。
+          子どもが増えれば、保育所・学校・子育て支援などの
+          行政需要もそのぶん増えます。人口増加はまちの活気と
+          いう意味では良いニュースですが、財政的には新たな
+          投資が必要になる局面でもあり、単純に「良いこと」
+          とだけ捉えるのは実態と少しずれていると感じます。
+        </PersonalNote>
       </div>
 
       <div style={box}>

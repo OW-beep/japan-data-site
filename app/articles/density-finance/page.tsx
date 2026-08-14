@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/density-finance" },
@@ -243,6 +244,18 @@ export default function Page() {
           地域にどのような産業・施設が立地しているかを
           あわせて確認することが欠かせません。
         </p>
+
+        <PersonalNote>
+          人口密度が低い自治体を見ていて感じたのは、道路や
+          上下水道といったインフラは、人口密度が低いほど
+          「広い面積に薄く」整備・維持しなければならない
+          という単純な事実です。同じ人口でも、密集して
+          住んでいれば道路1kmあたりの利用者は多くなりますが、
+          点在していれば同じ距離を維持しても利用者は少ない
+          ままです。財政力指数の低さの背景には、こうした
+          地理的な条件による「効率の悪さ」が隠れている
+          ケースが多いと感じています。
+        </PersonalNote>
 
         <p>
           <Link href="/ranking/finance" style={link}>

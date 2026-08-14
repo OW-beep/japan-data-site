@@ -2,6 +2,7 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
+import JsonLd from "@/components/JsonLd";
 import Link from "next/link";
 
 export const metadata = {
@@ -39,6 +40,33 @@ export default function Page() {
     (a, b) => b[1] - a[1]
   )[0];
 
+  const finRanking = ranking.filter((c) => c.financeIndex != null);
+  const avgFinTop50 =
+    finRanking.reduce((s, c) => s + (c.financeIndex ?? 0), 0) /
+    finRanking.length;
+
+  const allWithFin = getMunicipalities().filter(
+    (c) => c.financeIndex != null
+  );
+  const avgFinAll =
+    allWithFin.reduce((s, c) => s + (c.financeIndex ?? 0), 0) /
+    allWithFin.length;
+
+  const largest = [...ranking].sort(
+    (a, b) => b.population - a.population
+  )[0];
+
+  const faq = [
+    {
+      q: "高齢化率TOP50自治体の財政力指数は、全国平均と比べてどうですか？",
+      a: `TOP50自治体の財政力指数の平均は${avgFinTop50.toFixed(3)}で、全国平均の${avgFinAll.toFixed(3)}を大きく下回ります。高齢化率が高い自治体ほど税収基盤が弱く、財政的にも厳しい状況にあることが数字で裏付けられました。`,
+    },
+    {
+      q: "高齢化率TOP50の中で、最も人口が多い自治体はどこですか？",
+      a: `${largest.name}(人口${largest.population.toLocaleString()}人、高齢化率${largest.rate.toFixed(1)}%)です。TOP50の大半が人口3,000人未満の小規模町村である中、この自治体は例外的な規模です。`,
+    },
+  ];
+
   return (
     <ArticleLayout
       title="高齢化率ランキングTOP50分析"
@@ -46,6 +74,7 @@ export default function Page() {
       heroLabel="TOP50平均高齢化率"
       heroValue={`${average.toFixed(1)}%`}
       rankingLink="/ranking/aging"
+      path="/articles/aging-top50"
       tags={["aging"]}
       publishedAt="2026-03-06"
       top3={[
@@ -126,6 +155,57 @@ export default function Page() {
           単純平均では小規模自治体の影響が大きく出るためです。
         </p>
       </div>
+
+      <div style={box}>
+        <h2>財政力とのはっきりした関係</h2>
+
+        <p>
+          高齢化率TOP50自治体の財政力指数(自前の税収だけで
+          どれだけ行政サービスをまかなえるかを示す指標)を
+          平均すると{avgFinTop50.toFixed(3)}でした。全国
+          平均の{avgFinAll.toFixed(3)}と比べると、半分にも
+          届きません。高齢化が進むほど、現役世代からの
+          税収が細る一方で医療・介護の需要は増えるという
+          構造が、この数字にはっきりと表れています。
+        </p>
+
+        <p>
+          唯一の例外は{largest.name}(人口
+          {largest.population.toLocaleString()}人、高齢化率
+          {largest.rate.toFixed(1)}%)です。TOP50の中では
+          突出して人口規模が大きく、九州地方の中核的な
+          市でありながら、高齢化率でも上位に入るという、
+          「小さな町村の高齢化」とは異なる、大きな自治体
+          ならではの高齢化のかたちを示しています。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>Q&amp;A：高齢化率ランキングTOP50についてよくある質問</h2>
+
+        {faq.map((item) => (
+          <p key={item.q}>
+            <strong>Q. {item.q}</strong>
+            <br />
+            A. {item.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
 
       <div style={box}>
         <h2>高齢化率の高さは何を意味するのか</h2>

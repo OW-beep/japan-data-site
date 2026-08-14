@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/household-aging-ushape" },
@@ -235,6 +236,18 @@ export default function Page() {
           と掛け合わせることで、単純なランキングだけでは
           見えなかった構造を見つけることができました。
         </p>
+
+        <PersonalNote>
+          自治体で高齢者施策を見ていたとき、単独世帯の割合を
+          高齢化率と組み合わせて見るようになってから、地域の
+          見え方がかなり変わりました。単独世帯割合だけでは
+          「一人暮らしが多い地域」としか分かりませんが、
+          高齢化率とあわせると、それが「若い単身者の多い
+          活気ある地域」なのか「独居高齢者の見守りが必要な
+          地域」なのかが見えてきます。1つの指標だけで地域を
+          判断せず、複数の指標を掛け合わせて見る習慣は、
+          この仕事を通じて身についたものだと思います。
+        </PersonalNote>
 
         <p>
           <Link href="/ranking/household" style={link}>

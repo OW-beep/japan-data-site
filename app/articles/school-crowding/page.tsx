@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/school-crowding" },
@@ -141,6 +142,17 @@ export default function Page() {
           スピードに施設整備が追いつかないという構造的な
           タイムラグが生じやすいのです。
         </p>
+
+        <PersonalNote>
+          人口が急増している地域を見ていて感じるのは、
+          子育て世帯が一気に流入すると、人口統計上は
+          「成長している自治体」に見えても、保育所・学校・
+          学童などの整備が追いつかないという課題が起きやすい
+          ということです。人口が増えることは基本的に前向きな
+          変化ですが、急激な変化はそれはそれで別の負担を
+          生みます。人口増加も人口減少も、それだけでは
+          良い・悪いを単純に判断できないと感じています。
+        </PersonalNote>
       </div>
 
       <div style={box}>

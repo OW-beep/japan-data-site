@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/migration-child" },
@@ -255,6 +256,18 @@ export default function Page() {
           「転入超過1位」でも、その中身によって将来の
           人口構成に与える影響はまったく異なります。
         </p>
+
+        <PersonalNote>
+          今の仕事でデータを見ていて実感するのは、ある指標が
+          動いていることが分かっても、それだけでは「何が
+          起きているのか」は分からないということです。転入
+          超過にしても、若い世代が増えているのか、高齢の
+          Iターン移住者が増えているのかで意味は正反対に
+          なります。行政にいた頃は「正確なデータを作ること」
+          を重視していましたが、今はそれに加えて「その数字の
+          裏側に何があるのかを考えること」をより意識する
+          ようになりました。
+        </PersonalNote>
 
         <p>
           社会増減率ランキング分析の記事とあわせて読むことで、

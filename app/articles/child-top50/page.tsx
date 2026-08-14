@@ -1,6 +1,7 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import JsonLd from "@/components/JsonLd";
 import Link from "next/link";
 
 export const metadata = {
@@ -34,6 +35,34 @@ export default function Page() {
     (c) => c.population < 3000
   ).length;
 
+  const allMunis = getMunicipalities().filter(
+    (c) => c.birthRate != null && c.population >= 3000
+  );
+  const birthTop50Names = new Set(
+    [...allMunis]
+      .sort((a, b) => (b.birthRate ?? 0) - (a.birthRate ?? 0))
+      .slice(0, 50)
+      .map((c) => c.name)
+  );
+  const overlapCount = ranking.filter((c) =>
+    birthTop50Names.has(c.name)
+  ).length;
+
+  const kikuyo = ranking.find((c) => c.name.includes("菊陽町"));
+
+  const faq = [
+    {
+      q: "子ども人口割合TOP50は、出生率TOP50とどれくらい重なりますか？",
+      a: `重なりは${overlapCount}自治体(50分の${overlapCount})にとどまります。子ども比率は「今、その地域にどれだけ子どもが住んでいるか」、出生率は「その地域でどれだけ子どもが生まれているか」を示す別の指標のため、片方が高くてももう片方が高いとは限りません。`,
+    },
+    {
+      q: "子ども人口割合が高いのに出生率はそれほど高くない自治体はありますか？",
+      a: kikuyo
+        ? `あります。代表例が熊本県菊陽町(子ども比率${kikuyo.rate.toFixed(1)}%)です。TSMC(台湾積体電路製造)の熊本工場進出にともなう雇用創出で、子育て世代の転入が急増したことが要因とみられ、出生率そのものの上昇というより「転入による子ども比率の上昇」に近い動きです。`
+        : "地域によっては、出生率よりも子育て世代の転入(移住・宅地開発)によって子ども比率が押し上げられているケースがあります。",
+    },
+  ];
+
   return (
     <ArticleLayout
       title="子ども人口ランキングTOP50分析"
@@ -41,6 +70,7 @@ export default function Page() {
       heroLabel="TOP50平均子ども比率"
       heroValue={`${average.toFixed(1)}%`}
       rankingLink="/ranking/child"
+      path="/articles/child-top50"
       tags={["child"]}
       publishedAt="2026-02-27"
       top3={[
@@ -192,6 +222,64 @@ export default function Page() {
           データとして非常に興味深い事実です。
         </p>
       </div>
+
+      <div style={box}>
+        <h2>「子どもが多い街」と「出生率が高い街」は別物</h2>
+
+        <p>
+          今回、子ども人口割合TOP50と、出生率(合計特殊
+          出生率)TOP50を突き合わせたところ、重なっていた
+          のはわずか{overlapCount}自治体でした。半数以上の
+          自治体は、子ども比率は高いのに出生率ランキングでは
+          TOP50に入っていません。これは、子ども比率が
+          「今そこに住んでいる子どもの割合」を映す指標で
+          あるのに対し、出生率は「その地域でどれだけ子どもが
+          生まれているか」を映す指標であり、性質が異なる
+          ためです。
+        </p>
+
+        {kikuyo && (
+          <p>
+            分かりやすい例が熊本県菊陽町(子ども比率
+            {kikuyo.rate.toFixed(1)}%)です。台湾のTSMC
+            (台湾積体電路製造)による熊本工場進出で
+            雇用が急増し、子育て世代の転入が相次いだ
+            ことが、子ども比率を押し上げた主な要因と
+            みられます。出生率そのものが急上昇したという
+            より、「よそから子育て世帯が移り住んできた」
+            結果としての子ども比率上昇です。企業誘致や
+            雇用創出が、出生そのものより先に地域の人口
+            構成を変える典型例と言えます。
+          </p>
+        )}
+      </div>
+
+      <div style={box}>
+        <h2>Q&amp;A：子ども人口割合ランキングについてよくある質問</h2>
+
+        {faq.map((item) => (
+          <p key={item.q}>
+            <strong>Q. {item.q}</strong>
+            <br />
+            A. {item.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
 
       <div style={box}>
         <h2>まとめ</h2>

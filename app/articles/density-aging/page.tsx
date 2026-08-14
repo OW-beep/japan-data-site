@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/density-aging" },
@@ -267,6 +268,17 @@ export default function Page() {
           どの世代によって形成されたのかという視点が重要
           であることが分かります。
         </p>
+
+        <PersonalNote>
+          コンサルとして自治体のデータを見るようになってから
+          特に意識するようになったのは、自治体全体の平均が
+          「問題なし」に見えても、特定の地区だけを見ると
+          課題が集中していることが珍しくない、という点です。
+          高密度な自治体でも、旧市街地の一角だけ極端に高齢化
+          が進んでいるケースがあり、自治体単位の数字だけを
+          見て「この街は大丈夫」と判断してしまうのは危険だと
+          感じています。
+        </PersonalNote>
 
         <p>
           <Link href="/ranking/density" style={link}>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/shopping-access" },
@@ -217,6 +218,17 @@ export default function Page() {
           考えられます。生活インフラの整備が、人口構成の変化
           に追いついていない典型的な例だと言えるでしょう。
         </p>
+
+        <PersonalNote>
+          人口が減っている地域を見ていて、買い物のしづらさは
+          特に分かりやすい変化の一つだと感じています。近所の
+          商店が1つ、また1つと閉まっていくことで、車を運転
+          できない高齢者ほど生活が不便になっていきます。
+          データ上は「小売店が少ない」という数字ですが、
+          その裏には長い時間をかけて商店が撤退していった
+          過程があり、単純にお店を1つ誘致すれば解決する
+          という話ではないと感じています。
+        </PersonalNote>
 
         <p>
           <Link href="/ranking/retail-access" style={link}>

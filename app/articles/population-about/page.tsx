@@ -4,6 +4,8 @@ import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
+import AdSense from "@/components/AdSense";
+import JsonLd from "@/components/JsonLd";
 import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
@@ -66,6 +68,21 @@ export default function Page() {
   const million = municipalities.filter(
     (c) => c.population >= 1000000
   );
+
+  const faq = [
+    {
+      q: "本サイトの人口ランキングは何の統計をもとにしていますか？",
+      a: "国勢調査による人口です。住民基本台帳人口(役所への届出ベース)とは異なり、調査時点の実際の居住実態に基づいています。",
+    },
+    {
+      q: "政令指定都市の「区」はランキングに入りますか？",
+      a: "入りません。横浜市港北区のような政令指定都市の区は独立した自治体ではないため、全国ランキングの対象からは除外し、各市のページに内訳として掲載しています。一方、東京都の特別区(千代田区など)は法律上独立した地方公共団体のため、ランキングの対象に含めています。",
+    },
+    {
+      q: "人口が多い自治体ほど「良い自治体」と言えますか？",
+      a: "そうとは限りません。人口規模は行政サービスの効率性や税収規模を測る指標の一つですが、暮らしやすさは人口密度・高齢化率・財政力指数など複数の指標を組み合わせて見る必要があります。",
+    },
+  ];
 
   return (
     <div style={container}>
@@ -238,6 +255,31 @@ export default function Page() {
         嬉しいです。
       </PersonalNote>
 
+      <h2 style={heading}>Q&amp;A：人口ランキングについてよくある質問</h2>
+
+      {faq.map((item) => (
+        <p key={item.q}>
+          <strong>Q. {item.q}</strong>
+          <br />
+          A. {item.a}
+        </p>
+      ))}
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
+
       <h2 style={heading}>人口ランキングの活用例</h2>
 
       <p>
@@ -269,6 +311,8 @@ export default function Page() {
           100万人都市一覧を見る
         </Link>
       </p>
+
+      <AdSense />
 
       <AuthorByline />
     </div>

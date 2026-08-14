@@ -1,6 +1,7 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 import Link from "next/link";
 
 export const metadata = {
@@ -172,6 +173,19 @@ export default function Page() {
           あわせて見ることで、こうした施策を実行するための
           財政的な余力がどの程度あるかも確認できます。
         </p>
+
+        <PersonalNote>
+          人口減少地域を実際に見ると、統計だけでは分からない
+          ことがかなりあります。人口が減っている地域では、
+          単に「人がいなくなる」というより、それによって
+          地域の機能そのものが少しずつ変化していく印象が
+          あります。商店がなくなったり、公共交通の本数が
+          減ったり、学校の統廃合が進んだりすることで、さらに
+          生活の利便性が下がり、それが若い世代の転出につながる
+          という循環が起きています。社会増減率のプラス・
+          マイナスという数字の裏には、こうした地域の変化の
+          積み重ねがあります。
+        </PersonalNote>
       </div>
 
       <div style={box}>

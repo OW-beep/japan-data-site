@@ -4,6 +4,7 @@ import ArticleTags from "@/components/ArticleTags";
 import PublishedDate from "@/components/PublishedDate";
 import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AdSense from "@/components/AdSense";
 import JsonLd from "@/components/JsonLd";
 import meta from "@/data/meta.json";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
@@ -131,6 +132,8 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
   <div>
     {children}
   </div>
+
+  <AdSense />
 
   <AuthorByline />
 

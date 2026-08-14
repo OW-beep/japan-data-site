@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/welfare-aging" },
@@ -156,6 +157,18 @@ export default function Page() {
           対応」と「都市型福祉ニーズへの対応」を分けて
           考える必要があることを、この数字は教えてくれます。
         </p>
+
+        <PersonalNote>
+          自治体で高齢者福祉に関わっていたとき強く感じたのは、
+          「高齢化率」という1つの数字だけでは、地域の高齢者
+          問題は判断できないということです。同じ高齢化率20%
+          でも、高齢者が元気で地域活動に参加している地域と、
+          独居高齢者が多く、移動や買い物、医療へのアクセスに
+          課題を抱えている地域とでは、必要な施策がまったく
+          違います。高齢者の「数」よりも、どんな世帯構成で、
+          どこに住み、どうやって生活しているかの方が、行政
+          サービスを考えるうえでは重要だと感じています。
+        </PersonalNote>
       </div>
 
       <div style={box}>

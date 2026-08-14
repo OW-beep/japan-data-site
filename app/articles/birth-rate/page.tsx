@@ -6,6 +6,7 @@ import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import AdSense from "@/components/AdSense";
 import JsonLd from "@/components/JsonLd";
 import meta from "@/data/meta.json";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
@@ -380,6 +381,8 @@ export default function Page() {
           })),
         }}
       />
+
+      <AdSense />
 
       <AuthorByline />
     </div>
