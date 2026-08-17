@@ -256,6 +256,10 @@ export default function Page() {
           <Link href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/dentist-access-analysis" style={link}>
+            歯科医師数ランキング分析を見る
+          </Link>
         </p>
       </div>
 

@@ -51,7 +51,7 @@ export default function DentistRankingPage() {
       <DataAsOf />
 
       <a
-        href="/articles/doctors-analysis"
+        href="/articles/dentist-access-analysis"
         style={{
           display: "inline-block",
           marginBottom: 20,
@@ -64,7 +64,7 @@ export default function DentistRankingPage() {
           textDecoration: "none",
         }}
       >
-        📖 医師数ランキング分析記事もあわせて読む →
+        📖 歯科医師数ランキング分析記事を読む →
       </a>
 
       <MetricBox

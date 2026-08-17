@@ -106,6 +106,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/industry-diversity-index",
     "/articles/young-family-attractiveness-index",
     "/articles/living-infrastructure-index",
+    "/articles/dentist-access-analysis",
     "/articles/education-expense-analysis",
     "/articles/marriage-rate-analysis",
     "/articles/vacant-house-analysis",

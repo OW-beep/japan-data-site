@@ -10,12 +10,19 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "歯科医師数ランキング分析",
+    href: "/articles/dentist-access-analysis",
+    emoji: "🦷",
+    desc: "北海道当別町が2位。歯学部のある「大学城下町」効果。",
+    tag: "aging",
+    fresh: true,
+  },
+  {
     title: "子育て世代吸引力指数(複合指数)",
     href: "/articles/young-family-attractiveness-index",
     emoji: "👨‍👩‍👧",
     desc: "東京都心区が上位独占。だが島根の小さな町も食い込む。",
     tag: "child",
-    fresh: true,
   },
   {
     title: "生活基盤充実度指数(複合指数)",
