@@ -251,6 +251,10 @@ export default function Page() {
           <Link href="/articles/household-analysis" style={link}>
             単独世帯割合ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/young-family-attractiveness-index" style={link}>
+            子育て世代吸引力指数(複合指数)を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

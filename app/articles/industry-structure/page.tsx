@@ -231,6 +231,10 @@ export default function Page() {
             完全失業率ランキング分析を見る
           </Link>
           {" ｜ "}
+          <Link href="/articles/industry-diversity-index" style={link}>
+            産業の多様性指数(HHI)を見る
+          </Link>
+          {" ｜ "}
           <Link href="/articles/density-finance" style={link}>
             人口密度と財政力指数の関係を見る
           </Link>

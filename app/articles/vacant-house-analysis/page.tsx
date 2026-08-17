@@ -257,6 +257,10 @@ export default function Page() {
           <Link href="/articles/decline" style={link}>
             社会増減率ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/living-infrastructure-index" style={link}>
+            生活基盤充実度指数(複合指数)を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

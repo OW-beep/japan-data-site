@@ -290,6 +290,10 @@ export default function Page() {
           <Link href="/articles/tax-composition" style={link}>
             財政の中身分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/industry-diversity-index" style={link}>
+            産業の多様性指数(HHI)を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

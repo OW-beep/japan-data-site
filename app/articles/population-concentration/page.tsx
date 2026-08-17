@@ -254,6 +254,10 @@ export default function Page() {
           <Link href="/articles/population-about" style={link}>
             人口ランキングとは？を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/elderly-support-composite" style={link}>
+            高知県の医療・福祉格差を見る(高齢者支援体制スコア)
+          </Link>
         </p>
       </div>
     </ArticleLayout>

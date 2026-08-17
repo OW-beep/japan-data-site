@@ -264,6 +264,10 @@ export default function Page() {
           <Link href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/elderly-support-composite" style={link}>
+            高齢者支援体制スコア(複合指数)を見る
+          </Link>
         </p>
       </div>
 

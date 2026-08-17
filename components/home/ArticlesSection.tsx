@@ -10,12 +10,41 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "子育て世代吸引力指数(複合指数)",
+    href: "/articles/young-family-attractiveness-index",
+    emoji: "👨‍👩‍👧",
+    desc: "東京都心区が上位独占。だが島根の小さな町も食い込む。",
+    tag: "child",
+    fresh: true,
+  },
+  {
+    title: "生活基盤充実度指数(複合指数)",
+    href: "/articles/living-infrastructure-index",
+    emoji: "🏘️",
+    desc: "下位は熱海市・那須町。別荘地特有の「空き家」事情とは。",
+    tag: "aging",
+    fresh: true,
+  },
+  {
+    title: "産業の多様性指数(HHI)",
+    href: "/articles/industry-diversity-index",
+    emoji: "🏭",
+    desc: "「多様性=強靭」ではなかった。一極集中ほど財政が豊かという逆説。",
+    tag: "finance",
+  },
+  {
+    title: "高齢者支援体制スコア(複合指数)",
+    href: "/articles/elderly-support-composite",
+    emoji: "🏥",
+    desc: "同じ高齢化率でも支援体制は別物。群馬の村と高知の町を比較。",
+    tag: "aging",
+  },
+  {
     title: "財政健全度スコア(4指標統合)",
     href: "/articles/fiscal-health-composite",
     emoji: "🏅",
     desc: "独自の複合指標で算出。夕張市が桁違いの最下位という結果に。",
     tag: "finance",
-    fresh: true,
   },
   {
     title: "実質公債費比率ランキング分析",
