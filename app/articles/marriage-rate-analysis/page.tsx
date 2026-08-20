@@ -231,6 +231,10 @@ export default function Page() {
           <Link href="/articles/household-analysis" style={link}>
             単独世帯割合ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/divorce-rate-analysis" style={link}>
+            離婚率ランキング分析を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

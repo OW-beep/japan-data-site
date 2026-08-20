@@ -236,6 +236,14 @@ export default function Page() {
             医師数ランキング分析を見る
           </Link>
           {" ｜ "}
+          <Link href="/articles/pharmacist-access-analysis" style={link}>
+            薬剤師数ランキング分析を見る
+          </Link>
+          {" ｜ "}
+          <Link href="/articles/hospital-access-analysis" style={link}>
+            病院数ランキング分析を見る
+          </Link>
+          {" ｜ "}
           <Link href="/articles/elderly-support-composite" style={link}>
             高齢者支援体制スコア(複合指数)を見る
           </Link>

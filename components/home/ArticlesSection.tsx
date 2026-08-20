@@ -10,12 +10,34 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "離婚率ランキング分析",
+    href: "/articles/divorce-rate-analysis",
+    emoji: "💔",
+    desc: "西日本で高く、東北・北陸で低い。都道府県別の地域差を分析。",
+    tag: "population",
+    fresh: true,
+  },
+  {
+    title: "病院数ランキング分析",
+    href: "/articles/hospital-access-analysis",
+    emoji: "🏥",
+    desc: "病院ゼロでも診療所380軒。沖縄・竹富町の医療の工夫。",
+    tag: "aging",
+  },
+  {
+    title: "薬剤師数ランキング分析",
+    href: "/articles/pharmacist-access-analysis",
+    emoji: "💊",
+    desc: "都心区に加え「研究医療都市」というもう1つのパターン。",
+    tag: "aging",
+    fresh: true,
+  },
+  {
     title: "歯科医師数ランキング分析",
     href: "/articles/dentist-access-analysis",
     emoji: "🦷",
     desc: "北海道当別町が2位。歯学部のある「大学城下町」効果。",
     tag: "aging",
-    fresh: true,
   },
   {
     title: "子育て世代吸引力指数(複合指数)",

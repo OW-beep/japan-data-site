@@ -65,6 +65,17 @@ export const dataSources: Record<string, DataSource> = {
     ...SSDSE_BASE,
     dataYear: "2022年(医師・歯科医師・薬剤師統計)",
   },
+  pharmacist: {
+    ...SSDSE_BASE,
+    dataYear: "2022年(医師・歯科医師・薬剤師統計)",
+    notes: "勤務地ベースの集計のため、病院・研究機関・薬局チェーン本部がある自治体に数値が集中しやすい点にご注意ください。",
+  },
+  hospital: {
+    sourceName: "厚生労働省「医療施設調査」(e-Stat)",
+    dataYear: "2023年",
+    scope: "全国1,741市区町村",
+    notes: "病院(20床以上)と診療所(20床未満)は統計上区別されています。人口が少ない自治体ほど、1施設の増減で人口あたり換算値が大きく変動する点にご注意ください。",
+  },
   finance: {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
     dataYear: "2023年度決算",
@@ -170,6 +181,11 @@ export const dataSources: Record<string, DataSource> = {
   "marriage-rate": {
     ...SSDSE_BASE,
     dataYear: "2022年",
+  },
+  "divorce-rate": {
+    ...SSDSE_BASE,
+    dataYear: "2022年",
+    notes: "人口規模の小さい自治体では、件数の増減で数値が大きく振れやすい点にご注意ください。",
   },
   "recycling-rate": {
     sourceName:
