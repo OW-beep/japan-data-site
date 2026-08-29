@@ -115,6 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/education-expense-analysis",
     "/articles/marriage-rate-analysis",
     "/articles/divorce-rate-analysis",
+    "/articles/regional-block-disparity-report",
     "/articles/vacant-house-analysis",
     "/articles/daytime-ratio-analysis",
     "/articles/elderly-home-analysis",

@@ -258,6 +258,10 @@ export default function Page() {
           <Link href="/articles/elderly-support-composite" style={link}>
             高知県の医療・福祉格差を見る(高齢者支援体制スコア)
           </Link>
+          {" ｜ "}
+          <Link href="/articles/regional-block-disparity-report" style={link}>
+            地方ブロック格差レポートを見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

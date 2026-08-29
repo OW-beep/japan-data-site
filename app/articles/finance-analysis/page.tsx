@@ -216,6 +216,10 @@ export default function Page() {
           <Link href="/articles/welfare-aging" style={link}>
             民生費と高齢化率の意外な関係を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/regional-block-disparity-report" style={link}>
+            地方ブロック格差レポートを見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>
