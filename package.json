@@ -34,7 +34,7 @@
 
     "refresh:data": "npm run update:data && npm run merge:finance && npm run merge:ssdse && npm run merge",
 
-    "build": "next build",
+    "build": "chmod +x node_modules/.bin/* 2>/dev/null; next build",
     "start": "next start",
     "lint": "eslint"
   },
