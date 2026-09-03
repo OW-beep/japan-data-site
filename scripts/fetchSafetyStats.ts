@@ -35,6 +35,14 @@ const PREFECTURES = [
   "熊本県","大分県","宮崎県","鹿児島県","沖縄県",
 ];
 
+// 地域コードは 00000=全国、01000=北海道、02000=青森県... と
+// 1000刻みで47都道府県分割り振られている(estat:metaで確認済み)。
+const areaCodeToPref = new Map<string, string>();
+PREFECTURES.forEach((pref, i) => {
+  const code = String((i + 1) * 1000).padStart(5, "0");
+  areaCodeToPref.set(code, pref);
+});
+
 async function fetchIndicator(
   cat01: string
 ): Promise<{ time: string; values: Map<string, number> } | null> {
@@ -45,20 +53,34 @@ async function fetchIndicator(
       `&cdCat01=${cat01}` +
       `&cdTime=${time}`;
 
+    console.log("  URL:", url);
+
     const res = await fetch(url);
     const json = await res.json();
+
+    const result = json?.GET_STATS_DATA?.RESULT;
+    if (result && result.STATUS !== 0) {
+      console.log("  API STATUS:", result.STATUS, result.ERROR_MSG);
+    }
 
     const values = json?.GET_STATS_DATA?.STATISTICAL_DATA?.DATA_INF?.VALUE ?? [];
     const list: unknown[] = Array.isArray(values) ? values : [values];
 
+    console.log("  取得件数(生):", list.length);
+    if (list.length > 0) {
+      console.log("  1件目のサンプル:", JSON.stringify(list[0]));
+    } else {
+      console.log("  レスポンス概要:", JSON.stringify(json).slice(0, 800));
+    }
+
     const byPref = new Map<string, number>();
     for (const raw of list) {
       const v = raw as Record<string, string>;
-      const areaName = v["@areaname"] ?? v["@area"];
+      const areaCode = v["@area"];
       const value = Number(v["$"]);
-      if (!areaName || Number.isNaN(value)) continue;
-      const matched = PREFECTURES.find((p) => areaName.includes(p));
-      if (matched) byPref.set(matched, value);
+      if (!areaCode || Number.isNaN(value)) continue;
+      const pref = areaCodeToPref.get(areaCode);
+      if (pref) byPref.set(pref, value);
     }
 
     if (byPref.size >= 40) {
@@ -94,7 +116,9 @@ async function main() {
 
   let stats: Record<string, Record<string, unknown>> = {};
   if (fs.existsSync("data/prefectureStats.json")) {
-    stats = JSON.parse(fs.readFileSync("data/prefectureStats.json", "utf8"));
+    stats = JSON.parse(
+      fs.readFileSync("data/prefectureStats.json", "utf8").replace(/^\uFEFF/, "")
+    );
   }
 
   for (const pref of PREFECTURES) {
@@ -109,7 +133,7 @@ async function main() {
 
   fs.writeFileSync(
     "data/prefectureStats.json",
-    JSON.stringify(stats, null, 2),
+    "\uFEFF" + JSON.stringify(stats, null, 2),
     "utf8"
   );
 

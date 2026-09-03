@@ -82,7 +82,7 @@ export default function Page() {
       summary={`保育所定員・20代純移動率・婚姻率を組み合わせた独自の「子育て世代吸引力指数」を算出しました。上位は東京都心区が占める一方、島根県川本町や高知県仁淀川町のように、保育所定員が突出して手厚い小さな町も上位に食い込みました。`}
       heroLabel="子育て世代吸引力指数 全国1位"
       heroValue={`${top15[0].name} ${top15[0].attractScore.toFixed(1)}`}
-      rankingLink="/ranking/daycare"
+      rankingLink="/ranking/young-family-attractiveness-index"
       path="/articles/young-family-attractiveness-index"
       tags={["child"]}
       publishedAt="2026-08-15"

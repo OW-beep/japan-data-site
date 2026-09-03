@@ -1,7 +1,12 @@
 import prefectureStatsRaw from "@/data/prefectureStats.json";
 
 export type PrefectureStats = {
-  income?: number | null;
+  income?: number | null; // 単位:千円(年収)
+  incomeAgeGroup?: string | null;
+  crimeRate?: number | null; // 人口千人あたり
+  crimeRateYear?: string | null;
+  trafficAccidentRate?: number | null; // 人口10万人あたり
+  trafficAccidentRateYear?: string | null;
   lifeExpectancyMale?: number | null;
   lifeExpectancyFemale?: number | null;
 };

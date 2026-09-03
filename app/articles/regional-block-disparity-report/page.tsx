@@ -358,6 +358,10 @@ export default function Page() {
           <Link href="/articles/industry-diversity-index" style={link}>
             産業の多様性指数(HHI)を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/prefecture-income-analysis" style={link}>
+            都道府県別平均年収ランキング分析を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

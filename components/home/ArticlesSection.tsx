@@ -10,12 +10,26 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "都道府県別 平均年収ランキング分析",
+    href: "/articles/prefecture-income-analysis",
+    emoji: "💰",
+    desc: "静岡県は稼げて治安も良いが、交通事故はワースト1位。",
+    tag: "finance",
+    fresh: true,
+  },
+  {
+    title: "「豊かなベッドタウン」ランキング分析",
+    href: "/articles/bedroom-town-finance-analysis",
+    emoji: "🏘️",
+    desc: "市川市はなぜ財政力指数1.07？雇用なしでも豊かな街の謎。",
+    tag: "finance",
+  },
+  {
     title: "地方ブロック格差レポート",
     href: "/articles/regional-block-disparity-report",
     emoji: "🗾",
     desc: "関東はほぼ全て1位なのに出生率だけ最下位という逆説。",
     tag: "finance",
-    fresh: true,
   },
   {
     title: "離婚率ランキング分析",

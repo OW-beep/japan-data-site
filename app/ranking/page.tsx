@@ -49,6 +49,15 @@ const rankings = [
   { href: "/ranking/young-adult-migration", emoji: "🎒", label: "20代純移動率ランキング" },
   { href: "/ranking/recycling-rate", emoji: "♻️", label: "ごみのリサイクル率ランキング" },
   { href: "/ranking/community-center", emoji: "🏘️", label: "公民館数ランキング" },
+  { href: "/ranking/income", emoji: "💰", label: "平均年収ランキング(都道府県別)" },
+  { href: "/ranking/crime-rate", emoji: "🚨", label: "刑法犯認知件数ランキング(都道府県別)" },
+  { href: "/ranking/traffic-accident-rate", emoji: "🚗", label: "交通事故発生件数ランキング(都道府県別)" },
+  { href: "/ranking/fiscal-health-composite", emoji: "🏅", label: "財政健全度スコア(複合指数)" },
+  { href: "/ranking/elderly-support-composite", emoji: "🏥", label: "高齢者支援体制スコア(複合指数)" },
+  { href: "/ranking/industry-diversity-index", emoji: "🏭", label: "産業の多様性指数(複合指数)" },
+  { href: "/ranking/young-family-attractiveness-index", emoji: "👨‍👩‍👧", label: "子育て世代吸引力指数(複合指数)" },
+  { href: "/ranking/living-infrastructure-index", emoji: "🏘️", label: "生活基盤充実度指数(複合指数)" },
+  { href: "/ranking/bedroom-town-finance", emoji: "💼", label: "ベッドタウン財政力ランキング(複合指数)" },
 ];
 
 export default function Page() {

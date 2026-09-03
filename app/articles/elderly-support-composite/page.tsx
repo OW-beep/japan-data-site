@@ -91,7 +91,7 @@ export default function Page() {
       summary={`高齢化率が近い自治体同士を、医師数・老人ホーム定員・独居高齢者率を組み合わせた独自スコアで比較しました。高齢化率TOP300の中で、群馬県川場村(高齢化率${best10[0].agingRate.toFixed(1)}%)は支援体制が手厚い一方、高知県大豊町(高齢化率${worst10[0].agingRate.toFixed(1)}%)は同水準の高齢化率でありながら支援体制が薄いという、対照的な結果になりました。`}
       heroLabel="高齢者支援体制スコア 最上位(高齢化率TOP300中)"
       heroValue={`${best10[0].name} ${best10[0].supportScore.toFixed(1)}`}
-      rankingLink="/ranking/aging"
+      rankingLink="/ranking/elderly-support-composite"
       path="/articles/elderly-support-composite"
       tags={["aging"]}
       publishedAt="2026-08-15"

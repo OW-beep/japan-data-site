@@ -236,6 +236,10 @@ export default function Page() {
           <Link href="/articles/density-analysis" style={link}>
             人口密度ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link href="/articles/bedroom-town-finance-analysis" style={link}>
+            「豊かなベッドタウン」ランキング分析を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

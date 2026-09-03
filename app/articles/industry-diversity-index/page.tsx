@@ -88,7 +88,7 @@ export default function Page() {
       summary={`第1次・第2次・第3次産業の就業者比率から、産業の集中度を示すハーフィンダール指数(HHI)を算出しました。一般的には「産業が多様な方が経済は強靭」と語られますが、実際のデータでは正反対の結果に。サービス業に一極集中した都市部の自治体の財政力指数平均は${avgFinConcentrated.toFixed(3)}である一方、産業がバランスよく分散した農山漁村の平均は${avgFinDiverse.toFixed(3)}にとどまりました。`}
       heroLabel="産業一極集中度 全国1位"
       heroValue={`${top10[0].name} HHI ${top10[0].hhi.toFixed(3)}`}
-      rankingLink="/articles/industry-structure"
+      rankingLink="/ranking/industry-diversity-index"
       path="/articles/industry-diversity-index"
       tags={["finance"]}
       publishedAt="2026-08-15"

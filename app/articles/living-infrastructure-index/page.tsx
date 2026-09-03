@@ -85,7 +85,7 @@ export default function Page() {
       summary={`人口あたりの商業集積(小売・飲食店)、公民館数、空き家率を組み合わせた独自の「生活基盤充実度指数」を算出しました。下位には熱海市・那須町など観光・温泉地が並びましたが、これは別荘地特有の空き家率の高さが影響している可能性があります。`}
       heroLabel="生活基盤充実度指数 全国1位"
       heroValue={`${top10[0].name} ${top10[0].livabilityScore.toFixed(1)}`}
-      rankingLink="/ranking/retail-access"
+      rankingLink="/ranking/living-infrastructure-index"
       path="/articles/living-infrastructure-index"
       tags={["aging"]}
       publishedAt="2026-08-15"

@@ -57,6 +57,14 @@ export default function IncomeRankingPage() {
         </div>
       ) : (
         <>
+          <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 20, lineHeight: 1.8 }}>
+            厚生労働省「賃金構造基本統計調査」(2023年、一般労働者・
+            男女計・全年齢・企業規模計)の所定内給与額(月額)×12か月＋
+            年間賞与その他特別給与額から算出した推計年収です。
+            市区町村単位のデータは公表されていないため、都道府県単位
+            のみの掲載です。
+          </p>
+
           <AdSense />
 
           <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 20 }}>
@@ -64,7 +72,7 @@ export default function IncomeRankingPage() {
               <tr>
                 <th style={th}>順位</th>
                 <th style={th}>都道府県</th>
-                <th style={th}>平均年収</th>
+                <th style={th}>推計年収</th>
               </tr>
             </thead>
             <tbody>
@@ -73,7 +81,7 @@ export default function IncomeRankingPage() {
                   <td style={td}>{i + 1}</td>
                   <td style={td}>{r.pref}</td>
                   <td style={td}>
-                    {r.stats.income?.toLocaleString()}円
+                    {((r.stats.income ?? 0) / 100).toFixed(1)}万円
                   </td>
                 </tr>
               ))}

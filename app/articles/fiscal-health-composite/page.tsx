@@ -87,7 +87,7 @@ export default function Page() {
       summary={`財政力指数・経常収支比率・自主財源比率・実質公債費比率という4つの財政指標を統合し、本サイト独自の「財政健全度スコア」を算出しました。全国${ranked.length.toLocaleString()}自治体の中で1位は愛知県飛島村。最下位の北海道夕張市は、2番目に低い自治体と比べても4倍以上のスコア差があり、他のどの自治体とも隔絶した位置にあります。`}
       heroLabel="財政健全度スコア 全国1位"
       heroValue={`${top10[0].name} ${top10[0].score.toFixed(1)}`}
-      rankingLink="/ranking/finance"
+      rankingLink="/ranking/fiscal-health-composite"
       path="/articles/fiscal-health-composite"
       tags={["finance"]}
       publishedAt="2026-08-15"
