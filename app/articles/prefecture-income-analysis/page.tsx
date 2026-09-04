@@ -252,6 +252,14 @@ export default function Page() {
             交通事故発生件数ランキングを見る
           </Link>
           {" ｜ "}
+          <Link href="/articles/crime-rate-analysis" style={link}>
+            刑法犯認知件数ランキング分析を見る
+          </Link>
+          {" ｜ "}
+          <Link href="/articles/traffic-accident-analysis" style={link}>
+            交通事故発生件数ランキング分析を見る
+          </Link>
+          {" ｜ "}
           <Link href="/articles/regional-block-disparity-report" style={link}>
             地方ブロック格差レポートを見る
           </Link>

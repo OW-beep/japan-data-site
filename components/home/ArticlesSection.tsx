@@ -10,12 +10,27 @@ const articles: {
   fresh?: boolean;
 }[] = [
   {
+    title: "交通事故発生件数ランキング分析",
+    href: "/articles/traffic-accident-analysis",
+    emoji: "🚗",
+    desc: "「田舎は車社会だから事故が多い」は誤解だった。",
+    tag: "population",
+    fresh: true,
+  },
+  {
+    title: "刑法犯認知件数ランキング分析",
+    href: "/articles/crime-rate-analysis",
+    emoji: "🚨",
+    desc: "大阪府が突出。都市化との相関を検証。",
+    tag: "population",
+    fresh: true,
+  },
+  {
     title: "都道府県別 平均年収ランキング分析",
     href: "/articles/prefecture-income-analysis",
     emoji: "💰",
     desc: "静岡県は稼げて治安も良いが、交通事故はワースト1位。",
     tag: "finance",
-    fresh: true,
   },
   {
     title: "「豊かなベッドタウン」ランキング分析",

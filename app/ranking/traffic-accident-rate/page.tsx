@@ -36,6 +36,23 @@ export default function TrafficAccidentRankingPage() {
 
       <DataAsOf />
 
+      <a
+        href="/articles/traffic-accident-analysis"
+        style={{
+          display: "inline-block",
+          marginBottom: 20,
+          padding: "10px 16px",
+          background: "#eef2ff",
+          color: "#4338ca",
+          borderRadius: 10,
+          fontWeight: 700,
+          fontSize: 14,
+          textDecoration: "none",
+        }}
+      >
+        📖 交通事故発生件数ランキング分析記事を読む →
+      </a>
+
       {!ready || ranking.length === 0 ? (
         <div
           style={{

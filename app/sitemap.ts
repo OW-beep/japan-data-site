@@ -127,6 +127,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/regional-block-disparity-report",
     "/articles/bedroom-town-finance-analysis",
     "/articles/prefecture-income-analysis",
+    "/articles/crime-rate-analysis",
+    "/articles/traffic-accident-analysis",
     "/articles/vacant-house-analysis",
     "/articles/daytime-ratio-analysis",
     "/articles/elderly-home-analysis",
