@@ -7,6 +7,8 @@ import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdSense from "@/components/AdSense";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import JsonLd from "@/components/JsonLd";
 import meta from "@/data/meta.json";
 import { SITE_URL, SITE_NAME } from "@/lib/site";
@@ -383,6 +385,10 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <BookRecommendation
+        books={[BOOKS.chihouShoumetsu2, BOOKS.chihouShoumetsu]}
+      />
 
       <AuthorByline />
     </div>

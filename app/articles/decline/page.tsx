@@ -2,6 +2,8 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import Link from "next/link";
 
 export const metadata = {
@@ -187,6 +189,8 @@ export default function Page() {
           積み重ねがあります。
         </PersonalNote>
       </div>
+
+      <BookRecommendation books={[BOOKS.chihouShoumetsu]} />
 
       <div style={box}>
         <h2>まとめ</h2>

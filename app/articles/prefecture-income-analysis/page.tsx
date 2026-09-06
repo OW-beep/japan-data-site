@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import { getPrefectureStats } from "@/lib/prefectureStats";
 import ArticleLayout from "@/components/ArticleLayout";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
@@ -223,6 +225,10 @@ export default function Page() {
             },
           })),
         }}
+      />
+
+      <BookRecommendation
+        books={[BOOKS.toukeigakuSaikyou, BOOKS.chiikiJinkouGensyou]}
       />
 
       <div style={box}>

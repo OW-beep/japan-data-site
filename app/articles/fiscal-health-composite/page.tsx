@@ -3,6 +3,8 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
@@ -259,6 +261,8 @@ export default function Page() {
           })),
         }}
       />
+
+      <BookRecommendation books={[BOOKS.jichitaiZaisei]} />
 
       <div style={box}>
         <h2>まとめ</h2>

@@ -2,6 +2,8 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import Link from "next/link";
 
 
@@ -201,6 +203,7 @@ export default function Page() {
           この総務省の算定方法にもとづくデータを使用しています。
         </p>
 
+        <BookRecommendation books={[BOOKS.jichitaiZaisei]} />
 
         <p>
           <Link href="/articles/tax-composition" style={link}>

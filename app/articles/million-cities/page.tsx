@@ -2,6 +2,8 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
@@ -361,6 +363,8 @@ export default function Page() {
           ポイントです。
         </p>
       </div>
+
+      <BookRecommendation books={[BOOKS.chihouShoumetsu]} />
 
       <div style={box}>
         <h2>まとめ</h2>
