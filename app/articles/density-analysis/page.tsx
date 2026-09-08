@@ -2,6 +2,8 @@ import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import Link from "next/link";
 
 
@@ -210,6 +212,7 @@ export default function Page() {
           中心区も上位に食い込んでくる可能性があります。
         </p>
 
+        <BookRecommendation books={[BOOKS.toshiWoTatamu]} />
 
         <p>
           <Link href="/articles/area-analysis" style={link}>

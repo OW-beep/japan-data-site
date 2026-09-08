@@ -1,6 +1,8 @@
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 import Link from "next/link";
 
 
@@ -193,6 +195,7 @@ export default function Page() {
           内訳をご確認ください。
         </p>
 
+        <BookRecommendation books={[BOOKS.chiikiJinkouGensyou]} />
 
         <p>
           <Link href="/articles/density-analysis" style={link}>

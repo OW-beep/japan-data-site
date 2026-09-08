@@ -2,6 +2,8 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import BookRecommendation from "@/components/BookRecommendation";
+import { BOOKS } from "@/lib/amazonBooks";
 
 export const metadata = {
   alternates: { canonical: "/articles/natural-change" },
@@ -247,6 +249,8 @@ export default function Page() {
           大きく振れる点にも留意してください。
         </p>
       </div>
+
+      <BookRecommendation books={[BOOKS.chiikiJinkouGensyou]} />
 
       <div style={box}>
         <h2>まとめ</h2>

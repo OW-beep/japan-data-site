@@ -29,7 +29,7 @@ export default function AdSense() {
       {/* AdSense */}
       <ins
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={{ display: "block", maxHeight: 300, overflow: "hidden" }}
         data-ad-client="ca-pub-4630812027939211"
         data-ad-slot="auto"
         data-ad-format="auto"
@@ -42,4 +42,6 @@ export default function AdSense() {
 const box: React.CSSProperties = {
   margin: "16px 0",
   textAlign: "center",
+  maxHeight: 300,
+  overflow: "hidden",
 };
