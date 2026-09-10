@@ -1,13 +1,112 @@
 @import "tailwindcss";
 
+/*
+ * デザイントークン
+ * ----------------------------------------------------------------
+ * 「行政統計のレポート・台帳」を思わせる、フラットで実直なトーン。
+ * 見出しに明朝(和文セリフ)、本文にゴシックという二書体構成で、
+ * 数字の強調色にはオレンジ寄りの朱色(ochre)を一箇所だけ使う。
+ * グラデーション・丸影・パステルの多用は避ける。
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --paper: #f2f3ee;       /* 背景(和紙のような、わずかに緑がかったグレー) */
+  --surface: #ffffff;     /* カード・パネルの地色 */
+  --ink: #1b221f;         /* 本文の基本色(純黒ではない墨色) */
+  --muted: #5b6259;       /* 補足テキスト */
+  --line: #dcded5;        /* 罫線・ボーダー */
+  --indigo: #223a5e;      /* 主要アクセント(藍色。リンク・見出し帯) */
+  --indigo-deep: #16283f; /* 主要アクセントの濃色(hover・パネル背景) */
+  --ochre: #a85c1c;       /* 数値・統計の強調色(朱色寄りのオレンジ) */
+  --ochre-soft: #f4e3d3;  /* 朱色の淡色(チップ背景など) */
+
+  --font-serif: "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "Noto Serif JP", serif;
+  --font-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic Medium",
+    "Yu Gothic", "Meiryo", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
   margin: 0;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.375rem; margin-bottom: 0.6em; }
+h3 { font-size: 1.125rem; }
+
+a {
+  color: var(--indigo);
+}
+
+strong {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/*
+ * 記事本文(ArticleLayoutのchildren、および一部ランキングページの
+ * 解説文)に適用する共通クラス。1行あたりの文字数を絞り、
+ * 行間を広めに取ることで「文字の壁」を避ける。
+ * 個別ページのstr_replace編集を最小限にするため、要素セレクタで
+ * まとめて当てている。
+ */
+.article-body h2 {
+  border-left: 4px solid var(--indigo);
+  padding-left: 12px;
+}
+
+.article-body p {
+  max-width: 34em;
+  line-height: 1.95;
+  margin: 0 0 1.1em;
+  color: var(--ink);
+}
+
+.article-body ul,
+.article-body ol {
+  max-width: 34em;
+  line-height: 1.9;
+}
+
+.article-body strong {
+  color: var(--indigo-deep);
+}
+
+/* 数値・固有名詞などを目立たせるための小さな部品群 */
+.stat-chip {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 4px;
+  background: var(--ochre-soft);
+  color: var(--ochre);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.9em;
+  margin: 2px 4px 2px 0;
+}
+
+.pull-note {
+  border-left: 3px solid var(--ochre);
+  background: var(--surface);
+  padding: 14px 18px;
+  margin: 1.2em 0;
+  font-size: 0.95em;
+  line-height: 1.85;
+  color: var(--ink);
 }

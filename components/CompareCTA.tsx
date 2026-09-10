@@ -12,8 +12,8 @@ export default function CompareCTA() {
         marginTop: 24,
         marginBottom: 24,
         padding: "18px 22px",
-        background: "linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%)",
-        borderRadius: 14,
+        background: "var(--indigo)",
+        borderLeft: "4px solid var(--ochre)",
         textDecoration: "none",
         color: "#fff",
       }}

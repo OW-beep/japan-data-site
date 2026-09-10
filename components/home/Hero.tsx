@@ -4,116 +4,75 @@ export default function Hero() {
   return (
     <section
       style={{
-        background:
-          "linear-gradient(135deg,#2563eb 0%,#0ea5e9 100%)",
+        background: "var(--indigo)",
         color: "#fff",
-        borderRadius: 20,
-        padding: "32px 28px 26px",
+        borderLeft: "6px solid var(--ochre)",
+        padding: "36px 32px 30px",
         marginBottom: 32,
-        boxShadow: "0 12px 24px rgba(37,99,235,.16)",
       }}
     >
-      <div
-        style={{
-          maxWidth: 960,
-          margin: "0 auto",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            display: "inline-block",
-            background: "rgba(255,255,255,.15)",
-            padding: "5px 14px",
-            borderRadius: 999,
-            fontWeight: 700,
-            fontSize: 12,
-            marginBottom: 14,
-          }}
-        >
-          🇯🇵 全国1741自治体データを毎年更新
-        </div>
-
+      <div style={{ maxWidth: 720 }}>
         <h1
           style={{
-            fontSize: 32,
-            lineHeight: 1.35,
-            fontWeight: 800,
-            marginBottom: 12,
+            fontFamily: "var(--font-serif)",
+            fontSize: 30,
+            lineHeight: 1.6,
+            fontWeight: 700,
+            marginBottom: 14,
           }}
         >
           日本全国の自治体データを
           <br />
-          ランキングとグラフで比較
+          ランキングとグラフで比較する
         </h1>
 
         <p
           style={{
-            maxWidth: 680,
-            margin: "0 auto",
             fontSize: 15,
-            lineHeight: 1.7,
-            opacity: 0.95,
+            lineHeight: 1.9,
+            opacity: 0.92,
+            marginBottom: 0,
           }}
         >
           人口・出生率・人口密度・高齢化率・子ども人口・面積・財政など、
           政府オープンデータをわかりやすく可視化。
-          全国1741自治体をランキング・比較・分析できます。
+          全国1,741自治体をランキング・比較・分析できます。
         </p>
 
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
             flexWrap: "wrap",
             gap: 10,
-            marginTop: 20,
+            marginTop: 24,
           }}
         >
-          <Link
-            href="/ranking/population"
-            style={primaryButton}
-          >
-            👑 人口ランキング
+          <Link href="/ranking/population" style={primaryButton}>
+            人口ランキング
           </Link>
 
-          <Link
-            href="/ranking/birth-rate"
-            style={secondaryButton}
-          >
-            👶 出生率ランキング
+          <Link href="/search" style={secondaryButton}>
+            自治体検索
           </Link>
 
-          <Link
-            href="/search"
-            style={secondaryButton}
-          >
-            🔍 自治体検索
-          </Link>
-
-          <Link
-            href="/compare"
-            style={secondaryButton}
-          >
-            ⚖️ 自治体比較
+          <Link href="/compare" style={secondaryButton}>
+            自治体比較
           </Link>
         </div>
 
         <div
           style={{
             display: "flex",
-            justifyContent: "center",
             flexWrap: "wrap",
-            gap: "8px 24px",
-            marginTop: 20,
-            paddingTop: 16,
-            borderTop: "1px solid rgba(255,255,255,.2)",
+            gap: "6px 28px",
+            marginTop: 26,
+            paddingTop: 18,
+            borderTop: "1px solid rgba(255,255,255,.25)",
           }}
         >
-          <Info number="1741+" label="自治体" />
+          <Info number="1,741" label="対象自治体" />
           <Info number="20+" label="ランキング" />
-          <Info number="2000+" label="データページ" />
-          <Info number="毎年更新" label="政府データ" />
+          <Info number="2,000+" label="データページ" />
         </div>
       </div>
     </section>
@@ -121,58 +80,38 @@ export default function Hero() {
 }
 
 const primaryButton = {
-  background: "#fff",
-  color: "#2563eb",
-  textDecoration: "none",
-  padding: "11px 18px",
-  borderRadius: 10,
-  fontWeight: 800,
-  fontSize: 13,
-} as const;
-
-const secondaryButton = {
-  background: "rgba(255,255,255,.15)",
+  background: "var(--ochre)",
   color: "#fff",
-  border: "1px solid rgba(255,255,255,.35)",
   textDecoration: "none",
-  padding: "11px 18px",
-  borderRadius: 10,
+  padding: "11px 20px",
   fontWeight: 700,
   fontSize: 13,
 } as const;
 
-function Info({
-  number,
-  label,
-}: {
-  number: string;
-  label: string;
-}) {
+const secondaryButton = {
+  background: "transparent",
+  color: "#fff",
+  border: "1px solid rgba(255,255,255,.4)",
+  textDecoration: "none",
+  padding: "11px 20px",
+  fontWeight: 700,
+  fontSize: 13,
+} as const;
+
+function Info({ number, label }: { number: string; label: string }) {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "baseline",
-        gap: 6,
-      }}
-    >
+    <div style={{ display: "flex", alignItems: "baseline", gap: 6 }}>
       <div
         style={{
-          fontSize: 18,
-          fontWeight: 800,
+          fontSize: 20,
+          fontWeight: 700,
+          fontFamily: "var(--font-serif)",
+          fontVariantNumeric: "tabular-nums",
         }}
       >
         {number}
       </div>
-
-      <div
-        style={{
-          fontSize: 12,
-          opacity: 0.85,
-        }}
-      >
-        {label}
-      </div>
+      <div style={{ fontSize: 12, opacity: 0.85 }}>{label}</div>
     </div>
   );
 }

@@ -112,9 +112,9 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
     {top3.map((item) => (
       <div
         key={item.rank}
-        style={topCard}
+        style={item.rank === 1 ? { ...topCard, borderTopColor: "var(--ochre)" } : topCard}
       >
-        <div style={rankStyle}>
+        <div style={item.rank === 1 ? { ...rankStyle, fontSize: 20 } : rankStyle}>
           #{item.rank}
         </div>
 
@@ -130,7 +130,9 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
   </div>
 
   <div>
-    {children}
+    <div className="article-body">
+      {children}
+    </div>
   </div>
 
   <AdSense />
@@ -156,32 +158,39 @@ padding: 24,
 };
 
 const titleStyle: React.CSSProperties = {
-fontSize: 36,
-fontWeight: 800,
+fontSize: 32,
+fontWeight: 700,
+lineHeight: 1.5,
+marginBottom: 10,
 };
 
 const summaryStyle: React.CSSProperties = {
-color: "#6b7280",
+color: "var(--muted)",
 marginBottom: 24,
+maxWidth: "34em",
+lineHeight: 1.9,
 };
 
 const hero: React.CSSProperties = {
-background:
-"linear-gradient(135deg,#2563eb,#1d4ed8)",
+background: "var(--indigo)",
 color: "white",
-padding: 30,
-borderRadius: 20,
-textAlign: "center",
+padding: "26px 30px",
+borderLeft: "6px solid var(--ochre)",
+textAlign: "left",
 marginBottom: 30,
 };
 
 const heroLabelStyle: React.CSSProperties = {
-fontSize: 18,
+fontSize: 14,
+opacity: 0.85,
+marginBottom: 6,
 };
 
 const heroValueStyle: React.CSSProperties = {
-fontSize: 48,
-fontWeight: 800,
+fontSize: 42,
+fontWeight: 700,
+fontFamily: "var(--font-serif)",
+fontVariantNumeric: "tabular-nums",
 };
 
 const topGrid: React.CSSProperties = {
@@ -193,15 +202,17 @@ marginBottom: 30,
 };
 
 const topCard: React.CSSProperties = {
-background: "#fff",
-border: "1px solid #e5e7eb",
-borderRadius: 16,
+background: "var(--surface)",
+border: "1px solid var(--line)",
+borderTop: "3px solid var(--indigo)",
 padding: 20,
 };
 
 const rankStyle: React.CSSProperties = {
-color: "#2563eb",
+color: "var(--ochre)",
 fontWeight: 700,
+fontFamily: "var(--font-serif)",
+fontSize: 15,
 };
 
 const nameStyle: React.CSSProperties = {
@@ -211,16 +222,17 @@ fontWeight: 700,
 
 const valueStyle: React.CSSProperties = {
 marginTop: 8,
-fontSize: 24,
-fontWeight: 800,
+fontSize: 22,
+fontWeight: 700,
+fontVariantNumeric: "tabular-nums",
 };
 
 const button: React.CSSProperties = {
 display: "inline-block",
 marginTop: 24,
-padding: "12px 18px",
-background: "#2563eb",
+padding: "12px 20px",
+background: "var(--indigo)",
 color: "white",
-borderRadius: 10,
 textDecoration: "none",
+fontWeight: 700,
 };

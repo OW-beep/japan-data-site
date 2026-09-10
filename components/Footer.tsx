@@ -6,7 +6,7 @@ export default function Footer() {
       <div style={container}>
 
         <section>
-          <h3>全国自治体データランキング</h3>
+          <h3 style={heading}>全国自治体データランキング</h3>
 
           <p style={text}>
             全国1741自治体の人口・出生率・高齢化率・
@@ -16,43 +16,43 @@ export default function Footer() {
         </section>
 
         <section>
-          <h3>人気ランキング</h3>
+          <h3 style={heading}>人気ランキング</h3>
 
           <ul style={list}>
-            <li><Link href="/ranking/population">人口ランキング</Link></li>
-            <li><Link href="/ranking/birth-rate">出生率ランキング</Link></li>
-            <li><Link href="/ranking/aging">高齢化率ランキング</Link></li>
-            <li><Link href="/ranking/child">子ども人口ランキング</Link></li>
-            <li><Link href="/ranking/density">人口密度ランキング</Link></li>
-            <li><Link href="/ranking/area">面積ランキング</Link></li>
+            <li><Link href="/ranking/population" style={footerLink}>人口ランキング</Link></li>
+            <li><Link href="/ranking/birth-rate" style={footerLink}>出生率ランキング</Link></li>
+            <li><Link href="/ranking/aging" style={footerLink}>高齢化率ランキング</Link></li>
+            <li><Link href="/ranking/child" style={footerLink}>子ども人口ランキング</Link></li>
+            <li><Link href="/ranking/density" style={footerLink}>人口密度ランキング</Link></li>
+            <li><Link href="/ranking/area" style={footerLink}>面積ランキング</Link></li>
           </ul>
         </section>
 
         <section>
-          <h3>探す</h3>
+          <h3 style={heading}>探す</h3>
 
           <ul style={list}>
-            <li><Link href="/prefecture">都道府県から探す</Link></li>
-            <li><Link href="/search">市区町村検索</Link></li>
-            <li><Link href="/compare">自治体比較ツール</Link></li>
-            <li><Link href="/articles">データ分析記事</Link></li>
+            <li><Link href="/prefecture" style={footerLink}>都道府県から探す</Link></li>
+            <li><Link href="/search" style={footerLink}>市区町村検索</Link></li>
+            <li><Link href="/compare" style={footerLink}>自治体比較ツール</Link></li>
+            <li><Link href="/articles" style={footerLink}>データ分析記事</Link></li>
           </ul>
         </section>
 
         <section>
-          <h3>サイト情報</h3>
+          <h3 style={heading}>サイト情報</h3>
 
           <ul style={list}>
-            <li><Link href="/about">サイトについて</Link></li>
-            <li><Link href="/privacy">プライバシーポリシー</Link></li>
-            <li><Link href="/terms">利用規約</Link></li>
-            <li><Link href="/contact">お問い合わせ</Link></li>
-            <li><Link href="/sitemap">サイトマップ</Link></li>
+            <li><Link href="/about" style={footerLink}>サイトについて</Link></li>
+            <li><Link href="/privacy" style={footerLink}>プライバシーポリシー</Link></li>
+            <li><Link href="/terms" style={footerLink}>利用規約</Link></li>
+            <li><Link href="/contact" style={footerLink}>お問い合わせ</Link></li>
+            <li><Link href="/sitemap" style={footerLink}>サイトマップ</Link></li>
           </ul>
         </section>
 
         <section>
-          <h3>運営者の他サイト</h3>
+          <h3 style={heading}>運営者の他サイト</h3>
 
           <ul style={list}>
             <li>
@@ -60,6 +60,7 @@ export default function Footer() {
                 href="https://data-mikke-lab.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={footerLink}
               >
                 データみっけ(都道府県別オープンデータ)
               </a>
@@ -69,6 +70,7 @@ export default function Footer() {
                 href="https://civic-scope-funabashi.vercel.app/"
                 target="_blank"
                 rel="noopener noreferrer"
+                style={footerLink}
               >
                 CivicScope船橋(船橋市データメディア)
               </a>
@@ -101,7 +103,7 @@ export default function Footer() {
 
 const footer: React.CSSProperties = {
   marginTop: 80,
-  background: "#111827",
+  background: "var(--indigo-deep)",
   color: "#fff",
 };
 
@@ -132,6 +134,15 @@ const list: React.CSSProperties = {
 const text: React.CSSProperties = {
   color: "#d1d5db",
   lineHeight: 1.8,
+};
+
+const heading: React.CSSProperties = {
+  color: "#fff",
+  fontFamily: "var(--font-serif)",
+};
+
+const footerLink: React.CSSProperties = {
+  color: "#d1d5db",
 };
 
 const bottom: React.CSSProperties = {

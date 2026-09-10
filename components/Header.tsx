@@ -5,7 +5,7 @@ export default function Header() {
     <header style={header}>
       <div style={container}>
         <Link href="/" style={logo}>
-          🇯🇵 全国自治体データランキング
+          全国自治体データランキング
         </Link>
 
         <nav style={nav}>
@@ -41,8 +41,8 @@ export default function Header() {
 }
 
 const header: React.CSSProperties = {
-  background: "#fff",
-  borderBottom: "1px solid #e5e7eb",
+  background: "var(--surface)",
+  borderBottom: "1px solid var(--line)",
   position: "sticky",
   top: 0,
   zIndex: 100,
@@ -63,10 +63,11 @@ const container: React.CSSProperties = {
 
 const logo: React.CSSProperties = {
   textDecoration: "none",
-  color: "#111827",
+  color: "var(--ink)",
+  fontFamily: "var(--font-serif)",
 
-  fontWeight: 800,
-  fontSize: 19,
+  fontWeight: 700,
+  fontSize: 18,
 };
 
 const nav: React.CSSProperties = {
