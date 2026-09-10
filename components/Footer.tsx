@@ -51,6 +51,31 @@ export default function Footer() {
           </ul>
         </section>
 
+        <section>
+          <h3>運営者の他サイト</h3>
+
+          <ul style={list}>
+            <li>
+              <a
+                href="https://data-mikke-lab.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                データみっけ(都道府県別オープンデータ)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://civic-scope-funabashi.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CivicScope船橋(船橋市データメディア)
+              </a>
+            </li>
+          </ul>
+        </section>
+
       </div>
 
       <div style={bottom}>

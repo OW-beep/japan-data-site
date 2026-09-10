@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import DataAsOf from "../../../components/DataAsOf";
 import AdSense from "../../../components/AdSense";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import {
   getPrefectureStats,
   hasPrefectureStatsData,
@@ -74,6 +75,16 @@ export default function CrimeRateRankingPage() {
           </p>
 
           <AdSense />
+
+          <RankingInsightFAQ
+            metricName="刑法犯認知件数(人口千人あたり)"
+            unitLabel="都道府県"
+            items={ranking.map((r) => ({
+              name: r.pref,
+              displayValue: `${r.stats.crimeRate?.toFixed(2)}件/千人`,
+            }))}
+            topNote="人口千人あたりの刑法犯認知件数が最も多く、治安面での注意が必要な水準であることを示します。"
+          />
 
           <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 20 }}>
             <thead>

@@ -53,6 +53,29 @@ export default function Page() {
         埋もれがちな公共データを、少しでも多くの人が使える形で発信していきたいと考えています。
       </p>
       <p style={p}>
+        同じ運営者が、オープンデータを使った他のサイトも運営しています。
+        <a
+          href="https://data-mikke-lab.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={link}
+        >
+          データみっけ
+        </a>
+        では都道府県別のオープンデータをランキング・比較形式で、
+        <a
+          href="https://civic-scope-funabashi.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={link}
+        >
+          CivicScope船橋
+        </a>
+        では船橋市のオープンデータを人口・子育て・防災など
+        分野別のダッシュボードで、それぞれ発信しています。
+      </p>
+
+      <p style={p}>
         お問い合わせは
         <a href="/contact" style={link}>
           お問い合わせページ

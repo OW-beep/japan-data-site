@@ -5,6 +5,7 @@ import Script from "next/script";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { SITE_URL, SITE_NAME, ADSENSE_CLIENT_ID } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -117,6 +118,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import RankCard from "../../../components/RankCard";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getIndustryDiversityScores } from "../../../lib/compositeScores";
 
 export const metadata: Metadata = {
@@ -46,6 +47,15 @@ export default function IndustryDiversityRankingPage() {
       </p>
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="産業多様性指数"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `${c.score.toFixed(3)}(${c.dominantLabel}${c.dominantShare.toFixed(0)}%)`,
+        }))}
+        topNote="特定の産業に偏らず、幅広い産業がバランス良く存在していることを示します。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((city, index) => (

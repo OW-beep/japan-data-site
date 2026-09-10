@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import DataAsOf from "../../../components/DataAsOf";
 import AdSense from "../../../components/AdSense";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import {
   getPrefectureStats,
   hasPrefectureStatsData,
@@ -77,6 +78,16 @@ export default function TrafficAccidentRankingPage() {
           </p>
 
           <AdSense />
+
+          <RankingInsightFAQ
+            metricName="交通事故発生件数(人口10万人あたり)"
+            unitLabel="都道府県"
+            items={ranking.map((r) => ({
+              name: r.pref,
+              displayValue: `${r.stats.trafficAccidentRate?.toFixed(1)}件/10万人`,
+            }))}
+            topNote="人口10万人あたりの交通事故発生件数が最も多いことを示します。"
+          />
 
           <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 20 }}>
             <thead>

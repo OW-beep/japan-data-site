@@ -30,6 +30,11 @@ const articles = [
     desc: "人口100万人以上の都市を一覧で比較できます。",
   },
   {
+    href: "/articles/near-million-cities",
+    title: "90万人・80万人都市一覧",
+    desc: "100万人に迫る「準百万都市」を人口順に一覧で比較できます。",
+  },
+  {
     href: "/articles/child-top50",
     title: "子ども人口ランキング",
     desc: "子ども人口が多い自治体ランキングです。",

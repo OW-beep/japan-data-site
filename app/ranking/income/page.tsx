@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import DataAsOf from "../../../components/DataAsOf";
 import AdSense from "../../../components/AdSense";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import {
   getPrefectureStats,
   hasPrefectureStatsData,
@@ -66,6 +67,16 @@ export default function IncomeRankingPage() {
           </p>
 
           <AdSense />
+
+          <RankingInsightFAQ
+            metricName="平均年収"
+            unitLabel="都道府県"
+            items={ranking.map((r) => ({
+              name: r.pref,
+              displayValue: `${((r.stats.income ?? 0) / 100).toFixed(1)}万円`,
+            }))}
+            topNote="厚生労働省「賃金構造基本統計調査」ベースの推計年収が全国で最も高いことを示します。"
+          />
 
           <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 20 }}>
             <thead>

@@ -48,6 +48,7 @@ export default function SitemapSection() {
             <li><Link href="/articles/population-top50">人口TOP50</Link></li>
             <li><Link href="/articles/population-concentration">人口集中</Link></li>
             <li><Link href="/articles/million-cities">100万人都市</Link></li>
+            <li><Link href="/articles/near-million-cities">90万人・80万人都市</Link></li>
             <li><Link href="/articles/birth-rate">出生率</Link></li>
             <li><Link href="/articles/decline">人口減少</Link></li>
           </ul>

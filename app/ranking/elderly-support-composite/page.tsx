@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import RankCard from "../../../components/RankCard";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getElderlySupportScores } from "../../../lib/compositeScores";
 
 export const metadata: Metadata = {
@@ -47,6 +48,15 @@ export default function ElderlySupportRankingPage() {
       </p>
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="高齢者支援体制スコア"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: c.score.toFixed(2),
+        }))}
+        topNote="医師数・老人ホーム定員・独居高齢者率を統合したスコアが最も高く、高齢者の支援体制が手厚いことを示します。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((city, index) => (

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import RankCard from "../../../components/RankCard";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getLivingInfrastructureScores } from "../../../lib/compositeScores";
 
 export const metadata: Metadata = {
@@ -46,6 +47,15 @@ export default function LivingInfrastructureRankingPage() {
       </p>
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="生活基盤充実度指数"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `${c.score.toFixed(2)}`,
+        }))}
+        topNote="商業集積・公民館数・空き家率などを統合したスコアが最も高く、生活インフラが充実していることを示します。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((city, index) => (

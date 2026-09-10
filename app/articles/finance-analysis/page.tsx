@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 import BookRecommendation from "@/components/BookRecommendation";
+import JsonLd from "@/components/JsonLd";
 import { BOOKS } from "@/lib/amazonBooks";
 import Link from "next/link";
 
@@ -28,6 +29,44 @@ export default function Page() {
 
   const over1 = ranking.filter((c) => (c.financeIndex ?? 0) >= 1)
     .length;
+
+  const rokkasho = ranking.find((c) => c.name.includes("六ヶ所村"));
+  const tomari = ranking.find(
+    (c) => c.name.includes("泊村") && c.name.includes("北海道")
+  );
+
+  const faq = [
+    {
+      q: "財政力指数とは何ですか？",
+      a: "財政力指数は、自治体が自前の税収だけで行政サービスをどれだけまかなえるかを示す指標です。総務省の定義では、標準的な地方税収の見込み額(基準財政収入額)を、標準的な行政サービスに必要な経費の見込み額(基準財政需要額)で割った過去3年間の平均値として算出されます。1.0を超えると、地方交付税を受け取らない「不交付団体」になります。",
+    },
+    ...(rokkasho
+      ? [
+          {
+            q: "青森県六ヶ所村の財政力指数はいくつですか？",
+            a: `青森県六ヶ所村の財政力指数は${rokkasho.financeIndex?.toFixed(
+              2
+            )}で、全国平均(${average.toFixed(
+              2
+            )})を大きく上回っています。使用済み核燃料の再処理工場をはじめとする原子力関連施設が立地しており、固定資産税収入や電源三法交付金が財政力を押し上げる要因になっています。`,
+          },
+        ]
+      : []),
+    ...(tomari
+      ? [
+          {
+            q: "北海道泊村の財政力指数はいくつですか？",
+            a: `北海道泊村の財政力指数は${tomari.financeIndex?.toFixed(
+              2
+            )}です。人口1,600人ほどの小さな村ですが、北海道電力泊原子力発電所が立地しており、六ヶ所村と同様に原子力関連の税収・交付金が財政力の高さにつながっています。`,
+          },
+        ]
+      : []),
+    {
+      q: "財政力指数はどこで確認できますか？",
+      a: "本サイトの財政力指数ランキングで、全国の自治体を指数の高い順に確認できます。この記事の冒頭にあるTOP15のグラフでも、上位自治体の顔ぶれを一覧できます。",
+    },
+  ];
 
   return (
     <ArticleLayout
@@ -187,6 +226,33 @@ export default function Page() {
           現場感覚からするとやや危ういと感じます。
         </PersonalNote>
       </div>
+
+      <div style={box}>
+        <h2>Q&amp;A：財政力指数についてよくある質問</h2>
+
+        {faq.map((item) => (
+          <p key={item.q}>
+            <strong>Q. {item.q}</strong>
+            <br />
+            A. {item.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((item) => ({
+            "@type": "Question",
+            name: item.q,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.a,
+            },
+          })),
+        }}
+      />
 
       <div style={box}>
         <h2>財政力指数の計算方法</h2>

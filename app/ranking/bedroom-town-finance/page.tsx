@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import RankCard from "../../../components/RankCard";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getBedroomTownFinanceScores } from "../../../lib/compositeScores";
 
 export const metadata: Metadata = {
@@ -47,6 +48,15 @@ export default function BedroomTownFinanceRankingPage() {
       </p>
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="ベッドタウン財政力スコア"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `昼夜比${c.dayNightRatio.toFixed(1)} / 財政力${c.score.toFixed(2)}`,
+        }))}
+        topNote="昼夜間人口比率が低い(通勤で人口が流出する)にもかかわらず、財政力指数が高いことを示します。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((city, index) => (

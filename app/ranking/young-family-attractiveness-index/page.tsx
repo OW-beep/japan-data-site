@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import RankCard from "../../../components/RankCard";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getYoungFamilyAttractivenessScores } from "../../../lib/compositeScores";
 
 export const metadata: Metadata = {
@@ -46,6 +47,15 @@ export default function YoungFamilyRankingPage() {
       </p>
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="子育て世代吸引力指数"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `${c.score.toFixed(2)}`,
+        }))}
+        topNote="保育・移住・婚姻に関する指標を統合したスコアが最も高く、子育て世代にとって魅力的な条件が揃っていることを示します。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((city, index) => (

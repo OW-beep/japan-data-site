@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import DataAsOf from "../../../components/DataAsOf";
 import AdSense from "../../../components/AdSense";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import {
   getPrefectureStats,
   hasPrefectureStatsData,
@@ -62,6 +63,18 @@ export default function LifeExpectancyRankingPage() {
       ) : (
         <>
           <AdSense />
+
+          <RankingInsightFAQ
+            metricName="平均寿命(女性)"
+            unitLabel="都道府県"
+            items={ranking.map((r) => ({
+              name: r.pref,
+              displayValue: `女性${r.stats.lifeExpectancyFemale?.toFixed(
+                2
+              )}歳 / 男性${r.stats.lifeExpectancyMale?.toFixed(2)}歳`,
+            }))}
+            topNote="女性の平均寿命が全国で最も長いことを示します。"
+          />
 
           <table style={{ width: "100%", borderCollapse: "collapse", marginTop: 20 }}>
             <thead>
