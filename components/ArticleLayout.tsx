@@ -172,17 +172,18 @@ lineHeight: 1.9,
 };
 
 const hero: React.CSSProperties = {
-background: "var(--indigo)",
-color: "white",
-padding: "26px 30px",
-borderLeft: "6px solid var(--ochre)",
+background: "var(--surface)",
+color: "var(--ink)",
+padding: "22px 26px",
+border: "1px solid var(--line)",
+borderLeft: "4px solid var(--ochre)",
 textAlign: "left",
 marginBottom: 30,
 };
 
 const heroLabelStyle: React.CSSProperties = {
 fontSize: 14,
-opacity: 0.85,
+color: "var(--muted)",
 marginBottom: 6,
 };
 
