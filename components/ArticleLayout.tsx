@@ -188,8 +188,7 @@ marginBottom: 6,
 
 const heroValueStyle: React.CSSProperties = {
 fontSize: 42,
-fontWeight: 700,
-fontFamily: "var(--font-serif)",
+fontWeight: 800,
 fontVariantNumeric: "tabular-nums",
 };
 
@@ -210,8 +209,7 @@ padding: 20,
 
 const rankStyle: React.CSSProperties = {
 color: "var(--ochre)",
-fontWeight: 700,
-fontFamily: "var(--font-serif)",
+fontWeight: 800,
 fontSize: 15,
 };
 

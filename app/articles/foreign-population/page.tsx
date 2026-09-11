@@ -115,29 +115,47 @@ export default function Page() {
 
         <p>
           TOP15の顔ぶれは、大きく3つのパターンに分かれます。
-          1つ目は川上村・南牧村(長野県)のような高原野菜の
-          産地で、農作業の担い手として技能実習生をはじめと
-          する外国人労働者を受け入れています。2位の群馬県
-          大泉町は、産業構造分析の記事で紹介したSUBARUの
-          主力工場を抱える町で、日系ブラジル人住民が多いこと
-          で知られています。北海道占冠村は、単独世帯割合と
-          高齢化率のU字関係を扱った記事でも「若い単身者が
-          多い町」として紹介した、大規模スキーリゾート
-          (トマム)を擁する町で、リゾート運営に伴う外国人
-          スタッフの存在が背景にあると考えられます。
         </p>
 
-        <p>
-          2つ目は{manufacturingCount}
-          自治体が該当する、岐阜県美濃加茂市・可児市、茨城県
-          常総市、静岡県菊川市、愛知県高浜市・碧南市といった
-          製造業の集積地です。いずれも自動車関連産業を中心と
-          した工場が立地し、外国人労働者が地域の産業を支えて
-          います。3つ目は{tokyoCount}
-          自治体が該当する東京都豊島区・新宿区・荒川区と
-          いった都心の区で、留学生や多様な業種で働く外国人
-          住民が集まる、国際色豊かなエリアです。
-        </p>
+        <div className="pull-note">
+          <strong>パターン1・高原野菜の産地</strong>
+          <div style={{ margin: "8px 0" }}>
+            <span className="stat-chip">長野県 川上村</span>
+            <span className="stat-chip">長野県 南牧村</span>
+          </div>
+          農作業の担い手として技能実習生をはじめとする外国人労働者を
+          受け入れています。2位の群馬県大泉町は、産業構造分析の記事で
+          紹介したSUBARUの主力工場を抱える町で、日系ブラジル人住民が
+          多いことで知られています。北海道占冠村は、単独世帯割合と
+          高齢化率のU字関係を扱った記事でも「若い単身者が多い町」として
+          紹介した、大規模スキーリゾート(トマム)を擁する町で、
+          リゾート運営に伴う外国人スタッフの存在が背景にあると
+          考えられます。
+        </div>
+
+        <div className="pull-note">
+          <strong>パターン2・製造業の集積地({manufacturingCount}自治体)</strong>
+          <div style={{ margin: "8px 0" }}>
+            <span className="stat-chip">岐阜県 美濃加茂市</span>
+            <span className="stat-chip">岐阜県 可児市</span>
+            <span className="stat-chip">茨城県 常総市</span>
+            <span className="stat-chip">静岡県 菊川市</span>
+            <span className="stat-chip">愛知県 高浜市</span>
+            <span className="stat-chip">愛知県 碧南市</span>
+          </div>
+          いずれも自動車関連産業を中心とした工場が立地し、外国人労働者が
+          地域の産業を支えています。
+        </div>
+
+        <div className="pull-note">
+          <strong>パターン3・都心の国際色豊かな区({tokyoCount}自治体)</strong>
+          <div style={{ margin: "8px 0" }}>
+            <span className="stat-chip">東京都 豊島区</span>
+            <span className="stat-chip">東京都 新宿区</span>
+            <span className="stat-chip">東京都 荒川区</span>
+          </div>
+          留学生や多様な業種で働く外国人住民が集まるエリアです。
+        </div>
 
         <p>
           このほか、埼玉県蕨市は、クルド系住民をはじめとする

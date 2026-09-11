@@ -14,16 +14,26 @@ export default function Hero() {
       <div style={{ maxWidth: 720 }}>
         <h1
           style={{
-            fontFamily: "var(--font-serif)",
-            fontSize: 30,
-            lineHeight: 1.6,
-            fontWeight: 700,
+            fontFamily: "var(--font-sans)",
+            fontSize: 32,
+            lineHeight: 1.5,
+            fontWeight: 800,
             marginBottom: 14,
           }}
         >
           日本全国の自治体データを
           <br />
-          ランキングとグラフで比較する
+          <span
+            style={{
+              background: "var(--ochre)",
+              padding: "2px 10px",
+              display: "inline-block",
+              marginTop: 4,
+            }}
+          >
+            ランキング・グラフ
+          </span>
+          で比較する
         </h1>
 
         <p
@@ -104,8 +114,7 @@ function Info({ number, label }: { number: string; label: string }) {
       <div
         style={{
           fontSize: 20,
-          fontWeight: 700,
-          fontFamily: "var(--font-serif)",
+          fontWeight: 800,
           fontVariantNumeric: "tabular-nums",
         }}
       >

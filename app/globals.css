@@ -14,10 +14,10 @@
   --ink: #1b221f;         /* 本文の基本色(純黒ではない墨色) */
   --muted: #5b6259;       /* 補足テキスト */
   --line: #dcded5;        /* 罫線・ボーダー */
-  --indigo: #223a5e;      /* 主要アクセント(藍色。リンク・見出し帯) */
+  --indigo: #2955c9;      /* 主要アクセント(明るめの青。リンク・見出し帯) */
   --indigo-deep: #16283f; /* 主要アクセントの濃色(hover・パネル背景) */
-  --ochre: #a85c1c;       /* 数値・統計の強調色(朱色寄りのオレンジ) */
-  --ochre-soft: #f4e3d3;  /* 朱色の淡色(チップ背景など) */
+  --ochre: #e8630f;       /* 数値・統計の強調色(鮮やかなオレンジ) */
+  --ochre-soft: #fde3cf;  /* オレンジの淡色(チップ背景など) */
 
   --font-serif: "Hiragino Mincho ProN", "YuMincho", "Yu Mincho", "Noto Serif JP", serif;
   --font-sans: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic Medium",

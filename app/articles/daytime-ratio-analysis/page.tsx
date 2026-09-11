@@ -96,19 +96,35 @@ export default function Page() {
           {top12[0].population.toLocaleString()}
           人ですが、霞が関の官庁街と丸の内・大手町のオフィス街
           を抱えているため、昼間はその十数倍の人が働いています。
-          同様に大阪市中央区・北区、名古屋市中区、東京都港区・
-          新宿区・渋谷区といった、全国有数のオフィス街が
-          上位に並びました。
+          同様の、全国有数のオフィス街が上位に並びました。
         </p>
+
+        <div style={{ margin: "12px 0" }}>
+          <span className="stat-chip">大阪市 中央区</span>
+          <span className="stat-chip">大阪市 北区</span>
+          <span className="stat-chip">名古屋市 中区</span>
+          <span className="stat-chip">東京都 港区</span>
+          <span className="stat-chip">東京都 新宿区</span>
+          <span className="stat-chip">東京都 渋谷区</span>
+        </div>
       </div>
 
       <div style={box}>
         <h2>もう一つの「上位グループ」:福島県の被災地</h2>
 
         <p>
-          TOP12の中には、{fukushimaTowns.map((c) => c.name).join("・")}
-          という、東日本大震災の被災地である福島県内の自治体
-          が複数含まれていました。これらの自治体は、原発事故
+          TOP12の中には、東日本大震災の被災地である福島県内の
+          自治体が複数含まれていました。
+        </p>
+
+        <div style={{ margin: "12px 0" }}>
+          {fukushimaTowns.map((c) => (
+            <span className="stat-chip" key={c.name}>{c.name}</span>
+          ))}
+        </div>
+
+        <p>
+          これらの自治体は、原発事故
           に伴う避難指示の影響で夜間人口(住民登録人口)が
           数百〜数千人まで落ち込んでいる一方、除染作業や
           復興関連のインフラ整備に従事する作業員が日中は

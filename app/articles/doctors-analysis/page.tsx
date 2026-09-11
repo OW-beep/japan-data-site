@@ -141,12 +141,17 @@ export default function Page() {
         />
 
         <p style={{ marginTop: 16, color: "#4b5563" }}>
-          1位の千代田区、4位の文京区、13位の新宿区など、東京
-          都心の区は大学病院や大規模総合病院が集積しており、
+          東京都心の区は大学病院や大規模総合病院が集積しており、
           常に上位の顔ぶれです。一方で、人口数万人規模の
           町にすぎない自治体が2〜10位に複数ランクインして
           いる点が、このランキングの大きな特徴です。
         </p>
+
+        <div style={{ margin: "12px 0" }}>
+          <span className="stat-chip">1位 千代田区</span>
+          <span className="stat-chip">4位 文京区</span>
+          <span className="stat-chip">13位 新宿区</span>
+        </div>
       </div>
 
       <div style={box}>
@@ -155,11 +160,18 @@ export default function Page() {
         <p>
           TOP15のうち{universityCount}
           自治体が、医科大学の附属病院を抱える町です。
-          福井県永平寺町(福井大学医学部附属病院)、岩手県
-          矢巾町(岩手医科大学附属病院)、愛媛県東温市(愛媛
-          大学医学部附属病院)、栃木県壬生町・下野市(自治
-          医科大学附属病院)、埼玉県毛呂山町(埼玉医科大学
-          病院)がこれにあたります。これらの町の人口は数万人
+        </p>
+
+        <div style={{ margin: "12px 0" }}>
+          <span className="stat-chip">福井県 永平寺町(福井大学医学部附属病院)</span>
+          <span className="stat-chip">岩手県 矢巾町(岩手医科大学附属病院)</span>
+          <span className="stat-chip">愛媛県 東温市(愛媛大学医学部附属病院)</span>
+          <span className="stat-chip">栃木県 壬生町・下野市(自治医科大学附属病院)</span>
+          <span className="stat-chip">埼玉県 毛呂山町(埼玉医科大学病院)</span>
+        </div>
+
+        <p>
+          これらの町の人口は数万人
           規模ですが、大学病院1つに数百人〜千人規模の医師が
           勤務しているため、人口あたりの医師数が跳ね上がる
           という統計上の特性があります。この現象は、いわば
@@ -187,12 +199,29 @@ export default function Page() {
 
         <p>
           今回の集計では、医師数が0人として登録されている
-          自治体が29町村ありました。福島県大玉村・湯川村・
-          飯舘村、茨城県河内町、富山県舟橋村、秋田県藤里町、
-          埼玉県東秩父村、長野県小川村、北海道喜茂別町、
-          京都府伊根町、青森県佐井村、鹿児島県宇検村、群馬県
-          南牧村、岡山県西粟倉村、沖縄県伊是名村などが該当
-          します。これらの多くは人口数千人規模の小さな町村で、
+          自治体が29町村ありました。これらの多くは人口数千人
+          規模の小さな町村で、代表的な自治体は以下のとおりです。
+        </p>
+
+        <div style={{ margin: "12px 0" }}>
+          <span className="stat-chip">福島県 大玉村</span>
+          <span className="stat-chip">福島県 湯川村</span>
+          <span className="stat-chip">福島県 飯舘村</span>
+          <span className="stat-chip">茨城県 河内町</span>
+          <span className="stat-chip">富山県 舟橋村</span>
+          <span className="stat-chip">秋田県 藤里町</span>
+          <span className="stat-chip">埼玉県 東秩父村</span>
+          <span className="stat-chip">長野県 小川村</span>
+          <span className="stat-chip">北海道 喜茂別町</span>
+          <span className="stat-chip">京都府 伊根町</span>
+          <span className="stat-chip">青森県 佐井村</span>
+          <span className="stat-chip">鹿児島県 宇検村</span>
+          <span className="stat-chip">群馬県 南牧村</span>
+          <span className="stat-chip">岡山県 西粟倉村</span>
+          <span className="stat-chip">沖縄県 伊是名村</span>
+        </div>
+
+        <p>
           自前の診療所を持たず、近隣の市町村の医療機関に
           頼っている地域です。医師数がゼロだからといって
           医療が全く受けられないわけではありませんが、

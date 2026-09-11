@@ -143,12 +143,21 @@ export default function Page() {
           {maxChildInBottomQuartile.toFixed(1)}
           %以下)に入る自治体の中で、財政力指数が高い順に
           15自治体を並べたものです。上位には、これまでの
-          記事でも見てきた原子力発電所立地自治体(北海道
-          泊村、福島県大熊町・広野町・富岡町・楢葉町)や
-          観光地(神奈川県箱根町、静岡県熱海市、新潟県
-          湯沢町)に加えて、今回新たに空港と原発の
-          立地自治体が加わりました。
+          記事でも見てきた原子力発電所立地自治体や観光地に
+          加えて、今回新たに空港と原発の立地自治体が
+          加わりました。
         </p>
+
+        <div style={{ margin: "12px 0" }}>
+          <span className="stat-chip">北海道 泊村</span>
+          <span className="stat-chip">福島県 大熊町</span>
+          <span className="stat-chip">福島県 広野町</span>
+          <span className="stat-chip">福島県 富岡町</span>
+          <span className="stat-chip">福島県 楢葉町</span>
+          <span className="stat-chip">神奈川県 箱根町</span>
+          <span className="stat-chip">静岡県 熱海市</span>
+          <span className="stat-chip">新潟県 湯沢町</span>
+        </div>
       </div>
 
       <div style={box}>
