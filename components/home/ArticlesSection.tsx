@@ -293,9 +293,8 @@ export default function ArticlesSection() {
             >
               <div
                 style={{
-                  background: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: 14,
+                  background: "var(--surface)",
+                  border: "1px solid var(--line)",
                   padding: 18,
                   height: "100%",
                 }}
@@ -312,19 +311,18 @@ export default function ArticlesSection() {
                     {article.emoji}
                   </div>
 
-                  <div style={{ display: "flex", gap: 6 }}>
+                  <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
                     {article.fresh && (
                       <span
                         style={{
-                          background: "#fef2f2",
-                          color: "#dc2626",
-                          padding: "3px 8px",
-                          borderRadius: 999,
+                          color: "var(--ochre)",
                           fontSize: 11,
                           fontWeight: 700,
+                          fontFamily: "var(--font-numeric)",
+                          letterSpacing: "0.05em",
                         }}
                       >
-                        NEW
+                        \ NEW /
                       </span>
                     )}
                     <span
