@@ -116,6 +116,7 @@ function Info({ number, label }: { number: string; label: string }) {
           fontSize: 20,
           fontWeight: 800,
           fontVariantNumeric: "tabular-nums",
+          fontFamily: "var(--font-numeric)",
         }}
       >
         {number}

@@ -2,11 +2,32 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import Script from "next/script";
+import { Noto_Sans_JP, Work_Sans } from "next/font/google";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import { SITE_URL, SITE_NAME, ADSENSE_CLIENT_ID } from "@/lib/site";
+
+/*
+ * 参考サイト(honeycomb-labo.com)が使っている
+ * Noto Sans JP(和文)+ Work Sans(数字・欧文)の組み合わせ。
+ * next/font/google はビルド時にフォントを取得して自己ホストするため、
+ * 実行時にGoogle Fontsへ追加リクエストは発生しない。
+ */
+const notoSansJP = Noto_Sans_JP({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-noto-sans-jp",
+  display: "swap",
+});
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  variable: "--font-work-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -62,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" className={`${notoSansJP.variable} ${workSans.variable}`}>
       <head>
         {/*
           AdSense読み込みスクリプト。
@@ -77,15 +98,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body
-        style={{
-          margin: 0,
-          background: "#f8fafc",
-          color: "#111827",
-          fontFamily:
-            "system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif",
-        }}
-      >
+      <body>
         {/* スクリーンリーダー用 */}
         <a
           href="#main"

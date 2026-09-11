@@ -115,7 +115,7 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
         style={item.rank === 1 ? { ...topCard, borderTopColor: "var(--ochre)" } : topCard}
       >
         <div style={item.rank === 1 ? { ...rankStyle, fontSize: 20 } : rankStyle}>
-          #{item.rank}
+          ( {String(item.rank).padStart(2, "0")} )
         </div>
 
         <div style={nameStyle}>
@@ -189,6 +189,7 @@ marginBottom: 6,
 const heroValueStyle: React.CSSProperties = {
 fontSize: 42,
 fontWeight: 800,
+fontFamily: "var(--font-numeric)",
 fontVariantNumeric: "tabular-nums",
 };
 
@@ -209,7 +210,9 @@ padding: 20,
 
 const rankStyle: React.CSSProperties = {
 color: "var(--ochre)",
-fontWeight: 800,
+fontWeight: 700,
+fontFamily: "var(--font-numeric)",
+fontVariantNumeric: "tabular-nums",
 fontSize: 15,
 };
 
