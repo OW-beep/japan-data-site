@@ -38,6 +38,11 @@ const reads = [
     hook: "市川市の財政力指数が1.07というベッドタウンの謎",
     href: "/articles/bedroom-town-finance-analysis",
   },
+  {
+    emoji: "🔄",
+    hook: "大熊町は住民の53.7%が1年で入れ替わる",
+    href: "/articles/population-churn-analysis",
+  },
 ];
 
 export default function NicheReadsSection() {

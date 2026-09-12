@@ -81,6 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/population-concentration",
     "/articles/million-cities",
     "/articles/near-million-cities",
+    "/articles/population-churn-analysis",
     "/articles/youngest-municipalities",
     "/articles/child-top50",
     "/articles/population-about",

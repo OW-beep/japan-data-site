@@ -35,6 +35,11 @@ const articles = [
     desc: "100万人に迫る「準百万都市」を人口順に一覧で比較できます。",
   },
   {
+    href: "/articles/population-churn-analysis",
+    title: "人口の入れ替わり率ランキング分析",
+    desc: "転入超過率だけでは見えない、住民の入れ替わりの激しさを比較します。",
+  },
+  {
     href: "/articles/child-top50",
     title: "子ども人口ランキング",
     desc: "子ども人口が多い自治体ランキングです。",
