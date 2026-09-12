@@ -8,9 +8,9 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "/articles/child-top50" },
-  title: "子ども人口割合が高い自治体TOP50",
+  title: "子ども人口割合が高い自治体TOP50｜子供が多い市町村ランキング",
   description:
-    "15歳未満人口の割合が高い自治体トップ50を紹介。子育て世代が多い自治体の特徴がわかります。",
+    "15歳未満人口の割合が高い自治体トップ50を紹介。人数(絶対数)で見た場合のランキングもあわせて掲載し、子供が多い市町村を割合・人数の両方から分析します。",
 };
 
 export default function Page() {
@@ -52,7 +52,16 @@ export default function Page() {
 
   const kikuyo = ranking.find((c) => c.name.includes("菊陽町"));
 
+  const byCount = getMunicipalities()
+    .filter((c) => c.childPopulation != null)
+    .sort((a, b) => (b.childPopulation ?? 0) - (a.childPopulation ?? 0))
+    .slice(0, 10);
+
   const faq = [
+    {
+      q: "子供が多い市町村ランキングは、人数と割合のどちらで見るべきですか？",
+      a: `目的によって異なります。「子育て関連の店舗を出したい」など市場規模を知りたい場合は人数(絶対数)、「子育て世帯の割合が高い、活気のある地域を知りたい」場合は割合が参考になります。人数では${byCount[0].name}が全国最多(${byCount[0].childPopulation?.toLocaleString()}人)ですが、割合では${ranking[0].name}(${ranking[0].rate.toFixed(1)}%)が1位と、両者はかなり異なる顔ぶれになります。`,
+    },
     {
       q: "子ども人口割合TOP50は、出生率TOP50とどれくらい重なりますか？",
       a: `重なりは${overlapCount}自治体(50分の${overlapCount})にとどまります。子ども比率は「今、その地域にどれだけ子どもが住んでいるか」、出生率は「その地域でどれだけ子どもが生まれているか」を示す別の指標のため、片方が高くてももう片方が高いとは限りません。`,
@@ -111,6 +120,37 @@ export default function Page() {
             displayValue: `${c.rate.toFixed(1)}%`,
           }))}
         />
+      </div>
+
+      <div style={box}>
+        <h2>「人数」で見ると、政令指定都市が上位に</h2>
+
+        <p>
+          ここまでは15歳未満人口の「割合」で見たランキングですが、
+          子どもの「人数」(絶対数)で見ると、全く違う顔ぶれになります。
+          子育て関連の出店計画や商圏調査など、地域の子育て市場の
+          規模そのものを知りたい場合は、こちらの人数ベースの
+          ランキングの方が参考になります。
+        </p>
+
+        <RankingBarChart
+          items={byCount.map((c) => ({
+            name: c.name,
+            value: c.childPopulation ?? 0,
+            displayValue: `${(c.childPopulation ?? 0).toLocaleString()}人`,
+          }))}
+        />
+
+        <p style={{ marginTop: 12, fontSize: 14, color: "#6b7280" }}>
+          人数では{byCount[0].name}(
+          {(byCount[0].childPopulation ?? 0).toLocaleString()}人)を
+          筆頭に、横浜市・大阪市・名古屋市・札幌市といった
+          政令指定都市が上位を占めます。これらの都市は子ども比率
+          そのものは全国平均並みでも、人口総数が大きいため、
+          人数では圧倒的な規模になります。「子どもの割合が高い町」
+          と「子どもの人数が多い都市」は、まったく別のランキング
+          になるという点に注意してください。
+        </p>
       </div>
 
       <div style={box}>
