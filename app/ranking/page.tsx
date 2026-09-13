@@ -40,6 +40,8 @@ const rankings = [
   { href: "/ranking/restaurant", emoji: "🍜", label: "飲食店密度ランキング" },
   { href: "/ranking/library", emoji: "📚", label: "図書館数ランキング" },
   { href: "/ranking/vacant-house", emoji: "🏚️", label: "空き家率ランキング" },
+  { href: "/ranking/capital-elevation", emoji: "⛰️", label: "県庁所在地 標高ランキング" },
+  { href: "/ranking/furusato-nozei", emoji: "🎁", label: "ふるさと納税受入額ランキング" },
   { href: "/ranking/daytime-ratio", emoji: "🌆", label: "昼夜間人口比率ランキング" },
   { href: "/ranking/elderly-home", emoji: "🏡", label: "高齢者施設数ランキング" },
   { href: "/ranking/dentist", emoji: "🦷", label: "歯科医師数ランキング" },

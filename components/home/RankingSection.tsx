@@ -29,6 +29,8 @@ const rankings = [
   { href: "/ranking/restaurant", emoji: "🍜", title: "飲食店密度" },
   { href: "/ranking/library", emoji: "📚", title: "図書館数" },
   { href: "/ranking/vacant-house", emoji: "🏚️", title: "空き家率" },
+  { href: "/ranking/capital-elevation", emoji: "⛰️", title: "県庁所在地の標高" },
+  { href: "/ranking/furusato-nozei", emoji: "🎁", title: "ふるさと納税受入額" },
   { href: "/ranking/daytime-ratio", emoji: "🌆", title: "昼夜間人口比率" },
   { href: "/ranking/elderly-home", emoji: "🏡", title: "高齢者施設数" },
   { href: "/ranking/dentist", emoji: "🦷", title: "歯科医師数" },

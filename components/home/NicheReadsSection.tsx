@@ -43,6 +43,16 @@ const reads = [
     hook: "大熊町は住民の53.7%が1年で入れ替わる",
     href: "/articles/population-churn-analysis",
   },
+  {
+    emoji: "🏘️",
+    hook: "「池田町」という名前の町は全国に4つある",
+    href: "/articles/duplicate-municipality-names",
+  },
+  {
+    emoji: "⛰️",
+    hook: "長野市は標高371.5mで県庁所在地1位",
+    href: "/articles/capital-elevation-analysis",
+  },
 ];
 
 export default function NicheReadsSection() {

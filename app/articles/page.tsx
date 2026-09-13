@@ -40,6 +40,26 @@ const articles = [
     desc: "転入超過率だけでは見えない、住民の入れ替わりの激しさを比較します。",
   },
   {
+    href: "/articles/furusato-nozei-analysis",
+    title: "ふるさと納税 受入額ランキング分析",
+    desc: "総務省の現況調査をもとに、受入額ランキングとお金の流れを分析します。",
+  },
+  {
+    href: "/articles/furusato-nozei-finance-analysis",
+    title: "ふるさと納税は財政力の弱い自治体を助けているか",
+    desc: "受入額と財政力指数の相関を分析し、制度の実態を検証します。",
+  },
+  {
+    href: "/articles/duplicate-municipality-names",
+    title: "同じ名前の自治体はいくつある？",
+    desc: "全国で名前が重複する25組・57自治体を、人口・面積で比較します。",
+  },
+  {
+    href: "/articles/capital-elevation-analysis",
+    title: "都道府県庁所在地 標高ランキング分析",
+    desc: "標高上位3県はすべて盆地の都市。国土地理院データで分析します。",
+  },
+  {
     href: "/articles/child-top50",
     title: "子ども人口ランキング",
     desc: "子ども人口が多い自治体ランキングです。",

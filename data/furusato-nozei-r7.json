@@ -1,0 +1,8707 @@
+[
+{
+"name": "北海道 札幌市",
+"amountYen": 4090638788,
+"count": 203888
+},
+{
+"name": "北海道 函館市",
+"amountYen": 3032777783,
+"count": 144106
+},
+{
+"name": "北海道 小樽市",
+"amountYen": 1244483900,
+"count": 73644
+},
+{
+"name": "北海道 旭川市",
+"amountYen": 4168259383,
+"count": 200805
+},
+{
+"name": "北海道 室蘭市",
+"amountYen": 128504037,
+"count": 4409
+},
+{
+"name": "北海道 釧路市",
+"amountYen": 2449879774,
+"count": 115854
+},
+{
+"name": "北海道 帯広市",
+"amountYen": 1323160900,
+"count": 84120
+},
+{
+"name": "北海道 北見市",
+"amountYen": 4972877711,
+"count": 191091
+},
+{
+"name": "北海道 夕張市",
+"amountYen": 269509127,
+"count": 9396
+},
+{
+"name": "北海道 岩見沢市",
+"amountYen": 125733304,
+"count": 6528
+},
+{
+"name": "北海道 網走市",
+"amountYen": 2569411098,
+"count": 106493
+},
+{
+"name": "北海道 留萌市",
+"amountYen": 1582368600,
+"count": 100529
+},
+{
+"name": "北海道 苫小牧市",
+"amountYen": 641930500,
+"count": 32284
+},
+{
+"name": "北海道 稚内市",
+"amountYen": 1946424944,
+"count": 90390
+},
+{
+"name": "北海道 美唄市",
+"amountYen": 689381300,
+"count": 32113
+},
+{
+"name": "北海道 芦別市",
+"amountYen": 1682269600,
+"count": 44787
+},
+{
+"name": "北海道 江別市",
+"amountYen": 350190400,
+"count": 22252
+},
+{
+"name": "北海道 赤平市",
+"amountYen": 1281671071,
+"count": 39603
+},
+{
+"name": "北海道 紋別市",
+"amountYen": 12473101210,
+"count": 593559
+},
+{
+"name": "北海道 士別市",
+"amountYen": 243798900,
+"count": 9229
+},
+{
+"name": "北海道 名寄市",
+"amountYen": 345329762,
+"count": 31230
+},
+{
+"name": "北海道 三笠市",
+"amountYen": 2587163900,
+"count": 105589
+},
+{
+"name": "北海道 根室市",
+"amountYen": 12262930968,
+"count": 552650
+},
+{
+"name": "北海道 千歳市",
+"amountYen": 6808847131,
+"count": 333006
+},
+{
+"name": "北海道 滝川市",
+"amountYen": 1873048300,
+"count": 36722
+},
+{
+"name": "北海道 砂川市",
+"amountYen": 1466423080,
+"count": 42413
+},
+{
+"name": "北海道 歌志内市",
+"amountYen": 9587100,
+"count": 700
+},
+{
+"name": "北海道 深川市",
+"amountYen": 655179900,
+"count": 34488
+},
+{
+"name": "北海道 富良野市",
+"amountYen": 2551549100,
+"count": 151495
+},
+{
+"name": "北海道 登別市",
+"amountYen": 1506842900,
+"count": 66528
+},
+{
+"name": "北海道 恵庭市",
+"amountYen": 2155236500,
+"count": 95867
+},
+{
+"name": "北海道 伊達市",
+"amountYen": 557068500,
+"count": 23399
+},
+{
+"name": "北海道 北広島市",
+"amountYen": 488978632,
+"count": 19280
+},
+{
+"name": "北海道 石狩市",
+"amountYen": 1130694900,
+"count": 53068
+},
+{
+"name": "北海道 北斗市",
+"amountYen": 286462700,
+"count": 12996
+},
+{
+"name": "北海道 当別町",
+"amountYen": 1814764600,
+"count": 97476
+},
+{
+"name": "北海道 新篠津村",
+"amountYen": 153667000,
+"count": 3611
+},
+{
+"name": "北海道 松前町",
+"amountYen": 29524000,
+"count": 1471
+},
+{
+"name": "北海道 福島町",
+"amountYen": 39562448,
+"count": 2748
+},
+{
+"name": "北海道 知内町",
+"amountYen": 413449262,
+"count": 15989
+},
+{
+"name": "北海道 木古内町",
+"amountYen": 111020152,
+"count": 2247
+},
+{
+"name": "北海道 七飯町",
+"amountYen": 123966100,
+"count": 6214
+},
+{
+"name": "北海道 鹿部町",
+"amountYen": 1400088811,
+"count": 111119
+},
+{
+"name": "北海道 森町",
+"amountYen": 1280880500,
+"count": 64782
+},
+{
+"name": "北海道 八雲町",
+"amountYen": 440626523,
+"count": 21765
+},
+{
+"name": "北海道 長万部町",
+"amountYen": 293039415,
+"count": 14397
+},
+{
+"name": "北海道 江差町",
+"amountYen": 224072654,
+"count": 11003
+},
+{
+"name": "北海道 上ノ国町",
+"amountYen": 29961000,
+"count": 1287
+},
+{
+"name": "北海道 厚沢部町",
+"amountYen": 22998100,
+"count": 1001
+},
+{
+"name": "北海道 乙部町",
+"amountYen": 78549000,
+"count": 4415
+},
+{
+"name": "北海道 奥尻町",
+"amountYen": 64089100,
+"count": 2470
+},
+{
+"name": "北海道 今金町",
+"amountYen": 116740700,
+"count": 12960
+},
+{
+"name": "北海道 せたな町",
+"amountYen": 162281000,
+"count": 6565
+},
+{
+"name": "北海道 島牧村",
+"amountYen": 12522000,
+"count": 633
+},
+{
+"name": "北海道 寿都町",
+"amountYen": 1311597000,
+"count": 85469
+},
+{
+"name": "北海道 黒松内町",
+"amountYen": 305890300,
+"count": 23893
+},
+{
+"name": "北海道 蘭越町",
+"amountYen": 73990000,
+"count": 1982
+},
+{
+"name": "北海道 ニセコ町",
+"amountYen": 160148400,
+"count": 3064
+},
+{
+"name": "北海道 真狩村",
+"amountYen": 24007500,
+"count": 826
+},
+{
+"name": "北海道 留寿都村",
+"amountYen": 265220000,
+"count": 1752
+},
+{
+"name": "北海道 喜茂別町",
+"amountYen": 200302400,
+"count": 13617
+},
+{
+"name": "北海道 京極町",
+"amountYen": 61431000,
+"count": 4711
+},
+{
+"name": "北海道 倶知安町",
+"amountYen": 885703650,
+"count": 24076
+},
+{
+"name": "北海道 共和町",
+"amountYen": 34847500,
+"count": 1482
+},
+{
+"name": "北海道 岩内町",
+"amountYen": 332552890,
+"count": 20132
+},
+{
+"name": "北海道 泊村",
+"amountYen": 4727000,
+"count": 257
+},
+{
+"name": "北海道 神恵内村",
+"amountYen": 5975000,
+"count": 425
+},
+{
+"name": "北海道 積丹町",
+"amountYen": 99901300,
+"count": 6829
+},
+{
+"name": "北海道 古平町",
+"amountYen": 310073000,
+"count": 23210
+},
+{
+"name": "北海道 仁木町",
+"amountYen": 454824700,
+"count": 16482
+},
+{
+"name": "北海道 余市町",
+"amountYen": 1944719191,
+"count": 114011
+},
+{
+"name": "北海道 赤井川村",
+"amountYen": 235587500,
+"count": 11348
+},
+{
+"name": "北海道 南幌町",
+"amountYen": 179324600,
+"count": 13058
+},
+{
+"name": "北海道 奈井江町",
+"amountYen": 59975000,
+"count": 1079
+},
+{
+"name": "北海道 上砂川町",
+"amountYen": 6833000,
+"count": 247
+},
+{
+"name": "北海道 由仁町",
+"amountYen": 205679200,
+"count": 6753
+},
+{
+"name": "北海道 長沼町",
+"amountYen": 283555749,
+"count": 12473
+},
+{
+"name": "北海道 栗山町",
+"amountYen": 447728984,
+"count": 8812
+},
+{
+"name": "北海道 月形町",
+"amountYen": 1744656700,
+"count": 29720
+},
+{
+"name": "北海道 浦臼町",
+"amountYen": 42555500,
+"count": 2343
+},
+{
+"name": "北海道 新十津川町",
+"amountYen": 98917000,
+"count": 1898
+},
+{
+"name": "北海道 妹背牛町",
+"amountYen": 1030399034,
+"count": 31577
+},
+{
+"name": "北海道 秩父別町",
+"amountYen": 2270387000,
+"count": 38290
+},
+{
+"name": "北海道 雨竜町",
+"amountYen": 618918900,
+"count": 13125
+},
+{
+"name": "北海道 北竜町",
+"amountYen": 453846100,
+"count": 21211
+},
+{
+"name": "北海道 沼田町",
+"amountYen": 1459083709,
+"count": 47613
+},
+{
+"name": "北海道 鷹栖町",
+"amountYen": 183393000,
+"count": 5083
+},
+{
+"name": "北海道 東神楽町",
+"amountYen": 725374600,
+"count": 10510
+},
+{
+"name": "北海道 当麻町",
+"amountYen": 462677700,
+"count": 18490
+},
+{
+"name": "北海道 比布町",
+"amountYen": 84102500,
+"count": 3280
+},
+{
+"name": "北海道 愛別町",
+"amountYen": 50922500,
+"count": 1132
+},
+{
+"name": "北海道 上川町",
+"amountYen": 143751200,
+"count": 7816
+},
+{
+"name": "北海道 東川町",
+"amountYen": 4669878500,
+"count": 106794
+},
+{
+"name": "北海道 美瑛町",
+"amountYen": 723820676,
+"count": 25751
+},
+{
+"name": "北海道 上富良野町",
+"amountYen": 642223411,
+"count": 25374
+},
+{
+"name": "北海道 中富良野町",
+"amountYen": 294598100,
+"count": 16228
+},
+{
+"name": "北海道 南富良野町",
+"amountYen": 76516000,
+"count": 4251
+},
+{
+"name": "北海道 占冠村",
+"amountYen": 97981000,
+"count": 810
+},
+{
+"name": "北海道 和寒町",
+"amountYen": 38967500,
+"count": 1466
+},
+{
+"name": "北海道 剣淵町",
+"amountYen": 13520000,
+"count": 922
+},
+{
+"name": "北海道 下川町",
+"amountYen": 38633000,
+"count": 2293
+},
+{
+"name": "北海道 美深町",
+"amountYen": 56440858,
+"count": 2229
+},
+{
+"name": "北海道 音威子府村",
+"amountYen": 17369500,
+"count": 1146
+},
+{
+"name": "北海道 中川町",
+"amountYen": 7600500,
+"count": 209
+},
+{
+"name": "北海道 幌加内町",
+"amountYen": 64245431,
+"count": 2853
+},
+{
+"name": "北海道 増毛町",
+"amountYen": 441207000,
+"count": 26001
+},
+{
+"name": "北海道 小平町",
+"amountYen": 10247000,
+"count": 787
+},
+{
+"name": "北海道 苫前町",
+"amountYen": 46802000,
+"count": 1555
+},
+{
+"name": "北海道 羽幌町",
+"amountYen": 258720000,
+"count": 11440
+},
+{
+"name": "北海道 初山別村",
+"amountYen": 3115000,
+"count": 130
+},
+{
+"name": "北海道 遠別町",
+"amountYen": 35049560,
+"count": 2263
+},
+{
+"name": "北海道 天塩町",
+"amountYen": 89487000,
+"count": 4165
+},
+{
+"name": "北海道 猿払村",
+"amountYen": 246390349,
+"count": 9673
+},
+{
+"name": "北海道 浜頓別町",
+"amountYen": 210159600,
+"count": 8483
+},
+{
+"name": "北海道 中頓別町",
+"amountYen": 15212001,
+"count": 1395
+},
+{
+"name": "北海道 枝幸町",
+"amountYen": 929171800,
+"count": 34758
+},
+{
+"name": "北海道 豊富町",
+"amountYen": 202640500,
+"count": 10765
+},
+{
+"name": "北海道 礼文町",
+"amountYen": 340472280,
+"count": 10377
+},
+{
+"name": "北海道 利尻町",
+"amountYen": 346303300,
+"count": 14983
+},
+{
+"name": "北海道 利尻富士町",
+"amountYen": 654263984,
+"count": 29427
+},
+{
+"name": "北海道 幌延町",
+"amountYen": 15507000,
+"count": 1168
+},
+{
+"name": "北海道 美幌町",
+"amountYen": 478030000,
+"count": 36110
+},
+{
+"name": "北海道 津別町",
+"amountYen": 125601201,
+"count": 11185
+},
+{
+"name": "北海道 斜里町",
+"amountYen": 1088338069,
+"count": 59084
+},
+{
+"name": "北海道 清里町",
+"amountYen": 14846000,
+"count": 837
+},
+{
+"name": "北海道 小清水町",
+"amountYen": 42325490,
+"count": 1965
+},
+{
+"name": "北海道 訓子府町",
+"amountYen": 46338000,
+"count": 3029
+},
+{
+"name": "北海道 置戸町",
+"amountYen": 15767500,
+"count": 482
+},
+{
+"name": "北海道 佐呂間町",
+"amountYen": 279286100,
+"count": 15956
+},
+{
+"name": "北海道 遠軽町",
+"amountYen": 291513000,
+"count": 15963
+},
+{
+"name": "北海道 湧別町",
+"amountYen": 316619000,
+"count": 17452
+},
+{
+"name": "北海道 滝上町",
+"amountYen": 9257000,
+"count": 411
+},
+{
+"name": "北海道 興部町",
+"amountYen": 802059600,
+"count": 52785
+},
+{
+"name": "北海道 西興部村",
+"amountYen": 15342000,
+"count": 557
+},
+{
+"name": "北海道 雄武町",
+"amountYen": 608681900,
+"count": 32631
+},
+{
+"name": "北海道 大空町",
+"amountYen": 88362500,
+"count": 4624
+},
+{
+"name": "北海道 豊浦町",
+"amountYen": 201899200,
+"count": 6262
+},
+{
+"name": "北海道 壮瞥町",
+"amountYen": 229970151,
+"count": 8327
+},
+{
+"name": "北海道 白老町",
+"amountYen": 1371968478,
+"count": 69408
+},
+{
+"name": "北海道 厚真町",
+"amountYen": 799954000,
+"count": 16067
+},
+{
+"name": "北海道 洞爺湖町",
+"amountYen": 280161801,
+"count": 8862
+},
+{
+"name": "北海道 安平町",
+"amountYen": 520737800,
+"count": 28521
+},
+{
+"name": "北海道 むかわ町",
+"amountYen": 90272000,
+"count": 4123
+},
+{
+"name": "北海道 日高町",
+"amountYen": 162627500,
+"count": 4777
+},
+{
+"name": "北海道 平取町",
+"amountYen": 345376963,
+"count": 16662
+},
+{
+"name": "北海道 新冠町",
+"amountYen": 251845500,
+"count": 1227
+},
+{
+"name": "北海道 浦河町",
+"amountYen": 346127000,
+"count": 14764
+},
+{
+"name": "北海道 様似町",
+"amountYen": 433166300,
+"count": 23624
+},
+{
+"name": "北海道 えりも町",
+"amountYen": 787822176,
+"count": 47805
+},
+{
+"name": "北海道 新ひだか町",
+"amountYen": 392272500,
+"count": 16611
+},
+{
+"name": "北海道 音更町",
+"amountYen": 999153630,
+"count": 73049
+},
+{
+"name": "北海道 士幌町",
+"amountYen": 547702100,
+"count": 36047
+},
+{
+"name": "北海道 上士幌町",
+"amountYen": 1180565202,
+"count": 62719
+},
+{
+"name": "北海道 鹿追町",
+"amountYen": 69032790,
+"count": 3425
+},
+{
+"name": "北海道 新得町",
+"amountYen": 69240000,
+"count": 2549
+},
+{
+"name": "北海道 清水町",
+"amountYen": 395903300,
+"count": 23457
+},
+{
+"name": "北海道 芽室町",
+"amountYen": 601187200,
+"count": 52342
+},
+{
+"name": "北海道 中札内村",
+"amountYen": 293076398,
+"count": 16350
+},
+{
+"name": "北海道 更別村",
+"amountYen": 566923200,
+"count": 32188
+},
+{
+"name": "北海道 大樹町",
+"amountYen": 224614400,
+"count": 14352
+},
+{
+"name": "北海道 広尾町",
+"amountYen": 143676670,
+"count": 4980
+},
+{
+"name": "北海道 幕別町",
+"amountYen": 278311603,
+"count": 12661
+},
+{
+"name": "北海道 池田町",
+"amountYen": 1016015519,
+"count": 60226
+},
+{
+"name": "北海道 豊頃町",
+"amountYen": 28558500,
+"count": 2079
+},
+{
+"name": "北海道 本別町",
+"amountYen": 105985101,
+"count": 8569
+},
+{
+"name": "北海道 足寄町",
+"amountYen": 127660800,
+"count": 5792
+},
+{
+"name": "北海道 陸別町",
+"amountYen": 9009200,
+"count": 473
+},
+{
+"name": "北海道 浦幌町",
+"amountYen": 84843000,
+"count": 5844
+},
+{
+"name": "北海道 釧路町",
+"amountYen": 1127004660,
+"count": 43115
+},
+{
+"name": "北海道 厚岸町",
+"amountYen": 1021810000,
+"count": 54233
+},
+{
+"name": "北海道 浜中町",
+"amountYen": 1316173183,
+"count": 73193
+},
+{
+"name": "北海道 標茶町",
+"amountYen": 169423307,
+"count": 8037
+},
+{
+"name": "北海道 弟子屈町",
+"amountYen": 6289954569,
+"count": 310156
+},
+{
+"name": "北海道 鶴居村",
+"amountYen": 378822000,
+"count": 19643
+},
+{
+"name": "北海道 白糠町",
+"amountYen": 22329453385,
+"count": 1276246
+},
+{
+"name": "北海道 別海町",
+"amountYen": 21154973584,
+"count": 1337531
+},
+{
+"name": "北海道 中標津町",
+"amountYen": 255867100,
+"count": 14253
+},
+{
+"name": "北海道 標津町",
+"amountYen": 161550400,
+"count": 7278
+},
+{
+"name": "北海道 羅臼町",
+"amountYen": 778165000,
+"count": 40296
+},
+{
+"name": "青森県 青森市",
+"amountYen": 2033464280,
+"count": 145830
+},
+{
+"name": "青森県 弘前市",
+"amountYen": 1369054240,
+"count": 72992
+},
+{
+"name": "青森県 八戸市",
+"amountYen": 311714290,
+"count": 13903
+},
+{
+"name": "青森県 黒石市",
+"amountYen": 445164000,
+"count": 29584
+},
+{
+"name": "青森県 五所川原市",
+"amountYen": 1044968200,
+"count": 38653
+},
+{
+"name": "青森県 十和田市",
+"amountYen": 167023881,
+"count": 9731
+},
+{
+"name": "青森県 三沢市",
+"amountYen": 81717400,
+"count": 1773
+},
+{
+"name": "青森県 むつ市",
+"amountYen": 126767304,
+"count": 6652
+},
+{
+"name": "青森県 つがる市",
+"amountYen": 240203000,
+"count": 18267
+},
+{
+"name": "青森県 平川市",
+"amountYen": 792699100,
+"count": 47675
+},
+{
+"name": "青森県 平内町",
+"amountYen": 56236500,
+"count": 1934
+},
+{
+"name": "青森県 今別町",
+"amountYen": 4318500,
+"count": 198
+},
+{
+"name": "青森県 蓬田村",
+"amountYen": 55392000,
+"count": 319
+},
+{
+"name": "青森県 外ヶ浜町",
+"amountYen": 12885000,
+"count": 699
+},
+{
+"name": "青森県 鰺ヶ沢町",
+"amountYen": 362133000,
+"count": 17082
+},
+{
+"name": "青森県 深浦町",
+"amountYen": 54046000,
+"count": 2324
+},
+{
+"name": "青森県 西目屋村",
+"amountYen": 21736000,
+"count": 768
+},
+{
+"name": "青森県 藤崎町",
+"amountYen": 282900000,
+"count": 25788
+},
+{
+"name": "青森県 大鰐町",
+"amountYen": 28340000,
+"count": 1172
+},
+{
+"name": "青森県 田舎館村",
+"amountYen": 90103000,
+"count": 1688
+},
+{
+"name": "青森県 板柳町",
+"amountYen": 256311100,
+"count": 14714
+},
+{
+"name": "青森県 鶴田町",
+"amountYen": 63743779,
+"count": 3847
+},
+{
+"name": "青森県 中泊町",
+"amountYen": 42443100,
+"count": 1754
+},
+{
+"name": "青森県 野辺地町",
+"amountYen": 3382000,
+"count": 181
+},
+{
+"name": "青森県 七戸町",
+"amountYen": 158489500,
+"count": 15784
+},
+{
+"name": "青森県 六戸町",
+"amountYen": 37086900,
+"count": 922
+},
+{
+"name": "青森県 横浜町",
+"amountYen": 10380000,
+"count": 590
+},
+{
+"name": "青森県 東北町",
+"amountYen": 25686000,
+"count": 1340
+},
+{
+"name": "青森県 六ヶ所村",
+"amountYen": 25770025,
+"count": 1958
+},
+{
+"name": "青森県 おいらせ町",
+"amountYen": 39605020,
+"count": 2204
+},
+{
+"name": "青森県 大間町",
+"amountYen": 22370695,
+"count": 587
+},
+{
+"name": "青森県 東通村",
+"amountYen": 128208000,
+"count": 6382
+},
+{
+"name": "青森県 風間浦村",
+"amountYen": 7716000,
+"count": 288
+},
+{
+"name": "青森県 佐井村",
+"amountYen": 18130537,
+"count": 845
+},
+{
+"name": "青森県 三戸町",
+"amountYen": 471308602,
+"count": 24639
+},
+{
+"name": "青森県 五戸町",
+"amountYen": 188544200,
+"count": 10535
+},
+{
+"name": "青森県 田子町",
+"amountYen": 62669700,
+"count": 4080
+},
+{
+"name": "青森県 南部町",
+"amountYen": 391762376,
+"count": 21935
+},
+{
+"name": "青森県 階上町",
+"amountYen": 13572000,
+"count": 885
+},
+{
+"name": "青森県 新郷村",
+"amountYen": 26313000,
+"count": 458
+},
+{
+"name": "岩手県 盛岡市",
+"amountYen": 511151100,
+"count": 14966
+},
+{
+"name": "岩手県 宮古市",
+"amountYen": 3213519398,
+"count": 252650
+},
+{
+"name": "岩手県 大船渡市",
+"amountYen": 959648789,
+"count": 61083
+},
+{
+"name": "岩手県 花巻市",
+"amountYen": 6982318460,
+"count": 447056
+},
+{
+"name": "岩手県 北上市",
+"amountYen": 1109077400,
+"count": 46726
+},
+{
+"name": "岩手県 久慈市",
+"amountYen": 231286863,
+"count": 13399
+},
+{
+"name": "岩手県 遠野市",
+"amountYen": 457975000,
+"count": 15792
+},
+{
+"name": "岩手県 一関市",
+"amountYen": 1735421603,
+"count": 108336
+},
+{
+"name": "岩手県 陸前高田市",
+"amountYen": 890683561,
+"count": 53058
+},
+{
+"name": "岩手県 釜石市",
+"amountYen": 492441000,
+"count": 22485
+},
+{
+"name": "岩手県 二戸市",
+"amountYen": 221176490,
+"count": 11309
+},
+{
+"name": "岩手県 八幡平市",
+"amountYen": 276861800,
+"count": 7304
+},
+{
+"name": "岩手県 奥州市",
+"amountYen": 2085218549,
+"count": 67447
+},
+{
+"name": "岩手県 滝沢市",
+"amountYen": 73230991,
+"count": 4238
+},
+{
+"name": "岩手県 雫石町",
+"amountYen": 436670500,
+"count": 12446
+},
+{
+"name": "岩手県 葛巻町",
+"amountYen": 23810000,
+"count": 1262
+},
+{
+"name": "岩手県 岩手町",
+"amountYen": 63384000,
+"count": 4010
+},
+{
+"name": "岩手県 紫波町",
+"amountYen": 425637200,
+"count": 18153
+},
+{
+"name": "岩手県 矢巾町",
+"amountYen": 84758800,
+"count": 4163
+},
+{
+"name": "岩手県 西和賀町",
+"amountYen": 243688800,
+"count": 11557
+},
+{
+"name": "岩手県 金ケ崎町",
+"amountYen": 416313700,
+"count": 27759
+},
+{
+"name": "岩手県 平泉町",
+"amountYen": 187025500,
+"count": 6684
+},
+{
+"name": "岩手県 住田町",
+"amountYen": 20307000,
+"count": 1096
+},
+{
+"name": "岩手県 大槌町",
+"amountYen": 747228832,
+"count": 33703
+},
+{
+"name": "岩手県 山田町",
+"amountYen": 239977100,
+"count": 10781
+},
+{
+"name": "岩手県 岩泉町",
+"amountYen": 355271200,
+"count": 19430
+},
+{
+"name": "岩手県 田野畑村",
+"amountYen": 90093800,
+"count": 5341
+},
+{
+"name": "岩手県 普代村",
+"amountYen": 489499800,
+"count": 31477
+},
+{
+"name": "岩手県 軽米町",
+"amountYen": 29718000,
+"count": 1448
+},
+{
+"name": "岩手県 野田村",
+"amountYen": 8303050,
+"count": 642
+},
+{
+"name": "岩手県 九戸村",
+"amountYen": 14798500,
+"count": 1017
+},
+{
+"name": "岩手県 洋野町",
+"amountYen": 68395000,
+"count": 3084
+},
+{
+"name": "岩手県 一戸町",
+"amountYen": 143369000,
+"count": 1989
+},
+{
+"name": "宮城県 仙台市",
+"amountYen": 2160067966,
+"count": 59838
+},
+{
+"name": "宮城県 石巻市",
+"amountYen": 2498187400,
+"count": 158579
+},
+{
+"name": "宮城県 塩竈市",
+"amountYen": 1148219000,
+"count": 82780
+},
+{
+"name": "宮城県 気仙沼市",
+"amountYen": 13475881252,
+"count": 868166
+},
+{
+"name": "宮城県 白石市",
+"amountYen": 784942900,
+"count": 60111
+},
+{
+"name": "宮城県 名取市",
+"amountYen": 290043825,
+"count": 15049
+},
+{
+"name": "宮城県 角田市",
+"amountYen": 5719985528,
+"count": 172613
+},
+{
+"name": "宮城県 多賀城市",
+"amountYen": 154035500,
+"count": 8782
+},
+{
+"name": "宮城県 岩沼市",
+"amountYen": 1798011153,
+"count": 78836
+},
+{
+"name": "宮城県 登米市",
+"amountYen": 1063843500,
+"count": 46020
+},
+{
+"name": "宮城県 栗原市",
+"amountYen": 262658000,
+"count": 5863
+},
+{
+"name": "宮城県 東松島市",
+"amountYen": 556107678,
+"count": 33070
+},
+{
+"name": "宮城県 大崎市",
+"amountYen": 695378000,
+"count": 37444
+},
+{
+"name": "宮城県 富谷市",
+"amountYen": 205929000,
+"count": 8023
+},
+{
+"name": "宮城県 蔵王町",
+"amountYen": 907045400,
+"count": 68695
+},
+{
+"name": "宮城県 七ヶ宿町",
+"amountYen": 8584000,
+"count": 549
+},
+{
+"name": "宮城県 大河原町",
+"amountYen": 2203773300,
+"count": 55896
+},
+{
+"name": "宮城県 村田町",
+"amountYen": 145191000,
+"count": 5099
+},
+{
+"name": "宮城県 柴田町",
+"amountYen": 641135000,
+"count": 25553
+},
+{
+"name": "宮城県 川崎町",
+"amountYen": 101644000,
+"count": 3861
+},
+{
+"name": "宮城県 丸森町",
+"amountYen": 79940247,
+"count": 5880
+},
+{
+"name": "宮城県 亘理町",
+"amountYen": 152319500,
+"count": 6244
+},
+{
+"name": "宮城県 山元町",
+"amountYen": 35113000,
+"count": 1911
+},
+{
+"name": "宮城県 松島町",
+"amountYen": 128372000,
+"count": 1544
+},
+{
+"name": "宮城県 七ヶ浜町",
+"amountYen": 17458100,
+"count": 1080
+},
+{
+"name": "宮城県 利府町",
+"amountYen": 602802133,
+"count": 35758
+},
+{
+"name": "宮城県 大和町",
+"amountYen": 206056000,
+"count": 8452
+},
+{
+"name": "宮城県 大郷町",
+"amountYen": 16685000,
+"count": 724
+},
+{
+"name": "宮城県 大衡村",
+"amountYen": 2095000,
+"count": 104
+},
+{
+"name": "宮城県 色麻町",
+"amountYen": 21101000,
+"count": 858
+},
+{
+"name": "宮城県 加美町",
+"amountYen": 409696500,
+"count": 10837
+},
+{
+"name": "宮城県 涌谷町",
+"amountYen": 133307500,
+"count": 3925
+},
+{
+"name": "宮城県 美里町",
+"amountYen": 44113700,
+"count": 3760
+},
+{
+"name": "宮城県 女川町",
+"amountYen": 35830000,
+"count": 2017
+},
+{
+"name": "宮城県 南三陸町",
+"amountYen": 98446200,
+"count": 4841
+},
+{
+"name": "秋田県 秋田市",
+"amountYen": 3174358500,
+"count": 159118
+},
+{
+"name": "秋田県 能代市",
+"amountYen": 290136072,
+"count": 14469
+},
+{
+"name": "秋田県 横手市",
+"amountYen": 598841843,
+"count": 32076
+},
+{
+"name": "秋田県 大館市",
+"amountYen": 1155757962,
+"count": 47147
+},
+{
+"name": "秋田県 男鹿市",
+"amountYen": 668309100,
+"count": 30315
+},
+{
+"name": "秋田県 湯沢市",
+"amountYen": 655017000,
+"count": 29544
+},
+{
+"name": "秋田県 鹿角市",
+"amountYen": 291350500,
+"count": 14114
+},
+{
+"name": "秋田県 由利本荘市",
+"amountYen": 581669960,
+"count": 19943
+},
+{
+"name": "秋田県 潟上市",
+"amountYen": 2144182500,
+"count": 33648
+},
+{
+"name": "秋田県 大仙市",
+"amountYen": 1172515000,
+"count": 26376
+},
+{
+"name": "秋田県 北秋田市",
+"amountYen": 2320268900,
+"count": 27441
+},
+{
+"name": "秋田県 にかほ市",
+"amountYen": 539855763,
+"count": 11086
+},
+{
+"name": "秋田県 仙北市",
+"amountYen": 3965519400,
+"count": 66871
+},
+{
+"name": "秋田県 小坂町",
+"amountYen": 27298000,
+"count": 1348
+},
+{
+"name": "秋田県 上小阿仁村",
+"amountYen": 14188266,
+"count": 298
+},
+{
+"name": "秋田県 藤里町",
+"amountYen": 10892000,
+"count": 406
+},
+{
+"name": "秋田県 三種町",
+"amountYen": 93851500,
+"count": 2709
+},
+{
+"name": "秋田県 八峰町",
+"amountYen": 75729900,
+"count": 3511
+},
+{
+"name": "秋田県 五城目町",
+"amountYen": 15921400,
+"count": 639
+},
+{
+"name": "秋田県 八郎潟町",
+"amountYen": 35002000,
+"count": 1455
+},
+{
+"name": "秋田県 井川町",
+"amountYen": 328978500,
+"count": 11380
+},
+{
+"name": "秋田県 大潟村",
+"amountYen": 141558848,
+"count": 4942
+},
+{
+"name": "秋田県 美郷町",
+"amountYen": 97413000,
+"count": 3863
+},
+{
+"name": "秋田県 羽後町",
+"amountYen": 39431232,
+"count": 1885
+},
+{
+"name": "秋田県 東成瀬村",
+"amountYen": 15444000,
+"count": 2045
+},
+{
+"name": "山形県 山形市",
+"amountYen": 4934291299,
+"count": 159421
+},
+{
+"name": "山形県 米沢市",
+"amountYen": 1842837775,
+"count": 56967
+},
+{
+"name": "山形県 鶴岡市",
+"amountYen": 2198249198,
+"count": 87420
+},
+{
+"name": "山形県 酒田市",
+"amountYen": 2598696500,
+"count": 92011
+},
+{
+"name": "山形県 新庄市",
+"amountYen": 1220400500,
+"count": 71389
+},
+{
+"name": "山形県 寒河江市",
+"amountYen": 2267711100,
+"count": 97694
+},
+{
+"name": "山形県 上山市",
+"amountYen": 1432184800,
+"count": 100504
+},
+{
+"name": "山形県 村山市",
+"amountYen": 1786294200,
+"count": 65366
+},
+{
+"name": "山形県 長井市",
+"amountYen": 923043100,
+"count": 43540
+},
+{
+"name": "山形県 天童市",
+"amountYen": 4003648130,
+"count": 222198
+},
+{
+"name": "山形県 東根市",
+"amountYen": 2341412769,
+"count": 77545
+},
+{
+"name": "山形県 尾花沢市",
+"amountYen": 1957241775,
+"count": 96786
+},
+{
+"name": "山形県 南陽市",
+"amountYen": 1089285171,
+"count": 33023
+},
+{
+"name": "山形県 山辺町",
+"amountYen": 990562796,
+"count": 56726
+},
+{
+"name": "山形県 中山町",
+"amountYen": 369025001,
+"count": 19303
+},
+{
+"name": "山形県 河北町",
+"amountYen": 1061608434,
+"count": 33679
+},
+{
+"name": "山形県 西川町",
+"amountYen": 990853500,
+"count": 44217
+},
+{
+"name": "山形県 朝日町",
+"amountYen": 125102000,
+"count": 8127
+},
+{
+"name": "山形県 大江町",
+"amountYen": 366980500,
+"count": 20146
+},
+{
+"name": "山形県 大石田町",
+"amountYen": 654925000,
+"count": 17389
+},
+{
+"name": "山形県 金山町",
+"amountYen": 192431500,
+"count": 5585
+},
+{
+"name": "山形県 最上町",
+"amountYen": 434511500,
+"count": 15706
+},
+{
+"name": "山形県 舟形町",
+"amountYen": 1052413800,
+"count": 34627
+},
+{
+"name": "山形県 真室川町",
+"amountYen": 235276100,
+"count": 5714
+},
+{
+"name": "山形県 大蔵村",
+"amountYen": 383313500,
+"count": 8257
+},
+{
+"name": "山形県 鮭川村",
+"amountYen": 349304730,
+"count": 7855
+},
+{
+"name": "山形県 戸沢村",
+"amountYen": 89507500,
+"count": 2269
+},
+{
+"name": "山形県 高畠町",
+"amountYen": 463017000,
+"count": 19212
+},
+{
+"name": "山形県 川西町",
+"amountYen": 415026200,
+"count": 15152
+},
+{
+"name": "山形県 小国町",
+"amountYen": 108839300,
+"count": 4262
+},
+{
+"name": "山形県 白鷹町",
+"amountYen": 67027000,
+"count": 2055
+},
+{
+"name": "山形県 飯豊町",
+"amountYen": 294969540,
+"count": 6226
+},
+{
+"name": "山形県 三川町",
+"amountYen": 438505000,
+"count": 15808
+},
+{
+"name": "山形県 庄内町",
+"amountYen": 831824200,
+"count": 20006
+},
+{
+"name": "山形県 遊佐町",
+"amountYen": 590790000,
+"count": 16846
+},
+{
+"name": "福島県 福島市",
+"amountYen": 1836681900,
+"count": 62155
+},
+{
+"name": "福島県 会津若松市",
+"amountYen": 263979701,
+"count": 8982
+},
+{
+"name": "福島県 郡山市",
+"amountYen": 242237750,
+"count": 8523
+},
+{
+"name": "福島県 いわき市",
+"amountYen": 860403000,
+"count": 27826
+},
+{
+"name": "福島県 白河市",
+"amountYen": 533358952,
+"count": 14819
+},
+{
+"name": "福島県 須賀川市",
+"amountYen": 237331500,
+"count": 6669
+},
+{
+"name": "福島県 喜多方市",
+"amountYen": 235497000,
+"count": 9546
+},
+{
+"name": "福島県 相馬市",
+"amountYen": 14635700,
+"count": 346
+},
+{
+"name": "福島県 二本松市",
+"amountYen": 160007214,
+"count": 7321
+},
+{
+"name": "福島県 田村市",
+"amountYen": 188687400,
+"count": 6592
+},
+{
+"name": "福島県 南相馬市",
+"amountYen": 236158710,
+"count": 9639
+},
+{
+"name": "福島県 伊達市",
+"amountYen": 498397900,
+"count": 31939
+},
+{
+"name": "福島県 本宮市",
+"amountYen": 1083554165,
+"count": 39903
+},
+{
+"name": "福島県 桑折町",
+"amountYen": 137027000,
+"count": 6507
+},
+{
+"name": "福島県 国見町",
+"amountYen": 355029000,
+"count": 5963
+},
+{
+"name": "福島県 川俣町",
+"amountYen": 31370600,
+"count": 1842
+},
+{
+"name": "福島県 大玉村",
+"amountYen": 47156500,
+"count": 4018
+},
+{
+"name": "福島県 鏡石町",
+"amountYen": 61513575,
+"count": 3106
+},
+{
+"name": "福島県 天栄村",
+"amountYen": 158488000,
+"count": 4382
+},
+{
+"name": "福島県 下郷町",
+"amountYen": 13826000,
+"count": 899
+},
+{
+"name": "福島県 檜枝岐村",
+"amountYen": 7769000,
+"count": 239
+},
+{
+"name": "福島県 只見町",
+"amountYen": 20933816,
+"count": 1187
+},
+{
+"name": "福島県 南会津町",
+"amountYen": 61743200,
+"count": 2176
+},
+{
+"name": "福島県 北塩原村",
+"amountYen": 157605200,
+"count": 2342
+},
+{
+"name": "福島県 西会津町",
+"amountYen": 186268300,
+"count": 6302
+},
+{
+"name": "福島県 磐梯町",
+"amountYen": 595799613,
+"count": 11890
+},
+{
+"name": "福島県 猪苗代町",
+"amountYen": 161312002,
+"count": 3054
+},
+{
+"name": "福島県 会津坂下町",
+"amountYen": 548985628,
+"count": 13659
+},
+{
+"name": "福島県 湯川村",
+"amountYen": 143854000,
+"count": 2675
+},
+{
+"name": "福島県 柳津町",
+"amountYen": 46129700,
+"count": 3779
+},
+{
+"name": "福島県 三島町",
+"amountYen": 4902000,
+"count": 286
+},
+{
+"name": "福島県 金山町",
+"amountYen": 13046489,
+"count": 639
+},
+{
+"name": "福島県 昭和村",
+"amountYen": 3181600,
+"count": 174
+},
+{
+"name": "福島県 会津美里町",
+"amountYen": 39048000,
+"count": 2020
+},
+{
+"name": "福島県 西郷村",
+"amountYen": 69752000,
+"count": 1743
+},
+{
+"name": "福島県 泉崎村",
+"amountYen": 5194000,
+"count": 166
+},
+{
+"name": "福島県 中島村",
+"amountYen": 8636000,
+"count": 427
+},
+{
+"name": "福島県 矢吹町",
+"amountYen": 75575300,
+"count": 4009
+},
+{
+"name": "福島県 棚倉町",
+"amountYen": 542065500,
+"count": 22383
+},
+{
+"name": "福島県 矢祭町",
+"amountYen": 5710000,
+"count": 109
+},
+{
+"name": "福島県 塙町",
+"amountYen": 13735000,
+"count": 341
+},
+{
+"name": "福島県 鮫川村",
+"amountYen": 8014000,
+"count": 764
+},
+{
+"name": "福島県 石川町",
+"amountYen": 23389998,
+"count": 371
+},
+{
+"name": "福島県 玉川村",
+"amountYen": 11989000,
+"count": 329
+},
+{
+"name": "福島県 平田村",
+"amountYen": 1182000,
+"count": 106
+},
+{
+"name": "福島県 浅川町",
+"amountYen": 7498000,
+"count": 202
+},
+{
+"name": "福島県 古殿町",
+"amountYen": 9622200,
+"count": 395
+},
+{
+"name": "福島県 三春町",
+"amountYen": 28278198,
+"count": 1152
+},
+{
+"name": "福島県 小野町",
+"amountYen": 15108000,
+"count": 793
+},
+{
+"name": "福島県 広野町",
+"amountYen": 6941000,
+"count": 206
+},
+{
+"name": "福島県 楢葉町",
+"amountYen": 9305000,
+"count": 451
+},
+{
+"name": "福島県 富岡町",
+"amountYen": 10483869,
+"count": 241
+},
+{
+"name": "福島県 川内村",
+"amountYen": 10705000,
+"count": 309
+},
+{
+"name": "福島県 大熊町",
+"amountYen": 5136597,
+"count": 332
+},
+{
+"name": "福島県 双葉町",
+"amountYen": 58453276,
+"count": 274
+},
+{
+"name": "福島県 浪江町",
+"amountYen": 33800500,
+"count": 548
+},
+{
+"name": "福島県 葛尾村",
+"amountYen": 12016000,
+"count": 462
+},
+{
+"name": "福島県 新地町",
+"amountYen": 29890000,
+"count": 1257
+},
+{
+"name": "福島県 飯舘村",
+"amountYen": 8637000,
+"count": 389
+},
+{
+"name": "茨城県 水戸市",
+"amountYen": 1009229635,
+"count": 58844
+},
+{
+"name": "茨城県 日立市",
+"amountYen": 2713707000,
+"count": 20313
+},
+{
+"name": "茨城県 土浦市",
+"amountYen": 2036239400,
+"count": 129340
+},
+{
+"name": "茨城県 古河市",
+"amountYen": 540656800,
+"count": 26211
+},
+{
+"name": "茨城県 石岡市",
+"amountYen": 136899500,
+"count": 8678
+},
+{
+"name": "茨城県 結城市",
+"amountYen": 228777700,
+"count": 6387
+},
+{
+"name": "茨城県 龍ケ崎市",
+"amountYen": 455589614,
+"count": 14896
+},
+{
+"name": "茨城県 下妻市",
+"amountYen": 2185115600,
+"count": 109336
+},
+{
+"name": "茨城県 常総市",
+"amountYen": 905865700,
+"count": 70408
+},
+{
+"name": "茨城県 常陸太田市",
+"amountYen": 359579222,
+"count": 17546
+},
+{
+"name": "茨城県 高萩市",
+"amountYen": 30658000,
+"count": 1131
+},
+{
+"name": "茨城県 北茨城市",
+"amountYen": 219786600,
+"count": 9536
+},
+{
+"name": "茨城県 笠間市",
+"amountYen": 356665100,
+"count": 19080
+},
+{
+"name": "茨城県 取手市",
+"amountYen": 1980748059,
+"count": 102111
+},
+{
+"name": "茨城県 牛久市",
+"amountYen": 859216260,
+"count": 35773
+},
+{
+"name": "茨城県 つくば市",
+"amountYen": 664500391,
+"count": 14200
+},
+{
+"name": "茨城県 ひたちなか市",
+"amountYen": 461054000,
+"count": 27813
+},
+{
+"name": "茨城県 鹿嶋市",
+"amountYen": 344027303,
+"count": 23979
+},
+{
+"name": "茨城県 潮来市",
+"amountYen": 322668500,
+"count": 23567
+},
+{
+"name": "茨城県 守谷市",
+"amountYen": 7093257612,
+"count": 305479
+},
+{
+"name": "茨城県 常陸大宮市",
+"amountYen": 243642528,
+"count": 22905
+},
+{
+"name": "茨城県 那珂市",
+"amountYen": 58535265,
+"count": 2726
+},
+{
+"name": "茨城県 筑西市",
+"amountYen": 629542600,
+"count": 41571
+},
+{
+"name": "茨城県 坂東市",
+"amountYen": 150069000,
+"count": 3096
+},
+{
+"name": "茨城県 稲敷市",
+"amountYen": 602537167,
+"count": 18492
+},
+{
+"name": "茨城県 かすみがうら市",
+"amountYen": 282775500,
+"count": 18771
+},
+{
+"name": "茨城県 桜川市",
+"amountYen": 995228600,
+"count": 45675
+},
+{
+"name": "茨城県 神栖市",
+"amountYen": 607459000,
+"count": 34181
+},
+{
+"name": "茨城県 行方市",
+"amountYen": 930053000,
+"count": 93091
+},
+{
+"name": "茨城県 鉾田市",
+"amountYen": 356832400,
+"count": 19734
+},
+{
+"name": "茨城県 つくばみらい市",
+"amountYen": 4046160302,
+"count": 153214
+},
+{
+"name": "茨城県 小美玉市",
+"amountYen": 768096700,
+"count": 49088
+},
+{
+"name": "茨城県 茨城町",
+"amountYen": 495073000,
+"count": 24562
+},
+{
+"name": "茨城県 大洗町",
+"amountYen": 1366082961,
+"count": 83679
+},
+{
+"name": "茨城県 城里町",
+"amountYen": 62945900,
+"count": 4097
+},
+{
+"name": "茨城県 東海村",
+"amountYen": 43673000,
+"count": 2344
+},
+{
+"name": "茨城県 大子町",
+"amountYen": 69591200,
+"count": 2601
+},
+{
+"name": "茨城県 美浦村",
+"amountYen": 528408500,
+"count": 3170
+},
+{
+"name": "茨城県 阿見町",
+"amountYen": 377261000,
+"count": 14706
+},
+{
+"name": "茨城県 河内町",
+"amountYen": 490712500,
+"count": 11458
+},
+{
+"name": "茨城県 八千代町",
+"amountYen": 1910551300,
+"count": 128067
+},
+{
+"name": "茨城県 五霞町",
+"amountYen": 703685200,
+"count": 37277
+},
+{
+"name": "茨城県 境町",
+"amountYen": 5679840319,
+"count": 287843
+},
+{
+"name": "茨城県 利根町",
+"amountYen": 37325000,
+"count": 2317
+},
+{
+"name": "栃木県 宇都宮市",
+"amountYen": 841094060,
+"count": 41878
+},
+{
+"name": "栃木県 足利市",
+"amountYen": 440457007,
+"count": 18839
+},
+{
+"name": "栃木県 栃木市",
+"amountYen": 1509627000,
+"count": 43408
+},
+{
+"name": "栃木県 佐野市",
+"amountYen": 2013925138,
+"count": 139813
+},
+{
+"name": "栃木県 鹿沼市",
+"amountYen": 288201200,
+"count": 11561
+},
+{
+"name": "栃木県 日光市",
+"amountYen": 1514406400,
+"count": 22401
+},
+{
+"name": "栃木県 小山市",
+"amountYen": 5982874000,
+"count": 396857
+},
+{
+"name": "栃木県 真岡市",
+"amountYen": 609453600,
+"count": 34829
+},
+{
+"name": "栃木県 大田原市",
+"amountYen": 459331000,
+"count": 11523
+},
+{
+"name": "栃木県 矢板市",
+"amountYen": 274658400,
+"count": 14698
+},
+{
+"name": "栃木県 那須塩原市",
+"amountYen": 931555618,
+"count": 42001
+},
+{
+"name": "栃木県 さくら市",
+"amountYen": 1136694609,
+"count": 41860
+},
+{
+"name": "栃木県 那須烏山市",
+"amountYen": 159761000,
+"count": 1792
+},
+{
+"name": "栃木県 下野市",
+"amountYen": 231983600,
+"count": 14324
+},
+{
+"name": "栃木県 上三川町",
+"amountYen": 34032000,
+"count": 1559
+},
+{
+"name": "栃木県 益子町",
+"amountYen": 141892600,
+"count": 6605
+},
+{
+"name": "栃木県 茂木町",
+"amountYen": 92628000,
+"count": 5708
+},
+{
+"name": "栃木県 市貝町",
+"amountYen": 144302000,
+"count": 6197
+},
+{
+"name": "栃木県 芳賀町",
+"amountYen": 50952000,
+"count": 2377
+},
+{
+"name": "栃木県 壬生町",
+"amountYen": 113605000,
+"count": 4503
+},
+{
+"name": "栃木県 野木町",
+"amountYen": 62373500,
+"count": 2876
+},
+{
+"name": "栃木県 塩谷町",
+"amountYen": 45532800,
+"count": 1635
+},
+{
+"name": "栃木県 高根沢町",
+"amountYen": 30605334,
+"count": 800
+},
+{
+"name": "栃木県 那須町",
+"amountYen": 1106680700,
+"count": 18289
+},
+{
+"name": "栃木県 那珂川町",
+"amountYen": 101884100,
+"count": 5813
+},
+{
+"name": "群馬県 前橋市",
+"amountYen": 347289797,
+"count": 18236
+},
+{
+"name": "群馬県 高崎市",
+"amountYen": 1849231020,
+"count": 86058
+},
+{
+"name": "群馬県 桐生市",
+"amountYen": 245525500,
+"count": 11753
+},
+{
+"name": "群馬県 伊勢崎市",
+"amountYen": 452654104,
+"count": 12349
+},
+{
+"name": "群馬県 太田市",
+"amountYen": 492534630,
+"count": 25265
+},
+{
+"name": "群馬県 沼田市",
+"amountYen": 355579500,
+"count": 17233
+},
+{
+"name": "群馬県 館林市",
+"amountYen": 269166500,
+"count": 13446
+},
+{
+"name": "群馬県 渋川市",
+"amountYen": 356691000,
+"count": 6687
+},
+{
+"name": "群馬県 藤岡市",
+"amountYen": 608537000,
+"count": 20625
+},
+{
+"name": "群馬県 富岡市",
+"amountYen": 341689000,
+"count": 20313
+},
+{
+"name": "群馬県 安中市",
+"amountYen": 553738800,
+"count": 31361
+},
+{
+"name": "群馬県 みどり市",
+"amountYen": 170941500,
+"count": 10096
+},
+{
+"name": "群馬県 榛東村",
+"amountYen": 166152000,
+"count": 11954
+},
+{
+"name": "群馬県 吉岡町",
+"amountYen": 17545000,
+"count": 1306
+},
+{
+"name": "群馬県 上野村",
+"amountYen": 2933000,
+"count": 76
+},
+{
+"name": "群馬県 神流町",
+"amountYen": 6179000,
+"count": 112
+},
+{
+"name": "群馬県 下仁田町",
+"amountYen": 96637833,
+"count": 5818
+},
+{
+"name": "群馬県 南牧村",
+"amountYen": 1150000,
+"count": 23
+},
+{
+"name": "群馬県 甘楽町",
+"amountYen": 71898230,
+"count": 3790
+},
+{
+"name": "群馬県 中之条町",
+"amountYen": 180730400,
+"count": 1872
+},
+{
+"name": "群馬県 長野原町",
+"amountYen": 208661000,
+"count": 2198
+},
+{
+"name": "群馬県 嬬恋村",
+"amountYen": 444263500,
+"count": 14996
+},
+{
+"name": "群馬県 草津町",
+"amountYen": 1161267667,
+"count": 11393
+},
+{
+"name": "群馬県 高山村",
+"amountYen": 13148000,
+"count": 437
+},
+{
+"name": "群馬県 東吾妻町",
+"amountYen": 13885000,
+"count": 485
+},
+{
+"name": "群馬県 片品村",
+"amountYen": 94019750,
+"count": 2974
+},
+{
+"name": "群馬県 川場村",
+"amountYen": 156350500,
+"count": 6540
+},
+{
+"name": "群馬県 昭和村",
+"amountYen": 463480000,
+"count": 10642
+},
+{
+"name": "群馬県 みなかみ町",
+"amountYen": 641179200,
+"count": 9707
+},
+{
+"name": "群馬県 玉村町",
+"amountYen": 108930900,
+"count": 5122
+},
+{
+"name": "群馬県 板倉町",
+"amountYen": 125518586,
+"count": 4667
+},
+{
+"name": "群馬県 明和町",
+"amountYen": 524874229,
+"count": 21454
+},
+{
+"name": "群馬県 千代田町",
+"amountYen": 3554780816,
+"count": 150600
+},
+{
+"name": "群馬県 大泉町",
+"amountYen": 117822000,
+"count": 2614
+},
+{
+"name": "群馬県 邑楽町",
+"amountYen": 101963000,
+"count": 3619
+},
+{
+"name": "埼玉県 さいたま市",
+"amountYen": 953277484,
+"count": 30626
+},
+{
+"name": "埼玉県 川越市",
+"amountYen": 632079950,
+"count": 24930
+},
+{
+"name": "埼玉県 熊谷市",
+"amountYen": 55874000,
+"count": 1177
+},
+{
+"name": "埼玉県 川口市",
+"amountYen": 333692009,
+"count": 21121
+},
+{
+"name": "埼玉県 行田市",
+"amountYen": 90984500,
+"count": 4825
+},
+{
+"name": "埼玉県 秩父市",
+"amountYen": 302464241,
+"count": 9175
+},
+{
+"name": "埼玉県 所沢市",
+"amountYen": 184512032,
+"count": 2424
+},
+{
+"name": "埼玉県 飯能市",
+"amountYen": 138250000,
+"count": 5067
+},
+{
+"name": "埼玉県 加須市",
+"amountYen": 1254752374,
+"count": 38582
+},
+{
+"name": "埼玉県 本庄市",
+"amountYen": 189974100,
+"count": 7325
+},
+{
+"name": "埼玉県 東松山市",
+"amountYen": 431926283,
+"count": 16764
+},
+{
+"name": "埼玉県 春日部市",
+"amountYen": 166583500,
+"count": 5700
+},
+{
+"name": "埼玉県 狭山市",
+"amountYen": 164450649,
+"count": 5945
+},
+{
+"name": "埼玉県 羽生市",
+"amountYen": 459955500,
+"count": 31938
+},
+{
+"name": "埼玉県 鴻巣市",
+"amountYen": 75586500,
+"count": 3337
+},
+{
+"name": "埼玉県 深谷市",
+"amountYen": 785333500,
+"count": 17017
+},
+{
+"name": "埼玉県 上尾市",
+"amountYen": 562278000,
+"count": 3207
+},
+{
+"name": "埼玉県 草加市",
+"amountYen": 2284688666,
+"count": 155576
+},
+{
+"name": "埼玉県 越谷市",
+"amountYen": 235564940,
+"count": 3027
+},
+{
+"name": "埼玉県 蕨市",
+"amountYen": 154625000,
+"count": 222
+},
+{
+"name": "埼玉県 戸田市",
+"amountYen": 605892300,
+"count": 11246
+},
+{
+"name": "埼玉県 入間市",
+"amountYen": 63392500,
+"count": 3551
+},
+{
+"name": "埼玉県 朝霞市",
+"amountYen": 5194000,
+"count": 231
+},
+{
+"name": "埼玉県 志木市",
+"amountYen": 26878000,
+"count": 1340
+},
+{
+"name": "埼玉県 和光市",
+"amountYen": 12124100,
+"count": 569
+},
+{
+"name": "埼玉県 新座市",
+"amountYen": 59466500,
+"count": 809
+},
+{
+"name": "埼玉県 桶川市",
+"amountYen": 41496500,
+"count": 728
+},
+{
+"name": "埼玉県 久喜市",
+"amountYen": 283071212,
+"count": 11770
+},
+{
+"name": "埼玉県 北本市",
+"amountYen": 1302020000,
+"count": 10690
+},
+{
+"name": "埼玉県 八潮市",
+"amountYen": 53149000,
+"count": 2405
+},
+{
+"name": "埼玉県 富士見市",
+"amountYen": 44332949,
+"count": 743
+},
+{
+"name": "埼玉県 三郷市",
+"amountYen": 6468000,
+"count": 356
+},
+{
+"name": "埼玉県 蓮田市",
+"amountYen": 43324034,
+"count": 1325
+},
+{
+"name": "埼玉県 坂戸市",
+"amountYen": 264682300,
+"count": 11587
+},
+{
+"name": "埼玉県 幸手市",
+"amountYen": 257065200,
+"count": 8466
+},
+{
+"name": "埼玉県 鶴ヶ島市",
+"amountYen": 203872000,
+"count": 3586
+},
+{
+"name": "埼玉県 日高市",
+"amountYen": 146565500,
+"count": 7375
+},
+{
+"name": "埼玉県 吉川市",
+"amountYen": 116383866,
+"count": 845
+},
+{
+"name": "埼玉県 ふじみ野市",
+"amountYen": 45991000,
+"count": 898
+},
+{
+"name": "埼玉県 白岡市",
+"amountYen": 37424100,
+"count": 2147
+},
+{
+"name": "埼玉県 伊奈町",
+"amountYen": 28565000,
+"count": 649
+},
+{
+"name": "埼玉県 三芳町",
+"amountYen": 42311000,
+"count": 1826
+},
+{
+"name": "埼玉県 毛呂山町",
+"amountYen": 45751868,
+"count": 1531
+},
+{
+"name": "埼玉県 越生町",
+"amountYen": 7030727,
+"count": 364
+},
+{
+"name": "埼玉県 滑川町",
+"amountYen": 39853000,
+"count": 1792
+},
+{
+"name": "埼玉県 嵐山町",
+"amountYen": 195408600,
+"count": 7277
+},
+{
+"name": "埼玉県 小川町",
+"amountYen": 36769000,
+"count": 1523
+},
+{
+"name": "埼玉県 川島町",
+"amountYen": 79853728,
+"count": 4229
+},
+{
+"name": "埼玉県 吉見町",
+"amountYen": 98457500,
+"count": 5577
+},
+{
+"name": "埼玉県 鳩山町",
+"amountYen": 15286000,
+"count": 543
+},
+{
+"name": "埼玉県 ときがわ町",
+"amountYen": 21814000,
+"count": 797
+},
+{
+"name": "埼玉県 横瀬町",
+"amountYen": 22008500,
+"count": 910
+},
+{
+"name": "埼玉県 皆野町",
+"amountYen": 12153720,
+"count": 322
+},
+{
+"name": "埼玉県 長瀞町",
+"amountYen": 24576100,
+"count": 931
+},
+{
+"name": "埼玉県 小鹿野町",
+"amountYen": 288708747,
+"count": 4720
+},
+{
+"name": "埼玉県 東秩父村",
+"amountYen": 11495704,
+"count": 254
+},
+{
+"name": "埼玉県 美里町",
+"amountYen": 79119500,
+"count": 4610
+},
+{
+"name": "埼玉県 神川町",
+"amountYen": 16487000,
+"count": 1234
+},
+{
+"name": "埼玉県 上里町",
+"amountYen": 72696500,
+"count": 3415
+},
+{
+"name": "埼玉県 寄居町",
+"amountYen": 10851000,
+"count": 246
+},
+{
+"name": "埼玉県 宮代町",
+"amountYen": 14772000,
+"count": 853
+},
+{
+"name": "埼玉県 杉戸町",
+"amountYen": 63329000,
+"count": 1733
+},
+{
+"name": "埼玉県 松伏町",
+"amountYen": 5198000,
+"count": 162
+},
+{
+"name": "千葉県 千葉市",
+"amountYen": 2228758087,
+"count": 19634
+},
+{
+"name": "千葉県 銚子市",
+"amountYen": 7004980800,
+"count": 551813
+},
+{
+"name": "千葉県 市川市",
+"amountYen": 248431504,
+"count": 3919
+},
+{
+"name": "千葉県 船橋市",
+"amountYen": 1426458945,
+"count": 79521
+},
+{
+"name": "千葉県 館山市",
+"amountYen": 726087700,
+"count": 16789
+},
+{
+"name": "千葉県 木更津市",
+"amountYen": 502649500,
+"count": 18029
+},
+{
+"name": "千葉県 松戸市",
+"amountYen": 107140976,
+"count": 3352
+},
+{
+"name": "千葉県 野田市",
+"amountYen": 266105690,
+"count": 5706
+},
+{
+"name": "千葉県 茂原市",
+"amountYen": 148558342,
+"count": 5360
+},
+{
+"name": "千葉県 成田市",
+"amountYen": 438529233,
+"count": 8388
+},
+{
+"name": "千葉県 佐倉市",
+"amountYen": 191289000,
+"count": 7231
+},
+{
+"name": "千葉県 東金市",
+"amountYen": 376040000,
+"count": 3891
+},
+{
+"name": "千葉県 旭市",
+"amountYen": 374680700,
+"count": 25409
+},
+{
+"name": "千葉県 習志野市",
+"amountYen": 30337000,
+"count": 1184
+},
+{
+"name": "千葉県 柏市",
+"amountYen": 470750627,
+"count": 7256
+},
+{
+"name": "千葉県 勝浦市",
+"amountYen": 1495417702,
+"count": 112168
+},
+{
+"name": "千葉県 市原市",
+"amountYen": 1358075600,
+"count": 46180
+},
+{
+"name": "千葉県 流山市",
+"amountYen": 284482229,
+"count": 11608
+},
+{
+"name": "千葉県 八千代市",
+"amountYen": 131875000,
+"count": 5201
+},
+{
+"name": "千葉県 我孫子市",
+"amountYen": 78138000,
+"count": 1981
+},
+{
+"name": "千葉県 鴨川市",
+"amountYen": 611073000,
+"count": 11957
+},
+{
+"name": "千葉県 鎌ケ谷市",
+"amountYen": 62656099,
+"count": 1859
+},
+{
+"name": "千葉県 君津市",
+"amountYen": 352204300,
+"count": 18303
+},
+{
+"name": "千葉県 富津市",
+"amountYen": 238269800,
+"count": 10080
+},
+{
+"name": "千葉県 浦安市",
+"amountYen": 1896155000,
+"count": 20725
+},
+{
+"name": "千葉県 四街道市",
+"amountYen": 11865000,
+"count": 569
+},
+{
+"name": "千葉県 袖ケ浦市",
+"amountYen": 95400000,
+"count": 3145
+},
+{
+"name": "千葉県 八街市",
+"amountYen": 105587090,
+"count": 4307
+},
+{
+"name": "千葉県 印西市",
+"amountYen": 51691000,
+"count": 1288
+},
+{
+"name": "千葉県 白井市",
+"amountYen": 98925980,
+"count": 4328
+},
+{
+"name": "千葉県 富里市",
+"amountYen": 65167952,
+"count": 3459
+},
+{
+"name": "千葉県 南房総市",
+"amountYen": 558712100,
+"count": 27745
+},
+{
+"name": "千葉県 匝瑳市",
+"amountYen": 76812719,
+"count": 2163
+},
+{
+"name": "千葉県 香取市",
+"amountYen": 856329658,
+"count": 56095
+},
+{
+"name": "千葉県 山武市",
+"amountYen": 185612780,
+"count": 7142
+},
+{
+"name": "千葉県 いすみ市",
+"amountYen": 2082611200,
+"count": 144671
+},
+{
+"name": "千葉県 大網白里市",
+"amountYen": 2153932000,
+"count": 94332
+},
+{
+"name": "千葉県 酒々井町",
+"amountYen": 9328000,
+"count": 396
+},
+{
+"name": "千葉県 栄町",
+"amountYen": 32518000,
+"count": 957
+},
+{
+"name": "千葉県 神崎町",
+"amountYen": 191448400,
+"count": 8142
+},
+{
+"name": "千葉県 多古町",
+"amountYen": 187534000,
+"count": 12287
+},
+{
+"name": "千葉県 東庄町",
+"amountYen": 23947400,
+"count": 923
+},
+{
+"name": "千葉県 九十九里町",
+"amountYen": 193136000,
+"count": 2485
+},
+{
+"name": "千葉県 芝山町",
+"amountYen": 31254300,
+"count": 772
+},
+{
+"name": "千葉県 横芝光町",
+"amountYen": 81065000,
+"count": 3141
+},
+{
+"name": "千葉県 一宮町",
+"amountYen": 210639000,
+"count": 3776
+},
+{
+"name": "千葉県 睦沢町",
+"amountYen": 47900500,
+"count": 743
+},
+{
+"name": "千葉県 長生村",
+"amountYen": 612982000,
+"count": 27609
+},
+{
+"name": "千葉県 白子町",
+"amountYen": 139665700,
+"count": 8171
+},
+{
+"name": "千葉県 長柄町",
+"amountYen": 115978000,
+"count": 1922
+},
+{
+"name": "千葉県 長南町",
+"amountYen": 44209000,
+"count": 554
+},
+{
+"name": "千葉県 大多喜町",
+"amountYen": 183131500,
+"count": 2461
+},
+{
+"name": "千葉県 御宿町",
+"amountYen": 29854500,
+"count": 487
+},
+{
+"name": "千葉県 鋸南町",
+"amountYen": 43469000,
+"count": 986
+},
+{
+"name": "東京都 千代田区",
+"amountYen": 1886176700,
+"count": 18307
+},
+{
+"name": "東京都 中央区",
+"amountYen": 110920857,
+"count": 654
+},
+{
+"name": "東京都 港区",
+"amountYen": 654498812,
+"count": 2128
+},
+{
+"name": "東京都 新宿区",
+"amountYen": 1336071964,
+"count": 24996
+},
+{
+"name": "東京都 文京区",
+"amountYen": 710201291,
+"count": 6651
+},
+{
+"name": "東京都 台東区",
+"amountYen": 381873008,
+"count": 8417
+},
+{
+"name": "東京都 墨田区",
+"amountYen": 1192361656,
+"count": 11291
+},
+{
+"name": "東京都 江東区",
+"amountYen": 583189957,
+"count": 8357
+},
+{
+"name": "東京都 品川区",
+"amountYen": 384875194,
+"count": 12712
+},
+{
+"name": "東京都 目黒区",
+"amountYen": 262553500,
+"count": 2225
+},
+{
+"name": "東京都 大田区",
+"amountYen": 227972178,
+"count": 2965
+},
+{
+"name": "東京都 世田谷区",
+"amountYen": 797244869,
+"count": 15447
+},
+{
+"name": "東京都 渋谷区",
+"amountYen": 2105590657,
+"count": 34427
+},
+{
+"name": "東京都 中野区",
+"amountYen": 237931000,
+"count": 4703
+},
+{
+"name": "東京都 杉並区",
+"amountYen": 407630288,
+"count": 609
+},
+{
+"name": "東京都 豊島区",
+"amountYen": 225929750,
+"count": 3913
+},
+{
+"name": "東京都 北区",
+"amountYen": 27378000,
+"count": 774
+},
+{
+"name": "東京都 荒川区",
+"amountYen": 190760100,
+"count": 2044
+},
+{
+"name": "東京都 板橋区",
+"amountYen": 23047124,
+"count": 851
+},
+{
+"name": "東京都 練馬区",
+"amountYen": 118705668,
+"count": 516
+},
+{
+"name": "東京都 足立区",
+"amountYen": 184287991,
+"count": 2396
+},
+{
+"name": "東京都 葛飾区",
+"amountYen": 117781808,
+"count": 2459
+},
+{
+"name": "東京都 江戸川区",
+"amountYen": 120140804,
+"count": 1575
+},
+{
+"name": "東京都 八王子市",
+"amountYen": 138824001,
+"count": 3426
+},
+{
+"name": "東京都 立川市",
+"amountYen": 31064500,
+"count": 546
+},
+{
+"name": "東京都 武蔵野市",
+"amountYen": 1861125300,
+"count": 18299
+},
+{
+"name": "東京都 三鷹市",
+"amountYen": 41947629,
+"count": 1051
+},
+{
+"name": "東京都 青梅市",
+"amountYen": 72801000,
+"count": 2115
+},
+{
+"name": "東京都 府中市",
+"amountYen": 469219864,
+"count": 15812
+},
+{
+"name": "東京都 昭島市",
+"amountYen": 3553000,
+"count": 174
+},
+{
+"name": "東京都 調布市",
+"amountYen": 116512525,
+"count": 2205
+},
+{
+"name": "東京都 町田市",
+"amountYen": 232768961,
+"count": 4274
+},
+{
+"name": "東京都 小金井市",
+"amountYen": 10557000,
+"count": 425
+},
+{
+"name": "東京都 小平市",
+"amountYen": 6824000,
+"count": 377
+},
+{
+"name": "東京都 日野市",
+"amountYen": 44589700,
+"count": 2645
+},
+{
+"name": "東京都 東村山市",
+"amountYen": 36606840,
+"count": 1062
+},
+{
+"name": "東京都 国分寺市",
+"amountYen": 39491600,
+"count": 492
+},
+{
+"name": "東京都 国立市",
+"amountYen": 75668429,
+"count": 644
+},
+{
+"name": "東京都 福生市",
+"amountYen": 10243000,
+"count": 352
+},
+{
+"name": "東京都 狛江市",
+"amountYen": 3448000,
+"count": 191
+},
+{
+"name": "東京都 東大和市",
+"amountYen": 44551957,
+"count": 859
+},
+{
+"name": "東京都 清瀬市",
+"amountYen": 14256635,
+"count": 333
+},
+{
+"name": "東京都 東久留米市",
+"amountYen": 236998000,
+"count": 1462
+},
+{
+"name": "東京都 武蔵村山市",
+"amountYen": 29636800,
+"count": 846
+},
+{
+"name": "東京都 多摩市",
+"amountYen": 52265000,
+"count": 1518
+},
+{
+"name": "東京都 稲城市",
+"amountYen": 19678000,
+"count": 600
+},
+{
+"name": "東京都 羽村市",
+"amountYen": 3581560,
+"count": 166
+},
+{
+"name": "東京都 あきる野市",
+"amountYen": 133931500,
+"count": 4592
+},
+{
+"name": "東京都 西東京市",
+"amountYen": 22682000,
+"count": 566
+},
+{
+"name": "東京都 瑞穂町",
+"amountYen": 42996000,
+"count": 2424
+},
+{
+"name": "東京都 日の出町",
+"amountYen": 318000,
+"count": 21
+},
+{
+"name": "東京都 檜原村",
+"amountYen": 7617000,
+"count": 258
+},
+{
+"name": "東京都 奥多摩町",
+"amountYen": 11588000,
+"count": 306
+},
+{
+"name": "東京都 大島町",
+"amountYen": 3278000,
+"count": 160
+},
+{
+"name": "東京都 利島村",
+"amountYen": 7408154,
+"count": 389
+},
+{
+"name": "東京都 新島村",
+"amountYen": 7956000,
+"count": 441
+},
+{
+"name": "東京都 神津島村",
+"amountYen": 8897500,
+"count": 337
+},
+{
+"name": "東京都 三宅村",
+"amountYen": 2732000,
+"count": 14
+},
+{
+"name": "東京都 御蔵島村",
+"amountYen": 32000,
+"count": 2
+},
+{
+"name": "東京都 八丈町",
+"amountYen": 15659256,
+"count": 367
+},
+{
+"name": "東京都 青ヶ島村",
+"amountYen": 389000,
+"count": 6
+},
+{
+"name": "東京都 小笠原村",
+"amountYen": 24656000,
+"count": 516
+},
+{
+"name": "神奈川県 横浜市",
+"amountYen": 4175126654,
+"count": 77271
+},
+{
+"name": "神奈川県 川崎市",
+"amountYen": 4360392649,
+"count": 138530
+},
+{
+"name": "神奈川県 相模原市",
+"amountYen": 859536421,
+"count": 21550
+},
+{
+"name": "神奈川県 横須賀市",
+"amountYen": 791352200,
+"count": 26985
+},
+{
+"name": "神奈川県 平塚市",
+"amountYen": 144169934,
+"count": 2804
+},
+{
+"name": "神奈川県 鎌倉市",
+"amountYen": 2869017301,
+"count": 58401
+},
+{
+"name": "神奈川県 藤沢市",
+"amountYen": 1033365990,
+"count": 52230
+},
+{
+"name": "神奈川県 小田原市",
+"amountYen": 1000294000,
+"count": 44857
+},
+{
+"name": "神奈川県 茅ヶ崎市",
+"amountYen": 176171296,
+"count": 3517
+},
+{
+"name": "神奈川県 逗子市",
+"amountYen": 221764918,
+"count": 2256
+},
+{
+"name": "神奈川県 三浦市",
+"amountYen": 643765781,
+"count": 27513
+},
+{
+"name": "神奈川県 秦野市",
+"amountYen": 301627196,
+"count": 8240
+},
+{
+"name": "神奈川県 厚木市",
+"amountYen": 1095427436,
+"count": 11653
+},
+{
+"name": "神奈川県 大和市",
+"amountYen": 77742476,
+"count": 1070
+},
+{
+"name": "神奈川県 伊勢原市",
+"amountYen": 88494800,
+"count": 2894
+},
+{
+"name": "神奈川県 海老名市",
+"amountYen": 404359100,
+"count": 16309
+},
+{
+"name": "神奈川県 座間市",
+"amountYen": 22142000,
+"count": 775
+},
+{
+"name": "神奈川県 南足柄市",
+"amountYen": 1517329600,
+"count": 38962
+},
+{
+"name": "神奈川県 綾瀬市",
+"amountYen": 651230600,
+"count": 17540
+},
+{
+"name": "神奈川県 葉山町",
+"amountYen": 159347400,
+"count": 4377
+},
+{
+"name": "神奈川県 寒川町",
+"amountYen": 66258000,
+"count": 2482
+},
+{
+"name": "神奈川県 大磯町",
+"amountYen": 51899000,
+"count": 1311
+},
+{
+"name": "神奈川県 二宮町",
+"amountYen": 3617000,
+"count": 165
+},
+{
+"name": "神奈川県 中井町",
+"amountYen": 120269500,
+"count": 4378
+},
+{
+"name": "神奈川県 大井町",
+"amountYen": 24922000,
+"count": 1940
+},
+{
+"name": "神奈川県 松田町",
+"amountYen": 202534296,
+"count": 10775
+},
+{
+"name": "神奈川県 山北町",
+"amountYen": 336388000,
+"count": 17313
+},
+{
+"name": "神奈川県 開成町",
+"amountYen": 368032500,
+"count": 19716
+},
+{
+"name": "神奈川県 箱根町",
+"amountYen": 3307256600,
+"count": 22345
+},
+{
+"name": "神奈川県 真鶴町",
+"amountYen": 15167500,
+"count": 667
+},
+{
+"name": "神奈川県 湯河原町",
+"amountYen": 699505228,
+"count": 6102
+},
+{
+"name": "神奈川県 愛川町",
+"amountYen": 95472000,
+"count": 5593
+},
+{
+"name": "神奈川県 清川村",
+"amountYen": 21880000,
+"count": 1601
+},
+{
+"name": "新潟県 新潟市",
+"amountYen": 995149100,
+"count": 33603
+},
+{
+"name": "新潟県 長岡市",
+"amountYen": 4028433081,
+"count": 109923
+},
+{
+"name": "新潟県 三条市",
+"amountYen": 4565697900,
+"count": 192964
+},
+{
+"name": "新潟県 柏崎市",
+"amountYen": 581021000,
+"count": 13252
+},
+{
+"name": "新潟県 新発田市",
+"amountYen": 1314812148,
+"count": 42932
+},
+{
+"name": "新潟県 小千谷市",
+"amountYen": 628252296,
+"count": 16977
+},
+{
+"name": "新潟県 加茂市",
+"amountYen": 989675881,
+"count": 29795
+},
+{
+"name": "新潟県 十日町市",
+"amountYen": 1087405864,
+"count": 35127
+},
+{
+"name": "新潟県 見附市",
+"amountYen": 694628400,
+"count": 35196
+},
+{
+"name": "新潟県 村上市",
+"amountYen": 941876000,
+"count": 31038
+},
+{
+"name": "新潟県 燕市",
+"amountYen": 4864065467,
+"count": 152486
+},
+{
+"name": "新潟県 糸魚川市",
+"amountYen": 646378562,
+"count": 16315
+},
+{
+"name": "新潟県 妙高市",
+"amountYen": 1221437900,
+"count": 27137
+},
+{
+"name": "新潟県 五泉市",
+"amountYen": 175338500,
+"count": 7891
+},
+{
+"name": "新潟県 上越市",
+"amountYen": 1168180824,
+"count": 29105
+},
+{
+"name": "新潟県 阿賀野市",
+"amountYen": 803000500,
+"count": 31692
+},
+{
+"name": "新潟県 佐渡市",
+"amountYen": 955242204,
+"count": 36657
+},
+{
+"name": "新潟県 魚沼市",
+"amountYen": 2706273400,
+"count": 77090
+},
+{
+"name": "新潟県 南魚沼市",
+"amountYen": 6899651467,
+"count": 126453
+},
+{
+"name": "新潟県 胎内市",
+"amountYen": 2408789000,
+"count": 38399
+},
+{
+"name": "新潟県 聖籠町",
+"amountYen": 535072000,
+"count": 15302
+},
+{
+"name": "新潟県 弥彦村",
+"amountYen": 729639000,
+"count": 26862
+},
+{
+"name": "新潟県 田上町",
+"amountYen": 93365000,
+"count": 4048
+},
+{
+"name": "新潟県 阿賀町",
+"amountYen": 87737000,
+"count": 2455
+},
+{
+"name": "新潟県 出雲崎町",
+"amountYen": 50580300,
+"count": 1505
+},
+{
+"name": "新潟県 湯沢町",
+"amountYen": 1032562300,
+"count": 11013
+},
+{
+"name": "新潟県 津南町",
+"amountYen": 573666636,
+"count": 10252
+},
+{
+"name": "新潟県 刈羽村",
+"amountYen": 7365000,
+"count": 685
+},
+{
+"name": "新潟県 関川村",
+"amountYen": 87337000,
+"count": 2863
+},
+{
+"name": "新潟県 粟島浦村",
+"amountYen": 1216570,
+"count": 71
+},
+{
+"name": "富山県 富山市",
+"amountYen": 336932200,
+"count": 10299
+},
+{
+"name": "富山県 高岡市",
+"amountYen": 389776777,
+"count": 12761
+},
+{
+"name": "富山県 魚津市",
+"amountYen": 1376110500,
+"count": 9498
+},
+{
+"name": "富山県 氷見市",
+"amountYen": 916492466,
+"count": 36341
+},
+{
+"name": "富山県 滑川市",
+"amountYen": 200674000,
+"count": 7542
+},
+{
+"name": "富山県 黒部市",
+"amountYen": 158590000,
+"count": 5299
+},
+{
+"name": "富山県 砺波市",
+"amountYen": 149518500,
+"count": 11877
+},
+{
+"name": "富山県 小矢部市",
+"amountYen": 80134000,
+"count": 3011
+},
+{
+"name": "富山県 南砺市",
+"amountYen": 163710200,
+"count": 4913
+},
+{
+"name": "富山県 射水市",
+"amountYen": 261719800,
+"count": 8849
+},
+{
+"name": "富山県 舟橋村",
+"amountYen": 64030800,
+"count": 2470
+},
+{
+"name": "富山県 上市町",
+"amountYen": 35528000,
+"count": 938
+},
+{
+"name": "富山県 立山町",
+"amountYen": 111186737,
+"count": 2929
+},
+{
+"name": "富山県 入善町",
+"amountYen": 41320500,
+"count": 2351
+},
+{
+"name": "富山県 朝日町",
+"amountYen": 48423000,
+"count": 1982
+},
+{
+"name": "石川県 金沢市",
+"amountYen": 1708736324,
+"count": 40644
+},
+{
+"name": "石川県 七尾市",
+"amountYen": 588955780,
+"count": 28861
+},
+{
+"name": "石川県 小松市",
+"amountYen": 354397000,
+"count": 15785
+},
+{
+"name": "石川県 輪島市",
+"amountYen": 838225793,
+"count": 27694
+},
+{
+"name": "石川県 珠洲市",
+"amountYen": 581862364,
+"count": 18076
+},
+{
+"name": "石川県 加賀市",
+"amountYen": 1194579500,
+"count": 33583
+},
+{
+"name": "石川県 羽咋市",
+"amountYen": 703108022,
+"count": 28747
+},
+{
+"name": "石川県 かほく市",
+"amountYen": 393848000,
+"count": 9721
+},
+{
+"name": "石川県 白山市",
+"amountYen": 375756555,
+"count": 11857
+},
+{
+"name": "石川県 能美市",
+"amountYen": 173845850,
+"count": 5035
+},
+{
+"name": "石川県 野々市市",
+"amountYen": 107441500,
+"count": 7920
+},
+{
+"name": "石川県 川北町",
+"amountYen": 13927000,
+"count": 438
+},
+{
+"name": "石川県 津幡町",
+"amountYen": 18543000,
+"count": 870
+},
+{
+"name": "石川県 内灘町",
+"amountYen": 13147187,
+"count": 863
+},
+{
+"name": "石川県 志賀町",
+"amountYen": 137486516,
+"count": 3975
+},
+{
+"name": "石川県 宝達志水町",
+"amountYen": 1940246500,
+"count": 47975
+},
+{
+"name": "石川県 中能登町",
+"amountYen": 26007600,
+"count": 1826
+},
+{
+"name": "石川県 穴水町",
+"amountYen": 170725996,
+"count": 11155
+},
+{
+"name": "石川県 能登町",
+"amountYen": 557169447,
+"count": 29316
+},
+{
+"name": "福井県 福井市",
+"amountYen": 1225221310,
+"count": 54108
+},
+{
+"name": "福井県 敦賀市",
+"amountYen": 8376738514,
+"count": 438175
+},
+{
+"name": "福井県 小浜市",
+"amountYen": 793925100,
+"count": 34123
+},
+{
+"name": "福井県 大野市",
+"amountYen": 296735798,
+"count": 15462
+},
+{
+"name": "福井県 勝山市",
+"amountYen": 245162316,
+"count": 12790
+},
+{
+"name": "福井県 鯖江市",
+"amountYen": 2442362900,
+"count": 40677
+},
+{
+"name": "福井県 あわら市",
+"amountYen": 1566521800,
+"count": 44299
+},
+{
+"name": "福井県 越前市",
+"amountYen": 722114650,
+"count": 23261
+},
+{
+"name": "福井県 坂井市",
+"amountYen": 1510296099,
+"count": 76425
+},
+{
+"name": "福井県 永平寺町",
+"amountYen": 158061200,
+"count": 6046
+},
+{
+"name": "福井県 池田町",
+"amountYen": 1967000,
+"count": 45
+},
+{
+"name": "福井県 南越前町",
+"amountYen": 47437500,
+"count": 1603
+},
+{
+"name": "福井県 越前町",
+"amountYen": 1327215100,
+"count": 66105
+},
+{
+"name": "福井県 美浜町",
+"amountYen": 301990000,
+"count": 18049
+},
+{
+"name": "福井県 高浜町",
+"amountYen": 34983200,
+"count": 1088
+},
+{
+"name": "福井県 おおい町",
+"amountYen": 13075000,
+"count": 329
+},
+{
+"name": "福井県 若狭町",
+"amountYen": 500845100,
+"count": 27339
+},
+{
+"name": "山梨県 甲府市",
+"amountYen": 10199210431,
+"count": 181189
+},
+{
+"name": "山梨県 富士吉田市",
+"amountYen": 10100657484,
+"count": 585386
+},
+{
+"name": "山梨県 都留市",
+"amountYen": 697072300,
+"count": 34074
+},
+{
+"name": "山梨県 山梨市",
+"amountYen": 7256766655,
+"count": 461657
+},
+{
+"name": "山梨県 大月市",
+"amountYen": 1035227980,
+"count": 31449
+},
+{
+"name": "山梨県 韮崎市",
+"amountYen": 963001732,
+"count": 38963
+},
+{
+"name": "山梨県 南アルプス市",
+"amountYen": 4538260900,
+"count": 143320
+},
+{
+"name": "山梨県 北杜市",
+"amountYen": 2308183302,
+"count": 76413
+},
+{
+"name": "山梨県 甲斐市",
+"amountYen": 839886400,
+"count": 28322
+},
+{
+"name": "山梨県 笛吹市",
+"amountYen": 4467458036,
+"count": 254660
+},
+{
+"name": "山梨県 上野原市",
+"amountYen": 75018980,
+"count": 2053
+},
+{
+"name": "山梨県 甲州市",
+"amountYen": 4524752220,
+"count": 233956
+},
+{
+"name": "山梨県 中央市",
+"amountYen": 155220000,
+"count": 4334
+},
+{
+"name": "山梨県 市川三郷町",
+"amountYen": 392858600,
+"count": 6508
+},
+{
+"name": "山梨県 早川町",
+"amountYen": 16011000,
+"count": 449
+},
+{
+"name": "山梨県 身延町",
+"amountYen": 43435000,
+"count": 920
+},
+{
+"name": "山梨県 南部町",
+"amountYen": 21167800,
+"count": 456
+},
+{
+"name": "山梨県 富士川町",
+"amountYen": 267834000,
+"count": 15922
+},
+{
+"name": "山梨県 昭和町",
+"amountYen": 770880500,
+"count": 3773
+},
+{
+"name": "山梨県 道志村",
+"amountYen": 48698500,
+"count": 2277
+},
+{
+"name": "山梨県 西桂町",
+"amountYen": 68537513,
+"count": 7504
+},
+{
+"name": "山梨県 忍野村",
+"amountYen": 474760499,
+"count": 28880
+},
+{
+"name": "山梨県 山中湖村",
+"amountYen": 471358400,
+"count": 17921
+},
+{
+"name": "山梨県 鳴沢村",
+"amountYen": 89278600,
+"count": 1350
+},
+{
+"name": "山梨県 富士河口湖町",
+"amountYen": 762519709,
+"count": 11887
+},
+{
+"name": "山梨県 小菅村",
+"amountYen": 18962500,
+"count": 661
+},
+{
+"name": "山梨県 丹波山村",
+"amountYen": 137397000,
+"count": 10198
+},
+{
+"name": "長野県 長野市",
+"amountYen": 946211600,
+"count": 48249
+},
+{
+"name": "長野県 松本市",
+"amountYen": 929880731,
+"count": 28201
+},
+{
+"name": "長野県 上田市",
+"amountYen": 486481000,
+"count": 21986
+},
+{
+"name": "長野県 岡谷市",
+"amountYen": 266503000,
+"count": 9306
+},
+{
+"name": "長野県 飯田市",
+"amountYen": 859567000,
+"count": 39518
+},
+{
+"name": "長野県 諏訪市",
+"amountYen": 252164300,
+"count": 4190
+},
+{
+"name": "長野県 須坂市",
+"amountYen": 0,
+"count": 0
+},
+{
+"name": "長野県 小諸市",
+"amountYen": 427530351,
+"count": 18446
+},
+{
+"name": "長野県 伊那市",
+"amountYen": 651618170,
+"count": 15985
+},
+{
+"name": "長野県 駒ヶ根市",
+"amountYen": 1630129312,
+"count": 61044
+},
+{
+"name": "長野県 中野市",
+"amountYen": 3561663790,
+"count": 246402
+},
+{
+"name": "長野県 大町市",
+"amountYen": 262191680,
+"count": 5686
+},
+{
+"name": "長野県 飯山市",
+"amountYen": 503684000,
+"count": 14015
+},
+{
+"name": "長野県 茅野市",
+"amountYen": 660890700,
+"count": 18420
+},
+{
+"name": "長野県 塩尻市",
+"amountYen": 842906800,
+"count": 26205
+},
+{
+"name": "長野県 佐久市",
+"amountYen": 821201100,
+"count": 24898
+},
+{
+"name": "長野県 千曲市",
+"amountYen": 463560600,
+"count": 19587
+},
+{
+"name": "長野県 東御市",
+"amountYen": 515037100,
+"count": 21328
+},
+{
+"name": "長野県 安曇野市",
+"amountYen": 765664801,
+"count": 15448
+},
+{
+"name": "長野県 小海町",
+"amountYen": 13876000,
+"count": 482
+},
+{
+"name": "長野県 川上村",
+"amountYen": 1096222,
+"count": 24
+},
+{
+"name": "長野県 南牧村",
+"amountYen": 53432700,
+"count": 1701
+},
+{
+"name": "長野県 南相木村",
+"amountYen": 21676000,
+"count": 365
+},
+{
+"name": "長野県 北相木村",
+"amountYen": 493000,
+"count": 13
+},
+{
+"name": "長野県 佐久穂町",
+"amountYen": 64147000,
+"count": 2943
+},
+{
+"name": "長野県 軽井沢町",
+"amountYen": 1894810803,
+"count": 8597
+},
+{
+"name": "長野県 御代田町",
+"amountYen": 664205287,
+"count": 11318
+},
+{
+"name": "長野県 立科町",
+"amountYen": 147514000,
+"count": 3480
+},
+{
+"name": "長野県 青木村",
+"amountYen": 9612500,
+"count": 523
+},
+{
+"name": "長野県 長和町",
+"amountYen": 23560878,
+"count": 758
+},
+{
+"name": "長野県 下諏訪町",
+"amountYen": 44481536,
+"count": 713
+},
+{
+"name": "長野県 富士見町",
+"amountYen": 494980910,
+"count": 17149
+},
+{
+"name": "長野県 原村",
+"amountYen": 74147600,
+"count": 610
+},
+{
+"name": "長野県 辰野町",
+"amountYen": 80446711,
+"count": 2334
+},
+{
+"name": "長野県 箕輪町",
+"amountYen": 299132548,
+"count": 23969
+},
+{
+"name": "長野県 飯島町",
+"amountYen": 44912000,
+"count": 2586
+},
+{
+"name": "長野県 南箕輪村",
+"amountYen": 107442500,
+"count": 7860
+},
+{
+"name": "長野県 中川村",
+"amountYen": 87122200,
+"count": 4438
+},
+{
+"name": "長野県 宮田村",
+"amountYen": 440500129,
+"count": 15060
+},
+{
+"name": "長野県 松川町",
+"amountYen": 664919000,
+"count": 40443
+},
+{
+"name": "長野県 高森町",
+"amountYen": 495961000,
+"count": 31306
+},
+{
+"name": "長野県 阿南町",
+"amountYen": 182434000,
+"count": 4874
+},
+{
+"name": "長野県 阿智村",
+"amountYen": 116335000,
+"count": 2131
+},
+{
+"name": "長野県 平谷村",
+"amountYen": 790000,
+"count": 68
+},
+{
+"name": "長野県 根羽村",
+"amountYen": 328592475,
+"count": 43799
+},
+{
+"name": "長野県 下條村",
+"amountYen": 18779000,
+"count": 1405
+},
+{
+"name": "長野県 売木村",
+"amountYen": 8469000,
+"count": 795
+},
+{
+"name": "長野県 天龍村",
+"amountYen": 17486000,
+"count": 920
+},
+{
+"name": "長野県 泰阜村",
+"amountYen": 4867568,
+"count": 51
+},
+{
+"name": "長野県 喬木村",
+"amountYen": 183558700,
+"count": 11183
+},
+{
+"name": "長野県 豊丘村",
+"amountYen": 1578115900,
+"count": 97248
+},
+{
+"name": "長野県 大鹿村",
+"amountYen": 5194000,
+"count": 283
+},
+{
+"name": "長野県 上松町",
+"amountYen": 5214000,
+"count": 269
+},
+{
+"name": "長野県 南木曽町",
+"amountYen": 23753000,
+"count": 1010
+},
+{
+"name": "長野県 木祖村",
+"amountYen": 16418500,
+"count": 805
+},
+{
+"name": "長野県 王滝村",
+"amountYen": 15755000,
+"count": 307
+},
+{
+"name": "長野県 大桑村",
+"amountYen": 80000,
+"count": 3
+},
+{
+"name": "長野県 木曽町",
+"amountYen": 63189100,
+"count": 2065
+},
+{
+"name": "長野県 麻績村",
+"amountYen": 32881900,
+"count": 2827
+},
+{
+"name": "長野県 生坂村",
+"amountYen": 30200969,
+"count": 1502
+},
+{
+"name": "長野県 山形村",
+"amountYen": 17922000,
+"count": 597
+},
+{
+"name": "長野県 朝日村",
+"amountYen": 3450800,
+"count": 223
+},
+{
+"name": "長野県 筑北村",
+"amountYen": 47732000,
+"count": 4615
+},
+{
+"name": "長野県 池田町",
+"amountYen": 98861000,
+"count": 3392
+},
+{
+"name": "長野県 松川村",
+"amountYen": 61585400,
+"count": 3731
+},
+{
+"name": "長野県 白馬村",
+"amountYen": 554343000,
+"count": 8295
+},
+{
+"name": "長野県 小谷村",
+"amountYen": 117971400,
+"count": 2827
+},
+{
+"name": "長野県 坂城町",
+"amountYen": 80710500,
+"count": 5590
+},
+{
+"name": "長野県 小布施町",
+"amountYen": 745861077,
+"count": 56116
+},
+{
+"name": "長野県 高山村",
+"amountYen": 99366250,
+"count": 8017
+},
+{
+"name": "長野県 山ノ内町",
+"amountYen": 538599000,
+"count": 8005
+},
+{
+"name": "長野県 木島平村",
+"amountYen": 84407800,
+"count": 1748
+},
+{
+"name": "長野県 野沢温泉村",
+"amountYen": 271143500,
+"count": 5552
+},
+{
+"name": "長野県 信濃町",
+"amountYen": 128678100,
+"count": 4237
+},
+{
+"name": "長野県 小川村",
+"amountYen": 32494800,
+"count": 2642
+},
+{
+"name": "長野県 飯綱町",
+"amountYen": 1163214900,
+"count": 82676
+},
+{
+"name": "長野県 栄村",
+"amountYen": 36964300,
+"count": 844
+},
+{
+"name": "岐阜県 岐阜市",
+"amountYen": 305270057,
+"count": 10689
+},
+{
+"name": "岐阜県 大垣市",
+"amountYen": 588522900,
+"count": 25841
+},
+{
+"name": "岐阜県 高山市",
+"amountYen": 3055763600,
+"count": 113439
+},
+{
+"name": "岐阜県 多治見市",
+"amountYen": 385483208,
+"count": 13585
+},
+{
+"name": "岐阜県 関市",
+"amountYen": 5063561540,
+"count": 240867
+},
+{
+"name": "岐阜県 中津川市",
+"amountYen": 1061492900,
+"count": 63807
+},
+{
+"name": "岐阜県 美濃市",
+"amountYen": 354559530,
+"count": 13694
+},
+{
+"name": "岐阜県 瑞浪市",
+"amountYen": 300589000,
+"count": 14806
+},
+{
+"name": "岐阜県 羽島市",
+"amountYen": 636113300,
+"count": 17825
+},
+{
+"name": "岐阜県 恵那市",
+"amountYen": 363658900,
+"count": 16856
+},
+{
+"name": "岐阜県 美濃加茂市",
+"amountYen": 268641600,
+"count": 15678
+},
+{
+"name": "岐阜県 土岐市",
+"amountYen": 592364639,
+"count": 23264
+},
+{
+"name": "岐阜県 各務原市",
+"amountYen": 512777376,
+"count": 19604
+},
+{
+"name": "岐阜県 可児市",
+"amountYen": 4849663000,
+"count": 252934
+},
+{
+"name": "岐阜県 山県市",
+"amountYen": 372593000,
+"count": 13414
+},
+{
+"name": "岐阜県 瑞穂市",
+"amountYen": 585076032,
+"count": 32631
+},
+{
+"name": "岐阜県 飛騨市",
+"amountYen": 1285494906,
+"count": 52919
+},
+{
+"name": "岐阜県 本巣市",
+"amountYen": 1071404200,
+"count": 36954
+},
+{
+"name": "岐阜県 郡上市",
+"amountYen": 365625354,
+"count": 16257
+},
+{
+"name": "岐阜県 下呂市",
+"amountYen": 1480258000,
+"count": 30366
+},
+{
+"name": "岐阜県 海津市",
+"amountYen": 35003615,
+"count": 1420
+},
+{
+"name": "岐阜県 岐南町",
+"amountYen": 15236000,
+"count": 627
+},
+{
+"name": "岐阜県 笠松町",
+"amountYen": 69023000,
+"count": 4317
+},
+{
+"name": "岐阜県 養老町",
+"amountYen": 978174600,
+"count": 54550
+},
+{
+"name": "岐阜県 垂井町",
+"amountYen": 54612000,
+"count": 1156
+},
+{
+"name": "岐阜県 関ケ原町",
+"amountYen": 81984500,
+"count": 1404
+},
+{
+"name": "岐阜県 神戸町",
+"amountYen": 147601500,
+"count": 5814
+},
+{
+"name": "岐阜県 輪之内町",
+"amountYen": 8973000,
+"count": 428
+},
+{
+"name": "岐阜県 安八町",
+"amountYen": 139952993,
+"count": 3138
+},
+{
+"name": "岐阜県 揖斐川町",
+"amountYen": 38208900,
+"count": 1191
+},
+{
+"name": "岐阜県 大野町",
+"amountYen": 67170600,
+"count": 3477
+},
+{
+"name": "岐阜県 池田町",
+"amountYen": 210396864,
+"count": 5238
+},
+{
+"name": "岐阜県 北方町",
+"amountYen": 42789000,
+"count": 2802
+},
+{
+"name": "岐阜県 坂祝町",
+"amountYen": 29026700,
+"count": 564
+},
+{
+"name": "岐阜県 富加町",
+"amountYen": 35613000,
+"count": 1415
+},
+{
+"name": "岐阜県 川辺町",
+"amountYen": 177755500,
+"count": 10816
+},
+{
+"name": "岐阜県 七宗町",
+"amountYen": 27499300,
+"count": 1316
+},
+{
+"name": "岐阜県 八百津町",
+"amountYen": 363678100,
+"count": 18554
+},
+{
+"name": "岐阜県 白川町",
+"amountYen": 85136088,
+"count": 2378
+},
+{
+"name": "岐阜県 東白川村",
+"amountYen": 224618500,
+"count": 21369
+},
+{
+"name": "岐阜県 御嵩町",
+"amountYen": 81516485,
+"count": 2070
+},
+{
+"name": "岐阜県 白川村",
+"amountYen": 579139600,
+"count": 22896
+},
+{
+"name": "静岡県 静岡市",
+"amountYen": 3951709237,
+"count": 222546
+},
+{
+"name": "静岡県 浜松市",
+"amountYen": 2670355891,
+"count": 96926
+},
+{
+"name": "静岡県 沼津市",
+"amountYen": 4237390071,
+"count": 327374
+},
+{
+"name": "静岡県 熱海市",
+"amountYen": 1922727626,
+"count": 12641
+},
+{
+"name": "静岡県 三島市",
+"amountYen": 350487000,
+"count": 11287
+},
+{
+"name": "静岡県 富士宮市",
+"amountYen": 6680286000,
+"count": 349670
+},
+{
+"name": "静岡県 伊東市",
+"amountYen": 748664697,
+"count": 19704
+},
+{
+"name": "静岡県 島田市",
+"amountYen": 986340600,
+"count": 48472
+},
+{
+"name": "静岡県 富士市",
+"amountYen": 10099673712,
+"count": 679670
+},
+{
+"name": "静岡県 磐田市",
+"amountYen": 766514000,
+"count": 26951
+},
+{
+"name": "静岡県 焼津市",
+"amountYen": 11423496410,
+"count": 768869
+},
+{
+"name": "静岡県 掛川市",
+"amountYen": 490411000,
+"count": 28594
+},
+{
+"name": "静岡県 藤枝市",
+"amountYen": 1169411193,
+"count": 71299
+},
+{
+"name": "静岡県 御殿場市",
+"amountYen": 2139000610,
+"count": 72248
+},
+{
+"name": "静岡県 袋井市",
+"amountYen": 1359806000,
+"count": 57327
+},
+{
+"name": "静岡県 下田市",
+"amountYen": 451448300,
+"count": 9186
+},
+{
+"name": "静岡県 裾野市",
+"amountYen": 572461024,
+"count": 11707
+},
+{
+"name": "静岡県 湖西市",
+"amountYen": 261468000,
+"count": 8579
+},
+{
+"name": "静岡県 伊豆市",
+"amountYen": 1394367811,
+"count": 9045
+},
+{
+"name": "静岡県 御前崎市",
+"amountYen": 432840500,
+"count": 31008
+},
+{
+"name": "静岡県 菊川市",
+"amountYen": 118364703,
+"count": 4862
+},
+{
+"name": "静岡県 伊豆の国市",
+"amountYen": 336949700,
+"count": 6551
+},
+{
+"name": "静岡県 牧之原市",
+"amountYen": 857755032,
+"count": 57124
+},
+{
+"name": "静岡県 東伊豆町",
+"amountYen": 558757192,
+"count": 6362
+},
+{
+"name": "静岡県 河津町",
+"amountYen": 141538800,
+"count": 1644
+},
+{
+"name": "静岡県 南伊豆町",
+"amountYen": 275868100,
+"count": 11819
+},
+{
+"name": "静岡県 松崎町",
+"amountYen": 51276000,
+"count": 2907
+},
+{
+"name": "静岡県 西伊豆町",
+"amountYen": 593596000,
+"count": 32915
+},
+{
+"name": "静岡県 函南町",
+"amountYen": 66876300,
+"count": 4916
+},
+{
+"name": "静岡県 清水町",
+"amountYen": 42908000,
+"count": 1291
+},
+{
+"name": "静岡県 長泉町",
+"amountYen": 25106000,
+"count": 848
+},
+{
+"name": "静岡県 小山町",
+"amountYen": 995263850,
+"count": 39080
+},
+{
+"name": "静岡県 吉田町",
+"amountYen": 1588893885,
+"count": 129270
+},
+{
+"name": "静岡県 川根本町",
+"amountYen": 31798000,
+"count": 1611
+},
+{
+"name": "静岡県 森町",
+"amountYen": 384929000,
+"count": 2845
+},
+{
+"name": "愛知県 名古屋市",
+"amountYen": 17446369016,
+"count": 351726
+},
+{
+"name": "愛知県 豊橋市",
+"amountYen": 1253373416,
+"count": 77250
+},
+{
+"name": "愛知県 岡崎市",
+"amountYen": 438184498,
+"count": 11620
+},
+{
+"name": "愛知県 一宮市",
+"amountYen": 191095868,
+"count": 1868
+},
+{
+"name": "愛知県 瀬戸市",
+"amountYen": 341565811,
+"count": 10202
+},
+{
+"name": "愛知県 半田市",
+"amountYen": 95998800,
+"count": 4480
+},
+{
+"name": "愛知県 春日井市",
+"amountYen": 757883000,
+"count": 23517
+},
+{
+"name": "愛知県 豊川市",
+"amountYen": 203166750,
+"count": 7831
+},
+{
+"name": "愛知県 津島市",
+"amountYen": 52730500,
+"count": 1230
+},
+{
+"name": "愛知県 碧南市",
+"amountYen": 2063891600,
+"count": 126729
+},
+{
+"name": "愛知県 刈谷市",
+"amountYen": 153811181,
+"count": 1848
+},
+{
+"name": "愛知県 豊田市",
+"amountYen": 296244041,
+"count": 6352
+},
+{
+"name": "愛知県 安城市",
+"amountYen": 185386541,
+"count": 7548
+},
+{
+"name": "愛知県 西尾市",
+"amountYen": 3078516900,
+"count": 195848
+},
+{
+"name": "愛知県 蒲郡市",
+"amountYen": 933275211,
+"count": 43270
+},
+{
+"name": "愛知県 犬山市",
+"amountYen": 465173000,
+"count": 13801
+},
+{
+"name": "愛知県 常滑市",
+"amountYen": 106318000,
+"count": 4105
+},
+{
+"name": "愛知県 江南市",
+"amountYen": 43864000,
+"count": 2673
+},
+{
+"name": "愛知県 小牧市",
+"amountYen": 1610088800,
+"count": 68058
+},
+{
+"name": "愛知県 稲沢市",
+"amountYen": 55590000,
+"count": 1751
+},
+{
+"name": "愛知県 新城市",
+"amountYen": 56394000,
+"count": 1266
+},
+{
+"name": "愛知県 東海市",
+"amountYen": 32727250,
+"count": 2412
+},
+{
+"name": "愛知県 大府市",
+"amountYen": 1763058100,
+"count": 27884
+},
+{
+"name": "愛知県 知多市",
+"amountYen": 303171100,
+"count": 6386
+},
+{
+"name": "愛知県 知立市",
+"amountYen": 104928411,
+"count": 3016
+},
+{
+"name": "愛知県 尾張旭市",
+"amountYen": 37947500,
+"count": 1875
+},
+{
+"name": "愛知県 高浜市",
+"amountYen": 51704000,
+"count": 1729
+},
+{
+"name": "愛知県 岩倉市",
+"amountYen": 52725500,
+"count": 1882
+},
+{
+"name": "愛知県 豊明市",
+"amountYen": 20434000,
+"count": 869
+},
+{
+"name": "愛知県 日進市",
+"amountYen": 468070400,
+"count": 5403
+},
+{
+"name": "愛知県 田原市",
+"amountYen": 1495766918,
+"count": 70237
+},
+{
+"name": "愛知県 愛西市",
+"amountYen": 105159390,
+"count": 3282
+},
+{
+"name": "愛知県 清須市",
+"amountYen": 349264847,
+"count": 13948
+},
+{
+"name": "愛知県 北名古屋市",
+"amountYen": 112161000,
+"count": 4938
+},
+{
+"name": "愛知県 弥富市",
+"amountYen": 12819000,
+"count": 709
+},
+{
+"name": "愛知県 みよし市",
+"amountYen": 126998000,
+"count": 3647
+},
+{
+"name": "愛知県 あま市",
+"amountYen": 67297000,
+"count": 1074
+},
+{
+"name": "愛知県 長久手市",
+"amountYen": 81228400,
+"count": 2433
+},
+{
+"name": "愛知県 東郷町",
+"amountYen": 205923500,
+"count": 3138
+},
+{
+"name": "愛知県 豊山町",
+"amountYen": 9078669,
+"count": 600
+},
+{
+"name": "愛知県 大口町",
+"amountYen": 114438000,
+"count": 3471
+},
+{
+"name": "愛知県 扶桑町",
+"amountYen": 5868000,
+"count": 210
+},
+{
+"name": "愛知県 大治町",
+"amountYen": 120000,
+"count": 2
+},
+{
+"name": "愛知県 蟹江町",
+"amountYen": 21345630,
+"count": 626
+},
+{
+"name": "愛知県 飛島村",
+"amountYen": 603000,
+"count": 29
+},
+{
+"name": "愛知県 阿久比町",
+"amountYen": 33009000,
+"count": 1562
+},
+{
+"name": "愛知県 東浦町",
+"amountYen": 341115280,
+"count": 3854
+},
+{
+"name": "愛知県 南知多町",
+"amountYen": 1045046213,
+"count": 75206
+},
+{
+"name": "愛知県 美浜町",
+"amountYen": 137432900,
+"count": 4701
+},
+{
+"name": "愛知県 武豊町",
+"amountYen": 35579000,
+"count": 1828
+},
+{
+"name": "愛知県 幸田町",
+"amountYen": 2600511400,
+"count": 29320
+},
+{
+"name": "愛知県 設楽町",
+"amountYen": 58380960,
+"count": 10119
+},
+{
+"name": "愛知県 東栄町",
+"amountYen": 4501000,
+"count": 206
+},
+{
+"name": "愛知県 豊根村",
+"amountYen": 13944800,
+"count": 340
+},
+{
+"name": "三重県 津市",
+"amountYen": 391630000,
+"count": 10117
+},
+{
+"name": "三重県 四日市市",
+"amountYen": 783846648,
+"count": 19393
+},
+{
+"name": "三重県 伊勢市",
+"amountYen": 568141399,
+"count": 13832
+},
+{
+"name": "三重県 松阪市",
+"amountYen": 3453067141,
+"count": 135285
+},
+{
+"name": "三重県 桑名市",
+"amountYen": 382356400,
+"count": 18657
+},
+{
+"name": "三重県 鈴鹿市",
+"amountYen": 664186000,
+"count": 31287
+},
+{
+"name": "三重県 名張市",
+"amountYen": 699560000,
+"count": 20728
+},
+{
+"name": "三重県 尾鷲市",
+"amountYen": 710215340,
+"count": 50945
+},
+{
+"name": "三重県 亀山市",
+"amountYen": 88181000,
+"count": 1781
+},
+{
+"name": "三重県 鳥羽市",
+"amountYen": 1127719500,
+"count": 16160
+},
+{
+"name": "三重県 熊野市",
+"amountYen": 121962600,
+"count": 5063
+},
+{
+"name": "三重県 いなべ市",
+"amountYen": 45068500,
+"count": 1758
+},
+{
+"name": "三重県 志摩市",
+"amountYen": 1820474580,
+"count": 34777
+},
+{
+"name": "三重県 伊賀市",
+"amountYen": 693520500,
+"count": 22938
+},
+{
+"name": "三重県 木曽岬町",
+"amountYen": 107944000,
+"count": 3619
+},
+{
+"name": "三重県 東員町",
+"amountYen": 12352500,
+"count": 658
+},
+{
+"name": "三重県 菰野町",
+"amountYen": 35051000,
+"count": 813
+},
+{
+"name": "三重県 朝日町",
+"amountYen": 10279000,
+"count": 636
+},
+{
+"name": "三重県 川越町",
+"amountYen": 750000,
+"count": 75
+},
+{
+"name": "三重県 多気町",
+"amountYen": 910583070,
+"count": 28806
+},
+{
+"name": "三重県 明和町",
+"amountYen": 1058356300,
+"count": 42698
+},
+{
+"name": "三重県 大台町",
+"amountYen": 89063300,
+"count": 2890
+},
+{
+"name": "三重県 玉城町",
+"amountYen": 102518000,
+"count": 4008
+},
+{
+"name": "三重県 度会町",
+"amountYen": 137722200,
+"count": 1843
+},
+{
+"name": "三重県 大紀町",
+"amountYen": 391211000,
+"count": 34547
+},
+{
+"name": "三重県 南伊勢町",
+"amountYen": 198707500,
+"count": 8063
+},
+{
+"name": "三重県 紀北町",
+"amountYen": 479419900,
+"count": 41755
+},
+{
+"name": "三重県 御浜町",
+"amountYen": 124456500,
+"count": 7106
+},
+{
+"name": "三重県 紀宝町",
+"amountYen": 189814100,
+"count": 13015
+},
+{
+"name": "滋賀県 大津市",
+"amountYen": 584965000,
+"count": 18056
+},
+{
+"name": "滋賀県 彦根市",
+"amountYen": 2332878827,
+"count": 56017
+},
+{
+"name": "滋賀県 長浜市",
+"amountYen": 813687900,
+"count": 27095
+},
+{
+"name": "滋賀県 近江八幡市",
+"amountYen": 5446817800,
+"count": 142635
+},
+{
+"name": "滋賀県 草津市",
+"amountYen": 2240507800,
+"count": 21238
+},
+{
+"name": "滋賀県 守山市",
+"amountYen": 325852250,
+"count": 16635
+},
+{
+"name": "滋賀県 栗東市",
+"amountYen": 129695000,
+"count": 5781
+},
+{
+"name": "滋賀県 甲賀市",
+"amountYen": 323489000,
+"count": 10198
+},
+{
+"name": "滋賀県 野洲市",
+"amountYen": 1562160000,
+"count": 16650
+},
+{
+"name": "滋賀県 湖南市",
+"amountYen": 185193000,
+"count": 5142
+},
+{
+"name": "滋賀県 高島市",
+"amountYen": 465720000,
+"count": 8454
+},
+{
+"name": "滋賀県 東近江市",
+"amountYen": 1210579000,
+"count": 13622
+},
+{
+"name": "滋賀県 米原市",
+"amountYen": 592268500,
+"count": 5914
+},
+{
+"name": "滋賀県 日野町",
+"amountYen": 125580500,
+"count": 5351
+},
+{
+"name": "滋賀県 竜王町",
+"amountYen": 2230529122,
+"count": 168674
+},
+{
+"name": "滋賀県 愛荘町",
+"amountYen": 206361200,
+"count": 8305
+},
+{
+"name": "滋賀県 豊郷町",
+"amountYen": 439581500,
+"count": 19288
+},
+{
+"name": "滋賀県 甲良町",
+"amountYen": 6291150,
+"count": 236
+},
+{
+"name": "滋賀県 多賀町",
+"amountYen": 309479800,
+"count": 8785
+},
+{
+"name": "京都府 京都市",
+"amountYen": 13258405767,
+"count": 339533
+},
+{
+"name": "京都府 福知山市",
+"amountYen": 841789200,
+"count": 36457
+},
+{
+"name": "京都府 舞鶴市",
+"amountYen": 446209900,
+"count": 19861
+},
+{
+"name": "京都府 綾部市",
+"amountYen": 175311000,
+"count": 5045
+},
+{
+"name": "京都府 宇治市",
+"amountYen": 83411500,
+"count": 4167
+},
+{
+"name": "京都府 宮津市",
+"amountYen": 233248500,
+"count": 6159
+},
+{
+"name": "京都府 亀岡市",
+"amountYen": 4424325500,
+"count": 115053
+},
+{
+"name": "京都府 城陽市",
+"amountYen": 315198300,
+"count": 14248
+},
+{
+"name": "京都府 向日市",
+"amountYen": 270658086,
+"count": 5281
+},
+{
+"name": "京都府 長岡京市",
+"amountYen": 204500900,
+"count": 6902
+},
+{
+"name": "京都府 八幡市",
+"amountYen": 46319000,
+"count": 3226
+},
+{
+"name": "京都府 京田辺市",
+"amountYen": 526837500,
+"count": 18874
+},
+{
+"name": "京都府 京丹後市",
+"amountYen": 2744353100,
+"count": 116354
+},
+{
+"name": "京都府 南丹市",
+"amountYen": 295117000,
+"count": 12361
+},
+{
+"name": "京都府 木津川市",
+"amountYen": 124349000,
+"count": 6318
+},
+{
+"name": "京都府 大山崎町",
+"amountYen": 20091500,
+"count": 466
+},
+{
+"name": "京都府 久御山町",
+"amountYen": 116756000,
+"count": 6084
+},
+{
+"name": "京都府 井手町",
+"amountYen": 16423110,
+"count": 1129
+},
+{
+"name": "京都府 宇治田原町",
+"amountYen": 221155800,
+"count": 11173
+},
+{
+"name": "京都府 笠置町",
+"amountYen": 7211000,
+"count": 296
+},
+{
+"name": "京都府 和束町",
+"amountYen": 7502000,
+"count": 529
+},
+{
+"name": "京都府 精華町",
+"amountYen": 73856200,
+"count": 3313
+},
+{
+"name": "京都府 南山城村",
+"amountYen": 14033000,
+"count": 873
+},
+{
+"name": "京都府 京丹波町",
+"amountYen": 540175400,
+"count": 25116
+},
+{
+"name": "京都府 伊根町",
+"amountYen": 15363000,
+"count": 578
+},
+{
+"name": "京都府 与謝野町",
+"amountYen": 133993000,
+"count": 4335
+},
+{
+"name": "大阪府 大阪市",
+"amountYen": 1588459842,
+"count": 12290
+},
+{
+"name": "大阪府 堺市",
+"amountYen": 1527068377,
+"count": 42592
+},
+{
+"name": "大阪府 岸和田市",
+"amountYen": 253015700,
+"count": 5017
+},
+{
+"name": "大阪府 豊中市",
+"amountYen": 220552425,
+"count": 9423
+},
+{
+"name": "大阪府 池田市",
+"amountYen": 242716400,
+"count": 8246
+},
+{
+"name": "大阪府 吹田市",
+"amountYen": 1787957800,
+"count": 81044
+},
+{
+"name": "大阪府 泉大津市",
+"amountYen": 625276800,
+"count": 21868
+},
+{
+"name": "大阪府 高槻市",
+"amountYen": 1608968913,
+"count": 22216
+},
+{
+"name": "大阪府 貝塚市",
+"amountYen": 829404580,
+"count": 26740
+},
+{
+"name": "大阪府 守口市",
+"amountYen": 238222800,
+"count": 8444
+},
+{
+"name": "大阪府 枚方市",
+"amountYen": 279779770,
+"count": 7192
+},
+{
+"name": "大阪府 茨木市",
+"amountYen": 367838600,
+"count": 16428
+},
+{
+"name": "大阪府 八尾市",
+"amountYen": 1616516516,
+"count": 16700
+},
+{
+"name": "大阪府 泉佐野市",
+"amountYen": 23038604299,
+"count": 1351688
+},
+{
+"name": "大阪府 富田林市",
+"amountYen": 197656900,
+"count": 5552
+},
+{
+"name": "大阪府 寝屋川市",
+"amountYen": 237058231,
+"count": 3458
+},
+{
+"name": "大阪府 河内長野市",
+"amountYen": 478162290,
+"count": 17358
+},
+{
+"name": "大阪府 松原市",
+"amountYen": 320476190,
+"count": 21497
+},
+{
+"name": "大阪府 大東市",
+"amountYen": 3703177780,
+"count": 47764
+},
+{
+"name": "大阪府 和泉市",
+"amountYen": 1380988013,
+"count": 50296
+},
+{
+"name": "大阪府 箕面市",
+"amountYen": 313317100,
+"count": 16627
+},
+{
+"name": "大阪府 柏原市",
+"amountYen": 254920000,
+"count": 2074
+},
+{
+"name": "大阪府 羽曳野市",
+"amountYen": 109774500,
+"count": 5376
+},
+{
+"name": "大阪府 門真市",
+"amountYen": 1659457800,
+"count": 23124
+},
+{
+"name": "大阪府 摂津市",
+"amountYen": 30901000,
+"count": 1271
+},
+{
+"name": "大阪府 高石市",
+"amountYen": 91817500,
+"count": 7402
+},
+{
+"name": "大阪府 藤井寺市",
+"amountYen": 206997784,
+"count": 5850
+},
+{
+"name": "大阪府 東大阪市",
+"amountYen": 928566000,
+"count": 28096
+},
+{
+"name": "大阪府 泉南市",
+"amountYen": 1282684298,
+"count": 98750
+},
+{
+"name": "大阪府 四條畷市",
+"amountYen": 10914000,
+"count": 457
+},
+{
+"name": "大阪府 交野市",
+"amountYen": 35896000,
+"count": 758
+},
+{
+"name": "大阪府 大阪狭山市",
+"amountYen": 21527550,
+"count": 718
+},
+{
+"name": "大阪府 阪南市",
+"amountYen": 154234700,
+"count": 7750
+},
+{
+"name": "大阪府 島本町",
+"amountYen": 301774851,
+"count": 6804
+},
+{
+"name": "大阪府 豊能町",
+"amountYen": 10694100,
+"count": 367
+},
+{
+"name": "大阪府 能勢町",
+"amountYen": 51884000,
+"count": 2887
+},
+{
+"name": "大阪府 忠岡町",
+"amountYen": 146492000,
+"count": 4977
+},
+{
+"name": "大阪府 熊取町",
+"amountYen": 49690000,
+"count": 1175
+},
+{
+"name": "大阪府 田尻町",
+"amountYen": 98391000,
+"count": 2962
+},
+{
+"name": "大阪府 岬町",
+"amountYen": 185264641,
+"count": 2410
+},
+{
+"name": "大阪府 太子町",
+"amountYen": 189019000,
+"count": 1239
+},
+{
+"name": "大阪府 河南町",
+"amountYen": 25471000,
+"count": 1112
+},
+{
+"name": "大阪府 千早赤阪村",
+"amountYen": 8670300,
+"count": 436
+},
+{
+"name": "兵庫県 神戸市",
+"amountYen": 5392566943,
+"count": 148744
+},
+{
+"name": "兵庫県 姫路市",
+"amountYen": 493637503,
+"count": 19639
+},
+{
+"name": "兵庫県 尼崎市",
+"amountYen": 280862347,
+"count": 17991
+},
+{
+"name": "兵庫県 明石市",
+"amountYen": 946479200,
+"count": 40149
+},
+{
+"name": "兵庫県 西宮市",
+"amountYen": 256310215,
+"count": 13468
+},
+{
+"name": "兵庫県 洲本市",
+"amountYen": 179964000,
+"count": 1845
+},
+{
+"name": "兵庫県 芦屋市",
+"amountYen": 493160845,
+"count": 4234
+},
+{
+"name": "兵庫県 伊丹市",
+"amountYen": 160089700,
+"count": 6296
+},
+{
+"name": "兵庫県 相生市",
+"amountYen": 78472000,
+"count": 4998
+},
+{
+"name": "兵庫県 豊岡市",
+"amountYen": 1901105500,
+"count": 34885
+},
+{
+"name": "兵庫県 加古川市",
+"amountYen": 394052866,
+"count": 12479
+},
+{
+"name": "兵庫県 赤穂市",
+"amountYen": 250831180,
+"count": 12683
+},
+{
+"name": "兵庫県 西脇市",
+"amountYen": 1811030700,
+"count": 43955
+},
+{
+"name": "兵庫県 宝塚市",
+"amountYen": 331522761,
+"count": 6828
+},
+{
+"name": "兵庫県 三木市",
+"amountYen": 764251862,
+"count": 28939
+},
+{
+"name": "兵庫県 高砂市",
+"amountYen": 649398500,
+"count": 36442
+},
+{
+"name": "兵庫県 川西市",
+"amountYen": 225911662,
+"count": 2921
+},
+{
+"name": "兵庫県 小野市",
+"amountYen": 429469000,
+"count": 16602
+},
+{
+"name": "兵庫県 三田市",
+"amountYen": 285838400,
+"count": 9025
+},
+{
+"name": "兵庫県 加西市",
+"amountYen": 4848838000,
+"count": 124534
+},
+{
+"name": "兵庫県 丹波篠山市",
+"amountYen": 618386100,
+"count": 24748
+},
+{
+"name": "兵庫県 養父市",
+"amountYen": 415216142,
+"count": 12406
+},
+{
+"name": "兵庫県 丹波市",
+"amountYen": 885056600,
+"count": 25007
+},
+{
+"name": "兵庫県 南あわじ市",
+"amountYen": 2057729500,
+"count": 161321
+},
+{
+"name": "兵庫県 朝来市",
+"amountYen": 900488000,
+"count": 30117
+},
+{
+"name": "兵庫県 淡路市",
+"amountYen": 4916308700,
+"count": 347812
+},
+{
+"name": "兵庫県 宍粟市",
+"amountYen": 234266000,
+"count": 8571
+},
+{
+"name": "兵庫県 加東市",
+"amountYen": 452915900,
+"count": 12381
+},
+{
+"name": "兵庫県 たつの市",
+"amountYen": 360350000,
+"count": 18630
+},
+{
+"name": "兵庫県 猪名川町",
+"amountYen": 45156690,
+"count": 2016
+},
+{
+"name": "兵庫県 多可町",
+"amountYen": 243861448,
+"count": 11536
+},
+{
+"name": "兵庫県 稲美町",
+"amountYen": 208744000,
+"count": 5409
+},
+{
+"name": "兵庫県 播磨町",
+"amountYen": 6319000,
+"count": 101
+},
+{
+"name": "兵庫県 市川町",
+"amountYen": 341103500,
+"count": 12252
+},
+{
+"name": "兵庫県 福崎町",
+"amountYen": 118183471,
+"count": 5889
+},
+{
+"name": "兵庫県 神河町",
+"amountYen": 84393000,
+"count": 7885
+},
+{
+"name": "兵庫県 太子町",
+"amountYen": 189206500,
+"count": 9574
+},
+{
+"name": "兵庫県 上郡町",
+"amountYen": 30789000,
+"count": 1701
+},
+{
+"name": "兵庫県 佐用町",
+"amountYen": 16393300,
+"count": 843
+},
+{
+"name": "兵庫県 香美町",
+"amountYen": 1303098100,
+"count": 60186
+},
+{
+"name": "兵庫県 新温泉町",
+"amountYen": 260614930,
+"count": 8833
+},
+{
+"name": "奈良県 奈良市",
+"amountYen": 1089737655,
+"count": 50194
+},
+{
+"name": "奈良県 大和高田市",
+"amountYen": 131755100,
+"count": 6424
+},
+{
+"name": "奈良県 大和郡山市",
+"amountYen": 399632000,
+"count": 10367
+},
+{
+"name": "奈良県 天理市",
+"amountYen": 155327540,
+"count": 6499
+},
+{
+"name": "奈良県 橿原市",
+"amountYen": 157485000,
+"count": 7352
+},
+{
+"name": "奈良県 桜井市",
+"amountYen": 235975350,
+"count": 9044
+},
+{
+"name": "奈良県 五條市",
+"amountYen": 314077016,
+"count": 25167
+},
+{
+"name": "奈良県 御所市",
+"amountYen": 90861000,
+"count": 1804
+},
+{
+"name": "奈良県 生駒市",
+"amountYen": 171835978,
+"count": 11042
+},
+{
+"name": "奈良県 香芝市",
+"amountYen": 47747000,
+"count": 2360
+},
+{
+"name": "奈良県 葛城市",
+"amountYen": 139969000,
+"count": 6558
+},
+{
+"name": "奈良県 宇陀市",
+"amountYen": 277388108,
+"count": 6694
+},
+{
+"name": "奈良県 山添村",
+"amountYen": 54635000,
+"count": 4060
+},
+{
+"name": "奈良県 平群町",
+"amountYen": 47494000,
+"count": 3075
+},
+{
+"name": "奈良県 三郷町",
+"amountYen": 4775400,
+"count": 270
+},
+{
+"name": "奈良県 斑鳩町",
+"amountYen": 15488003,
+"count": 733
+},
+{
+"name": "奈良県 安堵町",
+"amountYen": 3697700,
+"count": 34
+},
+{
+"name": "奈良県 川西町",
+"amountYen": 11689000,
+"count": 326
+},
+{
+"name": "奈良県 三宅町",
+"amountYen": 56015000,
+"count": 3610
+},
+{
+"name": "奈良県 田原本町",
+"amountYen": 100277810,
+"count": 3697
+},
+{
+"name": "奈良県 曽爾村",
+"amountYen": 23991100,
+"count": 1011
+},
+{
+"name": "奈良県 御杖村",
+"amountYen": 10776000,
+"count": 639
+},
+{
+"name": "奈良県 高取町",
+"amountYen": 66665500,
+"count": 5481
+},
+{
+"name": "奈良県 明日香村",
+"amountYen": 18749500,
+"count": 1077
+},
+{
+"name": "奈良県 上牧町",
+"amountYen": 18071000,
+"count": 759
+},
+{
+"name": "奈良県 王寺町",
+"amountYen": 49546214,
+"count": 2353
+},
+{
+"name": "奈良県 広陵町",
+"amountYen": 114463891,
+"count": 5297
+},
+{
+"name": "奈良県 河合町",
+"amountYen": 240469768,
+"count": 2552
+},
+{
+"name": "奈良県 吉野町",
+"amountYen": 73562000,
+"count": 3019
+},
+{
+"name": "奈良県 大淀町",
+"amountYen": 89099000,
+"count": 3959
+},
+{
+"name": "奈良県 下市町",
+"amountYen": 10179000,
+"count": 637
+},
+{
+"name": "奈良県 黒滝村",
+"amountYen": 13827000,
+"count": 1181
+},
+{
+"name": "奈良県 天川村",
+"amountYen": 10374100,
+"count": 617
+},
+{
+"name": "奈良県 野迫川村",
+"amountYen": 628000,
+"count": 29
+},
+{
+"name": "奈良県 十津川村",
+"amountYen": 5097894,
+"count": 159
+},
+{
+"name": "奈良県 下北山村",
+"amountYen": 20589000,
+"count": 958
+},
+{
+"name": "奈良県 上北山村",
+"amountYen": 12598000,
+"count": 786
+},
+{
+"name": "奈良県 川上村",
+"amountYen": 10011600,
+"count": 268
+},
+{
+"name": "奈良県 東吉野村",
+"amountYen": 4874000,
+"count": 161
+},
+{
+"name": "和歌山県 和歌山市",
+"amountYen": 2844270816,
+"count": 126115
+},
+{
+"name": "和歌山県 海南市",
+"amountYen": 1234872100,
+"count": 68987
+},
+{
+"name": "和歌山県 橋本市",
+"amountYen": 518593600,
+"count": 32493
+},
+{
+"name": "和歌山県 有田市",
+"amountYen": 3352021400,
+"count": 200862
+},
+{
+"name": "和歌山県 御坊市",
+"amountYen": 1200086900,
+"count": 86394
+},
+{
+"name": "和歌山県 田辺市",
+"amountYen": 332509180,
+"count": 19751
+},
+{
+"name": "和歌山県 新宮市",
+"amountYen": 287638000,
+"count": 15255
+},
+{
+"name": "和歌山県 紀の川市",
+"amountYen": 2060589573,
+"count": 149922
+},
+{
+"name": "和歌山県 岩出市",
+"amountYen": 31941000,
+"count": 3092
+},
+{
+"name": "和歌山県 紀美野町",
+"amountYen": 200823100,
+"count": 14039
+},
+{
+"name": "和歌山県 かつらぎ町",
+"amountYen": 426512400,
+"count": 24589
+},
+{
+"name": "和歌山県 九度山町",
+"amountYen": 409709500,
+"count": 29421
+},
+{
+"name": "和歌山県 高野町",
+"amountYen": 232988078,
+"count": 10752
+},
+{
+"name": "和歌山県 湯浅町",
+"amountYen": 2731188200,
+"count": 213873
+},
+{
+"name": "和歌山県 広川町",
+"amountYen": 351040175,
+"count": 30603
+},
+{
+"name": "和歌山県 有田川町",
+"amountYen": 912046500,
+"count": 75592
+},
+{
+"name": "和歌山県 美浜町",
+"amountYen": 1745674714,
+"count": 153873
+},
+{
+"name": "和歌山県 日高町",
+"amountYen": 315301000,
+"count": 20162
+},
+{
+"name": "和歌山県 由良町",
+"amountYen": 160109000,
+"count": 9661
+},
+{
+"name": "和歌山県 印南町",
+"amountYen": 246146500,
+"count": 16867
+},
+{
+"name": "和歌山県 みなべ町",
+"amountYen": 286203500,
+"count": 20836
+},
+{
+"name": "和歌山県 日高川町",
+"amountYen": 142307793,
+"count": 14098
+},
+{
+"name": "和歌山県 白浜町",
+"amountYen": 812068764,
+"count": 35768
+},
+{
+"name": "和歌山県 上富田町",
+"amountYen": 465419392,
+"count": 38395
+},
+{
+"name": "和歌山県 すさみ町",
+"amountYen": 152326500,
+"count": 8870
+},
+{
+"name": "和歌山県 那智勝浦町",
+"amountYen": 316321170,
+"count": 14562
+},
+{
+"name": "和歌山県 太地町",
+"amountYen": 82320500,
+"count": 3883
+},
+{
+"name": "和歌山県 古座川町",
+"amountYen": 51445300,
+"count": 3034
+},
+{
+"name": "和歌山県 北山村",
+"amountYen": 446478600,
+"count": 29379
+},
+{
+"name": "和歌山県 串本町",
+"amountYen": 890919500,
+"count": 35323
+},
+{
+"name": "鳥取県 鳥取市",
+"amountYen": 854450319,
+"count": 22764
+},
+{
+"name": "鳥取県 米子市",
+"amountYen": 1083359000,
+"count": 69851
+},
+{
+"name": "鳥取県 倉吉市",
+"amountYen": 520558160,
+"count": 17396
+},
+{
+"name": "鳥取県 境港市",
+"amountYen": 544750000,
+"count": 24049
+},
+{
+"name": "鳥取県 岩美町",
+"amountYen": 133438295,
+"count": 5634
+},
+{
+"name": "鳥取県 若桜町",
+"amountYen": 108992500,
+"count": 7202
+},
+{
+"name": "鳥取県 智頭町",
+"amountYen": 60290700,
+"count": 3112
+},
+{
+"name": "鳥取県 八頭町",
+"amountYen": 432438000,
+"count": 23908
+},
+{
+"name": "鳥取県 三朝町",
+"amountYen": 146036600,
+"count": 3676
+},
+{
+"name": "鳥取県 湯梨浜町",
+"amountYen": 109837000,
+"count": 4131
+},
+{
+"name": "鳥取県 琴浦町",
+"amountYen": 271325000,
+"count": 11449
+},
+{
+"name": "鳥取県 北栄町",
+"amountYen": 787405247,
+"count": 45387
+},
+{
+"name": "鳥取県 日吉津村",
+"amountYen": 46063000,
+"count": 1408
+},
+{
+"name": "鳥取県 大山町",
+"amountYen": 560391554,
+"count": 29125
+},
+{
+"name": "鳥取県 南部町",
+"amountYen": 141843100,
+"count": 5844
+},
+{
+"name": "鳥取県 伯耆町",
+"amountYen": 43966500,
+"count": 1147
+},
+{
+"name": "鳥取県 日南町",
+"amountYen": 44301200,
+"count": 1338
+},
+{
+"name": "鳥取県 日野町",
+"amountYen": 83619000,
+"count": 3038
+},
+{
+"name": "鳥取県 江府町",
+"amountYen": 553860500,
+"count": 29027
+},
+{
+"name": "島根県 松江市",
+"amountYen": 661679300,
+"count": 22404
+},
+{
+"name": "島根県 浜田市",
+"amountYen": 1532112500,
+"count": 51007
+},
+{
+"name": "島根県 出雲市",
+"amountYen": 1473762019,
+"count": 35777
+},
+{
+"name": "島根県 益田市",
+"amountYen": 166412500,
+"count": 6963
+},
+{
+"name": "島根県 大田市",
+"amountYen": 127207217,
+"count": 5071
+},
+{
+"name": "島根県 安来市",
+"amountYen": 335045200,
+"count": 11684
+},
+{
+"name": "島根県 江津市",
+"amountYen": 380179929,
+"count": 8434
+},
+{
+"name": "島根県 雲南市",
+"amountYen": 335005100,
+"count": 14163
+},
+{
+"name": "島根県 奥出雲町",
+"amountYen": 747703000,
+"count": 16286
+},
+{
+"name": "島根県 飯南町",
+"amountYen": 118767000,
+"count": 2906
+},
+{
+"name": "島根県 川本町",
+"amountYen": 18154000,
+"count": 337
+},
+{
+"name": "島根県 美郷町",
+"amountYen": 20183538,
+"count": 1216
+},
+{
+"name": "島根県 邑南町",
+"amountYen": 128915500,
+"count": 3007
+},
+{
+"name": "島根県 津和野町",
+"amountYen": 69231000,
+"count": 3857
+},
+{
+"name": "島根県 吉賀町",
+"amountYen": 20186092,
+"count": 1137
+},
+{
+"name": "島根県 海士町",
+"amountYen": 251025613,
+"count": 7377
+},
+{
+"name": "島根県 西ノ島町",
+"amountYen": 43690000,
+"count": 1354
+},
+{
+"name": "島根県 知夫村",
+"amountYen": 21404000,
+"count": 903
+},
+{
+"name": "島根県 隠岐の島町",
+"amountYen": 25628500,
+"count": 688
+},
+{
+"name": "岡山県 岡山市",
+"amountYen": 799452600,
+"count": 35042
+},
+{
+"name": "岡山県 倉敷市",
+"amountYen": 814718934,
+"count": 22132
+},
+{
+"name": "岡山県 津山市",
+"amountYen": 2027122701,
+"count": 114870
+},
+{
+"name": "岡山県 玉野市",
+"amountYen": 366234800,
+"count": 14879
+},
+{
+"name": "岡山県 笠岡市",
+"amountYen": 722961000,
+"count": 28000
+},
+{
+"name": "岡山県 井原市",
+"amountYen": 411794000,
+"count": 19008
+},
+{
+"name": "岡山県 総社市",
+"amountYen": 419514000,
+"count": 13646
+},
+{
+"name": "岡山県 高梁市",
+"amountYen": 247580400,
+"count": 16691
+},
+{
+"name": "岡山県 新見市",
+"amountYen": 129025500,
+"count": 5530
+},
+{
+"name": "岡山県 備前市",
+"amountYen": 415232290,
+"count": 18116
+},
+{
+"name": "岡山県 瀬戸内市",
+"amountYen": 1155087400,
+"count": 44467
+},
+{
+"name": "岡山県 赤磐市",
+"amountYen": 257448100,
+"count": 8741
+},
+{
+"name": "岡山県 真庭市",
+"amountYen": 377155809,
+"count": 18693
+},
+{
+"name": "岡山県 美作市",
+"amountYen": 215776200,
+"count": 10950
+},
+{
+"name": "岡山県 浅口市",
+"amountYen": 169714200,
+"count": 6735
+},
+{
+"name": "岡山県 和気町",
+"amountYen": 253054992,
+"count": 10176
+},
+{
+"name": "岡山県 早島町",
+"amountYen": 314301600,
+"count": 13055
+},
+{
+"name": "岡山県 里庄町",
+"amountYen": 582946400,
+"count": 25385
+},
+{
+"name": "岡山県 矢掛町",
+"amountYen": 1137069000,
+"count": 72284
+},
+{
+"name": "岡山県 新庄村",
+"amountYen": 24451392,
+"count": 1625
+},
+{
+"name": "岡山県 鏡野町",
+"amountYen": 135566715,
+"count": 6208
+},
+{
+"name": "岡山県 勝央町",
+"amountYen": 214519000,
+"count": 5933
+},
+{
+"name": "岡山県 奈義町",
+"amountYen": 193603192,
+"count": 5013
+},
+{
+"name": "岡山県 西粟倉村",
+"amountYen": 216213000,
+"count": 4594
+},
+{
+"name": "岡山県 久米南町",
+"amountYen": 24342000,
+"count": 1197
+},
+{
+"name": "岡山県 美咲町",
+"amountYen": 159138000,
+"count": 6533
+},
+{
+"name": "岡山県 吉備中央町",
+"amountYen": 895285000,
+"count": 12690
+},
+{
+"name": "広島県 広島市",
+"amountYen": 245616043,
+"count": 6009
+},
+{
+"name": "広島県 呉市",
+"amountYen": 822662755,
+"count": 60711
+},
+{
+"name": "広島県 竹原市",
+"amountYen": 260628695,
+"count": 11304
+},
+{
+"name": "広島県 三原市",
+"amountYen": 579493400,
+"count": 34008
+},
+{
+"name": "広島県 尾道市",
+"amountYen": 608733000,
+"count": 18183
+},
+{
+"name": "広島県 福山市",
+"amountYen": 306858600,
+"count": 8918
+},
+{
+"name": "広島県 府中市",
+"amountYen": 207966000,
+"count": 3914
+},
+{
+"name": "広島県 三次市",
+"amountYen": 158994000,
+"count": 8294
+},
+{
+"name": "広島県 庄原市",
+"amountYen": 56135000,
+"count": 2045
+},
+{
+"name": "広島県 大竹市",
+"amountYen": 916607600,
+"count": 17885
+},
+{
+"name": "広島県 東広島市",
+"amountYen": 453065600,
+"count": 10891
+},
+{
+"name": "広島県 廿日市市",
+"amountYen": 349512741,
+"count": 9685
+},
+{
+"name": "広島県 安芸高田市",
+"amountYen": 86810000,
+"count": 3712
+},
+{
+"name": "広島県 江田島市",
+"amountYen": 216283100,
+"count": 10288
+},
+{
+"name": "広島県 府中町",
+"amountYen": 9684000,
+"count": 359
+},
+{
+"name": "広島県 海田町",
+"amountYen": 52157000,
+"count": 3252
+},
+{
+"name": "広島県 熊野町",
+"amountYen": 209315000,
+"count": 6474
+},
+{
+"name": "広島県 坂町",
+"amountYen": 2679000,
+"count": 50
+},
+{
+"name": "広島県 安芸太田町",
+"amountYen": 246780000,
+"count": 17068
+},
+{
+"name": "広島県 北広島町",
+"amountYen": 241139834,
+"count": 3420
+},
+{
+"name": "広島県 大崎上島町",
+"amountYen": 75255100,
+"count": 4059
+},
+{
+"name": "広島県 世羅町",
+"amountYen": 56626000,
+"count": 3368
+},
+{
+"name": "広島県 神石高原町",
+"amountYen": 589435858,
+"count": 20538
+},
+{
+"name": "山口県 下関市",
+"amountYen": 3062878779,
+"count": 184172
+},
+{
+"name": "山口県 宇部市",
+"amountYen": 205388100,
+"count": 9097
+},
+{
+"name": "山口県 山口市",
+"amountYen": 576725068,
+"count": 13733
+},
+{
+"name": "山口県 萩市",
+"amountYen": 175368397,
+"count": 3942
+},
+{
+"name": "山口県 防府市",
+"amountYen": 104246231,
+"count": 6029
+},
+{
+"name": "山口県 下松市",
+"amountYen": 11348000,
+"count": 685
+},
+{
+"name": "山口県 岩国市",
+"amountYen": 161279000,
+"count": 4701
+},
+{
+"name": "山口県 光市",
+"amountYen": 22640000,
+"count": 941
+},
+{
+"name": "山口県 長門市",
+"amountYen": 589976300,
+"count": 21868
+},
+{
+"name": "山口県 柳井市",
+"amountYen": 79000000,
+"count": 1904
+},
+{
+"name": "山口県 美祢市",
+"amountYen": 338413400,
+"count": 4115
+},
+{
+"name": "山口県 周南市",
+"amountYen": 151669318,
+"count": 5482
+},
+{
+"name": "山口県 山陽小野田市",
+"amountYen": 178501100,
+"count": 12581
+},
+{
+"name": "山口県 周防大島町",
+"amountYen": 40132000,
+"count": 1884
+},
+{
+"name": "山口県 和木町",
+"amountYen": 3667000,
+"count": 61
+},
+{
+"name": "山口県 上関町",
+"amountYen": 23682000,
+"count": 642
+},
+{
+"name": "山口県 田布施町",
+"amountYen": 18209000,
+"count": 1236
+},
+{
+"name": "山口県 平生町",
+"amountYen": 9566000,
+"count": 410
+},
+{
+"name": "山口県 阿武町",
+"amountYen": 41704400,
+"count": 618
+},
+{
+"name": "徳島県 徳島市",
+"amountYen": 805810933,
+"count": 42657
+},
+{
+"name": "徳島県 鳴門市",
+"amountYen": 653038617,
+"count": 33132
+},
+{
+"name": "徳島県 小松島市",
+"amountYen": 391720400,
+"count": 26288
+},
+{
+"name": "徳島県 阿南市",
+"amountYen": 935008711,
+"count": 52044
+},
+{
+"name": "徳島県 吉野川市",
+"amountYen": 124548000,
+"count": 7343
+},
+{
+"name": "徳島県 阿波市",
+"amountYen": 220837285,
+"count": 10703
+},
+{
+"name": "徳島県 美馬市",
+"amountYen": 53872500,
+"count": 3128
+},
+{
+"name": "徳島県 三好市",
+"amountYen": 67135578,
+"count": 3399
+},
+{
+"name": "徳島県 勝浦町",
+"amountYen": 45284500,
+"count": 2056
+},
+{
+"name": "徳島県 上勝町",
+"amountYen": 25126500,
+"count": 1467
+},
+{
+"name": "徳島県 佐那河内村",
+"amountYen": 83229000,
+"count": 7101
+},
+{
+"name": "徳島県 石井町",
+"amountYen": 35286800,
+"count": 1850
+},
+{
+"name": "徳島県 神山町",
+"amountYen": 81148500,
+"count": 428
+},
+{
+"name": "徳島県 那賀町",
+"amountYen": 194242000,
+"count": 7562
+},
+{
+"name": "徳島県 牟岐町",
+"amountYen": 6573000,
+"count": 251
+},
+{
+"name": "徳島県 美波町",
+"amountYen": 19886000,
+"count": 1019
+},
+{
+"name": "徳島県 海陽町",
+"amountYen": 225850500,
+"count": 8539
+},
+{
+"name": "徳島県 松茂町",
+"amountYen": 68221000,
+"count": 1078
+},
+{
+"name": "徳島県 北島町",
+"amountYen": 68577400,
+"count": 3022
+},
+{
+"name": "徳島県 藍住町",
+"amountYen": 32067425,
+"count": 2541
+},
+{
+"name": "徳島県 板野町",
+"amountYen": 59037000,
+"count": 3336
+},
+{
+"name": "徳島県 上板町",
+"amountYen": 48844500,
+"count": 3126
+},
+{
+"name": "徳島県 つるぎ町",
+"amountYen": 11268000,
+"count": 59
+},
+{
+"name": "徳島県 東みよし町",
+"amountYen": 41530000,
+"count": 3421
+},
+{
+"name": "香川県 高松市",
+"amountYen": 1119594102,
+"count": 52184
+},
+{
+"name": "香川県 丸亀市",
+"amountYen": 490423815,
+"count": 28130
+},
+{
+"name": "香川県 坂出市",
+"amountYen": 691348500,
+"count": 23002
+},
+{
+"name": "香川県 善通寺市",
+"amountYen": 459076000,
+"count": 46134
+},
+{
+"name": "香川県 観音寺市",
+"amountYen": 2069721450,
+"count": 96042
+},
+{
+"name": "香川県 さぬき市",
+"amountYen": 554293000,
+"count": 15849
+},
+{
+"name": "香川県 東かがわ市",
+"amountYen": 503729415,
+"count": 17588
+},
+{
+"name": "香川県 三豊市",
+"amountYen": 892413200,
+"count": 50313
+},
+{
+"name": "香川県 土庄町",
+"amountYen": 408705000,
+"count": 20766
+},
+{
+"name": "香川県 小豆島町",
+"amountYen": 1172000000,
+"count": 57144
+},
+{
+"name": "香川県 三木町",
+"amountYen": 289909800,
+"count": 11052
+},
+{
+"name": "香川県 直島町",
+"amountYen": 36195000,
+"count": 330
+},
+{
+"name": "香川県 宇多津町",
+"amountYen": 31066000,
+"count": 1568
+},
+{
+"name": "香川県 綾川町",
+"amountYen": 151460500,
+"count": 2816
+},
+{
+"name": "香川県 琴平町",
+"amountYen": 134333900,
+"count": 4064
+},
+{
+"name": "香川県 多度津町",
+"amountYen": 192631000,
+"count": 8883
+},
+{
+"name": "香川県 まんのう町",
+"amountYen": 154282500,
+"count": 14765
+},
+{
+"name": "愛媛県 松山市",
+"amountYen": 2662417605,
+"count": 173390
+},
+{
+"name": "愛媛県 今治市",
+"amountYen": 3622687690,
+"count": 139656
+},
+{
+"name": "愛媛県 宇和島市",
+"amountYen": 912229400,
+"count": 57879
+},
+{
+"name": "愛媛県 八幡浜市",
+"amountYen": 4777664900,
+"count": 343381
+},
+{
+"name": "愛媛県 新居浜市",
+"amountYen": 369678535,
+"count": 15626
+},
+{
+"name": "愛媛県 西条市",
+"amountYen": 1031544742,
+"count": 50151
+},
+{
+"name": "愛媛県 大洲市",
+"amountYen": 460793300,
+"count": 17770
+},
+{
+"name": "愛媛県 伊予市",
+"amountYen": 281987125,
+"count": 16283
+},
+{
+"name": "愛媛県 四国中央市",
+"amountYen": 2037452900,
+"count": 120360
+},
+{
+"name": "愛媛県 西予市",
+"amountYen": 668559503,
+"count": 56009
+},
+{
+"name": "愛媛県 東温市",
+"amountYen": 29954000,
+"count": 1400
+},
+{
+"name": "愛媛県 上島町",
+"amountYen": 80908001,
+"count": 5735
+},
+{
+"name": "愛媛県 久万高原町",
+"amountYen": 35105000,
+"count": 2271
+},
+{
+"name": "愛媛県 松前町",
+"amountYen": 122529000,
+"count": 8182
+},
+{
+"name": "愛媛県 砥部町",
+"amountYen": 142057500,
+"count": 4218
+},
+{
+"name": "愛媛県 内子町",
+"amountYen": 28600000,
+"count": 1074
+},
+{
+"name": "愛媛県 伊方町",
+"amountYen": 105087800,
+"count": 8654
+},
+{
+"name": "愛媛県 松野町",
+"amountYen": 17979000,
+"count": 484
+},
+{
+"name": "愛媛県 鬼北町",
+"amountYen": 92413700,
+"count": 4423
+},
+{
+"name": "愛媛県 愛南町",
+"amountYen": 2603577230,
+"count": 238079
+},
+{
+"name": "高知県 高知市",
+"amountYen": 1195880966,
+"count": 53442
+},
+{
+"name": "高知県 室戸市",
+"amountYen": 1743274200,
+"count": 127898
+},
+{
+"name": "高知県 安芸市",
+"amountYen": 225954600,
+"count": 13528
+},
+{
+"name": "高知県 南国市",
+"amountYen": 418227999,
+"count": 12569
+},
+{
+"name": "高知県 土佐市",
+"amountYen": 1159476945,
+"count": 100538
+},
+{
+"name": "高知県 須崎市",
+"amountYen": 3463619489,
+"count": 223317
+},
+{
+"name": "高知県 宿毛市",
+"amountYen": 590173500,
+"count": 48826
+},
+{
+"name": "高知県 土佐清水市",
+"amountYen": 429541924,
+"count": 28875
+},
+{
+"name": "高知県 四万十市",
+"amountYen": 361203500,
+"count": 21118
+},
+{
+"name": "高知県 香南市",
+"amountYen": 631438200,
+"count": 31915
+},
+{
+"name": "高知県 香美市",
+"amountYen": 94131500,
+"count": 3711
+},
+{
+"name": "高知県 東洋町",
+"amountYen": 76997500,
+"count": 4027
+},
+{
+"name": "高知県 奈半利町",
+"amountYen": 11575500,
+"count": 503
+},
+{
+"name": "高知県 田野町",
+"amountYen": 460109600,
+"count": 39780
+},
+{
+"name": "高知県 安田町",
+"amountYen": 40598500,
+"count": 2844
+},
+{
+"name": "高知県 北川村",
+"amountYen": 15622000,
+"count": 1263
+},
+{
+"name": "高知県 馬路村",
+"amountYen": 287658900,
+"count": 21415
+},
+{
+"name": "高知県 芸西村",
+"amountYen": 1654520100,
+"count": 151994
+},
+{
+"name": "高知県 本山町",
+"amountYen": 30719000,
+"count": 851
+},
+{
+"name": "高知県 大豊町",
+"amountYen": 6841025,
+"count": 244
+},
+{
+"name": "高知県 土佐町",
+"amountYen": 28132000,
+"count": 704
+},
+{
+"name": "高知県 大川村",
+"amountYen": 13143000,
+"count": 748
+},
+{
+"name": "高知県 いの町",
+"amountYen": 314491000,
+"count": 13163
+},
+{
+"name": "高知県 仁淀川町",
+"amountYen": 16302500,
+"count": 934
+},
+{
+"name": "高知県 中土佐町",
+"amountYen": 99115000,
+"count": 5906
+},
+{
+"name": "高知県 佐川町",
+"amountYen": 341784251,
+"count": 16442
+},
+{
+"name": "高知県 越知町",
+"amountYen": 111404000,
+"count": 6992
+},
+{
+"name": "高知県 梼原町",
+"amountYen": 19584000,
+"count": 1199
+},
+{
+"name": "高知県 日高村",
+"amountYen": 349623669,
+"count": 12367
+},
+{
+"name": "高知県 津野町",
+"amountYen": 9922000,
+"count": 353
+},
+{
+"name": "高知県 四万十町",
+"amountYen": 799280000,
+"count": 61082
+},
+{
+"name": "高知県 大月町",
+"amountYen": 233150099,
+"count": 8040
+},
+{
+"name": "高知県 三原村",
+"amountYen": 18079000,
+"count": 955
+},
+{
+"name": "高知県 黒潮町",
+"amountYen": 754193852,
+"count": 52433
+},
+{
+"name": "福岡県 北九州市",
+"amountYen": 3145361052,
+"count": 108019
+},
+{
+"name": "福岡県 福岡市",
+"amountYen": 4157409797,
+"count": 147894
+},
+{
+"name": "福岡県 大牟田市",
+"amountYen": 243157000,
+"count": 14516
+},
+{
+"name": "福岡県 久留米市",
+"amountYen": 2441499251,
+"count": 127713
+},
+{
+"name": "福岡県 直方市",
+"amountYen": 799005600,
+"count": 28904
+},
+{
+"name": "福岡県 飯塚市",
+"amountYen": 6017142200,
+"count": 358244
+},
+{
+"name": "福岡県 田川市",
+"amountYen": 1522665600,
+"count": 78613
+},
+{
+"name": "福岡県 柳川市",
+"amountYen": 430465944,
+"count": 14195
+},
+{
+"name": "福岡県 八女市",
+"amountYen": 1838698117,
+"count": 107578
+},
+{
+"name": "福岡県 筑後市",
+"amountYen": 393066900,
+"count": 16324
+},
+{
+"name": "福岡県 大川市",
+"amountYen": 1940555300,
+"count": 59977
+},
+{
+"name": "福岡県 行橋市",
+"amountYen": 235673000,
+"count": 19224
+},
+{
+"name": "福岡県 豊前市",
+"amountYen": 460663700,
+"count": 21994
+},
+{
+"name": "福岡県 中間市",
+"amountYen": 270031700,
+"count": 15948
+},
+{
+"name": "福岡県 小郡市",
+"amountYen": 383985900,
+"count": 17157
+},
+{
+"name": "福岡県 筑紫野市",
+"amountYen": 659922733,
+"count": 61612
+},
+{
+"name": "福岡県 春日市",
+"amountYen": 411566265,
+"count": 30316
+},
+{
+"name": "福岡県 大野城市",
+"amountYen": 2975558700,
+"count": 236784
+},
+{
+"name": "福岡県 宗像市",
+"amountYen": 1414462000,
+"count": 74832
+},
+{
+"name": "福岡県 太宰府市",
+"amountYen": 1134008500,
+"count": 85648
+},
+{
+"name": "福岡県 古賀市",
+"amountYen": 793701600,
+"count": 46442
+},
+{
+"name": "福岡県 福津市",
+"amountYen": 233090790,
+"count": 10423
+},
+{
+"name": "福岡県 うきは市",
+"amountYen": 400956900,
+"count": 12565
+},
+{
+"name": "福岡県 宮若市",
+"amountYen": 281503000,
+"count": 14358
+},
+{
+"name": "福岡県 嘉麻市",
+"amountYen": 306146000,
+"count": 18138
+},
+{
+"name": "福岡県 朝倉市",
+"amountYen": 1955036268,
+"count": 93831
+},
+{
+"name": "福岡県 みやま市",
+"amountYen": 147790000,
+"count": 6671
+},
+{
+"name": "福岡県 糸島市",
+"amountYen": 2445025788,
+"count": 101665
+},
+{
+"name": "福岡県 那珂川市",
+"amountYen": 510544500,
+"count": 22549
+},
+{
+"name": "福岡県 宇美町",
+"amountYen": 1762117400,
+"count": 150900
+},
+{
+"name": "福岡県 篠栗町",
+"amountYen": 330988500,
+"count": 28868
+},
+{
+"name": "福岡県 志免町",
+"amountYen": 454382200,
+"count": 31930
+},
+{
+"name": "福岡県 須恵町",
+"amountYen": 363746600,
+"count": 29889
+},
+{
+"name": "福岡県 新宮町",
+"amountYen": 2724256600,
+"count": 217199
+},
+{
+"name": "福岡県 久山町",
+"amountYen": 714577200,
+"count": 26655
+},
+{
+"name": "福岡県 粕屋町",
+"amountYen": 629302000,
+"count": 20798
+},
+{
+"name": "福岡県 芦屋町",
+"amountYen": 67609100,
+"count": 4602
+},
+{
+"name": "福岡県 水巻町",
+"amountYen": 76608100,
+"count": 4895
+},
+{
+"name": "福岡県 岡垣町",
+"amountYen": 293122500,
+"count": 20178
+},
+{
+"name": "福岡県 遠賀町",
+"amountYen": 735597900,
+"count": 62491
+},
+{
+"name": "福岡県 小竹町",
+"amountYen": 870834507,
+"count": 74386
+},
+{
+"name": "福岡県 鞍手町",
+"amountYen": 435550500,
+"count": 37090
+},
+{
+"name": "福岡県 桂川町",
+"amountYen": 286956533,
+"count": 14743
+},
+{
+"name": "福岡県 筑前町",
+"amountYen": 247636000,
+"count": 12617
+},
+{
+"name": "福岡県 東峰村",
+"amountYen": 128849000,
+"count": 10147
+},
+{
+"name": "福岡県 大刀洗町",
+"amountYen": 514289500,
+"count": 14848
+},
+{
+"name": "福岡県 大木町",
+"amountYen": 2023085502,
+"count": 142439
+},
+{
+"name": "福岡県 広川町",
+"amountYen": 273681700,
+"count": 13871
+},
+{
+"name": "福岡県 香春町",
+"amountYen": 561011000,
+"count": 19797
+},
+{
+"name": "福岡県 添田町",
+"amountYen": 228391283,
+"count": 8694
+},
+{
+"name": "福岡県 糸田町",
+"amountYen": 43857000,
+"count": 1039
+},
+{
+"name": "福岡県 川崎町",
+"amountYen": 928747700,
+"count": 113636
+},
+{
+"name": "福岡県 大任町",
+"amountYen": 41785000,
+"count": 1033
+},
+{
+"name": "福岡県 赤村",
+"amountYen": 3373635700,
+"count": 150449
+},
+{
+"name": "福岡県 福智町",
+"amountYen": 3359397202,
+"count": 229013
+},
+{
+"name": "福岡県 苅田町",
+"amountYen": 118968000,
+"count": 3258
+},
+{
+"name": "福岡県 みやこ町",
+"amountYen": 45118800,
+"count": 2476
+},
+{
+"name": "福岡県 吉富町",
+"amountYen": 88516000,
+"count": 3338
+},
+{
+"name": "福岡県 上毛町",
+"amountYen": 224527000,
+"count": 12610
+},
+{
+"name": "福岡県 築上町",
+"amountYen": 270523000,
+"count": 10839
+},
+{
+"name": "佐賀県 佐賀市",
+"amountYen": 925946200,
+"count": 45016
+},
+{
+"name": "佐賀県 唐津市",
+"amountYen": 5863347703,
+"count": 380111
+},
+{
+"name": "佐賀県 鳥栖市",
+"amountYen": 372625700,
+"count": 17697
+},
+{
+"name": "佐賀県 多久市",
+"amountYen": 1021385000,
+"count": 44271
+},
+{
+"name": "佐賀県 伊万里市",
+"amountYen": 1715944150,
+"count": 81530
+},
+{
+"name": "佐賀県 武雄市",
+"amountYen": 453115500,
+"count": 8529
+},
+{
+"name": "佐賀県 鹿島市",
+"amountYen": 1490985400,
+"count": 59572
+},
+{
+"name": "佐賀県 小城市",
+"amountYen": 1274543131,
+"count": 53235
+},
+{
+"name": "佐賀県 嬉野市",
+"amountYen": 1711792000,
+"count": 74478
+},
+{
+"name": "佐賀県 神埼市",
+"amountYen": 2196734600,
+"count": 73920
+},
+{
+"name": "佐賀県 吉野ヶ里町",
+"amountYen": 3873838508,
+"count": 222834
+},
+{
+"name": "佐賀県 基山町",
+"amountYen": 289419900,
+"count": 10089
+},
+{
+"name": "佐賀県 上峰町",
+"amountYen": 6313223300,
+"count": 373105
+},
+{
+"name": "佐賀県 みやき町",
+"amountYen": 2421888900,
+"count": 160240
+},
+{
+"name": "佐賀県 玄海町",
+"amountYen": 1342387000,
+"count": 50787
+},
+{
+"name": "佐賀県 有田町",
+"amountYen": 1203476100,
+"count": 30566
+},
+{
+"name": "佐賀県 大町町",
+"amountYen": 232776185,
+"count": 6061
+},
+{
+"name": "佐賀県 江北町",
+"amountYen": 983136300,
+"count": 38457
+},
+{
+"name": "佐賀県 白石町",
+"amountYen": 979673000,
+"count": 38371
+},
+{
+"name": "佐賀県 太良町",
+"amountYen": 609977007,
+"count": 36768
+},
+{
+"name": "長崎県 長崎市",
+"amountYen": 1079705033,
+"count": 41264
+},
+{
+"name": "長崎県 佐世保市",
+"amountYen": 1984940874,
+"count": 94237
+},
+{
+"name": "長崎県 島原市",
+"amountYen": 1394820600,
+"count": 57942
+},
+{
+"name": "長崎県 諫早市",
+"amountYen": 652304800,
+"count": 33450
+},
+{
+"name": "長崎県 大村市",
+"amountYen": 1145072730,
+"count": 13452
+},
+{
+"name": "長崎県 平戸市",
+"amountYen": 375605440,
+"count": 8199
+},
+{
+"name": "長崎県 松浦市",
+"amountYen": 1827731600,
+"count": 126715
+},
+{
+"name": "長崎県 対馬市",
+"amountYen": 276372974,
+"count": 8837
+},
+{
+"name": "長崎県 壱岐市",
+"amountYen": 752690989,
+"count": 19530
+},
+{
+"name": "長崎県 五島市",
+"amountYen": 620033901,
+"count": 21853
+},
+{
+"name": "長崎県 西海市",
+"amountYen": 900134200,
+"count": 23528
+},
+{
+"name": "長崎県 雲仙市",
+"amountYen": 337721000,
+"count": 18262
+},
+{
+"name": "長崎県 南島原市",
+"amountYen": 1653567208,
+"count": 88277
+},
+{
+"name": "長崎県 長与町",
+"amountYen": 423677692,
+"count": 11129
+},
+{
+"name": "長崎県 時津町",
+"amountYen": 449239000,
+"count": 30388
+},
+{
+"name": "長崎県 東彼杵町",
+"amountYen": 65998300,
+"count": 2662
+},
+{
+"name": "長崎県 川棚町",
+"amountYen": 150130000,
+"count": 5252
+},
+{
+"name": "長崎県 波佐見町",
+"amountYen": 1591061300,
+"count": 50179
+},
+{
+"name": "長崎県 小値賀町",
+"amountYen": 75857700,
+"count": 2157
+},
+{
+"name": "長崎県 佐々町",
+"amountYen": 104773800,
+"count": 4203
+},
+{
+"name": "長崎県 新上五島町",
+"amountYen": 246766500,
+"count": 9329
+},
+{
+"name": "熊本県 熊本市",
+"amountYen": 1606752376,
+"count": 134617
+},
+{
+"name": "熊本県 八代市",
+"amountYen": 2611703257,
+"count": 184347
+},
+{
+"name": "熊本県 人吉市",
+"amountYen": 412103110,
+"count": 17477
+},
+{
+"name": "熊本県 荒尾市",
+"amountYen": 1064593000,
+"count": 57425
+},
+{
+"name": "熊本県 水俣市",
+"amountYen": 146206000,
+"count": 9462
+},
+{
+"name": "熊本県 玉名市",
+"amountYen": 1124095080,
+"count": 61492
+},
+{
+"name": "熊本県 山鹿市",
+"amountYen": 1010884128,
+"count": 25112
+},
+{
+"name": "熊本県 菊池市",
+"amountYen": 615891846,
+"count": 25349
+},
+{
+"name": "熊本県 宇土市",
+"amountYen": 394644700,
+"count": 22844
+},
+{
+"name": "熊本県 上天草市",
+"amountYen": 586179759,
+"count": 21266
+},
+{
+"name": "熊本県 宇城市",
+"amountYen": 445914800,
+"count": 19471
+},
+{
+"name": "熊本県 阿蘇市",
+"amountYen": 452915306,
+"count": 22555
+},
+{
+"name": "熊本県 天草市",
+"amountYen": 1902788060,
+"count": 97305
+},
+{
+"name": "熊本県 合志市",
+"amountYen": 202523590,
+"count": 7862
+},
+{
+"name": "熊本県 美里町",
+"amountYen": 105808500,
+"count": 6045
+},
+{
+"name": "熊本県 玉東町",
+"amountYen": 1068728200,
+"count": 48616
+},
+{
+"name": "熊本県 南関町",
+"amountYen": 152553000,
+"count": 8316
+},
+{
+"name": "熊本県 長洲町",
+"amountYen": 992370000,
+"count": 59281
+},
+{
+"name": "熊本県 和水町",
+"amountYen": 2236326040,
+"count": 99109
+},
+{
+"name": "熊本県 大津町",
+"amountYen": 920471898,
+"count": 59468
+},
+{
+"name": "熊本県 菊陽町",
+"amountYen": 269863500,
+"count": 2865
+},
+{
+"name": "熊本県 南小国町",
+"amountYen": 1483460100,
+"count": 75037
+},
+{
+"name": "熊本県 小国町",
+"amountYen": 288296000,
+"count": 17289
+},
+{
+"name": "熊本県 産山村",
+"amountYen": 279932349,
+"count": 6830
+},
+{
+"name": "熊本県 高森町",
+"amountYen": 3512807800,
+"count": 119498
+},
+{
+"name": "熊本県 西原村",
+"amountYen": 338815000,
+"count": 15520
+},
+{
+"name": "熊本県 南阿蘇村",
+"amountYen": 1511144750,
+"count": 48625
+},
+{
+"name": "熊本県 御船町",
+"amountYen": 4140294368,
+"count": 135377
+},
+{
+"name": "熊本県 嘉島町",
+"amountYen": 506891000,
+"count": 15138
+},
+{
+"name": "熊本県 益城町",
+"amountYen": 911082678,
+"count": 43215
+},
+{
+"name": "熊本県 甲佐町",
+"amountYen": 5442881094,
+"count": 225737
+},
+{
+"name": "熊本県 山都町",
+"amountYen": 204587000,
+"count": 7961
+},
+{
+"name": "熊本県 氷川町",
+"amountYen": 1017777150,
+"count": 64668
+},
+{
+"name": "熊本県 芦北町",
+"amountYen": 133701000,
+"count": 8046
+},
+{
+"name": "熊本県 津奈木町",
+"amountYen": 241355500,
+"count": 11772
+},
+{
+"name": "熊本県 錦町",
+"amountYen": 68728144,
+"count": 2946
+},
+{
+"name": "熊本県 多良木町",
+"amountYen": 322904500,
+"count": 20381
+},
+{
+"name": "熊本県 湯前町",
+"amountYen": 152240600,
+"count": 10841
+},
+{
+"name": "熊本県 水上村",
+"amountYen": 691921500,
+"count": 45987
+},
+{
+"name": "熊本県 相良村",
+"amountYen": 44027800,
+"count": 2949
+},
+{
+"name": "熊本県 五木村",
+"amountYen": 9541100,
+"count": 874
+},
+{
+"name": "熊本県 山江村",
+"amountYen": 136310000,
+"count": 6095
+},
+{
+"name": "熊本県 球磨村",
+"amountYen": 42036000,
+"count": 2115
+},
+{
+"name": "熊本県 あさぎり町",
+"amountYen": 73183800,
+"count": 4890
+},
+{
+"name": "熊本県 苓北町",
+"amountYen": 130534000,
+"count": 5233
+},
+{
+"name": "大分県 大分市",
+"amountYen": 1414949938,
+"count": 67994
+},
+{
+"name": "大分県 別府市",
+"amountYen": 973542800,
+"count": 21882
+},
+{
+"name": "大分県 中津市",
+"amountYen": 393201500,
+"count": 19337
+},
+{
+"name": "大分県 日田市",
+"amountYen": 1349878800,
+"count": 50693
+},
+{
+"name": "大分県 佐伯市",
+"amountYen": 841748600,
+"count": 39451
+},
+{
+"name": "大分県 臼杵市",
+"amountYen": 590556200,
+"count": 22864
+},
+{
+"name": "大分県 津久見市",
+"amountYen": 185646900,
+"count": 11903
+},
+{
+"name": "大分県 竹田市",
+"amountYen": 389089300,
+"count": 12585
+},
+{
+"name": "大分県 豊後高田市",
+"amountYen": 341652000,
+"count": 20786
+},
+{
+"name": "大分県 杵築市",
+"amountYen": 669186400,
+"count": 34858
+},
+{
+"name": "大分県 宇佐市",
+"amountYen": 890930600,
+"count": 55226
+},
+{
+"name": "大分県 豊後大野市",
+"amountYen": 169352317,
+"count": 9705
+},
+{
+"name": "大分県 由布市",
+"amountYen": 1009549600,
+"count": 12037
+},
+{
+"name": "大分県 国東市",
+"amountYen": 1738984694,
+"count": 100685
+},
+{
+"name": "大分県 姫島村",
+"amountYen": 28775000,
+"count": 1981
+},
+{
+"name": "大分県 日出町",
+"amountYen": 734641000,
+"count": 30827
+},
+{
+"name": "大分県 九重町",
+"amountYen": 139236300,
+"count": 6521
+},
+{
+"name": "大分県 玖珠町",
+"amountYen": 672623500,
+"count": 20180
+},
+{
+"name": "宮崎県 宮崎市",
+"amountYen": 14311964400,
+"count": 723801
+},
+{
+"name": "宮崎県 都城市",
+"amountYen": 21646358900,
+"count": 1058404
+},
+{
+"name": "宮崎県 延岡市",
+"amountYen": 1281053108,
+"count": 37933
+},
+{
+"name": "宮崎県 日南市",
+"amountYen": 3781773404,
+"count": 194254
+},
+{
+"name": "宮崎県 小林市",
+"amountYen": 2108343900,
+"count": 123742
+},
+{
+"name": "宮崎県 日向市",
+"amountYen": 1341066304,
+"count": 80789
+},
+{
+"name": "宮崎県 串間市",
+"amountYen": 1123269708,
+"count": 66255
+},
+{
+"name": "宮崎県 西都市",
+"amountYen": 3680896796,
+"count": 195581
+},
+{
+"name": "宮崎県 えびの市",
+"amountYen": 592229300,
+"count": 30924
+},
+{
+"name": "宮崎県 三股町",
+"amountYen": 242434163,
+"count": 12113
+},
+{
+"name": "宮崎県 高原町",
+"amountYen": 510378000,
+"count": 25799
+},
+{
+"name": "宮崎県 国富町",
+"amountYen": 843814622,
+"count": 52468
+},
+{
+"name": "宮崎県 綾町",
+"amountYen": 666781000,
+"count": 25003
+},
+{
+"name": "宮崎県 高鍋町",
+"amountYen": 756803932,
+"count": 28142
+},
+{
+"name": "宮崎県 新富町",
+"amountYen": 2275878232,
+"count": 75091
+},
+{
+"name": "宮崎県 西米良村",
+"amountYen": 10337400,
+"count": 683
+},
+{
+"name": "宮崎県 木城町",
+"amountYen": 280196400,
+"count": 16365
+},
+{
+"name": "宮崎県 川南町",
+"amountYen": 3453142600,
+"count": 176163
+},
+{
+"name": "宮崎県 都農町",
+"amountYen": 1285560064,
+"count": 58247
+},
+{
+"name": "宮崎県 門川町",
+"amountYen": 793763975,
+"count": 55730
+},
+{
+"name": "宮崎県 諸塚村",
+"amountYen": 3964000,
+"count": 159
+},
+{
+"name": "宮崎県 椎葉村",
+"amountYen": 133977125,
+"count": 5593
+},
+{
+"name": "宮崎県 美郷町",
+"amountYen": 383828500,
+"count": 16721
+},
+{
+"name": "宮崎県 高千穂町",
+"amountYen": 204839780,
+"count": 6817
+},
+{
+"name": "宮崎県 日之影町",
+"amountYen": 105046000,
+"count": 3648
+},
+{
+"name": "宮崎県 五ヶ瀬町",
+"amountYen": 384720900,
+"count": 24994
+},
+{
+"name": "鹿児島県 鹿児島市",
+"amountYen": 2545180590,
+"count": 179714
+},
+{
+"name": "鹿児島県 鹿屋市",
+"amountYen": 4017527000,
+"count": 233847
+},
+{
+"name": "鹿児島県 枕崎市",
+"amountYen": 1685658000,
+"count": 42145
+},
+{
+"name": "鹿児島県 阿久根市",
+"amountYen": 638934800,
+"count": 37076
+},
+{
+"name": "鹿児島県 出水市",
+"amountYen": 647362819,
+"count": 39987
+},
+{
+"name": "鹿児島県 指宿市",
+"amountYen": 1687191900,
+"count": 74871
+},
+{
+"name": "鹿児島県 西之表市",
+"amountYen": 220442400,
+"count": 14946
+},
+{
+"name": "鹿児島県 垂水市",
+"amountYen": 2221902000,
+"count": 91285
+},
+{
+"name": "鹿児島県 薩摩川内市",
+"amountYen": 617428600,
+"count": 29970
+},
+{
+"name": "鹿児島県 日置市",
+"amountYen": 1148242003,
+"count": 69341
+},
+{
+"name": "鹿児島県 曽於市",
+"amountYen": 1490825803,
+"count": 70362
+},
+{
+"name": "鹿児島県 霧島市",
+"amountYen": 1542840596,
+"count": 57372
+},
+{
+"name": "鹿児島県 いちき串木野市",
+"amountYen": 1834743700,
+"count": 122658
+},
+{
+"name": "鹿児島県 南さつま市",
+"amountYen": 4985691817,
+"count": 283200
+},
+{
+"name": "鹿児島県 志布志市",
+"amountYen": 5052840395,
+"count": 231345
+},
+{
+"name": "鹿児島県 奄美市",
+"amountYen": 312933787,
+"count": 11427
+},
+{
+"name": "鹿児島県 南九州市",
+"amountYen": 1971939231,
+"count": 88555
+},
+{
+"name": "鹿児島県 伊佐市",
+"amountYen": 455038600,
+"count": 26404
+},
+{
+"name": "鹿児島県 姶良市",
+"amountYen": 517288408,
+"count": 42289
+},
+{
+"name": "鹿児島県 三島村",
+"amountYen": 6093000,
+"count": 282
+},
+{
+"name": "鹿児島県 十島村",
+"amountYen": 17451800,
+"count": 679
+},
+{
+"name": "鹿児島県 さつま町",
+"amountYen": 320360615,
+"count": 18934
+},
+{
+"name": "鹿児島県 長島町",
+"amountYen": 613694900,
+"count": 35494
+},
+{
+"name": "鹿児島県 湧水町",
+"amountYen": 296935601,
+"count": 21560
+},
+{
+"name": "鹿児島県 大崎町",
+"amountYen": 5595889300,
+"count": 324280
+},
+{
+"name": "鹿児島県 東串良町",
+"amountYen": 948777460,
+"count": 40177
+},
+{
+"name": "鹿児島県 錦江町",
+"amountYen": 202798700,
+"count": 6040
+},
+{
+"name": "鹿児島県 南大隅町",
+"amountYen": 72948919,
+"count": 4386
+},
+{
+"name": "鹿児島県 肝付町",
+"amountYen": 340197400,
+"count": 27561
+},
+{
+"name": "鹿児島県 中種子町",
+"amountYen": 77554000,
+"count": 6627
+},
+{
+"name": "鹿児島県 南種子町",
+"amountYen": 89852500,
+"count": 2676
+},
+{
+"name": "鹿児島県 屋久島町",
+"amountYen": 615178500,
+"count": 15452
+},
+{
+"name": "鹿児島県 大和村",
+"amountYen": 14327000,
+"count": 700
+},
+{
+"name": "鹿児島県 宇検村",
+"amountYen": 40612500,
+"count": 1787
+},
+{
+"name": "鹿児島県 瀬戸内町",
+"amountYen": 138114000,
+"count": 5063
+},
+{
+"name": "鹿児島県 龍郷町",
+"amountYen": 97544000,
+"count": 4433
+},
+{
+"name": "鹿児島県 喜界町",
+"amountYen": 161449300,
+"count": 14961
+},
+{
+"name": "鹿児島県 徳之島町",
+"amountYen": 360044000,
+"count": 27286
+},
+{
+"name": "鹿児島県 天城町",
+"amountYen": 113823000,
+"count": 5980
+},
+{
+"name": "鹿児島県 伊仙町",
+"amountYen": 51873500,
+"count": 3002
+},
+{
+"name": "鹿児島県 和泊町",
+"amountYen": 46980300,
+"count": 1632
+},
+{
+"name": "鹿児島県 知名町",
+"amountYen": 42907629,
+"count": 1397
+},
+{
+"name": "鹿児島県 与論町",
+"amountYen": 101927000,
+"count": 1714
+},
+{
+"name": "沖縄県 那覇市",
+"amountYen": 1205326684,
+"count": 16194
+},
+{
+"name": "沖縄県 宜野湾市",
+"amountYen": 81686100,
+"count": 3699
+},
+{
+"name": "沖縄県 石垣市",
+"amountYen": 2513477303,
+"count": 52433
+},
+{
+"name": "沖縄県 浦添市",
+"amountYen": 680625600,
+"count": 35419
+},
+{
+"name": "沖縄県 名護市",
+"amountYen": 914658000,
+"count": 7820
+},
+{
+"name": "沖縄県 糸満市",
+"amountYen": 1075590100,
+"count": 54623
+},
+{
+"name": "沖縄県 沖縄市",
+"amountYen": 151038400,
+"count": 6074
+},
+{
+"name": "沖縄県 豊見城市",
+"amountYen": 500218200,
+"count": 20861
+},
+{
+"name": "沖縄県 うるま市",
+"amountYen": 341424698,
+"count": 20388
+},
+{
+"name": "沖縄県 宮古島市",
+"amountYen": 1665514257,
+"count": 17771
+},
+{
+"name": "沖縄県 南城市",
+"amountYen": 379182198,
+"count": 17389
+},
+{
+"name": "沖縄県 国頭村",
+"amountYen": 275800600,
+"count": 12142
+},
+{
+"name": "沖縄県 大宜味村",
+"amountYen": 275263097,
+"count": 15731
+},
+{
+"name": "沖縄県 東村",
+"amountYen": 114042000,
+"count": 5539
+},
+{
+"name": "沖縄県 今帰仁村",
+"amountYen": 476951200,
+"count": 16479
+},
+{
+"name": "沖縄県 本部町",
+"amountYen": 331249400,
+"count": 6080
+},
+{
+"name": "沖縄県 恩納村",
+"amountYen": 2777295908,
+"count": 14060
+},
+{
+"name": "沖縄県 宜野座村",
+"amountYen": 117419400,
+"count": 2863
+},
+{
+"name": "沖縄県 金武町",
+"amountYen": 199782000,
+"count": 9981
+},
+{
+"name": "沖縄県 伊江村",
+"amountYen": 33528500,
+"count": 1389
+},
+{
+"name": "沖縄県 読谷村",
+"amountYen": 605975000,
+"count": 4021
+},
+{
+"name": "沖縄県 嘉手納町",
+"amountYen": 56223000,
+"count": 4126
+},
+{
+"name": "沖縄県 北谷町",
+"amountYen": 205321200,
+"count": 1747
+},
+{
+"name": "沖縄県 北中城村",
+"amountYen": 120231000,
+"count": 7604
+},
+{
+"name": "沖縄県 中城村",
+"amountYen": 98539200,
+"count": 5590
+},
+{
+"name": "沖縄県 西原町",
+"amountYen": 258883600,
+"count": 14624
+},
+{
+"name": "沖縄県 与那原町",
+"amountYen": 141161700,
+"count": 9264
+},
+{
+"name": "沖縄県 南風原町",
+"amountYen": 259119900,
+"count": 14983
+},
+{
+"name": "沖縄県 渡嘉敷村",
+"amountYen": 6532000,
+"count": 158
+},
+{
+"name": "沖縄県 座間味村",
+"amountYen": 8066100,
+"count": 239
+},
+{
+"name": "沖縄県 粟国村",
+"amountYen": 645000,
+"count": 15
+},
+{
+"name": "沖縄県 渡名喜村",
+"amountYen": 138000,
+"count": 7
+},
+{
+"name": "沖縄県 南大東村",
+"amountYen": 313000,
+"count": 13
+},
+{
+"name": "沖縄県 北大東村",
+"amountYen": 3730012,
+"count": 300
+},
+{
+"name": "沖縄県 伊平屋村",
+"amountYen": 58653000,
+"count": 3435
+},
+{
+"name": "沖縄県 伊是名村",
+"amountYen": 17224891,
+"count": 498
+},
+{
+"name": "沖縄県 久米島町",
+"amountYen": 135920605,
+"count": 5289
+},
+{
+"name": "沖縄県 八重瀬町",
+"amountYen": 1185448690,
+"count": 64112
+},
+{
+"name": "沖縄県 多良間村",
+"amountYen": 9966000,
+"count": 565
+},
+{
+"name": "沖縄県 竹富町",
+"amountYen": 416237700,
+"count": 10955
+},
+{
+"name": "沖縄県 与那国町",
+"amountYen": 13433380,
+"count": 469
+}
+]
