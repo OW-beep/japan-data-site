@@ -60,6 +60,16 @@ const articles = [
     desc: "標高上位3県はすべて盆地の都市。国土地理院データで分析します。",
   },
   {
+    href: "/articles/vacant-house-furusato-nozei-analysis",
+    title: "空き家率とふるさと納税受入額の相関",
+    desc: "相関はあるが因果ではない。人口規模という共通要因を検証します。",
+  },
+  {
+    href: "/articles/real-estate-price-analysis",
+    title: "不動産価格ランキング分析",
+    desc: "実際の取引データで土地・マンション価格を分析。地価と人口密度の関係も検証します。",
+  },
+  {
     href: "/articles/child-top50",
     title: "子ども人口ランキング",
     desc: "子ども人口が多い自治体ランキングです。",

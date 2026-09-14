@@ -19,6 +19,7 @@
     "estat:search": "tsx scripts/estatSearchTables.ts",
     "estat:meta": "tsx scripts/estatMetaInfo.ts",
     "merge:vacant-house": "tsx scripts/fetchVacantHouseRate.ts",
+    "fetch:real-estate": "tsx scripts/fetchRealEstatePrice.ts",
     "merge:daytime-population": "tsx scripts/fetchDaytimePopulation.ts",
     "merge:elderly-facilities": "tsx scripts/fetchElderlyFacilities.ts",
     "merge:young-adult-migration": "tsx scripts/fetchYoungAdultMigration.ts",
