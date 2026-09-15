@@ -1,4 +1,4 @@
-import { getMunicipalities } from "@/lib/municipalities";
+import { getCities } from "@/lib/getCities";
 import raw from "@/data/real-estate-price.json";
 
 type RawRow = {
@@ -33,7 +33,7 @@ export type RealEstatePriceCity = {
  * 除外している(全体の0.2%未満)。
  */
 export function getRealEstatePriceRanking(): RealEstatePriceCity[] {
-  const byCode = new Map(getMunicipalities().map((c) => [c.code, c.name]));
+  const byCode = new Map(getCities().map((c) => [c.code, c.name]));
 
   return RAW.filter((r) => {
     const code5 = r.code.padStart(5, "0");

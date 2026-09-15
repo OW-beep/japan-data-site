@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getRealEstatePriceRanking } from "@/lib/realEstatePrice";
-import { getMunicipalities } from "@/lib/municipalities";
+import { getCities } from "@/lib/getCities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
@@ -17,7 +17,7 @@ const MIN_SAMPLE = 10;
 
 export default function Page() {
   const all = getRealEstatePriceRanking();
-  const cities = getMunicipalities();
+  const cities = getCities();
   const densityByCode = new Map(
     cities.map((c) => [c.code, c.populationDensity])
   );

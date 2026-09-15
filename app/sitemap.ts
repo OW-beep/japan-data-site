@@ -91,6 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/capital-elevation-analysis",
     "/articles/vacant-house-furusato-nozei-analysis",
     "/articles/real-estate-price-analysis",
+    "/articles/real-estate-single-household-analysis",
     "/articles/youngest-municipalities",
     "/articles/child-top50",
     "/articles/population-about",

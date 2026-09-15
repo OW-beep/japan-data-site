@@ -70,6 +70,11 @@ const articles = [
     desc: "実際の取引データで土地・マンション価格を分析。地価と人口密度の関係も検証します。",
   },
   {
+    href: "/articles/real-estate-single-household-analysis",
+    title: "地価が高い自治体ほど単身世帯が多い",
+    desc: "地価と単身世帯率の相関を分析。都心型と過疎型、中身の違いも解説します。",
+  },
+  {
     href: "/articles/child-top50",
     title: "子ども人口ランキング",
     desc: "子ども人口が多い自治体ランキングです。",
