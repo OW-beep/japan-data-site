@@ -175,7 +175,7 @@ export default function Page() {
       <DeclineSummary top50={top50} bottom50={bottom50} average={average} />
 
       <div style={{ marginTop: 30 }}>
-        <Link href="/ranking" style={{ color: "#2563eb" }}>
+        <Link prefetch={false} href="/ranking" style={{ color: "#2563eb" }}>
           ← ランキング一覧に戻る
         </Link>
       </div>

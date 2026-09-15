@@ -213,11 +213,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/young-adult-migration-analysis" style={link}>
+          <Link prefetch={false} href="/articles/young-adult-migration-analysis" style={link}>
             若年層の転出入ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/decline" style={link}>
+          <Link prefetch={false} href="/articles/decline" style={link}>
             人口減少率ランキングを見る
           </Link>
         </p>

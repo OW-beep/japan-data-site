@@ -206,11 +206,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/community-center" style={link}>
+          <Link prefetch={false} href="/ranking/community-center" style={link}>
             公民館数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/library" style={link}>
+          <Link prefetch={false} href="/ranking/library" style={link}>
             図書館数ランキングを見る
           </Link>
         </p>

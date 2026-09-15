@@ -194,15 +194,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/habitable-density" style={link}>
+          <Link prefetch={false} href="/ranking/habitable-density" style={link}>
             可住地人口密度ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-analysis" style={link}>
+          <Link prefetch={false} href="/articles/density-analysis" style={link}>
             人口密度ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/area-analysis" style={link}>
+          <Link prefetch={false} href="/articles/area-analysis" style={link}>
             面積ランキング分析を見る
           </Link>
         </p>

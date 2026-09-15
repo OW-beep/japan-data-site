@@ -281,15 +281,15 @@ export default function Page() {
         </PersonalNote>
 
         <p>
-          <Link href="/ranking/density" style={link}>
+          <Link prefetch={false} href="/ranking/density" style={link}>
             人口密度ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-analysis" style={link}>
+          <Link prefetch={false} href="/articles/density-analysis" style={link}>
             人口密度ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-gap" style={link}>
+          <Link prefetch={false} href="/articles/aging-gap" style={link}>
             少子高齢化ギャップ分析を見る
           </Link>
         </p>

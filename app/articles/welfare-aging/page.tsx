@@ -249,23 +249,23 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/welfare-ratio" style={link}>
+          <Link prefetch={false} href="/ranking/welfare-ratio" style={link}>
             民生費比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-finance" style={link}>
+          <Link prefetch={false} href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-finance" style={link}>
+          <Link prefetch={false} href="/articles/density-finance" style={link}>
             人口密度と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/elderly-support-composite" style={link}>
+          <Link prefetch={false} href="/articles/elderly-support-composite" style={link}>
             高齢者支援体制スコア(複合指数)を見る
           </Link>
         </p>

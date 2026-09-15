@@ -245,15 +245,15 @@ export default function Page() {
         </PersonalNote>
 
         <p>
-          <Link href="/ranking/unemployment" style={link}>
+          <Link prefetch={false} href="/ranking/unemployment" style={link}>
             完全失業率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-aging" style={link}>
+          <Link prefetch={false} href="/articles/density-aging" style={link}>
             人口密度と高齢化率の相関分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
         </p>

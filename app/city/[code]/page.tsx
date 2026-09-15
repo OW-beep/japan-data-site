@@ -187,7 +187,7 @@ export default async function Page({
           textAlign: "center",
         }}
       >
-        <Link
+        <Link prefetch={false}
           href="/"
           style={{
             color: "#2563eb",

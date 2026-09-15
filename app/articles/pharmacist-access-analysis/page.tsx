@@ -176,15 +176,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/dentist-access-analysis" style={link}>
+          <Link prefetch={false} href="/articles/dentist-access-analysis" style={link}>
             歯科医師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/hospital-access-analysis" style={link}>
+          <Link prefetch={false} href="/articles/hospital-access-analysis" style={link}>
             病院数ランキング分析を見る
           </Link>
         </p>

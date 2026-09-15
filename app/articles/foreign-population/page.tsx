@@ -181,15 +181,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/foreign-population" style={link}>
+          <Link prefetch={false} href="/ranking/foreign-population" style={link}>
             外国人人口比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/industry-structure" style={link}>
+          <Link prefetch={false} href="/articles/industry-structure" style={link}>
             産業構造分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-aging-ushape" style={link}>
+          <Link prefetch={false} href="/articles/household-aging-ushape" style={link}>
             単独世帯割合と高齢化率のU字関係を見る
           </Link>
         </p>

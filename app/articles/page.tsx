@@ -304,7 +304,7 @@ export default function Page() {
         }}
       >
         {articles.map((a) => (
-          <Link
+          <Link prefetch={false}
             key={a.href}
             href={a.href}
             style={{

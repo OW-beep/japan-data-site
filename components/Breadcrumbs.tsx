@@ -15,7 +15,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
       {full.map((c, i) => (
         <span key={i}>
           {c.href ? (
-            <Link href={c.href} style={link}>
+            <Link prefetch={false} href={c.href} style={link}>
               {c.name}
             </Link>
           ) : (

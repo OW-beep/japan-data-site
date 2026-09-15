@@ -246,27 +246,27 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/income" style={link}>
+          <Link prefetch={false} href="/ranking/income" style={link}>
             平均年収ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/crime-rate" style={link}>
+          <Link prefetch={false} href="/ranking/crime-rate" style={link}>
             刑法犯認知件数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/traffic-accident-rate" style={link}>
+          <Link prefetch={false} href="/ranking/traffic-accident-rate" style={link}>
             交通事故発生件数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/crime-rate-analysis" style={link}>
+          <Link prefetch={false} href="/articles/crime-rate-analysis" style={link}>
             刑法犯認知件数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/traffic-accident-analysis" style={link}>
+          <Link prefetch={false} href="/articles/traffic-accident-analysis" style={link}>
             交通事故発生件数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/regional-block-disparity-report" style={link}>
+          <Link prefetch={false} href="/articles/regional-block-disparity-report" style={link}>
             地方ブロック格差レポートを見る
           </Link>
         </p>

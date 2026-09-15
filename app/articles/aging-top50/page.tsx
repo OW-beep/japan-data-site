@@ -265,11 +265,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/youngest-municipalities" style={link}>
+          <Link prefetch={false} href="/articles/youngest-municipalities" style={link}>
             平均年齢が若い自治体ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-gap" style={link}>
+          <Link prefetch={false} href="/articles/aging-gap" style={link}>
             少子高齢化ギャップ分析を見る
           </Link>
         </p>

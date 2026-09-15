@@ -40,7 +40,7 @@ export default function FeaturedArticlesSection() {
         }}
       >
         {featured.map((a) => (
-          <Link
+          <Link prefetch={false}
             key={a.href}
             href={a.href}
             style={{

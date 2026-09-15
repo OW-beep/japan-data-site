@@ -200,12 +200,12 @@ export default function Page() {
 
 
         <p>
-          <Link href="/articles/aging-top50" style={link}>
+          <Link prefetch={false} href="/articles/aging-top50" style={link}>
             高齢化率ランキング分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/child-top50" style={link}>
+          <Link prefetch={false} href="/articles/child-top50" style={link}>
             子ども人口ランキング分析を見る
           </Link>
         </p>

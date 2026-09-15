@@ -191,7 +191,7 @@ export default function Page() {
         最新の人口ランキングは以下のページで確認できます。
       </p>
 
-      <Link
+      <Link prefetch={false}
         href="/ranking/population"
         style={button}
       >
@@ -303,11 +303,11 @@ export default function Page() {
       </p>
 
       <p>
-        <Link href="/articles/population-top50" style={{ color: "#2563eb", textDecoration: "underline" }}>
+        <Link prefetch={false} href="/articles/population-top50" style={{ color: "#2563eb", textDecoration: "underline" }}>
           人口ランキングTOP50を見る
         </Link>
         {" ｜ "}
-        <Link href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+        <Link prefetch={false} href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
           100万人都市一覧を見る
         </Link>
       </p>

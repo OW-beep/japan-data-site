@@ -138,7 +138,7 @@ export default function Page() {
 
         <p style={{ marginTop: 12, fontSize: 14, color: "#6b7280" }}>
           人口100万人以上の自治体は全国に12(
-          <Link href="/articles/million-cities" style={link}>
+          <Link prefetch={false} href="/articles/million-cities" style={link}>
             100万人都市一覧はこちら
           </Link>
           )ある一方、90万〜70万人台にはさらに{nearMillion.length}
@@ -212,11 +212,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/million-cities" style={link}>
+          <Link prefetch={false} href="/articles/million-cities" style={link}>
             人口100万人以上の都市一覧を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/population-top50" style={link}>
+          <Link prefetch={false} href="/articles/population-top50" style={link}>
             人口ランキングTOP50を見る
           </Link>
         </p>

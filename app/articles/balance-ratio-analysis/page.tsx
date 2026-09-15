@@ -228,15 +228,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/balance-ratio" style={link}>
+          <Link prefetch={false} href="/ranking/balance-ratio" style={link}>
             経常収支比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/tax-composition" style={link}>
+          <Link prefetch={false} href="/articles/tax-composition" style={link}>
             地方税自主財源比率ランキング分析を見る
           </Link>
         </p>

@@ -312,19 +312,19 @@ export default function Page() {
         </PersonalNote>
 
         <p>
-          <Link href="/ranking/child" style={link}>
+          <Link prefetch={false} href="/ranking/child" style={link}>
             子ども人口割合ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/birth-rate" style={link}>
+          <Link prefetch={false} href="/ranking/birth-rate" style={link}>
             出生率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/child-top50" style={link}>
+          <Link prefetch={false} href="/articles/child-top50" style={link}>
             子ども人口ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/child-finance" style={link}>
+          <Link prefetch={false} href="/articles/child-finance" style={link}>
             子ども人口割合と財政力指数の関係を見る
           </Link>
         </p>

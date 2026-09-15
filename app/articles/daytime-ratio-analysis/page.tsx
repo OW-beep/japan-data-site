@@ -241,19 +241,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/daytime-ratio" style={link}>
+          <Link prefetch={false} href="/ranking/daytime-ratio" style={link}>
             昼夜間人口比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/restaurant-density" style={link}>
+          <Link prefetch={false} href="/articles/restaurant-density" style={link}>
             飲食店密度ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-analysis" style={link}>
+          <Link prefetch={false} href="/articles/density-analysis" style={link}>
             人口密度ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/bedroom-town-finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/bedroom-town-finance-analysis" style={link}>
             「豊かなベッドタウン」ランキング分析を見る
           </Link>
         </p>

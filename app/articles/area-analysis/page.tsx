@@ -198,12 +198,12 @@ export default function Page() {
         <BookRecommendation books={[BOOKS.chiikiJinkouGensyou]} />
 
         <p>
-          <Link href="/articles/density-analysis" style={link}>
+          <Link prefetch={false} href="/articles/density-analysis" style={link}>
             人口密度ランキング分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/ranking/area" style={link}>
+          <Link prefetch={false} href="/ranking/area" style={link}>
             面積ランキングを見る
           </Link>
         </p>

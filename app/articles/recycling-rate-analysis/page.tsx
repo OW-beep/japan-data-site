@@ -218,11 +218,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/recycling-rate" style={link}>
+          <Link prefetch={false} href="/ranking/recycling-rate" style={link}>
             ごみのリサイクル率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/vacant-house-analysis" style={link}>
+          <Link prefetch={false} href="/articles/vacant-house-analysis" style={link}>
             空き家率ランキング分析を見る
           </Link>
         </p>

@@ -239,19 +239,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/welfare-aging" style={link}>
+          <Link prefetch={false} href="/articles/welfare-aging" style={link}>
             高齢化率と民生費の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-aging-ushape" style={link}>
+          <Link prefetch={false} href="/articles/household-aging-ushape" style={link}>
             単独世帯割合と高齢化のU字構造を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/elderly-home-analysis" style={link}>
+          <Link prefetch={false} href="/articles/elderly-home-analysis" style={link}>
             老人ホーム数ランキング分析を見る
           </Link>
         </p>

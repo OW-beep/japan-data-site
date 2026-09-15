@@ -233,15 +233,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/household-analysis" style={link}>
+          <Link prefetch={false} href="/articles/household-analysis" style={link}>
             単独世帯割合分析(都心と被災地に共通点)を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-aging-ushape" style={link}>
+          <Link prefetch={false} href="/articles/household-aging-ushape" style={link}>
             単独世帯割合と高齢化率のU字関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/real-estate-price" style={link}>
+          <Link prefetch={false} href="/ranking/real-estate-price" style={link}>
             不動産価格ランキングを見る
           </Link>
         </p>

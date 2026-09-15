@@ -19,25 +19,25 @@ export default function NotFound() {
       </p>
 
       <div style={grid}>
-        <Link href="/" style={card}>
+        <Link prefetch={false} href="/" style={card}>
           <div style={emoji}>🏠</div>
           <div style={cardTitle}>トップページ</div>
           <div style={cardDesc}>サイト全体のランキング一覧</div>
         </Link>
 
-        <Link href="/ranking/population" style={card}>
+        <Link prefetch={false} href="/ranking/population" style={card}>
           <div style={emoji}>📊</div>
           <div style={cardTitle}>人口ランキング</div>
           <div style={cardDesc}>全国自治体を人口順に比較</div>
         </Link>
 
-        <Link href="/search" style={card}>
+        <Link prefetch={false} href="/search" style={card}>
           <div style={emoji}>🔍</div>
           <div style={cardTitle}>市区町村検索</div>
           <div style={cardDesc}>自治体名からページを探す</div>
         </Link>
 
-        <Link href="/articles" style={card}>
+        <Link prefetch={false} href="/articles" style={card}>
           <div style={emoji}>📖</div>
           <div style={cardTitle}>データ分析記事</div>
           <div style={cardDesc}>統計データの読み解き方を紹介</div>
@@ -46,7 +46,7 @@ export default function NotFound() {
 
       <p style={{ ...p, marginTop: 32 }}>
         ページが存在するはずなのに表示されない場合は、
-        <Link href="/contact" style={link}>
+        <Link prefetch={false} href="/contact" style={link}>
           お問い合わせページ
         </Link>
         よりご連絡いただけると助かります。

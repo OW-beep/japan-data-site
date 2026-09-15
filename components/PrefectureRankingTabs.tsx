@@ -188,7 +188,7 @@ export default function PrefectureRankingTabs({
             }}
           >
             {ranked.map((r, i) => (
-              <Link
+              <Link prefetch={false}
                 key={r.city.code}
                 href={`/city/${r.city.code}`}
                 style={{

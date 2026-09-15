@@ -112,7 +112,7 @@ export default function AboutSection() {
           データ出典：e-Stat（政府統計の総合窓口）・国勢調査・住民基本台帳など
         </span>
 
-        <Link
+        <Link prefetch={false}
           href="/about"
           style={{
             color: "#2563eb",

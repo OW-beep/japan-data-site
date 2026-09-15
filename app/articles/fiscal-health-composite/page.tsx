@@ -279,23 +279,23 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/balance-ratio-analysis" style={link}>
+          <Link prefetch={false} href="/articles/balance-ratio-analysis" style={link}>
             経常収支比率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/debt-service-ratio-analysis" style={link}>
+          <Link prefetch={false} href="/articles/debt-service-ratio-analysis" style={link}>
             実質公債費比率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/tax-composition" style={link}>
+          <Link prefetch={false} href="/articles/tax-composition" style={link}>
             財政の中身分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/industry-diversity-index" style={link}>
+          <Link prefetch={false} href="/articles/industry-diversity-index" style={link}>
             産業の多様性指数(HHI)を見る
           </Link>
         </p>

@@ -231,15 +231,15 @@ export default function Page() {
         </PersonalNote>
 
         <p>
-          <Link href="/ranking/retail-access" style={link}>
+          <Link prefetch={false} href="/ranking/retail-access" style={link}>
             高齢者あたり小売店数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-gap" style={link}>
+          <Link prefetch={false} href="/articles/aging-gap" style={link}>
             少子高齢化ギャップ分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-aging-ushape" style={link}>
+          <Link prefetch={false} href="/articles/household-aging-ushape" style={link}>
             単独世帯割合と高齢化率のU字関係を見る
           </Link>
         </p>

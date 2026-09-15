@@ -247,15 +247,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/retail-access" style={link}>
+          <Link prefetch={false} href="/ranking/retail-access" style={link}>
             高齢者あたり小売店数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/vacant-house-analysis" style={link}>
+          <Link prefetch={false} href="/articles/vacant-house-analysis" style={link}>
             空き家率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/community-center-analysis" style={link}>
+          <Link prefetch={false} href="/articles/community-center-analysis" style={link}>
             公民館数ランキング分析を見る
           </Link>
         </p>

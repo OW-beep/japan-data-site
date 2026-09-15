@@ -19,12 +19,12 @@ export default function Footer() {
           <h3 style={heading}>人気ランキング</h3>
 
           <ul style={list}>
-            <li><Link href="/ranking/population" style={footerLink}>人口ランキング</Link></li>
-            <li><Link href="/ranking/birth-rate" style={footerLink}>出生率ランキング</Link></li>
-            <li><Link href="/ranking/aging" style={footerLink}>高齢化率ランキング</Link></li>
-            <li><Link href="/ranking/child" style={footerLink}>子ども人口ランキング</Link></li>
-            <li><Link href="/ranking/density" style={footerLink}>人口密度ランキング</Link></li>
-            <li><Link href="/ranking/area" style={footerLink}>面積ランキング</Link></li>
+            <li><Link prefetch={false} href="/ranking/population" style={footerLink}>人口ランキング</Link></li>
+            <li><Link prefetch={false} href="/ranking/birth-rate" style={footerLink}>出生率ランキング</Link></li>
+            <li><Link prefetch={false} href="/ranking/aging" style={footerLink}>高齢化率ランキング</Link></li>
+            <li><Link prefetch={false} href="/ranking/child" style={footerLink}>子ども人口ランキング</Link></li>
+            <li><Link prefetch={false} href="/ranking/density" style={footerLink}>人口密度ランキング</Link></li>
+            <li><Link prefetch={false} href="/ranking/area" style={footerLink}>面積ランキング</Link></li>
           </ul>
         </section>
 
@@ -32,10 +32,10 @@ export default function Footer() {
           <h3 style={heading}>探す</h3>
 
           <ul style={list}>
-            <li><Link href="/prefecture" style={footerLink}>都道府県から探す</Link></li>
-            <li><Link href="/search" style={footerLink}>市区町村検索</Link></li>
-            <li><Link href="/compare" style={footerLink}>自治体比較ツール</Link></li>
-            <li><Link href="/articles" style={footerLink}>データ分析記事</Link></li>
+            <li><Link prefetch={false} href="/prefecture" style={footerLink}>都道府県から探す</Link></li>
+            <li><Link prefetch={false} href="/search" style={footerLink}>市区町村検索</Link></li>
+            <li><Link prefetch={false} href="/compare" style={footerLink}>自治体比較ツール</Link></li>
+            <li><Link prefetch={false} href="/articles" style={footerLink}>データ分析記事</Link></li>
           </ul>
         </section>
 
@@ -43,11 +43,11 @@ export default function Footer() {
           <h3 style={heading}>サイト情報</h3>
 
           <ul style={list}>
-            <li><Link href="/about" style={footerLink}>サイトについて</Link></li>
-            <li><Link href="/privacy" style={footerLink}>プライバシーポリシー</Link></li>
-            <li><Link href="/terms" style={footerLink}>利用規約</Link></li>
-            <li><Link href="/contact" style={footerLink}>お問い合わせ</Link></li>
-            <li><Link href="/sitemap" style={footerLink}>サイトマップ</Link></li>
+            <li><Link prefetch={false} href="/about" style={footerLink}>サイトについて</Link></li>
+            <li><Link prefetch={false} href="/privacy" style={footerLink}>プライバシーポリシー</Link></li>
+            <li><Link prefetch={false} href="/terms" style={footerLink}>利用規約</Link></li>
+            <li><Link prefetch={false} href="/contact" style={footerLink}>お問い合わせ</Link></li>
+            <li><Link prefetch={false} href="/sitemap" style={footerLink}>サイトマップ</Link></li>
           </ul>
         </section>
 

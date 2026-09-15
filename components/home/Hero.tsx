@@ -83,15 +83,15 @@ export default function Hero() {
               marginTop: 24,
             }}
           >
-            <Link href="/ranking/population" style={primaryButton}>
+            <Link prefetch={false} href="/ranking/population" style={primaryButton}>
               人口ランキング
             </Link>
 
-            <Link href="/search" style={secondaryButton}>
+            <Link prefetch={false} href="/search" style={secondaryButton}>
               自治体検索
             </Link>
 
-            <Link href="/compare" style={secondaryButton}>
+            <Link prefetch={false} href="/compare" style={secondaryButton}>
               自治体比較
             </Link>
           </div>

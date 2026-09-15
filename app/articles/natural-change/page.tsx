@@ -219,15 +219,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/natural-change" style={link}>
+          <Link prefetch={false} href="/ranking/natural-change" style={link}>
             自然増減率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/decline" style={link}>
+          <Link prefetch={false} href="/articles/decline" style={link}>
             社会増減率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/birth-rate" style={link}>
+          <Link prefetch={false} href="/articles/birth-rate" style={link}>
             出生率ランキング分析を見る
           </Link>
         </p>

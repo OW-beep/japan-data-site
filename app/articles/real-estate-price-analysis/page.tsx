@@ -217,11 +217,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/real-estate-price" style={link}>
+          <Link prefetch={false} href="/ranking/real-estate-price" style={link}>
             不動産価格ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/density" style={link}>
+          <Link prefetch={false} href="/ranking/density" style={link}>
             人口密度ランキングを見る
           </Link>
         </p>

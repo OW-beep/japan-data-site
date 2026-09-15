@@ -240,19 +240,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/daycare" style={link}>
+          <Link prefetch={false} href="/ranking/daycare" style={link}>
             保育園あたり子ども人口ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/child-top50" style={link}>
+          <Link prefetch={false} href="/articles/child-top50" style={link}>
             子ども人口ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-analysis" style={link}>
+          <Link prefetch={false} href="/articles/household-analysis" style={link}>
             単独世帯割合ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/young-family-attractiveness-index" style={link}>
+          <Link prefetch={false} href="/articles/young-family-attractiveness-index" style={link}>
             子育て世代吸引力指数(複合指数)を見る
           </Link>
         </p>

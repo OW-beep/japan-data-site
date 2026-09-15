@@ -223,23 +223,23 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/manufacturing" style={link}>
+          <Link prefetch={false} href="/ranking/manufacturing" style={link}>
             製造業就業者比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/unemployment-analysis" style={link}>
+          <Link prefetch={false} href="/articles/unemployment-analysis" style={link}>
             完全失業率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/industry-diversity-index" style={link}>
+          <Link prefetch={false} href="/articles/industry-diversity-index" style={link}>
             産業の多様性指数(HHI)を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-finance" style={link}>
+          <Link prefetch={false} href="/articles/density-finance" style={link}>
             人口密度と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/foreign-population" style={link}>
+          <Link prefetch={false} href="/articles/foreign-population" style={link}>
             外国人人口比率ランキング分析を見る
           </Link>
         </p>

@@ -139,7 +139,7 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
 
   <AuthorByline />
 
-  <Link
+  <Link prefetch={false}
     href={rankingLink}
     style={button}
   >

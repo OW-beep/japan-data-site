@@ -211,12 +211,12 @@ export default function Page() {
         </PersonalNote>
 
         <p>
-          <Link href="/articles/tax-composition" style={link}>
+          <Link prefetch={false} href="/articles/tax-composition" style={link}>
             財政の中身分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/density-finance" style={link}>
+          <Link prefetch={false} href="/articles/density-finance" style={link}>
             人口密度と財政力指数の関係を見る
           </Link>
         </p>

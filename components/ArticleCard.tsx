@@ -15,7 +15,7 @@ export default function ArticleCard({
   icon,
 }: Props) {
   return (
-    <Link
+    <Link prefetch={false}
       href={href}
       style={{
         textDecoration: "none",

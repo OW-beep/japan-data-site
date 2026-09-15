@@ -196,19 +196,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/tax-ratio" style={link}>
+          <Link prefetch={false} href="/ranking/tax-ratio" style={link}>
             地方税自主財源比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-finance" style={link}>
+          <Link prefetch={false} href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/industry-structure" style={link}>
+          <Link prefetch={false} href="/articles/industry-structure" style={link}>
             産業構造分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/prefecture-composite" style={link}>
+          <Link prefetch={false} href="/articles/prefecture-composite" style={link}>
             都道府県総合スコアを見る
           </Link>
         </p>

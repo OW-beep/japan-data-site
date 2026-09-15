@@ -14,7 +14,7 @@ export default function Card({
   desc,
 }: Props) {
   return (
-    <Link
+    <Link prefetch={false}
       href={href}
       style={{
         textDecoration: "none",

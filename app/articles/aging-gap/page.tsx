@@ -283,27 +283,27 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/aging" style={link}>
+          <Link prefetch={false} href="/ranking/aging" style={link}>
             高齢化率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/ranking/child" style={link}>
+          <Link prefetch={false} href="/ranking/child" style={link}>
             子ども人口割合ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/birth-rate" style={link}>
+          <Link prefetch={false} href="/articles/birth-rate" style={link}>
             出生率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-finance" style={link}>
+          <Link prefetch={false} href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/child-finance" style={link}>
+          <Link prefetch={false} href="/articles/child-finance" style={link}>
             子ども人口割合と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/school-crowding" style={link}>
+          <Link prefetch={false} href="/articles/school-crowding" style={link}>
             学校規模ランキング分析を見る
           </Link>
         </p>

@@ -246,19 +246,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/vacant-house" style={link}>
+          <Link prefetch={false} href="/ranking/vacant-house" style={link}>
             空き家率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/balance-ratio-analysis" style={link}>
+          <Link prefetch={false} href="/articles/balance-ratio-analysis" style={link}>
             経常収支比率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/decline" style={link}>
+          <Link prefetch={false} href="/articles/decline" style={link}>
             社会増減率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/living-infrastructure-index" style={link}>
+          <Link prefetch={false} href="/articles/living-infrastructure-index" style={link}>
             生活基盤充実度指数(複合指数)を見る
           </Link>
         </p>

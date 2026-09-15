@@ -220,19 +220,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/marriage-rate" style={link}>
+          <Link prefetch={false} href="/ranking/marriage-rate" style={link}>
             婚姻率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/birth-rate" style={link}>
+          <Link prefetch={false} href="/articles/birth-rate" style={link}>
             出生率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-analysis" style={link}>
+          <Link prefetch={false} href="/articles/household-analysis" style={link}>
             単独世帯割合ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/divorce-rate-analysis" style={link}>
+          <Link prefetch={false} href="/articles/divorce-rate-analysis" style={link}>
             離婚率ランキング分析を見る
           </Link>
         </p>

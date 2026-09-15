@@ -285,11 +285,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/vacant-house" style={link}>
+          <Link prefetch={false} href="/ranking/vacant-house" style={link}>
             空き家率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/furusato-nozei-analysis" style={link}>
+          <Link prefetch={false} href="/articles/furusato-nozei-analysis" style={link}>
             ふるさと納税受入額ランキング分析を見る
           </Link>
         </p>

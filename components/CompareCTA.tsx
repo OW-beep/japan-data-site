@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function CompareCTA() {
   return (
-    <Link
+    <Link prefetch={false}
       href="/compare"
       style={{
         display: "flex",

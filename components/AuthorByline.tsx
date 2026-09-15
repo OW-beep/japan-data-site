@@ -10,7 +10,7 @@ export default function AuthorByline() {
       <span style={label}>筆者について：</span>
       元自治体職員・現データコンサルタント。行政・民間で10年以上、
       統計データの分析と可視化に携わっています。
-      <Link href="/about" style={link}>
+      <Link prefetch={false} href="/about" style={link}>
         運営者情報を見る →
       </Link>
     </div>

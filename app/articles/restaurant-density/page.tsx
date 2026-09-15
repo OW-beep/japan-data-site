@@ -239,15 +239,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/restaurant" style={link}>
+          <Link prefetch={false} href="/ranking/restaurant" style={link}>
             飲食店密度ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-analysis" style={link}>
+          <Link prefetch={false} href="/articles/household-analysis" style={link}>
             単独世帯割合ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-analysis" style={link}>
+          <Link prefetch={false} href="/articles/density-analysis" style={link}>
             人口密度ランキング分析を見る
           </Link>
         </p>

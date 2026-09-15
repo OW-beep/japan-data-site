@@ -68,7 +68,7 @@ export default function RankingSection() {
           📊 ランキングから探す
         </h2>
 
-        <Link
+        <Link prefetch={false}
           href="/ranking"
           style={{
             fontSize: 14,
@@ -90,7 +90,7 @@ export default function RankingSection() {
         }}
       >
         {rankings.map((item) => (
-          <Link
+          <Link prefetch={false}
             key={item.href}
             href={item.href}
             style={{

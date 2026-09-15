@@ -271,11 +271,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/furusato-nozei" style={link}>
+          <Link prefetch={false} href="/ranking/furusato-nozei" style={link}>
             ふるさと納税受入額ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
         </p>

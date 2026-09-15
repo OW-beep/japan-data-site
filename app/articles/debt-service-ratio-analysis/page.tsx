@@ -251,19 +251,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/debt-service-ratio" style={link}>
+          <Link prefetch={false} href="/ranking/debt-service-ratio" style={link}>
             実質公債費比率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/balance-ratio-analysis" style={link}>
+          <Link prefetch={false} href="/articles/balance-ratio-analysis" style={link}>
             経常収支比率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/fiscal-health-composite" style={link}>
+          <Link prefetch={false} href="/articles/fiscal-health-composite" style={link}>
             4指標統合の財政健全度スコアを見る
           </Link>
         </p>

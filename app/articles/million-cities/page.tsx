@@ -290,7 +290,7 @@ export default function Page() {
           相模原市はいずれも政令指定都市でありながら、100万人
           には届いていません。90万人・80万人台の都市を
           まとめて比較したい方は、
-          <Link href="/articles/near-million-cities" style={link}>
+          <Link prefetch={false} href="/articles/near-million-cities" style={link}>
             人口90万人・80万人都市一覧
           </Link>
           もあわせてご覧ください。
@@ -393,17 +393,17 @@ export default function Page() {
 
 
         <p>
-          <Link href="/articles/near-million-cities" style={link}>
+          <Link prefetch={false} href="/articles/near-million-cities" style={link}>
             90万人・80万人都市一覧を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/population-top50" style={link}>
+          <Link prefetch={false} href="/articles/population-top50" style={link}>
             人口ランキングTOP50を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/population-about" style={link}>
+          <Link prefetch={false} href="/articles/population-about" style={link}>
             人口ランキングとは？を見る
           </Link>
         </p>

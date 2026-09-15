@@ -155,19 +155,19 @@ const top50 = ranking.slice(0, 50);
             marginTop: 18,
           }}
         >
-          <Link href="/ranking/population">
+          <Link prefetch={false} href="/ranking/population">
             人口ランキング
           </Link>
 
-          <Link href="/ranking/child">
+          <Link prefetch={false} href="/ranking/child">
             子ども人口ランキング
           </Link>
 
-          <Link href="/ranking/aging">
+          <Link prefetch={false} href="/ranking/aging">
             高齢化率ランキング
           </Link>
 
-          <Link href="/ranking/density">
+          <Link prefetch={false} href="/ranking/density">
             人口密度ランキング
           </Link>
         </div>

@@ -340,12 +340,12 @@ export default function Page() {
 
 
         <p>
-          <Link href="/articles/birth-rate" style={link}>
+          <Link prefetch={false} href="/articles/birth-rate" style={link}>
             出生率ランキング分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/youngest-municipalities" style={link}>
+          <Link prefetch={false} href="/articles/youngest-municipalities" style={link}>
             平均年齢が若い自治体ランキングを見る
           </Link>
         </p>

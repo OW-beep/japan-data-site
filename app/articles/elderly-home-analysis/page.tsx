@@ -217,15 +217,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/elderly-home" style={link}>
+          <Link prefetch={false} href="/ranking/elderly-home" style={link}>
             高齢者施設数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-top50" style={link}>
+          <Link prefetch={false} href="/articles/aging-top50" style={link}>
             高齢化率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
         </p>

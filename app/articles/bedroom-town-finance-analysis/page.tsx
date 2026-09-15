@@ -204,15 +204,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/daytime-ratio-analysis" style={link}>
+          <Link prefetch={false} href="/articles/daytime-ratio-analysis" style={link}>
             昼夜間人口比率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/industry-diversity-index" style={link}>
+          <Link prefetch={false} href="/articles/industry-diversity-index" style={link}>
             産業の多様性指数(HHI)を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/fiscal-health-composite" style={link}>
+          <Link prefetch={false} href="/articles/fiscal-health-composite" style={link}>
             財政健全度スコア(4指標統合)を見る
           </Link>
         </p>

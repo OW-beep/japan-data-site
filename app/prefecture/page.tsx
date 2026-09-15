@@ -57,7 +57,7 @@ export default function Page() {
         }}
       >
         {prefectures.map((pref) => (
-          <Link
+          <Link prefetch={false}
             key={pref}
             href={`/prefecture/${encodeURIComponent(pref)}`}
             style={{

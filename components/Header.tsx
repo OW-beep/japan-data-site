@@ -4,34 +4,34 @@ export default function Header() {
   return (
     <header style={header}>
       <div style={container}>
-        <Link href="/" style={logo}>
+        <Link prefetch={false} href="/" style={logo}>
           全国自治体データランキング
         </Link>
 
         <nav style={nav}>
-          <Link href="/">ホーム</Link>
+          <Link prefetch={false} href="/">ホーム</Link>
 
-          <Link href="/ranking">
+          <Link prefetch={false} href="/ranking">
             ランキング
           </Link>
 
-          <Link href="/prefecture">
+          <Link prefetch={false} href="/prefecture">
             都道府県
           </Link>
 
-          <Link href="/search">
+          <Link prefetch={false} href="/search">
             市区町村検索
           </Link>
 
-          <Link href="/compare">
+          <Link prefetch={false} href="/compare">
             自治体比較
           </Link>
 
-          <Link href="/articles">
+          <Link prefetch={false} href="/articles">
             データ分析
           </Link>
 
-          <Link href="/about">
+          <Link prefetch={false} href="/about">
             サイトについて
           </Link>
         </nav>

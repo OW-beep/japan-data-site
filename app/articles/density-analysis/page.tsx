@@ -215,20 +215,20 @@ export default function Page() {
         <BookRecommendation books={[BOOKS.toshiWoTatamu]} />
 
         <p>
-          <Link href="/articles/area-analysis" style={link}>
+          <Link prefetch={false} href="/articles/area-analysis" style={link}>
             面積ランキング分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/density-aging" style={link}>
+          <Link prefetch={false} href="/articles/density-aging" style={link}>
             人口密度と高齢化率の相関分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/population-concentration" style={link}>
+          <Link prefetch={false} href="/articles/population-concentration" style={link}>
             人口集中地域の分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/habitable-density" style={link}>
+          <Link prefetch={false} href="/articles/habitable-density" style={link}>
             可住地人口密度ランキング分析を見る
           </Link>
         </p>

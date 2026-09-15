@@ -208,11 +208,11 @@ export default function Page() {
 
 
         <p>
-          <Link href="/articles/migration-child" style={link}>
+          <Link prefetch={false} href="/articles/migration-child" style={link}>
             転入超過と子ども人口割合の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/natural-change" style={link}>
+          <Link prefetch={false} href="/articles/natural-change" style={link}>
             自然増減率ランキング分析を見る
           </Link>
         </p>

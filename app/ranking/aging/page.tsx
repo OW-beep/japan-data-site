@@ -122,19 +122,19 @@ export default function Page() {
             marginTop: 20,
           }}
         >
-          <Link href="/ranking/population">
+          <Link prefetch={false} href="/ranking/population">
             人口ランキング
           </Link>
 
-          <Link href="/ranking/birth-rate">
+          <Link prefetch={false} href="/ranking/birth-rate">
             出生率ランキング
           </Link>
 
-          <Link href="/ranking/child">
+          <Link prefetch={false} href="/ranking/child">
             子ども人口ランキング
           </Link>
 
-          <Link href="/ranking/density">
+          <Link prefetch={false} href="/ranking/density">
             人口密度ランキング
           </Link>
         </div>

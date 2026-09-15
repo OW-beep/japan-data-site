@@ -250,15 +250,15 @@ export default function Page() {
         </PersonalNote>
 
         <p>
-          <Link href="/ranking/household" style={link}>
+          <Link prefetch={false} href="/ranking/household" style={link}>
             世帯データランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/household-analysis" style={link}>
+          <Link prefetch={false} href="/articles/household-analysis" style={link}>
             世帯データランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-gap" style={link}>
+          <Link prefetch={false} href="/articles/aging-gap" style={link}>
             少子高齢化ギャップ分析を見る
           </Link>
         </p>

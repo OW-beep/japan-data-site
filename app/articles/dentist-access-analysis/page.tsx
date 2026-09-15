@@ -228,23 +228,23 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/dentist" style={link}>
+          <Link prefetch={false} href="/ranking/dentist" style={link}>
             歯科医師数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/pharmacist-access-analysis" style={link}>
+          <Link prefetch={false} href="/articles/pharmacist-access-analysis" style={link}>
             薬剤師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/hospital-access-analysis" style={link}>
+          <Link prefetch={false} href="/articles/hospital-access-analysis" style={link}>
             病院数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/elderly-support-composite" style={link}>
+          <Link prefetch={false} href="/articles/elderly-support-composite" style={link}>
             高齢者支援体制スコア(複合指数)を見る
           </Link>
         </p>

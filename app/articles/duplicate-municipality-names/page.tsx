@@ -222,11 +222,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/population" style={link}>
+          <Link prefetch={false} href="/ranking/population" style={link}>
             人口ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/search" style={link}>
+          <Link prefetch={false} href="/search" style={link}>
             自治体検索を見る
           </Link>
         </p>

@@ -61,7 +61,7 @@ export default function PurposeSection() {
         }}
       >
         {purposes.map((p) => (
-          <Link
+          <Link prefetch={false}
             key={p.href}
             href={p.href}
             style={{

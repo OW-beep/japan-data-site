@@ -10,7 +10,7 @@ export default function PrefCard({
   name,
 }: Props) {
   return (
-    <Link
+    <Link prefetch={false}
       href={href}
       style={{
         textDecoration: "none",

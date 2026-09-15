@@ -42,7 +42,7 @@ export default function RelatedArticles() {
         }}
       >
         {articles.map((article) => (
-          <Link
+          <Link prefetch={false}
             key={article.href}
             href={article.href}
             style={{

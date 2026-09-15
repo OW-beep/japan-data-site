@@ -229,15 +229,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/education-expense" style={link}>
+          <Link prefetch={false} href="/ranking/education-expense" style={link}>
             教育費ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/school-crowding" style={link}>
+          <Link prefetch={false} href="/articles/school-crowding" style={link}>
             学校の過密度分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/child-top50" style={link}>
+          <Link prefetch={false} href="/articles/child-top50" style={link}>
             子ども人口割合TOP50を見る
           </Link>
         </p>

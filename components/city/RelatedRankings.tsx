@@ -77,7 +77,7 @@ export default function RelatedRankings({
         }}
       >
         {cards.map((card) => (
-          <Link
+          <Link prefetch={false}
             key={card.href}
             href={card.href}
             style={{

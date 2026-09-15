@@ -259,7 +259,7 @@ export default function ArticlesSection() {
           📖 おすすめ記事
         </h2>
 
-        <Link
+        <Link prefetch={false}
           href="/articles"
           style={{
             fontSize: 14,
@@ -283,7 +283,7 @@ export default function ArticlesSection() {
         {articles.map((article) => {
           const t = TAGS[article.tag];
           return (
-            <Link
+            <Link prefetch={false}
               key={article.href}
               href={article.href}
               style={{

@@ -235,12 +235,12 @@ export default function Page() {
 
 
         <p>
-          <Link href="/articles/population-finance" style={link}>
+          <Link prefetch={false} href="/articles/population-finance" style={link}>
             人口規模と財政力の関係を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/aging-finance" style={link}>
+          <Link prefetch={false} href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
         </p>

@@ -49,7 +49,7 @@ export default function CookieConsent() {
           当サイトでは、広告配信(Google
           AdSense)およびアクセス解析のためにCookieを使用しています。
           詳しくは
-          <Link href="/privacy" style={link}>
+          <Link prefetch={false} href="/privacy" style={link}>
             プライバシーポリシー
           </Link>
           をご確認ください。

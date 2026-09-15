@@ -30,7 +30,7 @@ export default function NewArrivalsSection() {
           🆕 新着ランキング
         </h2>
 
-        <Link
+        <Link prefetch={false}
           href="/ranking"
           style={{
             fontSize: 13,
@@ -51,7 +51,7 @@ export default function NewArrivalsSection() {
         }}
       >
         {newItems.map((item) => (
-          <Link
+          <Link prefetch={false}
             key={item.href}
             href={item.href}
             style={{

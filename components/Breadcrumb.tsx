@@ -21,7 +21,7 @@ export default function Breadcrumb({
         <span key={item.href}>
           {index > 0 && " > "}
 
-          <Link
+          <Link prefetch={false}
             href={item.href}
             style={{
               color: "#2563eb",

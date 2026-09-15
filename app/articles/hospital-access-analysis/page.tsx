@@ -200,15 +200,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/pharmacist-access-analysis" style={link}>
+          <Link prefetch={false} href="/articles/pharmacist-access-analysis" style={link}>
             薬剤師数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/population-concentration" style={link}>
+          <Link prefetch={false} href="/articles/population-concentration" style={link}>
             県内一極集中度ランキング分析を見る
           </Link>
         </p>

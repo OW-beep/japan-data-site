@@ -86,7 +86,7 @@ export default function NicheReadsSection() {
         }}
       >
         {reads.map((r) => (
-          <Link
+          <Link prefetch={false}
             key={r.href}
             href={r.href}
             style={{

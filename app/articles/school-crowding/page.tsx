@@ -220,15 +220,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/school-crowding" style={link}>
+          <Link prefetch={false} href="/ranking/school-crowding" style={link}>
             小学校1校あたり子ども人口ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/migration-child" style={link}>
+          <Link prefetch={false} href="/articles/migration-child" style={link}>
             転入超過と子ども人口割合の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-gap" style={link}>
+          <Link prefetch={false} href="/articles/aging-gap" style={link}>
             少子高齢化ギャップ分析を見る
           </Link>
         </p>

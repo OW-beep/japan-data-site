@@ -231,15 +231,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/finance" style={link}>
+          <Link prefetch={false} href="/ranking/finance" style={link}>
             財政力指数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-finance" style={link}>
+          <Link prefetch={false} href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/density-finance" style={link}>
+          <Link prefetch={false} href="/articles/density-finance" style={link}>
             人口密度と財政力指数の関係を見る
           </Link>
         </p>

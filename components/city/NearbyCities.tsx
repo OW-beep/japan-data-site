@@ -50,7 +50,7 @@ export default function NearbyCities({
         }}
       >
         {cities.map((city) => (
-          <Link
+          <Link prefetch={false}
             key={city.code}
             href={`/city/${city.code}`}
             style={{

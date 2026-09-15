@@ -142,7 +142,7 @@ export default async function Page({
         {cities
           .sort((a, b) => b.population - a.population)
           .map((city) => (
-            <Link
+            <Link prefetch={false}
               key={city.code}
               href={`/city/${city.code}`}
               style={{

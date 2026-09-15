@@ -178,7 +178,7 @@ export default function Page() {
         ))}
 
         <p style={{ marginTop: 12 }}>
-          <Link
+          <Link prefetch={false}
             href="/articles/real-estate-price-analysis"
             style={{ color: "var(--indigo)", textDecoration: "underline" }}
           >

@@ -172,7 +172,7 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/capital-elevation" style={link}>
+          <Link prefetch={false} href="/ranking/capital-elevation" style={link}>
             都道府県庁所在地 標高ランキングを見る
           </Link>
         </p>

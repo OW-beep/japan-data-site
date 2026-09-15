@@ -10,7 +10,7 @@ export default function CategoryCard({
   text,
 }: Props) {
   return (
-    <Link
+    <Link prefetch={false}
       href={href}
       style={{
         textDecoration: "none",

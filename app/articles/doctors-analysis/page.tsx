@@ -274,19 +274,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/doctors" style={link}>
+          <Link prefetch={false} href="/ranking/doctors" style={link}>
             医師数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-top50" style={link}>
+          <Link prefetch={false} href="/articles/aging-top50" style={link}>
             高齢化率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-finance" style={link}>
+          <Link prefetch={false} href="/articles/aging-finance" style={link}>
             高齢化率と財政力指数の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/dentist-access-analysis" style={link}>
+          <Link prefetch={false} href="/articles/dentist-access-analysis" style={link}>
             歯科医師数ランキング分析を見る
           </Link>
         </p>

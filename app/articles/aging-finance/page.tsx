@@ -318,19 +318,19 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/finance" style={link}>
+          <Link prefetch={false} href="/ranking/finance" style={link}>
             財政力指数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/population-finance" style={link}>
+          <Link prefetch={false} href="/articles/population-finance" style={link}>
             人口規模と財政力の関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/aging-gap" style={link}>
+          <Link prefetch={false} href="/articles/aging-gap" style={link}>
             少子高齢化ギャップ分析を見る
           </Link>
         </p>

@@ -75,7 +75,7 @@ export default function Page() {
 
       <div style={grid}>
         {rankings.map((r) => (
-          <Link key={r.href} href={r.href} style={card}>
+          <Link prefetch={false} key={r.href} href={r.href} style={card}>
             {r.emoji} {r.label}
           </Link>
         ))}

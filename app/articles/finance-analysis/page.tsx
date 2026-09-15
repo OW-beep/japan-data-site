@@ -283,21 +283,21 @@ export default function Page() {
         <BookRecommendation books={[BOOKS.jichitaiZaisei]} />
 
         <p>
-          <Link href="/articles/tax-composition" style={link}>
+          <Link prefetch={false} href="/articles/tax-composition" style={link}>
             財政の中身分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/doctors-analysis" style={link}>
+          <Link prefetch={false} href="/articles/doctors-analysis" style={link}>
             医師数ランキング分析を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/welfare-aging" style={link}>
+          <Link prefetch={false} href="/articles/welfare-aging" style={link}>
             民生費と高齢化率の意外な関係を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/regional-block-disparity-report" style={link}>
+          <Link prefetch={false} href="/articles/regional-block-disparity-report" style={link}>
             地方ブロック格差レポートを見る
           </Link>
         </p>

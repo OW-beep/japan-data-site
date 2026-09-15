@@ -260,15 +260,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/industry-structure" style={link}>
+          <Link prefetch={false} href="/articles/industry-structure" style={link}>
             産業構造ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/fiscal-health-composite" style={link}>
+          <Link prefetch={false} href="/articles/fiscal-health-composite" style={link}>
             財政健全度スコア(4指標統合)を見る
           </Link>
         </p>

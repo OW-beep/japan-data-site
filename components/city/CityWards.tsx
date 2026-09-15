@@ -74,7 +74,7 @@ export default function CityWards({ cityFullName }: Props) {
             .trim();
 
           return (
-            <Link
+            <Link prefetch={false}
               key={ward.code}
               href={`/city/${ward.code}`}
               style={{

@@ -249,23 +249,23 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/population" style={link}>
+          <Link prefetch={false} href="/ranking/population" style={link}>
             人口ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/prefecture" style={link}>
+          <Link prefetch={false} href="/prefecture" style={link}>
             都道府県から探す
           </Link>
           {" ｜ "}
-          <Link href="/articles/population-about" style={link}>
+          <Link prefetch={false} href="/articles/population-about" style={link}>
             人口ランキングとは？を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/elderly-support-composite" style={link}>
+          <Link prefetch={false} href="/articles/elderly-support-composite" style={link}>
             高知県の医療・福祉格差を見る(高齢者支援体制スコア)
           </Link>
           {" ｜ "}
-          <Link href="/articles/regional-block-disparity-report" style={link}>
+          <Link prefetch={false} href="/articles/regional-block-disparity-report" style={link}>
             地方ブロック格差レポートを見る
           </Link>
         </p>

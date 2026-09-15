@@ -213,15 +213,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/traffic-accident-rate" style={link}>
+          <Link prefetch={false} href="/ranking/traffic-accident-rate" style={link}>
             交通事故発生件数ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/crime-rate-analysis" style={link}>
+          <Link prefetch={false} href="/articles/crime-rate-analysis" style={link}>
             刑法犯認知件数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/prefecture-income-analysis" style={link}>
+          <Link prefetch={false} href="/articles/prefecture-income-analysis" style={link}>
             都道府県別平均年収ランキング分析を見る
           </Link>
         </p>

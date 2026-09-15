@@ -245,15 +245,15 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/daycare-access" style={link}>
+          <Link prefetch={false} href="/articles/daycare-access" style={link}>
             保育所アクセスランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/young-adult-migration-analysis" style={link}>
+          <Link prefetch={false} href="/articles/young-adult-migration-analysis" style={link}>
             20代純移動率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/marriage-rate-analysis" style={link}>
+          <Link prefetch={false} href="/articles/marriage-rate-analysis" style={link}>
             婚姻率ランキング分析を見る
           </Link>
         </p>

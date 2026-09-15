@@ -349,23 +349,23 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/articles/finance-analysis" style={link}>
+          <Link prefetch={false} href="/articles/finance-analysis" style={link}>
             財政力指数ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/birth-rate" style={link}>
+          <Link prefetch={false} href="/articles/birth-rate" style={link}>
             出生率ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/population-concentration" style={link}>
+          <Link prefetch={false} href="/articles/population-concentration" style={link}>
             県内一極集中度ランキング分析を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/industry-diversity-index" style={link}>
+          <Link prefetch={false} href="/articles/industry-diversity-index" style={link}>
             産業の多様性指数(HHI)を見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/prefecture-income-analysis" style={link}>
+          <Link prefetch={false} href="/articles/prefecture-income-analysis" style={link}>
             都道府県別平均年収ランキング分析を見る
           </Link>
         </p>

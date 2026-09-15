@@ -366,12 +366,12 @@ export default function Page() {
         <BookRecommendation books={[BOOKS.chihouShoumetsu]} />
 
         <p>
-          <Link href="/articles/population-about" style={link}>
+          <Link prefetch={false} href="/articles/population-about" style={link}>
             人口ランキングとは？を見る
           </Link>
 
           {" ｜ "}
-          <Link href="/articles/million-cities" style={link}>
+          <Link prefetch={false} href="/articles/million-cities" style={link}>
             100万人都市一覧を見る
           </Link>
         </p>

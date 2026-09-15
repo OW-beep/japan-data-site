@@ -101,7 +101,7 @@ export default function SitemapPage() {
 
       <div style={grid}>
         {pages.map((page) => (
-          <Link
+          <Link prefetch={false}
             key={page.href}
             href={page.href}
             style={card}

@@ -93,7 +93,7 @@ export default function Page() {
         }}
       >
         📊{" "}
-        <Link href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+        <Link prefetch={false} href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
           人口100万人以上の都市は全国に何市あるか、詳しい分析記事はこちら →
         </Link>
       </div>
@@ -133,19 +133,19 @@ export default function Page() {
             marginTop: 20,
           }}
         >
-          <Link href="/ranking/birth-rate">
+          <Link prefetch={false} href="/ranking/birth-rate">
             出生率ランキング
           </Link>
 
-          <Link href="/ranking/aging">
+          <Link prefetch={false} href="/ranking/aging">
             高齢化率ランキング
           </Link>
 
-          <Link href="/ranking/child">
+          <Link prefetch={false} href="/ranking/child">
             子ども人口ランキング
           </Link>
 
-          <Link href="/ranking/density">
+          <Link prefetch={false} href="/ranking/density">
             人口密度ランキング
           </Link>
         </div>

@@ -227,11 +227,11 @@ export default function Page() {
         </p>
 
         <p>
-          <Link href="/ranking/divorce-rate" style={link}>
+          <Link prefetch={false} href="/ranking/divorce-rate" style={link}>
             離婚率ランキングを見る
           </Link>
           {" ｜ "}
-          <Link href="/articles/marriage-rate-analysis" style={link}>
+          <Link prefetch={false} href="/articles/marriage-rate-analysis" style={link}>
             婚姻率ランキング分析を見る
           </Link>
         </p>
