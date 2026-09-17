@@ -42,6 +42,7 @@ const rankings = [
   { href: "/ranking/vacant-house", emoji: "🏚️", label: "空き家率ランキング" },
   { href: "/ranking/capital-elevation", emoji: "⛰️", label: "県庁所在地 標高ランキング" },
   { href: "/ranking/real-estate-price", emoji: "🏠", label: "不動産価格ランキング" },
+  { href: "/ranking/corporate-growth", emoji: "🏢", label: "新設法人純増数ランキング" },
   { href: "/ranking/furusato-nozei", emoji: "🎁", label: "ふるさと納税受入額ランキング" },
   { href: "/ranking/daytime-ratio", emoji: "🌆", label: "昼夜間人口比率ランキング" },
   { href: "/ranking/elderly-home", emoji: "🏡", label: "高齢者施設数ランキング" },

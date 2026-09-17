@@ -48,9 +48,9 @@ export default function Home() {
 
       <NicheReadsSection />
 
-      <FeaturedArticlesSection />
-
       <NewArrivalsSection />
+
+      <FeaturedArticlesSection />
 
       <ArticlesSection />
 

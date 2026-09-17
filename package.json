@@ -5,21 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-
     "update:data": "tsx scripts/buildCities.ts",
-
     "find:finance": "tsx scripts/findFinanceMeta.ts",
     "find:table": "tsx scripts/findFinanceTable.ts",
     "find:birth": "tsx scripts/findBirthMeta.ts",
-
     "merge:finance": "tsx scripts/mergeSocialStat.ts",
-
     "merge:ssdse": "tsx scripts/fetchSSDSE.ts",
-
     "estat:search": "tsx scripts/estatSearchTables.ts",
     "estat:meta": "tsx scripts/estatMetaInfo.ts",
     "merge:vacant-house": "tsx scripts/fetchVacantHouseRate.ts",
     "fetch:real-estate": "tsx scripts/fetchRealEstatePrice.ts",
+    "process:corporate": "tsx scripts/processCorporateRegistration.ts",
     "merge:daytime-population": "tsx scripts/fetchDaytimePopulation.ts",
     "merge:elderly-facilities": "tsx scripts/fetchElderlyFacilities.ts",
     "merge:young-adult-migration": "tsx scripts/fetchYoungAdultMigration.ts",
@@ -28,20 +24,18 @@
     "merge:prefecture-income": "tsx scripts/fetchPrefectureIncome.ts",
     "merge:safety-stats": "tsx scripts/fetchSafetyStats.ts",
     "merge:life-expectancy": "tsx scripts/fetchLifeExpectancy.ts",
-
     "convert:area": "tsx scripts/convertAreaCsv.ts",
-
     "merge": "tsx scripts/mergeData.ts",
-
     "refresh:data": "npm run update:data && npm run merge:finance && npm run merge:ssdse && npm run merge",
-
     "build": "chmod +x node_modules/.bin/* 2>/dev/null; next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.11",
+    "csv-parse": "^7.0.2",
     "dotenv": "^17.2.0",
+    "fast-xml-parser": "^5.11.1",
     "iconv-lite": "^0.6.3",
     "next": "16.2.9",
     "react": "19.2.4",

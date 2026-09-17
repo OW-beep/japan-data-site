@@ -75,6 +75,11 @@ const articles = [
     desc: "地価と単身世帯率の相関を分析。都心型と過疎型、中身の違いも解説します。",
   },
   {
+    href: "/articles/corporate-growth-analysis",
+    title: "新設法人ランキング分析",
+    desc: "渋谷区が純増1位、新宿区は逆に純減1位という意外な結果を分析します。",
+  },
+  {
     href: "/articles/child-top50",
     title: "子ども人口ランキング",
     desc: "子ども人口が多い自治体ランキングです。",

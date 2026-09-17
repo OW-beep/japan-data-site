@@ -1,0 +1,10916 @@
+[
+  {
+    "code": "01101",
+    "newCount": 547,
+    "closeCount": 324,
+    "netGrowth": 223
+  },
+  {
+    "code": "01102",
+    "newCount": 185,
+    "closeCount": 121,
+    "netGrowth": 64
+  },
+  {
+    "code": "01103",
+    "newCount": 162,
+    "closeCount": 98,
+    "netGrowth": 64
+  },
+  {
+    "code": "01104",
+    "newCount": 155,
+    "closeCount": 108,
+    "netGrowth": 47
+  },
+  {
+    "code": "01105",
+    "newCount": 147,
+    "closeCount": 92,
+    "netGrowth": 55
+  },
+  {
+    "code": "01106",
+    "newCount": 64,
+    "closeCount": 48,
+    "netGrowth": 16
+  },
+  {
+    "code": "01107",
+    "newCount": 96,
+    "closeCount": 81,
+    "netGrowth": 15
+  },
+  {
+    "code": "01108",
+    "newCount": 39,
+    "closeCount": 17,
+    "netGrowth": 22
+  },
+  {
+    "code": "01109",
+    "newCount": 55,
+    "closeCount": 40,
+    "netGrowth": 15
+  },
+  {
+    "code": "01110",
+    "newCount": 58,
+    "closeCount": 38,
+    "netGrowth": 20
+  },
+  {
+    "code": "01202",
+    "newCount": 97,
+    "closeCount": 69,
+    "netGrowth": 28
+  },
+  {
+    "code": "01203",
+    "newCount": 40,
+    "closeCount": 47,
+    "netGrowth": -7
+  },
+  {
+    "code": "01204",
+    "newCount": 147,
+    "closeCount": 82,
+    "netGrowth": 65
+  },
+  {
+    "code": "01205",
+    "newCount": 17,
+    "closeCount": 24,
+    "netGrowth": -7
+  },
+  {
+    "code": "01206",
+    "newCount": 51,
+    "closeCount": 52,
+    "netGrowth": -1
+  },
+  {
+    "code": "01207",
+    "newCount": 63,
+    "closeCount": 57,
+    "netGrowth": 6
+  },
+  {
+    "code": "01208",
+    "newCount": 35,
+    "closeCount": 28,
+    "netGrowth": 7
+  },
+  {
+    "code": "01209",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "01210",
+    "newCount": 22,
+    "closeCount": 18,
+    "netGrowth": 4
+  },
+  {
+    "code": "01211",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "01212",
+    "newCount": 2,
+    "closeCount": 6,
+    "netGrowth": -4
+  },
+  {
+    "code": "01213",
+    "newCount": 63,
+    "closeCount": 35,
+    "netGrowth": 28
+  },
+  {
+    "code": "01214",
+    "newCount": 2,
+    "closeCount": 11,
+    "netGrowth": -9
+  },
+  {
+    "code": "01215",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "01216",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "01217",
+    "newCount": 44,
+    "closeCount": 36,
+    "netGrowth": 8
+  },
+  {
+    "code": "01218",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01219",
+    "newCount": 5,
+    "closeCount": 13,
+    "netGrowth": -8
+  },
+  {
+    "code": "01220",
+    "newCount": 5,
+    "closeCount": 5,
+    "netGrowth": 0
+  },
+  {
+    "code": "01221",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "01222",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "01223",
+    "newCount": 10,
+    "closeCount": 11,
+    "netGrowth": -1
+  },
+  {
+    "code": "01224",
+    "newCount": 27,
+    "closeCount": 20,
+    "netGrowth": 7
+  },
+  {
+    "code": "01225",
+    "newCount": 11,
+    "closeCount": 10,
+    "netGrowth": 1
+  },
+  {
+    "code": "01226",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "01227",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "01228",
+    "newCount": 10,
+    "closeCount": 2,
+    "netGrowth": 8
+  },
+  {
+    "code": "01229",
+    "newCount": 12,
+    "closeCount": 6,
+    "netGrowth": 6
+  },
+  {
+    "code": "01230",
+    "newCount": 8,
+    "closeCount": 9,
+    "netGrowth": -1
+  },
+  {
+    "code": "01231",
+    "newCount": 19,
+    "closeCount": 13,
+    "netGrowth": 6
+  },
+  {
+    "code": "01233",
+    "newCount": 7,
+    "closeCount": 7,
+    "netGrowth": 0
+  },
+  {
+    "code": "01234",
+    "newCount": 26,
+    "closeCount": 22,
+    "netGrowth": 4
+  },
+  {
+    "code": "01235",
+    "newCount": 42,
+    "closeCount": 21,
+    "netGrowth": 21
+  },
+  {
+    "code": "01236",
+    "newCount": 22,
+    "closeCount": 7,
+    "netGrowth": 15
+  },
+  {
+    "code": "01303",
+    "newCount": 9,
+    "closeCount": 5,
+    "netGrowth": 4
+  },
+  {
+    "code": "01331",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01332",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "01333",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "01337",
+    "newCount": 13,
+    "closeCount": 8,
+    "netGrowth": 5
+  },
+  {
+    "code": "01343",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01345",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "01346",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "01347",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01361",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01362",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01363",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01367",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "01370",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01371",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01392",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01394",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01395",
+    "newCount": 14,
+    "closeCount": 4,
+    "netGrowth": 10
+  },
+  {
+    "code": "01396",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "01397",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01398",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "01399",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01400",
+    "newCount": 25,
+    "closeCount": 9,
+    "netGrowth": 16
+  },
+  {
+    "code": "01401",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "01402",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "01407",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "01408",
+    "newCount": 14,
+    "closeCount": 8,
+    "netGrowth": 6
+  },
+  {
+    "code": "01409",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01423",
+    "newCount": 5,
+    "closeCount": 0,
+    "netGrowth": 5
+  },
+  {
+    "code": "01424",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01425",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01427",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01428",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01429",
+    "newCount": 3,
+    "closeCount": 7,
+    "netGrowth": -4
+  },
+  {
+    "code": "01430",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "01431",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "01432",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01433",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01434",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "01436",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "01437",
+    "newCount": 7,
+    "closeCount": 0,
+    "netGrowth": 7
+  },
+  {
+    "code": "01438",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01452",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "01453",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "01454",
+    "newCount": 5,
+    "closeCount": 0,
+    "netGrowth": 5
+  },
+  {
+    "code": "01455",
+    "newCount": 5,
+    "closeCount": 0,
+    "netGrowth": 5
+  },
+  {
+    "code": "01456",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01457",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "01458",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "01459",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "01460",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "01461",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01462",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01463",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01464",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "01465",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01469",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01471",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01472",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01481",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "01482",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01483",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01484",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "01485",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01486",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01511",
+    "newCount": 6,
+    "closeCount": 0,
+    "netGrowth": 6
+  },
+  {
+    "code": "01512",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "01514",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "01516",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "01517",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01520",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "01543",
+    "newCount": 9,
+    "closeCount": 5,
+    "netGrowth": 4
+  },
+  {
+    "code": "01544",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01545",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "01546",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "01547",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "01549",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "01550",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01552",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01555",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "01559",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01560",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01561",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01563",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "01564",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "01571",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01575",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01578",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "01581",
+    "newCount": 11,
+    "closeCount": 0,
+    "netGrowth": 11
+  },
+  {
+    "code": "01584",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "01585",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "01586",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "01601",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01602",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "01604",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "01607",
+    "newCount": 8,
+    "closeCount": 6,
+    "netGrowth": 2
+  },
+  {
+    "code": "01608",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01609",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01610",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "01631",
+    "newCount": 11,
+    "closeCount": 3,
+    "netGrowth": 8
+  },
+  {
+    "code": "01632",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "01633",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01634",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "01635",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01636",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "01637",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "01639",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "01641",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01642",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "01643",
+    "newCount": 8,
+    "closeCount": 5,
+    "netGrowth": 3
+  },
+  {
+    "code": "01644",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01645",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01646",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "01647",
+    "newCount": 7,
+    "closeCount": 1,
+    "netGrowth": 6
+  },
+  {
+    "code": "01648",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "01649",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01661",
+    "newCount": 4,
+    "closeCount": 9,
+    "netGrowth": -5
+  },
+  {
+    "code": "01662",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "01663",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "01664",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01665",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "01667",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "01668",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "01691",
+    "newCount": 11,
+    "closeCount": 0,
+    "netGrowth": 11
+  },
+  {
+    "code": "01692",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "01694",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "02201",
+    "newCount": 78,
+    "closeCount": 88,
+    "netGrowth": -10
+  },
+  {
+    "code": "02202",
+    "newCount": 38,
+    "closeCount": 35,
+    "netGrowth": 3
+  },
+  {
+    "code": "02203",
+    "newCount": 65,
+    "closeCount": 43,
+    "netGrowth": 22
+  },
+  {
+    "code": "02204",
+    "newCount": 6,
+    "closeCount": 9,
+    "netGrowth": -3
+  },
+  {
+    "code": "02205",
+    "newCount": 12,
+    "closeCount": 9,
+    "netGrowth": 3
+  },
+  {
+    "code": "02206",
+    "newCount": 11,
+    "closeCount": 11,
+    "netGrowth": 0
+  },
+  {
+    "code": "02207",
+    "newCount": 15,
+    "closeCount": 9,
+    "netGrowth": 6
+  },
+  {
+    "code": "02208",
+    "newCount": 7,
+    "closeCount": 14,
+    "netGrowth": -7
+  },
+  {
+    "code": "02209",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "02210",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "02301",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "02303",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "02307",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "02321",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "02361",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "02362",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "02367",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "02381",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "02384",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "02387",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "02401",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "02402",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "02405",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "02408",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "02411",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "02412",
+    "newCount": 8,
+    "closeCount": 3,
+    "netGrowth": 5
+  },
+  {
+    "code": "02423",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "02424",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "02441",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "02442",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "02443",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "02445",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "02446",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "03201",
+    "newCount": 107,
+    "closeCount": 70,
+    "netGrowth": 37
+  },
+  {
+    "code": "03202",
+    "newCount": 2,
+    "closeCount": 17,
+    "netGrowth": -15
+  },
+  {
+    "code": "03203",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "03205",
+    "newCount": 17,
+    "closeCount": 12,
+    "netGrowth": 5
+  },
+  {
+    "code": "03206",
+    "newCount": 23,
+    "closeCount": 10,
+    "netGrowth": 13
+  },
+  {
+    "code": "03207",
+    "newCount": 8,
+    "closeCount": 4,
+    "netGrowth": 4
+  },
+  {
+    "code": "03208",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "03209",
+    "newCount": 12,
+    "closeCount": 20,
+    "netGrowth": -8
+  },
+  {
+    "code": "03210",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "03211",
+    "newCount": 3,
+    "closeCount": 6,
+    "netGrowth": -3
+  },
+  {
+    "code": "03213",
+    "newCount": 3,
+    "closeCount": 6,
+    "netGrowth": -3
+  },
+  {
+    "code": "03214",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "03215",
+    "newCount": 22,
+    "closeCount": 13,
+    "netGrowth": 9
+  },
+  {
+    "code": "03216",
+    "newCount": 15,
+    "closeCount": 7,
+    "netGrowth": 8
+  },
+  {
+    "code": "03301",
+    "newCount": 0,
+    "closeCount": 5,
+    "netGrowth": -5
+  },
+  {
+    "code": "03302",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "03303",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "03321",
+    "newCount": 10,
+    "closeCount": 5,
+    "netGrowth": 5
+  },
+  {
+    "code": "03322",
+    "newCount": 8,
+    "closeCount": 7,
+    "netGrowth": 1
+  },
+  {
+    "code": "03366",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "03381",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "03402",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "03441",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "03461",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "03482",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "03483",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "03501",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "03506",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "03507",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "03524",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "04101",
+    "newCount": 282,
+    "closeCount": 177,
+    "netGrowth": 105
+  },
+  {
+    "code": "04102",
+    "newCount": 71,
+    "closeCount": 94,
+    "netGrowth": -23
+  },
+  {
+    "code": "04103",
+    "newCount": 77,
+    "closeCount": 65,
+    "netGrowth": 12
+  },
+  {
+    "code": "04104",
+    "newCount": 91,
+    "closeCount": 58,
+    "netGrowth": 33
+  },
+  {
+    "code": "04105",
+    "newCount": 75,
+    "closeCount": 57,
+    "netGrowth": 18
+  },
+  {
+    "code": "04202",
+    "newCount": 27,
+    "closeCount": 45,
+    "netGrowth": -18
+  },
+  {
+    "code": "04203",
+    "newCount": 8,
+    "closeCount": 16,
+    "netGrowth": -8
+  },
+  {
+    "code": "04205",
+    "newCount": 8,
+    "closeCount": 22,
+    "netGrowth": -14
+  },
+  {
+    "code": "04206",
+    "newCount": 14,
+    "closeCount": 6,
+    "netGrowth": 8
+  },
+  {
+    "code": "04207",
+    "newCount": 26,
+    "closeCount": 18,
+    "netGrowth": 8
+  },
+  {
+    "code": "04208",
+    "newCount": 5,
+    "closeCount": 6,
+    "netGrowth": -1
+  },
+  {
+    "code": "04209",
+    "newCount": 18,
+    "closeCount": 10,
+    "netGrowth": 8
+  },
+  {
+    "code": "04211",
+    "newCount": 13,
+    "closeCount": 10,
+    "netGrowth": 3
+  },
+  {
+    "code": "04212",
+    "newCount": 16,
+    "closeCount": 14,
+    "netGrowth": 2
+  },
+  {
+    "code": "04213",
+    "newCount": 17,
+    "closeCount": 17,
+    "netGrowth": 0
+  },
+  {
+    "code": "04214",
+    "newCount": 13,
+    "closeCount": 6,
+    "netGrowth": 7
+  },
+  {
+    "code": "04215",
+    "newCount": 36,
+    "closeCount": 27,
+    "netGrowth": 9
+  },
+  {
+    "code": "04216",
+    "newCount": 20,
+    "closeCount": 6,
+    "netGrowth": 14
+  },
+  {
+    "code": "04301",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "04321",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "04322",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "04323",
+    "newCount": 10,
+    "closeCount": 2,
+    "netGrowth": 8
+  },
+  {
+    "code": "04324",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "04341",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "04361",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "04362",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "04401",
+    "newCount": 5,
+    "closeCount": 7,
+    "netGrowth": -2
+  },
+  {
+    "code": "04404",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "04406",
+    "newCount": 10,
+    "closeCount": 4,
+    "netGrowth": 6
+  },
+  {
+    "code": "04421",
+    "newCount": 10,
+    "closeCount": 2,
+    "netGrowth": 8
+  },
+  {
+    "code": "04422",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "04424",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "04444",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "04445",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "04501",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "04505",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "04581",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "04606",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "05201",
+    "newCount": 99,
+    "closeCount": 72,
+    "netGrowth": 27
+  },
+  {
+    "code": "05202",
+    "newCount": 8,
+    "closeCount": 15,
+    "netGrowth": -7
+  },
+  {
+    "code": "05203",
+    "newCount": 23,
+    "closeCount": 7,
+    "netGrowth": 16
+  },
+  {
+    "code": "05204",
+    "newCount": 9,
+    "closeCount": 11,
+    "netGrowth": -2
+  },
+  {
+    "code": "05206",
+    "newCount": 12,
+    "closeCount": 6,
+    "netGrowth": 6
+  },
+  {
+    "code": "05207",
+    "newCount": 11,
+    "closeCount": 7,
+    "netGrowth": 4
+  },
+  {
+    "code": "05209",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "05210",
+    "newCount": 14,
+    "closeCount": 10,
+    "netGrowth": 4
+  },
+  {
+    "code": "05211",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "05212",
+    "newCount": 20,
+    "closeCount": 7,
+    "netGrowth": 13
+  },
+  {
+    "code": "05213",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "05214",
+    "newCount": 9,
+    "closeCount": 2,
+    "netGrowth": 7
+  },
+  {
+    "code": "05215",
+    "newCount": 13,
+    "closeCount": 7,
+    "netGrowth": 6
+  },
+  {
+    "code": "05303",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "05346",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "05348",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "05349",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "05361",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "05363",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "05366",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "05368",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "05434",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "05463",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "05464",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "06201",
+    "newCount": 79,
+    "closeCount": 154,
+    "netGrowth": -75
+  },
+  {
+    "code": "06202",
+    "newCount": 22,
+    "closeCount": 41,
+    "netGrowth": -19
+  },
+  {
+    "code": "06203",
+    "newCount": 26,
+    "closeCount": 57,
+    "netGrowth": -31
+  },
+  {
+    "code": "06204",
+    "newCount": 31,
+    "closeCount": 40,
+    "netGrowth": -9
+  },
+  {
+    "code": "06205",
+    "newCount": 8,
+    "closeCount": 13,
+    "netGrowth": -5
+  },
+  {
+    "code": "06206",
+    "newCount": 14,
+    "closeCount": 18,
+    "netGrowth": -4
+  },
+  {
+    "code": "06207",
+    "newCount": 10,
+    "closeCount": 7,
+    "netGrowth": 3
+  },
+  {
+    "code": "06208",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "06209",
+    "newCount": 8,
+    "closeCount": 10,
+    "netGrowth": -2
+  },
+  {
+    "code": "06210",
+    "newCount": 8,
+    "closeCount": 25,
+    "netGrowth": -17
+  },
+  {
+    "code": "06211",
+    "newCount": 10,
+    "closeCount": 14,
+    "netGrowth": -4
+  },
+  {
+    "code": "06212",
+    "newCount": 5,
+    "closeCount": 6,
+    "netGrowth": -1
+  },
+  {
+    "code": "06213",
+    "newCount": 7,
+    "closeCount": 14,
+    "netGrowth": -7
+  },
+  {
+    "code": "06301",
+    "newCount": 5,
+    "closeCount": 9,
+    "netGrowth": -4
+  },
+  {
+    "code": "06302",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "06321",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "06322",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "06323",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "06324",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "06341",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "06361",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "06362",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "06363",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "06364",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "06365",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "06366",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "06367",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "06381",
+    "newCount": 5,
+    "closeCount": 12,
+    "netGrowth": -7
+  },
+  {
+    "code": "06382",
+    "newCount": 4,
+    "closeCount": 8,
+    "netGrowth": -4
+  },
+  {
+    "code": "06401",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "06402",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "06403",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "06426",
+    "newCount": 0,
+    "closeCount": 5,
+    "netGrowth": -5
+  },
+  {
+    "code": "06428",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "06461",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "07201",
+    "newCount": 74,
+    "closeCount": 71,
+    "netGrowth": 3
+  },
+  {
+    "code": "07202",
+    "newCount": 33,
+    "closeCount": 35,
+    "netGrowth": -2
+  },
+  {
+    "code": "07203",
+    "newCount": 149,
+    "closeCount": 111,
+    "netGrowth": 38
+  },
+  {
+    "code": "07204",
+    "newCount": 107,
+    "closeCount": 91,
+    "netGrowth": 16
+  },
+  {
+    "code": "07205",
+    "newCount": 25,
+    "closeCount": 9,
+    "netGrowth": 16
+  },
+  {
+    "code": "07207",
+    "newCount": 17,
+    "closeCount": 14,
+    "netGrowth": 3
+  },
+  {
+    "code": "07208",
+    "newCount": 12,
+    "closeCount": 14,
+    "netGrowth": -2
+  },
+  {
+    "code": "07209",
+    "newCount": 3,
+    "closeCount": 8,
+    "netGrowth": -5
+  },
+  {
+    "code": "07210",
+    "newCount": 14,
+    "closeCount": 8,
+    "netGrowth": 6
+  },
+  {
+    "code": "07211",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "07212",
+    "newCount": 27,
+    "closeCount": 14,
+    "netGrowth": 13
+  },
+  {
+    "code": "07213",
+    "newCount": 5,
+    "closeCount": 8,
+    "netGrowth": -3
+  },
+  {
+    "code": "07214",
+    "newCount": 8,
+    "closeCount": 3,
+    "netGrowth": 5
+  },
+  {
+    "code": "07301",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "07303",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "07308",
+    "newCount": 1,
+    "closeCount": 5,
+    "netGrowth": -4
+  },
+  {
+    "code": "07322",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "07342",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "07344",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "07362",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "07367",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "07368",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "07402",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "07405",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "07407",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "07408",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "07421",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "07422",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "07423",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "07444",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "07447",
+    "newCount": 10,
+    "closeCount": 4,
+    "netGrowth": 6
+  },
+  {
+    "code": "07461",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "07464",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "07466",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "07481",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "07482",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "07483",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "07501",
+    "newCount": 7,
+    "closeCount": 1,
+    "netGrowth": 6
+  },
+  {
+    "code": "07503",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "07504",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "07505",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "07521",
+    "newCount": 1,
+    "closeCount": 5,
+    "netGrowth": -4
+  },
+  {
+    "code": "07522",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "07541",
+    "newCount": 1,
+    "closeCount": 5,
+    "netGrowth": -4
+  },
+  {
+    "code": "07542",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "07543",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "07545",
+    "newCount": 12,
+    "closeCount": 0,
+    "netGrowth": 12
+  },
+  {
+    "code": "07546",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "07547",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "07548",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "07561",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "07564",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "08201",
+    "newCount": 134,
+    "closeCount": 87,
+    "netGrowth": 47
+  },
+  {
+    "code": "08202",
+    "newCount": 45,
+    "closeCount": 34,
+    "netGrowth": 11
+  },
+  {
+    "code": "08203",
+    "newCount": 65,
+    "closeCount": 50,
+    "netGrowth": 15
+  },
+  {
+    "code": "08204",
+    "newCount": 60,
+    "closeCount": 30,
+    "netGrowth": 30
+  },
+  {
+    "code": "08205",
+    "newCount": 21,
+    "closeCount": 23,
+    "netGrowth": -2
+  },
+  {
+    "code": "08207",
+    "newCount": 17,
+    "closeCount": 12,
+    "netGrowth": 5
+  },
+  {
+    "code": "08208",
+    "newCount": 38,
+    "closeCount": 9,
+    "netGrowth": 29
+  },
+  {
+    "code": "08210",
+    "newCount": 19,
+    "closeCount": 11,
+    "netGrowth": 8
+  },
+  {
+    "code": "08211",
+    "newCount": 28,
+    "closeCount": 19,
+    "netGrowth": 9
+  },
+  {
+    "code": "08212",
+    "newCount": 8,
+    "closeCount": 9,
+    "netGrowth": -1
+  },
+  {
+    "code": "08214",
+    "newCount": 5,
+    "closeCount": 6,
+    "netGrowth": -1
+  },
+  {
+    "code": "08215",
+    "newCount": 15,
+    "closeCount": 13,
+    "netGrowth": 2
+  },
+  {
+    "code": "08216",
+    "newCount": 26,
+    "closeCount": 11,
+    "netGrowth": 15
+  },
+  {
+    "code": "08217",
+    "newCount": 43,
+    "closeCount": 20,
+    "netGrowth": 23
+  },
+  {
+    "code": "08219",
+    "newCount": 21,
+    "closeCount": 20,
+    "netGrowth": 1
+  },
+  {
+    "code": "08220",
+    "newCount": 171,
+    "closeCount": 66,
+    "netGrowth": 105
+  },
+  {
+    "code": "08221",
+    "newCount": 37,
+    "closeCount": 35,
+    "netGrowth": 2
+  },
+  {
+    "code": "08222",
+    "newCount": 31,
+    "closeCount": 8,
+    "netGrowth": 23
+  },
+  {
+    "code": "08223",
+    "newCount": 11,
+    "closeCount": 13,
+    "netGrowth": -2
+  },
+  {
+    "code": "08224",
+    "newCount": 29,
+    "closeCount": 16,
+    "netGrowth": 13
+  },
+  {
+    "code": "08225",
+    "newCount": 10,
+    "closeCount": 2,
+    "netGrowth": 8
+  },
+  {
+    "code": "08226",
+    "newCount": 16,
+    "closeCount": 11,
+    "netGrowth": 5
+  },
+  {
+    "code": "08227",
+    "newCount": 29,
+    "closeCount": 14,
+    "netGrowth": 15
+  },
+  {
+    "code": "08228",
+    "newCount": 42,
+    "closeCount": 12,
+    "netGrowth": 30
+  },
+  {
+    "code": "08229",
+    "newCount": 23,
+    "closeCount": 12,
+    "netGrowth": 11
+  },
+  {
+    "code": "08230",
+    "newCount": 15,
+    "closeCount": 10,
+    "netGrowth": 5
+  },
+  {
+    "code": "08231",
+    "newCount": 11,
+    "closeCount": 6,
+    "netGrowth": 5
+  },
+  {
+    "code": "08232",
+    "newCount": 38,
+    "closeCount": 23,
+    "netGrowth": 15
+  },
+  {
+    "code": "08233",
+    "newCount": 9,
+    "closeCount": 9,
+    "netGrowth": 0
+  },
+  {
+    "code": "08234",
+    "newCount": 17,
+    "closeCount": 12,
+    "netGrowth": 5
+  },
+  {
+    "code": "08235",
+    "newCount": 20,
+    "closeCount": 10,
+    "netGrowth": 10
+  },
+  {
+    "code": "08236",
+    "newCount": 11,
+    "closeCount": 4,
+    "netGrowth": 7
+  },
+  {
+    "code": "08302",
+    "newCount": 15,
+    "closeCount": 2,
+    "netGrowth": 13
+  },
+  {
+    "code": "08309",
+    "newCount": 7,
+    "closeCount": 6,
+    "netGrowth": 1
+  },
+  {
+    "code": "08310",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "08341",
+    "newCount": 11,
+    "closeCount": 0,
+    "netGrowth": 11
+  },
+  {
+    "code": "08364",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "08442",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "08443",
+    "newCount": 34,
+    "closeCount": 8,
+    "netGrowth": 26
+  },
+  {
+    "code": "08447",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "08521",
+    "newCount": 10,
+    "closeCount": 3,
+    "netGrowth": 7
+  },
+  {
+    "code": "08542",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "08546",
+    "newCount": 15,
+    "closeCount": 6,
+    "netGrowth": 9
+  },
+  {
+    "code": "08564",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "09201",
+    "newCount": 241,
+    "closeCount": 529,
+    "netGrowth": -288
+  },
+  {
+    "code": "09202",
+    "newCount": 60,
+    "closeCount": 120,
+    "netGrowth": -60
+  },
+  {
+    "code": "09203",
+    "newCount": 54,
+    "closeCount": 77,
+    "netGrowth": -23
+  },
+  {
+    "code": "09204",
+    "newCount": 43,
+    "closeCount": 58,
+    "netGrowth": -15
+  },
+  {
+    "code": "09205",
+    "newCount": 38,
+    "closeCount": 50,
+    "netGrowth": -12
+  },
+  {
+    "code": "09206",
+    "newCount": 24,
+    "closeCount": 37,
+    "netGrowth": -13
+  },
+  {
+    "code": "09208",
+    "newCount": 85,
+    "closeCount": 101,
+    "netGrowth": -16
+  },
+  {
+    "code": "09209",
+    "newCount": 24,
+    "closeCount": 20,
+    "netGrowth": 4
+  },
+  {
+    "code": "09210",
+    "newCount": 16,
+    "closeCount": 28,
+    "netGrowth": -12
+  },
+  {
+    "code": "09211",
+    "newCount": 7,
+    "closeCount": 11,
+    "netGrowth": -4
+  },
+  {
+    "code": "09213",
+    "newCount": 41,
+    "closeCount": 61,
+    "netGrowth": -20
+  },
+  {
+    "code": "09214",
+    "newCount": 14,
+    "closeCount": 18,
+    "netGrowth": -4
+  },
+  {
+    "code": "09215",
+    "newCount": 7,
+    "closeCount": 13,
+    "netGrowth": -6
+  },
+  {
+    "code": "09216",
+    "newCount": 26,
+    "closeCount": 29,
+    "netGrowth": -3
+  },
+  {
+    "code": "09301",
+    "newCount": 19,
+    "closeCount": 11,
+    "netGrowth": 8
+  },
+  {
+    "code": "09342",
+    "newCount": 6,
+    "closeCount": 7,
+    "netGrowth": -1
+  },
+  {
+    "code": "09343",
+    "newCount": 3,
+    "closeCount": 8,
+    "netGrowth": -5
+  },
+  {
+    "code": "09344",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "09345",
+    "newCount": 7,
+    "closeCount": 13,
+    "netGrowth": -6
+  },
+  {
+    "code": "09361",
+    "newCount": 13,
+    "closeCount": 16,
+    "netGrowth": -3
+  },
+  {
+    "code": "09364",
+    "newCount": 8,
+    "closeCount": 13,
+    "netGrowth": -5
+  },
+  {
+    "code": "09366",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "09384",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "09386",
+    "newCount": 3,
+    "closeCount": 6,
+    "netGrowth": -3
+  },
+  {
+    "code": "09407",
+    "newCount": 23,
+    "closeCount": 31,
+    "netGrowth": -8
+  },
+  {
+    "code": "09411",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "10201",
+    "newCount": 186,
+    "closeCount": 358,
+    "netGrowth": -172
+  },
+  {
+    "code": "10202",
+    "newCount": 196,
+    "closeCount": 361,
+    "netGrowth": -165
+  },
+  {
+    "code": "10203",
+    "newCount": 36,
+    "closeCount": 93,
+    "netGrowth": -57
+  },
+  {
+    "code": "10204",
+    "newCount": 106,
+    "closeCount": 133,
+    "netGrowth": -27
+  },
+  {
+    "code": "10205",
+    "newCount": 120,
+    "closeCount": 163,
+    "netGrowth": -43
+  },
+  {
+    "code": "10206",
+    "newCount": 21,
+    "closeCount": 45,
+    "netGrowth": -24
+  },
+  {
+    "code": "10207",
+    "newCount": 34,
+    "closeCount": 43,
+    "netGrowth": -9
+  },
+  {
+    "code": "10208",
+    "newCount": 21,
+    "closeCount": 45,
+    "netGrowth": -24
+  },
+  {
+    "code": "10209",
+    "newCount": 18,
+    "closeCount": 35,
+    "netGrowth": -17
+  },
+  {
+    "code": "10210",
+    "newCount": 12,
+    "closeCount": 26,
+    "netGrowth": -14
+  },
+  {
+    "code": "10211",
+    "newCount": 13,
+    "closeCount": 29,
+    "netGrowth": -16
+  },
+  {
+    "code": "10212",
+    "newCount": 15,
+    "closeCount": 28,
+    "netGrowth": -13
+  },
+  {
+    "code": "10344",
+    "newCount": 5,
+    "closeCount": 5,
+    "netGrowth": 0
+  },
+  {
+    "code": "10345",
+    "newCount": 5,
+    "closeCount": 9,
+    "netGrowth": -4
+  },
+  {
+    "code": "10367",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "10382",
+    "newCount": 0,
+    "closeCount": 8,
+    "netGrowth": -8
+  },
+  {
+    "code": "10383",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "10384",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "10421",
+    "newCount": 5,
+    "closeCount": 13,
+    "netGrowth": -8
+  },
+  {
+    "code": "10424",
+    "newCount": 2,
+    "closeCount": 10,
+    "netGrowth": -8
+  },
+  {
+    "code": "10425",
+    "newCount": 7,
+    "closeCount": 8,
+    "netGrowth": -1
+  },
+  {
+    "code": "10426",
+    "newCount": 7,
+    "closeCount": 8,
+    "netGrowth": -1
+  },
+  {
+    "code": "10428",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "10429",
+    "newCount": 3,
+    "closeCount": 6,
+    "netGrowth": -3
+  },
+  {
+    "code": "10443",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "10444",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "10448",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "10449",
+    "newCount": 7,
+    "closeCount": 18,
+    "netGrowth": -11
+  },
+  {
+    "code": "10464",
+    "newCount": 11,
+    "closeCount": 16,
+    "netGrowth": -5
+  },
+  {
+    "code": "10521",
+    "newCount": 4,
+    "closeCount": 8,
+    "netGrowth": -4
+  },
+  {
+    "code": "10522",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "10523",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "10524",
+    "newCount": 13,
+    "closeCount": 15,
+    "netGrowth": -2
+  },
+  {
+    "code": "10525",
+    "newCount": 4,
+    "closeCount": 9,
+    "netGrowth": -5
+  },
+  {
+    "code": "11101",
+    "newCount": 44,
+    "closeCount": 23,
+    "netGrowth": 21
+  },
+  {
+    "code": "11102",
+    "newCount": 66,
+    "closeCount": 24,
+    "netGrowth": 42
+  },
+  {
+    "code": "11103",
+    "newCount": 187,
+    "closeCount": 77,
+    "netGrowth": 110
+  },
+  {
+    "code": "11104",
+    "newCount": 73,
+    "closeCount": 42,
+    "netGrowth": 31
+  },
+  {
+    "code": "11105",
+    "newCount": 43,
+    "closeCount": 28,
+    "netGrowth": 15
+  },
+  {
+    "code": "11106",
+    "newCount": 47,
+    "closeCount": 15,
+    "netGrowth": 32
+  },
+  {
+    "code": "11107",
+    "newCount": 103,
+    "closeCount": 52,
+    "netGrowth": 51
+  },
+  {
+    "code": "11108",
+    "newCount": 110,
+    "closeCount": 53,
+    "netGrowth": 57
+  },
+  {
+    "code": "11109",
+    "newCount": 64,
+    "closeCount": 44,
+    "netGrowth": 20
+  },
+  {
+    "code": "11110",
+    "newCount": 79,
+    "closeCount": 24,
+    "netGrowth": 55
+  },
+  {
+    "code": "11201",
+    "newCount": 195,
+    "closeCount": 97,
+    "netGrowth": 98
+  },
+  {
+    "code": "11202",
+    "newCount": 80,
+    "closeCount": 40,
+    "netGrowth": 40
+  },
+  {
+    "code": "11203",
+    "newCount": 448,
+    "closeCount": 229,
+    "netGrowth": 219
+  },
+  {
+    "code": "11206",
+    "newCount": 24,
+    "closeCount": 19,
+    "netGrowth": 5
+  },
+  {
+    "code": "11207",
+    "newCount": 16,
+    "closeCount": 16,
+    "netGrowth": 0
+  },
+  {
+    "code": "11208",
+    "newCount": 158,
+    "closeCount": 98,
+    "netGrowth": 60
+  },
+  {
+    "code": "11209",
+    "newCount": 25,
+    "closeCount": 18,
+    "netGrowth": 7
+  },
+  {
+    "code": "11210",
+    "newCount": 43,
+    "closeCount": 21,
+    "netGrowth": 22
+  },
+  {
+    "code": "11211",
+    "newCount": 41,
+    "closeCount": 23,
+    "netGrowth": 18
+  },
+  {
+    "code": "11212",
+    "newCount": 32,
+    "closeCount": 14,
+    "netGrowth": 18
+  },
+  {
+    "code": "11214",
+    "newCount": 129,
+    "closeCount": 50,
+    "netGrowth": 79
+  },
+  {
+    "code": "11215",
+    "newCount": 53,
+    "closeCount": 40,
+    "netGrowth": 13
+  },
+  {
+    "code": "11216",
+    "newCount": 28,
+    "closeCount": 12,
+    "netGrowth": 16
+  },
+  {
+    "code": "11217",
+    "newCount": 31,
+    "closeCount": 18,
+    "netGrowth": 13
+  },
+  {
+    "code": "11218",
+    "newCount": 45,
+    "closeCount": 30,
+    "netGrowth": 15
+  },
+  {
+    "code": "11219",
+    "newCount": 90,
+    "closeCount": 44,
+    "netGrowth": 46
+  },
+  {
+    "code": "11221",
+    "newCount": 130,
+    "closeCount": 86,
+    "netGrowth": 44
+  },
+  {
+    "code": "11222",
+    "newCount": 185,
+    "closeCount": 98,
+    "netGrowth": 87
+  },
+  {
+    "code": "11223",
+    "newCount": 60,
+    "closeCount": 25,
+    "netGrowth": 35
+  },
+  {
+    "code": "11224",
+    "newCount": 81,
+    "closeCount": 47,
+    "netGrowth": 34
+  },
+  {
+    "code": "11225",
+    "newCount": 48,
+    "closeCount": 39,
+    "netGrowth": 9
+  },
+  {
+    "code": "11227",
+    "newCount": 60,
+    "closeCount": 39,
+    "netGrowth": 21
+  },
+  {
+    "code": "11228",
+    "newCount": 55,
+    "closeCount": 16,
+    "netGrowth": 39
+  },
+  {
+    "code": "11229",
+    "newCount": 39,
+    "closeCount": 21,
+    "netGrowth": 18
+  },
+  {
+    "code": "11230",
+    "newCount": 82,
+    "closeCount": 35,
+    "netGrowth": 47
+  },
+  {
+    "code": "11231",
+    "newCount": 29,
+    "closeCount": 11,
+    "netGrowth": 18
+  },
+  {
+    "code": "11232",
+    "newCount": 72,
+    "closeCount": 17,
+    "netGrowth": 55
+  },
+  {
+    "code": "11233",
+    "newCount": 20,
+    "closeCount": 19,
+    "netGrowth": 1
+  },
+  {
+    "code": "11234",
+    "newCount": 63,
+    "closeCount": 39,
+    "netGrowth": 24
+  },
+  {
+    "code": "11235",
+    "newCount": 36,
+    "closeCount": 24,
+    "netGrowth": 12
+  },
+  {
+    "code": "11237",
+    "newCount": 97,
+    "closeCount": 51,
+    "netGrowth": 46
+  },
+  {
+    "code": "11238",
+    "newCount": 26,
+    "closeCount": 15,
+    "netGrowth": 11
+  },
+  {
+    "code": "11239",
+    "newCount": 34,
+    "closeCount": 25,
+    "netGrowth": 9
+  },
+  {
+    "code": "11240",
+    "newCount": 18,
+    "closeCount": 11,
+    "netGrowth": 7
+  },
+  {
+    "code": "11241",
+    "newCount": 30,
+    "closeCount": 15,
+    "netGrowth": 15
+  },
+  {
+    "code": "11242",
+    "newCount": 15,
+    "closeCount": 9,
+    "netGrowth": 6
+  },
+  {
+    "code": "11243",
+    "newCount": 44,
+    "closeCount": 15,
+    "netGrowth": 29
+  },
+  {
+    "code": "11245",
+    "newCount": 38,
+    "closeCount": 25,
+    "netGrowth": 13
+  },
+  {
+    "code": "11246",
+    "newCount": 9,
+    "closeCount": 10,
+    "netGrowth": -1
+  },
+  {
+    "code": "11301",
+    "newCount": 17,
+    "closeCount": 12,
+    "netGrowth": 5
+  },
+  {
+    "code": "11324",
+    "newCount": 14,
+    "closeCount": 15,
+    "netGrowth": -1
+  },
+  {
+    "code": "11326",
+    "newCount": 10,
+    "closeCount": 7,
+    "netGrowth": 3
+  },
+  {
+    "code": "11327",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "11341",
+    "newCount": 11,
+    "closeCount": 4,
+    "netGrowth": 7
+  },
+  {
+    "code": "11342",
+    "newCount": 8,
+    "closeCount": 2,
+    "netGrowth": 6
+  },
+  {
+    "code": "11343",
+    "newCount": 7,
+    "closeCount": 6,
+    "netGrowth": 1
+  },
+  {
+    "code": "11346",
+    "newCount": 11,
+    "closeCount": 6,
+    "netGrowth": 5
+  },
+  {
+    "code": "11347",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "11348",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "11349",
+    "newCount": 5,
+    "closeCount": 5,
+    "netGrowth": 0
+  },
+  {
+    "code": "11361",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "11362",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "11363",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "11365",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "11369",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "11381",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "11383",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "11385",
+    "newCount": 11,
+    "closeCount": 4,
+    "netGrowth": 7
+  },
+  {
+    "code": "11408",
+    "newCount": 5,
+    "closeCount": 7,
+    "netGrowth": -2
+  },
+  {
+    "code": "11442",
+    "newCount": 7,
+    "closeCount": 8,
+    "netGrowth": -1
+  },
+  {
+    "code": "11464",
+    "newCount": 16,
+    "closeCount": 12,
+    "netGrowth": 4
+  },
+  {
+    "code": "11465",
+    "newCount": 15,
+    "closeCount": 11,
+    "netGrowth": 4
+  },
+  {
+    "code": "12101",
+    "newCount": 221,
+    "closeCount": 114,
+    "netGrowth": 107
+  },
+  {
+    "code": "12102",
+    "newCount": 67,
+    "closeCount": 40,
+    "netGrowth": 27
+  },
+  {
+    "code": "12103",
+    "newCount": 73,
+    "closeCount": 38,
+    "netGrowth": 35
+  },
+  {
+    "code": "12104",
+    "newCount": 70,
+    "closeCount": 41,
+    "netGrowth": 29
+  },
+  {
+    "code": "12105",
+    "newCount": 54,
+    "closeCount": 30,
+    "netGrowth": 24
+  },
+  {
+    "code": "12106",
+    "newCount": 90,
+    "closeCount": 28,
+    "netGrowth": 62
+  },
+  {
+    "code": "12202",
+    "newCount": 25,
+    "closeCount": 11,
+    "netGrowth": 14
+  },
+  {
+    "code": "12203",
+    "newCount": 242,
+    "closeCount": 152,
+    "netGrowth": 90
+  },
+  {
+    "code": "12204",
+    "newCount": 324,
+    "closeCount": 132,
+    "netGrowth": 192
+  },
+  {
+    "code": "12205",
+    "newCount": 10,
+    "closeCount": 12,
+    "netGrowth": -2
+  },
+  {
+    "code": "12206",
+    "newCount": 98,
+    "closeCount": 49,
+    "netGrowth": 49
+  },
+  {
+    "code": "12207",
+    "newCount": 258,
+    "closeCount": 129,
+    "netGrowth": 129
+  },
+  {
+    "code": "12208",
+    "newCount": 93,
+    "closeCount": 44,
+    "netGrowth": 49
+  },
+  {
+    "code": "12210",
+    "newCount": 51,
+    "closeCount": 19,
+    "netGrowth": 32
+  },
+  {
+    "code": "12211",
+    "newCount": 75,
+    "closeCount": 25,
+    "netGrowth": 50
+  },
+  {
+    "code": "12212",
+    "newCount": 83,
+    "closeCount": 32,
+    "netGrowth": 51
+  },
+  {
+    "code": "12213",
+    "newCount": 33,
+    "closeCount": 11,
+    "netGrowth": 22
+  },
+  {
+    "code": "12215",
+    "newCount": 19,
+    "closeCount": 18,
+    "netGrowth": 1
+  },
+  {
+    "code": "12216",
+    "newCount": 54,
+    "closeCount": 37,
+    "netGrowth": 17
+  },
+  {
+    "code": "12217",
+    "newCount": 268,
+    "closeCount": 111,
+    "netGrowth": 157
+  },
+  {
+    "code": "12218",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "12219",
+    "newCount": 130,
+    "closeCount": 54,
+    "netGrowth": 76
+  },
+  {
+    "code": "12220",
+    "newCount": 115,
+    "closeCount": 32,
+    "netGrowth": 83
+  },
+  {
+    "code": "12221",
+    "newCount": 94,
+    "closeCount": 38,
+    "netGrowth": 56
+  },
+  {
+    "code": "12222",
+    "newCount": 55,
+    "closeCount": 33,
+    "netGrowth": 22
+  },
+  {
+    "code": "12223",
+    "newCount": 9,
+    "closeCount": 11,
+    "netGrowth": -2
+  },
+  {
+    "code": "12224",
+    "newCount": 58,
+    "closeCount": 22,
+    "netGrowth": 36
+  },
+  {
+    "code": "12225",
+    "newCount": 30,
+    "closeCount": 22,
+    "netGrowth": 8
+  },
+  {
+    "code": "12226",
+    "newCount": 18,
+    "closeCount": 17,
+    "netGrowth": 1
+  },
+  {
+    "code": "12227",
+    "newCount": 88,
+    "closeCount": 53,
+    "netGrowth": 35
+  },
+  {
+    "code": "12228",
+    "newCount": 54,
+    "closeCount": 22,
+    "netGrowth": 32
+  },
+  {
+    "code": "12229",
+    "newCount": 35,
+    "closeCount": 12,
+    "netGrowth": 23
+  },
+  {
+    "code": "12230",
+    "newCount": 36,
+    "closeCount": 27,
+    "netGrowth": 9
+  },
+  {
+    "code": "12231",
+    "newCount": 45,
+    "closeCount": 15,
+    "netGrowth": 30
+  },
+  {
+    "code": "12232",
+    "newCount": 35,
+    "closeCount": 16,
+    "netGrowth": 19
+  },
+  {
+    "code": "12233",
+    "newCount": 28,
+    "closeCount": 17,
+    "netGrowth": 11
+  },
+  {
+    "code": "12234",
+    "newCount": 9,
+    "closeCount": 8,
+    "netGrowth": 1
+  },
+  {
+    "code": "12235",
+    "newCount": 11,
+    "closeCount": 10,
+    "netGrowth": 1
+  },
+  {
+    "code": "12236",
+    "newCount": 28,
+    "closeCount": 20,
+    "netGrowth": 8
+  },
+  {
+    "code": "12237",
+    "newCount": 24,
+    "closeCount": 10,
+    "netGrowth": 14
+  },
+  {
+    "code": "12238",
+    "newCount": 14,
+    "closeCount": 7,
+    "netGrowth": 7
+  },
+  {
+    "code": "12239",
+    "newCount": 22,
+    "closeCount": 7,
+    "netGrowth": 15
+  },
+  {
+    "code": "12322",
+    "newCount": 8,
+    "closeCount": 5,
+    "netGrowth": 3
+  },
+  {
+    "code": "12329",
+    "newCount": 7,
+    "closeCount": 1,
+    "netGrowth": 6
+  },
+  {
+    "code": "12342",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "12347",
+    "newCount": 10,
+    "closeCount": 5,
+    "netGrowth": 5
+  },
+  {
+    "code": "12349",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "12382",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "12403",
+    "newCount": 9,
+    "closeCount": 4,
+    "netGrowth": 5
+  },
+  {
+    "code": "12409",
+    "newCount": 8,
+    "closeCount": 2,
+    "netGrowth": 6
+  },
+  {
+    "code": "12410",
+    "newCount": 11,
+    "closeCount": 1,
+    "netGrowth": 10
+  },
+  {
+    "code": "12421",
+    "newCount": 12,
+    "closeCount": 4,
+    "netGrowth": 8
+  },
+  {
+    "code": "12422",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "12423",
+    "newCount": 9,
+    "closeCount": 3,
+    "netGrowth": 6
+  },
+  {
+    "code": "12424",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "12426",
+    "newCount": 9,
+    "closeCount": 1,
+    "netGrowth": 8
+  },
+  {
+    "code": "12427",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "12441",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "12443",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "12463",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "13101",
+    "newCount": 2346,
+    "closeCount": 1284,
+    "netGrowth": 1062
+  },
+  {
+    "code": "13102",
+    "newCount": 2680,
+    "closeCount": 1322,
+    "netGrowth": 1358
+  },
+  {
+    "code": "13103",
+    "newCount": 4701,
+    "closeCount": 4794,
+    "netGrowth": -93
+  },
+  {
+    "code": "13104",
+    "newCount": 2213,
+    "closeCount": 3329,
+    "netGrowth": -1116
+  },
+  {
+    "code": "13105",
+    "newCount": 421,
+    "closeCount": 299,
+    "netGrowth": 122
+  },
+  {
+    "code": "13106",
+    "newCount": 749,
+    "closeCount": 561,
+    "netGrowth": 188
+  },
+  {
+    "code": "13107",
+    "newCount": 335,
+    "closeCount": 278,
+    "netGrowth": 57
+  },
+  {
+    "code": "13108",
+    "newCount": 621,
+    "closeCount": 350,
+    "netGrowth": 271
+  },
+  {
+    "code": "13109",
+    "newCount": 853,
+    "closeCount": 442,
+    "netGrowth": 411
+  },
+  {
+    "code": "13110",
+    "newCount": 734,
+    "closeCount": 300,
+    "netGrowth": 434
+  },
+  {
+    "code": "13111",
+    "newCount": 604,
+    "closeCount": 433,
+    "netGrowth": 171
+  },
+  {
+    "code": "13112",
+    "newCount": 1177,
+    "closeCount": 591,
+    "netGrowth": 586
+  },
+  {
+    "code": "13113",
+    "newCount": 4014,
+    "closeCount": 1293,
+    "netGrowth": 2721
+  },
+  {
+    "code": "13114",
+    "newCount": 356,
+    "closeCount": 252,
+    "netGrowth": 104
+  },
+  {
+    "code": "13115",
+    "newCount": 499,
+    "closeCount": 340,
+    "netGrowth": 159
+  },
+  {
+    "code": "13116",
+    "newCount": 921,
+    "closeCount": 519,
+    "netGrowth": 402
+  },
+  {
+    "code": "13117",
+    "newCount": 273,
+    "closeCount": 545,
+    "netGrowth": -272
+  },
+  {
+    "code": "13118",
+    "newCount": 271,
+    "closeCount": 467,
+    "netGrowth": -196
+  },
+  {
+    "code": "13119",
+    "newCount": 451,
+    "closeCount": 270,
+    "netGrowth": 181
+  },
+  {
+    "code": "13120",
+    "newCount": 477,
+    "closeCount": 902,
+    "netGrowth": -425
+  },
+  {
+    "code": "13121",
+    "newCount": 549,
+    "closeCount": 300,
+    "netGrowth": 249
+  },
+  {
+    "code": "13122",
+    "newCount": 360,
+    "closeCount": 209,
+    "netGrowth": 151
+  },
+  {
+    "code": "13123",
+    "newCount": 556,
+    "closeCount": 913,
+    "netGrowth": -357
+  },
+  {
+    "code": "13201",
+    "newCount": 314,
+    "closeCount": 186,
+    "netGrowth": 128
+  },
+  {
+    "code": "13202",
+    "newCount": 128,
+    "closeCount": 76,
+    "netGrowth": 52
+  },
+  {
+    "code": "13203",
+    "newCount": 130,
+    "closeCount": 93,
+    "netGrowth": 37
+  },
+  {
+    "code": "13204",
+    "newCount": 118,
+    "closeCount": 65,
+    "netGrowth": 53
+  },
+  {
+    "code": "13205",
+    "newCount": 46,
+    "closeCount": 28,
+    "netGrowth": 18
+  },
+  {
+    "code": "13206",
+    "newCount": 114,
+    "closeCount": 75,
+    "netGrowth": 39
+  },
+  {
+    "code": "13207",
+    "newCount": 56,
+    "closeCount": 34,
+    "netGrowth": 22
+  },
+  {
+    "code": "13208",
+    "newCount": 132,
+    "closeCount": 87,
+    "netGrowth": 45
+  },
+  {
+    "code": "13209",
+    "newCount": 279,
+    "closeCount": 142,
+    "netGrowth": 137
+  },
+  {
+    "code": "13210",
+    "newCount": 67,
+    "closeCount": 35,
+    "netGrowth": 32
+  },
+  {
+    "code": "13211",
+    "newCount": 67,
+    "closeCount": 49,
+    "netGrowth": 18
+  },
+  {
+    "code": "13212",
+    "newCount": 65,
+    "closeCount": 49,
+    "netGrowth": 16
+  },
+  {
+    "code": "13213",
+    "newCount": 61,
+    "closeCount": 42,
+    "netGrowth": 19
+  },
+  {
+    "code": "13214",
+    "newCount": 63,
+    "closeCount": 36,
+    "netGrowth": 27
+  },
+  {
+    "code": "13215",
+    "newCount": 47,
+    "closeCount": 37,
+    "netGrowth": 10
+  },
+  {
+    "code": "13218",
+    "newCount": 39,
+    "closeCount": 16,
+    "netGrowth": 23
+  },
+  {
+    "code": "13219",
+    "newCount": 43,
+    "closeCount": 27,
+    "netGrowth": 16
+  },
+  {
+    "code": "13220",
+    "newCount": 42,
+    "closeCount": 9,
+    "netGrowth": 33
+  },
+  {
+    "code": "13221",
+    "newCount": 33,
+    "closeCount": 16,
+    "netGrowth": 17
+  },
+  {
+    "code": "13222",
+    "newCount": 51,
+    "closeCount": 40,
+    "netGrowth": 11
+  },
+  {
+    "code": "13223",
+    "newCount": 33,
+    "closeCount": 17,
+    "netGrowth": 16
+  },
+  {
+    "code": "13224",
+    "newCount": 73,
+    "closeCount": 68,
+    "netGrowth": 5
+  },
+  {
+    "code": "13225",
+    "newCount": 46,
+    "closeCount": 21,
+    "netGrowth": 25
+  },
+  {
+    "code": "13227",
+    "newCount": 33,
+    "closeCount": 15,
+    "netGrowth": 18
+  },
+  {
+    "code": "13228",
+    "newCount": 37,
+    "closeCount": 17,
+    "netGrowth": 20
+  },
+  {
+    "code": "13229",
+    "newCount": 100,
+    "closeCount": 54,
+    "netGrowth": 46
+  },
+  {
+    "code": "13303",
+    "newCount": 30,
+    "closeCount": 11,
+    "netGrowth": 19
+  },
+  {
+    "code": "13305",
+    "newCount": 8,
+    "closeCount": 3,
+    "netGrowth": 5
+  },
+  {
+    "code": "13307",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "13308",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "13361",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "13362",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "13363",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "13381",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "13401",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "13402",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "13421",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "14101",
+    "newCount": 175,
+    "closeCount": 77,
+    "netGrowth": 98
+  },
+  {
+    "code": "14102",
+    "newCount": 256,
+    "closeCount": 109,
+    "netGrowth": 147
+  },
+  {
+    "code": "14103",
+    "newCount": 464,
+    "closeCount": 121,
+    "netGrowth": 343
+  },
+  {
+    "code": "14104",
+    "newCount": 370,
+    "closeCount": 215,
+    "netGrowth": 155
+  },
+  {
+    "code": "14105",
+    "newCount": 124,
+    "closeCount": 83,
+    "netGrowth": 41
+  },
+  {
+    "code": "14106",
+    "newCount": 103,
+    "closeCount": 58,
+    "netGrowth": 45
+  },
+  {
+    "code": "14107",
+    "newCount": 64,
+    "closeCount": 34,
+    "netGrowth": 30
+  },
+  {
+    "code": "14108",
+    "newCount": 74,
+    "closeCount": 54,
+    "netGrowth": 20
+  },
+  {
+    "code": "14109",
+    "newCount": 273,
+    "closeCount": 160,
+    "netGrowth": 113
+  },
+  {
+    "code": "14110",
+    "newCount": 113,
+    "closeCount": 57,
+    "netGrowth": 56
+  },
+  {
+    "code": "14111",
+    "newCount": 80,
+    "closeCount": 50,
+    "netGrowth": 30
+  },
+  {
+    "code": "14112",
+    "newCount": 118,
+    "closeCount": 67,
+    "netGrowth": 51
+  },
+  {
+    "code": "14113",
+    "newCount": 84,
+    "closeCount": 44,
+    "netGrowth": 40
+  },
+  {
+    "code": "14114",
+    "newCount": 43,
+    "closeCount": 33,
+    "netGrowth": 10
+  },
+  {
+    "code": "14115",
+    "newCount": 38,
+    "closeCount": 19,
+    "netGrowth": 19
+  },
+  {
+    "code": "14116",
+    "newCount": 57,
+    "closeCount": 26,
+    "netGrowth": 31
+  },
+  {
+    "code": "14117",
+    "newCount": 183,
+    "closeCount": 100,
+    "netGrowth": 83
+  },
+  {
+    "code": "14118",
+    "newCount": 179,
+    "closeCount": 93,
+    "netGrowth": 86
+  },
+  {
+    "code": "14131",
+    "newCount": 200,
+    "closeCount": 94,
+    "netGrowth": 106
+  },
+  {
+    "code": "14132",
+    "newCount": 77,
+    "closeCount": 55,
+    "netGrowth": 22
+  },
+  {
+    "code": "14133",
+    "newCount": 182,
+    "closeCount": 58,
+    "netGrowth": 124
+  },
+  {
+    "code": "14134",
+    "newCount": 123,
+    "closeCount": 60,
+    "netGrowth": 63
+  },
+  {
+    "code": "14135",
+    "newCount": 128,
+    "closeCount": 53,
+    "netGrowth": 75
+  },
+  {
+    "code": "14136",
+    "newCount": 118,
+    "closeCount": 61,
+    "netGrowth": 57
+  },
+  {
+    "code": "14137",
+    "newCount": 81,
+    "closeCount": 38,
+    "netGrowth": 43
+  },
+  {
+    "code": "14151",
+    "newCount": 64,
+    "closeCount": 33,
+    "netGrowth": 31
+  },
+  {
+    "code": "14152",
+    "newCount": 156,
+    "closeCount": 87,
+    "netGrowth": 69
+  },
+  {
+    "code": "14153",
+    "newCount": 109,
+    "closeCount": 63,
+    "netGrowth": 46
+  },
+  {
+    "code": "14201",
+    "newCount": 131,
+    "closeCount": 80,
+    "netGrowth": 51
+  },
+  {
+    "code": "14203",
+    "newCount": 114,
+    "closeCount": 64,
+    "netGrowth": 50
+  },
+  {
+    "code": "14204",
+    "newCount": 136,
+    "closeCount": 65,
+    "netGrowth": 71
+  },
+  {
+    "code": "14205",
+    "newCount": 246,
+    "closeCount": 111,
+    "netGrowth": 135
+  },
+  {
+    "code": "14206",
+    "newCount": 89,
+    "closeCount": 47,
+    "netGrowth": 42
+  },
+  {
+    "code": "14207",
+    "newCount": 139,
+    "closeCount": 73,
+    "netGrowth": 66
+  },
+  {
+    "code": "14208",
+    "newCount": 40,
+    "closeCount": 15,
+    "netGrowth": 25
+  },
+  {
+    "code": "14209",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "14210",
+    "newCount": 20,
+    "closeCount": 16,
+    "netGrowth": 4
+  },
+  {
+    "code": "14211",
+    "newCount": 61,
+    "closeCount": 32,
+    "netGrowth": 29
+  },
+  {
+    "code": "14212",
+    "newCount": 124,
+    "closeCount": 64,
+    "netGrowth": 60
+  },
+  {
+    "code": "14213",
+    "newCount": 96,
+    "closeCount": 58,
+    "netGrowth": 38
+  },
+  {
+    "code": "14214",
+    "newCount": 45,
+    "closeCount": 18,
+    "netGrowth": 27
+  },
+  {
+    "code": "14215",
+    "newCount": 55,
+    "closeCount": 32,
+    "netGrowth": 23
+  },
+  {
+    "code": "14216",
+    "newCount": 52,
+    "closeCount": 27,
+    "netGrowth": 25
+  },
+  {
+    "code": "14217",
+    "newCount": 16,
+    "closeCount": 7,
+    "netGrowth": 9
+  },
+  {
+    "code": "14218",
+    "newCount": 40,
+    "closeCount": 22,
+    "netGrowth": 18
+  },
+  {
+    "code": "14301",
+    "newCount": 32,
+    "closeCount": 8,
+    "netGrowth": 24
+  },
+  {
+    "code": "14321",
+    "newCount": 21,
+    "closeCount": 13,
+    "netGrowth": 8
+  },
+  {
+    "code": "14341",
+    "newCount": 14,
+    "closeCount": 8,
+    "netGrowth": 6
+  },
+  {
+    "code": "14342",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "14361",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "14362",
+    "newCount": 11,
+    "closeCount": 2,
+    "netGrowth": 9
+  },
+  {
+    "code": "14363",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "14364",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "14366",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "14382",
+    "newCount": 16,
+    "closeCount": 6,
+    "netGrowth": 10
+  },
+  {
+    "code": "14383",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "14384",
+    "newCount": 13,
+    "closeCount": 17,
+    "netGrowth": -4
+  },
+  {
+    "code": "14401",
+    "newCount": 18,
+    "closeCount": 4,
+    "netGrowth": 14
+  },
+  {
+    "code": "15101",
+    "newCount": 25,
+    "closeCount": 16,
+    "netGrowth": 9
+  },
+  {
+    "code": "15102",
+    "newCount": 49,
+    "closeCount": 40,
+    "netGrowth": 9
+  },
+  {
+    "code": "15103",
+    "newCount": 121,
+    "closeCount": 109,
+    "netGrowth": 12
+  },
+  {
+    "code": "15104",
+    "newCount": 19,
+    "closeCount": 17,
+    "netGrowth": 2
+  },
+  {
+    "code": "15105",
+    "newCount": 15,
+    "closeCount": 17,
+    "netGrowth": -2
+  },
+  {
+    "code": "15106",
+    "newCount": 17,
+    "closeCount": 9,
+    "netGrowth": 8
+  },
+  {
+    "code": "15107",
+    "newCount": 39,
+    "closeCount": 32,
+    "netGrowth": 7
+  },
+  {
+    "code": "15108",
+    "newCount": 15,
+    "closeCount": 8,
+    "netGrowth": 7
+  },
+  {
+    "code": "15202",
+    "newCount": 79,
+    "closeCount": 62,
+    "netGrowth": 17
+  },
+  {
+    "code": "15204",
+    "newCount": 29,
+    "closeCount": 24,
+    "netGrowth": 5
+  },
+  {
+    "code": "15205",
+    "newCount": 15,
+    "closeCount": 19,
+    "netGrowth": -4
+  },
+  {
+    "code": "15206",
+    "newCount": 17,
+    "closeCount": 18,
+    "netGrowth": -1
+  },
+  {
+    "code": "15208",
+    "newCount": 10,
+    "closeCount": 6,
+    "netGrowth": 4
+  },
+  {
+    "code": "15209",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "15210",
+    "newCount": 9,
+    "closeCount": 16,
+    "netGrowth": -7
+  },
+  {
+    "code": "15211",
+    "newCount": 5,
+    "closeCount": 9,
+    "netGrowth": -4
+  },
+  {
+    "code": "15212",
+    "newCount": 8,
+    "closeCount": 11,
+    "netGrowth": -3
+  },
+  {
+    "code": "15213",
+    "newCount": 14,
+    "closeCount": 22,
+    "netGrowth": -8
+  },
+  {
+    "code": "15216",
+    "newCount": 4,
+    "closeCount": 9,
+    "netGrowth": -5
+  },
+  {
+    "code": "15217",
+    "newCount": 17,
+    "closeCount": 6,
+    "netGrowth": 11
+  },
+  {
+    "code": "15218",
+    "newCount": 8,
+    "closeCount": 16,
+    "netGrowth": -8
+  },
+  {
+    "code": "15222",
+    "newCount": 57,
+    "closeCount": 38,
+    "netGrowth": 19
+  },
+  {
+    "code": "15223",
+    "newCount": 7,
+    "closeCount": 6,
+    "netGrowth": 1
+  },
+  {
+    "code": "15224",
+    "newCount": 5,
+    "closeCount": 10,
+    "netGrowth": -5
+  },
+  {
+    "code": "15225",
+    "newCount": 16,
+    "closeCount": 8,
+    "netGrowth": 8
+  },
+  {
+    "code": "15226",
+    "newCount": 22,
+    "closeCount": 20,
+    "netGrowth": 2
+  },
+  {
+    "code": "15227",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "15307",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "15342",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "15361",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "15385",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "15405",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "15461",
+    "newCount": 12,
+    "closeCount": 3,
+    "netGrowth": 9
+  },
+  {
+    "code": "15482",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "15504",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "15581",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "16201",
+    "newCount": 185,
+    "closeCount": 127,
+    "netGrowth": 58
+  },
+  {
+    "code": "16202",
+    "newCount": 58,
+    "closeCount": 35,
+    "netGrowth": 23
+  },
+  {
+    "code": "16204",
+    "newCount": 18,
+    "closeCount": 7,
+    "netGrowth": 11
+  },
+  {
+    "code": "16205",
+    "newCount": 10,
+    "closeCount": 8,
+    "netGrowth": 2
+  },
+  {
+    "code": "16206",
+    "newCount": 11,
+    "closeCount": 5,
+    "netGrowth": 6
+  },
+  {
+    "code": "16207",
+    "newCount": 10,
+    "closeCount": 7,
+    "netGrowth": 3
+  },
+  {
+    "code": "16208",
+    "newCount": 26,
+    "closeCount": 8,
+    "netGrowth": 18
+  },
+  {
+    "code": "16209",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "16210",
+    "newCount": 16,
+    "closeCount": 18,
+    "netGrowth": -2
+  },
+  {
+    "code": "16211",
+    "newCount": 46,
+    "closeCount": 20,
+    "netGrowth": 26
+  },
+  {
+    "code": "16321",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "16322",
+    "newCount": 9,
+    "closeCount": 5,
+    "netGrowth": 4
+  },
+  {
+    "code": "16323",
+    "newCount": 8,
+    "closeCount": 2,
+    "netGrowth": 6
+  },
+  {
+    "code": "16342",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "16343",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "17201",
+    "newCount": 275,
+    "closeCount": 438,
+    "netGrowth": -163
+  },
+  {
+    "code": "17202",
+    "newCount": 16,
+    "closeCount": 24,
+    "netGrowth": -8
+  },
+  {
+    "code": "17203",
+    "newCount": 35,
+    "closeCount": 63,
+    "netGrowth": -28
+  },
+  {
+    "code": "17204",
+    "newCount": 11,
+    "closeCount": 17,
+    "netGrowth": -6
+  },
+  {
+    "code": "17205",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "17206",
+    "newCount": 10,
+    "closeCount": 48,
+    "netGrowth": -38
+  },
+  {
+    "code": "17207",
+    "newCount": 4,
+    "closeCount": 14,
+    "netGrowth": -10
+  },
+  {
+    "code": "17209",
+    "newCount": 11,
+    "closeCount": 14,
+    "netGrowth": -3
+  },
+  {
+    "code": "17210",
+    "newCount": 39,
+    "closeCount": 57,
+    "netGrowth": -18
+  },
+  {
+    "code": "17211",
+    "newCount": 17,
+    "closeCount": 22,
+    "netGrowth": -5
+  },
+  {
+    "code": "17212",
+    "newCount": 26,
+    "closeCount": 31,
+    "netGrowth": -5
+  },
+  {
+    "code": "17324",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "17361",
+    "newCount": 7,
+    "closeCount": 7,
+    "netGrowth": 0
+  },
+  {
+    "code": "17365",
+    "newCount": 11,
+    "closeCount": 18,
+    "netGrowth": -7
+  },
+  {
+    "code": "17384",
+    "newCount": 11,
+    "closeCount": 9,
+    "netGrowth": 2
+  },
+  {
+    "code": "17386",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "17407",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "17461",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "17463",
+    "newCount": 10,
+    "closeCount": 3,
+    "netGrowth": 7
+  },
+  {
+    "code": "18201",
+    "newCount": 159,
+    "closeCount": 122,
+    "netGrowth": 37
+  },
+  {
+    "code": "18202",
+    "newCount": 30,
+    "closeCount": 13,
+    "netGrowth": 17
+  },
+  {
+    "code": "18204",
+    "newCount": 9,
+    "closeCount": 7,
+    "netGrowth": 2
+  },
+  {
+    "code": "18205",
+    "newCount": 8,
+    "closeCount": 5,
+    "netGrowth": 3
+  },
+  {
+    "code": "18206",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "18207",
+    "newCount": 33,
+    "closeCount": 27,
+    "netGrowth": 6
+  },
+  {
+    "code": "18208",
+    "newCount": 10,
+    "closeCount": 7,
+    "netGrowth": 3
+  },
+  {
+    "code": "18209",
+    "newCount": 36,
+    "closeCount": 19,
+    "netGrowth": 17
+  },
+  {
+    "code": "18210",
+    "newCount": 29,
+    "closeCount": 24,
+    "netGrowth": 5
+  },
+  {
+    "code": "18322",
+    "newCount": 7,
+    "closeCount": 4,
+    "netGrowth": 3
+  },
+  {
+    "code": "18382",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "18404",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "18423",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "18442",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "18481",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "18483",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "18501",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "19201",
+    "newCount": 104,
+    "closeCount": 253,
+    "netGrowth": -149
+  },
+  {
+    "code": "19202",
+    "newCount": 33,
+    "closeCount": 46,
+    "netGrowth": -13
+  },
+  {
+    "code": "19204",
+    "newCount": 11,
+    "closeCount": 20,
+    "netGrowth": -9
+  },
+  {
+    "code": "19205",
+    "newCount": 13,
+    "closeCount": 15,
+    "netGrowth": -2
+  },
+  {
+    "code": "19206",
+    "newCount": 6,
+    "closeCount": 22,
+    "netGrowth": -16
+  },
+  {
+    "code": "19207",
+    "newCount": 12,
+    "closeCount": 15,
+    "netGrowth": -3
+  },
+  {
+    "code": "19208",
+    "newCount": 23,
+    "closeCount": 26,
+    "netGrowth": -3
+  },
+  {
+    "code": "19209",
+    "newCount": 40,
+    "closeCount": 27,
+    "netGrowth": 13
+  },
+  {
+    "code": "19210",
+    "newCount": 31,
+    "closeCount": 37,
+    "netGrowth": -6
+  },
+  {
+    "code": "19211",
+    "newCount": 27,
+    "closeCount": 40,
+    "netGrowth": -13
+  },
+  {
+    "code": "19212",
+    "newCount": 10,
+    "closeCount": 5,
+    "netGrowth": 5
+  },
+  {
+    "code": "19213",
+    "newCount": 7,
+    "closeCount": 11,
+    "netGrowth": -4
+  },
+  {
+    "code": "19214",
+    "newCount": 17,
+    "closeCount": 13,
+    "netGrowth": 4
+  },
+  {
+    "code": "19346",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "19364",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "19365",
+    "newCount": 4,
+    "closeCount": 13,
+    "netGrowth": -9
+  },
+  {
+    "code": "19366",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "19368",
+    "newCount": 7,
+    "closeCount": 4,
+    "netGrowth": 3
+  },
+  {
+    "code": "19384",
+    "newCount": 13,
+    "closeCount": 23,
+    "netGrowth": -10
+  },
+  {
+    "code": "19422",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "19423",
+    "newCount": 1,
+    "closeCount": 5,
+    "netGrowth": -4
+  },
+  {
+    "code": "19424",
+    "newCount": 4,
+    "closeCount": 8,
+    "netGrowth": -4
+  },
+  {
+    "code": "19425",
+    "newCount": 9,
+    "closeCount": 11,
+    "netGrowth": -2
+  },
+  {
+    "code": "19429",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "19430",
+    "newCount": 26,
+    "closeCount": 22,
+    "netGrowth": 4
+  },
+  {
+    "code": "19442",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "20201",
+    "newCount": 154,
+    "closeCount": 227,
+    "netGrowth": -73
+  },
+  {
+    "code": "20202",
+    "newCount": 102,
+    "closeCount": 153,
+    "netGrowth": -51
+  },
+  {
+    "code": "20203",
+    "newCount": 67,
+    "closeCount": 81,
+    "netGrowth": -14
+  },
+  {
+    "code": "20204",
+    "newCount": 16,
+    "closeCount": 25,
+    "netGrowth": -9
+  },
+  {
+    "code": "20205",
+    "newCount": 34,
+    "closeCount": 34,
+    "netGrowth": 0
+  },
+  {
+    "code": "20206",
+    "newCount": 21,
+    "closeCount": 28,
+    "netGrowth": -7
+  },
+  {
+    "code": "20207",
+    "newCount": 8,
+    "closeCount": 16,
+    "netGrowth": -8
+  },
+  {
+    "code": "20208",
+    "newCount": 22,
+    "closeCount": 23,
+    "netGrowth": -1
+  },
+  {
+    "code": "20209",
+    "newCount": 20,
+    "closeCount": 23,
+    "netGrowth": -3
+  },
+  {
+    "code": "20210",
+    "newCount": 8,
+    "closeCount": 14,
+    "netGrowth": -6
+  },
+  {
+    "code": "20211",
+    "newCount": 9,
+    "closeCount": 17,
+    "netGrowth": -8
+  },
+  {
+    "code": "20212",
+    "newCount": 13,
+    "closeCount": 8,
+    "netGrowth": 5
+  },
+  {
+    "code": "20213",
+    "newCount": 6,
+    "closeCount": 10,
+    "netGrowth": -4
+  },
+  {
+    "code": "20214",
+    "newCount": 16,
+    "closeCount": 22,
+    "netGrowth": -6
+  },
+  {
+    "code": "20215",
+    "newCount": 19,
+    "closeCount": 35,
+    "netGrowth": -16
+  },
+  {
+    "code": "20217",
+    "newCount": 35,
+    "closeCount": 53,
+    "netGrowth": -18
+  },
+  {
+    "code": "20218",
+    "newCount": 15,
+    "closeCount": 26,
+    "netGrowth": -11
+  },
+  {
+    "code": "20219",
+    "newCount": 12,
+    "closeCount": 20,
+    "netGrowth": -8
+  },
+  {
+    "code": "20220",
+    "newCount": 27,
+    "closeCount": 28,
+    "netGrowth": -1
+  },
+  {
+    "code": "20303",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "20304",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "20305",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "20306",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "20309",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "20321",
+    "newCount": 41,
+    "closeCount": 27,
+    "netGrowth": 14
+  },
+  {
+    "code": "20323",
+    "newCount": 15,
+    "closeCount": 15,
+    "netGrowth": 0
+  },
+  {
+    "code": "20324",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "20349",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "20350",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "20361",
+    "newCount": 3,
+    "closeCount": 9,
+    "netGrowth": -6
+  },
+  {
+    "code": "20362",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "20363",
+    "newCount": 5,
+    "closeCount": 5,
+    "netGrowth": 0
+  },
+  {
+    "code": "20382",
+    "newCount": 1,
+    "closeCount": 9,
+    "netGrowth": -8
+  },
+  {
+    "code": "20383",
+    "newCount": 8,
+    "closeCount": 14,
+    "netGrowth": -6
+  },
+  {
+    "code": "20384",
+    "newCount": 1,
+    "closeCount": 5,
+    "netGrowth": -4
+  },
+  {
+    "code": "20385",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "20386",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "20388",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "20402",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "20403",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "20404",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "20407",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "20409",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "20410",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "20411",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "20413",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "20414",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "20415",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "20416",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "20422",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "20423",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "20425",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "20430",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "20432",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "20446",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "20448",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "20450",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "20451",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "20452",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "20481",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "20482",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "20485",
+    "newCount": 13,
+    "closeCount": 15,
+    "netGrowth": -2
+  },
+  {
+    "code": "20486",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "20521",
+    "newCount": 2,
+    "closeCount": 5,
+    "netGrowth": -3
+  },
+  {
+    "code": "20541",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "20543",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "20561",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "20562",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "20563",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "20583",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "20588",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "20590",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "21201",
+    "newCount": 269,
+    "closeCount": 400,
+    "netGrowth": -131
+  },
+  {
+    "code": "21202",
+    "newCount": 63,
+    "closeCount": 89,
+    "netGrowth": -26
+  },
+  {
+    "code": "21203",
+    "newCount": 35,
+    "closeCount": 36,
+    "netGrowth": -1
+  },
+  {
+    "code": "21204",
+    "newCount": 53,
+    "closeCount": 42,
+    "netGrowth": 11
+  },
+  {
+    "code": "21205",
+    "newCount": 27,
+    "closeCount": 31,
+    "netGrowth": -4
+  },
+  {
+    "code": "21206",
+    "newCount": 21,
+    "closeCount": 25,
+    "netGrowth": -4
+  },
+  {
+    "code": "21207",
+    "newCount": 10,
+    "closeCount": 7,
+    "netGrowth": 3
+  },
+  {
+    "code": "21208",
+    "newCount": 22,
+    "closeCount": 20,
+    "netGrowth": 2
+  },
+  {
+    "code": "21209",
+    "newCount": 41,
+    "closeCount": 42,
+    "netGrowth": -1
+  },
+  {
+    "code": "21210",
+    "newCount": 11,
+    "closeCount": 24,
+    "netGrowth": -13
+  },
+  {
+    "code": "21211",
+    "newCount": 31,
+    "closeCount": 21,
+    "netGrowth": 10
+  },
+  {
+    "code": "21212",
+    "newCount": 30,
+    "closeCount": 25,
+    "netGrowth": 5
+  },
+  {
+    "code": "21213",
+    "newCount": 48,
+    "closeCount": 70,
+    "netGrowth": -22
+  },
+  {
+    "code": "21214",
+    "newCount": 45,
+    "closeCount": 42,
+    "netGrowth": 3
+  },
+  {
+    "code": "21215",
+    "newCount": 16,
+    "closeCount": 12,
+    "netGrowth": 4
+  },
+  {
+    "code": "21216",
+    "newCount": 26,
+    "closeCount": 26,
+    "netGrowth": 0
+  },
+  {
+    "code": "21217",
+    "newCount": 11,
+    "closeCount": 4,
+    "netGrowth": 7
+  },
+  {
+    "code": "21218",
+    "newCount": 14,
+    "closeCount": 8,
+    "netGrowth": 6
+  },
+  {
+    "code": "21219",
+    "newCount": 21,
+    "closeCount": 19,
+    "netGrowth": 2
+  },
+  {
+    "code": "21220",
+    "newCount": 7,
+    "closeCount": 14,
+    "netGrowth": -7
+  },
+  {
+    "code": "21221",
+    "newCount": 12,
+    "closeCount": 14,
+    "netGrowth": -2
+  },
+  {
+    "code": "21302",
+    "newCount": 30,
+    "closeCount": 22,
+    "netGrowth": 8
+  },
+  {
+    "code": "21303",
+    "newCount": 5,
+    "closeCount": 8,
+    "netGrowth": -3
+  },
+  {
+    "code": "21341",
+    "newCount": 12,
+    "closeCount": 10,
+    "netGrowth": 2
+  },
+  {
+    "code": "21361",
+    "newCount": 7,
+    "closeCount": 9,
+    "netGrowth": -2
+  },
+  {
+    "code": "21362",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "21381",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "21382",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "21383",
+    "newCount": 9,
+    "closeCount": 5,
+    "netGrowth": 4
+  },
+  {
+    "code": "21401",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "21403",
+    "newCount": 8,
+    "closeCount": 13,
+    "netGrowth": -5
+  },
+  {
+    "code": "21404",
+    "newCount": 5,
+    "closeCount": 12,
+    "netGrowth": -7
+  },
+  {
+    "code": "21421",
+    "newCount": 6,
+    "closeCount": 12,
+    "netGrowth": -6
+  },
+  {
+    "code": "21501",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "21502",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "21503",
+    "newCount": 2,
+    "closeCount": 8,
+    "netGrowth": -6
+  },
+  {
+    "code": "21504",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "21505",
+    "newCount": 7,
+    "closeCount": 6,
+    "netGrowth": 1
+  },
+  {
+    "code": "21506",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "21507",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "21521",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "21604",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "22100",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "22101",
+    "newCount": 171,
+    "closeCount": 90,
+    "netGrowth": 81
+  },
+  {
+    "code": "22102",
+    "newCount": 113,
+    "closeCount": 77,
+    "netGrowth": 36
+  },
+  {
+    "code": "22103",
+    "newCount": 73,
+    "closeCount": 109,
+    "netGrowth": -36
+  },
+  {
+    "code": "22138",
+    "newCount": 323,
+    "closeCount": 208,
+    "netGrowth": 115
+  },
+  {
+    "code": "22139",
+    "newCount": 39,
+    "closeCount": 32,
+    "netGrowth": 7
+  },
+  {
+    "code": "22140",
+    "newCount": 10,
+    "closeCount": 7,
+    "netGrowth": 3
+  },
+  {
+    "code": "22203",
+    "newCount": 82,
+    "closeCount": 70,
+    "netGrowth": 12
+  },
+  {
+    "code": "22205",
+    "newCount": 27,
+    "closeCount": 14,
+    "netGrowth": 13
+  },
+  {
+    "code": "22206",
+    "newCount": 48,
+    "closeCount": 28,
+    "netGrowth": 20
+  },
+  {
+    "code": "22207",
+    "newCount": 58,
+    "closeCount": 39,
+    "netGrowth": 19
+  },
+  {
+    "code": "22208",
+    "newCount": 31,
+    "closeCount": 32,
+    "netGrowth": -1
+  },
+  {
+    "code": "22209",
+    "newCount": 27,
+    "closeCount": 14,
+    "netGrowth": 13
+  },
+  {
+    "code": "22210",
+    "newCount": 106,
+    "closeCount": 72,
+    "netGrowth": 34
+  },
+  {
+    "code": "22211",
+    "newCount": 54,
+    "closeCount": 28,
+    "netGrowth": 26
+  },
+  {
+    "code": "22212",
+    "newCount": 49,
+    "closeCount": 28,
+    "netGrowth": 21
+  },
+  {
+    "code": "22213",
+    "newCount": 29,
+    "closeCount": 24,
+    "netGrowth": 5
+  },
+  {
+    "code": "22214",
+    "newCount": 60,
+    "closeCount": 33,
+    "netGrowth": 27
+  },
+  {
+    "code": "22215",
+    "newCount": 34,
+    "closeCount": 13,
+    "netGrowth": 21
+  },
+  {
+    "code": "22216",
+    "newCount": 22,
+    "closeCount": 10,
+    "netGrowth": 12
+  },
+  {
+    "code": "22219",
+    "newCount": 5,
+    "closeCount": 7,
+    "netGrowth": -2
+  },
+  {
+    "code": "22220",
+    "newCount": 13,
+    "closeCount": 13,
+    "netGrowth": 0
+  },
+  {
+    "code": "22221",
+    "newCount": 19,
+    "closeCount": 5,
+    "netGrowth": 14
+  },
+  {
+    "code": "22222",
+    "newCount": 11,
+    "closeCount": 9,
+    "netGrowth": 2
+  },
+  {
+    "code": "22223",
+    "newCount": 18,
+    "closeCount": 4,
+    "netGrowth": 14
+  },
+  {
+    "code": "22224",
+    "newCount": 12,
+    "closeCount": 9,
+    "netGrowth": 3
+  },
+  {
+    "code": "22225",
+    "newCount": 12,
+    "closeCount": 6,
+    "netGrowth": 6
+  },
+  {
+    "code": "22226",
+    "newCount": 25,
+    "closeCount": 11,
+    "netGrowth": 14
+  },
+  {
+    "code": "22301",
+    "newCount": 7,
+    "closeCount": 4,
+    "netGrowth": 3
+  },
+  {
+    "code": "22302",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "22304",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "22306",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "22325",
+    "newCount": 19,
+    "closeCount": 5,
+    "netGrowth": 14
+  },
+  {
+    "code": "22341",
+    "newCount": 23,
+    "closeCount": 12,
+    "netGrowth": 11
+  },
+  {
+    "code": "22342",
+    "newCount": 15,
+    "closeCount": 8,
+    "netGrowth": 7
+  },
+  {
+    "code": "22344",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "22424",
+    "newCount": 11,
+    "closeCount": 9,
+    "netGrowth": 2
+  },
+  {
+    "code": "22429",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "22461",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "23101",
+    "newCount": 153,
+    "closeCount": 227,
+    "netGrowth": -74
+  },
+  {
+    "code": "23102",
+    "newCount": 167,
+    "closeCount": 217,
+    "netGrowth": -50
+  },
+  {
+    "code": "23103",
+    "newCount": 128,
+    "closeCount": 145,
+    "netGrowth": -17
+  },
+  {
+    "code": "23104",
+    "newCount": 177,
+    "closeCount": 196,
+    "netGrowth": -19
+  },
+  {
+    "code": "23105",
+    "newCount": 438,
+    "closeCount": 249,
+    "netGrowth": 189
+  },
+  {
+    "code": "23106",
+    "newCount": 542,
+    "closeCount": 646,
+    "netGrowth": -104
+  },
+  {
+    "code": "23107",
+    "newCount": 111,
+    "closeCount": 132,
+    "netGrowth": -21
+  },
+  {
+    "code": "23108",
+    "newCount": 65,
+    "closeCount": 88,
+    "netGrowth": -23
+  },
+  {
+    "code": "23109",
+    "newCount": 47,
+    "closeCount": 75,
+    "netGrowth": -28
+  },
+  {
+    "code": "23110",
+    "newCount": 148,
+    "closeCount": 162,
+    "netGrowth": -14
+  },
+  {
+    "code": "23111",
+    "newCount": 91,
+    "closeCount": 127,
+    "netGrowth": -36
+  },
+  {
+    "code": "23112",
+    "newCount": 77,
+    "closeCount": 94,
+    "netGrowth": -17
+  },
+  {
+    "code": "23113",
+    "newCount": 102,
+    "closeCount": 125,
+    "netGrowth": -23
+  },
+  {
+    "code": "23114",
+    "newCount": 96,
+    "closeCount": 107,
+    "netGrowth": -11
+  },
+  {
+    "code": "23115",
+    "newCount": 122,
+    "closeCount": 149,
+    "netGrowth": -27
+  },
+  {
+    "code": "23116",
+    "newCount": 103,
+    "closeCount": 125,
+    "netGrowth": -22
+  },
+  {
+    "code": "23201",
+    "newCount": 158,
+    "closeCount": 197,
+    "netGrowth": -39
+  },
+  {
+    "code": "23202",
+    "newCount": 182,
+    "closeCount": 235,
+    "netGrowth": -53
+  },
+  {
+    "code": "23203",
+    "newCount": 193,
+    "closeCount": 196,
+    "netGrowth": -3
+  },
+  {
+    "code": "23204",
+    "newCount": 65,
+    "closeCount": 68,
+    "netGrowth": -3
+  },
+  {
+    "code": "23205",
+    "newCount": 59,
+    "closeCount": 41,
+    "netGrowth": 18
+  },
+  {
+    "code": "23206",
+    "newCount": 151,
+    "closeCount": 181,
+    "netGrowth": -30
+  },
+  {
+    "code": "23207",
+    "newCount": 65,
+    "closeCount": 60,
+    "netGrowth": 5
+  },
+  {
+    "code": "23208",
+    "newCount": 34,
+    "closeCount": 31,
+    "netGrowth": 3
+  },
+  {
+    "code": "23209",
+    "newCount": 25,
+    "closeCount": 28,
+    "netGrowth": -3
+  },
+  {
+    "code": "23210",
+    "newCount": 66,
+    "closeCount": 66,
+    "netGrowth": 0
+  },
+  {
+    "code": "23211",
+    "newCount": 140,
+    "closeCount": 144,
+    "netGrowth": -4
+  },
+  {
+    "code": "23212",
+    "newCount": 73,
+    "closeCount": 58,
+    "netGrowth": 15
+  },
+  {
+    "code": "23213",
+    "newCount": 69,
+    "closeCount": 54,
+    "netGrowth": 15
+  },
+  {
+    "code": "23214",
+    "newCount": 24,
+    "closeCount": 47,
+    "netGrowth": -23
+  },
+  {
+    "code": "23215",
+    "newCount": 25,
+    "closeCount": 30,
+    "netGrowth": -5
+  },
+  {
+    "code": "23216",
+    "newCount": 26,
+    "closeCount": 13,
+    "netGrowth": 13
+  },
+  {
+    "code": "23217",
+    "newCount": 31,
+    "closeCount": 35,
+    "netGrowth": -4
+  },
+  {
+    "code": "23219",
+    "newCount": 74,
+    "closeCount": 77,
+    "netGrowth": -3
+  },
+  {
+    "code": "23220",
+    "newCount": 53,
+    "closeCount": 47,
+    "netGrowth": 6
+  },
+  {
+    "code": "23221",
+    "newCount": 6,
+    "closeCount": 10,
+    "netGrowth": -4
+  },
+  {
+    "code": "23222",
+    "newCount": 59,
+    "closeCount": 35,
+    "netGrowth": 24
+  },
+  {
+    "code": "23223",
+    "newCount": 43,
+    "closeCount": 33,
+    "netGrowth": 10
+  },
+  {
+    "code": "23224",
+    "newCount": 20,
+    "closeCount": 28,
+    "netGrowth": -8
+  },
+  {
+    "code": "23225",
+    "newCount": 26,
+    "closeCount": 19,
+    "netGrowth": 7
+  },
+  {
+    "code": "23226",
+    "newCount": 28,
+    "closeCount": 35,
+    "netGrowth": -7
+  },
+  {
+    "code": "23227",
+    "newCount": 16,
+    "closeCount": 14,
+    "netGrowth": 2
+  },
+  {
+    "code": "23228",
+    "newCount": 13,
+    "closeCount": 15,
+    "netGrowth": -2
+  },
+  {
+    "code": "23229",
+    "newCount": 26,
+    "closeCount": 35,
+    "netGrowth": -9
+  },
+  {
+    "code": "23230",
+    "newCount": 45,
+    "closeCount": 43,
+    "netGrowth": 2
+  },
+  {
+    "code": "23231",
+    "newCount": 27,
+    "closeCount": 11,
+    "netGrowth": 16
+  },
+  {
+    "code": "23232",
+    "newCount": 29,
+    "closeCount": 21,
+    "netGrowth": 8
+  },
+  {
+    "code": "23233",
+    "newCount": 40,
+    "closeCount": 43,
+    "netGrowth": -3
+  },
+  {
+    "code": "23234",
+    "newCount": 35,
+    "closeCount": 48,
+    "netGrowth": -13
+  },
+  {
+    "code": "23235",
+    "newCount": 32,
+    "closeCount": 16,
+    "netGrowth": 16
+  },
+  {
+    "code": "23236",
+    "newCount": 17,
+    "closeCount": 21,
+    "netGrowth": -4
+  },
+  {
+    "code": "23237",
+    "newCount": 61,
+    "closeCount": 43,
+    "netGrowth": 18
+  },
+  {
+    "code": "23238",
+    "newCount": 33,
+    "closeCount": 24,
+    "netGrowth": 9
+  },
+  {
+    "code": "23302",
+    "newCount": 20,
+    "closeCount": 22,
+    "netGrowth": -2
+  },
+  {
+    "code": "23304",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "23342",
+    "newCount": 13,
+    "closeCount": 15,
+    "netGrowth": -2
+  },
+  {
+    "code": "23361",
+    "newCount": 10,
+    "closeCount": 10,
+    "netGrowth": 0
+  },
+  {
+    "code": "23362",
+    "newCount": 13,
+    "closeCount": 10,
+    "netGrowth": 3
+  },
+  {
+    "code": "23424",
+    "newCount": 19,
+    "closeCount": 12,
+    "netGrowth": 7
+  },
+  {
+    "code": "23425",
+    "newCount": 19,
+    "closeCount": 16,
+    "netGrowth": 3
+  },
+  {
+    "code": "23427",
+    "newCount": 5,
+    "closeCount": 6,
+    "netGrowth": -1
+  },
+  {
+    "code": "23441",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "23442",
+    "newCount": 15,
+    "closeCount": 7,
+    "netGrowth": 8
+  },
+  {
+    "code": "23445",
+    "newCount": 3,
+    "closeCount": 14,
+    "netGrowth": -11
+  },
+  {
+    "code": "23446",
+    "newCount": 9,
+    "closeCount": 4,
+    "netGrowth": 5
+  },
+  {
+    "code": "23447",
+    "newCount": 17,
+    "closeCount": 8,
+    "netGrowth": 9
+  },
+  {
+    "code": "23501",
+    "newCount": 17,
+    "closeCount": 3,
+    "netGrowth": 14
+  },
+  {
+    "code": "23561",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "23562",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "24201",
+    "newCount": 104,
+    "closeCount": 132,
+    "netGrowth": -28
+  },
+  {
+    "code": "24202",
+    "newCount": 154,
+    "closeCount": 172,
+    "netGrowth": -18
+  },
+  {
+    "code": "24203",
+    "newCount": 35,
+    "closeCount": 62,
+    "netGrowth": -27
+  },
+  {
+    "code": "24204",
+    "newCount": 55,
+    "closeCount": 80,
+    "netGrowth": -25
+  },
+  {
+    "code": "24205",
+    "newCount": 74,
+    "closeCount": 50,
+    "netGrowth": 24
+  },
+  {
+    "code": "24207",
+    "newCount": 88,
+    "closeCount": 72,
+    "netGrowth": 16
+  },
+  {
+    "code": "24208",
+    "newCount": 13,
+    "closeCount": 41,
+    "netGrowth": -28
+  },
+  {
+    "code": "24209",
+    "newCount": 1,
+    "closeCount": 14,
+    "netGrowth": -13
+  },
+  {
+    "code": "24210",
+    "newCount": 10,
+    "closeCount": 10,
+    "netGrowth": 0
+  },
+  {
+    "code": "24211",
+    "newCount": 4,
+    "closeCount": 9,
+    "netGrowth": -5
+  },
+  {
+    "code": "24212",
+    "newCount": 3,
+    "closeCount": 7,
+    "netGrowth": -4
+  },
+  {
+    "code": "24214",
+    "newCount": 12,
+    "closeCount": 12,
+    "netGrowth": 0
+  },
+  {
+    "code": "24215",
+    "newCount": 12,
+    "closeCount": 26,
+    "netGrowth": -14
+  },
+  {
+    "code": "24216",
+    "newCount": 28,
+    "closeCount": 56,
+    "netGrowth": -28
+  },
+  {
+    "code": "24303",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "24324",
+    "newCount": 10,
+    "closeCount": 6,
+    "netGrowth": 4
+  },
+  {
+    "code": "24341",
+    "newCount": 23,
+    "closeCount": 21,
+    "netGrowth": 2
+  },
+  {
+    "code": "24343",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "24344",
+    "newCount": 6,
+    "closeCount": 6,
+    "netGrowth": 0
+  },
+  {
+    "code": "24441",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "24442",
+    "newCount": 12,
+    "closeCount": 4,
+    "netGrowth": 8
+  },
+  {
+    "code": "24443",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "24461",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "24470",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "24471",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "24472",
+    "newCount": 2,
+    "closeCount": 8,
+    "netGrowth": -6
+  },
+  {
+    "code": "24543",
+    "newCount": 3,
+    "closeCount": 7,
+    "netGrowth": -4
+  },
+  {
+    "code": "24561",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "24562",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "25201",
+    "newCount": 179,
+    "closeCount": 81,
+    "netGrowth": 98
+  },
+  {
+    "code": "25202",
+    "newCount": 42,
+    "closeCount": 26,
+    "netGrowth": 16
+  },
+  {
+    "code": "25203",
+    "newCount": 43,
+    "closeCount": 16,
+    "netGrowth": 27
+  },
+  {
+    "code": "25204",
+    "newCount": 46,
+    "closeCount": 20,
+    "netGrowth": 26
+  },
+  {
+    "code": "25206",
+    "newCount": 68,
+    "closeCount": 32,
+    "netGrowth": 36
+  },
+  {
+    "code": "25207",
+    "newCount": 45,
+    "closeCount": 13,
+    "netGrowth": 32
+  },
+  {
+    "code": "25208",
+    "newCount": 40,
+    "closeCount": 19,
+    "netGrowth": 21
+  },
+  {
+    "code": "25209",
+    "newCount": 32,
+    "closeCount": 11,
+    "netGrowth": 21
+  },
+  {
+    "code": "25210",
+    "newCount": 25,
+    "closeCount": 9,
+    "netGrowth": 16
+  },
+  {
+    "code": "25211",
+    "newCount": 18,
+    "closeCount": 9,
+    "netGrowth": 9
+  },
+  {
+    "code": "25212",
+    "newCount": 24,
+    "closeCount": 16,
+    "netGrowth": 8
+  },
+  {
+    "code": "25213",
+    "newCount": 42,
+    "closeCount": 23,
+    "netGrowth": 19
+  },
+  {
+    "code": "25214",
+    "newCount": 9,
+    "closeCount": 5,
+    "netGrowth": 4
+  },
+  {
+    "code": "25383",
+    "newCount": 12,
+    "closeCount": 3,
+    "netGrowth": 9
+  },
+  {
+    "code": "25384",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "25425",
+    "newCount": 12,
+    "closeCount": 7,
+    "netGrowth": 5
+  },
+  {
+    "code": "25441",
+    "newCount": 8,
+    "closeCount": 3,
+    "netGrowth": 5
+  },
+  {
+    "code": "25442",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "25443",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "26101",
+    "newCount": 87,
+    "closeCount": 52,
+    "netGrowth": 35
+  },
+  {
+    "code": "26102",
+    "newCount": 58,
+    "closeCount": 50,
+    "netGrowth": 8
+  },
+  {
+    "code": "26103",
+    "newCount": 128,
+    "closeCount": 59,
+    "netGrowth": 69
+  },
+  {
+    "code": "26104",
+    "newCount": 204,
+    "closeCount": 107,
+    "netGrowth": 97
+  },
+  {
+    "code": "26105",
+    "newCount": 74,
+    "closeCount": 28,
+    "netGrowth": 46
+  },
+  {
+    "code": "26106",
+    "newCount": 252,
+    "closeCount": 132,
+    "netGrowth": 120
+  },
+  {
+    "code": "26107",
+    "newCount": 109,
+    "closeCount": 70,
+    "netGrowth": 39
+  },
+  {
+    "code": "26108",
+    "newCount": 115,
+    "closeCount": 67,
+    "netGrowth": 48
+  },
+  {
+    "code": "26109",
+    "newCount": 176,
+    "closeCount": 93,
+    "netGrowth": 83
+  },
+  {
+    "code": "26110",
+    "newCount": 98,
+    "closeCount": 50,
+    "netGrowth": 48
+  },
+  {
+    "code": "26111",
+    "newCount": 74,
+    "closeCount": 44,
+    "netGrowth": 30
+  },
+  {
+    "code": "26201",
+    "newCount": 16,
+    "closeCount": 13,
+    "netGrowth": 3
+  },
+  {
+    "code": "26202",
+    "newCount": 18,
+    "closeCount": 13,
+    "netGrowth": 5
+  },
+  {
+    "code": "26203",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "26204",
+    "newCount": 84,
+    "closeCount": 50,
+    "netGrowth": 34
+  },
+  {
+    "code": "26205",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "26206",
+    "newCount": 46,
+    "closeCount": 27,
+    "netGrowth": 19
+  },
+  {
+    "code": "26207",
+    "newCount": 40,
+    "closeCount": 19,
+    "netGrowth": 21
+  },
+  {
+    "code": "26208",
+    "newCount": 26,
+    "closeCount": 17,
+    "netGrowth": 9
+  },
+  {
+    "code": "26209",
+    "newCount": 30,
+    "closeCount": 13,
+    "netGrowth": 17
+  },
+  {
+    "code": "26210",
+    "newCount": 37,
+    "closeCount": 19,
+    "netGrowth": 18
+  },
+  {
+    "code": "26211",
+    "newCount": 33,
+    "closeCount": 14,
+    "netGrowth": 19
+  },
+  {
+    "code": "26212",
+    "newCount": 23,
+    "closeCount": 12,
+    "netGrowth": 11
+  },
+  {
+    "code": "26213",
+    "newCount": 16,
+    "closeCount": 6,
+    "netGrowth": 10
+  },
+  {
+    "code": "26214",
+    "newCount": 37,
+    "closeCount": 11,
+    "netGrowth": 26
+  },
+  {
+    "code": "26303",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "26322",
+    "newCount": 13,
+    "closeCount": 8,
+    "netGrowth": 5
+  },
+  {
+    "code": "26343",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "26344",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "26364",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "26365",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "26366",
+    "newCount": 13,
+    "closeCount": 6,
+    "netGrowth": 7
+  },
+  {
+    "code": "26367",
+    "newCount": 7,
+    "closeCount": 0,
+    "netGrowth": 7
+  },
+  {
+    "code": "26407",
+    "newCount": 8,
+    "closeCount": 4,
+    "netGrowth": 4
+  },
+  {
+    "code": "26465",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "27102",
+    "newCount": 147,
+    "closeCount": 100,
+    "netGrowth": 47
+  },
+  {
+    "code": "27103",
+    "newCount": 139,
+    "closeCount": 102,
+    "netGrowth": 37
+  },
+  {
+    "code": "27104",
+    "newCount": 71,
+    "closeCount": 30,
+    "netGrowth": 41
+  },
+  {
+    "code": "27106",
+    "newCount": 431,
+    "closeCount": 249,
+    "netGrowth": 182
+  },
+  {
+    "code": "27107",
+    "newCount": 121,
+    "closeCount": 50,
+    "netGrowth": 71
+  },
+  {
+    "code": "27108",
+    "newCount": 61,
+    "closeCount": 59,
+    "netGrowth": 2
+  },
+  {
+    "code": "27109",
+    "newCount": 167,
+    "closeCount": 127,
+    "netGrowth": 40
+  },
+  {
+    "code": "27111",
+    "newCount": 238,
+    "closeCount": 129,
+    "netGrowth": 109
+  },
+  {
+    "code": "27113",
+    "newCount": 88,
+    "closeCount": 52,
+    "netGrowth": 36
+  },
+  {
+    "code": "27114",
+    "newCount": 171,
+    "closeCount": 95,
+    "netGrowth": 76
+  },
+  {
+    "code": "27115",
+    "newCount": 125,
+    "closeCount": 103,
+    "netGrowth": 22
+  },
+  {
+    "code": "27116",
+    "newCount": 204,
+    "closeCount": 138,
+    "netGrowth": 66
+  },
+  {
+    "code": "27117",
+    "newCount": 65,
+    "closeCount": 44,
+    "netGrowth": 21
+  },
+  {
+    "code": "27118",
+    "newCount": 174,
+    "closeCount": 107,
+    "netGrowth": 67
+  },
+  {
+    "code": "27119",
+    "newCount": 167,
+    "closeCount": 86,
+    "netGrowth": 81
+  },
+  {
+    "code": "27120",
+    "newCount": 151,
+    "closeCount": 92,
+    "netGrowth": 59
+  },
+  {
+    "code": "27121",
+    "newCount": 224,
+    "closeCount": 137,
+    "netGrowth": 87
+  },
+  {
+    "code": "27122",
+    "newCount": 232,
+    "closeCount": 110,
+    "netGrowth": 122
+  },
+  {
+    "code": "27123",
+    "newCount": 357,
+    "closeCount": 217,
+    "netGrowth": 140
+  },
+  {
+    "code": "27124",
+    "newCount": 75,
+    "closeCount": 53,
+    "netGrowth": 22
+  },
+  {
+    "code": "27125",
+    "newCount": 125,
+    "closeCount": 73,
+    "netGrowth": 52
+  },
+  {
+    "code": "27126",
+    "newCount": 180,
+    "closeCount": 92,
+    "netGrowth": 88
+  },
+  {
+    "code": "27127",
+    "newCount": 1341,
+    "closeCount": 504,
+    "netGrowth": 837
+  },
+  {
+    "code": "27128",
+    "newCount": 1331,
+    "closeCount": 725,
+    "netGrowth": 606
+  },
+  {
+    "code": "27141",
+    "newCount": 164,
+    "closeCount": 103,
+    "netGrowth": 61
+  },
+  {
+    "code": "27142",
+    "newCount": 87,
+    "closeCount": 35,
+    "netGrowth": 52
+  },
+  {
+    "code": "27143",
+    "newCount": 39,
+    "closeCount": 20,
+    "netGrowth": 19
+  },
+  {
+    "code": "27144",
+    "newCount": 82,
+    "closeCount": 49,
+    "netGrowth": 33
+  },
+  {
+    "code": "27145",
+    "newCount": 55,
+    "closeCount": 31,
+    "netGrowth": 24
+  },
+  {
+    "code": "27146",
+    "newCount": 74,
+    "closeCount": 52,
+    "netGrowth": 22
+  },
+  {
+    "code": "27147",
+    "newCount": 27,
+    "closeCount": 26,
+    "netGrowth": 1
+  },
+  {
+    "code": "27201",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "27202",
+    "newCount": 100,
+    "closeCount": 70,
+    "netGrowth": 30
+  },
+  {
+    "code": "27203",
+    "newCount": 254,
+    "closeCount": 141,
+    "netGrowth": 113
+  },
+  {
+    "code": "27204",
+    "newCount": 51,
+    "closeCount": 48,
+    "netGrowth": 3
+  },
+  {
+    "code": "27205",
+    "newCount": 242,
+    "closeCount": 126,
+    "netGrowth": 116
+  },
+  {
+    "code": "27206",
+    "newCount": 41,
+    "closeCount": 23,
+    "netGrowth": 18
+  },
+  {
+    "code": "27207",
+    "newCount": 143,
+    "closeCount": 81,
+    "netGrowth": 62
+  },
+  {
+    "code": "27208",
+    "newCount": 34,
+    "closeCount": 32,
+    "netGrowth": 2
+  },
+  {
+    "code": "27209",
+    "newCount": 88,
+    "closeCount": 73,
+    "netGrowth": 15
+  },
+  {
+    "code": "27210",
+    "newCount": 186,
+    "closeCount": 87,
+    "netGrowth": 99
+  },
+  {
+    "code": "27211",
+    "newCount": 171,
+    "closeCount": 85,
+    "netGrowth": 86
+  },
+  {
+    "code": "27212",
+    "newCount": 232,
+    "closeCount": 110,
+    "netGrowth": 122
+  },
+  {
+    "code": "27213",
+    "newCount": 57,
+    "closeCount": 44,
+    "netGrowth": 13
+  },
+  {
+    "code": "27214",
+    "newCount": 54,
+    "closeCount": 24,
+    "netGrowth": 30
+  },
+  {
+    "code": "27215",
+    "newCount": 115,
+    "closeCount": 71,
+    "netGrowth": 44
+  },
+  {
+    "code": "27216",
+    "newCount": 56,
+    "closeCount": 14,
+    "netGrowth": 42
+  },
+  {
+    "code": "27217",
+    "newCount": 87,
+    "closeCount": 43,
+    "netGrowth": 44
+  },
+  {
+    "code": "27218",
+    "newCount": 68,
+    "closeCount": 40,
+    "netGrowth": 28
+  },
+  {
+    "code": "27219",
+    "newCount": 100,
+    "closeCount": 62,
+    "netGrowth": 38
+  },
+  {
+    "code": "27220",
+    "newCount": 98,
+    "closeCount": 48,
+    "netGrowth": 50
+  },
+  {
+    "code": "27221",
+    "newCount": 44,
+    "closeCount": 27,
+    "netGrowth": 17
+  },
+  {
+    "code": "27222",
+    "newCount": 60,
+    "closeCount": 31,
+    "netGrowth": 29
+  },
+  {
+    "code": "27223",
+    "newCount": 97,
+    "closeCount": 44,
+    "netGrowth": 53
+  },
+  {
+    "code": "27224",
+    "newCount": 73,
+    "closeCount": 44,
+    "netGrowth": 29
+  },
+  {
+    "code": "27225",
+    "newCount": 37,
+    "closeCount": 13,
+    "netGrowth": 24
+  },
+  {
+    "code": "27226",
+    "newCount": 28,
+    "closeCount": 24,
+    "netGrowth": 4
+  },
+  {
+    "code": "27227",
+    "newCount": 450,
+    "closeCount": 243,
+    "netGrowth": 207
+  },
+  {
+    "code": "27228",
+    "newCount": 23,
+    "closeCount": 27,
+    "netGrowth": -4
+  },
+  {
+    "code": "27229",
+    "newCount": 28,
+    "closeCount": 11,
+    "netGrowth": 17
+  },
+  {
+    "code": "27230",
+    "newCount": 41,
+    "closeCount": 22,
+    "netGrowth": 19
+  },
+  {
+    "code": "27231",
+    "newCount": 25,
+    "closeCount": 13,
+    "netGrowth": 12
+  },
+  {
+    "code": "27232",
+    "newCount": 26,
+    "closeCount": 10,
+    "netGrowth": 16
+  },
+  {
+    "code": "27301",
+    "newCount": 7,
+    "closeCount": 10,
+    "netGrowth": -3
+  },
+  {
+    "code": "27321",
+    "newCount": 3,
+    "closeCount": 7,
+    "netGrowth": -4
+  },
+  {
+    "code": "27322",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "27341",
+    "newCount": 9,
+    "closeCount": 7,
+    "netGrowth": 2
+  },
+  {
+    "code": "27361",
+    "newCount": 8,
+    "closeCount": 7,
+    "netGrowth": 1
+  },
+  {
+    "code": "27362",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "27366",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "27381",
+    "newCount": 8,
+    "closeCount": 4,
+    "netGrowth": 4
+  },
+  {
+    "code": "27382",
+    "newCount": 9,
+    "closeCount": 3,
+    "netGrowth": 6
+  },
+  {
+    "code": "27383",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "28101",
+    "newCount": 122,
+    "closeCount": 215,
+    "netGrowth": -93
+  },
+  {
+    "code": "28102",
+    "newCount": 103,
+    "closeCount": 154,
+    "netGrowth": -51
+  },
+  {
+    "code": "28105",
+    "newCount": 73,
+    "closeCount": 205,
+    "netGrowth": -132
+  },
+  {
+    "code": "28106",
+    "newCount": 67,
+    "closeCount": 177,
+    "netGrowth": -110
+  },
+  {
+    "code": "28107",
+    "newCount": 65,
+    "closeCount": 87,
+    "netGrowth": -22
+  },
+  {
+    "code": "28108",
+    "newCount": 82,
+    "closeCount": 124,
+    "netGrowth": -42
+  },
+  {
+    "code": "28109",
+    "newCount": 76,
+    "closeCount": 123,
+    "netGrowth": -47
+  },
+  {
+    "code": "28110",
+    "newCount": 418,
+    "closeCount": 640,
+    "netGrowth": -222
+  },
+  {
+    "code": "28111",
+    "newCount": 100,
+    "closeCount": 148,
+    "netGrowth": -48
+  },
+  {
+    "code": "28201",
+    "newCount": 285,
+    "closeCount": 414,
+    "netGrowth": -129
+  },
+  {
+    "code": "28202",
+    "newCount": 298,
+    "closeCount": 527,
+    "netGrowth": -229
+  },
+  {
+    "code": "28203",
+    "newCount": 107,
+    "closeCount": 146,
+    "netGrowth": -39
+  },
+  {
+    "code": "28204",
+    "newCount": 261,
+    "closeCount": 452,
+    "netGrowth": -191
+  },
+  {
+    "code": "28205",
+    "newCount": 18,
+    "closeCount": 30,
+    "netGrowth": -12
+  },
+  {
+    "code": "28206",
+    "newCount": 109,
+    "closeCount": 127,
+    "netGrowth": -18
+  },
+  {
+    "code": "28207",
+    "newCount": 84,
+    "closeCount": 105,
+    "netGrowth": -21
+  },
+  {
+    "code": "28208",
+    "newCount": 8,
+    "closeCount": 18,
+    "netGrowth": -10
+  },
+  {
+    "code": "28209",
+    "newCount": 19,
+    "closeCount": 34,
+    "netGrowth": -15
+  },
+  {
+    "code": "28210",
+    "newCount": 108,
+    "closeCount": 129,
+    "netGrowth": -21
+  },
+  {
+    "code": "28212",
+    "newCount": 13,
+    "closeCount": 8,
+    "netGrowth": 5
+  },
+  {
+    "code": "28213",
+    "newCount": 19,
+    "closeCount": 43,
+    "netGrowth": -24
+  },
+  {
+    "code": "28214",
+    "newCount": 96,
+    "closeCount": 188,
+    "netGrowth": -92
+  },
+  {
+    "code": "28215",
+    "newCount": 25,
+    "closeCount": 70,
+    "netGrowth": -45
+  },
+  {
+    "code": "28216",
+    "newCount": 38,
+    "closeCount": 44,
+    "netGrowth": -6
+  },
+  {
+    "code": "28217",
+    "newCount": 49,
+    "closeCount": 72,
+    "netGrowth": -23
+  },
+  {
+    "code": "28218",
+    "newCount": 16,
+    "closeCount": 19,
+    "netGrowth": -3
+  },
+  {
+    "code": "28219",
+    "newCount": 47,
+    "closeCount": 81,
+    "netGrowth": -34
+  },
+  {
+    "code": "28220",
+    "newCount": 20,
+    "closeCount": 32,
+    "netGrowth": -12
+  },
+  {
+    "code": "28221",
+    "newCount": 18,
+    "closeCount": 12,
+    "netGrowth": 6
+  },
+  {
+    "code": "28222",
+    "newCount": 6,
+    "closeCount": 10,
+    "netGrowth": -4
+  },
+  {
+    "code": "28223",
+    "newCount": 15,
+    "closeCount": 41,
+    "netGrowth": -26
+  },
+  {
+    "code": "28224",
+    "newCount": 18,
+    "closeCount": 27,
+    "netGrowth": -9
+  },
+  {
+    "code": "28225",
+    "newCount": 9,
+    "closeCount": 14,
+    "netGrowth": -5
+  },
+  {
+    "code": "28226",
+    "newCount": 23,
+    "closeCount": 29,
+    "netGrowth": -6
+  },
+  {
+    "code": "28227",
+    "newCount": 13,
+    "closeCount": 22,
+    "netGrowth": -9
+  },
+  {
+    "code": "28228",
+    "newCount": 20,
+    "closeCount": 22,
+    "netGrowth": -2
+  },
+  {
+    "code": "28229",
+    "newCount": 20,
+    "closeCount": 37,
+    "netGrowth": -17
+  },
+  {
+    "code": "28301",
+    "newCount": 8,
+    "closeCount": 6,
+    "netGrowth": 2
+  },
+  {
+    "code": "28365",
+    "newCount": 8,
+    "closeCount": 13,
+    "netGrowth": -5
+  },
+  {
+    "code": "28381",
+    "newCount": 17,
+    "closeCount": 19,
+    "netGrowth": -2
+  },
+  {
+    "code": "28382",
+    "newCount": 7,
+    "closeCount": 10,
+    "netGrowth": -3
+  },
+  {
+    "code": "28442",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "28443",
+    "newCount": 8,
+    "closeCount": 15,
+    "netGrowth": -7
+  },
+  {
+    "code": "28446",
+    "newCount": 0,
+    "closeCount": 5,
+    "netGrowth": -5
+  },
+  {
+    "code": "28464",
+    "newCount": 11,
+    "closeCount": 11,
+    "netGrowth": 0
+  },
+  {
+    "code": "28481",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "28501",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "28585",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "28586",
+    "newCount": 3,
+    "closeCount": 8,
+    "netGrowth": -5
+  },
+  {
+    "code": "29201",
+    "newCount": 173,
+    "closeCount": 107,
+    "netGrowth": 66
+  },
+  {
+    "code": "29202",
+    "newCount": 24,
+    "closeCount": 20,
+    "netGrowth": 4
+  },
+  {
+    "code": "29203",
+    "newCount": 40,
+    "closeCount": 17,
+    "netGrowth": 23
+  },
+  {
+    "code": "29204",
+    "newCount": 25,
+    "closeCount": 10,
+    "netGrowth": 15
+  },
+  {
+    "code": "29205",
+    "newCount": 59,
+    "closeCount": 31,
+    "netGrowth": 28
+  },
+  {
+    "code": "29206",
+    "newCount": 20,
+    "closeCount": 21,
+    "netGrowth": -1
+  },
+  {
+    "code": "29207",
+    "newCount": 11,
+    "closeCount": 13,
+    "netGrowth": -2
+  },
+  {
+    "code": "29208",
+    "newCount": 12,
+    "closeCount": 4,
+    "netGrowth": 8
+  },
+  {
+    "code": "29209",
+    "newCount": 47,
+    "closeCount": 33,
+    "netGrowth": 14
+  },
+  {
+    "code": "29210",
+    "newCount": 30,
+    "closeCount": 16,
+    "netGrowth": 14
+  },
+  {
+    "code": "29211",
+    "newCount": 22,
+    "closeCount": 12,
+    "netGrowth": 10
+  },
+  {
+    "code": "29212",
+    "newCount": 9,
+    "closeCount": 5,
+    "netGrowth": 4
+  },
+  {
+    "code": "29322",
+    "newCount": 6,
+    "closeCount": 0,
+    "netGrowth": 6
+  },
+  {
+    "code": "29342",
+    "newCount": 8,
+    "closeCount": 11,
+    "netGrowth": -3
+  },
+  {
+    "code": "29343",
+    "newCount": 5,
+    "closeCount": 8,
+    "netGrowth": -3
+  },
+  {
+    "code": "29344",
+    "newCount": 11,
+    "closeCount": 12,
+    "netGrowth": -1
+  },
+  {
+    "code": "29345",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "29361",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "29362",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "29363",
+    "newCount": 11,
+    "closeCount": 5,
+    "netGrowth": 6
+  },
+  {
+    "code": "29401",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "29402",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "29424",
+    "newCount": 9,
+    "closeCount": 3,
+    "netGrowth": 6
+  },
+  {
+    "code": "29425",
+    "newCount": 11,
+    "closeCount": 6,
+    "netGrowth": 5
+  },
+  {
+    "code": "29426",
+    "newCount": 21,
+    "closeCount": 6,
+    "netGrowth": 15
+  },
+  {
+    "code": "29427",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "29441",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "29442",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "29443",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "29444",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "29446",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "29447",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "29449",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "29452",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "30201",
+    "newCount": 175,
+    "closeCount": 130,
+    "netGrowth": 45
+  },
+  {
+    "code": "30202",
+    "newCount": 8,
+    "closeCount": 15,
+    "netGrowth": -7
+  },
+  {
+    "code": "30203",
+    "newCount": 17,
+    "closeCount": 6,
+    "netGrowth": 11
+  },
+  {
+    "code": "30204",
+    "newCount": 8,
+    "closeCount": 5,
+    "netGrowth": 3
+  },
+  {
+    "code": "30205",
+    "newCount": 8,
+    "closeCount": 4,
+    "netGrowth": 4
+  },
+  {
+    "code": "30206",
+    "newCount": 35,
+    "closeCount": 12,
+    "netGrowth": 23
+  },
+  {
+    "code": "30207",
+    "newCount": 7,
+    "closeCount": 6,
+    "netGrowth": 1
+  },
+  {
+    "code": "30208",
+    "newCount": 19,
+    "closeCount": 6,
+    "netGrowth": 13
+  },
+  {
+    "code": "30209",
+    "newCount": 24,
+    "closeCount": 7,
+    "netGrowth": 17
+  },
+  {
+    "code": "30304",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "30341",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "30343",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "30344",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "30361",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "30362",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "30366",
+    "newCount": 7,
+    "closeCount": 4,
+    "netGrowth": 3
+  },
+  {
+    "code": "30381",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "30383",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "30390",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "30391",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "30392",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "30401",
+    "newCount": 10,
+    "closeCount": 6,
+    "netGrowth": 4
+  },
+  {
+    "code": "30404",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "30406",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "30421",
+    "newCount": 6,
+    "closeCount": 0,
+    "netGrowth": 6
+  },
+  {
+    "code": "30422",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "30424",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "30428",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "31201",
+    "newCount": 61,
+    "closeCount": 39,
+    "netGrowth": 22
+  },
+  {
+    "code": "31202",
+    "newCount": 57,
+    "closeCount": 37,
+    "netGrowth": 20
+  },
+  {
+    "code": "31203",
+    "newCount": 13,
+    "closeCount": 14,
+    "netGrowth": -1
+  },
+  {
+    "code": "31204",
+    "newCount": 10,
+    "closeCount": 6,
+    "netGrowth": 4
+  },
+  {
+    "code": "31302",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "31325",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "31329",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "31364",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "31370",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "31371",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "31372",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "31384",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "31386",
+    "newCount": 6,
+    "closeCount": 1,
+    "netGrowth": 5
+  },
+  {
+    "code": "31389",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "31390",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "31401",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "31402",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "31403",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "32201",
+    "newCount": 71,
+    "closeCount": 67,
+    "netGrowth": 4
+  },
+  {
+    "code": "32202",
+    "newCount": 5,
+    "closeCount": 14,
+    "netGrowth": -9
+  },
+  {
+    "code": "32203",
+    "newCount": 35,
+    "closeCount": 33,
+    "netGrowth": 2
+  },
+  {
+    "code": "32204",
+    "newCount": 8,
+    "closeCount": 16,
+    "netGrowth": -8
+  },
+  {
+    "code": "32205",
+    "newCount": 3,
+    "closeCount": 9,
+    "netGrowth": -6
+  },
+  {
+    "code": "32206",
+    "newCount": 6,
+    "closeCount": 6,
+    "netGrowth": 0
+  },
+  {
+    "code": "32207",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "32209",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "32343",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "32386",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "32441",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "32448",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "32449",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "32501",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "32505",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "32525",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "32526",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "32528",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "33101",
+    "newCount": 251,
+    "closeCount": 318,
+    "netGrowth": -67
+  },
+  {
+    "code": "33102",
+    "newCount": 81,
+    "closeCount": 93,
+    "netGrowth": -12
+  },
+  {
+    "code": "33103",
+    "newCount": 36,
+    "closeCount": 41,
+    "netGrowth": -5
+  },
+  {
+    "code": "33104",
+    "newCount": 104,
+    "closeCount": 145,
+    "netGrowth": -41
+  },
+  {
+    "code": "33201",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "33202",
+    "newCount": 192,
+    "closeCount": 234,
+    "netGrowth": -42
+  },
+  {
+    "code": "33203",
+    "newCount": 29,
+    "closeCount": 70,
+    "netGrowth": -41
+  },
+  {
+    "code": "33204",
+    "newCount": 8,
+    "closeCount": 25,
+    "netGrowth": -17
+  },
+  {
+    "code": "33205",
+    "newCount": 10,
+    "closeCount": 23,
+    "netGrowth": -13
+  },
+  {
+    "code": "33207",
+    "newCount": 7,
+    "closeCount": 14,
+    "netGrowth": -7
+  },
+  {
+    "code": "33208",
+    "newCount": 26,
+    "closeCount": 21,
+    "netGrowth": 5
+  },
+  {
+    "code": "33209",
+    "newCount": 7,
+    "closeCount": 10,
+    "netGrowth": -3
+  },
+  {
+    "code": "33210",
+    "newCount": 3,
+    "closeCount": 8,
+    "netGrowth": -5
+  },
+  {
+    "code": "33211",
+    "newCount": 12,
+    "closeCount": 17,
+    "netGrowth": -5
+  },
+  {
+    "code": "33212",
+    "newCount": 16,
+    "closeCount": 10,
+    "netGrowth": 6
+  },
+  {
+    "code": "33213",
+    "newCount": 17,
+    "closeCount": 8,
+    "netGrowth": 9
+  },
+  {
+    "code": "33214",
+    "newCount": 11,
+    "closeCount": 14,
+    "netGrowth": -3
+  },
+  {
+    "code": "33215",
+    "newCount": 6,
+    "closeCount": 9,
+    "netGrowth": -3
+  },
+  {
+    "code": "33216",
+    "newCount": 7,
+    "closeCount": 9,
+    "netGrowth": -2
+  },
+  {
+    "code": "33346",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "33423",
+    "newCount": 11,
+    "closeCount": 5,
+    "netGrowth": 6
+  },
+  {
+    "code": "33445",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "33461",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "33606",
+    "newCount": 4,
+    "closeCount": 8,
+    "netGrowth": -4
+  },
+  {
+    "code": "33622",
+    "newCount": 6,
+    "closeCount": 6,
+    "netGrowth": 0
+  },
+  {
+    "code": "33623",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "33643",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "33663",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "33666",
+    "newCount": 0,
+    "closeCount": 8,
+    "netGrowth": -8
+  },
+  {
+    "code": "33681",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "34101",
+    "newCount": 239,
+    "closeCount": 363,
+    "netGrowth": -124
+  },
+  {
+    "code": "34102",
+    "newCount": 46,
+    "closeCount": 92,
+    "netGrowth": -46
+  },
+  {
+    "code": "34103",
+    "newCount": 77,
+    "closeCount": 150,
+    "netGrowth": -73
+  },
+  {
+    "code": "34104",
+    "newCount": 118,
+    "closeCount": 236,
+    "netGrowth": -118
+  },
+  {
+    "code": "34105",
+    "newCount": 104,
+    "closeCount": 112,
+    "netGrowth": -8
+  },
+  {
+    "code": "34106",
+    "newCount": 57,
+    "closeCount": 66,
+    "netGrowth": -9
+  },
+  {
+    "code": "34107",
+    "newCount": 15,
+    "closeCount": 23,
+    "netGrowth": -8
+  },
+  {
+    "code": "34108",
+    "newCount": 54,
+    "closeCount": 100,
+    "netGrowth": -46
+  },
+  {
+    "code": "34202",
+    "newCount": 64,
+    "closeCount": 120,
+    "netGrowth": -56
+  },
+  {
+    "code": "34203",
+    "newCount": 8,
+    "closeCount": 16,
+    "netGrowth": -8
+  },
+  {
+    "code": "34204",
+    "newCount": 32,
+    "closeCount": 38,
+    "netGrowth": -6
+  },
+  {
+    "code": "34205",
+    "newCount": 39,
+    "closeCount": 60,
+    "netGrowth": -21
+  },
+  {
+    "code": "34207",
+    "newCount": 182,
+    "closeCount": 299,
+    "netGrowth": -117
+  },
+  {
+    "code": "34208",
+    "newCount": 10,
+    "closeCount": 30,
+    "netGrowth": -20
+  },
+  {
+    "code": "34209",
+    "newCount": 12,
+    "closeCount": 22,
+    "netGrowth": -10
+  },
+  {
+    "code": "34210",
+    "newCount": 9,
+    "closeCount": 11,
+    "netGrowth": -2
+  },
+  {
+    "code": "34211",
+    "newCount": 6,
+    "closeCount": 12,
+    "netGrowth": -6
+  },
+  {
+    "code": "34212",
+    "newCount": 79,
+    "closeCount": 80,
+    "netGrowth": -1
+  },
+  {
+    "code": "34213",
+    "newCount": 46,
+    "closeCount": 65,
+    "netGrowth": -19
+  },
+  {
+    "code": "34214",
+    "newCount": 7,
+    "closeCount": 15,
+    "netGrowth": -8
+  },
+  {
+    "code": "34215",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "34302",
+    "newCount": 19,
+    "closeCount": 22,
+    "netGrowth": -3
+  },
+  {
+    "code": "34304",
+    "newCount": 9,
+    "closeCount": 12,
+    "netGrowth": -3
+  },
+  {
+    "code": "34307",
+    "newCount": 3,
+    "closeCount": 6,
+    "netGrowth": -3
+  },
+  {
+    "code": "34309",
+    "newCount": 4,
+    "closeCount": 9,
+    "netGrowth": -5
+  },
+  {
+    "code": "34368",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "34369",
+    "newCount": 4,
+    "closeCount": 9,
+    "netGrowth": -5
+  },
+  {
+    "code": "34431",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "34462",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "34545",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "35201",
+    "newCount": 91,
+    "closeCount": 69,
+    "netGrowth": 22
+  },
+  {
+    "code": "35202",
+    "newCount": 52,
+    "closeCount": 30,
+    "netGrowth": 22
+  },
+  {
+    "code": "35203",
+    "newCount": 84,
+    "closeCount": 29,
+    "netGrowth": 55
+  },
+  {
+    "code": "35204",
+    "newCount": 6,
+    "closeCount": 8,
+    "netGrowth": -2
+  },
+  {
+    "code": "35206",
+    "newCount": 31,
+    "closeCount": 20,
+    "netGrowth": 11
+  },
+  {
+    "code": "35207",
+    "newCount": 12,
+    "closeCount": 9,
+    "netGrowth": 3
+  },
+  {
+    "code": "35208",
+    "newCount": 39,
+    "closeCount": 21,
+    "netGrowth": 18
+  },
+  {
+    "code": "35210",
+    "newCount": 10,
+    "closeCount": 9,
+    "netGrowth": 1
+  },
+  {
+    "code": "35211",
+    "newCount": 3,
+    "closeCount": 7,
+    "netGrowth": -4
+  },
+  {
+    "code": "35212",
+    "newCount": 6,
+    "closeCount": 6,
+    "netGrowth": 0
+  },
+  {
+    "code": "35213",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "35215",
+    "newCount": 35,
+    "closeCount": 38,
+    "netGrowth": -3
+  },
+  {
+    "code": "35216",
+    "newCount": 13,
+    "closeCount": 11,
+    "netGrowth": 2
+  },
+  {
+    "code": "35305",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "35321",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "35341",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "35343",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "35344",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "35502",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "36201",
+    "newCount": 125,
+    "closeCount": 205,
+    "netGrowth": -80
+  },
+  {
+    "code": "36202",
+    "newCount": 17,
+    "closeCount": 38,
+    "netGrowth": -21
+  },
+  {
+    "code": "36203",
+    "newCount": 9,
+    "closeCount": 12,
+    "netGrowth": -3
+  },
+  {
+    "code": "36204",
+    "newCount": 16,
+    "closeCount": 24,
+    "netGrowth": -8
+  },
+  {
+    "code": "36205",
+    "newCount": 8,
+    "closeCount": 13,
+    "netGrowth": -5
+  },
+  {
+    "code": "36206",
+    "newCount": 6,
+    "closeCount": 11,
+    "netGrowth": -5
+  },
+  {
+    "code": "36207",
+    "newCount": 10,
+    "closeCount": 16,
+    "netGrowth": -6
+  },
+  {
+    "code": "36208",
+    "newCount": 3,
+    "closeCount": 7,
+    "netGrowth": -4
+  },
+  {
+    "code": "36301",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "36341",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "36342",
+    "newCount": 9,
+    "closeCount": 2,
+    "netGrowth": 7
+  },
+  {
+    "code": "36368",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "36383",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "36387",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "36388",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "36401",
+    "newCount": 6,
+    "closeCount": 12,
+    "netGrowth": -6
+  },
+  {
+    "code": "36402",
+    "newCount": 6,
+    "closeCount": 8,
+    "netGrowth": -2
+  },
+  {
+    "code": "36403",
+    "newCount": 11,
+    "closeCount": 8,
+    "netGrowth": 3
+  },
+  {
+    "code": "36404",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "36405",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "36468",
+    "newCount": 2,
+    "closeCount": 4,
+    "netGrowth": -2
+  },
+  {
+    "code": "36489",
+    "newCount": 4,
+    "closeCount": 7,
+    "netGrowth": -3
+  },
+  {
+    "code": "37201",
+    "newCount": 234,
+    "closeCount": 305,
+    "netGrowth": -71
+  },
+  {
+    "code": "37202",
+    "newCount": 47,
+    "closeCount": 60,
+    "netGrowth": -13
+  },
+  {
+    "code": "37203",
+    "newCount": 23,
+    "closeCount": 32,
+    "netGrowth": -9
+  },
+  {
+    "code": "37204",
+    "newCount": 8,
+    "closeCount": 18,
+    "netGrowth": -10
+  },
+  {
+    "code": "37205",
+    "newCount": 12,
+    "closeCount": 26,
+    "netGrowth": -14
+  },
+  {
+    "code": "37206",
+    "newCount": 13,
+    "closeCount": 18,
+    "netGrowth": -5
+  },
+  {
+    "code": "37207",
+    "newCount": 4,
+    "closeCount": 19,
+    "netGrowth": -15
+  },
+  {
+    "code": "37208",
+    "newCount": 12,
+    "closeCount": 31,
+    "netGrowth": -19
+  },
+  {
+    "code": "37322",
+    "newCount": 3,
+    "closeCount": 10,
+    "netGrowth": -7
+  },
+  {
+    "code": "37324",
+    "newCount": 2,
+    "closeCount": 10,
+    "netGrowth": -8
+  },
+  {
+    "code": "37341",
+    "newCount": 11,
+    "closeCount": 13,
+    "netGrowth": -2
+  },
+  {
+    "code": "37364",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "37386",
+    "newCount": 10,
+    "closeCount": 6,
+    "netGrowth": 4
+  },
+  {
+    "code": "37387",
+    "newCount": 8,
+    "closeCount": 9,
+    "netGrowth": -1
+  },
+  {
+    "code": "37403",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "37404",
+    "newCount": 12,
+    "closeCount": 11,
+    "netGrowth": 1
+  },
+  {
+    "code": "37406",
+    "newCount": 4,
+    "closeCount": 4,
+    "netGrowth": 0
+  },
+  {
+    "code": "38201",
+    "newCount": 252,
+    "closeCount": 379,
+    "netGrowth": -127
+  },
+  {
+    "code": "38202",
+    "newCount": 58,
+    "closeCount": 133,
+    "netGrowth": -75
+  },
+  {
+    "code": "38203",
+    "newCount": 28,
+    "closeCount": 41,
+    "netGrowth": -13
+  },
+  {
+    "code": "38204",
+    "newCount": 7,
+    "closeCount": 8,
+    "netGrowth": -1
+  },
+  {
+    "code": "38205",
+    "newCount": 32,
+    "closeCount": 80,
+    "netGrowth": -48
+  },
+  {
+    "code": "38206",
+    "newCount": 32,
+    "closeCount": 50,
+    "netGrowth": -18
+  },
+  {
+    "code": "38207",
+    "newCount": 11,
+    "closeCount": 16,
+    "netGrowth": -5
+  },
+  {
+    "code": "38210",
+    "newCount": 12,
+    "closeCount": 18,
+    "netGrowth": -6
+  },
+  {
+    "code": "38213",
+    "newCount": 35,
+    "closeCount": 55,
+    "netGrowth": -20
+  },
+  {
+    "code": "38214",
+    "newCount": 4,
+    "closeCount": 10,
+    "netGrowth": -6
+  },
+  {
+    "code": "38215",
+    "newCount": 12,
+    "closeCount": 16,
+    "netGrowth": -4
+  },
+  {
+    "code": "38356",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "38386",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "38401",
+    "newCount": 12,
+    "closeCount": 11,
+    "netGrowth": 1
+  },
+  {
+    "code": "38402",
+    "newCount": 5,
+    "closeCount": 9,
+    "netGrowth": -4
+  },
+  {
+    "code": "38422",
+    "newCount": 2,
+    "closeCount": 8,
+    "netGrowth": -6
+  },
+  {
+    "code": "38442",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "38488",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "38506",
+    "newCount": 0,
+    "closeCount": 6,
+    "netGrowth": -6
+  },
+  {
+    "code": "39201",
+    "newCount": 134,
+    "closeCount": 92,
+    "netGrowth": 42
+  },
+  {
+    "code": "39202",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "39203",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "39204",
+    "newCount": 5,
+    "closeCount": 7,
+    "netGrowth": -2
+  },
+  {
+    "code": "39205",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "39206",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "39208",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "39209",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "39210",
+    "newCount": 9,
+    "closeCount": 7,
+    "netGrowth": 2
+  },
+  {
+    "code": "39211",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "39212",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "39301",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "39302",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "39303",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "39306",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "39307",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "39341",
+    "newCount": 3,
+    "closeCount": 0,
+    "netGrowth": 3
+  },
+  {
+    "code": "39363",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "39386",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "39387",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "39402",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "39403",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "39405",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "39410",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "39412",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "39424",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "39427",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "39428",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "40101",
+    "newCount": 40,
+    "closeCount": 46,
+    "netGrowth": -6
+  },
+  {
+    "code": "40103",
+    "newCount": 35,
+    "closeCount": 60,
+    "netGrowth": -25
+  },
+  {
+    "code": "40105",
+    "newCount": 18,
+    "closeCount": 29,
+    "netGrowth": -11
+  },
+  {
+    "code": "40106",
+    "newCount": 183,
+    "closeCount": 271,
+    "netGrowth": -88
+  },
+  {
+    "code": "40107",
+    "newCount": 95,
+    "closeCount": 94,
+    "netGrowth": 1
+  },
+  {
+    "code": "40108",
+    "newCount": 32,
+    "closeCount": 42,
+    "netGrowth": -10
+  },
+  {
+    "code": "40109",
+    "newCount": 123,
+    "closeCount": 147,
+    "netGrowth": -24
+  },
+  {
+    "code": "40131",
+    "newCount": 260,
+    "closeCount": 224,
+    "netGrowth": 36
+  },
+  {
+    "code": "40132",
+    "newCount": 636,
+    "closeCount": 682,
+    "netGrowth": -46
+  },
+  {
+    "code": "40133",
+    "newCount": 781,
+    "closeCount": 692,
+    "netGrowth": 89
+  },
+  {
+    "code": "40134",
+    "newCount": 197,
+    "closeCount": 257,
+    "netGrowth": -60
+  },
+  {
+    "code": "40135",
+    "newCount": 132,
+    "closeCount": 91,
+    "netGrowth": 41
+  },
+  {
+    "code": "40136",
+    "newCount": 68,
+    "closeCount": 104,
+    "netGrowth": -36
+  },
+  {
+    "code": "40137",
+    "newCount": 142,
+    "closeCount": 141,
+    "netGrowth": 1
+  },
+  {
+    "code": "40202",
+    "newCount": 35,
+    "closeCount": 51,
+    "netGrowth": -16
+  },
+  {
+    "code": "40203",
+    "newCount": 201,
+    "closeCount": 200,
+    "netGrowth": 1
+  },
+  {
+    "code": "40204",
+    "newCount": 28,
+    "closeCount": 41,
+    "netGrowth": -13
+  },
+  {
+    "code": "40205",
+    "newCount": 51,
+    "closeCount": 19,
+    "netGrowth": 32
+  },
+  {
+    "code": "40206",
+    "newCount": 27,
+    "closeCount": 27,
+    "netGrowth": 0
+  },
+  {
+    "code": "40207",
+    "newCount": 27,
+    "closeCount": 35,
+    "netGrowth": -8
+  },
+  {
+    "code": "40210",
+    "newCount": 16,
+    "closeCount": 21,
+    "netGrowth": -5
+  },
+  {
+    "code": "40211",
+    "newCount": 22,
+    "closeCount": 14,
+    "netGrowth": 8
+  },
+  {
+    "code": "40212",
+    "newCount": 14,
+    "closeCount": 41,
+    "netGrowth": -27
+  },
+  {
+    "code": "40213",
+    "newCount": 29,
+    "closeCount": 22,
+    "netGrowth": 7
+  },
+  {
+    "code": "40214",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "40215",
+    "newCount": 17,
+    "closeCount": 18,
+    "netGrowth": -1
+  },
+  {
+    "code": "40216",
+    "newCount": 27,
+    "closeCount": 15,
+    "netGrowth": 12
+  },
+  {
+    "code": "40217",
+    "newCount": 52,
+    "closeCount": 45,
+    "netGrowth": 7
+  },
+  {
+    "code": "40218",
+    "newCount": 48,
+    "closeCount": 68,
+    "netGrowth": -20
+  },
+  {
+    "code": "40219",
+    "newCount": 55,
+    "closeCount": 54,
+    "netGrowth": 1
+  },
+  {
+    "code": "40220",
+    "newCount": 36,
+    "closeCount": 37,
+    "netGrowth": -1
+  },
+  {
+    "code": "40221",
+    "newCount": 46,
+    "closeCount": 40,
+    "netGrowth": 6
+  },
+  {
+    "code": "40223",
+    "newCount": 30,
+    "closeCount": 24,
+    "netGrowth": 6
+  },
+  {
+    "code": "40224",
+    "newCount": 22,
+    "closeCount": 27,
+    "netGrowth": -5
+  },
+  {
+    "code": "40225",
+    "newCount": 12,
+    "closeCount": 19,
+    "netGrowth": -7
+  },
+  {
+    "code": "40226",
+    "newCount": 6,
+    "closeCount": 13,
+    "netGrowth": -7
+  },
+  {
+    "code": "40227",
+    "newCount": 10,
+    "closeCount": 13,
+    "netGrowth": -3
+  },
+  {
+    "code": "40228",
+    "newCount": 22,
+    "closeCount": 26,
+    "netGrowth": -4
+  },
+  {
+    "code": "40229",
+    "newCount": 15,
+    "closeCount": 7,
+    "netGrowth": 8
+  },
+  {
+    "code": "40230",
+    "newCount": 68,
+    "closeCount": 35,
+    "netGrowth": 33
+  },
+  {
+    "code": "40231",
+    "newCount": 38,
+    "closeCount": 29,
+    "netGrowth": 9
+  },
+  {
+    "code": "40341",
+    "newCount": 26,
+    "closeCount": 6,
+    "netGrowth": 20
+  },
+  {
+    "code": "40342",
+    "newCount": 10,
+    "closeCount": 4,
+    "netGrowth": 6
+  },
+  {
+    "code": "40343",
+    "newCount": 36,
+    "closeCount": 13,
+    "netGrowth": 23
+  },
+  {
+    "code": "40344",
+    "newCount": 22,
+    "closeCount": 0,
+    "netGrowth": 22
+  },
+  {
+    "code": "40345",
+    "newCount": 21,
+    "closeCount": 4,
+    "netGrowth": 17
+  },
+  {
+    "code": "40348",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "40349",
+    "newCount": 19,
+    "closeCount": 11,
+    "netGrowth": 8
+  },
+  {
+    "code": "40381",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "40382",
+    "newCount": 8,
+    "closeCount": 13,
+    "netGrowth": -5
+  },
+  {
+    "code": "40383",
+    "newCount": 12,
+    "closeCount": 8,
+    "netGrowth": 4
+  },
+  {
+    "code": "40384",
+    "newCount": 11,
+    "closeCount": 11,
+    "netGrowth": 0
+  },
+  {
+    "code": "40401",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "40402",
+    "newCount": 6,
+    "closeCount": 8,
+    "netGrowth": -2
+  },
+  {
+    "code": "40421",
+    "newCount": 7,
+    "closeCount": 4,
+    "netGrowth": 3
+  },
+  {
+    "code": "40447",
+    "newCount": 11,
+    "closeCount": 5,
+    "netGrowth": 6
+  },
+  {
+    "code": "40448",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "40503",
+    "newCount": 8,
+    "closeCount": 3,
+    "netGrowth": 5
+  },
+  {
+    "code": "40522",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "40544",
+    "newCount": 11,
+    "closeCount": 3,
+    "netGrowth": 8
+  },
+  {
+    "code": "40601",
+    "newCount": 6,
+    "closeCount": 4,
+    "netGrowth": 2
+  },
+  {
+    "code": "40602",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "40604",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "40605",
+    "newCount": 5,
+    "closeCount": 8,
+    "netGrowth": -3
+  },
+  {
+    "code": "40608",
+    "newCount": 0,
+    "closeCount": 3,
+    "netGrowth": -3
+  },
+  {
+    "code": "40609",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "40610",
+    "newCount": 6,
+    "closeCount": 6,
+    "netGrowth": 0
+  },
+  {
+    "code": "40621",
+    "newCount": 13,
+    "closeCount": 19,
+    "netGrowth": -6
+  },
+  {
+    "code": "40625",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "40642",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "40646",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "40647",
+    "newCount": 6,
+    "closeCount": 7,
+    "netGrowth": -1
+  },
+  {
+    "code": "41201",
+    "newCount": 111,
+    "closeCount": 54,
+    "netGrowth": 57
+  },
+  {
+    "code": "41202",
+    "newCount": 43,
+    "closeCount": 16,
+    "netGrowth": 27
+  },
+  {
+    "code": "41203",
+    "newCount": 33,
+    "closeCount": 11,
+    "netGrowth": 22
+  },
+  {
+    "code": "41204",
+    "newCount": 7,
+    "closeCount": 6,
+    "netGrowth": 1
+  },
+  {
+    "code": "41205",
+    "newCount": 22,
+    "closeCount": 7,
+    "netGrowth": 15
+  },
+  {
+    "code": "41206",
+    "newCount": 15,
+    "closeCount": 5,
+    "netGrowth": 10
+  },
+  {
+    "code": "41207",
+    "newCount": 10,
+    "closeCount": 3,
+    "netGrowth": 7
+  },
+  {
+    "code": "41208",
+    "newCount": 9,
+    "closeCount": 4,
+    "netGrowth": 5
+  },
+  {
+    "code": "41209",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "41210",
+    "newCount": 12,
+    "closeCount": 7,
+    "netGrowth": 5
+  },
+  {
+    "code": "41327",
+    "newCount": 4,
+    "closeCount": 0,
+    "netGrowth": 4
+  },
+  {
+    "code": "41341",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "41345",
+    "newCount": 4,
+    "closeCount": 2,
+    "netGrowth": 2
+  },
+  {
+    "code": "41346",
+    "newCount": 13,
+    "closeCount": 4,
+    "netGrowth": 9
+  },
+  {
+    "code": "41387",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "41401",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "41423",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "41424",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "41425",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "41441",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "42201",
+    "newCount": 135,
+    "closeCount": 216,
+    "netGrowth": -81
+  },
+  {
+    "code": "42202",
+    "newCount": 67,
+    "closeCount": 128,
+    "netGrowth": -61
+  },
+  {
+    "code": "42203",
+    "newCount": 10,
+    "closeCount": 14,
+    "netGrowth": -4
+  },
+  {
+    "code": "42204",
+    "newCount": 40,
+    "closeCount": 41,
+    "netGrowth": -1
+  },
+  {
+    "code": "42205",
+    "newCount": 34,
+    "closeCount": 33,
+    "netGrowth": 1
+  },
+  {
+    "code": "42207",
+    "newCount": 6,
+    "closeCount": 8,
+    "netGrowth": -2
+  },
+  {
+    "code": "42208",
+    "newCount": 0,
+    "closeCount": 7,
+    "netGrowth": -7
+  },
+  {
+    "code": "42209",
+    "newCount": 6,
+    "closeCount": 9,
+    "netGrowth": -3
+  },
+  {
+    "code": "42210",
+    "newCount": 5,
+    "closeCount": 8,
+    "netGrowth": -3
+  },
+  {
+    "code": "42211",
+    "newCount": 8,
+    "closeCount": 9,
+    "netGrowth": -1
+  },
+  {
+    "code": "42212",
+    "newCount": 5,
+    "closeCount": 6,
+    "netGrowth": -1
+  },
+  {
+    "code": "42213",
+    "newCount": 17,
+    "closeCount": 7,
+    "netGrowth": 10
+  },
+  {
+    "code": "42214",
+    "newCount": 5,
+    "closeCount": 13,
+    "netGrowth": -8
+  },
+  {
+    "code": "42307",
+    "newCount": 8,
+    "closeCount": 5,
+    "netGrowth": 3
+  },
+  {
+    "code": "42308",
+    "newCount": 9,
+    "closeCount": 12,
+    "netGrowth": -3
+  },
+  {
+    "code": "42321",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "42322",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "42323",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "42383",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "42389",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "42391",
+    "newCount": 5,
+    "closeCount": 3,
+    "netGrowth": 2
+  },
+  {
+    "code": "42411",
+    "newCount": 0,
+    "closeCount": 4,
+    "netGrowth": -4
+  },
+  {
+    "code": "43101",
+    "newCount": 188,
+    "closeCount": 236,
+    "netGrowth": -48
+  },
+  {
+    "code": "43102",
+    "newCount": 95,
+    "closeCount": 132,
+    "netGrowth": -37
+  },
+  {
+    "code": "43103",
+    "newCount": 53,
+    "closeCount": 45,
+    "netGrowth": 8
+  },
+  {
+    "code": "43104",
+    "newCount": 67,
+    "closeCount": 61,
+    "netGrowth": 6
+  },
+  {
+    "code": "43105",
+    "newCount": 71,
+    "closeCount": 61,
+    "netGrowth": 10
+  },
+  {
+    "code": "43202",
+    "newCount": 46,
+    "closeCount": 45,
+    "netGrowth": 1
+  },
+  {
+    "code": "43203",
+    "newCount": 13,
+    "closeCount": 9,
+    "netGrowth": 4
+  },
+  {
+    "code": "43204",
+    "newCount": 17,
+    "closeCount": 10,
+    "netGrowth": 7
+  },
+  {
+    "code": "43205",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "43206",
+    "newCount": 27,
+    "closeCount": 25,
+    "netGrowth": 2
+  },
+  {
+    "code": "43208",
+    "newCount": 23,
+    "closeCount": 17,
+    "netGrowth": 6
+  },
+  {
+    "code": "43210",
+    "newCount": 22,
+    "closeCount": 11,
+    "netGrowth": 11
+  },
+  {
+    "code": "43211",
+    "newCount": 9,
+    "closeCount": 6,
+    "netGrowth": 3
+  },
+  {
+    "code": "43212",
+    "newCount": 8,
+    "closeCount": 11,
+    "netGrowth": -3
+  },
+  {
+    "code": "43213",
+    "newCount": 29,
+    "closeCount": 16,
+    "netGrowth": 13
+  },
+  {
+    "code": "43214",
+    "newCount": 6,
+    "closeCount": 10,
+    "netGrowth": -4
+  },
+  {
+    "code": "43215",
+    "newCount": 11,
+    "closeCount": 23,
+    "netGrowth": -12
+  },
+  {
+    "code": "43216",
+    "newCount": 25,
+    "closeCount": 11,
+    "netGrowth": 14
+  },
+  {
+    "code": "43348",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "43364",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "43367",
+    "newCount": 7,
+    "closeCount": 7,
+    "netGrowth": 0
+  },
+  {
+    "code": "43368",
+    "newCount": 5,
+    "closeCount": 4,
+    "netGrowth": 1
+  },
+  {
+    "code": "43369",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "43403",
+    "newCount": 18,
+    "closeCount": 15,
+    "netGrowth": 3
+  },
+  {
+    "code": "43404",
+    "newCount": 25,
+    "closeCount": 13,
+    "netGrowth": 12
+  },
+  {
+    "code": "43423",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "43424",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "43428",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "43432",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "43433",
+    "newCount": 9,
+    "closeCount": 6,
+    "netGrowth": 3
+  },
+  {
+    "code": "43441",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "43442",
+    "newCount": 8,
+    "closeCount": 6,
+    "netGrowth": 2
+  },
+  {
+    "code": "43443",
+    "newCount": 16,
+    "closeCount": 9,
+    "netGrowth": 7
+  },
+  {
+    "code": "43444",
+    "newCount": 4,
+    "closeCount": 7,
+    "netGrowth": -3
+  },
+  {
+    "code": "43447",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "43468",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "43482",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "43484",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "43501",
+    "newCount": 4,
+    "closeCount": 5,
+    "netGrowth": -1
+  },
+  {
+    "code": "43505",
+    "newCount": 0,
+    "closeCount": 4,
+    "netGrowth": -4
+  },
+  {
+    "code": "43506",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "43507",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "43510",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "43511",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "43512",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "43513",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "43514",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "43531",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "44201",
+    "newCount": 244,
+    "closeCount": 109,
+    "netGrowth": 135
+  },
+  {
+    "code": "44202",
+    "newCount": 53,
+    "closeCount": 30,
+    "netGrowth": 23
+  },
+  {
+    "code": "44203",
+    "newCount": 35,
+    "closeCount": 14,
+    "netGrowth": 21
+  },
+  {
+    "code": "44204",
+    "newCount": 23,
+    "closeCount": 12,
+    "netGrowth": 11
+  },
+  {
+    "code": "44205",
+    "newCount": 26,
+    "closeCount": 13,
+    "netGrowth": 13
+  },
+  {
+    "code": "44206",
+    "newCount": 12,
+    "closeCount": 5,
+    "netGrowth": 7
+  },
+  {
+    "code": "44207",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "44208",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "44209",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "44210",
+    "newCount": 4,
+    "closeCount": 6,
+    "netGrowth": -2
+  },
+  {
+    "code": "44211",
+    "newCount": 21,
+    "closeCount": 3,
+    "netGrowth": 18
+  },
+  {
+    "code": "44212",
+    "newCount": 8,
+    "closeCount": 6,
+    "netGrowth": 2
+  },
+  {
+    "code": "44213",
+    "newCount": 14,
+    "closeCount": 4,
+    "netGrowth": 10
+  },
+  {
+    "code": "44214",
+    "newCount": 2,
+    "closeCount": 7,
+    "netGrowth": -5
+  },
+  {
+    "code": "44341",
+    "newCount": 8,
+    "closeCount": 3,
+    "netGrowth": 5
+  },
+  {
+    "code": "44461",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "44462",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "45201",
+    "newCount": 203,
+    "closeCount": 102,
+    "netGrowth": 101
+  },
+  {
+    "code": "45202",
+    "newCount": 79,
+    "closeCount": 33,
+    "netGrowth": 46
+  },
+  {
+    "code": "45203",
+    "newCount": 33,
+    "closeCount": 21,
+    "netGrowth": 12
+  },
+  {
+    "code": "45204",
+    "newCount": 14,
+    "closeCount": 11,
+    "netGrowth": 3
+  },
+  {
+    "code": "45205",
+    "newCount": 18,
+    "closeCount": 5,
+    "netGrowth": 13
+  },
+  {
+    "code": "45206",
+    "newCount": 23,
+    "closeCount": 13,
+    "netGrowth": 10
+  },
+  {
+    "code": "45207",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "45208",
+    "newCount": 6,
+    "closeCount": 6,
+    "netGrowth": 0
+  },
+  {
+    "code": "45209",
+    "newCount": 6,
+    "closeCount": 3,
+    "netGrowth": 3
+  },
+  {
+    "code": "45341",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "45361",
+    "newCount": 2,
+    "closeCount": 0,
+    "netGrowth": 2
+  },
+  {
+    "code": "45382",
+    "newCount": 3,
+    "closeCount": 4,
+    "netGrowth": -1
+  },
+  {
+    "code": "45383",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "45401",
+    "newCount": 11,
+    "closeCount": 1,
+    "netGrowth": 10
+  },
+  {
+    "code": "45402",
+    "newCount": 5,
+    "closeCount": 1,
+    "netGrowth": 4
+  },
+  {
+    "code": "45403",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "45404",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "45405",
+    "newCount": 7,
+    "closeCount": 2,
+    "netGrowth": 5
+  },
+  {
+    "code": "45406",
+    "newCount": 1,
+    "closeCount": 4,
+    "netGrowth": -3
+  },
+  {
+    "code": "45421",
+    "newCount": 3,
+    "closeCount": 2,
+    "netGrowth": 1
+  },
+  {
+    "code": "45431",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "45441",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "45442",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "45443",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "46201",
+    "newCount": 317,
+    "closeCount": 462,
+    "netGrowth": -145
+  },
+  {
+    "code": "46203",
+    "newCount": 25,
+    "closeCount": 21,
+    "netGrowth": 4
+  },
+  {
+    "code": "46204",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "46206",
+    "newCount": 1,
+    "closeCount": 5,
+    "netGrowth": -4
+  },
+  {
+    "code": "46208",
+    "newCount": 15,
+    "closeCount": 7,
+    "netGrowth": 8
+  },
+  {
+    "code": "46210",
+    "newCount": 15,
+    "closeCount": 6,
+    "netGrowth": 9
+  },
+  {
+    "code": "46213",
+    "newCount": 6,
+    "closeCount": 7,
+    "netGrowth": -1
+  },
+  {
+    "code": "46214",
+    "newCount": 5,
+    "closeCount": 2,
+    "netGrowth": 3
+  },
+  {
+    "code": "46215",
+    "newCount": 17,
+    "closeCount": 22,
+    "netGrowth": -5
+  },
+  {
+    "code": "46216",
+    "newCount": 14,
+    "closeCount": 20,
+    "netGrowth": -6
+  },
+  {
+    "code": "46217",
+    "newCount": 6,
+    "closeCount": 8,
+    "netGrowth": -2
+  },
+  {
+    "code": "46218",
+    "newCount": 50,
+    "closeCount": 39,
+    "netGrowth": 11
+  },
+  {
+    "code": "46219",
+    "newCount": 3,
+    "closeCount": 5,
+    "netGrowth": -2
+  },
+  {
+    "code": "46220",
+    "newCount": 7,
+    "closeCount": 5,
+    "netGrowth": 2
+  },
+  {
+    "code": "46221",
+    "newCount": 10,
+    "closeCount": 13,
+    "netGrowth": -3
+  },
+  {
+    "code": "46222",
+    "newCount": 24,
+    "closeCount": 31,
+    "netGrowth": -7
+  },
+  {
+    "code": "46223",
+    "newCount": 19,
+    "closeCount": 7,
+    "netGrowth": 12
+  },
+  {
+    "code": "46224",
+    "newCount": 8,
+    "closeCount": 5,
+    "netGrowth": 3
+  },
+  {
+    "code": "46225",
+    "newCount": 21,
+    "closeCount": 27,
+    "netGrowth": -6
+  },
+  {
+    "code": "46392",
+    "newCount": 2,
+    "closeCount": 5,
+    "netGrowth": -3
+  },
+  {
+    "code": "46404",
+    "newCount": 5,
+    "closeCount": 0,
+    "netGrowth": 5
+  },
+  {
+    "code": "46452",
+    "newCount": 3,
+    "closeCount": 1,
+    "netGrowth": 2
+  },
+  {
+    "code": "46468",
+    "newCount": 7,
+    "closeCount": 4,
+    "netGrowth": 3
+  },
+  {
+    "code": "46482",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "46490",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "46491",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "46492",
+    "newCount": 7,
+    "closeCount": 3,
+    "netGrowth": 4
+  },
+  {
+    "code": "46501",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "46502",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "46505",
+    "newCount": 5,
+    "closeCount": 5,
+    "netGrowth": 0
+  },
+  {
+    "code": "46523",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "46525",
+    "newCount": 7,
+    "closeCount": 1,
+    "netGrowth": 6
+  },
+  {
+    "code": "46527",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "46529",
+    "newCount": 0,
+    "closeCount": 7,
+    "netGrowth": -7
+  },
+  {
+    "code": "46530",
+    "newCount": 6,
+    "closeCount": 2,
+    "netGrowth": 4
+  },
+  {
+    "code": "46531",
+    "newCount": 1,
+    "closeCount": 3,
+    "netGrowth": -2
+  },
+  {
+    "code": "46532",
+    "newCount": 1,
+    "closeCount": 2,
+    "netGrowth": -1
+  },
+  {
+    "code": "46533",
+    "newCount": 2,
+    "closeCount": 1,
+    "netGrowth": 1
+  },
+  {
+    "code": "46534",
+    "newCount": 1,
+    "closeCount": 1,
+    "netGrowth": 0
+  },
+  {
+    "code": "46535",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "47201",
+    "newCount": 320,
+    "closeCount": 359,
+    "netGrowth": -39
+  },
+  {
+    "code": "47205",
+    "newCount": 69,
+    "closeCount": 58,
+    "netGrowth": 11
+  },
+  {
+    "code": "47207",
+    "newCount": 53,
+    "closeCount": 37,
+    "netGrowth": 16
+  },
+  {
+    "code": "47208",
+    "newCount": 88,
+    "closeCount": 95,
+    "netGrowth": -7
+  },
+  {
+    "code": "47209",
+    "newCount": 48,
+    "closeCount": 29,
+    "netGrowth": 19
+  },
+  {
+    "code": "47210",
+    "newCount": 36,
+    "closeCount": 23,
+    "netGrowth": 13
+  },
+  {
+    "code": "47211",
+    "newCount": 102,
+    "closeCount": 71,
+    "netGrowth": 31
+  },
+  {
+    "code": "47212",
+    "newCount": 46,
+    "closeCount": 27,
+    "netGrowth": 19
+  },
+  {
+    "code": "47213",
+    "newCount": 62,
+    "closeCount": 25,
+    "netGrowth": 37
+  },
+  {
+    "code": "47214",
+    "newCount": 46,
+    "closeCount": 36,
+    "netGrowth": 10
+  },
+  {
+    "code": "47215",
+    "newCount": 31,
+    "closeCount": 14,
+    "netGrowth": 17
+  },
+  {
+    "code": "47301",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "47302",
+    "newCount": 2,
+    "closeCount": 3,
+    "netGrowth": -1
+  },
+  {
+    "code": "47303",
+    "newCount": 0,
+    "closeCount": 1,
+    "netGrowth": -1
+  },
+  {
+    "code": "47306",
+    "newCount": 4,
+    "closeCount": 3,
+    "netGrowth": 1
+  },
+  {
+    "code": "47308",
+    "newCount": 10,
+    "closeCount": 6,
+    "netGrowth": 4
+  },
+  {
+    "code": "47311",
+    "newCount": 8,
+    "closeCount": 8,
+    "netGrowth": 0
+  },
+  {
+    "code": "47313",
+    "newCount": 4,
+    "closeCount": 1,
+    "netGrowth": 3
+  },
+  {
+    "code": "47314",
+    "newCount": 6,
+    "closeCount": 5,
+    "netGrowth": 1
+  },
+  {
+    "code": "47315",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "47324",
+    "newCount": 25,
+    "closeCount": 11,
+    "netGrowth": 14
+  },
+  {
+    "code": "47325",
+    "newCount": 9,
+    "closeCount": 3,
+    "netGrowth": 6
+  },
+  {
+    "code": "47326",
+    "newCount": 41,
+    "closeCount": 15,
+    "netGrowth": 26
+  },
+  {
+    "code": "47327",
+    "newCount": 10,
+    "closeCount": 2,
+    "netGrowth": 8
+  },
+  {
+    "code": "47328",
+    "newCount": 9,
+    "closeCount": 2,
+    "netGrowth": 7
+  },
+  {
+    "code": "47329",
+    "newCount": 17,
+    "closeCount": 20,
+    "netGrowth": -3
+  },
+  {
+    "code": "47348",
+    "newCount": 13,
+    "closeCount": 4,
+    "netGrowth": 9
+  },
+  {
+    "code": "47350",
+    "newCount": 18,
+    "closeCount": 11,
+    "netGrowth": 7
+  },
+  {
+    "code": "47353",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "47354",
+    "newCount": 0,
+    "closeCount": 2,
+    "netGrowth": -2
+  },
+  {
+    "code": "47357",
+    "newCount": 2,
+    "closeCount": 2,
+    "netGrowth": 0
+  },
+  {
+    "code": "47360",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "47361",
+    "newCount": 3,
+    "closeCount": 3,
+    "netGrowth": 0
+  },
+  {
+    "code": "47362",
+    "newCount": 12,
+    "closeCount": 0,
+    "netGrowth": 12
+  },
+  {
+    "code": "47375",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  },
+  {
+    "code": "47381",
+    "newCount": 8,
+    "closeCount": 0,
+    "netGrowth": 8
+  },
+  {
+    "code": "47382",
+    "newCount": 1,
+    "closeCount": 0,
+    "netGrowth": 1
+  }
+]

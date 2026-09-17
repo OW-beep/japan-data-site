@@ -9,7 +9,7 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "/articles/million-cities" },
-  title: "人口100万人以上の都市は12市｜一覧",
+  title: "人口100万人以上の都市は12市｜日本の100万人都市一覧",
   description:
     "日本で人口100万人を超える都市は12市。政令指定都市20市のうち実際に100万人を超えているのは半数程度です。東京都特別区部から仙台市まで、人口順にランキング形式で一覧比較できます。",
 };
@@ -59,8 +59,8 @@ export default function Page() {
       a: `${ranking.length}市です(東京都特別区部を1つの都市として数えた場合)。特別区部を除いた「市」だけで数えると${ranking.length - 1}市になります。`,
     },
     {
-      q: "人口100万人以上の都市の一覧を教えてください",
-      a: `${ranking
+      q: "日本で人口100万人以上の都市の一覧を教えてください",
+      a: `日本で人口100万人以上の都市は、${ranking
         .map((c) => c.name)
         .join("、")}の${ranking.length}自治体です。この記事の冒頭にある一覧・ランキング表でも、人口が多い順に確認できます。`,
     },
@@ -80,8 +80,8 @@ export default function Page() {
 
   return (
     <ArticleLayout
-      title="人口100万人以上の都市は12市｜全国一覧とランキング"
-      summary="全国で人口100万人を超える都市は12市。政令指定都市20市のうち、実際に100万人を超えているのは半数程度にとどまります。東京都特別区部から仙台市まで、人口順に一覧で紹介します。"
+      title="日本の100万人都市一覧｜人口100万人以上の都市は12市"
+      summary="日本で人口100万人を超える都市は12市。政令指定都市20市のうち、実際に100万人を超えているのは半数程度にとどまります。東京都特別区部から仙台市まで、人口順に一覧で紹介します。"
       heroLabel="100万人超自治体数"
       heroValue={`${ranking.length}自治体`}
       rankingLink="/ranking/population"
@@ -107,7 +107,7 @@ export default function Page() {
       ]}
     >
       <div style={box}>
-        <h2>人口100万人超自治体一覧</h2>
+        <h2>日本の人口100万人超自治体一覧</h2>
 
         <RankingBarChart
           items={ranking.map((c) => ({

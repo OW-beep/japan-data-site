@@ -16,3 +16,6 @@
 .DS_Store
 *.pem
 npm-debug.log*
+
+# raw downloaded data (法人番号全件データ等、大容量のダウンロード元ファイル)
+data-raw/
