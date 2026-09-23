@@ -40,6 +40,16 @@ const articles = [
     desc: "転入超過率だけでは見えない、住民の入れ替わりの激しさを比較します。",
   },
   {
+    href: "/articles/daycare-birthrate-analysis",
+    title: "保育園の数と出生率の関係",
+    desc: "「保育園を増やせば出生率が上がる」は本当か。相関係数0.33の実態を検証します。",
+  },
+  {
+    href: "/articles/single-household-crime-analysis",
+    title: "単身世帯率と犯罪率の関係",
+    desc: "東京都は単身世帯率1位なのに犯罪率は7位。相関係数0.38の意外な関係を検証します。",
+  },
+  {
     href: "/articles/furusato-nozei-analysis",
     title: "ふるさと納税 受入額ランキング分析",
     desc: "総務省の現況調査をもとに、受入額ランキングとお金の流れを分析します。",

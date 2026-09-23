@@ -3,6 +3,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
+import RakutenGifts from "@/components/RakutenGifts";
 import Link from "next/link";
 
 export const metadata = {
@@ -126,6 +127,11 @@ export default function Page() {
           という点が、このランキングの面白いところです。
         </p>
       </div>
+
+      <RakutenGifts
+        keyword="いくら 訳あり 北海道"
+        heading="白糠町の人気を支える「いくら」を楽天市場で見る"
+      />
 
       <div style={box}>
         <h2>受入額の47.9%は費用として使われている</h2>

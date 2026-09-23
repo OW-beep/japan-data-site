@@ -142,6 +142,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/bedroom-town-finance-analysis",
     "/articles/prefecture-income-analysis",
     "/articles/crime-rate-analysis",
+    "/articles/single-household-crime-analysis",
+    "/articles/daycare-birthrate-analysis",
     "/articles/traffic-accident-analysis",
     "/articles/vacant-house-analysis",
     "/articles/daytime-ratio-analysis",
