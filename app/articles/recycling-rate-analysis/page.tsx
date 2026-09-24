@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import RakutenGifts from "@/components/RakutenGifts";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
@@ -202,6 +203,11 @@ export default function Page() {
           なりそうです。
         </p>
       </div>
+
+      <RakutenGifts
+        keyword="ゴミ箱 分別 キッチン"
+        heading="こまかい分別をラクにする、人気のゴミ箱・分別ボックスを楽天市場で見る"
+      />
 
       <div style={box}>
         <h2>まとめ</h2>

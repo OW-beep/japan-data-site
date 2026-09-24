@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import RakutenGifts from "@/components/RakutenGifts";
 import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
@@ -230,6 +231,11 @@ export default function Page() {
           言葉でも、その先にある暮らしの実態は大きく異なります。
         </p>
       </div>
+
+      <RakutenGifts
+        keyword="DIY リフォーム 工具セット"
+        heading="中古・空き家のセルフリノベーションに人気の工具を楽天市場で見る"
+      />
 
       <div style={box}>
         <h2>まとめ</h2>

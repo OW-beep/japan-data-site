@@ -3,6 +3,7 @@ import { getRealEstatePriceRanking } from "@/lib/realEstatePrice";
 import { getCities } from "@/lib/getCities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 
@@ -191,6 +192,11 @@ export default function Page() {
           より具体的に読み解くことができます。
         </p>
       </div>
+
+      <RakutenGifts
+        keyword="コンパクト家電 一人暮らし 新生活"
+        heading="新生活・一人暮らしの部屋づくりに人気の家電を楽天市場で見る"
+      />
 
       <div style={box}>
         <h2>Q&amp;A：地価と単身世帯率の関係についてよくある質問</h2>

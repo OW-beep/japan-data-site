@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import { getPrefectureStats } from "@/lib/prefectureStats";
 import ArticleLayout from "@/components/ArticleLayout";
+import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 
 export const metadata = {
@@ -158,6 +159,11 @@ export default function Page() {
           つながっている可能性があります。
         </p>
       </div>
+
+      <RakutenGifts
+        keyword="ドライブレコーダー 前後 セット"
+        heading="もしもの事故に備える、人気のドライブレコーダーを楽天市場で見る"
+      />
 
       <div style={box}>
         <h2>データを読むときの注意点</h2>
