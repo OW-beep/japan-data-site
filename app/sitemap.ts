@@ -70,6 +70,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/privacy",
     "/terms",
     "/contact",
+    "/reports",
   ];
 
   // /city と /prefecture は審査期間中 noindex にしているため、

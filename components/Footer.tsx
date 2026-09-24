@@ -48,6 +48,7 @@ export default function Footer() {
             <li><Link prefetch={false} href="/terms" style={footerLink}>利用規約</Link></li>
             <li><Link prefetch={false} href="/contact" style={footerLink}>お問い合わせ</Link></li>
             <li><Link prefetch={false} href="/sitemap" style={footerLink}>サイトマップ</Link></li>
+            <li><Link prefetch={false} href="/reports" style={footerLink}>財政健全度レポート(サンプル)</Link></li>
           </ul>
         </section>
 
