@@ -50,7 +50,7 @@ export default function LibraryRankingPage() {
       <DataAsOf />
 
       <a
-        href="/articles/household-analysis"
+        href="/articles/library-child-ratio-analysis"
         style={{
           display: "inline-block",
           marginBottom: 20,
@@ -63,7 +63,7 @@ export default function LibraryRankingPage() {
           textDecoration: "none",
         }}
       >
-        📖 関連する分析記事もあわせて読む →
+        📖 図書館の充実度と子供の割合の関係を分析した記事を読む →
       </a>
 
       <MetricBox

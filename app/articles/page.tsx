@@ -40,6 +40,11 @@ const articles = [
     desc: "転入超過率だけでは見えない、住民の入れ替わりの激しさを比較します。",
   },
   {
+    href: "/articles/library-child-ratio-analysis",
+    title: "図書館の充実度と子供の割合に関係はあるか",
+    desc: "図書館1館あたりの人口と子供の割合を検証。相関係数0.06のほぼ無関係な結果に。",
+  },
+  {
     href: "/articles/daycare-birthrate-analysis",
     title: "保育園の数と出生率の関係",
     desc: "「保育園を増やせば出生率が上がる」は本当か。相関係数0.33の実態を検証します。",

@@ -348,6 +348,10 @@ export default function Page() {
           <Link prefetch={false} href="/articles/youngest-municipalities" style={link}>
             平均年齢が若い自治体ランキングを見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/library-child-ratio-analysis" style={link}>
+            図書館の充実度と子供の割合の関係を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>
