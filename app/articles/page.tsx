@@ -40,6 +40,11 @@ const articles = [
     desc: "転入超過率だけでは見えない、住民の入れ替わりの激しさを比較します。",
   },
   {
+    href: "/articles/daytime-restaurant-density-analysis",
+    title: "昼間人口比率と飲食店密度の関係",
+    desc: "千代田区は住民1,000人あたり飲食店45件。相関係数0.87の強い関係を検証します。",
+  },
+  {
     href: "/articles/library-child-ratio-analysis",
     title: "図書館の充実度と子供の割合に関係はあるか",
     desc: "図書館1館あたりの人口と子供の割合を検証。相関係数0.06のほぼ無関係な結果に。",

@@ -23,7 +23,7 @@ export default function Page() {
       </p>
 
       <div style={sampleBox}>
-        <div style={sampleLabel}>サンプル</div>
+        <div style={sampleLabel}>サンプル①</div>
         <h2 style={sampleTitle}>北海道 泊村</h2>
         <p style={sampleDesc}>
           原子力発電所が立地し、財政力指数1.65(全国平均0.54の約3倍)と、
@@ -32,6 +32,26 @@ export default function Page() {
         </p>
         <a
           href="/reports/tomari-mura_fiscal-health-report_sample.pdf"
+          style={downloadButton}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          PDFサンプルを見る(無料・6ページ)
+        </a>
+      </div>
+
+      <div style={sampleBox}>
+        <div style={sampleLabel}>サンプル②</div>
+        <h2 style={sampleTitle}>北海道 夕張市</h2>
+        <p style={sampleDesc}>
+          財政健全度スコアは全国1,576団体中1,575位。実質公債費比率が
+          全国平均の約9倍にのぼり、自動診断でも「財政再建が必要な水準」
+          と判定される、対照的な事例です。健全な自治体だけでなく、
+          厳しい状況にある自治体も同じフォーマットで機械的に診断
+          できることを示すサンプルです。
+        </p>
+        <a
+          href="/reports/yubari-shi_fiscal-health-report_sample.pdf"
           style={downloadButton}
           target="_blank"
           rel="noopener noreferrer"

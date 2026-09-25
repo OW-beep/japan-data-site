@@ -256,6 +256,10 @@ export default function Page() {
           <Link prefetch={false} href="/articles/bedroom-town-finance-analysis" style={link}>
             「豊かなベッドタウン」ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/daytime-restaurant-density-analysis" style={link}>
+            昼間人口比率と飲食店密度の関係を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

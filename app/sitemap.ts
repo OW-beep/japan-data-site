@@ -146,6 +146,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles/single-household-crime-analysis",
     "/articles/daycare-birthrate-analysis",
     "/articles/library-child-ratio-analysis",
+    "/articles/daytime-restaurant-density-analysis",
     "/articles/traffic-accident-analysis",
     "/articles/vacant-house-analysis",
     "/articles/daytime-ratio-analysis",
