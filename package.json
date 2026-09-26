@@ -24,6 +24,7 @@
     "merge:prefecture-income": "tsx scripts/fetchPrefectureIncome.ts",
     "merge:safety-stats": "tsx scripts/fetchSafetyStats.ts",
     "merge:life-expectancy": "tsx scripts/fetchLifeExpectancy.ts",
+    "merge:finance-history": "tsx scripts/fetchFinanceHistory.ts",
     "convert:area": "tsx scripts/convertAreaCsv.ts",
     "merge": "tsx scripts/mergeData.ts",
     "refresh:data": "npm run update:data && npm run merge:finance && npm run merge:ssdse && npm run merge",

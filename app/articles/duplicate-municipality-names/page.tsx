@@ -229,6 +229,10 @@ export default function Page() {
           <Link prefetch={false} href="/search" style={link}>
             自治体検索を見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/municipality-name-trivia" style={link}>
+            動物の名前を持つ自治体、日本一長い地名の街を見る
+          </Link>
         </p>
 
         <CompareCTA />

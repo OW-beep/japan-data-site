@@ -3,6 +3,7 @@ import { getMunicipalities } from "@/lib/municipalities";
 import { getFurusatoNozeiRanking } from "@/lib/furusatoNozei";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
+import A8Banner from "@/components/A8Banner";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 
@@ -202,6 +203,14 @@ export default function Page() {
           地元の税収が流出しているケースも少なくありません。
         </p>
       </div>
+
+      <A8Banner
+        href="https://px.a8.net/svt/ejp?a8mat=4BCA77+EU1VYA+4PXI+BZ8OX"
+        imgSrc="https://www29.a8.net/svt/bgt?aid=260913571897&wid=003&eno=01&mid=s00000022023002012000&mc=1"
+        width={300}
+        height={250}
+        trackingPixelSrc="https://www18.a8.net/0.gif?a8mat=4BCA77+EU1VYA+4PXI+BZ8OX"
+      />
 
       <div style={box}>
         <h2>Q&amp;A：ふるさと納税と財政力の関係についてよくある質問</h2>

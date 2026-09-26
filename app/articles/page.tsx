@@ -40,6 +40,11 @@ const articles = [
     desc: "転入超過率だけでは見えない、住民の入れ替わりの激しさを比較します。",
   },
   {
+    href: "/articles/municipality-name-trivia",
+    title: "動物の名前を持つ自治体、日本一長い地名の街",
+    desc: "全国1,740市区町村の名前を調査。動物の漢字を含む自治体は61、最長の地名は7文字でした。",
+  },
+  {
     href: "/articles/daytime-restaurant-density-analysis",
     title: "昼間人口比率と飲食店密度の関係",
     desc: "千代田区は住民1,000人あたり飲食店45件。相関係数0.87の強い関係を検証します。",
