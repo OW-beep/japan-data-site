@@ -235,6 +235,10 @@ export default function Page() {
           <Link prefetch={false} href="/articles/divorce-rate-analysis" style={link}>
             離婚率ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/marriage-birthrate-analysis" style={link}>
+            婚姻率と出生率の関係を見る
+          </Link>
         </p>
       </div>
     </ArticleLayout>

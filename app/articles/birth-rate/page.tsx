@@ -327,6 +327,10 @@ export default function Page() {
           <Link prefetch={false} href="/articles/child-finance" style={link}>
             子ども人口割合と財政力指数の関係を見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/marriage-birthrate-analysis" style={link}>
+            婚姻率と出生率の関係を見る
+          </Link>
         </p>
       </div>
 

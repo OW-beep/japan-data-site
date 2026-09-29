@@ -45,6 +45,11 @@ const articles = [
     desc: "全国1,740市区町村の名前を調査。動物の漢字を含む自治体は61、最長の地名は7文字でした。",
   },
   {
+    href: "/articles/marriage-birthrate-analysis",
+    title: "婚姻率と出生率の関係",
+    desc: "東京都心は結婚は多いのに子どもは少ない。大都市限定では相関係数-0.51という逆相関を検証します。",
+  },
+  {
     href: "/articles/daytime-restaurant-density-analysis",
     title: "昼間人口比率と飲食店密度の関係",
     desc: "千代田区は住民1,000人あたり飲食店45件。相関係数0.87の強い関係を検証します。",
@@ -102,7 +107,7 @@ const articles = [
   {
     href: "/articles/corporate-growth-analysis",
     title: "新設法人ランキング分析",
-    desc: "渋谷区が純増1位、新宿区は逆に純減1位という意外な結果を分析します。",
+    desc: "渋谷区が純増4,428件で1位、最下位は宇都宮市。新設法人の純増数(新設-閉鎖)を全国の市区町村で分析します。",
   },
   {
     href: "/articles/child-top50",

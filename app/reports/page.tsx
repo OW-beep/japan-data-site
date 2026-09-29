@@ -105,36 +105,21 @@ export default function Page() {
         なっている、というのが有料級の使いどころだと考えています。
       </p>
 
-      <h2 style={h2}>価格の目安</h2>
+      <h2 style={h2}>提供形態・料金について</h2>
       <p style={p}>
         現時点では決済機能を用意しておらず、サンプル版の無料公開のみ
-        行っています。将来的に有料化する場合の想定価格は以下のとおりです。
+        行っています。ご希望の自治体のレポートは、次のような形で個別に
+        承っています。
       </p>
-
-      <div style={priceTable}>
-        {[
-          ["単体レポート(自治体1つ)", "1,980円"],
-          ["比較レポート(自分の市+類似3市)", "3,980円"],
-          ["都道府県セット(県内全市区町村)", "9,800円"],
-          ["法人サブスク(全国データ・月次更新)", "29,800円 / 月"],
-        ].map(([label, price], i, arr) => (
-          <div
-            key={label}
-            style={{
-              ...priceRow,
-              borderBottom: i === arr.length - 1 ? "none" : "1px solid var(--line)",
-            }}
-          >
-            <span>{label}</span>
-            <strong>{price}</strong>
-          </div>
-        ))}
-      </div>
-
-      <h2 style={h2}>他の自治体のレポートが欲しい場合</h2>
+      <ul style={ul}>
+        <li style={li}>単体レポート(自治体1つ)</li>
+        <li style={li}>比較レポート(ご自身の市と、規模の近い自治体との比較)</li>
+        <li style={li}>都道府県セット(県内の全市区町村)</li>
+        <li style={li}>継続提供(全国データ・定期更新、法人向け)</li>
+      </ul>
       <p style={p}>
-        現在、他の自治体のレポートは自動配信の仕組みを用意していない
-        ため、個別対応になります。ご希望の自治体名を添えて、
+        料金は、ご希望の内容・範囲に応じてご案内します。ご希望の自治体名と
+        用途を添えて、
         <Link prefetch={false} href="/contact" style={link}>
           お問い合わせページ
         </Link>
@@ -229,15 +214,4 @@ const downloadButton: React.CSSProperties = {
   textDecoration: "none",
 };
 
-const priceTable: React.CSSProperties = {
-  border: "1px solid var(--line)",
-  borderRadius: 10,
-  overflow: "hidden",
-};
 
-const priceRow: React.CSSProperties = {
-  display: "flex",
-  justifyContent: "space-between",
-  padding: "12px 16px",
-  borderBottom: "1px solid var(--line)",
-};

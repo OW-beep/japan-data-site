@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { parse } from "csv-parse/sync";
+import { parse } from "csv-parse";
 
 // ------------------------------------------------------------------
 // 国税庁「法人番号公表サイト」の「全件データダウンロード」で取得した
@@ -59,6 +59,16 @@ import { parse } from "csv-parse/sync";
 
 const INPUT_DIR = process.argv[2] || "data-raw/houjin";
 const MONTHS = Number(process.argv[3]) || 12;
+
+// 明示的な集計期間の指定(暦年で正確に比較したい場合に使う)。
+// 例: npx tsx scripts/processCorporateRegistration.ts data-raw/houjin --from=2025-01-01 --to=2025-12-31
+// 指定が無い場合は、従来通り「実行日から遡ってMONTHSか月」を使う。
+function getArgDate(flag: string): string | null {
+  const arg = process.argv.find((a) => a.startsWith(`--${flag}=`));
+  return arg ? arg.split("=")[1] : null;
+}
+const EXPLICIT_FROM = getArgDate("from");
+const EXPLICIT_TO = getArgDate("to");
 
 // 国税庁の公式データ定義に基づく列順(0始まりインデックス)
 const COL = {
@@ -132,7 +142,7 @@ function listCsvFiles(dir: string): string[] {
     .map((f) => path.join(dir, f));
 }
 
-function main() {
+async function main() {
   const files = listCsvFiles(INPUT_DIR);
   if (files.length === 0) {
     console.error(`${INPUT_DIR} 内にCSVファイルが見つかりませんでした。`);
@@ -140,30 +150,50 @@ function main() {
   }
 
   console.log(`${files.length}個のCSVファイルを処理します...`);
-
-  const today = new Date();
-  const windowStart = new Date();
-  windowStart.setMonth(windowStart.getMonth() - MONTHS);
-  const from = windowStart.toISOString().slice(0, 10);
-  const to = today.toISOString().slice(0, 10);
-  console.log(`集計対象期間: ${from} 〜 ${to}`);
+  if (EXPLICIT_FROM || EXPLICIT_TO) {
+    console.log(`集計対象期間(明示指定): ${EXPLICIT_FROM ?? "?"} 〜 ${EXPLICIT_TO ?? "?"}`);
+  } else {
+    console.log(
+      "集計対象期間: データ内の最新日付を検出してから決定します(全ファイル読み込み後に表示)"
+    );
+  }
 
   // 法人番号ごとに「最新の状態」の行だけを保持する
   const latestByCorpNumber = new Map<string, CorpRow>();
 
+  // ファイル内で実際に観測された最も新しい日付(updateDate)。
+  // これを「このCSVが実際にカバーしている最新日」とみなし、
+  // 集計期間の終点のデフォルト値として使う。
+  // 【重要】--from / --to を明示指定しない場合、従来は
+  // new Date()(スクリプトを実行した"今日")を基準にしていたが、
+  // これだとCSVの実際のデータ範囲より先の期間まで対象に含めて
+  // しまい(例: CSVは8/31時点なのに実行日が9/26だと、9月分の
+  // データが存在しないのに対象期間には含まれる)、実態より
+  // 少なく集計されてしまう。CSV自身が持つ最新日付を基準にする
+  // ことで、実行するタイミングに関係なく正しい期間になる。
+  let maxUpdateDate = "";
+
   for (const file of files) {
     console.log(`読み込み中: ${file}`);
-    const content = fs.readFileSync(file, "utf8");
 
-    const records: string[][] = parse(content, {
-      relax_column_count: true,
-      skip_empty_lines: true,
-    });
+    // 【重要】1GB前後の全国版CSVは fs.readFileSync で一括読み込み
+    // すると、V8の文字列長上限(約536,870,888文字)を超えて
+    // "Cannot create a string longer than 0x1fffffe8 characters"
+    // というエラーで落ちる。ファイル全体を1つの文字列/配列に
+    // 保持せず、ストリームで1行ずつ読みながら処理すること。
+    const parser = fs
+      .createReadStream(file, { encoding: "utf8" })
+      .pipe(parse({ relax_column_count: true, skip_empty_lines: true }));
 
     let count = 0;
-    for (const cols of records) {
+    let lineNo = 0;
+    for await (const cols of parser as AsyncIterable<string[]>) {
+      lineNo++;
       const row = parseRow(cols);
       if (!row) continue;
+      if (row.updateDate && row.updateDate > maxUpdateDate) {
+        maxUpdateDate = row.updateDate;
+      }
       if (!TARGET_KINDS.includes(row.kind)) continue;
 
       const existing = latestByCorpNumber.get(row.corporateNumber);
@@ -171,11 +201,25 @@ function main() {
         latestByCorpNumber.set(row.corporateNumber, row);
       }
       count++;
+
+      if (lineNo % 500000 === 0) {
+        console.log(`  ...${lineNo.toLocaleString()}行読み込み済み(処理中)`);
+      }
     }
-    console.log(`  ${count}行処理(対象法人種別のみ)`);
+    console.log(`  ${count}行処理(対象法人種別のみ) / 全${lineNo.toLocaleString()}行`);
   }
 
   console.log(`\nユニーク法人数: ${latestByCorpNumber.size}`);
+  if (maxUpdateDate) {
+    console.log(`CSV内で検出された最新の更新日: ${maxUpdateDate}`);
+  }
+
+  const snapshotDate = maxUpdateDate ? new Date(maxUpdateDate) : new Date();
+  const windowStart = new Date(snapshotDate);
+  windowStart.setMonth(windowStart.getMonth() - MONTHS);
+  const from = EXPLICIT_FROM ?? windowStart.toISOString().slice(0, 10);
+  const to = EXPLICIT_TO ?? snapshotDate.toISOString().slice(0, 10);
+  console.log(`集計対象期間(確定): ${from} 〜 ${to}`);
 
   const aggByCode = new Map<
     string,
@@ -239,15 +283,14 @@ function main() {
   }
 
   for (const row of result) {
-    const prev = merged.get(row.code);
-    if (prev) {
-      // 同じ自治体コードが既にある場合は加算する
-      // (通常は起きないはずだが、同じ都道府県を誤って2回処理した場合の保険)
-      prev.newCount += row.newCount;
-      prev.closeCount += row.closeCount;
-    } else {
-      merged.set(row.code, row);
-    }
+    // 同じ自治体コードが既にある場合は、新しい結果で上書きする。
+    // (以前は加算していたが、全国版CSVを1回で処理する運用に
+    // 変えたことで、既存データとほぼ完全に重複するようになった。
+    // 加算のままだと同じ実行を2回すると値が倍になってしまうため、
+    // 上書きに変更した。都道府県ごとに分割処理する場合でも、
+    // 同じ都道府県のCSVを重複して置いたまま実行しない限り、
+    // 上書きで問題ない)
+    merged.set(row.code, row);
   }
 
   const finalResult = Array.from(merged.values())
@@ -273,4 +316,7 @@ function main() {
   );
 }
 
-main();
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

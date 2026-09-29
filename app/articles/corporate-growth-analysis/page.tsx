@@ -8,9 +8,9 @@ import CompareCTA from "@/components/CompareCTA";
 
 export const metadata = {
   alternates: { canonical: "/articles/corporate-growth-analysis" },
-  title: "新設法人ランキング分析｜渋谷区が純増1位、新宿区は逆に純減1位",
+  title: "新設法人ランキング分析｜渋谷区が純増4,428件で1位、最下位は宇都宮市",
   description:
-    "国税庁のデータで市区町村別の新設法人純増数を分析。渋谷区が純増2,721件で1位の一方、新宿区は新設2,213件・閉鎖3,329件で純減1,116件という意外な結果でした。",
+    "国税庁のデータで市区町村別の新設法人純増数(直近12か月)を分析。渋谷区が新設6,157件・閉鎖1,729件で純増4,428件と圧倒的な1位。最下位は宇都宮市で、新設375件に対し閉鎖684件、純減309件という結果でした。",
 };
 
 const MIN_POPULATION = 1000;
@@ -23,7 +23,11 @@ export default function Page() {
   const ranking = [...all].sort((a, b) => b.netGrowth - a.netGrowth);
   const top12 = ranking.slice(0, 12);
   const bottom10 = ranking.slice(-10);
-  const shinjuku = all.find((c) => c.name.includes("新宿区"));
+  // 純減が最も大きい自治体(=このデータでの「純減1位」)。
+  // 特定の自治体名をハードコードすると、データが更新されて
+  // 順位が入れ替わった際に本文の記述が事実と食い違う恐れが
+  // あるため、必ず ranking から動的に求めること。
+  const worst = ranking[ranking.length - 1];
   const okuma = all.find((c) => c.name.includes("大熊町"));
 
   const totalNew = all.reduce((s, c) => s + c.newCount, 0);
@@ -68,8 +72,8 @@ export default function Page() {
       a: `${top12[0].name}で、直近12か月の純増数は${top12[0].netGrowth.toLocaleString()}件です(新設${top12[0].newCount.toLocaleString()}件、閉鎖${top12[0].closeCount.toLocaleString()}件)。`,
     },
     {
-      q: "新宿区の新設法人はなぜ純減しているのですか？",
-      a: `新宿区は新設${shinjuku?.newCount.toLocaleString()}件と、単独で見れば全国トップクラスの新設数がありますが、閉鎖数が${shinjuku?.closeCount.toLocaleString()}件とそれを上回り、純増では全国最下位(${shinjuku?.netGrowth.toLocaleString()}件)になっています。新宿区は開業も廃業も多い「新陳代謝の激しい」エリアであり、単純に企業活動が停滞しているというよりは、小規模事業者の入れ替わりが非常に活発な結果と考えられます。`,
+      q: `${worst.name}の新設法人はなぜ純減しているのですか？`,
+      a: `${worst.name}は新設${worst.newCount.toLocaleString()}件に対して閉鎖${worst.closeCount.toLocaleString()}件と、閉鎖数が新設数を上回り、純増では全国最下位(${worst.netGrowth.toLocaleString()}件)になっています。新設数自体が特別多いわけではないため、新陳代謝が激しいというより、純粋に企業の減少が進んでいると考えられます。`,
     },
     {
       q: "新設法人の純増数は地価と関係がありますか？",
@@ -81,8 +85,8 @@ export default function Page() {
 
   return (
     <ArticleLayout
-      title="新設法人ランキング分析｜渋谷区1位、新宿区は逆に純減1位"
-      summary={`国税庁のデータで市区町村別の新設法人純増数(直近12か月)を分析。全国計は新設${totalNew.toLocaleString()}件・閉鎖${totalClose.toLocaleString()}件・純増${(totalNew-totalClose).toLocaleString()}件でした。1位は${top12[0].name}(純増${top12[0].netGrowth.toLocaleString()}件)、一方で新宿区は新設数こそ多いものの、閉鎖数がそれを上回り純減1位という意外な結果でした。`}
+      title="新設法人ランキング分析｜渋谷区が純増4,428件で1位"
+      summary={`国税庁のデータで市区町村別の新設法人純増数(直近12か月)を分析。全国計は新設${totalNew.toLocaleString()}件・閉鎖${totalClose.toLocaleString()}件・純増${(totalNew-totalClose).toLocaleString()}件でした。1位は${top12[0].name}(純増${top12[0].netGrowth.toLocaleString()}件)。最下位は${worst.name}で、新設${worst.newCount.toLocaleString()}件に対し閉鎖${worst.closeCount.toLocaleString()}件、純減${Math.abs(worst.netGrowth).toLocaleString()}件という結果でした。`}
       heroLabel="純増数1位の自治体"
       heroValue={top12[0].name}
       rankingLink="/ranking/corporate-growth"
@@ -124,32 +128,35 @@ export default function Page() {
       </div>
 
       <div style={box}>
-        <h2>新宿区は、新設数トップ級なのに純減1位</h2>
+        <h2>最下位は{worst.name}、閉鎖数が新設数を上回る</h2>
 
         <p>
-          今回の分析で最も意外だったのが新宿区です。新宿区の新設法人数は
-          {shinjuku?.newCount.toLocaleString()}件と全国でも上位に入る
-          規模ですが、閉鎖数が{shinjuku?.closeCount.toLocaleString()}件と
-          それを大きく上回り、純増では
-          <strong>{shinjuku?.netGrowth.toLocaleString()}件</strong>
-          という、全国で最も大きな純減になりました。
+          {worst.name}は新設法人数{worst.newCount.toLocaleString()}件に
+          対して、閉鎖数が{worst.closeCount.toLocaleString()}件と上回り、
+          純増では
+          <strong>{worst.netGrowth.toLocaleString()}件</strong>
+          という、今回の集計で最も大きな純減になりました。
         </p>
 
         <div className="pull-note">
-          新設数だけを見れば新宿区は「企業が集まる街」ですが、
-          それ以上のペースで法人が閉鎖されているため、実質的には
-          企業数が減少しています。歓楽街を含む雑居ビルの多さや、
-          小規模事業者の開業・廃業サイクルの早さが背景にあると
-          考えられます。「新設数が多い=成長している」とは限らない
-          という、この純増数という指標ならではの発見です。
+          新設数そのものは全国トップ級というわけではなく、開業より
+          廃業のペースが上回っていることが純減の主な要因です。
+          「新設数の多さ」と「純増(実質的な企業数の増減)」は
+          別の指標であり、新設数だけを見ていると実態を見誤る
+          可能性がある、という点がこの分析からわかります。
         </div>
 
         <p>
-          新宿区以外にも、練馬区・江戸川区・北区など、東京23区の
-          中でも郊外寄りのベッドタウン的なエリアで純減が目立ちます。
-          都心3区(千代田区・中央区・港区)や渋谷区に企業活動が
-          集中する一方、その外側のエリアでは純減が進むという、
-          東京都内での二極化が見えてきます。
+          純減が大きい自治体には、{worst.name}のほかにも
+          {bottom10
+            .slice(0, -1)
+            .reverse()
+            .slice(0, 3)
+            .map((c) => c.name)
+            .join("・")}
+          などが並びます。上位の顔ぶれが都心部に集中しているのに
+          対し、純減側は特定の地域に偏っているわけではなく、
+          都市部・地方部を問わず見られる点が特徴です。
         </p>
 
         <div style={{ margin: "12px 0" }}>
@@ -182,8 +189,8 @@ export default function Page() {
           住民1,000人あたりの純増数と地価(対数)の相関係数を計算すると
           {r.toFixed(2)}で、正の傾向はあるものの弱い相関にとどまりました。
           地価が高い都心部で法人純増数が多い傾向はあるものの、地価だけで
-          説明できる部分は限定的です。業種構成、再開発の有無、新宿区の
-          ような「開業・廃業サイクルの早さ」など、地価以外の要因も
+          説明できる部分は限定的です。業種構成、再開発の有無、
+          開業・廃業サイクルの早さなど、地価以外の要因も
           大きく影響していると考えられます。無理に強い関係があると
           決めつけず、あくまで参考程度の数値として見るのが適切です。
         </p>
@@ -221,7 +228,7 @@ export default function Page() {
 
         <p>
           新設法人数だけでは見えない「純増数」という視点を導入する
-          ことで、渋谷区の突出した勢いと、新宿区の意外な純減という、
+          ことで、渋谷区の突出した勢いと、{worst.name}の純減という、
           対照的な2つの姿が見えてきました。開業の多さは必ずしも
           その地域の企業活動の成長を意味せず、閉鎖数もあわせて見る
           ことで、はじめて実態に近づけることが分かります。
