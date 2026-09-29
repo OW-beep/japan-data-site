@@ -2,6 +2,7 @@ import Link from "next/link";
 
 const rankings = [
   { href: "/ranking/population", emoji: "👥", title: "人口" },
+  { href: "/ranking/large-cities", emoji: "🌆", title: "人口50万人以上の都市" },
   { href: "/ranking/birth-rate", emoji: "👶", title: "出生率" },
   { href: "/ranking/child", emoji: "🧒", title: "子ども人口" },
   { href: "/ranking/aging", emoji: "🧓", title: "高齢化率" },

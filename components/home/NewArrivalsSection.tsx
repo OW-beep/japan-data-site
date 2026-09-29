@@ -1,97 +1,29 @@
 import Link from "next/link";
 
+import NewBadge from "@/components/NewBadge";
+import { getFeed, isNew, formatMD } from "@/lib/articles";
+
 /**
  * 新着ランキング・記事セクション。
  *
- * 注意: このリストは手動管理。新しいランキング/記事を追加したら、
- * 忘れずにここにも1エントリ追加すること(日付順で並べ替えて表示される)。
- * 過去に更新を忘れて長期間放置されていたことがあるため、
- * 新規コンテンツ追加時は必ずこのファイルもセットで編集する。
+ * 表示内容は lib/articles.ts(記事)と rankingEntries(ランキング)から
+ * 自動で作られる。以前のように、ここを手で更新する必要はない。
+ * 新しい記事を追加したら lib/articles.ts の先頭に1行足すだけでよい。
  */
-const newItems = [
-  {
-    href: "/articles/corporate-growth-analysis",
-    emoji: "🏢",
-    title: "新設法人ランキング分析",
-    type: "記事",
-    date: "2026-09-18",
-  },
-  {
-    href: "/ranking/corporate-growth",
-    emoji: "🏢",
-    title: "新設法人純増数ランキング",
-    type: "ランキング",
-    date: "2026-09-18",
-  },
-  {
-    href: "/articles/real-estate-single-household-analysis",
-    emoji: "🏠",
-    title: "地価が高い自治体ほど単身世帯が多い",
-    type: "記事",
-    date: "2026-09-14",
-  },
-  {
-    href: "/ranking/real-estate-price",
-    emoji: "🏠",
-    title: "不動産価格ランキング",
-    type: "ランキング",
-    date: "2026-09-14",
-  },
-  {
-    href: "/ranking/capital-elevation",
-    emoji: "⛰️",
-    title: "県庁所在地 標高ランキング",
-    type: "ランキング",
-    date: "2026-09-13",
-  },
-  {
-    href: "/articles/furusato-nozei-finance-analysis",
-    emoji: "🎁",
-    title: "ふるさと納税は財政力の弱い自治体を助けているか",
-    type: "記事",
-    date: "2026-09-13",
-  },
-  {
-    href: "/ranking/furusato-nozei",
-    emoji: "🎁",
-    title: "ふるさと納税受入額ランキング",
-    type: "ランキング",
-    date: "2026-09-13",
-  },
-  {
-    href: "/articles/duplicate-municipality-names",
-    emoji: "🏘️",
-    title: "同じ名前の自治体はいくつある？",
-    type: "記事",
-    date: "2026-09-13",
-  },
-];
-
-function formatDate(iso: string) {
-  const [, m, d] = iso.split("-");
-  return `${Number(m)}/${Number(d)}`;
-}
-
 export default function NewArrivalsSection() {
-  const sorted = [...newItems].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const items = getFeed(6);
 
   return (
-    <section style={{ marginTop: 40, marginBottom: 40 }}>
+    <section style={{ marginTop: 32, marginBottom: 40 }}>
       <div
         style={{
           display: "flex",
           alignItems: "baseline",
           justifyContent: "space-between",
-          marginBottom: 16,
+          marginBottom: 14,
         }}
       >
-        <h2
-          style={{
-            fontSize: 22,
-            fontWeight: 800,
-            margin: 0,
-          }}
-        >
+        <h2 style={{ fontSize: 22, fontWeight: 800, margin: 0 }}>
           🆕 新着ランキング・記事
         </h2>
 
@@ -105,47 +37,70 @@ export default function NewArrivalsSection() {
             textDecoration: "none",
           }}
         >
-          すべて見る →
+          記事一覧を見る →
         </Link>
       </div>
 
       <div
         style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 10,
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: 12,
         }}
       >
-        {sorted.map((item) => (
+        {items.map((item) => (
           <Link
             prefetch={false}
             key={item.href}
             href={item.href}
             style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 8,
+              display: "block",
               background: "var(--surface)",
               border: "1px solid var(--line)",
-              padding: "9px 16px",
+              borderLeft: "4px solid var(--ochre)",
+              padding: "14px 16px",
               textDecoration: "none",
               color: "var(--ink)",
-              fontSize: 13,
-              fontWeight: 700,
             }}
           >
-            <span>{item.emoji}</span>
-            <span>{item.title}</span>
-            <span
+            <div
               style={{
-                fontSize: 11,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
+                marginBottom: 6,
+                fontSize: 12,
                 fontWeight: 700,
-                color: "var(--ochre)",
-                fontVariantNumeric: "tabular-nums",
               }}
             >
-              {formatDate(item.date)}
-            </span>
+              {isNew(item.date) && <NewBadge />}
+              <span style={{ color: "var(--muted)" }}>{item.type}</span>
+              <span
+                style={{
+                  color: "var(--ochre)",
+                  fontVariantNumeric: "tabular-nums",
+                }}
+              >
+                {formatMD(item.date)}
+              </span>
+            </div>
+
+            <div style={{ fontSize: 15, fontWeight: 700, lineHeight: 1.5 }}>
+              {item.title}
+            </div>
+
+            {item.desc && (
+              <div
+                style={{
+                  marginTop: 4,
+                  fontSize: 12.5,
+                  color: "var(--muted)",
+                  lineHeight: 1.7,
+                }}
+              >
+                {item.desc}
+              </div>
+            )}
           </Link>
         ))}
       </div>

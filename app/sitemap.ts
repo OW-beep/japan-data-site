@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import cities from "@/data/cities.json";
 import { getPrefectures } from "@/lib/getPrefecture";
 import { SITE_URL } from "@/lib/site";
+import { articleEntries } from "@/lib/articles";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
@@ -62,6 +63,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/young-adult-migration",
     "/ranking/recycling-rate",
     "/ranking/community-center",
+    "/ranking/large-cities",
     "/prefecture",
     "/search",
     "/compare",
@@ -81,84 +83,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   void cities;
   void getPrefectures;
 
-  const articlePages = [
-    "/articles/birth-rate",
-    "/articles/population-concentration",
-    "/articles/million-cities",
-    "/articles/near-million-cities",
-    "/articles/population-churn-analysis",
-    "/articles/furusato-nozei-analysis",
-    "/articles/furusato-nozei-finance-analysis",
-    "/articles/duplicate-municipality-names",
-    "/articles/capital-elevation-analysis",
-    "/articles/vacant-house-furusato-nozei-analysis",
-    "/articles/real-estate-price-analysis",
-    "/articles/real-estate-single-household-analysis",
-    "/articles/corporate-growth-analysis",
-    "/articles/youngest-municipalities",
-    "/articles/child-top50",
-    "/articles/population-about",
-    "/articles/population-top50",
-    "/articles/aging-top50",
-    "/articles/decline",
-    "/articles/density-analysis",
-    "/articles/area-analysis",
-    "/articles/finance-analysis",
-    "/articles/household-analysis",
-    "/articles/population-finance",
-    "/articles/prefecture-composite",
-    "/articles/aging-gap",
-    "/articles/aging-finance",
-    "/articles/density-aging",
-    "/articles/migration-child",
-    "/articles/household-aging-ushape",
-    "/articles/density-finance",
-    "/articles/child-finance",
-    "/articles/doctors-analysis",
-    "/articles/unemployment-analysis",
-    "/articles/industry-structure",
-    "/articles/tax-composition",
-    "/articles/school-crowding",
-    "/articles/welfare-aging",
-    "/articles/habitable-density",
-    "/articles/natural-change",
-    "/articles/foreign-population",
-    "/articles/shopping-access",
-    "/articles/daycare-access",
-    "/articles/restaurant-density",
-    "/articles/balance-ratio-analysis",
-    "/articles/debt-service-ratio-analysis",
-    "/articles/fiscal-health-composite",
-    "/articles/elderly-support-composite",
-    "/articles/industry-diversity-index",
-    "/articles/young-family-attractiveness-index",
-    "/articles/living-infrastructure-index",
-    "/articles/dentist-access-analysis",
-    "/articles/pharmacist-access-analysis",
-    "/articles/hospital-access-analysis",
-    "/articles/education-expense-analysis",
-    "/articles/marriage-rate-analysis",
-    "/articles/divorce-rate-analysis",
-    "/articles/regional-block-disparity-report",
-    "/articles/bedroom-town-finance-analysis",
-    "/articles/prefecture-income-analysis",
-    "/articles/crime-rate-analysis",
-    "/articles/single-household-crime-analysis",
-    "/articles/daycare-birthrate-analysis",
-    "/articles/library-child-ratio-analysis",
-    "/articles/daytime-restaurant-density-analysis",
-    "/articles/marriage-birthrate-analysis",
-    "/articles/municipality-name-trivia",
-    "/articles/traffic-accident-analysis",
-    "/articles/vacant-house-analysis",
-    "/articles/daytime-ratio-analysis",
-    "/articles/elderly-home-analysis",
-    "/articles/young-adult-migration-analysis",
-    "/articles/recycling-rate-analysis",
-    "/articles/community-center-analysis",
-  ].map((p) => ({
-    url: `${baseUrl}${p}`,
-    lastModified: new Date(),
+  // 記事は lib/articles.ts を単一の情報源にする。
+  // lastModified には公開日を使う(ビルドのたびに「全ページ更新」と
+  // 申告すると、Googleが lastmod を信頼しなくなるため)。
+  const articlePages: MetadataRoute.Sitemap = articleEntries.map((a) => ({
+    url: `${baseUrl}/articles/${a.slug}`,
+    lastModified: new Date(`${a.date}T00:00:00+09:00`),
   }));
 
   return [

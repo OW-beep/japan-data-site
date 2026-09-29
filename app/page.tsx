@@ -18,6 +18,10 @@ import AboutSection from "@/components/home/AboutSection";
 
 export const metadata = {
   alternates: { canonical: "/" },
+  title: {
+    absolute:
+      "全国自治体データランキング｜人口・出生率・高齢化率を市区町村別に比較",
+  },
 };
 
 import SitemapSection from "@/components/home/SitemapSection";
@@ -44,11 +48,11 @@ export default function Home() {
 
       <Hero />
 
+      <NewArrivalsSection />
+
       <PurposeSection />
 
       <NicheReadsSection />
-
-      <NewArrivalsSection />
 
       <FeaturedArticlesSection />
 

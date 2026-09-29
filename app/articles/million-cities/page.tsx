@@ -1,4 +1,5 @@
-import { getMunicipalities } from "@/lib/municipalities";
+import { getCities } from "@/lib/getCities";
+import { isDesignatedCityWard } from "@/lib/municipalities";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
@@ -9,7 +10,7 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "/articles/million-cities" },
-  title: "人口100万人以上の都市は12市｜日本の100万人都市一覧",
+  title: "日本の100万人都市一覧｜人口100万人以上の都市は12市【人口順ランキング】",
   description:
     "日本で人口100万人を超える都市は12市。政令指定都市20市のうち実際に100万人を超えているのは半数程度です。東京都特別区部から仙台市まで、人口順にランキング形式で一覧比較できます。",
 };
@@ -17,7 +18,12 @@ export const metadata = {
 export default function Page() {
   const designatedCityCount = 20; // 全国の政令指定都市数
 
-  const ranking = getMunicipalities()
+  // 「100万人都市」では東京都特別区部(23区の合計)を1つの都市として数える。
+  // getMunicipalities() は二重計上防止のため特別区部の集計行を除外しているので、
+  // ここでは getCities() から政令指定都市の区だけを除いて使う。
+  // (100万人以上の特別区は存在しないため、個々の区との重複は起きない)
+  const ranking = getCities()
+    .filter((c) => !isDesignatedCityWard(c.name))
     .filter((c) => c.population >= 1000000)
     .sort((a, b) => b.population - a.population);
 
@@ -405,6 +411,16 @@ export default function Page() {
           {" ｜ "}
           <Link prefetch={false} href="/articles/population-about" style={link}>
             人口ランキングとは？を見る
+          </Link>
+
+          {" ｜ "}
+          <Link prefetch={false} href="/ranking/large-cities" style={link}>
+            人口50万人以上の都市ランキングを見る
+          </Link>
+
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/designated-cities-comparison" style={link}>
+            政令指定都市20市の比較を見る
           </Link>
         </p>
 

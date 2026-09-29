@@ -219,6 +219,10 @@ export default function Page() {
           <Link prefetch={false} href="/articles/population-top50" style={link}>
             人口ランキングTOP50を見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/ranking/large-cities" style={link}>
+            人口50万人以上の都市ランキングを見る
+          </Link>
         </p>
 
         <CompareCTA />

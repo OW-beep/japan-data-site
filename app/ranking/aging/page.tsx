@@ -12,7 +12,7 @@ import { getMunicipalities } from "../../../lib/municipalities";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/aging" },
-  title: "全国自治体 高齢化率ランキング【最新版】",
+  title: "高齢化率ランキング｜市町村別・全国自治体の高齢化率が高い順【最新版】",
   description:
     "全国自治体の高齢化率(65歳以上人口の割合)をランキング形式で比較。地方と都市部の差、高齢化が進む自治体の特徴がわかります。",
 };

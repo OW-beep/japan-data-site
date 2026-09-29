@@ -96,6 +96,11 @@ export default function Page() {
         <Link prefetch={false} href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
           人口100万人以上の都市は全国に何市あるか、詳しい分析記事はこちら →
         </Link>
+        <br />
+        🌆{" "}
+        <Link prefetch={false} href="/ranking/large-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+          人口50万人以上の都市(政令指定都市など)を人口順に一覧で見る →
+        </Link>
       </div>
 
       <CompareCTA />
