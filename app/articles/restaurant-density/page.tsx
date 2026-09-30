@@ -67,6 +67,7 @@ export default function Page() {
       )}店。東京都心のオフィス街と、箱根町・白馬村などの観光地・温泉地が上位を占める一方、都市近郊のベッドタウンは軒並み平均を下回る結果になりました。`}
       heroLabel="飲食店密度 全国1位"
       heroValue={`${top12[0].name} ${top12[0].restaurantPer1000.toFixed(1)}店`}
+      path="/articles/restaurant-density"
       rankingLink="/ranking/restaurant"
       tags={["household"]}
       publishedAt="2026-08-06"

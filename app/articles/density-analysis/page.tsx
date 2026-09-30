@@ -50,6 +50,7 @@ export default function Page() {
       summary="人口密度ランキングの上位15自治体のうち、実に大半を東京都の特別区が占めています。国土交通省の都市政策の議論もふまえて、その理由を掘り下げます。"
       heroLabel="全国平均人口密度"
       heroValue={`${Math.round(average).toLocaleString()}人/km²`}
+      path="/articles/density-analysis"
       rankingLink="/ranking/density"
       tags={["population"]}
       publishedAt="2026-03-27"

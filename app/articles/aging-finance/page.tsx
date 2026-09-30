@@ -85,6 +85,7 @@ export default function Page() {
       summary={`全国${base.length.toLocaleString()}自治体のデータで高齢化率と財政力指数の相関係数を計算すると-0.71と、強い負の相関が見られました。高齢化が進むほど財政基盤は弱くなる傾向がある一方、熱海市や伊方町のように、高齢化率が高くても財政力指数が高い「例外」自治体には共通点がありました。`}
       heroLabel="高齢化率×財政力指数 相関係数"
       heroValue={r.toFixed(2)}
+      path="/articles/aging-finance"
       rankingLink="/ranking/finance"
       tags={["aging", "finance"]}
       publishedAt="2026-07-03"

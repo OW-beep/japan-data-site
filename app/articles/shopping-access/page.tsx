@@ -73,6 +73,7 @@ export default function Page() {
       )}店でした。意外にも、下位には過疎の山村ではなく、車移動を前提に開発された大都市近郊のニュータウンが並びます。`}
       heroLabel="高齢者あたり小売店数 最少"
       heroValue={`${bottom15[0].name} ${bottom15[0].per1000elderly.toFixed(1)}店`}
+      path="/articles/shopping-access"
       rankingLink="/ranking/retail-access"
       tags={["aging"]}
       publishedAt="2026-08-06"

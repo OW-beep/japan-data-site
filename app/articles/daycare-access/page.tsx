@@ -53,6 +53,7 @@ export default function Page() {
       )}人に対し、人口20万人以上の都市に絞ると東京23区が上位を独占する一方、大阪府内の自治体が軒並み下位に沈むという、はっきりした地域差が見えてきました。`}
       heroLabel="保育園あたり子ども人口 全国1位"
       heroValue={`${top15[0].name} ${top15[0].childPerDaycare.toFixed(0)}人`}
+      path="/articles/daycare-access"
       rankingLink="/ranking/daycare"
       tags={["child"]}
       publishedAt="2026-08-06"

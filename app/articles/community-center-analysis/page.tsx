@@ -52,6 +52,7 @@ export default function Page() {
       ).toLocaleString()}人に対し、上位には長野県の町村が数多く入りました。一方、人口20万人以上の都市の${zeroBigCities}自治体で公民館が1館もないなど、都市部との差が際立つ結果になりました。`}
       heroLabel="公民館 充実度 全国1位"
       heroValue={`${top15[0].name} ${Math.round(top15[0].perFacility).toLocaleString()}人/館`}
+      path="/articles/community-center-analysis"
       rankingLink="/ranking/community-center"
       tags={["geography"]}
       publishedAt="2026-08-10"

@@ -5,6 +5,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
+import AffiliateSlot from "@/components/AffiliateSlot";
 
 export const metadata = {
   alternates: { canonical: "/articles/real-estate-price-analysis" },
@@ -228,6 +229,8 @@ export default function Page() {
 
         <CompareCTA />
       </div>
+
+      <AffiliateSlot topic="realestate" />
     </ArticleLayout>
   );
 }

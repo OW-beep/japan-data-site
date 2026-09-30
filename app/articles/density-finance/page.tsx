@@ -73,6 +73,7 @@ export default function Page() {
       )}と強い正の相関が見られました。人口密度が高い都市部ほど財政力が強い傾向がある一方、青森県六ヶ所村や北海道泊村のように、人口密度が極めて低いのに財政力指数が1を超える自治体には、共通した産業基盤がありました。`}
       heroLabel="人口密度(対数)×財政力指数 相関係数"
       heroValue={r.toFixed(2)}
+      path="/articles/density-finance"
       rankingLink="/ranking/finance"
       tags={["population", "finance"]}
       publishedAt="2026-07-25"

@@ -50,6 +50,7 @@ export default function Page() {
       ).toLocaleString()}人と平均の4倍近くに達しました。一方で最下位の東京都青ヶ島村はわずか21人。子育て世代急増の町と、児童数十人でも学校を守り続ける離島、対照的な2つの姿を紹介します。`}
       heroLabel="小学校1校あたり子ども人口 全国1位"
       heroValue={`${top15[0].name} ${Math.round(top15[0].perSchool).toLocaleString()}人`}
+      path="/articles/school-crowding"
       rankingLink="/ranking/school-crowding"
       tags={["child"]}
       publishedAt="2026-07-31"

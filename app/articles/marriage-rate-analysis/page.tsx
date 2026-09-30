@@ -46,6 +46,7 @@ export default function Page() {
       )}件に対し、上位12自治体のうち${tokyoWardsInTop12}自治体を東京都の特別区が占めました。一方、同じ東京都内でも八王子市・町田市など郊外の都市は平均以下にとどまり、同じ都道府県の中でも婚姻率に大きな差があることが分かりました。`}
       heroLabel="婚姻率 全国1位"
       heroValue={`${top12[0].name} ${top12[0].marriageRate.toFixed(2)}件`}
+      path="/articles/marriage-rate-analysis"
       rankingLink="/ranking/marriage-rate"
       tags={["household"]}
       publishedAt="2026-08-06"

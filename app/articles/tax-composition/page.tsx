@@ -47,6 +47,7 @@ export default function Page() {
       )}%で、財源のほとんどを国からの財政移転に頼っています。`}
       heroLabel="地方税自主財源比率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].taxRatio.toFixed(1)}%`}
+      path="/articles/tax-composition"
       rankingLink="/ranking/tax-ratio"
       tags={["finance"]}
       publishedAt="2026-07-30"

@@ -51,6 +51,7 @@ export default function Page() {
       )}%に達しました。上位には東京・大阪・名古屋の都心区に加え、福島県内の震災被災地も複数入っており、性質の異なる2種類の「人が集まる街」が見えてきます。`}
       heroLabel="昼夜間人口比率 全国1位"
       heroValue={`${top12[0].name} ${top12[0].daytimeRatio.toFixed(1)}%`}
+      path="/articles/daytime-ratio-analysis"
       rankingLink="/ranking/daytime-ratio"
       tags={["population"]}
       publishedAt="2026-08-08"

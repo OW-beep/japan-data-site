@@ -1,5 +1,6 @@
 import { Suspense } from "react";
 import CompareClient from "@/components/CompareClient";
+import AffiliateSlot from "@/components/AffiliateSlot";
 
 export const metadata = {
   alternates: { canonical: "/compare" },
@@ -42,6 +43,8 @@ export default function Page() {
       <Suspense fallback={<p>読み込み中...</p>}>
         <CompareClient />
       </Suspense>
+
+      <AffiliateSlot topic="moving" />
     </main>
   );
 }

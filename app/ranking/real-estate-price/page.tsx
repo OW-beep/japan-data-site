@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import CompareCTA from "../../../components/CompareCTA";
+import AffiliateSlot from "../../../components/AffiliateSlot";
 import JsonLd from "../../../components/JsonLd";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import Link from "next/link";
@@ -201,6 +202,8 @@ export default function Page() {
           })),
         }}
       />
+
+      <AffiliateSlot topic="realestate" />
 
       <CompareCTA />
     </main>

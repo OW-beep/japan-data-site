@@ -52,6 +52,7 @@ export default function Page() {
       )}%にとどまり、多くの自治体で若者の流出が続く厳しい現実も見えてきます。`}
       heroLabel="20代純移動率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].rate.toFixed(1)}`}
+      path="/articles/young-adult-migration-analysis"
       rankingLink="/ranking/young-adult-migration"
       tags={["migration"]}
       publishedAt="2026-08-09"

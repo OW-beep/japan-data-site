@@ -52,6 +52,7 @@ export default function Page() {
       )}%に対し、上位は8〜10%台に達しました。特にTOP15のうち6自治体を福岡県筑豊地方の旧産炭地が占めており、炭鉱閉山から半世紀以上を経てもなお続く雇用面での構造的な課題が見えてきます。`}
       heroLabel="完全失業率 全国1位"
       heroValue={`${ranking[0].name} ${ranking[0].rate.toFixed(1)}%`}
+      path="/articles/unemployment-analysis"
       rankingLink="/ranking/unemployment"
       tags={["labor"]}
       publishedAt="2026-07-28"

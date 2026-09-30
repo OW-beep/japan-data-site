@@ -7,6 +7,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
+import AffiliateSlot from "../../../components/AffiliateSlot";
 import { dataSources } from "../../../lib/dataSources";
 import { getCities } from "../../../lib/getCities";
 import { getMunicipalities } from "../../../lib/municipalities";
@@ -286,6 +287,8 @@ export default function LargeCitiesRankingPage() {
           })),
         }}
       />
+
+      <AffiliateSlot topic="moving" />
 
       <CompareCTA />
 

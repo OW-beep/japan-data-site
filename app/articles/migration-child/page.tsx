@@ -92,6 +92,7 @@ export default function Page() {
       )}にとどまりました。転入超過が大きくても子どもの割合が極端に低い自治体がある一方、本当の意味で子育て世代を集めている自治体には共通した産業・地域的な背景がありました。`}
       heroLabel="転入超過率×子ども人口割合 相関係数"
       heroValue={r.toFixed(2)}
+      path="/articles/migration-child"
       rankingLink="/ranking/decline"
       tags={["migration", "child"]}
       publishedAt="2026-07-21"

@@ -87,6 +87,7 @@ export default function Page() {
       )}と、強い負の相関が見られました。人口密度が高いほど高齢化率は低い傾向がある一方、旧産炭都市や高度成長期の郊外団地など、密度が高いのに高齢化も進んでいる自治体には明確な共通点がありました。`}
       heroLabel="人口密度(対数)×高齢化率 相関係数"
       heroValue={r.toFixed(2)}
+      path="/articles/density-aging"
       rankingLink="/ranking/density"
       tags={["population", "aging"]}
       publishedAt="2026-07-14"

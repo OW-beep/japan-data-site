@@ -88,6 +88,7 @@ export default function Page() {
       summary="子ども人口割合・高齢化率(低いほど加点)・財政力指数・出生率の4指標を、それぞれ同じ重みで組み合わせた独自の総合スコアです。1位は沖縄県、突出した理由をデータで見ていきます。"
       heroLabel="総合スコア1位"
       heroValue={top10[0].pref}
+      path="/articles/prefecture-composite"
       rankingLink="/prefecture"
       tags={["composite"]}
       publishedAt="2026-05-22"

@@ -1,5 +1,6 @@
 import { getFurusatoNozeiRanking } from "@/lib/furusatoNozei";
 import ArticleLayout from "@/components/ArticleLayout";
+import AffiliateSlot from "@/components/AffiliateSlot";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
@@ -132,6 +133,8 @@ export default function Page() {
         keyword="いくら 訳あり 北海道"
         heading="白糠町の人気を支える「いくら」を楽天市場で見る"
       />
+
+      <AffiliateSlot topic="furusato" />
 
       <div style={box}>
         <h2>受入額の47.9%は費用として使われている</h2>

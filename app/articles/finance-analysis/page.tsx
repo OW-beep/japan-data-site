@@ -74,6 +74,7 @@ export default function Page() {
       summary="財政力指数の全国1位は、人口4,600人ほどの愛知県飛島村。大都市ではなく、なぜ小さな村がトップに立つのか。ランキング上位の顔ぶれから、その理由を読み解きます。"
       heroLabel="全国平均財政力指数"
       heroValue={average.toFixed(2)}
+      path="/articles/finance-analysis"
       rankingLink="/ranking/finance"
       tags={["finance"]}
       publishedAt="2026-04-10"

@@ -57,6 +57,7 @@ export default function Page() {
       )}ポイント差)。一方、全国${base.length.toLocaleString()}自治体のうち、子どもの割合が高齢者の割合を上回っているのはわずか${reversedCount}自治体だけです。`}
       heroLabel="ギャップ全国1位"
       heroValue={`${top15[0].name} ${top15[0].gap.toFixed(1)}pt差`}
+      path="/articles/aging-gap"
       rankingLink="/ranking/aging"
       tags={["aging", "child"]}
       publishedAt="2026-06-19"

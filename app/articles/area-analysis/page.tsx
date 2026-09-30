@@ -43,6 +43,7 @@ export default function Page() {
       summary="面積ランキングの上位には北海道と本州山間部の市町村が並びます。日本の国土に占める可住地の少なさという、統計が示す地理的な現実を読み解きます。"
       heroLabel="全国自治体の平均面積"
       heroValue={`${average.toFixed(1)}km²`}
+      path="/articles/area-analysis"
       rankingLink="/ranking/area"
       tags={["geography"]}
       publishedAt="2026-04-03"

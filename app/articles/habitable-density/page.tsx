@@ -55,6 +55,7 @@ export default function Page() {
       summary={`日本の国土は7割近くが山地です。総面積ではなく「住める土地(可住地)」だけで人口密度を計算し直すと、単純な人口密度ランキングでは目立たない自治体の姿が見えてきます。三重県尾鷲市は通常の人口密度ランキングで1148位ですが、可住地ベースでは520位まで順位が跳ね上がります。`}
       heroLabel="可住地人口密度で最も順位が上がった自治体"
       heroValue={`${jumps[0].name}`}
+      path="/articles/habitable-density"
       rankingLink="/ranking/habitable-density"
       tags={["geography"]}
       publishedAt="2026-08-03"

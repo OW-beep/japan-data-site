@@ -39,6 +39,7 @@ export default function Page() {
       summary="転入者数から転出者数を引いた社会増減率で全国1位になったのは、人口847人の福島県大熊町でした。転入超過・転出超過、それぞれの上位に共通する背景を分析します。"
       heroLabel="転入超過1位"
       heroValue={`${top10[0].name} ${top10[0].rate.toFixed(1)}%`}
+      path="/articles/decline"
       rankingLink="/ranking/decline"
       tags={["migration"]}
       publishedAt="2026-04-24"

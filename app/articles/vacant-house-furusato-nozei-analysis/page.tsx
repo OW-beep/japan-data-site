@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getMunicipalities } from "@/lib/municipalities";
 import { getFurusatoNozeiRanking } from "@/lib/furusatoNozei";
 import ArticleLayout from "@/components/ArticleLayout";
+import AffiliateSlot from "@/components/AffiliateSlot";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
@@ -296,6 +297,8 @@ export default function Page() {
 
         <CompareCTA />
       </div>
+
+      <AffiliateSlot topic="furusato" />
     </ArticleLayout>
   );
 }

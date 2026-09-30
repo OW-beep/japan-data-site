@@ -72,6 +72,7 @@ export default function Page() {
       )}でした。子どもの割合が高い自治体ほど財政力も強い緩やかな傾向がある一方、千葉県芝山町(成田空港)や宮城県女川町(原発)のように、子どもの割合が低くても財政力指数が高い自治体には、明確な産業的な理由がありました。`}
       heroLabel="子ども人口割合×財政力指数 相関係数"
       heroValue={r.toFixed(2)}
+      path="/articles/child-finance"
       rankingLink="/ranking/finance"
       tags={["child", "finance"]}
       publishedAt="2026-07-27"

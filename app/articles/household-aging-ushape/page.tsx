@@ -86,6 +86,7 @@ export default function Page() {
       )}でした。ところが高齢化率を10段階に分けて平均単独世帯割合を見ると、若い自治体と高齢な自治体の両端で単独世帯割合が高くなる「U字型」が現れます。相関係数だけでは見えない、性質の異なる2つの単身世帯像を分析しました。`}
       heroLabel="高齢化率×単独世帯割合 相関係数(線形)"
       heroValue={r.toFixed(2)}
+      path="/articles/household-aging-ushape"
       rankingLink="/ranking/household"
       tags={["household", "aging"]}
       publishedAt="2026-07-24"

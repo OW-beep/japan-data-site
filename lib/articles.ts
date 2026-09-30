@@ -20,6 +20,7 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "furusato-nozei-2026-guide", date: "2026-09-30", title: "ふるさと納税2026の期限と10月の制度変更", desc: "寄付は12月31日まで、ワンストップ特例は1月10日必着。ポイント付与禁止後の選び方と、受入額が多い自治体のデータも。" },
   { slug: "designated-cities-comparison", date: "2026-09-30", title: "政令指定都市20市の人口ランキング", desc: "人口・面積・人口密度・高齢化率で20市を比較。100万人に届かない政令指定都市はどこかも解説します。" },
   { slug: "marriage-birthrate-analysis", date: "2026-09-29", title: "婚姻率と出生率の関係", desc: "東京都心は結婚は多いのに子どもは少ない。大都市限定では相関係数-0.51という逆相関を検証します。" },
   { slug: "municipality-name-trivia", date: "2026-09-26", title: "動物の名前を持つ自治体、日本一長い地名の街", desc: "全国1,740市区町村の名前を調査。動物の漢字を含む自治体は61、最長の地名は7文字でした。" },

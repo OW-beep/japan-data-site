@@ -56,6 +56,7 @@ export default function Page() {
       summary="人口規模が大きい自治体ほど財政力指数が高くなる傾向は、データ上はっきり確認できます。ただし東京都特別区だけは例外で、これは税制上の理由があります。"
       heroLabel="人口100万人以上の平均財政力指数"
       heroValue={bucketStats[5].avg.toFixed(3)}
+      path="/articles/population-finance"
       rankingLink="/ranking/finance"
       tags={["finance", "population"]}
       publishedAt="2026-05-08"

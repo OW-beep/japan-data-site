@@ -73,6 +73,7 @@ export default function Page() {
       )}%が第3次産業に従事しています。しかし自治体ごとに見ると、農業中心・製造業中心・サービス業中心という、まったく異なる経済構造を持つ町が存在します。`}
       heroLabel="第2次産業就業者比率 全国1位"
       heroValue={`${secondaryTop[0].name} ${secondaryTop[0].secondaryShare.toFixed(1)}%`}
+      path="/articles/industry-structure"
       rankingLink="/ranking/manufacturing"
       tags={["industry"]}
       publishedAt="2026-07-29"

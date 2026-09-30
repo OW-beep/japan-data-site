@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
+import AffiliateSlot from "@/components/AffiliateSlot";
 import { getMunicipalities } from "@/lib/municipalities";
 import { isDesignatedCity } from "@/lib/designatedCities";
 import type { City } from "@/lib/City";
@@ -359,6 +360,8 @@ export default function Page() {
 
         <CompareCTA />
       </div>
+
+      <AffiliateSlot topic="moving" />
     </ArticleLayout>
   );
 }

@@ -85,6 +85,7 @@ export default function Page() {
       )}という負の相関でした。歳入に占める民生費の割合が最も高いのは、高齢化率が全国平均より低い東京都練馬区(55.4%)や大田区(55.3%)など、都市部の区が中心です。`}
       heroLabel="民生費比率×高齢化率 相関係数"
       heroValue={r.toFixed(2)}
+      path="/articles/welfare-aging"
       rankingLink="/ranking/welfare-ratio"
       tags={["finance", "aging"]}
       publishedAt="2026-08-01"

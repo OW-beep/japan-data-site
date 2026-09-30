@@ -32,6 +32,7 @@ export default function Page() {
       summary="高齢化率が低い(＝若い世代の割合が高い)自治体を集めました。都心のオフィス街から、震災からの復興が進む地域まで、その顔ぶれは一様ではありません。"
       heroLabel="TOP30平均高齢化率"
       heroValue={`${average.toFixed(1)}%`}
+      path="/articles/youngest-municipalities"
       rankingLink="/ranking/aging"
       tags={["child"]}
       publishedAt="2026-03-13"

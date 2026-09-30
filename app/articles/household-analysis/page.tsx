@@ -45,6 +45,7 @@ export default function Page() {
       summary="単独世帯割合が最も高いのは、人口847人の福島県大熊町(95.8%)。上位には東京都心の特別区も並びますが、その理由はまったく異なります。"
       heroLabel="全国平均単独世帯割合"
       heroValue={`${average.toFixed(1)}%`}
+      path="/articles/household-analysis"
       rankingLink="/ranking/household"
       tags={["household"]}
       publishedAt="2026-04-17"

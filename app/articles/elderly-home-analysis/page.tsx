@@ -54,6 +54,7 @@ export default function Page() {
       ).toLocaleString()}人に対し、人口20万人以上の都市に絞ると北海道旭川市が最も余裕があり、東京23区の多くが施設の手薄さで下位に沈む結果になりました。老人ホームが1つもない自治体も全国に${zeroCount}あります。`}
       heroLabel="高齢者施設 余裕度 全国1位"
       heroValue={`${top15[0].name} ${Math.round(top15[0].elderlyPerFacility).toLocaleString()}人/施設`}
+      path="/articles/elderly-home-analysis"
       rankingLink="/ranking/elderly-home"
       tags={["aging"]}
       publishedAt="2026-08-08"

@@ -66,6 +66,7 @@ export default function Page() {
       )}%に達しました。上位には別荘地・観光地と、かつての産炭地という、まったく性質の異なる2種類の自治体が並んでいます。`}
       heroLabel="空き家率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].vacancyRate.toFixed(1)}%`}
+      path="/articles/vacant-house-analysis"
       rankingLink="/ranking/vacant-house"
       tags={["geography"]}
       publishedAt="2026-08-07"

@@ -5,6 +5,7 @@ import MetricBox from "../../../components/MetricBox";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import CompareCTA from "../../../components/CompareCTA";
+import AffiliateSlot from "../../../components/AffiliateSlot";
 import JsonLd from "../../../components/JsonLd";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import Link from "next/link";
@@ -198,6 +199,15 @@ export default function Page() {
           })),
         }}
       />
+
+      <p style={{ marginTop: 24, lineHeight: 1.9 }}>
+        📅{" "}
+        <Link prefetch={false} href="/articles/furusato-nozei-2026-guide" style={{ color: "#2563eb", textDecoration: "underline" }}>
+          2026年分の寄付の期限(12月31日)とワンストップ特例、10月の制度変更はこちら →
+        </Link>
+      </p>
+
+      <AffiliateSlot topic="furusato" />
 
       <CompareCTA />
     </main>

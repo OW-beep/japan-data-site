@@ -50,6 +50,7 @@ export default function Page() {
       )}%に対し、上位には原子力発電所を抱える町村、下位には財政破綻の歴史を持つ北海道夕張市が並びました。人口30万人以上の大都市に絞ると、東京23区と愛知県豊田市の強さが際立ちます。`}
       heroLabel="経常収支比率 全国1位(最も健全)"
       heroValue={`${top12[0].name} ${top12[0].ordinaryBalanceRatio?.toFixed(1)}%`}
+      path="/articles/balance-ratio-analysis"
       rankingLink="/ranking/balance-ratio"
       tags={["finance"]}
       publishedAt="2026-08-06"

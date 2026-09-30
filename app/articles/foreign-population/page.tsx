@@ -57,6 +57,7 @@ export default function Page() {
       )}%と、住民のおよそ5人に1人が外国籍でした。高原野菜の産地・自動車部品の企業城下町・東京都心の区という、性質の異なる3つのパターンが上位を占めています。`}
       heroLabel="外国人人口比率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].ratio.toFixed(1)}%`}
+      path="/articles/foreign-population"
       rankingLink="/ranking/foreign-population"
       tags={["international"]}
       publishedAt="2026-08-05"

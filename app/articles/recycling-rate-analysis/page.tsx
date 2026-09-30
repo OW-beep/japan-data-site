@@ -47,6 +47,7 @@ export default function Page() {
       }%(全体${osakiRank}位)でした。上位には99%台という統計的に不自然な数値も見られ、集計方法の違いについても解説します。`}
       heroLabel="ごみのリサイクル率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].recyclingRate?.toFixed(1)}%`}
+      path="/articles/recycling-rate-analysis"
       rankingLink="/ranking/recycling-rate"
       tags={["geography"]}
       publishedAt="2026-08-10"

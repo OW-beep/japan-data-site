@@ -64,6 +64,7 @@ export default function Page() {
       )}人の増加にとどまり、日本の人口減少が「社会移動」だけでなく「自然減」によって、ほぼ全国的に進行している実態が浮き彫りになりました。`}
       heroLabel="自然増減率 全国1位"
       heroValue={`${top15[0].name} ${top15[0].naturalRate.toFixed(1)}‰`}
+      path="/articles/natural-change"
       rankingLink="/ranking/natural-change"
       tags={["population", "child"]}
       publishedAt="2026-08-03"
