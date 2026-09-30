@@ -64,6 +64,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/recycling-rate",
     "/ranking/community-center",
     "/ranking/large-cities",
+    "/ranking/churn",
+    "/ranking/aging-gap",
     "/prefecture",
     "/search",
     "/compare",

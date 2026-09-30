@@ -11,6 +11,8 @@ export const metadata: Metadata = {
 const rankings = [
   { href: "/ranking/population", emoji: "🏙", label: "人口ランキング" },
   { href: "/ranking/large-cities", emoji: "🌆", label: "人口50万人以上の都市ランキング" },
+  { href: "/ranking/churn", emoji: "🔄", label: "人口の入れ替わり率ランキング" },
+  { href: "/ranking/aging-gap", emoji: "⚖️", label: "少子高齢化ギャップランキング" },
   { href: "/ranking/birth-rate", emoji: "👶", label: "出生率ランキング" },
   { href: "/ranking/child", emoji: "🧒", label: "子どもが多い自治体" },
   { href: "/ranking/aging", emoji: "🧓", label: "高齢化率ランキング" },

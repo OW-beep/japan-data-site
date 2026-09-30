@@ -107,6 +107,8 @@ export type RankingEntry = {
 };
 
 export const rankingEntries: RankingEntry[] = [
+  { href: "/ranking/churn", date: "2026-10-01", title: "人口の入れ替わり率ランキング", emoji: "🔄" },
+  { href: "/ranking/aging-gap", date: "2026-10-01", title: "少子高齢化ギャップランキング", emoji: "⚖️" },
   { href: "/ranking/large-cities", date: "2026-09-30", title: "人口50万人以上の都市ランキング", emoji: "🌆" },
   { href: "/ranking/corporate-growth", date: "2026-09-18", title: "新設法人純増数ランキング", emoji: "🏢" },
   { href: "/ranking/real-estate-price", date: "2026-09-14", title: "不動産価格ランキング", emoji: "🏠" },

@@ -61,7 +61,7 @@ export default function Page() {
       summary={`転入者数と転出者数を足し合わせた「人口の入れ替わり率」でランキングすると、人口増減ランキングとは全く違う顔ぶれが上位に並びます。全国平均は${average.toFixed(1)}%です。`}
       heroLabel="全国平均の人口入れ替わり率"
       heroValue={`${average.toFixed(1)}%`}
-      rankingLink="/ranking/population"
+      rankingLink="/ranking/churn"
       path="/articles/population-churn-analysis"
       tags={["population"]}
       publishedAt="2026-09-13"

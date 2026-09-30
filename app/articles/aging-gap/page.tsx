@@ -58,7 +58,7 @@ export default function Page() {
       heroLabel="ギャップ全国1位"
       heroValue={`${top15[0].name} ${top15[0].gap.toFixed(1)}pt差`}
       path="/articles/aging-gap"
-      rankingLink="/ranking/aging"
+      rankingLink="/ranking/aging-gap"
       tags={["aging", "child"]}
       publishedAt="2026-06-19"
       top3={[
