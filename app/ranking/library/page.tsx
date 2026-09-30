@@ -7,6 +7,7 @@ import LibrarySummary from "../../../components/ranking/LibrarySummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/library" },
@@ -98,6 +99,9 @@ export default function LibraryRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="library" />
+
     </main>
   );
 }

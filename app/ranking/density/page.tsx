@@ -10,6 +10,7 @@ import CompareCTA from "../../../components/CompareCTA";
 import JsonLd from "../../../components/JsonLd";
 import Link from "next/link";
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/density" },
@@ -202,6 +203,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="density" />
+
     </div>
   );
 }

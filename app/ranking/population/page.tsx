@@ -10,6 +10,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import CompareCTA from "../../../components/CompareCTA";
 
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/population" },
@@ -155,6 +156,9 @@ export default function Page() {
           </Link>
         </div>
       </section>
+
+      <RankingCommentary slug="population" />
+
     </main>
   );
 }

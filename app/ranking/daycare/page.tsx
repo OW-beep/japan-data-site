@@ -7,6 +7,7 @@ import DaycareSummary from "../../../components/ranking/DaycareSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/daycare" },
@@ -98,6 +99,9 @@ export default function DaycareRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="daycare" />
+
     </main>
   );
 }

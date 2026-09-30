@@ -9,6 +9,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/aging" },
@@ -139,6 +140,9 @@ export default function Page() {
           </Link>
         </div>
       </section>
+
+      <RankingCommentary slug="aging" />
+
     </main>
   );
 }

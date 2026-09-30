@@ -9,6 +9,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/birth-rate" },
@@ -172,6 +173,9 @@ const top50 = ranking.slice(0, 50);
           </Link>
         </div>
       </section>
+
+      <RankingCommentary slug="birth-rate" />
+
     </main>
   );
 }

@@ -7,6 +7,7 @@ import SparseDensitySummary from "../../../components/ranking/SparseDensitySumma
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/sparse-density" },
@@ -63,6 +64,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="sparse-density" />
+
     </div>
   );
 }

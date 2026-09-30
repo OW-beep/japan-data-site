@@ -7,6 +7,7 @@ import HabitableDensitySummary from "../../../components/ranking/HabitableDensit
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/habitable-density" },
@@ -92,6 +93,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="habitable-density" />
+
     </div>
   );
 }

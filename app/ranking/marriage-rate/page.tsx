@@ -7,6 +7,7 @@ import MarriageRateSummary from "../../../components/ranking/MarriageRateSummary
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
+import RankingCommentary from "../../../components/ranking/RankingCommentary";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/marriage-rate" },
@@ -98,6 +99,9 @@ export default function MarriageRateRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="marriage-rate" />
+
     </main>
   );
 }
