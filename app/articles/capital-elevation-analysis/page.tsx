@@ -175,6 +175,10 @@ export default function Page() {
           <Link prefetch={false} href="/ranking/capital-elevation" style={link}>
             都道府県庁所在地 標高ランキングを見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/prefectural-capital-population" style={link}>
+            県庁所在地の人口を比較した記事
+          </Link>
         </p>
 
         <CompareCTA />
