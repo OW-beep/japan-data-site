@@ -20,6 +20,9 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "big-city-migration", date: "2026-10-02", title: "引っ越し先に選ばれている大都市はどこ？", desc: "政令指定都市20市と東京23区の転入超過を比較。人が集まる大都市と、出ていく大都市を分析します。" },
+  { slug: "furusato-nozei-concentration", date: "2026-10-02", title: "ふるさと納税の受入額は一部の自治体に集中している？", desc: "上位10自治体・100自治体のシェアと、人口規模別の傾向を総務省データで分析。寄付先選びのポイントも。" },
+  { slug: "city-town-village-population", date: "2026-10-02", title: "市・町・村の違いは人口5万人？", desc: "人口が最も少ない市と、5万人を超える町村をデータで調査。市の法律上の要件もあわせて解説します。" },
   { slug: "prefectural-capital-population", date: "2026-10-01", title: "県庁所在地が県内で一番大きい都市ではない県は？", desc: "県庁所在地の人口を、県内の最大都市や県全体に占める割合と比較。最大都市ではない県を洗い出しました。" },
   { slug: "furusato-nozei-2026-guide", date: "2026-09-30", title: "ふるさと納税2026の期限と10月の制度変更", desc: "寄付は12月31日まで、ワンストップ特例は1月10日必着。ポイント付与禁止後の選び方と、受入額が多い自治体のデータも。" },
   { slug: "designated-cities-comparison", date: "2026-09-30", title: "政令指定都市20市の人口ランキング", desc: "人口・面積・人口密度・高齢化率で20市を比較。100万人に届かない政令指定都市はどこかも解説します。" },

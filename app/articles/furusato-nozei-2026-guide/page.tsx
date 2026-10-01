@@ -204,7 +204,11 @@ export default function Page() {
           <Link prefetch={false} href="/articles/furusato-nozei-analysis" style={link}>
             ふるさと納税の受入額分析
           </Link>
-          をご覧ください。
+          をご覧ください。受入額が一部の自治体に集中している実態は
+          <Link prefetch={false} href="/articles/furusato-nozei-concentration" style={link}>
+            受入額の集中度を分析した記事
+          </Link>
+          で解説しています。
         </p>
       </div>
 
