@@ -230,6 +230,14 @@ export default function Page() {
           <Link prefetch={false} href="/articles/prefecture-income-analysis" style={link}>
             都道府県別平均年収ランキング分析を見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/ranking/traffic-accident-city" style={link}>
+            市区町村別の交通事故ランキング
+          </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/articles/icy-road-accident-analysis" style={link}>
+            雪道・凍結路の事故の分析
+          </Link>
         </p>
       </div>
     </ArticleLayout>

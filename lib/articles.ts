@@ -20,6 +20,7 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "icy-road-accident-analysis", date: "2026-10-02", title: "雪道・凍結路で事故が多いのはどこ？", desc: "警察庁の令和7年データで、凍結・積雪路面の事故の時期・地域・死亡事故の割合を分析。" },
   { slug: "big-city-migration", date: "2026-10-02", title: "引っ越し先に選ばれている大都市はどこ？", desc: "政令指定都市20市と東京23区の転入超過を比較。人が集まる大都市と、出ていく大都市を分析します。" },
   { slug: "furusato-nozei-concentration", date: "2026-10-02", title: "ふるさと納税の受入額は一部の自治体に集中している？", desc: "上位10自治体・100自治体のシェアと、人口規模別の傾向を総務省データで分析。寄付先選びのポイントも。" },
   { slug: "city-town-village-population", date: "2026-10-02", title: "市・町・村の違いは人口5万人？", desc: "人口が最も少ない市と、5万人を超える町村をデータで調査。市の法律上の要件もあわせて解説します。" },
@@ -111,6 +112,8 @@ export type RankingEntry = {
 };
 
 export const rankingEntries: RankingEntry[] = [
+  { href: "/ranking/icy-road-accident", date: "2026-10-02", title: "凍結・積雪路面の事故ランキング", emoji: "❄️" },
+  { href: "/ranking/traffic-accident-city", date: "2026-10-02", title: "市区町村別 交通事故ランキング", emoji: "🚗" },
   { href: "/ranking/churn", date: "2026-10-01", title: "人口の入れ替わり率ランキング", emoji: "🔄" },
   { href: "/ranking/aging-gap", date: "2026-10-01", title: "少子高齢化ギャップランキング", emoji: "⚖️" },
   { href: "/ranking/large-cities", date: "2026-09-30", title: "人口50万人以上の都市ランキング", emoji: "🌆" },

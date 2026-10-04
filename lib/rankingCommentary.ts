@@ -11,6 +11,8 @@
  */
 import { getMunicipalities } from "./municipalities";
 import type { AnalysisRow, Direction } from "./rankingAnalysis";
+import { getAccidentByCode } from "./trafficAccident";
+import { getPopulationBasis } from "./population2025";
 
 export type CommentaryConfig = {
   metricName: string;
@@ -47,6 +49,42 @@ function build(
 const pct = (n: number, d: number) => (d > 0 ? (n / d) * 100 : 0);
 
 export const COMMENTARY: Record<string, CommentaryConfig> = {
+  "traffic-accident-city": {
+    metricName: "人口あたりの人身事故件数",
+    unit: "件/1万人",
+    digits: 1,
+    direction: "high",
+    scope: "人口1万人以上の市区町村",
+    rows: () => {
+      const cities = getMunicipalities();
+      const basis = getPopulationBasis(cities.map((c) => c.code));
+      return cities
+        .map((c) => ({
+          name: c.name,
+          population: basis.population(c.code, c.population),
+          code: c.code,
+        }))
+        .filter((c) => c.population >= 10_000)
+        .map((c) => ({
+          name: c.name,
+          population: c.population,
+          value: (getAccidentByCode(c.code).accidents / c.population) * 10_000,
+        }));
+    },
+    reading: [
+      "人身事故は、死者または負傷者が出た事故です。物だけが壊れた物損事故は含まれません。",
+      "事故は発生した場所の自治体で数えます。国道や高速道路が通る自治体では、住民以外の車の事故も含まれるため、人口の割に件数が多くなることがあります。",
+      getPopulationBasis(getMunicipalities().map((c) => c.code)).yearNote,
+      "人口の少ない自治体では、事故が数件増減するだけで値が大きく動きます。順位の小さな差を、安全性の優劣と受け取らないようにしてください。",
+    ],
+    relatedArticles: ["icy-road-accident-analysis", "traffic-accident-analysis", "aging-top50"],
+    relatedRankings: [
+      { href: "/ranking/traffic-accident-rate", label: "都道府県別 交通事故ランキング" },
+      { href: "/ranking/icy-road-accident", label: "凍結・積雪路面の事故ランキング" },
+      { href: "/ranking/density", label: "人口密度ランキング" },
+    ],
+  },
+
   population: {
     metricName: "人口",
     unit: "人",

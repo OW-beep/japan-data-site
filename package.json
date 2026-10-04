@@ -16,6 +16,8 @@
     "merge:vacant-house": "tsx scripts/fetchVacantHouseRate.ts",
     "fetch:real-estate": "tsx scripts/fetchRealEstatePrice.ts",
     "process:corporate": "tsx scripts/processCorporateRegistration.ts",
+    "process:traffic": "tsx scripts/processTrafficAccident.ts",
+    "fetch:census2025": "tsx scripts/fetchCensus2025.ts",
     "merge:daytime-population": "tsx scripts/fetchDaytimePopulation.ts",
     "merge:elderly-facilities": "tsx scripts/fetchElderlyFacilities.ts",
     "merge:young-adult-migration": "tsx scripts/fetchYoungAdultMigration.ts",

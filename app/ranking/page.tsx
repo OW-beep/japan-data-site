@@ -12,6 +12,8 @@ const rankings = [
   { href: "/ranking/population", emoji: "🏙", label: "人口ランキング" },
   { href: "/ranking/large-cities", emoji: "🌆", label: "人口50万人以上の都市ランキング" },
   { href: "/ranking/churn", emoji: "🔄", label: "人口の入れ替わり率ランキング" },
+  { href: "/ranking/traffic-accident-city", emoji: "🚗", label: "交通事故ランキング(市区町村別)" },
+  { href: "/ranking/icy-road-accident", emoji: "❄️", label: "凍結・積雪路面の事故ランキング" },
   { href: "/ranking/aging-gap", emoji: "⚖️", label: "少子高齢化ギャップランキング" },
   { href: "/ranking/birth-rate", emoji: "👶", label: "出生率ランキング" },
   { href: "/ranking/child", emoji: "🧒", label: "子どもが多い自治体" },

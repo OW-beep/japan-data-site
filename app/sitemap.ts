@@ -65,6 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/community-center",
     "/ranking/large-cities",
     "/ranking/churn",
+    "/ranking/traffic-accident-city",
+    "/ranking/icy-road-accident",
     "/ranking/aging-gap",
     "/prefecture",
     "/search",

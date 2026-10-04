@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 import DataAsOf from "../../../components/DataAsOf";
 import AdSense from "../../../components/AdSense";
@@ -109,6 +110,17 @@ export default function TrafficAccidentRankingPage() {
           </table>
         </>
       )}
+
+      <p style={{ marginTop: 28, lineHeight: 1.9 }}>
+        🚗{" "}
+        <Link
+          prefetch={false}
+          href="/ranking/traffic-accident-city"
+          style={{ color: "#2563eb", textDecoration: "underline" }}
+        >
+          市区町村別の交通事故(人身事故)ランキングはこちら →
+        </Link>
+      </p>
     </main>
   );
 }
