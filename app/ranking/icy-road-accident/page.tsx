@@ -84,7 +84,7 @@ export default function IcyRoadAccidentRankingPage() {
         ❄️ 凍結・積雪路面の事故が多い市区町村ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={`警察庁の交通事故統計オープンデータ(${ACCIDENT_YEAR_LABEL})`} />
 
       <p style={{ lineHeight: 1.9, color: "#374151" }}>
         {ACCIDENT_YEAR_LABEL}の人身事故のうち、路面が凍結または積雪していた事故の
@@ -126,8 +126,8 @@ export default function IcyRoadAccidentRankingPage() {
       <AdSense />
 
       <RakutenGifts
-        keyword="スノーブラシ 霜取り 解氷スプレー 車"
-        heading="冬の車の備えに:雪かき・霜取り用品を楽天市場で見る"
+        keyword="スノーブラシ"
+        heading="冬の車の備えに:スノーブラシなどを楽天市場で見る"
       />
 
       <h2 style={{ fontSize: 22, margin: "32px 0 12px" }}>

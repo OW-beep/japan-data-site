@@ -77,6 +77,10 @@ export default function Page() {
     .filter((c) => c.population >= 500_000 && !isDesignatedCity(c.name))
     .sort((a, b) => b.population - a.population);
 
+  // 「都市」として並べるのは市だけ。東京23区は市ではないので別に扱う
+  const notDesignatedCities = notDesignated.filter((c) => c.name.trim().endsWith("市"));
+  const notDesignatedWards = notDesignated.filter((c) => !c.name.trim().endsWith("市"));
+
   const faq = [
     {
       q: "政令指定都市は全国にいくつありますか？",
@@ -108,11 +112,15 @@ export default function Page() {
     {
       q: "人口が50万人以上でも政令指定都市ではない都市はありますか？",
       a:
-        notDesignated.length > 0
-          ? `あります。このデータでは${notDesignated
+        notDesignatedCities.length > 0
+          ? `あります。このデータでは${notDesignatedCities
               .map(shortName)
-              .join("、")}などが該当します(東京都の特別区は市ではないため、指定の対象外です)。人口が多いことは指定の必要条件の一つですが、それだけで指定されるわけではありません。`
-          : "このデータでは、人口50万人以上の市はすべて政令指定都市か特別区です。",
+              .join("、")}が該当します。人口が多いことは指定の必要条件の一つですが、それだけで指定されるわけではありません。${
+              notDesignatedWards.length > 0
+                ? "東京都の特別区にも人口50万人以上の区がありますが、特別区は市ではないため、指定の対象外です。"
+                : ""
+            }`
+          : "このデータでは、人口50万人以上の市はすべて政令指定都市です。",
     },
   ];
 
@@ -189,6 +197,7 @@ export default function Page() {
                   <td style={tdNum}>
                     {c.area != null
                       ? c.area.toLocaleString(undefined, {
+                          minimumFractionDigits: 1,
                           maximumFractionDigits: 1,
                         })
                       : "―"}
@@ -221,9 +230,9 @@ export default function Page() {
           {areaBig && areaSmall && (
             <li>
               面積:最も広いのは{shortName(areaBig)}(
-              {(areaBig.area ?? 0).toLocaleString(undefined, { maximumFractionDigits: 1 })}km²)、
+              {(areaBig.area ?? 0).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}km²)、
               最も狭いのは{shortName(areaSmall)}(
-              {(areaSmall.area ?? 0).toLocaleString(undefined, { maximumFractionDigits: 1 })}km²)です。
+              {(areaSmall.area ?? 0).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 })}km²)です。
             </li>
           )}
           {densityHigh && densityLow && (
@@ -297,11 +306,14 @@ export default function Page() {
           をご覧ください。
         </p>
 
-        {notDesignated.length > 0 && (
+        {notDesignatedCities.length > 0 && (
           <p>
-            反対に、人口50万人以上でも政令指定都市ではない都市もあります(
-            {notDesignated.map(shortName).join("、")}など)。50万人以上の都市を
-            指定の有無にかかわらず並べた一覧は、
+            反対に、人口50万人以上でも政令指定都市ではない市もあります(
+            {notDesignatedCities.map(shortName).join("、")})。
+            {notDesignatedWards.length > 0
+              ? "東京都の特別区にも人口50万人以上の区がありますが、特別区は市ではないため、指定の対象外です。"
+              : ""}
+            50万人以上の都市を指定の有無にかかわらず並べた一覧は、
             <Link prefetch={false} href="/ranking/large-cities" style={link}>
               人口50万人以上の都市ランキング
             </Link>

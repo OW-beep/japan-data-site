@@ -57,13 +57,30 @@ export const POPULATION_BANDS = [
 
 export type BandStat = { label: string; count: number; median: number };
 
-export function bandStats(rows: AnalysisRow[]): BandStat[] {
-  return POPULATION_BANDS.map((b) => {
+const fmtPop = (n: number) => (n >= 10_000 ? `${n / 10_000}万人` : `${n.toLocaleString()}人`);
+
+/**
+ * 人口規模別の中央値。minPopulation を渡すと、ランキングの対象が「人口○人以上」のとき、
+ * 区分の下限をその人口に合わせ、区分名も「1万人〜2万人未満」のように直す。
+ */
+export function bandStats(rows: AnalysisRow[], minPopulation = 0): BandStat[] {
+  const out: BandStat[] = [];
+  for (const b of POPULATION_BANDS) {
+    const min = Math.max(b.min, minPopulation);
+    if (min >= b.max) continue;
     const vals = rows
-      .filter((r) => r.population >= b.min && r.population < b.max)
+      .filter((r) => r.population >= min && r.population < b.max)
       .map((r) => r.value);
-    return { label: b.label, count: vals.length, median: median(vals) };
-  }).filter((b) => b.count > 0);
+    if (vals.length === 0) continue;
+    const label =
+      min === b.min
+        ? b.label
+        : b.max === Infinity
+          ? `${fmtPop(min)}以上`
+          : `${fmtPop(min)}〜${fmtPop(b.max)}未満`;
+    out.push({ label, count: vals.length, median: median(vals) });
+  }
+  return out;
 }
 
 export function prefectureOf(name: string): string {

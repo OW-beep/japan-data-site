@@ -54,7 +54,7 @@ export default function RankingCommentary({ slug }: { slug: string }) {
   }`;
 
   // 人口規模別
-  const bands = cfg.hideSizeAnalysis ? [] : bandStats(rows);
+  const bands = cfg.hideSizeAnalysis ? [] : bandStats(rows, cfg.minPopulation);
   const corr = cfg.hideSizeAnalysis ? null : populationCorrelation(rows);
   const bandSorted = [...bands].sort((a, b) =>
     cfg.direction === "high" ? b.median - a.median : a.median - b.median

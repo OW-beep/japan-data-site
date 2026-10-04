@@ -253,7 +253,7 @@ export default function Page() {
       <AffiliateSlot topic="moving" />
 
       <RakutenGifts
-        keyword="引越し 段ボール 梱包 セット"
+        keyword="引越し 段ボール"
         heading="引越しの準備に:梱包用品を楽天市場で見る"
       />
 

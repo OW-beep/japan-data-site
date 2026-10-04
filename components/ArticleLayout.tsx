@@ -29,6 +29,7 @@ rankingLink,
 tags,
 publishedAt,
 path,
+dataNote,
 }: {
 title: string;
 summary: string;
@@ -42,6 +43,8 @@ publishedAt?: string;
 /** 記事のURLパス(例: "/articles/million-cities")。
  *  渡すと Article 構造化データに mainEntityOfPage / url を含める。 */
 path?: string;
+/** e-Stat 以外のデータが中心の記事で、「データ更新日(e-Stat…)」の代わりに出す文 */
+dataNote?: string;
 }) {
 return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
 
@@ -63,7 +66,7 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
   </p>
 
   {publishedAt && <PublishedDate date={publishedAt} />}
-  <DataAsOf />
+  <DataAsOf text={dataNote} />
 
   {publishedAt && (
     <JsonLd

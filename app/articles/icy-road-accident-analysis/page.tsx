@@ -117,6 +117,7 @@ export default function Page() {
       heroValue={`${s.icyAcc.toLocaleString()}件`}
       rankingLink="/ranking/icy-road-accident"
       path="/articles/icy-road-accident-analysis"
+      dataNote={`警察庁の交通事故統計オープンデータ(${ACCIDENT_YEAR_LABEL})を集計`}
       tags={["geography"]}
       publishedAt="2026-10-02"
       top3={prefsTop.slice(0, 3).map((p, i) => ({
@@ -302,8 +303,8 @@ export default function Page() {
       </div>
 
       <RakutenGifts
-        keyword="スノーブラシ 霜取り 解氷スプレー 車"
-        heading="冬の車の備えに:雪かき・霜取り用品を楽天市場で見る"
+        keyword="スノーブラシ"
+        heading="冬の車の備えに:スノーブラシなどを楽天市場で見る"
       />
 
       <div style={box}>

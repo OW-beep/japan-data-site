@@ -99,7 +99,7 @@ export default function TrafficAccidentCityPage() {
         🚗 市区町村別 交通事故(人身事故)ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={`警察庁の交通事故統計オープンデータ(${ACCIDENT_YEAR_LABEL})、人口は${basis.label}`} />
 
       <p style={{ lineHeight: 1.9, color: "#374151" }}>
         {ACCIDENT_YEAR_LABEL}に起きた人身事故の件数を、人口1万人あたりで比べたランキングです。
@@ -156,7 +156,7 @@ export default function TrafficAccidentCityPage() {
       <AccidentTable rows={bottom} startRank={all.length} descending />
 
       <p style={note}>
-        {SOURCE_NOTE}。人口は総務省統計局「{basis.label}」。{basis.yearNote}
+        {SOURCE_NOTE}。{basis.yearNote}
       </p>
 
       <RankingCommentary slug="traffic-accident-city" />

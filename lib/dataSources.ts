@@ -256,7 +256,7 @@ export const dataSources: Record<string, DataSource> = {
   },
   "traffic-accident-city": {
     sourceName:
-      "警察庁「交通事故統計情報のオープンデータ」(令和7年 本票)、人口は総務省「社会・人口統計体系」",
+      "警察庁「交通事故統計情報のオープンデータ」(令和7年 本票)、人口は総務省統計局「国勢調査」",
     dataYear: "事故件数は令和7年(2025年)、人口は令和2年国勢調査",
     scope: "人口1万人以上の市区町村",
     excluded:

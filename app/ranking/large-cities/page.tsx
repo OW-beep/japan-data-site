@@ -248,7 +248,7 @@ export default function LargeCitiesRankingPage() {
                       <td style={{ ...td, textAlign: "left" }}>{c.kind}</td>
                       <td style={tdNum}>{c.population.toLocaleString()}</td>
                       <td style={tdNum}>
-                        {c.area != null ? c.area.toLocaleString(undefined, { maximumFractionDigits: 1 }) : "―"}
+                        {c.area != null ? c.area.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "―"}
                       </td>
                       <td style={tdNum}>
                         {c.populationDensity != null

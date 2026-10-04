@@ -22,6 +22,8 @@ export type CommentaryConfig = {
   /** ランキングの対象範囲の説明(例:「人口10万人以上の自治体」) */
   scope?: string;
   rows: () => AnalysisRow[];
+  /** ランキングの対象が「人口○人以上」のとき、その人口(人口規模別の区分名に反映する) */
+  minPopulation?: number;
   /** 人口規模別・相関の分析を出さない(指標が人口そのものの場合など) */
   hideSizeAnalysis?: boolean;
   /** 追加の集計文(データから計算した事実) */
@@ -55,6 +57,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 1,
     direction: "high",
     scope: "人口1万人以上の市区町村",
+    minPopulation: 10_000,
     rows: () => {
       const cities = getMunicipalities();
       const basis = getPopulationBasis(cities.map((c) => c.code));
@@ -74,6 +77,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     reading: [
       "人身事故は、死者または負傷者が出た事故です。物だけが壊れた物損事故は含まれません。",
       "事故は発生した場所の自治体で数えます。国道や高速道路が通る自治体では、住民以外の車の事故も含まれるため、人口の割に件数が多くなることがあります。",
+      "東京都心の千代田区・中央区・港区などは、昼間に通勤・通学で多くの人と車が集まります。夜間に住んでいる人口で割るため、値が大きく出る傾向があります。",
       getPopulationBasis(getMunicipalities().map((c) => c.code)).yearNote,
       "人口の少ない自治体では、事故が数件増減するだけで値が大きく動きます。順位の小さな差を、安全性の優劣と受け取らないようにしてください。",
     ],
@@ -341,6 +345,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 2,
     direction: "high",
     scope: "人口3,000人以上の自治体",
+    minPopulation: 3_000,
     rows: () =>
       build(
         (c) => c.marriages != null && !Number.isNaN(c.marriages) && c.population >= 3000,
