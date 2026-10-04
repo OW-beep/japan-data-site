@@ -20,6 +20,7 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "elderly-driver-accident-analysis", date: "2026-10-05", title: "高齢ドライバーの事故が多いのはどこ？", desc: "75歳以上が第1当事者の事故の割合を、都道府県別・市区町村別に分析。高齢化率との関係も調べました。" },
   { slug: "icy-road-accident-analysis", date: "2026-10-02", title: "雪道・凍結路で事故が多いのはどこ？", desc: "警察庁の令和7年データで、凍結・積雪路面の事故の時期・地域・死亡事故の割合を分析。" },
   { slug: "big-city-migration", date: "2026-10-02", title: "引っ越し先に選ばれている大都市はどこ？", desc: "政令指定都市20市と東京23区の転入超過を比較。人が集まる大都市と、出ていく大都市を分析します。" },
   { slug: "furusato-nozei-concentration", date: "2026-10-02", title: "ふるさと納税の受入額は一部の自治体に集中している？", desc: "上位10自治体・100自治体のシェアと、人口規模別の傾向を総務省データで分析。寄付先選びのポイントも。" },

@@ -81,7 +81,12 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
       getPopulationBasis(getMunicipalities().map((c) => c.code)).yearNote,
       "人口の少ない自治体では、事故が数件増減するだけで値が大きく動きます。順位の小さな差を、安全性の優劣と受け取らないようにしてください。",
     ],
-    relatedArticles: ["icy-road-accident-analysis", "traffic-accident-analysis", "aging-top50"],
+    relatedArticles: [
+      "elderly-driver-accident-analysis",
+      "icy-road-accident-analysis",
+      "traffic-accident-analysis",
+      "aging-top50",
+    ],
     relatedRankings: [
       { href: "/ranking/traffic-accident-rate", label: "都道府県別 交通事故ランキング" },
       { href: "/ranking/icy-road-accident", label: "凍結・積雪路面の事故ランキング" },

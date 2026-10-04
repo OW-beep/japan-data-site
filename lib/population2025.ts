@@ -23,6 +23,15 @@ export function getPopulation2025(code: string): number | undefined {
   return data.values[code]?.[0];
 }
 
+/** 令和7年国勢調査の人口・15歳未満・65歳以上。年齢まで取れていない自治体は null */
+export function getAgeGroups2025(
+  code: string
+): { population: number; child: number; elderly: number } | null {
+  const v = data.values[code];
+  if (!v || v[1] == null || v[2] == null) return null;
+  return { population: v[0], child: v[1], elderly: v[2] };
+}
+
 export type PopulationBasis = {
   use2025: boolean;
   /** 2025年の人口があれば優先し、なければ fallback(2020年の人口)を返す */
