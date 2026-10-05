@@ -5,6 +5,9 @@ import RankingBarChart from "@/components/RankingBarChart";
 import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/library-child-ratio-analysis" },
   title: "図書館の充実度と子供の割合に関係はあるか｜人口10万人以上の都市で検証",

@@ -7,6 +7,9 @@ import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/real-estate-single-household-analysis" },
   title: "地価が高い自治体ほど単身世帯が多い｜相関係数+0.54",

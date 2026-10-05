@@ -43,7 +43,10 @@ export default async function RakutenGifts({
                 <img
                   src={item.imageUrl}
                   alt={item.name}
+                  width={140}
+                  height={140}
                   loading="lazy"
+                  decoding="async"
                   style={img}
                 />
               ) : (
@@ -97,10 +100,12 @@ const title: React.CSSProperties = {
   marginBottom: 12,
 };
 
+// カードは小さめ(約120〜140px)にして、画像は2倍強の解像度で取得している(lib/rakuten.ts)
 const grid: React.CSSProperties = {
   display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-  gap: 12,
+  gridTemplateColumns: "repeat(auto-fill, minmax(120px, 140px))",
+  gap: 14,
+  justifyContent: "start",
 };
 
 const card: React.CSSProperties = {
@@ -112,16 +117,18 @@ const card: React.CSSProperties = {
 const imgWrap: React.CSSProperties = {
   width: "100%",
   aspectRatio: "1 / 1",
-  background: "#f5f5f4",
+  background: "#fff",
+  border: "1px solid #e7e5e4",
   borderRadius: 8,
   overflow: "hidden",
   marginBottom: 6,
 };
 
+// cover だと引き伸ばし・トリミングでぼやけて見えるため、contain で全体を表示する
 const img: React.CSSProperties = {
   width: "100%",
   height: "100%",
-  objectFit: "cover",
+  objectFit: "contain",
   display: "block",
 };
 
@@ -131,7 +138,7 @@ const imgPlaceholder: React.CSSProperties = {
 };
 
 const itemName: React.CSSProperties = {
-  fontSize: 12,
+  fontSize: 11,
   lineHeight: 1.5,
   color: "#292524",
   display: "-webkit-box",
@@ -143,13 +150,12 @@ const itemName: React.CSSProperties = {
 const priceRow: React.CSSProperties = {
   marginTop: 4,
   display: "flex",
-  alignItems: "baseline",
-  justifyContent: "space-between",
-  gap: 6,
+  flexDirection: "column",
+  gap: 2,
 };
 
 const price: React.CSSProperties = {
-  fontSize: 14,
+  fontSize: 13,
   fontWeight: 700,
   color: "#be123c",
 };

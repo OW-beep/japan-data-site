@@ -5,6 +5,9 @@ import RankingBarChart from "@/components/RankingBarChart";
 import RakutenGifts from "@/components/RakutenGifts";
 import PersonalNote from "@/components/PersonalNote";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/recycling-rate-analysis" },
   title: "ごみのリサイクル率ランキング分析｜大崎町はなぜ日本一なのか",

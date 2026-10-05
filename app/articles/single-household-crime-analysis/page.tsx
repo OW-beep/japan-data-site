@@ -6,6 +6,9 @@ import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 import Link from "next/link";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/single-household-crime-analysis" },
   title:

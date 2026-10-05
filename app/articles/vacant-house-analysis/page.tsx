@@ -5,6 +5,9 @@ import RankingBarChart from "@/components/RankingBarChart";
 import RakutenGifts from "@/components/RakutenGifts";
 import PersonalNote from "@/components/PersonalNote";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/vacant-house-analysis" },
   title: "空き家率ランキング分析｜軽井沢町と夕張市、2つの空き家率",

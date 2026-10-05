@@ -11,6 +11,9 @@ import { BOOKS } from "@/lib/amazonBooks";
 import { getMunicipalities } from "@/lib/municipalities";
 import { isDesignatedCity } from "@/lib/designatedCities";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/big-city-migration" },
   title:

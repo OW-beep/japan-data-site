@@ -16,8 +16,17 @@
  *   （キー未登録でもビルド・他ページが壊れないようにするため）。
  * - サーバー側（Server Component）専用。キーをブラウザに渡さないよう、
  *   このモジュールをクライアントコンポーネントから直接importしないこと。
- * - 楽天APIは呼び出し頻度に上限があるため、Next.jsのfetchキャッシュで
- *   1日単位（86400秒）に再取得を抑える。
+ * - 楽天APIは「1秒に1回」程度の呼び出し制限がある。ビルド時に複数ページが同時に
+ *   呼ぶと制限に当たり、失敗したページは次のデプロイまで「ブロックなし」で固定されて
+ *   いた。そのため次の対策をしている:
+ *     1. 呼び出しを1本ずつの順番待ち(約1.1秒間隔)にする
+ *     2. 制限(429)・サーバーエラー・通信エラーは、間隔をあけて数回やり直す
+ *     3. 同じキーワードの成功結果は、プロセス内で1時間使い回す
+ *     4. fetch自体はキャッシュしない(cache: "no-store")。失敗がキャッシュされて
+ *        固定されるのを防ぐため。ページ側の `export const revalidate` で、
+ *        ページ単位に一定時間キャッシュする(失敗しても数時間で自動的に再生成される)
+ * - 画像は、APIが返す128px角では粗いので、サムネイルのサイズ指定(_ex)を書き換えて
+ *   大きめ(300px角)を取得し、表示は小さめにする(高解像度ディスプレイでも鮮明にするため)。
  */
 
 import { SITE_URL } from "./site";
@@ -50,6 +59,40 @@ interface RawItem {
 
 const ENDPOINT = "https://openapi.rakuten.co.jp/ichibams/api/IchibaItem/Search/20260701";
 
+/** 表示サイズ(約140px)の2倍強を取得する。楽天のサムネイルは ?_ex=幅x高さ で大きさを指定できる */
+const IMAGE_SIZE = 300;
+
+function hiResImage(url: string | undefined | null): string | null {
+  if (!url) return null;
+  if (/[?&]_ex=\d+x\d+/.test(url)) {
+    return url.replace(/([?&]_ex=)\d+x\d+/, `$1${IMAGE_SIZE}x${IMAGE_SIZE}`);
+  }
+  return `${url}${url.includes("?") ? "&" : "?"}_ex=${IMAGE_SIZE}x${IMAGE_SIZE}`;
+}
+
+const MIN_INTERVAL_MS = 1100;
+const MAX_ATTEMPTS = 4;
+const MEMO_TTL_MS = 60 * 60 * 1000;
+
+const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
+
+// 呼び出しを1本ずつの順番待ちにして、間隔をあける
+let lastCallAt = 0;
+let queue: Promise<unknown> = Promise.resolve();
+function throttled<T>(fn: () => Promise<T>): Promise<T> {
+  const run = queue.then(async () => {
+    const wait = lastCallAt + MIN_INTERVAL_MS - Date.now();
+    if (wait > 0) await sleep(wait);
+    lastCallAt = Date.now();
+    return fn();
+  });
+  queue = run.catch(() => undefined);
+  return run;
+}
+
+// 同じキーワードの成功結果をプロセス内で使い回す(ビルド中の重複呼び出しを避ける)
+const memo = new Map<string, { at: number; items: RakutenItem[] }>();
+
 export async function searchRakutenItems(keyword: string, hits = 3): Promise<RakutenItem[] | null> {
   const applicationId = process.env.RAKUTEN_APP_ID;
   const accessKey = process.env.RAKUTEN_ACCESS_KEY;
@@ -60,6 +103,10 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
     return null;
   }
 
+  const memoKey = `${keyword}\u0000${hits}`;
+  const hit = memo.get(memoKey);
+  if (hit && Date.now() - hit.at < MEMO_TTL_MS) return hit.items;
+
   const paramsObj: Record<string, string> = {
     format: "json",
     formatVersion: "2",
@@ -67,6 +114,7 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
     applicationId,
     accessKey,
     hits: String(hits),
+    imageFlag: "1", // 画像のある商品だけ
     sort: "standard"
   };
   const affiliateId = process.env.RAKUTEN_AFFILIATE_ID;
@@ -85,23 +133,52 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? SITE_URL;
 
   try {
-    const res = await fetch(`${ENDPOINT}?${query}`, {
-      headers: { Referer: siteUrl, Origin: siteUrl },
-      // 楽天APIの呼び出し回数を抑えるため、同じキーワードの結果は1日キャッシュする
-      next: { revalidate: 60 * 60 * 24 }
-    });
-    const rawText = await res.text();
+    let rawText = "";
+    let status = 0;
     let data: RakutenSearchResponse = {};
-    try {
-      data = JSON.parse(rawText);
-    } catch {
-      console.warn(`[rakuten] 「${keyword}」のレスポンスがJSONとして解釈できませんでした。body=${rawText.slice(0, 500)}`);
+
+    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+      let transient = false;
+      try {
+        const res = await throttled(() =>
+          fetch(`${ENDPOINT}?${query}`, {
+            headers: { Referer: siteUrl, Origin: siteUrl },
+            // 失敗した結果が固定されないよう、fetch自体はキャッシュしない
+            cache: "no-store",
+          })
+        );
+        status = res.status;
+        rawText = await res.text();
+        try {
+          data = JSON.parse(rawText);
+        } catch {
+          data = {};
+        }
+        // 制限(429)・サーバーエラー・「too many」系のエラーは、間隔をあけてやり直す
+        transient =
+          status === 429 ||
+          status >= 500 ||
+          /too_?many|rate|limit/i.test(String(data.error ?? ""));
+      } catch (e) {
+        transient = true; // 通信エラー
+        console.warn(`[rakuten] 「${keyword}」の通信エラー(${attempt}回目):`, e);
+      }
+      if (!transient) break;
+      if (attempt < MAX_ATTEMPTS) {
+        console.warn(`[rakuten] 「${keyword}」を${attempt}回目で取得できなかったため、やり直します (status=${status})`);
+        await sleep(1500 * attempt);
+      }
+    }
+
+    if (!rawText || (status === 0)) return null;
+    if (Object.keys(data).length === 0) {
+      console.warn(`[rakuten] 「${keyword}」のレスポンスがJSONとして解釈できませんでした。status=${status} body=${rawText.slice(0, 500)}`);
       return null;
     }
 
-    if (!res.ok || data.error) {
+    if (status < 200 || status >= 300 || data.error) {
       console.warn(
-        `[rakuten] 「${keyword}」の検索が失敗しました。status=${res.status} error=${data.error} description=${data.error_description}`
+        `[rakuten] 「${keyword}」の検索が失敗しました。status=${status} error=${data.error} description=${data.error_description}`
       );
       return null;
     }
@@ -114,13 +191,15 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
       return null;
     }
 
-    return data.Items.map((item) => ({
+    const items: RakutenItem[] = data.Items.map((item) => ({
       name: item.itemName,
       price: item.itemPrice,
       url: item.affiliateUrl || item.itemUrl,
-      imageUrl: item.mediumImageUrls?.[0] ?? null,
-      shopName: item.shopName
+      imageUrl: hiResImage(item.mediumImageUrls?.[0]),
+      shopName: item.shopName,
     }));
+    memo.set(memoKey, { at: Date.now(), items });
+    return items;
   } catch (err) {
     // ネットワークエラー等で記事ページ自体が落ちないよう、失敗時は「表示なし」にフォールバックする
     console.warn(`[rakuten] 「${keyword}」の検索中に例外が発生しました:`, err);

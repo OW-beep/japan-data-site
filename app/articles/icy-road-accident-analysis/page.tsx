@@ -13,6 +13,9 @@ import {
   national,
 } from "@/lib/trafficAccident";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 function summarize() {
   const icy = national.bySurface.icy;
   const snow = national.bySurface.snow;

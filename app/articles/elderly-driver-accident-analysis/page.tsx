@@ -19,6 +19,9 @@ import {
 } from "@/lib/population2025";
 import { describeCorrelation, median, pearson } from "@/lib/rankingAnalysis";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 const MIN_ACCIDENTS = 100;
 
 type Row = {

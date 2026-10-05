@@ -5,6 +5,9 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 
+/** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
+export const revalidate = 21600;
+
 export const metadata = {
   alternates: { canonical: "/articles/traffic-accident-analysis" },
   title: "交通事故発生件数ランキング分析｜「田舎は車社会だから事故が多い」は誤解だった",
