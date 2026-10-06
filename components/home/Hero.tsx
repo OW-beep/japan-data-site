@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { articleEntries } from "@/lib/articles";
 
 /**
  * 参考サイト(honeycomb-labo.com)の雰囲気に寄せたヒーロー。
@@ -75,24 +76,55 @@ export default function Hero() {
             全国1,741自治体をランキング・比較・分析できます。
           </p>
 
+          {/* 自治体名の検索。入力すると /search?q=... に移動して結果を表示する */}
+          <form
+            action="/search"
+            method="get"
+            role="search"
+            style={{ display: "flex", gap: 8, marginTop: 24, maxWidth: 520 }}
+          >
+            <input
+              name="q"
+              type="search"
+              placeholder="自治体名で検索(例:船橋市)"
+              aria-label="自治体名で検索"
+              style={{
+                flex: 1,
+                minWidth: 0,
+                padding: "11px 14px",
+                fontSize: 14,
+                border: "1px solid var(--ink)",
+                background: "var(--surface)",
+                color: "var(--ink)",
+                borderRadius: 0,
+              }}
+            />
+            <button
+              type="submit"
+              style={{ ...primaryButton, border: "none", cursor: "pointer", fontFamily: "inherit" }}
+            >
+              検索
+            </button>
+          </form>
+
           <div
             style={{
               display: "flex",
               flexWrap: "wrap",
               gap: 10,
-              marginTop: 24,
+              marginTop: 14,
             }}
           >
-            <Link prefetch={false} href="/ranking/population" style={primaryButton}>
+            <Link prefetch={false} href="/ranking/population" style={secondaryButton}>
               人口ランキング
-            </Link>
-
-            <Link prefetch={false} href="/search" style={secondaryButton}>
-              自治体検索
             </Link>
 
             <Link prefetch={false} href="/compare" style={secondaryButton}>
               自治体比較
+            </Link>
+
+            <Link prefetch={false} href="/ranking" style={secondaryButton}>
+              ランキング一覧
             </Link>
           </div>
 
@@ -107,8 +139,8 @@ export default function Hero() {
             }}
           >
             <Info number="1,741" label="対象自治体" />
-            <Info number="20+" label="ランキング" />
-            <Info number="2,000+" label="データページ" />
+            <Info number="60+" label="ランキング" />
+            <Info number={`${Math.floor(articleEntries.length / 10) * 10}+`} label="分析記事" />
           </div>
         </div>
 

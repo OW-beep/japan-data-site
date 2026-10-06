@@ -11,7 +11,7 @@
  */
 import { getMunicipalities } from "./municipalities";
 import type { AnalysisRow, Direction } from "./rankingAnalysis";
-import { getAccidentByCode } from "./trafficAccident";
+import { getAccidentByCode, getAllAccidentRows } from "./trafficAccident";
 import { getPopulationBasis } from "./population2025";
 
 export type CommentaryConfig = {
@@ -51,6 +51,71 @@ function build(
 const pct = (n: number, d: number) => (d > 0 ? (n / d) * 100 : 0);
 
 export const COMMENTARY: Record<string, CommentaryConfig> = {
+  // 以下4つは、ランキングの説明文(meta description)の「1位は○○」にだけ使う。
+  // reading などが空なので、<RankingCommentary> を置いても解説は出ない(置く場合は中身を足すこと)。
+  churn: {
+    metricName: "人口の入れ替わり率",
+    unit: "%",
+    digits: 1,
+    direction: "high",
+    scope: "人口1,000人以上の市区町村",
+    minPopulation: 1_000,
+    rows: () =>
+      build(
+        (c) => c.inMigrants != null && c.outMigrants != null && c.population >= 1000,
+        (c) => (((c.inMigrants ?? 0) + (c.outMigrants ?? 0)) / c.population) * 100
+      ),
+    reading: [],
+    relatedArticles: [],
+    relatedRankings: [],
+  },
+  "aging-gap": {
+    metricName: "少子高齢化ギャップ",
+    unit: "ポイント",
+    digits: 1,
+    direction: "high",
+    rows: () =>
+      build(
+        (c) => c.population > 0 && c.elderlyPopulation != null && c.childPopulation != null,
+        (c) => (c.elderlyPopulation / c.population) * 100 - (c.childPopulation / c.population) * 100
+      ),
+    reading: [],
+    relatedArticles: [],
+    relatedRankings: [],
+  },
+  "large-cities": {
+    metricName: "人口",
+    unit: "人",
+    digits: 0,
+    direction: "high",
+    scope: "人口50万人以上の市区",
+    hideSizeAnalysis: true,
+    rows: () => build((c) => c.population >= 500_000, (c) => c.population),
+    reading: [],
+    relatedArticles: [],
+    relatedRankings: [],
+  },
+  "icy-road-accident": {
+    metricName: "凍結・積雪路面の事故の割合",
+    unit: "%",
+    digits: 1,
+    direction: "high",
+    scope: "人身事故が50件以上の市区町村",
+    rows: () => {
+      const byCode = new Map(getMunicipalities().map((c) => [c.code, c]));
+      return getAllAccidentRows()
+        .filter((r) => r.accidents >= 50 && byCode.has(r.code))
+        .map((r) => ({
+          name: byCode.get(r.code)!.name,
+          population: byCode.get(r.code)!.population,
+          value: (r.icySnowAccidents / r.accidents) * 100,
+        }));
+    },
+    reading: [],
+    relatedArticles: [],
+    relatedRankings: [],
+  },
+
   "traffic-accident-city": {
     metricName: "人口あたりの人身事故件数",
     unit: "件/1万人",

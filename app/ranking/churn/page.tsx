@@ -8,13 +8,18 @@ import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import { dataSources } from "../../../lib/dataSources";
 import { getMunicipalities } from "../../../lib/municipalities";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/churn" },
   title: "人口の入れ替わり率ランキング｜住民が毎年入れ替わる自治体は？(転入+転出)",
   description:
     "転入者数と転出者数の合計を人口で割った「人口の入れ替わり率」を全国の自治体で比較。人口の増減だけでは見えない、住民の流動性が高い自治体・低い自治体がわかります。",
 };
+
+export function generateMetadata() {
+  return withTop1("churn", baseMetadata);
+}
 
 const MIN_POPULATION = 1000;
 

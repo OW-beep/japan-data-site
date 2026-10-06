@@ -1,20 +1,12 @@
 import Hero from "@/components/home/Hero";
-
-import PurposeSection from "@/components/home/PurposeSection";
-
-import NicheReadsSection from "@/components/home/NicheReadsSection";
-
-import FeaturedArticlesSection from "@/components/home/FeaturedArticlesSection";
-
 import NewArrivalsSection from "@/components/home/NewArrivalsSection";
-
-import ArticlesSection from "@/components/home/ArticlesSection";
-
+import PurposeSection from "@/components/home/PurposeSection";
+import OriginalIndexSection from "@/components/home/OriginalIndexSection";
 import RankingSection from "@/components/home/RankingSection";
-
-import PrefectureSection from "@/components/home/PrefectureSection";
-
+import HighlightsSection from "@/components/home/HighlightsSection";
 import AboutSection from "@/components/home/AboutSection";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata = {
   alternates: { canonical: "/" },
@@ -24,10 +16,15 @@ export const metadata = {
   },
 };
 
-import SitemapSection from "@/components/home/SitemapSection";
-import JsonLd from "@/components/JsonLd";
-import { SITE_URL, SITE_NAME } from "@/lib/site";
-
+/**
+ * トップページは「迷わず目的にたどり着ける」ことを優先して、セクションを絞っている。
+ *   ヒーロー(検索ボックス) → 新着 → 目的から探す → 独自指標 → 人気ランキング → 注目の読み物 → 運営者情報
+ *
+ * 以前あった次のセクションはトップから外した(部品のファイルは残してある):
+ *   記事の全件一覧(ArticlesSection)、都道府県の一覧(PrefectureSection)、
+ *   サイトマップ(SitemapSection)、注目記事・ニッチな読み物(HighlightsSection に統合)。
+ *   いずれも、ヘッダー・フッター・/articles・サイトマップから辿れる。
+ */
 export default function Home() {
   return (
     <main
@@ -43,6 +40,11 @@ export default function Home() {
           "@type": "WebSite",
           name: SITE_NAME,
           url: SITE_URL,
+          potentialAction: {
+            "@type": "SearchAction",
+            target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },
+            "query-input": "required name=search_term_string",
+          },
         }}
       />
 
@@ -52,19 +54,13 @@ export default function Home() {
 
       <PurposeSection />
 
-      <NicheReadsSection />
-
-      <FeaturedArticlesSection />
-
-      <ArticlesSection />
+      <OriginalIndexSection />
 
       <RankingSection />
 
-      <PrefectureSection />
+      <HighlightsSection />
 
       <AboutSection />
-
-      <SitemapSection />
     </main>
   );
 }

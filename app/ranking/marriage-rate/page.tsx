@@ -8,13 +8,18 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/marriage-rate" },
   title: "全国自治体 婚姻率ランキング｜東京都心の区がなぜ上位に",
   description:
     "全国自治体の人口1,000人あたり婚姻件数(婚姻率)をランキング形式で比較。台東区・墨田区など東京都心の特別区が上位を占める理由を解説します。",
 };
+
+export function generateMetadata() {
+  return withTop1("marriage-rate", baseMetadata);
+}
 
 export default function MarriageRateRankingPage() {
   const ranking = getMunicipalities()

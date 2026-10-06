@@ -8,13 +8,18 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/child" },
   title: "全国自治体 子ども人口割合ランキング",
   description:
     "全国自治体の子ども人口割合(15歳未満人口の割合)をランキング形式で比較。子育て世代が多い自治体・少子高齢化が進む自治体がわかります。",
 };
+
+export function generateMetadata() {
+  return withTop1("child", baseMetadata);
+}
 
 export default function Page() {
   const ranking = getMunicipalities()

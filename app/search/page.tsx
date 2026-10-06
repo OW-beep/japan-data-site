@@ -6,7 +6,15 @@ export const metadata = {
   description: "全国1741自治体を検索できます。",
 };
 
-export default function Page() {
+export default async function Page({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>;
+}) {
+  // トップの検索ボックス(/search?q=...)から来たときは、入力済みの状態で表示する
+  const { q } = await searchParams;
+  const initialQuery = (q ?? "").slice(0, 50);
+
   return (
     <main
       style={{
@@ -35,7 +43,7 @@ export default function Page() {
         該当する自治体を検索できます。
       </p>
 
-      <SearchBox />
+      <SearchBox initialQuery={initialQuery} />
     </main>
   );
 }

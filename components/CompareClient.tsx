@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { getCities } from "@/lib/getCities";
 import { computeCityMetrics } from "@/lib/cityMetrics";
 import type { City } from "@/lib/City";
+import CompareShare from "@/components/CompareShare";
 
 function CitySearchInput({
   label,
@@ -302,6 +303,15 @@ export default function CompareClient() {
             </tbody>
           </table>
         </div>
+      )}
+
+      {cityA && cityB && (
+        <CompareShare
+          nameA={cityA.name}
+          nameB={cityB.name}
+          codeA={cityA.code}
+          codeB={cityB.code}
+        />
       )}
 
       {(!cityA || !cityB) && (

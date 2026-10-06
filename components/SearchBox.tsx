@@ -4,10 +4,10 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { getCities } from "@/lib/getCities";
 
-export default function SearchBox() {
+export default function SearchBox({ initialQuery = "" }: { initialQuery?: string }) {
   const cities = useMemo(() => getCities(), []);
 
-  const [keyword, setKeyword] = useState("");
+  const [keyword, setKeyword] = useState(initialQuery);
 
   const result = useMemo(() => {
     if (!keyword) return [];

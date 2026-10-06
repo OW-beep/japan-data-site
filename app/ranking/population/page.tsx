@@ -11,13 +11,18 @@ import CompareCTA from "../../../components/CompareCTA";
 
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/population" },
   title: "全国自治体 人口ランキング【最新版】",
   description:
-    "全国の市区町村の人口を多い順にランキング。政令指定都市・県庁所在地から町村まで、住民基本台帳ベースの最新人口データを比較できます。",
+    "全国の市区町村の人口を多い順にランキング。政令指定都市・県庁所在地から町村まで、国勢調査に基づく人口データを比較できます。",
 };
+
+export function generateMetadata() {
+  return withTop1("population", baseMetadata);
+}
 
 export default function Page() {
   const ranking = getMunicipalities().sort(

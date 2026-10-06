@@ -8,13 +8,18 @@ import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import { dataSources } from "../../../lib/dataSources";
 import { getMunicipalities } from "../../../lib/municipalities";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/aging-gap" },
   title: "少子高齢化ギャップランキング｜高齢化率と子ども人口割合の差が大きい自治体",
   description:
     "高齢化率から子ども人口割合(0〜14歳)を引いた「少子高齢化ギャップ」を全国の自治体で比較。差が大きい自治体と、子どもの割合が高齢者の割合を上回る自治体がわかります。",
 };
+
+export function generateMetadata() {
+  return withTop1("aging-gap", baseMetadata);
+}
 
 export default function AgingGapRankingPage() {
   const all = getMunicipalities()

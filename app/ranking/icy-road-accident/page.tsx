@@ -16,6 +16,7 @@ import {
   isAccidentJoinHealthy,
   national,
 } from "../../../lib/trafficAccident";
+import { withTop1 } from "@/lib/rankingMeta";
 
 /** 楽天ブロックの取得に失敗しても、6時間以内に自動で再生成されるようにする */
 export const revalidate = 21600;
@@ -25,7 +26,7 @@ const MIN_ACCIDENTS = 50;
 const healthy = () =>
   isAccidentJoinHealthy(getMunicipalities().map((c) => c.code));
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/icy-road-accident" },
   title:
     "凍結・積雪路面の事故が多い市区町村ランキング｜雪道・凍結路の人身事故の割合【令和7年】",
@@ -33,6 +34,10 @@ export const metadata: Metadata = {
     "警察庁の交通事故統計オープンデータ(令和7年)をもとに、人身事故のうち路面が凍結・積雪していた事故の割合を市区町村別に比較。雪道・凍結路の事故が多い自治体がわかります。",
   robots: healthy() ? undefined : { index: false, follow: true },
 };
+
+export function generateMetadata() {
+  return withTop1("icy-road-accident", baseMetadata);
+}
 
 export default function IcyRoadAccidentRankingPage() {
   if (!healthy()) {

@@ -8,13 +8,18 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/vacant-house" },
   title: "全国自治体 空き家率ランキング｜軽井沢町が全国1位の理由",
   description:
     "総住宅数に占める空き家の割合(空き家率)を全国の自治体でランキング形式で比較。別荘地の軽井沢町・那須町・熱海市と、旧産炭地の夕張市が上位に並ぶ理由を解説します。",
 };
+
+export function generateMetadata() {
+  return withTop1("vacant-house", baseMetadata);
+}
 
 export default function VacantHouseRankingPage() {
   const ranking = getMunicipalities()

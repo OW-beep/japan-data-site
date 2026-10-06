@@ -16,13 +16,14 @@ import {
   getAccidentByCode,
   isAccidentJoinHealthy,
 } from "../../../lib/trafficAccident";
+import { withTop1 } from "@/lib/rankingMeta";
 
 const MIN_POPULATION = 10_000;
 
 const healthy = () =>
   isAccidentJoinHealthy(getMunicipalities().map((c) => c.code));
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/traffic-accident-city" },
   title:
     "市区町村別 交通事故(人身事故)ランキング｜人口1万人あたり件数【令和7年】",
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
     "警察庁の交通事故統計オープンデータ(令和7年)をもとに、全国の市区町村の人身事故件数を人口1万人あたりで比較。事故が多い自治体・少ない自治体と、死亡事故件数がわかります。",
   robots: healthy() ? undefined : { index: false, follow: true },
 };
+
+export function generateMetadata() {
+  return withTop1("traffic-accident-city", baseMetadata);
+}
 
 export default function TrafficAccidentCityPage() {
   if (!healthy()) {

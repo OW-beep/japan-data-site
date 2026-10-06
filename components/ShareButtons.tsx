@@ -10,12 +10,15 @@ import { SITE_URL } from "@/lib/site";
 export default function ShareButtons({
   title,
   label = "この記事をシェア",
+  url: urlProp,
 }: {
   title: string;
   label?: string;
+  /** 指定すると、現在のパスの代わりにこのURLをシェアする(比較結果など、クエリ付きのURL用) */
+  url?: string;
 }) {
   const pathname = usePathname() ?? "/";
-  const url = `${SITE_URL}${pathname}`;
+  const url = urlProp ?? `${SITE_URL}${pathname}`;
   const u = encodeURIComponent(url);
   const t = encodeURIComponent(title);
 

@@ -16,13 +16,18 @@ import {
   isDesignatedCity,
   normalizeCityName as normalize,
 } from "../../../lib/designatedCities";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/large-cities" },
   title: "人口50万人以上の都市ランキング｜政令指定都市など大都市を人口順に一覧比較",
   description:
     "人口50万人以上の都市を人口順にランキング。100万人以上・70万人台〜90万人台・50万人台〜60万人台の3区分で、政令指定都市・特別区・その他の市の人口、面積、人口密度、高齢化率を一覧で比較できます。",
 };
+
+export function generateMetadata() {
+  return withTop1("large-cities", baseMetadata);
+}
 
 const THRESHOLD = 500_000;
 

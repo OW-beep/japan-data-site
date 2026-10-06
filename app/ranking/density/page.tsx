@@ -11,13 +11,18 @@ import JsonLd from "../../../components/JsonLd";
 import Link from "next/link";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/density" },
   title: "全国自治体 人口密度ランキング",
   description:
     "全国自治体の人口密度(1平方キロメートルあたりの人口)をランキング形式で比較。都市部の過密と地方の過疎の差がわかります。",
 };
+
+export function generateMetadata() {
+  return withTop1("density", baseMetadata);
+}
 
 export default function Page() {
   const fullRanking = getMunicipalities()

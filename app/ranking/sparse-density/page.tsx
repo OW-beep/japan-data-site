@@ -8,13 +8,18 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/sparse-density" },
   title: "全国自治体 人口密度が低い自治体ランキング",
   description:
     "全国の市区町村を人口密度が低い順にランキング。広大な面積に対して人口が非常に少ない、日本で最も人口が希薄な自治体を比較できます。",
 };
+
+export function generateMetadata() {
+  return withTop1("sparse-density", baseMetadata);
+}
 
 export default function Page() {
   const ranking = getMunicipalities()

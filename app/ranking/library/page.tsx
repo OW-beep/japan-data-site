@@ -8,13 +8,18 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import { withTop1 } from "@/lib/rankingMeta";
 
-export const metadata: Metadata = {
+const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/library" },
   title: "全国自治体 図書館数ランキング｜人口10万人以上の都市で比較",
   description:
     "人口10万人以上の自治体を対象に、図書館1館あたりの人口をランキング形式で比較。図書館へのアクセスが良い自治体、人口の割に図書館が少ない自治体がわかります。",
 };
+
+export function generateMetadata() {
+  return withTop1("library", baseMetadata);
+}
 
 export default function LibraryRankingPage() {
   const ranking = getMunicipalities()
