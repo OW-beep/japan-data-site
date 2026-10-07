@@ -20,6 +20,9 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "bicycle-accident-analysis", date: "2026-10-05", title: "自転車が関わる事故の割合が高い街はどこ？", desc: "人身事故のうち自転車が絡む割合を市区町村別に計算し、人口密度との関係を調べました。" },
+  { slug: "fatal-accident-rate-analysis", date: "2026-10-05", title: "交通事故が多い街ほど、死亡事故になりにくい？", desc: "人身事故のうち死亡事故になる割合(致死率)を市区町村別に計算。人口密度・高齢化率との関係も。" },
+  { slug: "accident-daytime-population", date: "2026-10-05", title: "交通事故が多い街は、昼間人口で割ると入れ替わる？", desc: "夜間人口あたりと昼間人口あたりの人身事故を比較。順位がどう入れ替わるかを独自の加工データで調べました。" },
   { slug: "elderly-driver-accident-analysis", date: "2026-10-05", title: "高齢ドライバーの事故が多いのはどこ？", desc: "75歳以上が第1当事者の事故の割合を、都道府県別・市区町村別に分析。高齢化率との関係も調べました。" },
   { slug: "icy-road-accident-analysis", date: "2026-10-02", title: "雪道・凍結路で事故が多いのはどこ？", desc: "警察庁の令和7年データで、凍結・積雪路面の事故の時期・地域・死亡事故の割合を分析。" },
   { slug: "big-city-migration", date: "2026-10-02", title: "引っ越し先に選ばれている大都市はどこ？", desc: "政令指定都市20市と東京23区の転入超過を比較。人が集まる大都市と、出ていく大都市を分析します。" },
