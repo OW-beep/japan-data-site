@@ -53,6 +53,14 @@ const COL = {
   injuries: 6,
   city: 9,
   month: 11, // 発生日時 月
+  hour: 13, // 発生日時 時
+  minute: 14, // 発生日時 分
+  dayNight: 15, // 昼夜 (11=昼-明, 12=昼-昼, 13=昼-暮, 21=夜-暮, 22=夜-夜, 23=夜-明)
+  sunsetHour: 18, // 日の入り時刻 時
+  sunsetMinute: 19, // 日の入り時刻 分
+  ageB: 37,
+  injuryA: 58, // 人身損傷程度(当事者A) 1=死亡, 2=負傷
+  injuryB: 59,
   roadSurface: 22, // 1=乾燥, 2=湿潤, 3=凍結, 4=積雪, 5=非舗装
   accidentType: 35, // 01=人対車両
   ageA: 36, // 75=75歳以上
@@ -140,6 +148,19 @@ function main() {
   const accidentsByMonth: number[] = Array(12).fill(0);
   const icySnowByMonth: number[] = Array(12).fill(0);
 
+  // 時間帯・日没・歩行者の集計(全国)
+  const monthly = Array.from({ length: 12 }, () => ({
+    accidents: 0,
+    dusk: 0, // 昼夜が「暮」(昼-暮 + 夜-暮)
+    nearSunset: 0, // 日没の前後60分以内
+    sunsetMinutesSum: 0, // 事故地点の日没時刻(0時からの分)の合計(平均を出すため)
+    pedAccidents: 0, // 人対車両
+    pedFatalAccidents: 0,
+  }));
+  const hourByMonth: number[][] = Array.from({ length: 12 }, () => Array(24).fill(0));
+  const pedByDayNight: Record<string, { accidents: number; fatalAccidents: number }> = {};
+  const pedByAge: Record<string, { accidents: number; deaths: number }> = {};
+
   for (const r of rows) {
     const code = municipalCode(r[COL.prefecture], r[COL.city]);
     if (!code) {
@@ -171,6 +192,39 @@ function main() {
     if (monthIdx >= 0 && monthIdx < 12) {
       accidentsByMonth[monthIdx]++;
       if (surface === "3" || surface === "4") icySnowByMonth[monthIdx]++;
+
+      const h = Number(r[COL.hour]);
+      const min = Number(r[COL.minute]) || 0;
+      const sunset = Number(r[COL.sunsetHour]) * 60 + (Number(r[COL.sunsetMinute]) || 0);
+      const m = monthly[monthIdx];
+      m.accidents++;
+      if (r[COL.dayNight] === "13" || r[COL.dayNight] === "21") m.dusk++;
+      if (Number.isFinite(h) && Number.isFinite(sunset)) {
+        if (Math.abs(h * 60 + min - sunset) <= 60) m.nearSunset++;
+        m.sunsetMinutesSum += sunset;
+        if (h >= 0 && h < 24) hourByMonth[monthIdx][h]++;
+      }
+      if (r[COL.accidentType] === "01") {
+        m.pedAccidents++;
+        if (isFatal) m.pedFatalAccidents++;
+      }
+    }
+
+    // 人対車両(歩行者が当事者の事故)の集計
+    if (r[COL.accidentType] === "01") {
+      const dn = r[COL.dayNight];
+      (pedByDayNight[dn] ??= { accidents: 0, fatalAccidents: 0 }).accidents++;
+      if (isFatal) pedByDayNight[dn].fatalAccidents++;
+
+      // 歩行者は当事者A・Bのどちらか(種別 61)。その人の年齢層と損傷程度を数える
+      const pedIsB = r[COL.partyTypeB] === "61";
+      const pedIsA = r[COL.partyTypeA] === "61";
+      if (pedIsA || pedIsB) {
+        const age = pedIsB ? r[COL.ageB] : r[COL.ageA];
+        const injury = pedIsB ? r[COL.injuryB] : r[COL.injuryA];
+        (pedByAge[age] ??= { accidents: 0, deaths: 0 }).accidents++;
+        if (injury === "1") pedByAge[age].deaths++;
+      }
     }
     if (isFatal) a.fatalAccidents++;
     a.deaths += Number(r[COL.deaths]) || 0;
@@ -212,6 +266,10 @@ function main() {
       },
       accidentsByMonth,
       icySnowByMonth,
+      monthly,
+      hourByMonth,
+      pedestrianByDayNight: pedByDayNight,
+      pedestrianByAge: pedByAge,
     })
   );
 

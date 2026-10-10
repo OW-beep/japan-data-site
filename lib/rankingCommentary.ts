@@ -147,6 +147,9 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
       "人口の少ない自治体では、事故が数件増減するだけで値が大きく動きます。順位の小さな差を、安全性の優劣と受け取らないようにしてください。",
     ],
     relatedArticles: [
+      "dusk-accident-analysis",
+      "pedestrian-accident-age-analysis",
+      "pedestrian-accident-municipal-analysis",
       "accident-daytime-population",
       "fatal-accident-rate-analysis",
       "bicycle-accident-analysis",

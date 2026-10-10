@@ -20,6 +20,9 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "pedestrian-accident-municipal-analysis", date: "2026-10-08", title: "歩行者が関わる事故の割合が高い街はどこ？", desc: "人身事故のうち歩行者の事故(人対車両)の割合を市区町村別に計算し、人口密度・高齢化率との関係を調べました。" },
+  { slug: "pedestrian-accident-age-analysis", date: "2026-10-08", title: "歩行者の事故、年齢で何が違う？", desc: "歩行者の事故を年齢層別に集計。事故に遭う人数と、亡くなる人の割合を比べました。" },
+  { slug: "dusk-accident-analysis", date: "2026-10-08", title: "日が短くなる秋、交通事故が増えるのは何時？", desc: "日没前後の事故の割合を月別に集計。夕暮れから夜の歩行者の事故が死亡事故になりやすいことも確かめました。" },
   { slug: "bicycle-accident-analysis", date: "2026-10-05", title: "自転車が関わる事故の割合が高い街はどこ？", desc: "人身事故のうち自転車が絡む割合を市区町村別に計算し、人口密度との関係を調べました。" },
   { slug: "fatal-accident-rate-analysis", date: "2026-10-05", title: "交通事故が多い街ほど、死亡事故になりにくい？", desc: "人身事故のうち死亡事故になる割合(致死率)を市区町村別に計算。人口密度・高齢化率との関係も。" },
   { slug: "accident-daytime-population", date: "2026-10-05", title: "交通事故が多い街は、昼間人口で割ると入れ替わる？", desc: "夜間人口あたりと昼間人口あたりの人身事故を比較。順位がどう入れ替わるかを独自の加工データで調べました。" },

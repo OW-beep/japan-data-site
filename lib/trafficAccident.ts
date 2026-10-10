@@ -73,6 +73,24 @@ export type NationalAccidentSummary = {
   >;
   accidentsByMonth: number[];
   icySnowByMonth: number[];
+  /** 月ごとの集計(1月=0番目)。薄暮・日没前後・歩行者の事故など */
+  monthly: {
+    accidents: number;
+    /** 昼夜が「暮」(昼-暮 + 夜-暮)の事故 */
+    dusk: number;
+    /** 日没の前後60分以内の事故 */
+    nearSunset: number;
+    /** 事故地点の日没時刻(0時からの分)の合計。件数で割ると平均 */
+    sunsetMinutesSum: number;
+    pedAccidents: number;
+    pedFatalAccidents: number;
+  }[];
+  /** 月(1月=0) × 時(0〜23)の人身事故件数 */
+  hourByMonth: number[][];
+  /** 人対車両の事故(昼夜コード別: 11=昼-明, 12=昼-昼, 13=昼-暮, 21=夜-暮, 22=夜-夜, 23=夜-明) */
+  pedestrianByDayNight: Record<string, { accidents: number; fatalAccidents: number }>;
+  /** 歩行者の年齢層別(01=0〜24歳, 25, 35, 45, 55, 65=65〜74歳, 75=75歳以上)。deaths は歩行者本人の死者 */
+  pedestrianByAge: Record<string, { accidents: number; deaths: number }>;
 };
 
 export const national = nationalRaw as NationalAccidentSummary;
