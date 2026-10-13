@@ -193,6 +193,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
       "人口の規模だけでなく、増減や年齢構成を合わせて見ると、自治体の姿がよく分かります。",
     ],
     relatedArticles: [
+      "population-change-2025",
       "million-cities",
       "near-million-cities",
       "designated-cities-comparison",
@@ -223,6 +224,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
       "率が低い大都市でも、高齢者の人数そのものは多くなります。介護・医療の需要は、率と人数の両方で見る必要があります。",
     ],
     relatedArticles: [
+      "elderly-population-change-2025",
       "aging-top50",
       "aging-gap",
       "density-aging",
@@ -489,6 +491,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
       "人口の少ない自治体では、少数の世帯の動きでも割合が変わります。",
     ],
     relatedArticles: [
+      "child-population-change-2025",
       "child-top50",
       "youngest-municipalities",
       "child-finance",

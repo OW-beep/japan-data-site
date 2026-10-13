@@ -20,6 +20,9 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "elderly-population-change-2025", date: "2026-10-10", title: "高齢者の人口が減り始めた市区町村はどこ？", desc: "令和7年国勢調査で、65歳以上の人口と高齢化率の2020年からの変化を自治体ごとに調べました。" },
+  { slug: "child-population-change-2025", date: "2026-10-10", title: "子ども(15歳未満)が増えた市区町村はどこ？", desc: "令和7年国勢調査で、15歳未満の人口の2020年からの変化を自治体ごとに調べました。" },
+  { slug: "population-change-2025", date: "2026-10-10", title: "令和7年国勢調査で人口が増えた市区町村はどこ？", desc: "2020年から2025年の人口増減を全国で比較。増加率の上位、都道府県別、政令指定都市の変化。" },
   { slug: "pedestrian-accident-municipal-analysis", date: "2026-10-08", title: "歩行者が関わる事故の割合が高い街はどこ？", desc: "人身事故のうち歩行者の事故(人対車両)の割合を市区町村別に計算し、人口密度・高齢化率との関係を調べました。" },
   { slug: "pedestrian-accident-age-analysis", date: "2026-10-08", title: "歩行者の事故、年齢で何が違う？", desc: "歩行者の事故を年齢層別に集計。事故に遭う人数と、亡くなる人の割合を比べました。" },
   { slug: "dusk-accident-analysis", date: "2026-10-08", title: "日が短くなる秋、交通事故が増えるのは何時？", desc: "日没前後の事故の割合を月別に集計。夕暮れから夜の歩行者の事故が死亡事故になりやすいことも確かめました。" },
