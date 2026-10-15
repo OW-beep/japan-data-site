@@ -4,6 +4,7 @@ import { getPrefectures } from "@/lib/getPrefecture";
 import { SITE_URL } from "@/lib/site";
 import { articleEntries } from "@/lib/articles";
 import { isCityIndexable } from "@/lib/indexPolicy";
+import { getAgriSlugs } from "@/lib/agriOutput";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
@@ -66,6 +67,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/community-center",
     "/ranking/large-cities",
     "/ranking/mid-cities",
+    "/ranking/agri",
+    ...getAgriSlugs().map((s) => `/ranking/agri/${s}`),
     "/ranking/smallest-cities",
     "/ranking/churn",
     "/ranking/traffic-accident-city",

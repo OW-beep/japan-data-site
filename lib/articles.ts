@@ -124,6 +124,7 @@ export type RankingEntry = {
 };
 
 export const rankingEntries: RankingEntry[] = [
+  { href: "/ranking/agri", date: "2026-10-15", title: "農業産出額 市町村ランキング(米・果実・畜産・令和6年)", emoji: "🌾" },
   { href: "/ranking/mid-cities", date: "2026-10-15", title: "人口30万人以上の都市ランキング", emoji: "🏙️" },
   { href: "/ranking/smallest-cities", date: "2026-10-15", title: "人口が少ない市ランキング", emoji: "🏘️" },
   { href: "/ranking/icy-road-accident", date: "2026-10-02", title: "凍結・積雪路面の事故ランキング", emoji: "❄️" },
