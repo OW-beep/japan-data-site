@@ -10,7 +10,7 @@ import { prefectureOf } from "@/lib/rankingAnalysis";
 export const metadata = {
   alternates: { canonical: "/articles/prefectural-capital-population" },
   title:
-    "県庁所在地が県内で一番大きい都市ではない県はどこ？県庁所在地の人口を全国で比較",
+    "県庁所在地が県内で一番大きくない県は？人口を全国で比較",
   description:
     "県庁所在地は、その県で最も人口が多い都市とは限りません。全国の県庁所在地の人口を、県内の最大都市や県全体に占める割合と比べ、「県庁所在地が最大都市ではない県」を国勢調査のデータから洗い出しました。",
 };

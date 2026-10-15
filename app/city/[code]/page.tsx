@@ -17,6 +17,9 @@ import CityRanking from "@/components/city/CityRanking";
 import NearbyCities from "@/components/city/NearbyCities";
 import CityCompare from "@/components/city/CityCompare";
 import RelatedRankings from "@/components/city/RelatedRankings";
+import CityNarrative from "@/components/city/CityNarrative";
+import { getCityInsight } from "@/lib/cityInsight";
+import { isCityIndexable, CITY_INDEX_MIN_POP } from "@/lib/indexPolicy";
 
 type Props = {
   params: Promise<{
@@ -39,18 +42,28 @@ export async function generateMetadata({
 
   if (!city) return {};
 
+  const ins = getCityInsight(code);
+  const pref0 = city.name.split(" ")[0];
+  const short0 = city.name.split(" ").slice(1).join(" ") || city.name;
+  const indexable = isCityIndexable(code);
+
+  // タイトルには検索されている語(人口・面積・財政力指数など)を入れる。
+  // 説明文には、その自治体の順位・増減など、そのページにしかない数字を入れる。
+  const title = ins
+    ? `${short0}(${pref0})の人口・面積・財政力指数【${ins.use2025 ? "2025年国勢調査" : "最新"}】`
+    : `${city.name}の人口・面積・人口密度`;
+  const description = ins
+    ? `${city.name}の人口は${ins.pop.toLocaleString()}人(2020年比${ins.popChangePct > 0 ? "+" : ""}${ins.popChangePct.toFixed(1)}%、全国${ins.popRank}位)。高齢化率${ins.elderlyRate.toFixed(1)}%、子ども割合${ins.childRate.toFixed(1)}%。面積・人口密度・財政力指数と全国順位を掲載。`
+    : `${city.name}の人口・面積・人口密度・出生率・高齢化率などを掲載しています。`;
+
   return {
-    title: `${city.name}の人口・面積・人口密度`,
-    description: `${city.name}の人口・面積・人口密度・出生率・高齢化率などを掲載しています。`,
+    title,
+    description,
     alternates: { canonical: `/city/${code}` },
-    // 審査期間中の一時対応:自治体ページはテンプレ生成の薄いコンテンツと
-    // 判断されやすいため、noindexにして分析記事・ランキングページを
-    // 評価対象の中心に見せる。follow: true でクロール導線とリンク評価は維持。
-    // 対応完了後(AdSense合格後など)は robots ブロックごと削除して再インデックスする。
-    robots: {
-      index: false,
-      follow: true,
-    },
+    // 段階的にindexする(lib/indexPolicy.ts)。対象は人口 ${CITY_INDEX_MIN_POP.toLocaleString()} 人以上の市・特別区。
+    // それ以外と政令指定都市の区は、薄いページと判断されないよう noindex のまま。
+    // follow: true でクロール導線とリンク評価は維持する。
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
   };
 }
 
@@ -149,6 +162,8 @@ export default async function Page({
       </h1>
 
       <CitySummary city={city} />
+
+      <CityNarrative code={city.code} />
 
       <CityStats city={city} />
 

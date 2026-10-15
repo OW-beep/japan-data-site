@@ -9,15 +9,17 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import CompareCTA from "../../../components/CompareCTA";
 
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalitiesPop } from "../../../lib/cityPopulation";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/population" },
-  title: "全国自治体 人口ランキング【最新版】",
+  // 「【最新版】」は、実際に最新(令和7年国勢調査)のデータでなければ名乗れない。
+  // 先頭に検索語(市区町村 人口ランキング)、続けて「いつの調査か」を示す。
+  title: "市区町村 人口ランキング【2025年国勢調査】全国TOP100",
   description:
-    "全国の市区町村の人口を多い順にランキング。政令指定都市・県庁所在地から町村まで、国勢調査に基づく人口データを比較できます。",
+    "令和7年国勢調査(確定値)に基づく、全国の市区町村の人口ランキング。上位100自治体を人口順に掲載し、2020年からの増減も確認できます。政令指定都市・県庁所在地から町村まで比較できます。",
 };
 
 export function generateMetadata() {
@@ -25,11 +27,11 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const ranking = getMunicipalities().sort(
-    (a, b) => b.population - a.population
-  );
+  const { rows, label, use2025 } = getMunicipalitiesPop();
+  const ranking = [...rows].sort((a, b) => b.population - a.population);
 
-  const top50 = ranking.slice(0, 50);
+  // 上位100自治体を表示(以前は50。順位表が長いほど検索意図に応える)
+  const top50 = ranking.slice(0, 100);
 
   const average =
     ranking.reduce((sum, c) => sum + c.population, 0) /
@@ -53,7 +55,7 @@ export default function Page() {
         全国自治体 人口ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={`${label}(総務省統計局)`} />
 
       <p
         style={{
@@ -71,7 +73,7 @@ export default function Page() {
       <MetricBox
         title="人口とは？"
         unit="人"
-        definition="国勢調査による人口です。住民基本台帳人口(役所への届出ベース)とは異なり、調査時点の実際の居住実態に基づいています。"
+        definition={`国勢調査による人口です(このページは${label})。住民基本台帳人口(役所への届出ベース)とは異なり、調査時点の実際の居住実態に基づいています。`}
         formula="人口 = 国勢調査人口"
         example={{
           name: top50[0].name,
@@ -101,6 +103,16 @@ export default function Page() {
         📊{" "}
         <Link prefetch={false} href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
           人口100万人以上の都市は全国に何市あるか、詳しい分析記事はこちら →
+        </Link>
+        <br />
+        📈{" "}
+        <Link prefetch={false} href="/articles/million-cities-population-change" style={{ color: "#2563eb", textDecoration: "underline" }}>
+          100万人都市の人口は2020年から増えた?減った? →
+        </Link>
+        <br />
+        🏙️{" "}
+        <Link prefetch={false} href="/ranking/mid-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+          人口30万人以上の都市ランキング →
         </Link>
         <br />
         🌆{" "}

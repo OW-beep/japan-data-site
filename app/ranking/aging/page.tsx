@@ -8,15 +8,15 @@ import AgingSummary from "../../../components/ranking/AgingSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getAgeRows, nationalRates } from "../../../lib/ageRates";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/aging" },
-  title: "高齢化率ランキング｜市町村別・全国自治体の高齢化率が高い順【最新版】",
+  title: "高齢化率ランキング【2025年国勢調査】市町村別TOP100",
   description:
-    "全国自治体の高齢化率(65歳以上人口の割合)をランキング形式で比較。地方と都市部の差、高齢化が進む自治体の特徴がわかります。",
+    "令和7年国勢調査(確定値)に基づく、全国の市区町村の高齢化率(65歳以上人口の割合)ランキング。上位100自治体を掲載し、2020年からの全国の変化も確認できます。",
 };
 
 export function generateMetadata() {
@@ -24,16 +24,14 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const ranking = getMunicipalities()
-    .filter((c) => c.elderlyPopulation && c.population)
-    .map((c) => ({
-      ...c,
-      rate:
-        (c.elderlyPopulation / c.population) * 100,
-    }))
+  const { rows, label, use2025 } = getAgeRows();
+  const nat = nationalRates(rows);
+  const ranking = rows
+    .map((c) => ({ ...c, rate: c.elderlyRate }))
     .sort((a, b) => b.rate - a.rate);
 
-  const top50 = ranking.slice(0, 50);
+  // 上位100自治体を表示(以前は50)
+  const top50 = ranking.slice(0, 100);
 
   const average =
     ranking.reduce(
@@ -59,7 +57,7 @@ export default function Page() {
         全国自治体 高齢化率ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={`${label}(総務省統計局)`} />
 
       <p
         style={{
@@ -70,6 +68,13 @@ export default function Page() {
       >
         全国自治体の高齢化率を比較しています。
         高齢化率は65歳以上人口が総人口に占める割合です。
+        {use2025 && (
+          <>
+            全自治体を合わせた全国の高齢化率は{nat.elderly.toFixed(1)}%で、2020年の
+            {nat.elderly2020.toFixed(1)}%から{(nat.elderly - nat.elderly2020).toFixed(1)}ポイントの
+            {nat.elderly >= nat.elderly2020 ? "上昇" : "低下"}です。
+          </>
+        )}
       </p>
 
       <MetricBox

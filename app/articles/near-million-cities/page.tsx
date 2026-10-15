@@ -1,31 +1,37 @@
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalitiesPop, getCitiesPopWithTokyo23, shortName } from "@/lib/cityPopulation";
+import ClusterLinks from "@/components/ClusterLinks";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
-export const metadata = {
-  alternates: { canonical: "/articles/near-million-cities" },
-  title: "人口90万人台・80万人台の都市一覧｜100万人に一番近いのは千葉市",
-  description:
-    "人口100万人に一番近いのは千葉市(97万4,951人)で、あと2万5千人足らず。90万人台は千葉市・世田谷区・北九州市の3都市、80万人台は堺市・浜松市などが該当します。100万人都市に迫る「準百万都市」をランキング形式で比較します。",
-};
+function getBands() {
+  const { rows, label, use2025 } = getMunicipalitiesPop();
+  const by = (min: number, max: number) =>
+    rows.filter((c) => c.population >= min && c.population < max).sort((x, y) => y.population - x.population);
+  // 100万人都市の数は、東京都特別区部を1都市として数える(100万人都市一覧の記事と同じ数え方)
+  const million = getCitiesPopWithTokyo23().rows.filter((c) => c.population >= 1_000_000).length;
+  return { label, use2025, million, band90: by(900_000, 1_000_000), band80: by(800_000, 900_000), band70: by(700_000, 800_000) };
+}
+
+export function generateMetadata() {
+  const { band90, band80, use2025 } = getBands();
+  const top = band90[0];
+  const gap = top ? 1_000_000 - top.population : 0;
+  const year = use2025 ? "2025年国勢調査版" : "最新版";
+  const names90 = band90.map((c) => shortName(c.name)).join("・");
+  const names80 = band80.map((c) => shortName(c.name)).join("・");
+  return {
+    alternates: { canonical: "/articles/near-million-cities" },
+    title: `人口90万人・80万人の都市一覧(${year})｜100万人に最も近いのは${top ? shortName(top.name) : ""}`,
+    description: `人口100万人に一番近いのは${top ? shortName(top.name) : ""}(${top ? top.population.toLocaleString() : ""}人)で、あと${gap.toLocaleString()}人。90万人台は${names90}、80万人台は${names80}。100万人都市に迫る「準百万都市」を人口順に比較します。`,
+  };
+}
 
 export default function Page() {
-  const all = getMunicipalities();
 
-  const band90 = all
-    .filter((c) => c.population >= 900000 && c.population < 1000000)
-    .sort((a, b) => b.population - a.population);
-
-  const band80 = all
-    .filter((c) => c.population >= 800000 && c.population < 900000)
-    .sort((a, b) => b.population - a.population);
-
-  const band70 = all
-    .filter((c) => c.population >= 700000 && c.population < 800000)
-    .sort((a, b) => b.population - a.population);
+  const { band90, band80, band70, million, use2025 } = getBands();
 
   const nearMillion = [...band90, ...band80, ...band70];
 
@@ -52,18 +58,18 @@ export default function Page() {
     },
     {
       q: "80万人・90万人というのはどれくらいの規模ですか？",
-      a: "人口80万人〜90万人台は、政令指定都市の中でも中堅〜上位クラスの規模にあたります。県庁所在地クラスの都市の多くがこの規模帯に含まれ、100万人都市(12自治体)に次ぐ、日本で2番目に大きな都市規模のグループと言えます。",
+      a: `人口80万人〜90万人台は、政令指定都市の中でも中堅〜上位クラスの規模にあたります。県庁所在地クラスの都市の多くがこの規模帯に含まれ、100万人都市(${million}自治体)に次ぐ、日本で2番目に大きな都市規模のグループと言えます。`,
     },
     {
       q: "これらの都市はいずれ100万人都市になりますか？",
-      a: "都市によって傾向は異なります。千葉市のように100万人まで数万人まで迫り、増加基調にある都市がある一方、日本全体が人口減少局面にあるため、多くの都市では100万人到達よりも、現状維持や微減で推移する可能性の方が高いとみられます。",
+      a: `都市によって傾向は異なります。${band90[0] ? shortName(band90[0].name) : "上位の都市"}のように100万人まで数万人まで迫り、増加基調にある都市がある一方、日本全体が人口減少局面にあるため、多くの都市では100万人到達よりも、現状維持や微減で推移する可能性の方が高いとみられます。`,
     },
   ];
 
   return (
     <ArticleLayout
       title="人口90万人・80万人の都市一覧｜100万人に迫る「準百万都市」"
-      summary={`人口100万人には届かないものの、90万人・80万人台という大規模な自治体が全国に${nearMillion.length}市あります。100万人都市(12自治体)に次ぐ規模のこれらの都市を、人口順の一覧・ランキングで紹介します。`}
+      summary={`人口100万人には届かないものの、90万人・80万人台という大規模な自治体が全国に${nearMillion.length}市あります。100万人都市(${million}自治体)に次ぐ規模のこれらの都市を、人口順の一覧・ランキングで紹介します。`}
       heroLabel="人口70万〜99万人の自治体数"
       heroValue={`${nearMillion.length}自治体`}
       rankingLink="/ranking/population"
@@ -137,13 +143,13 @@ export default function Page() {
         </table>
 
         <p style={{ marginTop: 12, fontSize: 14, color: "#6b7280" }}>
-          人口100万人以上の自治体は全国に12(
+          人口100万人以上の自治体は全国に{million}(
           <Link prefetch={false} href="/articles/million-cities" style={link}>
             100万人都市一覧はこちら
           </Link>
           )ある一方、90万〜70万人台にはさらに{nearMillion.length}
           の自治体が存在します。合わせると、人口70万人以上の
-          「大都市」は全国で{12 + nearMillion.length}自治体になります。
+          「大都市」は全国で{million + nearMillion.length}自治体になります。
         </p>
       </div>
 
@@ -227,6 +233,7 @@ export default function Page() {
 
         <CompareCTA />
       </div>
+      <ClusterLinks current="/articles/near-million-cities" />
     </ArticleLayout>
   );
 }

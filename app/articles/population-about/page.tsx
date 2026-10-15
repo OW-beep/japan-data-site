@@ -10,7 +10,7 @@ import { getMunicipalities } from "@/lib/municipalities";
 
 export const metadata = {
   alternates: { canonical: "/articles/population-about" },
-  title: "人口ランキングとは？",
+  title: "人口ランキングの見方｜国勢調査人口と住民基本台帳人口の違い",
   description:
     "人口ランキングの見方や集計方法、人口データから分かることを、実際の数字とともに解説します。",
 };

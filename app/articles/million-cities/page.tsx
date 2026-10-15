@@ -1,5 +1,5 @@
-import { getCities } from "@/lib/getCities";
-import { isDesignatedCityWard } from "@/lib/municipalities";
+import { getCitiesPopWithTokyo23, getMunicipalitiesPop, shortName, changePct } from "@/lib/cityPopulation";
+import ClusterLinks from "@/components/ClusterLinks";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
@@ -8,24 +8,50 @@ import { BOOKS } from "@/lib/amazonBooks";
 import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
-export const metadata = {
-  alternates: { canonical: "/articles/million-cities" },
-  title: "日本の100万人都市一覧｜人口100万人以上の都市は12市【人口順ランキング】",
-  description:
-    "日本で人口100万人を超える都市は12市。政令指定都市20市のうち実際に100万人を超えているのは半数程度です。東京都特別区部から仙台市まで、人口順にランキング形式で一覧比較できます。",
-};
+/** 100万人都市の一覧(令和7年国勢調査。取れていなければ令和2年に自動で戻る) */
+function getRanking() {
+  const { rows, label, use2025 } = getCitiesPopWithTokyo23();
+  const sorted = [...rows].sort((a, b) => b.population - a.population);
+  return {
+    label,
+    use2025,
+    ranking: sorted.filter((c) => c.population >= 1_000_000),
+    below: sorted.filter((c) => c.population < 1_000_000),
+  };
+}
+
+export function generateMetadata() {
+  const { ranking, below, use2025 } = getRanking();
+  const next = below[0];
+  const gap = next ? 1_000_000 - next.population : 0;
+  const year = use2025 ? "2025年国勢調査" : "最新";
+  return {
+    alternates: { canonical: "/articles/million-cities" },
+    // 先頭に検索語(100万人都市一覧)、続けて「いつの数字か」と「答えだけでは終わらない続き」を置く。
+    // 「12市」だけを書くと検索結果の画面で答えが完結してクリックされにくいため、
+    // 「あと○人で100万人」という続きが気になる要素を加えている。
+    title: `100万人都市一覧(${year}版)｜日本は${ranking.length}市・${shortName(next?.name ?? "")}はあと${gap.toLocaleString()}人`,
+    description: `人口100万人以上の都市は${ranking.length}市(${year}。東京23区は1市として計算)。人口順の一覧表に加え、100万人まであと${gap.toLocaleString()}人の${shortName(next?.name ?? "")}、2020年からの増減、政令指定都市でも100万人に届かない都市までまとめました。`,
+  };
+}
 
 export default function Page() {
   const designatedCityCount = 20; // 全国の政令指定都市数
 
-  // 「100万人都市」では東京都特別区部(23区の合計)を1つの都市として数える。
-  // getMunicipalities() は二重計上防止のため特別区部の集計行を除外しているので、
-  // ここでは getCities() から政令指定都市の区だけを除いて使う。
-  // (100万人以上の特別区は存在しないため、個々の区との重複は起きない)
-  const ranking = getCities()
-    .filter((c) => !isDesignatedCityWard(c.name))
-    .filter((c) => c.population >= 1000000)
-    .sort((a, b) => b.population - a.population);
+  // 「100万人都市」では東京都特別区部(23区の合計)を1つの都市として数え、
+  // 政令指定都市の区は除く。人口は令和7年国勢調査(取れていなければ令和2年)。
+  const { ranking, below, label, use2025 } = getRanking();
+  const all = getCitiesPopWithTokyo23().rows;
+  // 全国人口(政令市の区・特別区部の集計行を除いた自治体の合計)
+  const nationalTotal = getMunicipalitiesPop().rows.reduce((s, c) => s + c.population, 0);
+  const nationalLabel = `約${(nationalTotal / 10000).toLocaleString("ja-JP", { maximumFractionDigits: 0 })}万人`;
+  const chiba = below[0];
+  const chibaGap = 1_000_000 - chiba.population;
+  // 首都圏4都県(東京・神奈川・埼玉・千葉)の人口
+  const metroPopulation = getMunicipalitiesPop()
+    .rows.filter((c) => ["東京都", "神奈川県", "埼玉県", "千葉県"].includes(c.name.split(" ")[0]))
+    .reduce((s, c) => s + c.population, 0);
+  const biggest = ranking[0].name === "東京都 特別区部" ? ranking[1] : ranking[0];
 
   const total = ranking.reduce(
     (s, c) => s + c.population,
@@ -80,14 +106,14 @@ export default function Page() {
     },
     {
       q: "人口90万人・80万人の都市はどこですか？",
-      a: "千葉市(約97万人)・北九州市(約94万人)・堺市(約83万人)・浜松市(約79万人)などが該当します。100万人には届かないものの、政令指定都市クラスの規模を持つこれらの都市は「準百万都市」とも呼べる存在です。詳しくは人口90万人・80万人都市一覧の記事で紹介しています。",
+      a: `${below.filter((c) => c.population >= 700000).slice(0, 5).map((c) => `${shortName(c.name)}(約${Math.round(c.population / 10000)}万人)`).join("・")}などが該当します。100万人には届かないものの、政令指定都市クラスの規模を持つこれらの都市は「準百万都市」とも呼べる存在です。詳しくは人口90万人・80万人都市一覧の記事で紹介しています。`,
     },
   ];
 
   return (
     <ArticleLayout
-      title="日本の100万人都市一覧｜人口100万人以上の都市は12市"
-      summary="日本で人口100万人を超える都市は12市。政令指定都市20市のうち、実際に100万人を超えているのは半数程度にとどまります。東京都特別区部から仙台市まで、人口順に一覧で紹介します。"
+      title={`日本の100万人都市一覧｜人口100万人以上の都市は${ranking.length}市`}
+      summary={`日本で人口100万人を超える都市は${ranking.length}市(${label}、東京23区は1市として計算)。政令指定都市20市のうち、実際に100万人を超えているのは半数程度にとどまり、${shortName(chiba.name)}はあと${chibaGap.toLocaleString()}人です。人口順に一覧で紹介します。`}
       heroLabel="100万人超自治体数"
       heroValue={`${ranking.length}自治体`}
       rankingLink="/ranking/population"
@@ -154,6 +180,61 @@ export default function Page() {
       </div>
 
       <div style={box}>
+        <h2>100万人都市の人口は増えている？(2020年→2025年)</h2>
+
+        <p style={{ color: "#4b5563", lineHeight: 1.9 }}>
+          令和2年と令和7年の国勢調査を比べると、{ranking.length}都市のうち
+          {ranking.filter((c) => c.population > c.pop2020).length}
+          都市で人口が増え、{ranking.filter((c) => c.population < c.pop2020).length}
+          都市で減りました。増加が最も大きいのは
+          {shortName([...ranking].sort((a, b) => changePct(b) - changePct(a))[0].name)}
+          (+{changePct([...ranking].sort((a, b) => changePct(b) - changePct(a))[0]).toFixed(1)}%)、
+          減少が最も大きいのは
+          {shortName([...ranking].sort((a, b) => changePct(a) - changePct(b))[0].name)}
+          ({changePct([...ranking].sort((a, b) => changePct(a) - changePct(b))[0]).toFixed(1)}%)です。
+        </p>
+
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead>
+              <tr>
+                <th style={th}>順位</th>
+                <th style={th}>都市</th>
+                <th style={th}>2025年</th>
+                <th style={th}>2020年</th>
+                <th style={th}>増減率</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ranking.map((c, i) => (
+                <tr key={c.code}>
+                  <td style={td}>{i + 1}</td>
+                  <td style={td}>{c.name}</td>
+                  <td style={td}>{c.population.toLocaleString()}人</td>
+                  <td style={td}>{c.pop2020.toLocaleString()}人</td>
+                  <td style={td}>
+                    {changePct(c) > 0 ? "+" : ""}
+                    {changePct(c).toFixed(1)}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p style={{ marginTop: 12, fontSize: 14, color: "#6b7280" }}>
+          {use2025
+            ? "人口は令和7年国勢調査(確定値)、比較の2020年は令和2年国勢調査です。"
+            : "人口は令和2年国勢調査です。"}
+          詳しい分析は
+          <Link prefetch={false} href="/articles/million-cities-population-change" style={link}>
+            100万人都市の人口増減の記事
+          </Link>
+          で解説しています。
+        </p>
+      </div>
+
+      <div style={box}>
         <h2>特徴と分析</h2>
 
         <p>
@@ -162,8 +243,8 @@ export default function Page() {
           の自治体が該当し、これは全国1,741自治体のうち
           わずか0.1〜0.2%程度にすぎません。一方でこの
           {ranking.length}自治体だけで合計{total.toLocaleString()}
-          人、全国人口(約1億2,615万人)のおよそ
-          {((total / 126146099) * 100).toFixed(0)}
+          人、全国人口({nationalLabel})のおよそ
+          {((total / nationalTotal) * 100).toFixed(0)}
           %を占めており、極めて少数の自治体に人口が
           集中している実態が分かります。
         </p>
@@ -253,7 +334,7 @@ export default function Page() {
 
         <p>
           また、人口100万人に迫りながらも政令指定都市では
-          ない自治体として、東京都世田谷区(人口約94万人)が
+          ない自治体として、東京都世田谷区(人口約{Math.round((all.find((c) => c.name === "東京都 世田谷区")?.population ?? 0) / 10000)}万人)が
           挙げられます。世田谷区は特別区であるため政令指定都市の
           制度対象ではありませんが、人口規模だけで見れば
           多くの政令指定都市を上回っており、単純な制度上の
@@ -274,25 +355,23 @@ export default function Page() {
         <h2>もう少しで100万人に届かなかった都市</h2>
 
         <RankingBarChart
-          items={[
-            { name: "千葉県 千葉市", value: 974951, displayValue: "974,951人" },
-            { name: "東京都 世田谷区", value: 943664, displayValue: "943,664人" },
-            { name: "福岡県 北九州市", value: 939029, displayValue: "939,029人" },
-            { name: "大阪府 堺市", value: 826161, displayValue: "826,161人" },
-            { name: "静岡県 浜松市", value: 790718, displayValue: "790,718人" },
-            { name: "新潟県 新潟市", value: 789275, displayValue: "789,275人" },
-            { name: "熊本県 熊本市", value: 738865, displayValue: "738,865人" },
-            { name: "神奈川県 相模原市", value: 725493, displayValue: "725,493人" },
-          ]}
+          items={below
+            .filter((c) => c.population >= 700000)
+            .slice(0, 8)
+            .map((c) => ({
+              name: c.name,
+              value: c.population,
+              displayValue: `${c.population.toLocaleString()}人`,
+            }))}
           barColor="#6b7280"
         />
 
         <p style={{ marginTop: 16, color: "#4b5563" }}>
           「80万人都市」「90万人都市」と呼べる規模の都市も
-          全国に複数あります。千葉市は100万人まであと約2万5千人
+          全国に複数あります。{shortName(chiba.name)}は100万人まであと{chibaGap.toLocaleString()}人
           まで迫っており、政令指定都市の中でも人口増加が続けば
           将来的に100万人都市入りする可能性がある都市の
-          筆頭です。北九州市・堺市・浜松市・新潟市・熊本市・
+          筆頭です(2020年からの増加率は{changePct(chiba).toFixed(1)}%)。北九州市・堺市・浜松市・新潟市・熊本市・
           相模原市はいずれも政令指定都市でありながら、100万人
           には届いていません。90万人・80万人台の都市を
           まとめて比較したい方は、
@@ -314,6 +393,8 @@ export default function Page() {
           </p>
         ))}
       </div>
+
+      <ClusterLinks current="/articles/million-cities" />
 
       <JsonLd
         data={{
@@ -338,7 +419,7 @@ export default function Page() {
           人口100万人を突破する自治体が今後現れる
           可能性は低いと考えられます。むしろ、現在
           100万人をわずかに超えている自治体(仙台市・
-          千葉市など)が、今後の人口減少によって
+          広島市など)が、今後の人口減少によって
           100万人を割り込む可能性の方が高いとみられています。
           実際、堺市はすでに100万人を割り込んでおり、
           統計の取り方や年によって100万人前後を
@@ -368,9 +449,9 @@ export default function Page() {
           都市圏は「メガシティ」に準じる規模として
           扱われることが多く、世界には人口1,000万人を
           超える都市圏も数多く存在します。それと比べると、
-          日本最大の横浜市(約378万人)でも世界的には
+          日本最大の{shortName(biggest.name)}(約{Math.round(biggest.population / 10000)}万人)でも世界的には
           中堅規模にとどまり、東京都区部を含めた
-          首都圏全体(約3,691万人)で見て初めて、
+          首都圏全体(約{Math.round(metroPopulation / 10000).toLocaleString()}万人)で見て初めて、
           世界有数のメガシティ規模に達します。
           単独の自治体としての人口ランキングと、
           都市圏・経済圏としての規模は分けて

@@ -20,6 +20,8 @@ export type ArticleEntry = {
 };
 
 export const articleEntries: ArticleEntry[] = [
+  { slug: "million-cities-population-change", date: "2026-10-15", title: "100万人都市の人口は増えた?減った?(2020→2025)", desc: "令和7年国勢調査で、100万人以上の都市の人口増減を比較。千葉市が100万人に届くかも検証。" },
+  { slug: "city-population-tiers", date: "2026-10-15", title: "人口規模別の都市一覧(100万・50万・30万・10万人以上は何市?)", desc: "全国の市を人口規模で区切って数え、政令指定都市・中核市の人口要件も整理しました。" },
   { slug: "elderly-population-change-2025", date: "2026-10-10", title: "高齢者の人口が減り始めた市区町村はどこ？", desc: "令和7年国勢調査で、65歳以上の人口と高齢化率の2020年からの変化を自治体ごとに調べました。" },
   { slug: "child-population-change-2025", date: "2026-10-10", title: "子ども(15歳未満)が増えた市区町村はどこ？", desc: "令和7年国勢調査で、15歳未満の人口の2020年からの変化を自治体ごとに調べました。" },
   { slug: "population-change-2025", date: "2026-10-10", title: "令和7年国勢調査で人口が増えた市区町村はどこ？", desc: "2020年から2025年の人口増減を全国で比較。増加率の上位、都道府県別、政令指定都市の変化。" },
@@ -122,6 +124,8 @@ export type RankingEntry = {
 };
 
 export const rankingEntries: RankingEntry[] = [
+  { href: "/ranking/mid-cities", date: "2026-10-15", title: "人口30万人以上の都市ランキング", emoji: "🏙️" },
+  { href: "/ranking/smallest-cities", date: "2026-10-15", title: "人口が少ない市ランキング", emoji: "🏘️" },
   { href: "/ranking/icy-road-accident", date: "2026-10-02", title: "凍結・積雪路面の事故ランキング", emoji: "❄️" },
   { href: "/ranking/traffic-accident-city", date: "2026-10-02", title: "市区町村別 交通事故ランキング", emoji: "🚗" },
   { href: "/ranking/churn", date: "2026-10-01", title: "人口の入れ替わり率ランキング", emoji: "🔄" },

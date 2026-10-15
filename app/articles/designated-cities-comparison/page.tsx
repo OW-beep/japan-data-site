@@ -12,7 +12,7 @@ import type { City } from "@/lib/City";
 export const metadata = {
   alternates: { canonical: "/articles/designated-cities-comparison" },
   title:
-    "政令指定都市20市の人口ランキング｜面積・人口密度・高齢化率で比べる",
+    "政令指定都市 人口ランキング20市一覧｜面積・高齢化率も比較",
   description:
     "政令指定都市20市を人口の多い順に一覧比較。人口だけでなく、面積・人口密度・高齢化率で並べ替えると、同じ「政令指定都市」でも都市の姿がまったく違うことが分かります。人口100万人に届かない都市はどこかも解説します。",
 };

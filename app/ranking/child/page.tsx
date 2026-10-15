@@ -6,15 +6,15 @@ import { dataSources } from "../../../lib/dataSources";
 import ChildSummary from "../../../components/ranking/ChildSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getAgeRows, nationalRates } from "../../../lib/ageRates";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/child" },
-  title: "全国自治体 子ども人口割合ランキング",
+  title: "子ども人口割合ランキング【2025年国勢調査】子供が多い市町村TOP100",
   description:
-    "全国自治体の子ども人口割合(15歳未満人口の割合)をランキング形式で比較。子育て世代が多い自治体・少子高齢化が進む自治体がわかります。",
+    "令和7年国勢調査(確定値)に基づく、子ども(15歳未満)の割合が高い市区町村のランキング。子供が多い市町村の上位100自治体と、2020年からの全国の変化をまとめました。",
 };
 
 export function generateMetadata() {
@@ -22,20 +22,13 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const ranking = getMunicipalities()
-    .filter(
-      (c) =>
-        c.childPopulation != null &&
-        c.population > 0
-    )
-    .map((c) => ({
-      ...c,
-      rate:
-        (c.childPopulation / c.population) *
-        100,
-    }))
+  const { rows, label, use2025 } = getAgeRows();
+  const nat = nationalRates(rows);
+  // 上位100自治体を表示(以前は50)
+  const ranking = rows
+    .map((c) => ({ ...c, rate: c.childRate }))
     .sort((a, b) => b.rate - a.rate)
-    .slice(0, 50);
+    .slice(0, 100);
 
   return (
     <div
@@ -54,7 +47,15 @@ export default function Page() {
         👶 子ども人口割合ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={`${label}(総務省統計局)`} />
+
+      {use2025 && (
+        <p style={{ color: "#4b5563", lineHeight: 1.8 }}>
+          全自治体を合わせた全国の子ども(15歳未満)の割合は{nat.child.toFixed(1)}%で、2020年の
+          {nat.child2020.toFixed(1)}%から{Math.abs(nat.child - nat.child2020).toFixed(1)}ポイント
+          {nat.child >= nat.child2020 ? "上昇" : "低下"}しました。
+        </p>
+      )}
 
       <MetricBox
         title="指標定義"

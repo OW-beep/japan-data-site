@@ -1,4 +1,5 @@
 import { getMunicipalities } from "@/lib/municipalities";
+import { getAgeRows } from "@/lib/ageRates";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
@@ -8,13 +9,19 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "/articles/child-top50" },
-  title: "子ども人口割合が高い自治体TOP50｜子供が多い市町村ランキング",
+  title: "子供が多い市町村TOP50｜子ども人口割合ランキング【2025年国勢調査】",
   description:
     "15歳未満人口の割合が高い自治体トップ50を紹介。人数(絶対数)で見た場合のランキングもあわせて掲載し、子供が多い市町村を割合・人数の両方から分析します。",
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  // 令和7年国勢調査(取れていなければ令和2年)の年齢別人口で計算する
+  const ranking = getAgeRows().rows.map((c) => ({
+    ...c,
+    population: c.pop,
+    elderlyPopulation: c.elderly,
+    childPopulation: c.child,
+  }))
     .filter(
       (c) => c.childPopulation != null && c.population > 0
     )
@@ -52,7 +59,12 @@ export default function Page() {
 
   const kikuyo = ranking.find((c) => c.name.includes("菊陽町"));
 
-  const byCount = getMunicipalities()
+  const byCount = getAgeRows().rows.map((c) => ({
+    ...c,
+    population: c.pop,
+    elderlyPopulation: c.elderly,
+    childPopulation: c.child,
+  }))
     .filter((c) => c.childPopulation != null)
     .sort((a, b) => (b.childPopulation ?? 0) - (a.childPopulation ?? 0))
     .slice(0, 10);

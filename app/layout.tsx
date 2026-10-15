@@ -34,7 +34,9 @@ export const metadata: Metadata = {
 
   title: {
     default: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    // 以前は「| 全国自治体データランキング」(13文字)を全ページに付けていたため、
+    // 検索結果で日本語タイトルが途中で切れやすかった。短いブランド名にする。
+    template: "%s｜自治体データ",
   },
 
   description:

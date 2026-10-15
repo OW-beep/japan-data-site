@@ -15,7 +15,7 @@ import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/density" },
-  title: "全国自治体 人口密度ランキング",
+  title: "市区町村 人口密度ランキング｜密度が高い・低い自治体は？",
   description:
     "全国自治体の人口密度(1平方キロメートルあたりの人口)をランキング形式で比較。都市部の過密と地方の過疎の差がわかります。",
 };

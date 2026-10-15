@@ -13,6 +13,7 @@ import { getMunicipalities } from "./municipalities";
 import type { AnalysisRow, Direction } from "./rankingAnalysis";
 import { getAccidentByCode, getAllAccidentRows } from "./trafficAccident";
 import { getPopulationBasis } from "./population2025";
+import { getAgeRows } from "./ageRates";
 
 export type CommentaryConfig = {
   metricName: string;
@@ -171,7 +172,16 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 0,
     direction: "high",
     hideSizeAnalysis: true,
-    rows: () => build(() => true, (c) => c.population),
+    // 人口そのものを並べるランキングなので、令和7年国勢調査が揃っていればそちらを使う
+    // (ページ本体 /ranking/population と同じ基準にそろえる)
+    rows: () => {
+      const cities = getMunicipalities();
+      const basis = getPopulationBasis(cities.map((c) => c.code));
+      return cities.map((c) => {
+        const pop = basis.population(c.code, c.population);
+        return { name: c.name, population: pop, value: pop };
+      });
+    },
     facts: (rows) => {
       const total = rows.reduce((s, r) => s + r.value, 0);
       const sorted = [...rows].sort((a, b) => b.value - a.value);
@@ -194,6 +204,8 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     ],
     relatedArticles: [
       "population-change-2025",
+      "million-cities-population-change",
+      "city-population-tiers",
       "million-cities",
       "near-million-cities",
       "designated-cities-comparison",
@@ -202,6 +214,8 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     ],
     relatedRankings: [
       { href: "/ranking/large-cities", label: "人口50万人以上の都市ランキング" },
+      { href: "/ranking/mid-cities", label: "人口30万人以上の都市ランキング" },
+      { href: "/ranking/smallest-cities", label: "人口が少ない市ランキング" },
       { href: "/ranking/decrease", label: "人口が少ない自治体ランキング" },
       { href: "/ranking/decline", label: "社会増減率ランキング" },
     ],
@@ -213,12 +227,9 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 1,
     direction: "high",
     rows: () =>
-      build(
-        (c) => !!c.elderlyPopulation && !!c.population,
-        (c) => (c.elderlyPopulation / c.population) * 100
-      ),
+      getAgeRows().rows.map((r) => ({ name: r.name, population: r.pop, value: r.elderlyRate })),
     reading: [
-      "高齢化率は、総人口に占める65歳以上人口の割合です。令和2年国勢調査に基づきます。",
+      "高齢化率は、総人口に占める65歳以上人口の割合です。令和7年国勢調査(確定値)に基づきます。",
       "高齢化率が高いのは、高齢者が増えたからだけではありません。若い世代の進学・就職による転出や出生数の減少で、分母となる人口が小さくなることも大きく影響します。",
       "人口の少ない自治体では、数十人の増減でも割合が動きます。順位の小さな差に、大きな意味を持たせすぎないことが大切です。",
       "率が低い大都市でも、高齢者の人数そのものは多くなります。介護・医療の需要は、率と人数の両方で見る必要があります。",
@@ -481,12 +492,9 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 1,
     direction: "high",
     rows: () =>
-      build(
-        (c) => c.childPopulation != null && c.population > 0,
-        (c) => (c.childPopulation / c.population) * 100
-      ),
+      getAgeRows().rows.map((r) => ({ name: r.name, population: r.pop, value: r.childRate })),
     reading: [
-      "総人口に占める15歳未満(0〜14歳)人口の割合です。令和2年国勢調査に基づきます。",
+      "総人口に占める15歳未満(0〜14歳)人口の割合です。令和7年国勢調査(確定値)に基づきます。",
       "子どもの割合が高い理由は、出生が多いことと、子育て世帯が転入していることの両方があり得ます。数字だけでは、どちらが主因かは分かりません。",
       "人口の少ない自治体では、少数の世帯の動きでも割合が変わります。",
     ],

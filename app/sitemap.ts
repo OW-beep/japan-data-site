@@ -3,6 +3,7 @@ import cities from "@/data/cities.json";
 import { getPrefectures } from "@/lib/getPrefecture";
 import { SITE_URL } from "@/lib/site";
 import { articleEntries } from "@/lib/articles";
+import { isCityIndexable } from "@/lib/indexPolicy";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
@@ -64,6 +65,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/recycling-rate",
     "/ranking/community-center",
     "/ranking/large-cities",
+    "/ranking/mid-cities",
+    "/ranking/smallest-cities",
     "/ranking/churn",
     "/ranking/traffic-accident-city",
     "/ranking/icy-road-accident",
@@ -79,12 +82,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/reports",
   ];
 
-  // /city と /prefecture は審査期間中 noindex にしているため、
-  // sitemap からも一時的に除外する(cities.json / getPrefectures は
-  // 現在未使用だが、noindex解除時にすぐ復元できるよう import は残す)。
-  const cityPages: MetadataRoute.Sitemap = [];
+  // /prefecture は引き続き noindex のため sitemap から除外(getPrefectures は復元用に import を残す)。
+  // index対象の自治体ページだけを載せる(lib/indexPolicy.ts。人口10万人以上の市・特別区)。
+  // noindex のページを sitemap に載せると、Search Console に「除外」エラーが並ぶため。
+  const cityPages: MetadataRoute.Sitemap = (cities as { code: string }[])
+    .filter((c) => isCityIndexable(c.code))
+    .map((c) => ({
+      url: `${baseUrl}/city/${c.code}`,
+      lastModified: new Date("2026-10-15T00:00:00+09:00"),
+    }));
   const prefecturePages: MetadataRoute.Sitemap = [];
-  void cities;
   void getPrefectures;
 
   // 記事は lib/articles.ts を単一の情報源にする。

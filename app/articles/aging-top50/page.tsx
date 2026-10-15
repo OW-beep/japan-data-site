@@ -1,4 +1,5 @@
 import { getMunicipalities } from "@/lib/municipalities";
+import { getAgeRows } from "@/lib/ageRates";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
@@ -7,13 +8,19 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "/articles/aging-top50" },
-  title: "高齢化率が高い自治体TOP50",
+  title: "高齢化率が高い自治体TOP50【2025年国勢調査】",
   description:
     "高齢化率(65歳以上人口の割合)が高い自治体トップ50を紹介。地方の高齢化が進む地域の特徴を解説します。",
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  // 令和7年国勢調査(取れていなければ令和2年)の年齢別人口で計算する
+  const ranking = getAgeRows().rows.map((c) => ({
+    ...c,
+    population: c.pop,
+    elderlyPopulation: c.elderly,
+    childPopulation: c.child,
+  }))
     .filter((c) => c.elderlyPopulation && c.population)
     .map((c) => ({
       ...c,
