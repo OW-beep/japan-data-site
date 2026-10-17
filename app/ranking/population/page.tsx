@@ -10,6 +10,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import CompareCTA from "../../../components/CompareCTA";
 
 import { getMunicipalitiesPop } from "../../../lib/cityPopulation";
+import { isReleased } from "../../../lib/release";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -104,16 +105,20 @@ export default function Page() {
         <Link prefetch={false} href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
           人口100万人以上の都市は全国に何市あるか、詳しい分析記事はこちら →
         </Link>
+        {isReleased("/articles/million-cities-population-change") && (
+          <>
         <br />
         📈{" "}
         <Link prefetch={false} href="/articles/million-cities-population-change" style={{ color: "#2563eb", textDecoration: "underline" }}>
           100万人都市の人口は2020年から増えた?減った? →
         </Link>
         <br />
-        🏙️{" "}
+        {isReleased("/ranking/mid-cities") && <>🏙️{" "}
         <Link prefetch={false} href="/ranking/mid-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
           人口30万人以上の都市ランキング →
-        </Link>
+        </Link></>}
+          </>
+        )}
         <br />
         🌆{" "}
         <Link prefetch={false} href="/ranking/large-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>

@@ -33,6 +33,9 @@ export default function Page() {
     .filter((x) => x.hits.length > 0)
     .sort((a, b) => b.c.population - a.c.population);
 
+  // 検索されているのは「動物の名前がつく市」。町村を除いた「市」だけの一覧も出す
+  const withAnimalShi = withAnimal.filter((x) => x.name.endsWith("市"));
+
   const byLength = [...cities]
     .map((c) => ({ c, name: cityName(c.name) }))
     .sort((a, b) => b.name.length - a.name.length);
@@ -83,6 +86,16 @@ export default function Page() {
           話ばかりになりがちですが、たまには少し違う切り口も。
           全国1,740市区町村の「名前」そのものを1文字ずつ調べて
           みたところ、いくつか面白い発見がありました。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>動物の名前がつく市は{withAnimalShi.length}市</h2>
+        <p>
+          生き物を表す漢字が名前に入っている「市」を、人口の多い順に並べました(町村は次の項目に含まれます)。
+        </p>
+        <p style={{ lineHeight: 2 }}>
+          {withAnimalShi.map((x) => `${x.name}(${x.hits.join("・")})`).join("、")}
         </p>
       </div>
 

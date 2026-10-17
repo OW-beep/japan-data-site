@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { isReleased } from "@/lib/release";
 
 import AdSense from "@/components/AdSense";
 import DataAsOf from "@/components/DataAsOf";
@@ -35,6 +37,8 @@ function kind(c: CityWithPop): string {
 }
 
 export default function MidCitiesPage() {
+  // 予約公開(lib/release.ts)。日付が来るまでは 404
+  if (!isReleased("/ranking/mid-cities")) notFound();
   const { list, label, use2025 } = getRows();
   const designated = list.filter((c) => isDesignatedCity(c.name));
   const others = list.filter((c) => !isDesignatedCity(c.name));

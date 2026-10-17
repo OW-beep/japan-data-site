@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { isReleased, releaseDate } from "@/lib/release";
 
 import ArticleLayout from "@/components/ArticleLayout";
 import ClusterLinks from "@/components/ClusterLinks";
@@ -9,7 +11,7 @@ import { getMunicipalitiesPop, getCitiesPopWithTokyo23, isShi, shortName } from 
 const TIERS = [
   { min: 1_000_000, label: "100万人以上", href: "/articles/million-cities" },
   { min: 500_000, label: "50万人以上", href: "/ranking/large-cities" },
-  { min: 300_000, label: "30万人以上", href: "/ranking/mid-cities" },
+  { min: 300_000, label: "30万人以上", href: isReleased("/ranking/mid-cities") ? "/ranking/mid-cities" : undefined },
   { min: 200_000, label: "20万人以上", href: undefined },
   { min: 100_000, label: "10万人以上", href: undefined },
   { min: 50_000, label: "5万人以上", href: undefined },
@@ -36,6 +38,8 @@ export function generateMetadata() {
 }
 
 export default function Page() {
+  // 予約公開(lib/release.ts)。日付が来るまでは 404
+  if (!isReleased("/articles/city-population-tiers")) notFound();
   const { shi, counts, tokyo23, median, label, use2025 } = getData();
   const c = (min: number) => counts.find((x) => x.min === min)!.shi;
   const under50k = shi.length - c(50_000).length;
@@ -63,10 +67,10 @@ export default function Page() {
       summary={`全国${shi.length}市を人口で区切って数えました。100万人以上${c(1_000_000).length}市、50万人以上${c(500_000).length}市、30万人以上${c(300_000).length}市、10万人以上${c(100_000).length}市。市の約${((under50k / shi.length) * 100).toFixed(0)}%は人口5万人未満です。`}
       heroLabel="人口10万人以上の市"
       heroValue={`${c(100_000).length}市`}
-      rankingLink="/ranking/mid-cities"
+      rankingLink={isReleased("/ranking/mid-cities") ? "/ranking/mid-cities" : "/ranking/large-cities"}
       path="/articles/city-population-tiers"
       tags={["population"]}
-      publishedAt="2026-10-15"
+      publishedAt={releaseDate("/articles/city-population-tiers", "2026-10-15")}
       dataNote={`${label}(総務省統計局)。「市」のみ集計し、東京都特別区は含めていません。`}
       top3={[
         { rank: 1, name: "人口100万人以上", value: `${c(1_000_000).length}市` },
@@ -161,11 +165,15 @@ export default function Page() {
           {use2025 ? "令和7年国勢調査" : "国勢調査"}で見ると、市の人口の中央値は約{(median / 10000).toFixed(1)}万人、
           全{shi.length}市のうち人口5万人未満は{under50k}市です。要件を知ったうえで数字を見ると、
           「市」という名前から連想する規模と実際の人口にはかなり幅があることが分かります。
-          人口が最も少ない側は
-          <Link prefetch={false} href="/ranking/smallest-cities" style={link}>
-            人口が少ない市ランキング
-          </Link>
-          で確認できます。
+          {isReleased("/ranking/smallest-cities") && (
+            <>
+              人口が最も少ない側は
+              <Link prefetch={false} href="/ranking/smallest-cities" style={link}>
+                人口が少ない市ランキング
+              </Link>
+              で確認できます。
+            </>
+          )}
         </p>
       </div>
 

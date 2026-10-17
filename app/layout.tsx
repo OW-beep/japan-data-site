@@ -17,14 +17,16 @@ import { SITE_URL, SITE_NAME, ADSENSE_CLIENT_ID } from "@/lib/site";
  */
 const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  // 太さは本文(400)と見出し(700)の2つだけ。以前は500も読み込んでいた(和文フォントは1太さごとのデータが大きい)。
+  // 500を指定している箇所は、ブラウザが近い太さ(400)で表示する。
+  weight: ["400", "700"],
   variable: "--font-noto-sans-jp",
   display: "swap",
 });
 
 const workSans = Work_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "600"],
   variable: "--font-work-sans",
   display: "swap",
 });

@@ -11,7 +11,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { articleEntries } from "../lib/articles";
+import { ALL_ARTICLE_ENTRIES as articleEntries } from "../lib/articles";
 
 const strict = process.argv.includes("--strict");
 const articlesDir = path.join(process.cwd(), "app", "articles");

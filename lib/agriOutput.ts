@@ -9,6 +9,7 @@
  *  - 合計・割合は「数値が公表されている市町村」だけで計算している。
  */
 import raw from "@/data/agri-output-r6.json";
+import { isReleased } from "@/lib/release";
 
 export type AgriRow = { code: string; pref: string; city: string; v: number | null; rn: number; rp: number };
 export type AgriItem = {
@@ -42,20 +43,16 @@ export const AGRI_GROUPS: { title: string; slugs: string[] }[] = [
  * 公開する品目(段階公開)。ふるさと納税の需要期(10〜12月)に間に合わせるため、
  * 返礼品で人気の高い品目から先に出す。残りの品目はデータだけ持っておき、
  * ここに slug を足して再デプロイすれば公開される(一覧・サイトマップ・個別ページが連動)。
- * 公開していない slug は 404、サイトマップにも載らない。
+ * 公開日は lib/release.ts で品目ごとに予約している(日付が来るまでは 404、サイトマップにも載らない)。
  */
 export const AGRI_PUBLISHED: string[] = [
-  "total", // 総合(入口)
-  "rice", // 米
-  "mikan", // みかん
-  "apple", // りんご
-  "strawberry", // いちご
-  "grape", // ぶどう
-  "peach", // もも
-  "beef", // 肉用牛
-  "pork", // 豚
-  "egg", // 鶏卵
+  "total", "rice", "apple", "mikan", "strawberry", "grape", "peach", "beef", "pork", "egg",
+  "vegetables", "tomato", "cabbage", "onion", "negi", "cucumber",
+  "fruits", "pear", "milk", "broiler", "sweetpotato", "potato", "tea", "flowers",
 ];
+
+/** その品目を今公開してよいか。日付は lib/release.ts の "/ranking/agri/<slug>" */
+const agriReleased = (slug: string) => AGRI_PUBLISHED.includes(slug) && isReleased(`/ranking/agri/${slug}`);
 
 /**
  * 楽天市場の商品検索に使う語(slug → 商品名)。総合(total)は特定の商品がないので載せない。
@@ -75,11 +72,11 @@ export const AGRI_RAKUTEN_PRODUCT: Record<string, string> = {
 
 /** 公開している slug だけ */
 export function getAgriSlugs(): string[] {
-  return AGRI_PUBLISHED.filter((s) => s in data.items);
+  return AGRI_PUBLISHED.filter((s) => s in data.items && agriReleased(s));
 }
 
 export function getAgriItem(slug: string): AgriItem | null {
-  return AGRI_PUBLISHED.includes(slug) ? (data.items[slug] ?? null) : null;
+  return agriReleased(slug) ? (data.items[slug] ?? null) : null;
 }
 
 /** 1,000万円 → 億円(小数1桁) */

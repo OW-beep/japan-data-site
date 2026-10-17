@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/site";
 import { articleEntries } from "@/lib/articles";
 import { isCityIndexable } from "@/lib/indexPolicy";
 import { getAgriSlugs } from "@/lib/agriOutput";
+import { isReleased } from "@/lib/release";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_URL;
@@ -106,7 +107,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   return [
-    ...staticPages.map((p) => ({
+    ...staticPages
+      .filter((p) => isReleased(p)) // 予約公開の日付が来ていないページは載せない
+      .map((p) => ({
       url: `${baseUrl}${p}`,
       lastModified: new Date(),
     })),

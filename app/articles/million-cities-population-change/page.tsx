@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { isReleased, releaseDate } from "@/lib/release";
 
 import ArticleLayout from "@/components/ArticleLayout";
 import ClusterLinks from "@/components/ClusterLinks";
@@ -37,6 +39,8 @@ export function generateMetadata() {
 const sign = (n: number) => (n > 0 ? "+" : "");
 
 export default function Page() {
+  // 予約公開(lib/release.ts)。日付が来るまでは 404
+  if (!isReleased("/articles/million-cities-population-change")) notFound();
   const { million, below, byRate, inc, dec, label, use2025 } = getData();
   const n = million.length;
   const top = byRate[0];
@@ -82,7 +86,7 @@ export default function Page() {
       rankingLink="/ranking/large-cities"
       path="/articles/million-cities-population-change"
       tags={["population"]}
-      publishedAt="2026-10-15"
+      publishedAt={releaseDate("/articles/million-cities-population-change", "2026-10-15")}
       dataNote={`${label}(総務省統計局)と令和2年国勢調査の比較。東京都特別区部(23区の合計)は1都市として数えています。`}
       top3={byRate.slice(0, 3).map((c, i) => ({
         rank: i + 1,

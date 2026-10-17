@@ -2,10 +2,11 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { getCities } from "@/lib/getCities";
+// 全自治体データ(約2.7MB)ではなく、名前・コード・人口だけの軽量版を使う(scripts/build_city_search_index.py)
+import index from "@/data/city-search-index.json";
 
 export default function SearchBox({ initialQuery = "" }: { initialQuery?: string }) {
-  const cities = useMemo(() => getCities(), []);
+  const cities = useMemo(() => index.map((x) => ({ code: x.c, name: x.n, population: x.p })), []);
 
   const [keyword, setKeyword] = useState(initialQuery);
 

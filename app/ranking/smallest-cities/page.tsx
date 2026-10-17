@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { isReleased } from "@/lib/release";
 
 import AdSense from "@/components/AdSense";
 import DataAsOf from "@/components/DataAsOf";
@@ -29,6 +31,8 @@ export function generateMetadata(): Metadata {
 }
 
 export default function SmallestCitiesPage() {
+  // 予約公開(lib/release.ts)。日付が来るまでは 404
+  if (!isReleased("/ranking/smallest-cities")) notFound();
   const { shi, sorted, label, use2025 } = getRows();
   const top = sorted.slice(0, LIMIT);
   const under50k = shi.filter((c) => c.population < 50_000).length;
@@ -63,9 +67,13 @@ export default function SmallestCitiesPage() {
         人口5万人未満は{under50k}市で、「市=人口5万人以上」という通説とは異なる実態が見えてきます。
         町村も含めた順位は
         <Link prefetch={false} href="/ranking/decrease" style={a}>人口が少ない自治体ランキング</Link>、
-        大きい側の一覧は
-        <Link prefetch={false} href="/ranking/mid-cities" style={a}>人口30万人以上の都市ランキング</Link>
-        をご覧ください。
+        {isReleased("/ranking/mid-cities") && (
+          <>
+            大きい側の一覧は
+            <Link prefetch={false} href="/ranking/mid-cities" style={a}>人口30万人以上の都市ランキング</Link>
+            をご覧ください。
+          </>
+        )}
       </p>
 
       <AdSense />

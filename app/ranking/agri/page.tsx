@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { notFound } from "next/navigation";
+import { isReleased } from "@/lib/release";
 
 import AdSense from "@/components/AdSense";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -14,8 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default function AgriHubPage() {
-  const total = getAgriItem("total")!;
-  const t1 = total.top[0];
+  // 予約公開(lib/release.ts)。日付が来るまでは 404
+  if (!isReleased("/ranking/agri")) notFound();
+  const total = getAgriItem("total");
+  const t1 = total?.top[0];
   return (
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "28px 24px" }}>
       <Breadcrumbs items={[{ name: "ランキング", href: "/ranking" }, { name: "農業産出額" }]} />
@@ -24,12 +28,17 @@ export default function AgriHubPage() {
       <DataAsOf text="農林水産省「市町村別農業産出額(推計)」令和6年(2026年9月訂正反映)" />
 
       <p style={{ lineHeight: 1.9, color: "#374151" }}>
-        農林水産省が公表している市町村別農業産出額(推計)から、品目別に産出額が多い市町村を並べました。令和6年の農業産出額の総合1位は
-        <strong>
-          {t1.city}({t1.pref})
-          {t1.v != null ? `の${oku(t1.v)}億円` : ""}
-        </strong>
-        です。ただし、これは都道府県の産出額を作付面積や飼養頭数などで市町村に割り振った<strong>推計</strong>で、市町村ごとの価格や
+        農林水産省が公表している市町村別農業産出額(推計)から、品目別に産出額が多い市町村を並べました。{t1 && (
+          <>
+            令和6年の農業産出額の総合1位は
+            <strong>
+              {t1.city}({t1.pref})
+              {t1.v != null ? `の${oku(t1.v)}億円` : ""}
+            </strong>
+            です。
+          </>
+        )}
+        ただし、これは都道府県の産出額を作付面積や飼養頭数などで市町村に割り振った<strong>推計</strong>で、市町村ごとの価格や
         単収の違いは反映されません。実際の販売額や収穫量とは一致しない点に注意してください。
       </p>
 

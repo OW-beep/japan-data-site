@@ -18,6 +18,7 @@ import NearbyCities from "@/components/city/NearbyCities";
 import CityCompare from "@/components/city/CityCompare";
 import RelatedRankings from "@/components/city/RelatedRankings";
 import CityNarrative from "@/components/city/CityNarrative";
+import CityStrengths from "@/components/city/CityStrengths";
 import { getCityInsight } from "@/lib/cityInsight";
 import { isCityIndexable, CITY_INDEX_MIN_POP } from "@/lib/indexPolicy";
 
@@ -27,10 +28,17 @@ type Props = {
   }>;
 };
 
+/**
+ * ビルドで先に作るのは、index対象のページ(人口10万人以上・アフィ入り。lib/indexPolicy.ts)だけ。
+ * それ以外のページ(noindexの小さな自治体・政令市の区)は、最初にアクセスされたときに作って
+ * キャッシュする(dynamicParams の既定どおり)。ビルド時間を短くするための設定。
+ */
 export async function generateStaticParams() {
-  return getCities().map((city) => ({
-    code: city.code,
-  }));
+  return getCities()
+    .filter((city) => isCityIndexable(city.code))
+    .map((city) => ({
+      code: city.code,
+    }));
 }
 
 export async function generateMetadata({
@@ -60,7 +68,7 @@ export async function generateMetadata({
     title,
     description,
     alternates: { canonical: `/city/${code}` },
-    // 段階的にindexする(lib/indexPolicy.ts)。対象は人口 ${CITY_INDEX_MIN_POP.toLocaleString()} 人以上の市・特別区。
+    // 段階的にindexする(lib/indexPolicy.ts)。対象は人口 ${CITY_INDEX_MIN_POP.toLocaleString()} 人以上の市・特別区と、アフィリエイトを載せているページ。
     // それ以外と政令指定都市の区は、薄いページと判断されないよう noindex のまま。
     // follow: true でクロール導線とリンク評価は維持する。
     robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
@@ -164,6 +172,8 @@ export default async function Page({
       <CitySummary city={city} />
 
       <CityNarrative code={city.code} />
+
+      <CityStrengths code={city.code} />
 
       <CityStats city={city} />
 

@@ -12,6 +12,8 @@
  *
  * date は記事の publishedAt と同じ日付(YYYY-MM-DD)にする。
  */
+import { isReleased, releaseDate } from "./release";
+
 export type ArticleEntry = {
   slug: string;
   date: string;
@@ -19,7 +21,11 @@ export type ArticleEntry = {
   desc: string;
 };
 
-export const articleEntries: ArticleEntry[] = [
+/** 予約公開(lib/release.ts)の判定を入れる前の、登録済みの全記事。公開チェックなどの内部用 */
+export const ALL_ARTICLE_ENTRIES: ArticleEntry[] = [
+  { slug: "agri-output-per-capita", date: "2026-10-16", title: "人口あたりの農業産出額が多い市町村(令和6年)", desc: "農業産出額を人口で割って比べると、規模の大きい産地とは違う顔ぶれになります。人口5,000人以上の市町村と、市だけのランキング。" },
+  { slug: "agri-top-municipalities", date: "2026-10-16", title: "農業産出額が多い市町村の稼ぎ方(畜産型・野菜型・米型)", desc: "農業産出額の上位20市町村について、米・野菜・果実・花き・畜産のどれで稼いでいるかの内訳を比べました。" },
+  { slug: "agri-prefecture-top", date: "2026-10-16", title: "農業産出額が最も多い市町村、47都道府県の一覧", desc: "都道府県ごとに、農業産出額(令和6年・推計)が最も多い市町村と上位3位を一覧にしました。" },
   { slug: "million-cities-population-change", date: "2026-10-15", title: "100万人都市の人口は増えた?減った?(2020→2025)", desc: "令和7年国勢調査で、100万人以上の都市の人口増減を比較。千葉市が100万人に届くかも検証。" },
   { slug: "city-population-tiers", date: "2026-10-15", title: "人口規模別の都市一覧(100万・50万・30万・10万人以上は何市?)", desc: "全国の市を人口規模で区切って数え、政令指定都市・中核市の人口要件も整理しました。" },
   { slug: "elderly-population-change-2025", date: "2026-10-10", title: "高齢者の人口が減り始めた市区町村はどこ？", desc: "令和7年国勢調査で、65歳以上の人口と高齢化率の2020年からの変化を自治体ごとに調べました。" },
@@ -115,6 +121,12 @@ export const articleEntries: ArticleEntry[] = [
   { slug: "birth-rate", date: "2026-02-06", title: "出生率ランキング", desc: "出生率が高い自治体ランキングです。" },
 ];
 
+/** 公開済みの記事だけ(予約日が来ていないものは除く)。公開日は予約日に置き換える */
+export const articleEntries: ArticleEntry[] = ALL_ARTICLE_ENTRIES.filter((a) => isReleased(`/articles/${a.slug}`)).map((a) => ({
+  ...a,
+  date: releaseDate(`/articles/${a.slug}`, a.date),
+}));
+
 /** ランキングページの公開日(新着セクション用。追加したら先頭に1行足す) */
 export type RankingEntry = {
   href: string;
@@ -123,7 +135,7 @@ export type RankingEntry = {
   emoji: string;
 };
 
-export const rankingEntries: RankingEntry[] = [
+const ALL_RANKING_ENTRIES: RankingEntry[] = [
   { href: "/ranking/agri", date: "2026-10-15", title: "農業産出額 市町村ランキング(米・果実・畜産・令和6年)", emoji: "🌾" },
   { href: "/ranking/mid-cities", date: "2026-10-15", title: "人口30万人以上の都市ランキング", emoji: "🏙️" },
   { href: "/ranking/smallest-cities", date: "2026-10-15", title: "人口が少ない市ランキング", emoji: "🏘️" },
@@ -137,6 +149,12 @@ export const rankingEntries: RankingEntry[] = [
   { href: "/ranking/capital-elevation", date: "2026-09-13", title: "県庁所在地 標高ランキング", emoji: "⛰️" },
   { href: "/ranking/furusato-nozei", date: "2026-09-13", title: "ふるさと納税受入額ランキング", emoji: "🎁" },
 ];
+
+/** 公開済みのランキングだけ */
+export const rankingEntries: RankingEntry[] = ALL_RANKING_ENTRIES.filter((r) => isReleased(r.href)).map((r) => ({
+  ...r,
+  date: releaseDate(r.href, r.date),
+}));
 
 export type FeedItem = {
   href: string;

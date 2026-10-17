@@ -1,5 +1,6 @@
 import { getCitiesPopWithTokyo23, getMunicipalitiesPop, shortName, changePct } from "@/lib/cityPopulation";
 import ClusterLinks from "@/components/ClusterLinks";
+import { isReleased } from "@/lib/release";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
@@ -30,8 +31,10 @@ export function generateMetadata() {
     // 先頭に検索語(100万人都市一覧)、続けて「いつの数字か」と「答えだけでは終わらない続き」を置く。
     // 「12市」だけを書くと検索結果の画面で答えが完結してクリックされにくいため、
     // 「あと○人で100万人」という続きが気になる要素を加えている。
-    title: `100万人都市一覧(${year}版)｜日本は${ranking.length}市・${shortName(next?.name ?? "")}はあと${gap.toLocaleString()}人`,
-    description: `人口100万人以上の都市は${ranking.length}市(${year}。東京23区は1市として計算)。人口順の一覧表に加え、100万人まであと${gap.toLocaleString()}人の${shortName(next?.name ?? "")}、2020年からの増減、政令指定都市でも100万人に届かない都市までまとめました。`,
+    // 検索で実際に使われている語(「人口100万人以上の都市」「100万人都市」)を、前半に両方入れる。
+    // 続けて「いつの数字か」と、答えを見ただけでは分からない続き(あと○人)を置く。
+    title: `人口100万人以上の都市は${ranking.length}市${use2025 ? "【2025年】" : ""}100万人都市一覧｜${shortName(next?.name ?? "")}はあと${gap.toLocaleString()}人`,
+    description: `100万人都市(百万都市)は日本に${ranking.length}市(${year}。東京23区は1市として計算)。人口順の一覧表に加え、100万人まであと${gap.toLocaleString()}人の${shortName(next?.name ?? "")}、2020年からの増減、政令指定都市でも100万人に届かない都市までまとめました。`,
   };
 }
 
@@ -226,11 +229,15 @@ export default function Page() {
           {use2025
             ? "人口は令和7年国勢調査(確定値)、比較の2020年は令和2年国勢調査です。"
             : "人口は令和2年国勢調査です。"}
+          {isReleased("/articles/million-cities-population-change") && (
+            <>
           詳しい分析は
           <Link prefetch={false} href="/articles/million-cities-population-change" style={link}>
             100万人都市の人口増減の記事
           </Link>
           で解説しています。
+            </>
+          )}
         </p>
       </div>
 

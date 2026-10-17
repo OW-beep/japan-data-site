@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { isReleased } from "@/lib/release";
 
 /**
  * 「都市の人口規模」関連ページの相互リンク集(トピッククラスター)。
@@ -23,7 +24,8 @@ const ITEMS: { href: string; label: string; note: string }[] = [
 ];
 
 export default function ClusterLinks({ current }: { current?: string }) {
-  const items = ITEMS.filter((i) => i.href !== current);
+  // 予約公開(lib/release.ts)で、まだ公開していないページへはリンクしない
+  const items = ITEMS.filter((i) => i.href !== current && isReleased(i.href));
   return (
     <nav
       aria-label="都市の人口規模に関する関連ページ"

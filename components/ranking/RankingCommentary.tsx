@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { COMMENTARY } from "@/lib/rankingCommentary";
 import { articleEntries } from "@/lib/articles";
+import { isReleased } from "@/lib/release";
 import {
   bandStats,
   bigCityStats,
@@ -193,7 +194,7 @@ export default function RankingCommentary({ slug }: { slug: string }) {
                 <span style={{ color: "#6b7280" }}> — {a.desc}</span>
               </li>
             ))}
-            {cfg.relatedRankings.map((r) => (
+            {cfg.relatedRankings.filter((r) => isReleased(r.href)).map((r) => (
               <li key={r.href}>
                 <Link prefetch={false} href={r.href} style={link}>
                   {r.label}
