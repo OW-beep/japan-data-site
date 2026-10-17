@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import SmallestPopulationSummary from "../../../components/ranking/SmallestPopulationSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/decrease" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter((c) => c.population > 0)
     .sort((a, b) => a.population - b.population)
     .slice(0, 50);
@@ -27,7 +27,7 @@ export default function Page() {
         📉 人口が少ない自治体ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="令和7年国勢調査(確定値、総務省統計局)" />
 
       <MetricBox
         title="指標定義"

@@ -1,4 +1,4 @@
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalities2025 } from "@/lib/city2025"; // 人口・年齢は令和7年国勢調査(確定値)
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
@@ -14,7 +14,7 @@ export const metadata = {
 };
 
 export default function Page() {
-  const municipalities = getMunicipalities();
+  const municipalities = getMunicipalities2025();
 
   const totalNationalPopulation = municipalities.reduce(
     (s, c) => s + c.population,

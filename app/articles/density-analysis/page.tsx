@@ -1,4 +1,4 @@
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalities2025 } from "@/lib/city2025"; // 人口・年齢は令和7年国勢調査(確定値)
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
@@ -15,7 +15,7 @@ export const metadata = {
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter((c) => c.populationDensity != null)
     .sort(
       (a, b) => (b.populationDensity ?? 0) - (a.populationDensity ?? 0)
@@ -37,10 +37,10 @@ export default function Page() {
       (bottom10[0].populationDensity ?? 1)
   );
 
-  const funabashi = getMunicipalities().find((c) =>
+  const funabashi = getMunicipalities2025().find((c) =>
     c.name.includes("船橋市")
   );
-  const ichikawa = getMunicipalities().find((c) =>
+  const ichikawa = getMunicipalities2025().find((c) =>
     c.name.includes("市川市")
   );
 

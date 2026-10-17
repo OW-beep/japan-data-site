@@ -1,20 +1,13 @@
 import Link from "next/link";
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalities2025 } from "@/lib/city2025"; // 人口・年齢は令和7年国勢調査(確定値)
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import BookRecommendation from "@/components/BookRecommendation";
 import { BOOKS } from "@/lib/amazonBooks";
 import JsonLd from "@/components/JsonLd";
 
-export const metadata = {
-  alternates: { canonical: "/articles/population-concentration" },
-  title: "県内一極集中度ランキング｜高知市は県人口の48%、水戸市はわずか9%",
-  description:
-    "都道府県ごとに「最大都市に人口がどれだけ集中しているか」を独自集計。高知県は県人口の48%が高知市に集中する一方、茨城県は県庁所在地の水戸市でもわずか9%という対照的な結果になりました。",
-};
-
-export default function Page() {
-  const municipalities = getMunicipalities().filter(
+function compute() {
+  const municipalities = getMunicipalities2025().filter(
     (c) => c.population >= 3000
   );
 
@@ -64,14 +57,36 @@ export default function Page() {
     0
   );
 
+  // 「最大都市」が特別区(東京都)になる東京都は、区が1つずつ集計されるため割合が小さく出る。比較から外した最低位も用意する
+  const lowestEx = [...sorted].reverse().find((c) => c.pref !== "東京都")!;
+  return { municipalities, totalPopulation, prefGroups, concentration, sorted, top10, bottom5, avgShare, gtokyo, gtokyoTotal, lowestEx };
+}
+
+export function generateMetadata() {
+  const { top10, lowestEx } = compute();
+  const first = top10[0];
+  const t = `県内一極集中度ランキング｜${first.pref}は${first.topCityName}が県人口の${first.share.toFixed(0)}%、${lowestEx.pref}は最大都市でも${lowestEx.share.toFixed(0)}%`;
+  return {
+    alternates: { canonical: "/articles/population-concentration" },
+    title: t,
+    description: `都道府県ごとに「最大都市に人口がどれだけ集中しているか」を独自集計(令和7年国勢調査)。最も集中しているのは${first.pref}(${first.topCityName}・${first.share.toFixed(1)}%)、東京都を除いて最も分散しているのは${lowestEx.pref}(最大の${lowestEx.topCityName}でも${lowestEx.share.toFixed(1)}%)でした。`,
+  };
+}
+
+export default function Page() {
+  const { municipalities, totalPopulation, top10, sorted, bottom5, avgShare, gtokyoTotal, prefGroups, concentration, lowestEx } = compute();
+  const first = top10[0], second = top10[1], third = top10[2];
+  const tokyo = concentration.find((c) => c.pref === "東京都");
+  const others = bottom5.filter((c) => c.pref !== "東京都" && c.pref !== lowestEx.pref).map((c) => c.pref);
+
   const faq = [
     {
       q: "都道府県の中で、最大都市への人口集中度が最も高いのはどこですか？",
-      a: `高知県です。県内人口の${top10[0].share.toFixed(1)}%が${top10[0].topCityName}に集中しています。県内に${top10[0].cityCount}の市町村がある中、1つの市に半数近くの人口が集まっている計算です。`,
+      a: `${first.pref}です。県内人口の${first.share.toFixed(1)}%が${first.topCityName}に集中しています。県内に${first.cityCount}の市町村がある中、1つの市に${first.share >= 50 ? "半数を超える" : "半数近くの"}人口が集まっている計算です。続いて${second.pref}(${second.topCityName}・${second.share.toFixed(1)}%)、${third.pref}(${third.topCityName}・${third.share.toFixed(1)}%)の順です。`,
     },
     {
       q: "逆に、最大都市への集中度が最も低いのはどこですか？",
-      a: `茨城県です。県庁所在地である水戸市でも、県内人口に占める割合は${bottom5[bottom5.length - 1].share.toFixed(1)}%にとどまります。県内に大きな人口の受け皿となる都市が複数あり、特定の市に集中しない分散型の構造になっています。`,
+      a: `東京都を除くと${lowestEx.pref}です。県内で人口が最大の${lowestEx.topCityName}でも、県内人口に占める割合は${lowestEx.share.toFixed(1)}%にとどまります。県内に大きな人口の受け皿となる都市が複数あり、特定の市に集中しない分散型の構造になっています。東京都は、特別区が1区ずつ別の自治体として集計されるため、最大の${tokyo?.topCityName ?? "区"}でも${tokyo?.share.toFixed(1) ?? ""}%と、数字の上では最も低く出ます。`,
     },
     {
       q: "都道府県の集中度には、どんな傾向がありますか？",
@@ -81,8 +96,8 @@ export default function Page() {
 
   return (
     <ArticleLayout
-      title="県内一極集中度ランキング：高知市は県人口の48%、水戸市はわずか9%"
-      summary={`都道府県ごとに「最大都市に人口がどれだけ集中しているか」を独自に集計しました。最も集中度が高いのは高知県で、県人口の${top10[0].share.toFixed(1)}%が高知市に集まっています。一方、茨城県は県庁所在地の水戸市でも${bottom5[bottom5.length - 1].share.toFixed(1)}%にとどまり、県内に人口の受け皿となる都市が分散しています。`}
+      title={`県内一極集中度ランキング：${first.topCityName}は県人口の${first.share.toFixed(0)}%、${lowestEx.topCityName}はわずか${lowestEx.share.toFixed(0)}%`}
+      summary={`都道府県ごとに「最大都市に人口がどれだけ集中しているか」を独自に集計しました。最も集中度が高いのは${first.pref}で、県人口の${first.share.toFixed(1)}%が${first.topCityName}に集まっています。一方、東京都を除くと${lowestEx.pref}は最大の${lowestEx.topCityName}でも${lowestEx.share.toFixed(1)}%にとどまり、県内に人口の受け皿となる都市が分散しています。`}
       heroLabel="県内一極集中度 全国1位"
       heroValue={`${top10[0].pref} ${top10[0].share.toFixed(1)}%`}
       rankingLink="/ranking/population"
@@ -119,21 +134,14 @@ export default function Page() {
         />
 
         <p style={{ marginTop: 16, color: "#4b5563" }}>
-          1位は高知県で、県人口の{top10[0].share.toFixed(1)}
-          %が高知市に集中しています。2位の香川県(高松市
-          {top10[1].share.toFixed(1)}%)、3位の大分県(大分市
-          {top10[2].share.toFixed(1)}%)と続き、四国・九州の
-          県が上位を占めます。これらの県に共通するのは、
-          県庁所在地以外に人口10万人を超えるような
-          対抗馬となる都市がなく、県内の商業・行政機能が
-          1つの都市にほぼ一極集中している点です。興味深いのは
-          東京都も{
-            top10.find((c) => c.pref === "東京都")?.share.toFixed(1)
-          }
-          %で全国4位に入ることです。「日本で最も人口が
-          多い都道府県」であると同時に、「都内で見ても
-          特別区部への一極集中が進んでいる」という、
-          二重の集中構造を持っています。
+          1位は{first.pref}で、県人口の{first.share.toFixed(1)}
+          %が{first.topCityName}に集中しています。2位の{second.pref}({second.topCityName}
+          {second.share.toFixed(1)}%)、3位の{third.pref}({third.topCityName}
+          {third.share.toFixed(1)}%)と続きます。上位の県は、最大都市以外に
+          これに並ぶ規模の都市が少なく、県内の商業・行政機能が1つの都市に
+          集まりやすい構造です。東京都は、特別区が1区ずつ別の自治体として
+          集計されるため、最大の{tokyo?.topCityName}でも{tokyo?.share.toFixed(1)}%と、
+          数字の上では最も低く出ます(23区全体では都人口の大半を占めます)。
         </p>
       </div>
 
@@ -150,16 +158,10 @@ export default function Page() {
         />
 
         <p style={{ marginTop: 16, color: "#4b5563" }}>
-          最も集中度が低いのは茨城県で、県庁所在地の水戸市
-          でも県人口の{bottom5[bottom5.length - 1].share.toFixed(1)}
-          %しかありません。千葉県・埼玉県・三重県・静岡県も
-          同様に低い水準です。これらの県は、県庁所在地
-          以外にも人口規模の大きな都市が複数存在し、県内の
-          人口が特定の1市に集まらず分散しています。特に
-          千葉県・埼玉県は首都圏のベッドタウンとして
-          複数の都市が同時に発展してきた歴史があり、
-          「県庁所在地が一番人口が多いとは限らない」という
-          珍しい現象も起きています。
+          東京都を除くと、最も集中度が低いのは{lowestEx.pref}で、最大の{lowestEx.topCityName}
+          でも県人口の{lowestEx.share.toFixed(1)}%しかありません。{others.join("・")}も
+          同様に低い水準です。これらの県は、最大都市以外にも人口規模の大きな都市が
+          複数あり、県内の人口が特定の1市に集まらず分散しています。
         </p>
       </div>
 
@@ -239,9 +241,9 @@ export default function Page() {
           都道府県別の集中度を独自に算出したことで、
           「東京一極集中」という全国レベルの話とは別に、
           「県内一極集中」というもう1つの集中構造が
-          見えてきました。高知県・香川県・大分県のように
-          1つの都市に人口が集まる県もあれば、茨城県・
-          千葉県・埼玉県のように複数の都市に分散している
+          見えてきました。{first.pref}・{second.pref}・{third.pref}のように
+          1つの都市に人口が集まる県もあれば、{lowestEx.pref}・
+          {others.slice(0, 2).join("・")}のように複数の都市に分散している
           県もあります。人口ランキングを都道府県単位で
           見るときは、全国順位だけでなく、その県の中で
           どれだけ人口が偏っているかにも目を向けると、

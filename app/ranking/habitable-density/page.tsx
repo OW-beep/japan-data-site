@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import HabitableDensitySummary from "../../../components/ranking/HabitableDensitySummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -22,7 +22,7 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter(
       (c) =>
         c.habitableArea != null &&
@@ -46,7 +46,7 @@ export default function Page() {
         🏔️ 可住地人口密度ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="人口:令和7年国勢調査(確定値)、可住地面積:SSDSE-A-2026年版" />
 
       <a
         href="/articles/habitable-density"

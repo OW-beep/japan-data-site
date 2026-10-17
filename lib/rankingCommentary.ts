@@ -14,6 +14,7 @@ import type { AnalysisRow, Direction } from "./rankingAnalysis";
 import { getAccidentByCode, getAllAccidentRows } from "./trafficAccident";
 import { getPopulationBasis } from "./population2025";
 import { getAgeRows } from "./ageRates";
+import { getMunicipalities2025 } from "./city2025";
 
 export type CommentaryConfig = {
   metricName: string;
@@ -49,6 +50,14 @@ function build(
     .filter((r) => Number.isFinite(r.value));
 }
 
+/** 令和7年国勢調査にそろえた版(lib/city2025.ts)。ページ本体が2025基準のランキング用 */
+function build25(filter: (c: C) => boolean, value: (c: C) => number): AnalysisRow[] {
+  return getMunicipalities2025()
+    .filter(filter)
+    .map((c) => ({ name: c.name, population: c.population, value: value(c) }))
+    .filter((r) => Number.isFinite(r.value));
+}
+
 const pct = (n: number, d: number) => (d > 0 ? (n / d) * 100 : 0);
 
 export const COMMENTARY: Record<string, CommentaryConfig> = {
@@ -76,7 +85,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 1,
     direction: "high",
     rows: () =>
-      build(
+      build25(
         (c) => c.population > 0 && c.elderlyPopulation != null && c.childPopulation != null,
         (c) => (c.elderlyPopulation / c.population) * 100 - (c.childPopulation / c.population) * 100
       ),
@@ -91,7 +100,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     direction: "high",
     scope: "人口50万人以上の市区",
     hideSizeAnalysis: true,
-    rows: () => build((c) => c.population >= 500_000, (c) => c.population),
+    rows: () => build25((c) => c.population >= 500_000, (c) => c.population),
     reading: [],
     relatedArticles: [],
     relatedRankings: [],
@@ -256,7 +265,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 0,
     direction: "high",
     rows: () =>
-      build(
+      build25(
         (c) => c.populationDensity != null,
         (c) => c.populationDensity ?? 0
       ),
@@ -311,7 +320,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 1,
     direction: "low",
     rows: () =>
-      build(
+      build25(
         (c) => c.populationDensity != null && c.populationDensity > 0,
         (c) => c.populationDensity ?? 0
       ),
@@ -363,7 +372,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 0,
     direction: "high",
     rows: () =>
-      build(
+      build25(
         (c) => c.habitableArea != null && c.habitableArea > 0 && c.population > 0,
         (c) => c.population / ((c.habitableArea ?? 1) / 100)
       ),

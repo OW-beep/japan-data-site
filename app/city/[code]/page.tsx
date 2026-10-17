@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { getCity } from "@/lib/getCity";
 import { getCities } from "@/lib/getCities";
+import { getCities2025, getCity2025 } from "@/lib/city2025";
 import { getCityRanking } from "@/lib/getCityRanking";
 
 import Breadcrumb from "@/components/Breadcrumb";
@@ -80,7 +81,8 @@ export default async function Page({
 }: Props) {
   const { code } = await params;
 
-  const city = getCity(code);
+  // ページに出す数字は令和7年国勢調査にそろえた版(lib/city2025.ts)。取れていなければ令和2年のまま
+  const city = getCity2025(code) ?? getCity(code);
 
   if (!city) {
     notFound();
@@ -88,7 +90,7 @@ export default async function Page({
 
   const ranking = getCityRanking(code);
 
-  const allCities = getCities();
+  const allCities = getCities2025();
 
   const pref = city.name.split(" ")[0];
   const cityName = city.name.replace(pref, "").trim();

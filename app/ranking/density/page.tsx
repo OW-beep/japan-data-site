@@ -9,7 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import CompareCTA from "../../../components/CompareCTA";
 import JsonLd from "../../../components/JsonLd";
 import Link from "next/link";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -25,7 +25,7 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const fullRanking = getMunicipalities()
+  const fullRanking = getMunicipalities2025()
     .filter((c) => c.populationDensity != null)
     .sort(
       (a, b) =>
@@ -78,7 +78,7 @@ export default function Page() {
         🏙️ 人口密度ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="人口:令和7年国勢調査(確定値)、面積:国土地理院" />
 
       <a
         href="/articles/density-analysis"

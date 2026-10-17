@@ -90,8 +90,10 @@ export default function CityNarrative({ code }: { code: string }) {
       </p>
 
       <p style={{ fontSize: 14, color: "#6b7280", lineHeight: 1.9 }}>
-        人口・年齢の数字は{i.label}、順位は政令指定都市の区を除く市区町村での比較です。このページ下部の
-        表の一部は令和2年国勢調査などに基づきます。ほかの自治体との比較は
+        {i.use2025
+          ? "このページの人口・人口密度・子ども人口・高齢化率は令和7年国勢調査(確定値)、出生率・財政力指数などはそれぞれ別の統計に基づくため、公表年が異なります。"
+          : "人口・年齢の数字は令和2年国勢調査に基づきます。"}
+        順位は、政令指定都市の区を除く市区町村での比較です。ほかの自治体との比較は
         <Link prefetch={false} href="/compare" style={{ color: "#2563eb" }}> 比較ツール</Link>、
         全国の順位は
         <Link prefetch={false} href="/ranking/population" style={{ color: "#2563eb" }}> 人口</Link>・

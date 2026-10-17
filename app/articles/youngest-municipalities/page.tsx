@@ -1,4 +1,4 @@
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalities2025 } from "@/lib/city2025"; // 人口・年齢は令和7年国勢調査(確定値)
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import BookRecommendation from "@/components/BookRecommendation";
@@ -13,7 +13,7 @@ export const metadata = {
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter((c) => c.elderlyPopulation && c.population)
     .map((c) => ({
       ...c,

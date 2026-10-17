@@ -4,7 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalities2025 } from "@/lib/city2025"; // 人口・年齢は令和7年国勢調査(確定値)
 import { median } from "@/lib/rankingAnalysis";
 
 export const metadata = {
@@ -43,7 +43,7 @@ const BANDS = [
 
 export default function Page() {
   const rows: Row[] = [];
-  for (const c of getMunicipalities()) {
+  for (const c of getMunicipalities2025()) {
     const short = c.name.split(" ").pop() ?? c.name;
     const kind = kindOf(short);
     if (!kind) continue;

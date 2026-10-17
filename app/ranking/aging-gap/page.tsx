@@ -7,7 +7,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import { dataSources } from "../../../lib/dataSources";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -22,7 +22,7 @@ export function generateMetadata() {
 }
 
 export default function AgingGapRankingPage() {
-  const all = getMunicipalities()
+  const all = getMunicipalities2025()
     .filter(
       (c) =>
         c.population > 0 && c.elderlyPopulation != null && c.childPopulation != null
@@ -78,7 +78,7 @@ export default function AgingGapRankingPage() {
         ⚖️ 少子高齢化ギャップランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="令和7年国勢調査(確定値、総務省統計局)" />
 
       <Link prefetch={false} href="/articles/aging-gap" style={linkBtn}>
         📖 分析記事「少子高齢化ギャップ分析」もあわせて読む →
@@ -87,7 +87,7 @@ export default function AgingGapRankingPage() {
       <MetricBox
         title="指標定義"
         unit="ポイント"
-        definition="高齢化率(65歳以上人口÷総人口)から、子ども人口割合(0〜14歳人口÷総人口)を引いた値です。令和2年国勢調査に基づきます。"
+        definition="高齢化率(65歳以上人口÷総人口)から、子ども人口割合(0〜14歳人口÷総人口)を引いた値です。令和7年国勢調査(確定値)に基づきます。"
         formula="高齢化率(%) − 子ども人口割合(%)"
         example={{ name: first.name, value: `${first.gap.toFixed(1)}ポイント` }}
         source={dataSources["aging-gap"]}

@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import SparseDensitySummary from "../../../components/ranking/SparseDensitySummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -22,7 +22,7 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter((c) => c.populationDensity != null && c.populationDensity > 0)
     .sort(
       (a, b) => (a.populationDensity ?? 0) - (b.populationDensity ?? 0)
@@ -35,7 +35,7 @@ export default function Page() {
         🏞️ 人口密度が低い自治体ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="人口:令和7年国勢調査(確定値)、面積:国土地理院" />
 
       <MetricBox
         title="指標定義"

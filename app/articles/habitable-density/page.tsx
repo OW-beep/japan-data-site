@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getMunicipalities } from "@/lib/municipalities";
+import { getMunicipalities2025 } from "@/lib/city2025"; // 人口・年齢は令和7年国勢調査(確定値)
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 
@@ -11,7 +11,7 @@ export const metadata = {
 };
 
 export default function Page() {
-  const base = getMunicipalities()
+  const base = getMunicipalities2025()
     .filter(
       (c) =>
         c.habitableArea != null &&
@@ -36,6 +36,9 @@ export default function Page() {
   byRaw.forEach((c, i) => ((c as any).rawRank = i + 1));
   byHabitable.forEach((c, i) => ((c as any).habRank = i + 1));
 
+  // 尾鷲市の順位(本文の説明に使う。数字は計算値で、固定の文字ではない)
+  const owase = base.find((c) => c.name.endsWith("尾鷲市")) as (typeof base)[number] & { rawRank?: number; habRank?: number } | undefined;
+
   const jumps = base
     .map((c: any) => ({ ...c, jump: c.rawRank - c.habRank }))
     .sort((a, b) => b.jump - a.jump)
@@ -52,7 +55,7 @@ export default function Page() {
   return (
     <ArticleLayout
       title="可住地人口密度ランキング分析：三重県尾鷲市は「見た目より混んでいる」自治体だった"
-      summary={`日本の国土は7割近くが山地です。総面積ではなく「住める土地(可住地)」だけで人口密度を計算し直すと、単純な人口密度ランキングでは目立たない自治体の姿が見えてきます。三重県尾鷲市は通常の人口密度ランキングで1148位ですが、可住地ベースでは520位まで順位が跳ね上がります。`}
+      summary={`日本の国土は7割近くが山地です。総面積ではなく「住める土地(可住地)」だけで人口密度を計算し直すと、単純な人口密度ランキングでは目立たない自治体の姿が見えてきます。三重県尾鷲市は通常の人口密度ランキングで${owase?.rawRank}位ですが、可住地ベースでは${owase?.habRank}位まで順位が跳ね上がります。`}
       heroLabel="可住地人口密度で最も順位が上がった自治体"
       heroValue={`${jumps[0].name}`}
       path="/articles/habitable-density"

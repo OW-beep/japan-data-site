@@ -23,21 +23,21 @@ const SSDSE_BASE: Pick<DataSource, "sourceName" | "scope"> = {
 export const dataSources: Record<string, DataSource> = {
   population: {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査)",
+    dataYear: "2025年(令和7年国勢調査・確定値)",
     notes:
       "国勢調査は5年に1度の実施のため、直近1〜2年の急激な人口変動は反映されていない場合があります。",
   },
   aging: {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査)",
+    dataYear: "2025年(令和7年国勢調査・確定値)",
   },
   child: {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査)",
+    dataYear: "2025年(令和7年国勢調査・確定値)",
   },
   density: {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査、面積は国土地理院データ)",
+    dataYear: "2025年(令和7年国勢調査・確定値、面積は国土地理院データ)",
   },
   household: {
     ...SSDSE_BASE,
@@ -129,7 +129,7 @@ export const dataSources: Record<string, DataSource> = {
   "large-cities": {
     sourceName:
       "e-Stat「社会・人口統計体系」市区町村データ(統計表ID: 0000020201)、面積は国土地理院「全国都道府県市区町村別面積調」",
-    dataYear: "人口・高齢化率は2020年(令和2年国勢調査)、面積は令和8年",
+    dataYear: "人口・高齢化率は2025年(令和7年国勢調査・確定値)、面積は令和8年",
     scope: "人口50万人以上の市・特別区",
     excluded: "政令指定都市の区、東京都特別区部(23区の合計値)は順位から除外",
     notes:
@@ -154,7 +154,7 @@ export const dataSources: Record<string, DataSource> = {
   },
   decrease: {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査)",
+    dataYear: "2025年(令和7年国勢調査・確定値)",
     notes:
       "人口ランキングと同じ国勢調査人口を、少ない順に並べ替えたものです。",
   },
@@ -174,7 +174,7 @@ export const dataSources: Record<string, DataSource> = {
   "habitable-density": {
     sourceName:
       "統計センター SSDSE-市区町村(SSDSE-A)。可住地面積は国土地理院データに基づく",
-    dataYear: "SSDSE-A-2026年版収録データ",
+    dataYear: "人口は2025年(令和7年国勢調査・確定値)、可住地面積はSSDSE-A-2026年版収録データ",
     scope: "全国1,741市区町村",
     notes:
       "総面積から山地・湖沼等を除いた「可住地面積」を分母に用いており、単純な人口密度(総面積ベース)とは数値が異なります。",
@@ -227,7 +227,7 @@ export const dataSources: Record<string, DataSource> = {
   },
   "sparse-density": {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査)",
+    dataYear: "2025年(令和7年国勢調査・確定値、面積は国土地理院データ)",
     notes: "人口密度ランキングと同じデータを、低い順に並べ替えたものです。",
   },
   unemployment: {
@@ -251,13 +251,13 @@ export const dataSources: Record<string, DataSource> = {
   },
   "aging-gap": {
     ...SSDSE_BASE,
-    dataYear: "2020年(令和2年国勢調査)",
+    dataYear: "2025年(令和7年国勢調査・確定値)",
     notes: "高齢化率から子ども人口割合(0〜14歳)を引いた値です。",
   },
   "traffic-accident-city": {
     sourceName:
       "警察庁「交通事故統計情報のオープンデータ」(令和7年 本票)、人口は総務省統計局「国勢調査」",
-    dataYear: "事故件数は令和7年(2025年)、人口は令和2年国勢調査",
+    dataYear: "事故件数は令和7年(2025年)、人口は令和7年国勢調査(確定値)",
     scope: "人口1万人以上の市区町村",
     excluded:
       "人口1万人未満の自治体(人口が少なく、通過する車の影響が大きく出るため)。物損事故は含みません。",

@@ -9,8 +9,7 @@ import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import AffiliateSlot from "../../../components/AffiliateSlot";
 import { dataSources } from "../../../lib/dataSources";
-import { getCities } from "../../../lib/getCities";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getCities2025, getMunicipalities2025 } from "../../../lib/city2025";
 import type { City } from "../../../lib/City";
 import {
   isDesignatedCity,
@@ -48,7 +47,7 @@ function agingRate(c: City): string {
 }
 
 export default function LargeCitiesRankingPage() {
-  const all = getMunicipalities();
+  const all = getMunicipalities2025();
 
   const ranking: Row[] = all
     .filter((c) => c.population >= THRESHOLD)
@@ -77,7 +76,7 @@ export default function LargeCitiesRankingPage() {
   const rankingTotal = ranking.reduce((s, c) => s + c.population, 0);
 
   // 東京都特別区部は23区の合計値なので、ランキングには入れず参考として示す
-  const tokyo23 = getCities().find(
+  const tokyo23 = getCities2025().find(
     (c) => normalize(c.name) === "東京都 特別区部"
   );
 
@@ -135,7 +134,7 @@ export default function LargeCitiesRankingPage() {
         🏙️ 人口50万人以上の都市ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="人口・高齢化率:令和7年国勢調査(確定値)、面積:令和8年(国土地理院)" />
 
       <p style={{ lineHeight: 1.9, color: "#374151" }}>
         人口50万人以上の自治体は全国で{ranking.length}あります。人口100万人以上

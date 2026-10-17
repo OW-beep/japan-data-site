@@ -1,13 +1,13 @@
-import citiesData from "@/data/cities.json";
-import type { City } from "./City";
-import { getMunicipalities } from "./municipalities";
+import { getCities2025, getMunicipalities2025 } from "./city2025";
 
-const allCities = citiesData as City[];
+// 市町村ページの数字(人口・人口密度・子ども人口・高齢化率)は令和7年国勢調査にそろえている(lib/city2025.ts)。
+// 順位も、同じ基準で計算する。
+const allCities = getCities2025();
 
 // ランキングページと同じ基準(区・東京都特別区部の集計行を除いた
 // 実在する自治体だけ)で順位を計算する。政令指定都市の区自体の
 // ページでは、全国・都道府県ランキングの対象外として "-" を表示する。
-const cities = getMunicipalities();
+const cities = getMunicipalities2025();
 
 export function getCityRanking(code: string) {
   const city = allCities.find((c) => c.code === code);
