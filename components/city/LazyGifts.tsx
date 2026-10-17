@@ -15,6 +15,7 @@ import type { RakutenItem } from "@/lib/rakuten";
 export default function LazyGifts({ code, heading }: { code: string; heading: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const [items, setItems] = useState<RakutenItem[] | null>(null);
+  const [title, setTitle] = useState(heading);
 
   useEffect(() => {
     const el = ref.current;
@@ -25,8 +26,11 @@ export default function LazyGifts({ code, heading }: { code: string; heading: st
       done = true;
       fetch(`/api/city-gifts/${code}`)
         .then((r) => (r.ok ? r.json() : null))
-        .then((j: { items?: RakutenItem[] } | null) => {
-          if (j?.items && j.items.length > 0) setItems(j.items);
+        .then((j: { items?: RakutenItem[]; heading?: string } | null) => {
+          if (j?.items && j.items.length > 0) {
+            if (j.heading) setTitle(j.heading); // 都道府県単位で見つかったときは、見出しもそれに合わせて返ってくる
+            setItems(j.items);
+          }
         })
         .catch(() => {});
     };
@@ -47,5 +51,5 @@ export default function LazyGifts({ code, heading }: { code: string; heading: st
     return () => io.disconnect();
   }, [code]);
 
-  return <div ref={ref}>{items && <RakutenGiftsView items={items} heading={heading} />}</div>;
+  return <div ref={ref}>{items && <RakutenGiftsView items={items} heading={title} />}</div>;
 }
