@@ -73,8 +73,11 @@ function hiResImage(url: string | undefined | null): string | null {
   return `${url}${url.includes("?") ? "&" : "?"}_ex=${IMAGE_SIZE}x${IMAGE_SIZE}`;
 }
 
-const MIN_INTERVAL_MS = 1100;
+// 呼び出しの間隔。1100msだと、ビルド中に連続して呼ぶと 429(回数制限)になることがあったため、少し長くする
+const MIN_INTERVAL_MS = 1500;
 const MAX_ATTEMPTS = 4;
+// 429のとき、次のやり直しまで待つ基本の時間(1回目4秒、2回目8秒、3回目12秒)。以前は1.5秒刻みで、制限が解けなかった
+const BACKOFF_429_MS = 4000;
 const MEMO_TTL_MS = 60 * 60 * 1000;
 
 const sleep = (ms: number) => new Promise<void>((r) => setTimeout(r, ms));
@@ -96,7 +99,14 @@ function throttled<T>(fn: () => Promise<T>): Promise<T> {
 // 同じキーワードの成功結果をプロセス内で使い回す(ビルド中の重複呼び出しを避ける)
 const memo = new Map<string, { at: number; items: RakutenItem[] }>();
 
-export async function searchRakutenItems(keyword: string, hits = 3): Promise<RakutenItem[] | null> {
+export async function searchRakutenItems(
+  keyword: string,
+  hits = 3,
+  /** やり直しの設定。ビルド(静的生成)では既定の長めの待ち、リクエスト中に呼ぶAPIでは短くする */
+  opts: { maxAttempts?: number; backoff429Ms?: number } = {}
+): Promise<RakutenItem[] | null> {
+  const maxAttempts = opts.maxAttempts ?? MAX_ATTEMPTS;
+  const backoff429Ms = opts.backoff429Ms ?? BACKOFF_429_MS;
   const applicationId = process.env.RAKUTEN_APP_ID;
   const accessKey = process.env.RAKUTEN_ACCESS_KEY;
   if (!applicationId || !accessKey) {
@@ -140,7 +150,7 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
     let status = 0;
     let data: RakutenSearchResponse = {};
 
-    for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       let transient = false;
       try {
         const res = await throttled(() =>
@@ -168,9 +178,9 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
         console.warn(`[rakuten] 「${keyword}」の通信エラー(${attempt}回目):`, e);
       }
       if (!transient) break;
-      if (attempt < MAX_ATTEMPTS) {
+      if (attempt < maxAttempts) {
         console.warn(`[rakuten] 「${keyword}」を${attempt}回目で取得できなかったため、やり直します (status=${status})`);
-        await sleep(1500 * attempt);
+        await sleep((status === 429 ? backoff429Ms : 1500) * attempt);
       }
     }
 

@@ -43,7 +43,8 @@ export async function GET(_req: Request, { params }: { params: Promise<{ code: s
     { keyword: `ふるさと納税 ${top.product} ${a.pref}`, heading: `${a.pref}産の${top.product}を楽天市場で見る` },
   ];
   for (const t of attempts) {
-    const items = await searchRakutenItems(t.keyword, 3);
+    // ブラウザを待たせすぎないよう、やり直しは2回・短い待ちにする(ビルド用の長い待ちは使わない)
+    const items = await searchRakutenItems(t.keyword, 3, { maxAttempts: 2, backoff429Ms: 1500 });
     if (items && items.length > 0) {
       return NextResponse.json({ items, heading: t.heading }, { headers: { "Cache-Control": OK } });
     }
