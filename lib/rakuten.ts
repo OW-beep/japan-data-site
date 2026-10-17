@@ -22,9 +22,12 @@
  *     1. 呼び出しを1本ずつの順番待ち(約1.1秒間隔)にする
  *     2. 制限(429)・サーバーエラー・通信エラーは、間隔をあけて数回やり直す
  *     3. 同じキーワードの成功結果は、プロセス内で1時間使い回す
- *     4. fetch自体はキャッシュしない(cache: "no-store")。失敗がキャッシュされて
- *        固定されるのを防ぐため。ページ側の `export const revalidate` で、
- *        ページ単位に一定時間キャッシュする(失敗しても数時間で自動的に再生成される)
+ *     4. fetch は next.revalidate で6時間キャッシュする(下の fetch を参照)。
+ *        以前は cache: "no-store" だったが、Next.js 16 の静的生成(ビルド)中に no-store の fetch が
+ *        あると DYNAMIC_SERVER_USAGE エラーになり、通信エラー扱いで4回やり直した末に「ブロックなし」で
+ *        固定され、そのページは毎回サーバーで生成される(動的ページ)状態になっていた。
+ *        成功(200)した結果だけが Next のキャッシュに入り、失敗(429など)は入らないので、
+ *        失敗が固定される心配はない。
  * - 画像は、APIが返す128px角では粗いので、サムネイルのサイズ指定(_ex)を書き換えて
  *   大きめ(300px角)を取得し、表示は小さめにする(高解像度ディスプレイでも鮮明にするため)。
  */
@@ -143,8 +146,9 @@ export async function searchRakutenItems(keyword: string, hits = 3): Promise<Rak
         const res = await throttled(() =>
           fetch(`${ENDPOINT}?${query}`, {
             headers: { Referer: siteUrl, Origin: siteUrl },
-            // 失敗した結果が固定されないよう、fetch自体はキャッシュしない
-            cache: "no-store",
+            // 6時間キャッシュ(成功した200の応答だけがキャッシュされる)。
+            // no-store にすると、ビルド時の静的生成で DYNAMIC_SERVER_USAGE になるため使わない
+            next: { revalidate: 21600 },
           })
         );
         status = res.status;
