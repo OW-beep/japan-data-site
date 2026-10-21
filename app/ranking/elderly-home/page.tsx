@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import ElderlyHomeSummary from "../../../components/ranking/ElderlyHomeSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/elderly-home" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function ElderlyHomeRankingPage() {
-  const all = getMunicipalities().filter(
+  const all = getMunicipalities2025().filter(
     (c) => c.elderlyHomeCount != null && c.elderlyPopulation > 0
   );
 
@@ -48,7 +48,7 @@ export default function ElderlyHomeRankingPage() {
         🏡 高齢者施設数ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="施設数:2023年度、高齢者人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/elderly-home-analysis"

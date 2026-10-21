@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import NaturalChangeSummary from "../../../components/ranking/NaturalChangeSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/natural-change" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const base = getMunicipalities()
+  const base = getMunicipalities2025()
     .filter(
       (c) => c.births != null && c.deaths != null && c.population > 0
     )
@@ -38,7 +38,7 @@ export default function Page() {
         👶 自然増減率ランキング（出生数-死亡数）
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="出生数・死亡数:2023年(人口動態調査)、人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/natural-change"

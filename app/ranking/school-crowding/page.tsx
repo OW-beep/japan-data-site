@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import SchoolCrowdingSummary from "../../../components/ranking/SchoolCrowdingSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -22,7 +22,7 @@ export function generateMetadata() {
 }
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter(
       (c) =>
         c.elementarySchoolCount != null &&
@@ -46,7 +46,7 @@ export default function Page() {
         🏫 小学校1校あたり子ども人口ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="小学校数:2024年(学校基本調査)、子ども人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/school-crowding"

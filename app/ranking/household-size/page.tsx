@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import HouseholdSizeSummary from "../../../components/ranking/HouseholdSizeSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalitiesForHouseholds } from "../../../lib/households2025";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/household-size" },
@@ -16,7 +16,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-  const ranking = getMunicipalities()
+  // 人口と世帯数は、必ず同じ年にそろえる。令和7年の世帯数が取得済みなら令和7年、未取得なら令和2年(lib/households2025.ts)
+  const { list, label, use2025 } = getMunicipalitiesForHouseholds(false);
+  const ranking = list
     .filter((c) => c.households != null && c.households > 0)
     .map((c) => ({
       ...c,
@@ -45,7 +47,7 @@ export default function Page() {
         👨‍👩‍👧‍👦 平均世帯人員ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={`${label}(総務省統計局)`} />
 
       <a
         href="/articles/household-analysis"
@@ -73,7 +75,11 @@ export default function Page() {
           name: `例：${ranking[0].name}`,
           value: Number(ranking[0].avgSize.toFixed(2)),
         }}
-      source={dataSources["household-size"]}
+      source={{
+        ...dataSources["household-size"],
+        dataYear: label,
+        ...(use2025 ? { sourceName: "e-Stat「令和7年国勢調査 人口等基本集計」(総務省統計局)" } : {}),
+      }}
       />
 
       <HouseholdSizeSummary

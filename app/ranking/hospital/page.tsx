@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import HospitalSummary from "../../../components/ranking/HospitalSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/hospital" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function HospitalRankingPage() {
-  const base = getMunicipalities().filter(
+  const base = getMunicipalities2025().filter(
     (c) =>
       c.hospitalCount != null && c.clinicCount != null && c.population >= 3000
   );
@@ -50,7 +50,7 @@ export default function HospitalRankingPage() {
         🏥 病院数ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="病院・診療所数:2023年(医療施設調査)、人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/hospital-access-analysis"

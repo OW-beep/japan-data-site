@@ -142,6 +142,51 @@ async function main() {
   // なので読み飛ばし、4行目以降が実データ。
   const dataLines = lines.slice(3);
 
+  // ---- ヘッダーの読み取り(2026-10 追加) ----
+  // ・各項目が「何年のデータか」(2行目)をログと ssdse-columns-report.txt に出す。
+  //   画面の「データ年度」表示と、実際の年がずれていないかを確認するため。
+  // ・COLUMNS の並びとヘッダーのコードがずれていないかを確認する(ずれたら列を取り違える)。
+  // ・項目名が「財政力指数」の列があれば、financeIndex として取り込む。
+  //   (従来は e-Stat 地方財政状況調査の表から取っていたが、その表は 2018年度までしか更新されておらず、
+  //    画面の「2023年度決算」表示と食い違っていた)
+  const headCodes = parseCsvLine(lines[0]);
+  const headYears = parseCsvLine(lines[1]);
+  const headNames = parseCsvLine(lines[2]);
+  const clean = (v: string | undefined) => (v ?? "").replace(/"/g, "").trim();
+
+  let misaligned = 0;
+  COLUMNS.forEach((code, i) => {
+    if (clean(headCodes[i + 3]) !== code) misaligned++;
+  });
+  if (misaligned > 0) {
+    console.warn(
+      `⚠ COLUMNS とヘッダーの項目コードが ${misaligned} 列ずれています。SSDSE の列構成が変わった可能性があります(取り込み位置を確認してください)`
+    );
+  }
+
+  const nameMappedCols: { idx: number; field: string; code: string }[] = [];
+  headNames.forEach((n, i) => {
+    if (i < 3) return;
+    if (clean(n) === "財政力指数") {
+      nameMappedCols.push({ idx: i - 3, field: "financeIndex", code: clean(headCodes[i]) });
+    }
+  });
+
+  const report: string[] = ["SSDSE-A の取り込み項目と年(ヘッダー2行目)", ""];
+  for (const [itemCode, fieldName] of Object.entries(FIELD_MAP)) {
+    const idx = COLUMNS.indexOf(itemCode as any);
+    if (idx === -1) continue;
+    report.push(`${itemCode.padEnd(8)} ${fieldName.padEnd(30)} ${clean(headYears[idx + 3]).padEnd(8)} ${clean(headNames[idx + 3])}`);
+  }
+  for (const m of nameMappedCols) {
+    report.push(`${m.code.padEnd(8)} ${m.field.padEnd(30)} ${clean(headYears[m.idx + 3]).padEnd(8)} 財政力指数(項目名で取り込み)`);
+  }
+  if (nameMappedCols.length === 0) {
+    report.push("", "財政力指数の列(項目名)は SSDSE-A に見つかりませんでした。");
+  }
+  console.log(report.join("\n"));
+  fs.writeFileSync("ssdse-columns-report.txt", report.join("\n"), "utf8");
+
   const records = new Map<string, Record<string, number | null>>();
 
   for (const line of dataLines) {
@@ -170,6 +215,13 @@ async function main() {
       rec[fieldName] = Number.isFinite(num as number)
         ? (num as number)
         : null;
+    }
+
+    // 項目名で見つけた列(財政力指数)。値が空の自治体は、既存の値を消さないよう rec に入れない
+    for (const m of nameMappedCols) {
+      const raw = values[m.idx];
+      const num = raw === "" || raw == null ? null : Number(raw);
+      if (Number.isFinite(num as number)) rec[m.field] = num as number;
     }
 
     records.set(code, rec);

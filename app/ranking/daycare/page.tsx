@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import DaycareSummary from "../../../components/ranking/DaycareSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -22,7 +22,7 @@ export function generateMetadata() {
 }
 
 export default function DaycareRankingPage() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter(
       (c) =>
         c.daycareCount != null &&
@@ -53,7 +53,7 @@ export default function DaycareRankingPage() {
         🧸 保育園あたり子ども人口ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="保育所等数:2023年、子ども人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/daycare-access"

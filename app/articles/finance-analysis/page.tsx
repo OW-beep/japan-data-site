@@ -144,6 +144,7 @@ export default function Page() {
           <span className="stat-chip">北海道 泊村</span>
           <span className="stat-chip">福島県 大熊町</span>
           <span className="stat-chip">茨城県 東海村</span>
+          <span className="stat-chip">新潟県 刈羽村</span>
         </div>
 
         <p>
@@ -176,7 +177,7 @@ export default function Page() {
 
         <p>
           上位にはもう二つの系統があります。一つは長野県軽井沢町・
-          山梨県山中湖村・神奈川県箱根町といった別荘・リゾート地です。
+          神奈川県箱根町といった別荘・リゾート地です。
           別荘やホテルなど資産価値の高い不動産が多く立地することで、
           固定資産税収入が住民数の割に大きくなる傾向があります。
           もう一つは、愛知県みよし市・豊田市に代表される自動車

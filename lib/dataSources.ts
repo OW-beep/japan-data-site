@@ -6,6 +6,11 @@
 // 多くの指標は e-Stat「社会・人口統計体系」市区町村データ
 // (統計表ID: 0000020201、通称SSDSE-市区町村)から取得している。
 
+import meta from "@/data/meta.json";
+
+/** 財政力指数の年度。scripts/fetchFinanceIndex.ts が meta.json に書く。未取得の間は、従来の取得元(2018年度)の表示 */
+const FINANCE_INDEX_YEAR = (meta as { financeIndexYear?: number }).financeIndexYear;
+
 export type DataSource = {
   sourceName: string;
   dataYear: string;
@@ -72,41 +77,43 @@ export const dataSources: Record<string, DataSource> = {
   },
   hospital: {
     sourceName: "厚生労働省「医療施設調査」(e-Stat)",
-    dataYear: "2023年",
+    dataYear: "病院・診療所数は2023年、人口は令和7年国勢調査(確定値)",
     scope: "全国1,741市区町村",
     notes: "病院(20床以上)と診療所(20床未満)は統計上区別されています。人口が少ない自治体ほど、1施設の増減で人口あたり換算値が大きく変動する点にご注意ください。",
   },
   finance: {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
-    dataYear: "2023年度決算",
+    dataYear: FINANCE_INDEX_YEAR
+      ? `${FINANCE_INDEX_YEAR}年度決算(3か年平均)`
+      : "2018年度決算(3か年平均。取得元のe-Statの表が2018年度までのため。更新作業中)",
     scope: "全国1,741市区町村",
   },
   "balance-ratio": {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
-    dataYear: "2023年度決算",
+    dataYear: "2022年度決算",
     scope: "全国1,741市区町村",
   },
   "tax-ratio": {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
-    dataYear: "2023年度決算",
+    dataYear: "2022年度決算",
     scope: "全国1,741市区町村",
   },
   "debt-service-ratio": {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
-    dataYear: "2023年度決算(3か年平均)",
+    dataYear: "2022年度決算(3か年平均)",
     scope: "全国1,741市区町村",
     notes:
       "3か年平均で算出される指標のため、単年の決算数値からは直接計算できません。",
   },
   "education-expense": {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
-    dataYear: "2023年度決算",
+    dataYear: "2022年度決算",
     scope: "人口3,000人以上の市区町村",
     excluded: "人口3,000人未満の自治体(数値が不安定になるため)",
   },
   "welfare-ratio": {
     sourceName: "総務省「地方財政状況調査」(e-Stat)",
-    dataYear: "2023年度決算",
+    dataYear: "2022年度決算",
     scope: "全国1,741市区町村",
   },
   decline: {
@@ -118,7 +125,7 @@ export const dataSources: Record<string, DataSource> = {
   },
   "natural-change": {
     ...SSDSE_BASE,
-    dataYear: "2022年",
+    dataYear: "出生数・死亡数は2023年、人口は令和7年国勢調査(確定値)",
     notes: "出生数・死亡数による自然増減のみを示し、転入・転出は含みません。",
   },
   area: {
@@ -144,7 +151,7 @@ export const dataSources: Record<string, DataSource> = {
   daycare: {
     sourceName:
       "統計センター SSDSE-市区町村(SSDSE-A)。元データは社会福祉施設等調査",
-    dataYear: "SSDSE-A-2026年版収録データ",
+    dataYear: "保育所等数は2023年、子ども人口は令和7年国勢調査(確定値)",
     scope: "全国1,741市区町村",
   },
   "daytime-ratio": {
@@ -161,20 +168,20 @@ export const dataSources: Record<string, DataSource> = {
   "elderly-home": {
     sourceName:
       "e-Stat「社会・人口統計体系」J 福祉・市区町村データ(統計表ID: 0000020210)",
-    dataYear: "2023年度",
+    dataYear: "施設数は2023年度、高齢者人口は令和7年国勢調査(確定値)",
     scope: "全国1,741市区町村",
     notes:
       "介護老人福祉施設・養護老人ホーム・有料老人ホームの合算値です。",
   },
   "foreign-population": {
     sourceName: "統計センター SSDSE-市区町村(SSDSE-A)",
-    dataYear: "SSDSE-A-2026年版収録データ",
+    dataYear: "2020年(令和2年国勢調査)",
     scope: "全国1,741市区町村",
   },
   "habitable-density": {
     sourceName:
       "統計センター SSDSE-市区町村(SSDSE-A)。可住地面積は国土地理院データに基づく",
-    dataYear: "人口は2025年(令和7年国勢調査・確定値)、可住地面積はSSDSE-A-2026年版収録データ",
+    dataYear: "人口は2025年(令和7年国勢調査・確定値)、可住地面積は2024年(SSDSE-A-2026年版)",
     scope: "全国1,741市区町村",
     notes:
       "総面積から山地・湖沼等を除いた「可住地面積」を分母に用いており、単純な人口密度(総面積ベース)とは数値が異なります。",
@@ -189,11 +196,11 @@ export const dataSources: Record<string, DataSource> = {
   },
   "marriage-rate": {
     ...SSDSE_BASE,
-    dataYear: "2022年",
+    dataYear: "婚姻件数は2023年、人口は令和7年国勢調査(確定値)",
   },
   "divorce-rate": {
     ...SSDSE_BASE,
-    dataYear: "2022年",
+    dataYear: "離婚件数は2023年、人口は令和7年国勢調査(確定値)",
     notes: "人口規模の小さい自治体では、件数の増減で数値が大きく振れやすい点にご注意ください。",
   },
   "recycling-rate": {
@@ -204,26 +211,26 @@ export const dataSources: Record<string, DataSource> = {
   },
   restaurant: {
     sourceName: "統計センター SSDSE-市区町村(SSDSE-A)、元データは経済センサス",
-    dataYear: "SSDSE-A-2026年版収録データ",
+    dataYear: "飲食店数は2021年(経済センサス)、人口は令和2年国勢調査",
     scope: "全国1,741市区町村",
   },
   "retail-access": {
     sourceName:
       "統計センター SSDSE-市区町村(SSDSE-A、小売店数)＋e-Stat「社会・人口統計体系」(高齢者人口)",
-    dataYear: "SSDSE-A-2026年版収録データ",
+    dataYear: "小売店数は2021年(経済センサス)、人口は令和2年国勢調査",
     scope: "全国1,741市区町村",
     notes:
       "小売店の「実際の距離・アクセスのしやすさ」ではなく、人口あたりの店舗数から算出した簡易的な指標です。",
   },
   "retail-store": {
     sourceName: "統計センター SSDSE-市区町村(SSDSE-A)、元データは経済センサス",
-    dataYear: "SSDSE-A-2026年版収録データ",
+    dataYear: "小売店数は2021年(経済センサス)、人口は令和2年国勢調査",
     scope: "全国1,741市区町村",
     notes: "売场面積1,000平方メートル以上の大型店のみを集計対象としています。",
   },
   "school-crowding": {
     ...SSDSE_BASE,
-    dataYear: "2023年度(学校基本調査)",
+    dataYear: "小学校数は2024年、子ども人口は令和7年国勢調査(確定値)",
   },
   "sparse-density": {
     ...SSDSE_BASE,

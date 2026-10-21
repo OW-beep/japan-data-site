@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import DivorceRateSummary from "../../../components/ranking/DivorceRateSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/divorce-rate" },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default function DivorceRateRankingPage() {
-  const base = getMunicipalities().filter(
+  const base = getMunicipalities2025().filter(
     (c) => c.divorces != null && c.population >= 3000
   );
 
@@ -45,7 +45,7 @@ export default function DivorceRateRankingPage() {
         💔 離婚率ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="離婚件数:2023年(人口動態調査)、人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/divorce-rate-analysis"

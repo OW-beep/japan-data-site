@@ -394,7 +394,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     digits: 0,
     direction: "high",
     rows: () =>
-      build(
+      build25(
         (c) =>
           c.elementarySchoolCount != null &&
           c.elementarySchoolCount > 0 &&
@@ -420,7 +420,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     direction: "low",
     scope: "子ども人口500人以上で保育施設が1つ以上ある自治体",
     rows: () =>
-      build(
+      build25(
         (c) => c.daycareCount != null && c.daycareCount > 0 && c.childPopulation >= 500,
         (c) => c.childPopulation / (c.daycareCount ?? 1)
       ),
@@ -445,7 +445,7 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
     scope: "人口3,000人以上の自治体",
     minPopulation: 3_000,
     rows: () =>
-      build(
+      build25(
         (c) => c.marriages != null && !Number.isNaN(c.marriages) && c.population >= 3000,
         (c) => ((c.marriages ?? 0) / c.population) * 1000
       ),

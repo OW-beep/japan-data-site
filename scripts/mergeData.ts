@@ -84,10 +84,16 @@ if (notFound.length) {
 
 console.log("cities updated");
 
+// 他のスクリプトが meta.json に書いた項目(financeIndexYear など)を消さないよう、既存の内容を残して更新する
+const prevMeta = fs.existsSync("data/meta.json")
+  ? JSON.parse(fs.readFileSync("data/meta.json", "utf8"))
+  : {};
+
 fs.writeFileSync(
   "data/meta.json",
   JSON.stringify(
     {
+      ...prevMeta,
       updatedAt: new Date().toISOString(),
       cityCount: merged.length,
     },

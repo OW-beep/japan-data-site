@@ -6,7 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import MarriageRateSummary from "../../../components/ranking/MarriageRateSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -22,7 +22,7 @@ export function generateMetadata() {
 }
 
 export default function MarriageRateRankingPage() {
-  const ranking = getMunicipalities()
+  const ranking = getMunicipalities2025()
     .filter(
       (c) =>
         c.marriages != null &&
@@ -53,7 +53,7 @@ export default function MarriageRateRankingPage() {
         💍 婚姻率ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text="婚姻件数:2023年(人口動態調査)、人口:令和7年国勢調査(確定値)" />
 
       <a
         href="/articles/marriage-rate-analysis"
