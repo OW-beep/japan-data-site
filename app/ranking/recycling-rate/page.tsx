@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/recycling-rate" },
   title: "全国自治体 ごみのリサイクル率ランキング｜大崎町など優等生自治体",
@@ -89,6 +90,9 @@ export default function RecyclingRateRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="recycling-rate" />
+
     </main>
   );
 }

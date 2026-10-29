@@ -7,9 +7,14 @@
 // (統計表ID: 0000020201、通称SSDSE-市区町村)から取得している。
 
 import meta from "@/data/meta.json";
+import { estatLatestYear } from "./estatLatest";
 
 /** 財政力指数の年度。scripts/fetchFinanceIndex.ts が meta.json に書く。未取得の間は、従来の取得元(2018年度)の表示 */
 const FINANCE_INDEX_YEAR = (meta as { financeIndexYear?: number }).financeIndexYear;
+
+/** 新しい年の統計(lib/estatLatest.ts)が取得済みならその年、未取得なら従来の年 */
+const YEAR_MEDICAL = estatLatestYear("medical") ?? 2023;
+const YEAR_VITAL = estatLatestYear("vital") ?? 2023;
 
 export type DataSource = {
   sourceName: string;
@@ -77,7 +82,7 @@ export const dataSources: Record<string, DataSource> = {
   },
   hospital: {
     sourceName: "厚生労働省「医療施設調査」(e-Stat)",
-    dataYear: "病院・診療所数は2023年、人口は令和7年国勢調査(確定値)",
+    dataYear: `病院・診療所数は${YEAR_MEDICAL}年、人口は令和7年国勢調査(確定値)`,
     scope: "全国1,741市区町村",
     notes: "病院(20床以上)と診療所(20床未満)は統計上区別されています。人口が少ない自治体ほど、1施設の増減で人口あたり換算値が大きく変動する点にご注意ください。",
   },
@@ -125,7 +130,7 @@ export const dataSources: Record<string, DataSource> = {
   },
   "natural-change": {
     ...SSDSE_BASE,
-    dataYear: "出生数・死亡数は2023年、人口は令和7年国勢調査(確定値)",
+    dataYear: `出生数・死亡数は${YEAR_VITAL}年、人口は令和7年国勢調査(確定値)`,
     notes: "出生数・死亡数による自然増減のみを示し、転入・転出は含みません。",
   },
   area: {
@@ -196,11 +201,11 @@ export const dataSources: Record<string, DataSource> = {
   },
   "marriage-rate": {
     ...SSDSE_BASE,
-    dataYear: "婚姻件数は2023年、人口は令和7年国勢調査(確定値)",
+    dataYear: `婚姻件数は${YEAR_VITAL}年、人口は令和7年国勢調査(確定値)`,
   },
   "divorce-rate": {
     ...SSDSE_BASE,
-    dataYear: "離婚件数は2023年、人口は令和7年国勢調査(確定値)",
+    dataYear: `離婚件数は${YEAR_VITAL}年、人口は令和7年国勢調査(確定値)`,
     notes: "人口規模の小さい自治体では、件数の増減で数値が大きく振れやすい点にご注意ください。",
   },
   "recycling-rate": {

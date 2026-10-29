@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/debt-service-ratio" },
   title: "全国自治体 実質公債費比率ランキング｜借金返済の負担度",
@@ -92,6 +93,9 @@ export default function DebtServiceRatioRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="debt-service-ratio" />
+
     </main>
   );
 }

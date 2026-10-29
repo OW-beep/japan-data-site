@@ -8,6 +8,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import Link from "next/link";
 import { getCorporateGrowthRanking } from "../../../lib/corporateRegistration";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/corporate-growth" },
   title: "新設法人 純増数ランキング｜市区町村別(直近12か月)",
@@ -157,6 +158,9 @@ export default function Page() {
       />
 
       <CompareCTA />
+
+      <RankingCommentary slug="corporate-growth" />
+
     </main>
   );
 }

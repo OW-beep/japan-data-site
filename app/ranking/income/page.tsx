@@ -10,6 +10,7 @@ import {
 
 import { hasPrefectureStatsData as checkReady } from "../../../lib/prefectureStats";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/income" },
   title: "都道府県別 平均年収ランキング",
@@ -100,6 +101,9 @@ export default function IncomeRankingPage() {
           </table>
         </>
       )}
+
+      {ready && ranking.length > 0 && <RankingCommentary slug="income" />}
+
     </main>
   );
 }

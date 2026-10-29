@@ -6,6 +6,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getFiscalHealthScores } from "../../../lib/compositeScores";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/fiscal-health-composite" },
   title: "財政健全度スコア ランキング｜4指標統合の独自指数",
@@ -68,6 +69,9 @@ export default function FiscalHealthRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="fiscal-health-composite" />
+
     </main>
   );
 }

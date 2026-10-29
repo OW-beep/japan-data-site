@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalitiesForHouseholds } from "../../../lib/households2025";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/household-size" },
   title: "全国自治体 平均世帯人員ランキング",
@@ -103,6 +104,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="household-size" />
+
     </div>
   );
 }

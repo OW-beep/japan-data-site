@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/natural-change" },
   title: "全国自治体 自然増減率ランキング（出生数-死亡数）",
@@ -91,6 +92,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="natural-change" />
+
     </div>
   );
 }

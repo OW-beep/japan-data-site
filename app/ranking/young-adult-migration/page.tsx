@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/young-adult-migration" },
   title: "全国自治体 20代純移動率ランキング｜若者に選ばれる街は？",
@@ -102,6 +103,9 @@ export default function YoungAdultMigrationRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="young-adult-migration" />
+
     </main>
   );
 }

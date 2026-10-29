@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/welfare-ratio" },
   title: "全国自治体 民生費比率ランキング",
@@ -93,6 +94,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="welfare-ratio" />
+
     </div>
   );
 }

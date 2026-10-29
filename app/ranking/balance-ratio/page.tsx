@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/balance-ratio" },
   title: "全国自治体 経常収支比率ランキング｜財政の余裕度がわかる",
@@ -98,6 +99,9 @@ export default function BalanceRatioRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="balance-ratio" />
+
     </main>
   );
 }

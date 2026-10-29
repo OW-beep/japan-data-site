@@ -6,6 +6,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getElderlySupportScores } from "../../../lib/compositeScores";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/elderly-support-composite" },
   title: "高齢者支援体制スコア ランキング｜医師数・老人ホーム・独居率を統合",
@@ -69,6 +70,9 @@ export default function ElderlySupportRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="elderly-support-composite" />
+
     </main>
   );
 }

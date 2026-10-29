@@ -6,6 +6,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getBedroomTownFinanceScores } from "../../../lib/compositeScores";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/bedroom-town-finance" },
   title: "ベッドタウン財政力ランキング｜昼夜間人口比率×財政力指数",
@@ -69,6 +70,9 @@ export default function BedroomTownFinanceRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="bedroom-town-finance" />
+
     </main>
   );
 }

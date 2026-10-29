@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/daytime-ratio" },
   title: "全国自治体 昼夜間人口比率ランキング｜千代田区は1355%",
@@ -98,6 +99,9 @@ export default function DaytimeRatioRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="daytime-ratio" />
+
     </main>
   );
 }

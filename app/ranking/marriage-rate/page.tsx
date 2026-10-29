@@ -7,6 +7,7 @@ import MarriageRateSummary from "../../../components/ranking/MarriageRateSummary
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
+import { estatLatestYear } from "../../../lib/estatLatest";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -53,7 +54,7 @@ export default function MarriageRateRankingPage() {
         💍 婚姻率ランキング
       </h1>
 
-      <DataAsOf text="婚姻件数:2023年(人口動態調査)、人口:令和7年国勢調査(確定値)" />
+      <DataAsOf text={`婚姻件数:${estatLatestYear("vital") ?? 2023}年(人口動態調査)、人口:令和7年国勢調査(確定値)`} />
 
       <a
         href="/articles/marriage-rate-analysis"

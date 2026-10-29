@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/elderly-home" },
   title: "全国自治体 高齢者施設数ランキング｜旭川市が「福祉の街」の理由",
@@ -100,6 +101,9 @@ export default function ElderlyHomeRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="elderly-home" />
+
     </main>
   );
 }

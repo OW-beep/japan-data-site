@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/decrease" },
   title: "全国自治体 人口が少ない自治体ランキング",
@@ -61,6 +62,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="decrease" />
+
     </div>
   );
 }

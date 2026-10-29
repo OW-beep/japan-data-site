@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/tax-ratio" },
   title: "全国自治体 地方税自主財源比率ランキング",
@@ -92,6 +93,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="tax-ratio" />
+
     </div>
   );
 }

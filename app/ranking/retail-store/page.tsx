@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/retail-store" },
   title: "全国自治体 大型小売店数ランキング｜人口1万人あたりで比較",
@@ -100,6 +101,9 @@ export default function RetailStoreRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="retail-store" />
+
     </main>
   );
 }

@@ -9,6 +9,7 @@ import {
   hasPrefectureStatsData as checkReady,
 } from "../../../lib/prefectureStats";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/crime-rate" },
   title: "都道府県別 刑法犯認知件数ランキング｜人口千人あたり",
@@ -106,6 +107,9 @@ export default function CrimeRateRankingPage() {
           </table>
         </>
       )}
+
+      {ready && ranking.length > 0 && <RankingCommentary slug="crime-rate" />}
+
     </main>
   );
 }

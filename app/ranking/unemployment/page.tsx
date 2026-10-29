@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/unemployment" },
   title: "全国自治体 完全失業率ランキング",
@@ -97,6 +98,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="unemployment" />
+
     </div>
   );
 }

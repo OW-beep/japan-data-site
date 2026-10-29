@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/hospital" },
   title: "全国自治体 病院数ランキング｜人口10万人あたりで比較",
@@ -103,6 +104,9 @@ export default function HospitalRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="hospital" />
+
     </main>
   );
 }

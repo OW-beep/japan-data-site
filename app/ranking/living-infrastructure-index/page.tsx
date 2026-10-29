@@ -6,6 +6,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getLivingInfrastructureScores } from "../../../lib/compositeScores";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/living-infrastructure-index" },
   title: "生活基盤充実度指数 ランキング｜商業集積・公民館・空き家率を統合",
@@ -68,6 +69,9 @@ export default function LivingInfrastructureRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="living-infrastructure-index" />
+
     </main>
   );
 }

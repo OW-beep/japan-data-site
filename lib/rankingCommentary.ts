@@ -15,6 +15,8 @@ import { getAccidentByCode, getAllAccidentRows } from "./trafficAccident";
 import { getPopulationBasis } from "./population2025";
 import { getAgeRows } from "./ageRates";
 import { getMunicipalities2025 } from "./city2025";
+import { EXTRA_COMMENTARY_A } from "./rankingCommentaryExtra";
+import { EXTRA_COMMENTARY_B } from "./rankingCommentaryExtra2";
 
 export type CommentaryConfig = {
   metricName: string;
@@ -28,6 +30,8 @@ export type CommentaryConfig = {
   minPopulation?: number;
   /** 人口規模別・相関の分析を出さない(指標が人口そのものの場合など) */
   hideSizeAnalysis?: boolean;
+  /** 都道府県単位のランキング(47行)。人口規模別・都道府県別・大都市の分析を出さず、「自治体」を「都道府県」と書く */
+  level?: "prefecture";
   /** 追加の集計文(データから計算した事実) */
   facts?: (rows: AnalysisRow[]) => string[];
   /** 手書きの「読み方・注意点」 */
@@ -60,7 +64,7 @@ function build25(filter: (c: C) => boolean, value: (c: C) => number): AnalysisRo
 
 const pct = (n: number, d: number) => (d > 0 ? (n / d) * 100 : 0);
 
-export const COMMENTARY: Record<string, CommentaryConfig> = {
+const BASE_COMMENTARY: Record<string, CommentaryConfig> = {
   // 以下4つは、ランキングの説明文(meta description)の「1位は○○」にだけ使う。
   // reading などが空なので、<RankingCommentary> を置いても解説は出ない(置く場合は中身を足すこと)。
   churn: {
@@ -521,4 +525,14 @@ export const COMMENTARY: Record<string, CommentaryConfig> = {
       { href: "/ranking/birth-rate", label: "出生率ランキング" },
     ],
   },
+};
+
+/**
+ * 全ランキングの解説設定。追加分(rankingCommentaryExtra*.ts)は、ここで合流させる。
+ * 同じ slug が両方にある場合は、上の BASE_COMMENTARY を優先する(既存の設定を壊さないため)。
+ */
+export const COMMENTARY: Record<string, CommentaryConfig> = {
+  ...EXTRA_COMMENTARY_A,
+  ...EXTRA_COMMENTARY_B,
+  ...BASE_COMMENTARY,
 };

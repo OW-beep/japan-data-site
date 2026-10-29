@@ -8,6 +8,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import Link from "next/link";
 import { getCapitalElevationRanking } from "../../../lib/capitalElevation";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/capital-elevation" },
   title: "都道府県庁所在地 標高ランキング｜1位は長野市371.5m",
@@ -147,6 +148,9 @@ export default function Page() {
       />
 
       <CompareCTA />
+
+      <RankingCommentary slug="capital-elevation" />
+
     </main>
   );
 }

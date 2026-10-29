@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/divorce-rate" },
   title: "全国自治体 離婚率ランキング｜人口千人あたりで比較",
@@ -96,6 +97,9 @@ export default function DivorceRateRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="divorce-rate" />
+
     </main>
   );
 }

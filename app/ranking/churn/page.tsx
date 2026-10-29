@@ -7,7 +7,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import { dataSources } from "../../../lib/dataSources";
-import { getMunicipalities } from "../../../lib/municipalities";
+import { getMunicipalitiesForMigration } from "../../../lib/city2025";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -24,7 +24,9 @@ export function generateMetadata() {
 const MIN_POPULATION = 1000;
 
 export default function ChurnRankingPage() {
-  const base = getMunicipalities().filter(
+  // 転入・転出が2025年の取得済みなら令和7年の人口で割る。未取得なら従来どおり(lib/city2025.ts)
+  const { list, use2025 } = getMunicipalitiesForMigration();
+  const base = list.filter(
     (c) =>
       c.inMigrants != null &&
       c.outMigrants != null &&
@@ -79,7 +81,7 @@ export default function ChurnRankingPage() {
         🔄 人口の入れ替わり率ランキング
       </h1>
 
-      <DataAsOf />
+      <DataAsOf text={use2025 ? "転入者数・転出者数:2025年(住民基本台帳人口移動報告)、人口:令和7年国勢調査(確定値)" : undefined} />
 
       <Link
         prefetch={false}
@@ -95,7 +97,14 @@ export default function ChurnRankingPage() {
         definition={`1年間の転入者数と転出者数の合計が、人口に占める割合です。人口の増減(転入超過率)とは別に、住民の流動性の大きさを見る指標です。人口${MIN_POPULATION.toLocaleString()}人未満の自治体は、母数が小さく数値が不安定になるため対象外としています(分析記事では全自治体を対象にしているため、上位の顔ぶれが一部異なります)。`}
         formula="(転入者数 + 転出者数) ÷ 人口 × 100"
         example={{ name: first.name, value: `${first.churn.toFixed(1)}%` }}
-        source={dataSources["churn"]}
+        source={
+          use2025
+            ? {
+                ...dataSources["churn"],
+                dataYear: "転入者数・転出者数は2025年(日本人移動者)、人口は令和7年国勢調査(確定値)",
+              }
+            : dataSources["churn"]
+        }
       />
 
       <section style={summary}>

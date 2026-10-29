@@ -22,6 +22,7 @@
     "check:data-years": "tsx scripts/checkDataYears.ts",
     "merge:finance-index": "tsx scripts/fetchFinanceIndex.ts",
     "check:claims": "tsx scripts/checkFinanceClaims.ts",
+    "fetch:estat-latest": "tsx scripts/fetchEstatLatest.ts",
     "merge:daytime-population": "tsx scripts/fetchDaytimePopulation.ts",
     "merge:elderly-facilities": "tsx scripts/fetchElderlyFacilities.ts",
     "merge:young-adult-migration": "tsx scripts/fetchYoungAdultMigration.ts",

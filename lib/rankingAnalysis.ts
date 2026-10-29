@@ -159,3 +159,48 @@ export function describeCorrelation(r: number): string {
   if (a < 0.6) return `${dir}傾向がはっきり見られます`;
   return `${dir}傾向が強く表れています`;
 }
+
+/** 2つの指標の関係の強さを文章にする(label は相手の指標名。相関は因果関係を示さない) */
+export function describeRelation(r: number, label: string): string {
+  const a = Math.abs(r);
+  if (a < 0.2) return "ほとんど関係が見られません";
+  const dir =
+    r > 0 ? `${label}が高い自治体ほど値が大きい` : `${label}が高い自治体ほど値が小さい`;
+  if (a < 0.4) return `${dir}傾向がわずかにあります`;
+  if (a < 0.6) return `${dir}傾向がはっきり見られます`;
+  return `${dir}傾向が強く表れています`;
+}
+
+export type Outlier = { name: string; value: number; expected: number };
+
+/**
+ * 人口規模(対数)から予想される値より、実際の値が大きく外れている自治体。
+ * 値を人口(対数)で直線回帰し、残差(実際の値 − 予想値)が大きい順に上位・下位を返す。
+ */
+export function outliersVsPopulation(
+  rows: AnalysisRow[],
+  k = 3
+): { above: Outlier[]; below: Outlier[] } | null {
+  const pts = rows.filter((r) => r.population > 0 && Number.isFinite(r.value));
+  if (pts.length < 30) return null;
+  const xs = pts.map((r) => Math.log10(r.population));
+  const ys = pts.map((r) => r.value);
+  const mx = xs.reduce((s, v) => s + v, 0) / xs.length;
+  const my = ys.reduce((s, v) => s + v, 0) / ys.length;
+  let sxy = 0;
+  let sxx = 0;
+  for (let i = 0; i < xs.length; i++) {
+    sxy += (xs[i] - mx) * (ys[i] - my);
+    sxx += (xs[i] - mx) ** 2;
+  }
+  if (sxx === 0) return null;
+  const b = sxy / sxx;
+  const a = my - b * mx;
+  const list = pts.map((r, i) => ({
+    name: r.name,
+    value: r.value,
+    expected: a + b * xs[i],
+  }));
+  const bySide = [...list].sort((p, q) => q.value - q.expected - (p.value - p.expected));
+  return { above: bySide.slice(0, k), below: bySide.slice(-k).reverse() };
+}

@@ -9,6 +9,7 @@ import DeclineSummary from "../../../components/ranking/DeclineSummary";
 import { dataSources } from "../../../lib/dataSources";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/decline" },
   title: "全国自治体 社会増減率ランキング(転入超過・転出超過)",
@@ -179,6 +180,9 @@ export default function Page() {
           ← ランキング一覧に戻る
         </Link>
       </div>
+
+      <RankingCommentary slug="decline" />
+
     </main>
   );
 }

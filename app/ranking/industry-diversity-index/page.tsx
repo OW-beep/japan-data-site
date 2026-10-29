@@ -6,6 +6,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getIndustryDiversityScores } from "../../../lib/compositeScores";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/industry-diversity-index" },
   title: "産業の多様性指数(HHI) ランキング｜産業集中度を独自算出",
@@ -68,6 +69,9 @@ export default function IndustryDiversityRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="industry-diversity-index" />
+
     </main>
   );
 }

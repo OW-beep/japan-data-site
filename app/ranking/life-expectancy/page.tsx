@@ -15,7 +15,11 @@ export const metadata: Metadata = {
   title: "都道府県別 平均寿命ランキング",
   description:
     "都道府県別生命表(厚生労働省)をもとにした、男女別の平均寿命ランキングです。",
-  robots: checkReady() ? undefined : { index: false, follow: true },
+  // 平均寿命のデータが入るまでは「準備中」と表示するだけの空ページなので、検索に載せない。
+  // (hasPrefectureStatsData() は平均年収など他の項目があれば true になるため、平均寿命の有無で判定する)
+  robots: getPrefectureStats().some((r) => r.stats.lifeExpectancyFemale != null)
+    ? undefined
+    : { index: false, follow: true },
 };
 
 export default function LifeExpectancyRankingPage() {

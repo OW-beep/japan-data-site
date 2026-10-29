@@ -6,6 +6,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getYoungFamilyAttractivenessScores } from "../../../lib/compositeScores";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/young-family-attractiveness-index" },
   title: "子育て世代吸引力指数 ランキング｜保育・移住・婚姻を統合",
@@ -68,6 +69,9 @@ export default function YoungFamilyRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="young-family-attractiveness-index" />
+
     </main>
   );
 }

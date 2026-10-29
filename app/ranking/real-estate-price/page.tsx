@@ -9,6 +9,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import Link from "next/link";
 import { getRealEstatePriceRanking } from "../../../lib/realEstatePrice";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/real-estate-price" },
   title: "不動産価格ランキング｜市区町村別の実勢価格(土地・中古マンション)",
@@ -206,6 +207,9 @@ export default function Page() {
       <AffiliateSlot topic="realestate" />
 
       <CompareCTA />
+
+      <RankingCommentary slug="real-estate-price" />
+
     </main>
   );
 }

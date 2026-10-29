@@ -11,6 +11,7 @@
 import { getCities } from "./getCities";
 import { getMunicipalities } from "./municipalities";
 import { getAgeGroups2025, getPopulationBasis } from "./population2025";
+import { applyEstatLatest, estatLatestYear } from "./estatLatest";
 import type { City } from "./City";
 
 type Built = {
@@ -41,7 +42,8 @@ function build(): Built {
     if (out.population > 0 && out.elderlyPopulation != null) {
       out.agingRate = Math.round((out.elderlyPopulation / out.population) * 1000) / 10;
     }
-    return out;
+    // 新しい年の件数(病院・出生など)があれば重ねる(lib/estatLatest.ts)。人口は令和7年なので、年が近くなる
+    return applyEstatLatest(out);
   });
 
   const byCode = new Map(all.map((c) => [c.code, c]));
@@ -70,4 +72,14 @@ export function getCity2025(code: string): City | undefined {
 
 export function uses2025(): boolean {
   return get().use2025;
+}
+
+/**
+ * 転入者数・転出者数を使うランキング(入れ替わり率)用。
+ * 2025年の転入・転出が取得済みなら「2025年の転入出 ÷ 令和7年の人口」、
+ * 未取得なら従来どおり令和2年の人口の一覧に戻す(年がずれた割り算にしないため)。
+ */
+export function getMunicipalitiesForMigration(): { list: City[]; use2025: boolean } {
+  if (estatLatestYear("migration") != null) return { list: getMunicipalities2025(), use2025: true };
+  return { list: getMunicipalities(), use2025: false };
 }

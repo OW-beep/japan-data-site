@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/community-center" },
   title: "全国自治体 公民館数ランキング｜集落ごとに1館の町も",
@@ -101,6 +102,9 @@ export default function CommunityCenterRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="community-center" />
+
     </main>
   );
 }

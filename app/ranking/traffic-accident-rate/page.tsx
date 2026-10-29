@@ -10,6 +10,7 @@ import {
   hasPrefectureStatsData as checkReady,
 } from "../../../lib/prefectureStats";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/traffic-accident-rate" },
   title: "都道府県別 交通事故発生件数ランキング｜人口10万人あたり",
@@ -121,6 +122,9 @@ export default function TrafficAccidentRankingPage() {
           市区町村別の交通事故(人身事故)ランキングはこちら →
         </Link>
       </p>
+
+      {ready && ranking.length > 0 && <RankingCommentary slug="traffic-accident-rate" />}
+
     </main>
   );
 }

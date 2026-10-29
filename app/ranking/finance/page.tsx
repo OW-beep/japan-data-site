@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/finance" },
   title: "全国自治体 財政力指数ランキング",
@@ -103,6 +104,9 @@ export default function FinanceRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="finance" />
+
     </main>
   );
 }

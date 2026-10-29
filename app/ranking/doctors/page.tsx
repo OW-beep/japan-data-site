@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/doctors" },
   title: "全国自治体 医師数ランキング(人口10万人あたり)",
@@ -88,6 +89,9 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="doctors" />
+
     </div>
   );
 }

@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
+import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/education-expense" },
   title: "全国自治体 教育費ランキング｜住民一人あたりで比較",
@@ -98,6 +99,9 @@ export default function EducationExpenseRankingPage() {
           />
         ))}
       </div>
+
+      <RankingCommentary slug="education-expense" />
+
     </main>
   );
 }
