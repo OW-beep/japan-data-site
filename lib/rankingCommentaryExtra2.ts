@@ -334,7 +334,6 @@ export const EXTRA_COMMENTARY_B: Record<string, CommentaryConfig> = {
     relatedRankings: [
       { href: "/ranking/population", label: "人口ランキング" },
       { href: "/ranking/smallest-cities", label: "人口が少ない市ランキング" },
-      { href: "/ranking/sparse-density", label: "人口密度が低い自治体ランキング" },
       { href: "/ranking/decline", label: "社会増減率ランキング" },
     ],
   },
@@ -363,7 +362,6 @@ export const EXTRA_COMMENTARY_B: Record<string, CommentaryConfig> = {
     relatedRankings: [
       { href: "/ranking/density", label: "人口密度ランキング" },
       { href: "/ranking/habitable-density", label: "可住地人口密度ランキング" },
-      { href: "/ranking/sparse-density", label: "人口密度が低い自治体ランキング" },
     ],
   },
 

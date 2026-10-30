@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
+import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/contact" },
@@ -25,8 +27,11 @@ export default function Page() {
       </p>
 
       <p>
-        Email: openwave25@gmail.com
+        Email: {CONTACT_EMAIL}
       </p>
+
+      <h2 style={{ fontSize: 20, marginTop: 28 }}>お問い合わせフォーム</h2>
+      <ContactForm />
 
       <p>
         お問い合わせいただく際は、対象のページURLを添えていただけると

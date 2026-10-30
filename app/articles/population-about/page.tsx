@@ -5,6 +5,7 @@ import PublishedDate from "@/components/PublishedDate";
 import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
 import AdSense from "@/components/AdSense";
+import ReaderSolution from "@/components/ReaderSolution";
 import JsonLd from "@/components/JsonLd";
 import { getMunicipalities } from "@/lib/municipalities";
 
@@ -311,6 +312,8 @@ export default function Page() {
           100万人都市一覧を見る
         </Link>
       </p>
+
+      <ReaderSolution slug="population-about" />
 
       <AdSense />
 

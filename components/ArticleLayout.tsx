@@ -5,6 +5,7 @@ import PublishedDate from "@/components/PublishedDate";
 import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdSense from "@/components/AdSense";
+import ReaderSolution from "@/components/ReaderSolution";
 import LatestArticles from "@/components/LatestArticles";
 import ShareButtons from "@/components/ShareButtons";
 import JsonLd from "@/components/JsonLd";
@@ -139,6 +140,8 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
       {children}
     </div>
   </div>
+
+  {path && <ReaderSolution slug={path.replace(/^\/articles\//, "").replace(/\/$/, "")} />}
 
   <AdSense />
 

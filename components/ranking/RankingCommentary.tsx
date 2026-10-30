@@ -270,6 +270,15 @@ export default function RankingCommentary({ slug }: { slug: string }) {
 
       <p style={p}>{lead}</p>
 
+      <DistributionChart
+        values={values}
+        median={med}
+        metricName={cfg.metricName}
+        noun={noun}
+        fmt={withUnit}
+        bins={rows.length < 100 ? 10 : 20}
+      />
+
       {facts.length > 0 && (
         <ul style={ul}>
           {facts.map((f) => (
@@ -314,6 +323,111 @@ export default function RankingCommentary({ slug }: { slug: string }) {
         </>
       )}
     </section>
+  );
+}
+
+/**
+ * 値の分布を表すヒストグラム(サーバー側で描くインラインSVG。外部ライブラリなし)。
+ * 外れ値で全体が潰れないよう、両端1%を除いて描く。値の幅が50倍以上あるときは対数目盛にする。
+ */
+function DistributionChart({
+  values,
+  median: med,
+  metricName,
+  noun,
+  fmt,
+  bins,
+}: {
+  values: number[];
+  median: number;
+  metricName: string;
+  noun: string;
+  fmt: (v: number) => string;
+  bins: number;
+}) {
+  const lo = quantile(values, 0.01);
+  const hi = quantile(values, 0.99);
+  if (!(hi > lo)) return null;
+
+  const useLog = lo > 0 && hi / lo >= 50;
+  const tf = (v: number) => (useLog ? Math.log10(v) : v);
+  const a = tf(lo);
+  const b = tf(hi);
+
+  const counts = new Array<number>(bins).fill(0);
+  let inRange = 0;
+  for (const v of values) {
+    if (v < lo || v > hi) continue;
+    const k = Math.min(bins - 1, Math.floor(((tf(v) - a) / (b - a)) * bins));
+    counts[k]++;
+    inRange++;
+  }
+  const maxC = Math.max(...counts);
+  if (maxC === 0) return null;
+
+  const W = 640;
+  const H = 210;
+  const padL = 10;
+  const padR = 10;
+  const padT = 26;
+  const padB = 46;
+  const plotW = W - padL - padR;
+  const plotH = H - padT - padB;
+  const barW = plotW / bins;
+  const medX = padL + Math.min(1, Math.max(0, (tf(med) - a) / (b - a))) * plotW;
+
+  const summary = `${metricName}の分布。${noun}の値は${fmt(lo)}から${fmt(hi)}の範囲(両端1%を除く)に分布し、中央値は${fmt(med)}です。`;
+
+  return (
+    <figure style={{ margin: "18px 0 8px" }}>
+      <svg
+        viewBox={`0 0 ${W} ${H}`}
+        role="img"
+        aria-label={summary}
+        style={{ width: "100%", height: "auto", display: "block" }}
+      >
+        <title>{summary}</title>
+        {counts.map((c, i) => {
+          const h = (c / maxC) * plotH;
+          return (
+            <rect
+              key={i}
+              x={padL + i * barW + 1}
+              y={padT + plotH - h}
+              width={Math.max(0, barW - 2)}
+              height={h}
+              fill="#93c5fd"
+              rx={2}
+            />
+          );
+        })}
+        <line x1={padL} x2={W - padR} y1={padT + plotH} y2={padT + plotH} stroke="#9ca3af" strokeWidth={1} />
+        <line x1={medX} x2={medX} y1={padT - 6} y2={padT + plotH} stroke="#1d4ed8" strokeWidth={2} strokeDasharray="5 3" />
+        <text
+          x={medX}
+          y={padT - 10}
+          textAnchor={medX > W * 0.7 ? "end" : medX < W * 0.3 ? "start" : "middle"}
+          fontSize={13}
+          fontWeight={700}
+          fill="#1d4ed8"
+        >
+          {`中央値 ${fmt(med)}`}
+        </text>
+        <text x={padL} y={H - 24} textAnchor="start" fontSize={12} fill="#4b5563">
+          {fmt(lo)}
+        </text>
+        <text x={W - padR} y={H - 24} textAnchor="end" fontSize={12} fill="#4b5563">
+          {fmt(hi)}
+        </text>
+        <text x={W / 2} y={H - 6} textAnchor="middle" fontSize={11} fill="#6b7280">
+          {`横軸: ${metricName}${useLog ? "(対数目盛)" : ""} / 縦軸: ${noun}の数`}
+        </text>
+      </svg>
+      <figcaption style={{ fontSize: 13, color: "#6b7280", lineHeight: 1.7 }}>
+        {metricName}の分布(両端1%ずつを除く、{inRange.toLocaleString()}{noun}分)。
+        棒が高いほど、その値の範囲に{noun}が多く集まっています。
+      </figcaption>
+    </figure>
   );
 }
 

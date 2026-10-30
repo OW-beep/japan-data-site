@@ -13,3 +13,14 @@ export const SITE_URL =
 export const SITE_NAME = "全国自治体データランキング";
 
 export const ADSENSE_CLIENT_ID = "ca-pub-4630812027939211";
+
+/** お問い合わせ先のメールアドレス */
+export const CONTACT_EMAIL = "openwave25@gmail.com";
+
+/**
+ * お問い合わせフォーム(Formspree)のフォームID。
+ * https://formspree.io で、このサイト用のフォームを作成し、発行されたIDを
+ * Vercelの環境変数 NEXT_PUBLIC_FORMSPREE_FORM_ID に設定してください。
+ * 未設定の間は、フォームは出さず、メールでの案内だけを表示します。
+ */
+export const FORMSPREE_FORM_ID = process.env.NEXT_PUBLIC_FORMSPREE_FORM_ID ?? "";

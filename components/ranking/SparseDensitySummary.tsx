@@ -53,13 +53,9 @@ export default function SparseDensitySummary({
       </p>
 
       <p style={{ lineHeight: 1.9, marginBottom: 0 }}>
-        人口密度が高い自治体のランキングとあわせて見ることで、
+        ページ上部の、人口密度が高い順のランキングとあわせて見ることで、
         同じ日本の国土の中にある、暮らしの密度の大きな違いが
         見えてきます。
-        <a href="/ranking/density" style={{ color: "#0e7490" }}>
-          人口密度が高い自治体ランキング
-        </a>
-        もあわせてご覧ください。
       </p>
     </section>
   );

@@ -40,7 +40,7 @@ export default function ManufacturingSummary({
       </div>
 
       <h2 style={{ marginTop: 0, fontSize: 24 }}>
-        製造業就業者比率ランキングから見える傾向
+        第2次産業就業者比率ランキングから見える傾向
       </h2>
 
       <p style={{ lineHeight: 1.9 }}>

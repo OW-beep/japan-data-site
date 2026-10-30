@@ -7,6 +7,7 @@ import PersonalNote from "@/components/PersonalNote";
 import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdSense from "@/components/AdSense";
+import ReaderSolution from "@/components/ReaderSolution";
 import BookRecommendation from "@/components/BookRecommendation";
 import { BOOKS } from "@/lib/amazonBooks";
 import JsonLd from "@/components/JsonLd";
@@ -387,6 +388,8 @@ export default function Page() {
           })),
         }}
       />
+
+      <ReaderSolution slug="birth-rate" />
 
       <AdSense />
 

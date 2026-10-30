@@ -11,13 +11,14 @@ import JsonLd from "../../../components/JsonLd";
 import Link from "next/link";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import SparseDensitySummary from "../../../components/ranking/SparseDensitySummary";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/density" },
   title: "市区町村 人口密度ランキング｜密度が高い・低い自治体は？",
   description:
-    "全国自治体の人口密度(1平方キロメートルあたりの人口)をランキング形式で比較。都市部の過密と地方の過疎の差がわかります。",
+    "全国自治体の人口密度(1平方キロメートルあたりの人口)を、高い順・低い順の両方でランキング。都市部の過密と、北海道の山間部など地方の過疎の差がわかります。",
 };
 
 export function generateMetadata() {
@@ -36,6 +37,13 @@ export default function Page() {
   const ranking = fullRanking.slice(0, 50);
 
   const lowest = fullRanking[fullRanking.length - 1];
+
+  // 人口密度が低い側の下位50(旧「人口密度が低い自治体ランキング」を統合)
+  const sparse = [...fullRanking]
+    .filter((c) => (c.populationDensity ?? 0) > 0)
+    .sort((a, b) => (a.populationDensity ?? 0) - (b.populationDensity ?? 0))
+    .slice(0, 50);
+  const hokkaidoInSparse = sparse.filter((c) => c.name.startsWith("北海道")).length;
   const average =
     fullRanking.reduce((s, c) => s + (c.populationDensity ?? 0), 0) /
     fullRanking.length;
@@ -54,6 +62,12 @@ export default function Page() {
       a: `${lowest?.name}で、1平方キロメートルあたり${(
         lowest?.populationDensity ?? 0
       ).toLocaleString()}人です。北海道や山間部、離島の自治体が下位に多く並びます。`,
+    },
+    {
+      q: "人口密度が低い自治体は、どこに多いですか？",
+      a: `人口密度が低い順に並べた下位50自治体のうち、北海道の自治体は${hokkaidoInSparse}です。最も低いのは${sparse[0]?.name}で、1平方キロメートルあたり${(
+        sparse[0]?.populationDensity ?? 0
+      ).toFixed(1)}人です。広い面積に対して人口が少ない山間部・離島・北海道の町村が並びます。ランキングは、このページの後半に掲載しています。`,
     },
     {
       q: "人口密度ランキングは何自治体を対象にしていますか？",
@@ -75,7 +89,7 @@ export default function Page() {
           marginBottom: 20,
         }}
       >
-        🏙️ 人口密度ランキング
+        🏙️ 人口密度ランキング(高い順・低い順)
       </h1>
 
       <DataAsOf text="人口:令和7年国勢調査(確定値)、面積:国土地理院" />
@@ -96,6 +110,12 @@ export default function Page() {
       >
         📖 なぜ東京都特別区が上位を独占するのか、分析記事を読む →
       </a>
+
+      <p style={{ margin: "0 0 16px" }}>
+        <a href="#low" style={{ color: "#0e7490", fontWeight: 700 }}>
+          人口密度が低い順の下位50自治体は、このページの後半に掲載しています ↓
+        </a>
+      </p>
 
       <MetricBox
         title="指標定義"
@@ -208,6 +228,32 @@ export default function Page() {
           />
         ))}
       </div>
+
+      <section id="low" style={{ marginTop: 48, scrollMarginTop: 24 }}>
+        <h2 style={{ fontSize: 26, marginBottom: 12 }}>🏞️ 人口密度が低い自治体 下位50</h2>
+        <p style={{ lineHeight: 1.9, color: "#374151" }}>
+          人口密度が低い順に並べた下位50自治体です。面積が広く、人口が少ない自治体ほど上位に来ます。
+        </p>
+
+        <SparseDensitySummary
+          ranking={sparse.map((c) => ({
+            name: c.name,
+            density: c.populationDensity ?? 0,
+          }))}
+        />
+
+        <div style={{ marginTop: 20 }}>
+          {sparse.map((c, i) => (
+            <RankCard
+              key={c.code}
+              rank={i + 1}
+              name={c.name}
+              value={(c.populationDensity ?? 0).toFixed(1)}
+              unit="人/km²"
+            />
+          ))}
+        </div>
+      </section>
 
       <RankingCommentary slug="density" />
 

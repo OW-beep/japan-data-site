@@ -225,7 +225,7 @@ export default function Page() {
 
         <p>
           <Link prefetch={false} href="/ranking/manufacturing" style={link}>
-            製造業就業者比率ランキングを見る
+            第2次産業就業者比率ランキングを見る
           </Link>
           {" ｜ "}
           <Link prefetch={false} href="/articles/unemployment-analysis" style={link}>
@@ -255,7 +255,7 @@ export default function Page() {
           働いている」人数とは一致しません。都市部への通勤者が
           多い自治体では、居住地ベースの産業構成と、実際に
           その土地で行われている経済活動の構成にズレが生じる
-          場合があります。とはいえ、製造業就業者比率が突出して
+          場合があります。とはいえ、第2次産業就業者比率が突出して
           高い自治体の多くは、実際にその土地に大規模な工場が
           立地しているケースがほとんどであり、今回紹介した
           町については、統計と実態はおおむね一致していると

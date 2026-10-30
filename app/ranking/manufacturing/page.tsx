@@ -11,7 +11,7 @@ import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "@/components/ranking/RankingCommentary";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/manufacturing" },
-  title: "全国自治体 製造業就業者比率ランキング",
+  title: "全国自治体 第2次産業(製造業・建設業など)就業者比率ランキング",
   description:
     "全国自治体の就業者に占める第2次産業(製造業・建設業など)の割合をランキング形式で比較。ファナックやSUBARU、トヨタ系部品メーカーなど、特定企業が地域経済を支える「ものづくりの町」を紹介します。",
 };
@@ -47,7 +47,7 @@ export default function Page() {
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 24 }}>
       <h1 style={{ fontSize: 32, marginBottom: 20 }}>
-        🏭 製造業就業者比率ランキング
+        🏭 第2次産業(製造業・建設業など)就業者比率ランキング
       </h1>
 
       <DataAsOf />
@@ -73,7 +73,7 @@ export default function Page() {
         title="指標定義"
         unit="%"
         definition="就業者(第1〜3次産業合計)に占める第2次産業(製造業・建設業・鉱業など)就業者の割合"
-        formula="製造業就業者比率 = 第2次産業就業者数 ÷ 全産業就業者数 × 100"
+        formula="第2次産業就業者比率 = 第2次産業就業者数 ÷ 全産業就業者数 × 100"
         example={{
           name: `例：${ranking[0].name}`,
           value: Number(ranking[0].share.toFixed(1)),

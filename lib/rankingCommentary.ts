@@ -273,10 +273,19 @@ const BASE_COMMENTARY: Record<string, CommentaryConfig> = {
         (c) => c.populationDensity != null,
         (c) => c.populationDensity ?? 0
       ),
+    facts: (rows) => {
+      const k = rows.filter((r) => r.value < 100).length;
+      const k1 = rows.filter((r) => r.value >= 1000).length;
+      return [
+        `1km²あたり100人に満たない自治体は${k.toLocaleString()}自治体で、対象の約${((k / rows.length) * 100).toFixed(1)}%です。`,
+        `1km²あたり1,000人以上の自治体は${k1.toLocaleString()}自治体で、対象の約${((k1 / rows.length) * 100).toFixed(1)}%です。`,
+      ];
+    },
     reading: [
       "人口密度は、人口を総面積で割った値です。可住地(住める土地)ではなく、山林や湖沼を含む総面積が基準です。",
       "市域に山地や農地が広く含まれる市は、市街地の実感より低い数値になります。市街地の密度を見たいときは、可住地人口密度のほうが実態に近くなります。",
       "東京都の特別区は1区ずつ集計されるため、市域が狭い区が上位に並びます。",
+      "このページの後半には、人口密度が低い順の下位50自治体も載せています。人口の少なさと人口密度の低さは別の指標で、面積が小さければ、人口が少なくても密度は低くなりません。",
       "人口密度が高い=暮らしやすい、という意味ではありません。住宅事情や通勤混雑などの面も、別途確認が必要です。",
     ],
     relatedArticles: [
@@ -288,7 +297,7 @@ const BASE_COMMENTARY: Record<string, CommentaryConfig> = {
     ],
     relatedRankings: [
       { href: "/ranking/habitable-density", label: "可住地人口密度ランキング" },
-      { href: "/ranking/sparse-density", label: "人口密度が低い自治体ランキング" },
+      { href: "/ranking/decrease", label: "人口が少ない自治体ランキング" },
       { href: "/ranking/area", label: "面積ランキング" },
     ],
   },
@@ -315,29 +324,6 @@ const BASE_COMMENTARY: Record<string, CommentaryConfig> = {
       { href: "/ranking/child", label: "子ども人口割合ランキング" },
       { href: "/ranking/education-expense", label: "教育費ランキング" },
       { href: "/ranking/community-center", label: "公民館数ランキング" },
-    ],
-  },
-
-  "sparse-density": {
-    metricName: "人口密度(低い順)",
-    unit: "人/km²",
-    digits: 1,
-    direction: "low",
-    rows: () =>
-      build25(
-        (c) => c.populationDensity != null && c.populationDensity > 0,
-        (c) => c.populationDensity ?? 0
-      ),
-    reading: [
-      "人口を総面積で割った値が低い順のランキングです。面積が広く、人口が少ない自治体ほど上位になります。",
-      "面積の大半が山林や原野の自治体は、住んでいる地域の実感より低い数値になります。集落の密度を見るには、可住地人口密度もあわせて確認してください。",
-      "人口が少ない自治体でも、面積が小さければ人口密度は低くなりません。人口の少なさと人口密度の低さは別の指標です。",
-    ],
-    relatedArticles: ["density-analysis", "habitable-density", "area-analysis", "decline"],
-    relatedRankings: [
-      { href: "/ranking/density", label: "人口密度ランキング" },
-      { href: "/ranking/habitable-density", label: "可住地人口密度ランキング" },
-      { href: "/ranking/decrease", label: "人口が少ない自治体ランキング" },
     ],
   },
 
@@ -387,8 +373,7 @@ const BASE_COMMENTARY: Record<string, CommentaryConfig> = {
     ],
     relatedArticles: ["habitable-density", "density-analysis", "density-aging"],
     relatedRankings: [
-      { href: "/ranking/density", label: "人口密度ランキング" },
-      { href: "/ranking/sparse-density", label: "人口密度が低い自治体ランキング" },
+      { href: "/ranking/density", label: "人口密度ランキング(低い順も掲載)" },
     ],
   },
 

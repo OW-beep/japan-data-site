@@ -13,6 +13,9 @@ export default function AuthorByline() {
       <Link prefetch={false} href="/about" style={link}>
         運営者情報を見る →
       </Link>
+      <Link prefetch={false} href="/editorial-policy" style={link}>
+        編集方針 →
+      </Link>
     </div>
   );
 }
