@@ -6,6 +6,7 @@ import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdSense from "@/components/AdSense";
 import ReaderSolution from "@/components/ReaderSolution";
+import CrossInsight from "@/components/CrossInsight";
 import LatestArticles from "@/components/LatestArticles";
 import ShareButtons from "@/components/ShareButtons";
 import JsonLd from "@/components/JsonLd";
@@ -140,6 +141,8 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
       {children}
     </div>
   </div>
+
+  {path && <CrossInsight slug={path.replace(/^\/articles\//, "").replace(/\/$/, "")} />}
 
   {path && <ReaderSolution slug={path.replace(/^\/articles\//, "").replace(/\/$/, "")} />}
 

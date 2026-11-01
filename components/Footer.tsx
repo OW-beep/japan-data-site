@@ -44,6 +44,7 @@ export default function Footer() {
 
           <ul style={list}>
             <li><Link prefetch={false} href="/about" style={footerLink}>サイトについて</Link></li>
+            <li><Link prefetch={false} href="/discoveries" style={footerLink}>意外な発見</Link></li>
             <li><Link prefetch={false} href="/editorial-policy" style={footerLink}>編集方針</Link></li>
             <li><Link prefetch={false} href="/privacy" style={footerLink}>プライバシーポリシー</Link></li>
             <li><Link prefetch={false} href="/terms" style={footerLink}>利用規約</Link></li>

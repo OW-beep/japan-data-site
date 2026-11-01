@@ -80,6 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles",
     "/about",
     "/editorial-policy",
+    "/discoveries",
     "/privacy",
     "/terms",
     "/contact",

@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
 import AffiliateSlot from "@/components/AffiliateSlot";
+import FurusatoTimeline from "@/components/FurusatoTimeline";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 import { getFurusatoNozeiRanking } from "@/lib/furusatoNozei";
@@ -119,6 +120,8 @@ export default function Page() {
           確認してください。
         </p>
       </div>
+
+      <FurusatoTimeline />
 
       {/* 「期限」で来た人が、次に探すのは寄付先。期限の表のすぐ下に置く(PR表記はA8Banner側で表示) */}
       <AffiliateSlot topic="furusato" />
