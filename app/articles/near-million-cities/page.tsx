@@ -6,6 +6,7 @@ import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
+import CityCompareTable from "@/components/CityCompareTable";
 function getBands() {
   const { rows, label, use2025 } = getMunicipalitiesPop();
   const by = (min: number, max: number) =>
@@ -234,6 +235,11 @@ export default function Page() {
         <CompareCTA />
       </div>
       <ClusterLinks current="/articles/near-million-cities" />
+      <CityCompareTable
+        kind="near"
+        heading="暮らしの指標で、70〜100万人の都市を比べる"
+        lead="100万人には届かないものの、人口が多い都市を、高齢化・子育て・財政・医療・住まいの指標で並べました。住む街の候補を絞るときの手がかりにしてください。"
+      />
     </ArticleLayout>
   );
 }

@@ -9,6 +9,7 @@ import { getMunicipalities } from "@/lib/municipalities";
 import { isDesignatedCity } from "@/lib/designatedCities";
 import type { City } from "@/lib/City";
 
+import CityCompareTable from "@/components/CityCompareTable";
 export const metadata = {
   alternates: { canonical: "/articles/designated-cities-comparison" },
   title:
@@ -374,6 +375,11 @@ export default function Page() {
       </div>
 
       <AffiliateSlot topic="moving" />
+      <CityCompareTable
+        kind="designated"
+        heading="暮らしの指標で、政令指定都市20市を比べる"
+        lead="政令指定都市20市を、高齢化・子育て・財政・医療・住まいの指標で並べました。転勤や進学で、住む都市を選ぶときの手がかりにしてください。"
+      />
     </ArticleLayout>
   );
 }

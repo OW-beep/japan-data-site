@@ -9,6 +9,7 @@ import { BOOKS } from "@/lib/amazonBooks";
 import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
+import CityCompareTable from "@/components/CityCompareTable";
 /** 100万人都市の一覧(令和7年国勢調査。取れていなければ令和2年に自動で戻る) */
 function getRanking() {
   const { rows, label, use2025 } = getCitiesPopWithTokyo23();
@@ -514,6 +515,11 @@ export default function Page() {
 
         <CompareCTA />
       </div>
+      <CityCompareTable
+        kind="million"
+        heading="暮らしの指標で、100万人都市を比べる"
+        lead="転勤や進学で、どの大都市に住むか迷っている人のために、人口が100万人以上の政令指定都市を、高齢化・子育て・財政・医療・住まいの指標で並べました。"
+      />
     </ArticleLayout>
   );
 }
