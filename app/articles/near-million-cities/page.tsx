@@ -7,6 +7,7 @@ import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
 import CityCompareTable from "@/components/CityCompareTable";
+import FuturePopulationTable from "@/components/FuturePopulationTable";
 function getBands() {
   const { rows, label, use2025 } = getMunicipalitiesPop();
   const by = (min: number, max: number) =>
@@ -239,6 +240,11 @@ export default function Page() {
         kind="near"
         heading="暮らしの指標で、70〜100万人の都市を比べる"
         lead="100万人には届かないものの、人口が多い都市を、高齢化・子育て・財政・医療・住まいの指標で並べました。住む街の候補を絞るときの手がかりにしてください。"
+      />
+      <FuturePopulationTable
+        kind="near"
+        heading="70〜100万人の都市の、2050年の姿"
+        lead="人口70〜100万人の都市は、2050年にどうなるのか。国立社会保障・人口問題研究所の推計で、2050年までの見通しを並べました。"
       />
     </ArticleLayout>
   );

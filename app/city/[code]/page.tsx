@@ -12,6 +12,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 
 import CitySummary from "@/components/city/CitySummary";
 import CityStats from "@/components/city/CityStats";
+import CityFuture from "@/components/city/CityFuture";
 import CityWards from "@/components/city/CityWards";
 import CityHighlights from "@/components/city/CityHighlights";
 import CityRanking from "@/components/city/CityRanking";
@@ -178,6 +179,8 @@ export default async function Page({
       <CityStrengths code={city.code} />
 
       <CityStats city={city} />
+
+      <CityFuture code={city.code} name={city.name} actual2025={city.population} />
 
       <CityWards cityFullName={city.name} />
 

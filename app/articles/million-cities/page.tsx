@@ -10,6 +10,7 @@ import CompareCTA from "@/components/CompareCTA";
 import Link from "next/link";
 
 import CityCompareTable from "@/components/CityCompareTable";
+import FuturePopulationTable from "@/components/FuturePopulationTable";
 /** 100万人都市の一覧(令和7年国勢調査。取れていなければ令和2年に自動で戻る) */
 function getRanking() {
   const { rows, label, use2025 } = getCitiesPopWithTokyo23();
@@ -519,6 +520,11 @@ export default function Page() {
         kind="million"
         heading="暮らしの指標で、100万人都市を比べる"
         lead="転勤や進学で、どの大都市に住むか迷っている人のために、人口が100万人以上の政令指定都市を、高齢化・子育て・財政・医療・住まいの指標で並べました。"
+      />
+      <FuturePopulationTable
+        kind="million"
+        heading="2050年の100万人都市は、どうなる?"
+        lead="人口が100万人以上の都市は、2050年にどうなるのか。国立社会保障・人口問題研究所の推計(令和5年推計)で、2050年までの人口と高齢化の見通しを、都市ごとに並べました。"
       />
     </ArticleLayout>
   );

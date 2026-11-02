@@ -109,7 +109,9 @@ function describe(r: number, xl: string, yl: string, log: boolean): string {
   const a = Math.abs(r);
   const lg = log ? "(対数に変換した値での相関です)" : "";
   if (a < 0.2) return `ほとんど関係が見られません${lg}`;
-  const dir = r > 0 ? `${xl}が高い自治体ほど、${yl}も高い` : `${xl}が高い自治体ほど、${yl}は低い`;
+  // 「人口が高い」「面積が高い」は不自然なので、大きさを表す指標は「大きい」と書く
+  const big = xl === "人口" || xl === "面積" ? "大きい" : "高い";
+  const dir = r > 0 ? `${xl}が${big}自治体ほど、${yl}も高い` : `${xl}が${big}自治体ほど、${yl}は低い`;
   if (a < 0.4) return `${dir}傾向がわずかにあります${lg}`;
   if (a < 0.6) return `${dir}傾向がはっきり見られます${lg}`;
   return `${dir}傾向が強く表れています${lg}`;

@@ -6,6 +6,7 @@
  * log: true の指標は、値の幅が非常に大きい(人口・面積・密度など)ため、図と相関を対数目盛で扱う。
  */
 import { getMunicipalities } from "./municipalities";
+import { estimateGap2025, getFuture, popIndex2050 } from "./futurePopulation";
 
 export type MunicipalCity = ReturnType<typeof getMunicipalities>[number];
 
@@ -119,6 +120,27 @@ export const METRICS = {
     unit: "人",
     digits: 1,
     get: (c) => (c.youngAdultNetMigration != null && c.population > 0 ? (c.youngAdultNetMigration / c.population) * 1000 : null),
+  },
+  index2050: {
+    label: "2050年の推計人口(2020年=100)",
+    unit: "",
+    digits: 0,
+    get: (c) => {
+      const f = getFuture(c.code);
+      return f ? popIndex2050(f) : null;
+    },
+  },
+  aging2050: {
+    label: "2050年の高齢化率(推計)",
+    unit: "%",
+    digits: 1,
+    get: (c) => getFuture(c.code)?.elderly[6] ?? null,
+  },
+  estGap: {
+    label: "2025年の人口:推計との差(実績が多いほどプラス)",
+    unit: "%",
+    digits: 1,
+    get: (c) => estimateGap2025(c.code),
   },
   recycling: { label: "ごみのリサイクル率", unit: "%", digits: 1, get: (c) => pos(c.recyclingRate) },
 } satisfies Record<string, Metric>;

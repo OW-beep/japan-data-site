@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { getMunicipalities2025 } from "@/lib/city2025";
-import { isDesignatedCity } from "@/lib/designatedCities";
+import { pickCities, type CitySetKind } from "@/lib/citySets";
 import { METRICS, formatMetric, type MetricKey, type MunicipalCity } from "@/lib/metrics";
 import { shortName } from "@/lib/crossAnalysis";
 
@@ -12,7 +11,6 @@ import { shortName } from "@/lib/crossAnalysis";
  * 濃い色は、その列の中で値が大きいことを表す(良い・悪いの評価ではない)。
  * 東京23区は区ごとのデータのため、含めない。
  */
-type Kind = "million" | "near" | "designated";
 
 const COLUMNS: { key: MetricKey; short: string }[] = [
   { key: "aging", short: "高齢化率" },
@@ -25,26 +23,16 @@ const COLUMNS: { key: MetricKey; short: string }[] = [
   { key: "social", short: "社会増減率(転入−転出)" },
 ];
 
-function pick(kind: Kind, all: MunicipalCity[]): MunicipalCity[] {
-  const list =
-    kind === "million"
-      ? all.filter((c) => c.population >= 1_000_000)
-      : kind === "near"
-        ? all.filter((c) => c.population >= 700_000 && c.population < 1_000_000)
-        : all.filter((c) => isDesignatedCity(c.name));
-  return list.sort((a, b) => b.population - a.population);
-}
-
 export default function CityCompareTable({
   kind,
   heading,
   lead,
 }: {
-  kind: Kind;
+  kind: CitySetKind;
   heading: string;
   lead: string;
 }) {
-  const cities = pick(kind, getMunicipalities2025());
+  const cities = pickCities(kind);
   if (cities.length < 3) return null;
 
   // 列ごとの最小・最大(濃淡と「最大・最小」の表示に使う)

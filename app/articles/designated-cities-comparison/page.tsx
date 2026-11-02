@@ -10,6 +10,7 @@ import { isDesignatedCity } from "@/lib/designatedCities";
 import type { City } from "@/lib/City";
 
 import CityCompareTable from "@/components/CityCompareTable";
+import FuturePopulationTable from "@/components/FuturePopulationTable";
 export const metadata = {
   alternates: { canonical: "/articles/designated-cities-comparison" },
   title:
@@ -379,6 +380,11 @@ export default function Page() {
         kind="designated"
         heading="暮らしの指標で、政令指定都市20市を比べる"
         lead="政令指定都市20市を、高齢化・子育て・財政・医療・住まいの指標で並べました。転勤や進学で、住む都市を選ぶときの手がかりにしてください。"
+      />
+      <FuturePopulationTable
+        kind="designated"
+        heading="政令指定都市20市の、2050年の姿"
+        lead="政令指定都市は、2050年にどうなるのか。国立社会保障・人口問題研究所の推計で、2050年までの人口と高齢化の見通しを並べました。"
       />
     </ArticleLayout>
   );

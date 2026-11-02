@@ -118,9 +118,9 @@ export const ARTICLE_CROSS: Record<string, ArticleCross> = {
   },
   "child-population-change-2025": {
     x: "child",
-    y: "social",
-    question: "子どもの割合が高い街は、人の転入も多い?",
-    how: "子どもが増えている街は、新しい住宅地の開発があることがあります。保育園や学校が足りているかを、自治体の窓口で確認してください。",
+    y: "index2050",
+    question: "子どもの割合が高い街は、2050年も人口を保てる?",
+    how: "子育て世帯が多い街が、これからも人口を保てるかを確認できます。保育や学校の整備の計画は、自治体の公式サイトで確認してください。",
   },
   "migration-child": {
     x: "social",
@@ -321,9 +321,10 @@ export const ARTICLE_CROSS: Record<string, ArticleCross> = {
   },
   "population-concentration": {
     x: "population",
-    y: "aging",
-    question: "人口が多い街ほど、高齢化は進んでいない?",
-    how: "都市部への集中と、地方の高齢化の関係を、この図で確認できます。自分の街が、集まる側か、減る側かを見てください。",
+    y: "index2050",
+    question: "人口が多い街ほど、2050年まで人口を保てる?",
+    how: "都市部への集中は、これからも続くのかを、推計で確認できます。自分の街が、保てる側か、減る側かを見て、親の住む街の将来も、あわせて考えてください。",
+    featured: true,
   },
   "density-aging": {
     x: "density",
@@ -384,15 +385,16 @@ export const ARTICLE_CROSS: Record<string, ArticleCross> = {
   },
   "elderly-population-change-2025": {
     x: "aging",
-    y: "social",
-    question: "高齢化が進む街で、人の転入は少ない?",
-    how: "親が暮らす街の将来を考えるなら、高齢化と転入の両方を見てください。転入が少ない街は、介護の体制を維持できるかが課題になります。",
+    y: "index2050",
+    question: "高齢化が進んだ街は、2050年に人口が大きく減る?",
+    how: "親が暮らす街の将来を考えるなら、高齢化が進んだ街で、人口がどれだけ減る推計かを見てください。介護や買い物の支援の計画を、自治体で確認しましょう。",
   },
   "population-change-2025": {
-    x: "social",
-    y: "natural",
-    question: "人が転入する街は、自然増減も良い?",
-    how: "人口の増減は、引っ越しの動き(社会増減)と、生まれる人・亡くなる人(自然増減)の合計です。図で、両方がそろって良い街を探せます。",
+    x: "youngNet",
+    y: "estGap",
+    question: "20代が転入する街は、推計より人口が増えた?",
+    how: "推計は、2020年を基準にした見通しです。20代が集まる街で、実際の人口が推計を上回ったかを見ると、人を引きつける力が分かります。",
+    featured: true,
   },
   "population-churn-analysis": {
     x: "social",
