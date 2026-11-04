@@ -1,6 +1,6 @@
 import Link from "next/link";
 import CrossScatter from "@/components/CrossScatter";
-import { ARTICLE_CROSS } from "@/lib/articleCross";
+import { ARTICLE_CROSS, type ArticleCross } from "@/lib/articleCross";
 import { analyzeCross, fullName, type Surprise } from "@/lib/crossAnalysis";
 import { METRICS, formatMetric, type MetricKey } from "@/lib/metrics";
 
@@ -11,8 +11,15 @@ import { METRICS, formatMetric, type MetricKey } from "@/lib/metrics";
  * 設定は lib/articleCross.ts。設定のない記事には何も表示しない。
  * 「なぜ外れているか」はデータからは分からないため、理由は断定しない。
  */
-export default function CrossInsight({ slug }: { slug: string }) {
-  const cfg = ARTICLE_CROSS[slug];
+export default function CrossInsight({
+  slug,
+  cfg: cfgOverride,
+}: {
+  slug: string;
+  /** 1つの記事で、複数の組み合わせを出すときに、設定を直接渡す(省略時は lib/articleCross.ts の設定) */
+  cfg?: ArticleCross;
+}) {
+  const cfg = cfgOverride ?? ARTICLE_CROSS[slug];
   if (!cfg) return null;
   const res = analyzeCross(cfg.x, cfg.y);
   if (!res) return null;
@@ -22,8 +29,8 @@ export default function CrossInsight({ slug }: { slug: string }) {
   const ym = METRICS[cfg.y] as { label: string };
 
   return (
-    <section aria-labelledby={`cross-${slug}`} style={wrap}>
-      <h2 id={`cross-${slug}`} style={h2}>
+    <section aria-labelledby={`cross-${slug}-${cfg.x}-${cfg.y}`} style={wrap}>
+      <h2 id={`cross-${slug}-${cfg.x}-${cfg.y}`} style={h2}>
         掛け合わせで見る意外な発見
       </h2>
       <p style={question}>{cfg.question}</p>

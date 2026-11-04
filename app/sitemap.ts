@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/density",
     "/ranking/area",
     "/ranking/finance",
+    "/ranking/taxable-income",
     "/ranking/decline",
     "/ranking/household",
     "/ranking/household-size",

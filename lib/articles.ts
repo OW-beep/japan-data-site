@@ -23,6 +23,7 @@ export type ArticleEntry = {
 
 /** 予約公開(lib/release.ts)の判定を入れる前の、登録済みの全記事。公開チェックなどの内部用 */
 export const ALL_ARTICLE_ENTRIES: ArticleEntry[] = [
+  { slug: "municipal-income-analysis", date: "2026-11-04", title: "所得が高い市区町村ランキング【令和7年度】", desc: "納税義務者1人あたりの課税対象所得を、令和7年度の課税データで分析。所得が高い街・低い街と、暮らしとの関係を読み解きます。" },
   { slug: "agri-output-per-capita", date: "2026-10-16", title: "人口あたりの農業産出額が多い市町村(令和6年)", desc: "農業産出額を人口で割って比べると、規模の大きい産地とは違う顔ぶれになります。人口5,000人以上の市町村と、市だけのランキング。" },
   { slug: "agri-top-municipalities", date: "2026-10-16", title: "農業産出額が多い市町村の稼ぎ方(畜産型・野菜型・米型)", desc: "農業産出額の上位20市町村について、米・野菜・果実・花き・畜産のどれで稼いでいるかの内訳を比べました。" },
   { slug: "agri-prefecture-top", date: "2026-10-16", title: "農業産出額が最も多い市町村、47都道府県の一覧", desc: "都道府県ごとに、農業産出額(令和6年・推計)が最も多い市町村と上位3位を一覧にしました。" },

@@ -26,6 +26,15 @@ export type ArticleCross = {
 };
 
 export const ARTICLE_CROSS: Record<string, ArticleCross> = {
+  // ───────────── 所得 ─────────────
+  "municipal-income-analysis": {
+    x: "income",
+    y: "keiCar",
+    question: "所得が低い街ほど、軽自動車は多い?",
+    how: "車が必要な地域で暮らすなら、車の維持費も、生活費の一部です。軽自動車が多い街は、車が日常の足になっている可能性があります。沖縄や奄美の観光地などでは、レンタカーの台数が含まれている可能性もあるので、数字だけで暮らし方は決められません。",
+    featured: true,
+  },
+
   // ───────────── 医療・介護 ─────────────
   "doctors-analysis": {
     x: "aging",

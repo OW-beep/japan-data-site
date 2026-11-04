@@ -21,6 +21,7 @@ const rankings = [
   { href: "/ranking/density", emoji: "🏘️", label: "人口密度ランキング" },
   { href: "/ranking/area", emoji: "🗺️", label: "面積ランキング" },
   { href: "/ranking/finance", emoji: "💰", label: "財政力指数ランキング" },
+  { href: "/ranking/taxable-income", emoji: "💴", label: "所得ランキング(市区町村別)" },
   { href: "/ranking/decline", emoji: "📊", label: "社会増減率ランキング" },
   { href: "/ranking/household", emoji: "🏠", label: "単独世帯割合ランキング" },
   { href: "/ranking/household-size", emoji: "👨‍👩‍👧‍👦", label: "平均世帯人員ランキング" },

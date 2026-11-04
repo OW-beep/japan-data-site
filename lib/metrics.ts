@@ -7,6 +7,7 @@
  */
 import { getMunicipalities } from "./municipalities";
 import { estimateGap2025, getFuture, popIndex2050 } from "./futurePopulation";
+import { getTax } from "./taxableIncome";
 
 export type MunicipalCity = ReturnType<typeof getMunicipalities>[number];
 
@@ -141,6 +142,58 @@ export const METRICS = {
     unit: "%",
     digits: 1,
     get: (c) => estimateGap2025(c.code),
+  },
+  income: {
+    label: "納税義務者1人あたり課税対象所得",
+    unit: "万円",
+    digits: 0,
+    log: true,
+    get: (c) => getTax(c.code)?.incomePerTaxpayer ?? null,
+  },
+  salaryShare: {
+    label: "給与所得者の割合(住民税の納税義務者のうち)",
+    unit: "%",
+    digits: 1,
+    get: (c) => {
+      const t = getTax(c.code);
+      return t && t.all > 0 ? (t.sal / t.all) * 100 : null;
+    },
+  },
+  bizShare: {
+    label: "営業等(自営業など)の所得者の割合",
+    unit: "%",
+    digits: 1,
+    get: (c) => {
+      const t = getTax(c.code);
+      return t && t.all > 0 ? (t.biz / t.all) * 100 : null;
+    },
+  },
+  farmShare: {
+    label: "農業所得者の割合",
+    unit: "%",
+    digits: 1,
+    get: (c) => {
+      const t = getTax(c.code);
+      return t && t.all > 0 ? (t.farm / t.all) * 100 : null;
+    },
+  },
+  stockShare: {
+    label: "株式等の所得が課税対象所得に占める割合",
+    unit: "%",
+    digits: 1,
+    get: (c) => {
+      const t = getTax(c.code);
+      return t && t.ti > 0 ? (t.st / t.ti) * 100 : null;
+    },
+  },
+  keiCar: {
+    label: "軽自動車(四輪乗用・自家用)の台数(人口100人あたり)",
+    unit: "台",
+    digits: 1,
+    get: (c) => {
+      const t = getTax(c.code);
+      return t && c.population > 0 ? (t.kei / c.population) * 100 : null;
+    },
   },
   recycling: { label: "ごみのリサイクル率", unit: "%", digits: 1, get: (c) => pos(c.recyclingRate) },
 } satisfies Record<string, Metric>;

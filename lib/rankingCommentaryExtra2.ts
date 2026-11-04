@@ -19,6 +19,7 @@ import {
 import { build, build25, n, share, smallTop, sortedBy } from "./rankingCommentaryExtra";
 import { getPrefectureStats, type PrefectureStats } from "./prefectureStats";
 import { getCorporateGrowthRanking } from "./corporateRegistration";
+import { getTax, nationalIncomePerTaxpayer } from "./taxableIncome";
 import { getRealEstatePriceRanking } from "./realEstatePrice";
 import { getCapitalElevationRanking } from "./capitalElevation";
 
@@ -736,6 +737,39 @@ export const EXTRA_COMMENTARY_B: Record<string, CommentaryConfig> = {
       { href: "/ranking/traffic-accident-city", label: "交通事故発生件数ランキング(市区町村)" },
       { href: "/ranking/icy-road-accident", label: "凍結路面の事故ランキング" },
       { href: "/ranking/crime-rate", label: "刑法犯認知件数ランキング(都道府県)" },
+    ],
+  },
+
+  "taxable-income": {
+    metricName: "納税義務者1人あたり課税対象所得",
+    unit: "万円",
+    digits: 0,
+    direction: "high",
+    scope: "人口3,000人以上の市区町村",
+    minPopulation: 3_000,
+    rows: () =>
+      getMunicipalities()
+        .filter((c) => c.population >= 3000)
+        .map((c) => ({ c, t: getTax(c.code) }))
+        .filter((r): r is { c: (typeof r)["c"]; t: NonNullable<(typeof r)["t"]> } => r.t != null)
+        .map((r) => ({ name: r.c.name, population: r.c.population, value: r.t.incomePerTaxpayer })),
+    facts: (rows) => [
+      `全国の合計で見た、納税義務者1人あたりの課税対象所得は${nationalIncomePerTaxpayer().toFixed(1)}万円です。`,
+      share("400万円以上の自治体", (v) => v >= 400)(rows),
+      share("300万円に満たない自治体", (v) => v < 300)(rows),
+    ],
+    reading: [
+      "住民税(所得割)を納める人の、前年(令和6年)の所得の合計を、その人数で割った金額です。年収(収入)ではなく、収入から必要経費などを引いた所得で、所得控除の前の金額です。",
+      "住民税は、1月1日に住んでいる市町村で課税されます。このため、勤務先の所在地で集計する賃金の統計とは、順位が異なります。都心に勤める人が多く住む街は、高くなります。",
+      "住民全員の平均ではなく、所得割の課税対象になる人の平均です。株式の売却益や配当などの所得が大きい人が少数いる自治体では、人口が少ないほど、平均が大きく動きます。",
+      "所得が高い=暮らしが豊か、とは限りません。家賃などの生活費は、街によって大きく違います。住居費もあわせて見てください。",
+    ],
+    relatedArticles: ["municipal-income-analysis", "prefecture-income-analysis", "aging-finance", "finance-analysis"],
+    relatedRankings: [
+      { href: "/ranking/income", label: "平均年収ランキング(都道府県)" },
+      { href: "/ranking/finance", label: "財政力指数ランキング" },
+      { href: "/ranking/aging", label: "高齢化率ランキング" },
+      { href: "/ranking/real-estate-price", label: "不動産取引価格ランキング" },
     ],
   },
 
