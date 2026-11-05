@@ -116,6 +116,13 @@ export default function FuturePopulationTable({
           </li>
         )}
       </ul>
+      {kind === "million" && (
+        <p style={{ ...note, fontSize: 14 }}>
+          <Link prefetch={false} href="/articles/future-million-cities" style={link}>
+            くわしい分析: 100万人都市は2050年にどうなる?(75歳以上の増加、全国の市の見通しも) →
+          </Link>
+        </p>
+      )}
       <p style={note}>
         この推計は、令和2(2020)年の国勢調査を基準に、出生中位・死亡中位の仮定でつくった「将来の見通し」で、確定した未来ではありません。
         出典:国立社会保障・人口問題研究所「日本の地域別将来推計人口(令和5(2023)年推計)」。

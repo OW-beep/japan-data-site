@@ -25,6 +25,10 @@ export default function CrossInsight({
   if (!res) return null;
 
   const weak = Math.abs(res.r) < WEAK_R;
+  // 直線の予想が、実際に観測された範囲を超えてしまう自治体(極端な値の街で起きる)があるか
+  const yMax = Math.max(...res.points.map((p) => p.y));
+  const yMin = Math.min(...res.points.map((p) => p.y));
+  const overshoot = [...res.above, ...res.below].some((s) => s.expectedY > yMax * 1.05 || s.expectedY < yMin - (yMax - yMin) * 0.05);
   const xm = METRICS[cfg.x] as { label: string };
   const ym = METRICS[cfg.y] as { label: string };
 
@@ -83,6 +87,12 @@ export default function CrossInsight({
       <p style={how}>
         <strong>この図の使い方</strong>:{cfg.how}
       </p>
+      {!weak && overshoot && (
+        <p style={note}>
+          注意: 一部の自治体は、{xm.label}が極端に大きい(小さい)ため、直線の傾向から計算した「予想」が、実際にほかの自治体で見られる範囲を超えています。
+          その自治体の実際の値が、悪いという意味ではありません。
+        </p>
+      )}
       <p style={note}>
         {weak
           ? "相関係数は、2つの値が一緒に動く傾向の強さを表します。関係が見られないことは、片方がもう片方に影響しないことを証明するものではありません。"

@@ -35,6 +35,14 @@ export const ARTICLE_CROSS: Record<string, ArticleCross> = {
     featured: true,
   },
 
+  "future-million-cities": {
+    x: "income",
+    y: "index2050",
+    question: "所得が高い街ほど、2050年まで人口を保てる?",
+    how: "将来の人口は、いまの所得の高さと結びついているかを、全国の市区町村で確認できます。所得が低くても人口が保たれる赤の街、所得が高くても減る橙の街は、理由を自治体の計画で確かめてください。",
+    featured: true,
+  },
+
   // ───────────── 医療・介護 ─────────────
   "doctors-analysis": {
     x: "aging",

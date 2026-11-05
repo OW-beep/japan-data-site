@@ -94,3 +94,27 @@ export function futureRank(code: string): { rank: number; total: number; median:
   if (i < 0) return null;
   return { rank: i + 1, total: rankCache.sorted.length, median: rankCache.median };
 }
+
+export type FutureRow = FutureSeries & {
+  name: string;
+  /** a=都道府県, 0=政令市の区(東京23区を含む), 1=政令市, 2=その他の市, 3=町村, 9=浜通り地域 */
+  kind: string;
+};
+
+/** 推計がある全団体(都道府県を除く)。市の数のしきい値の集計などに使う */
+export function futureRows(): FutureRow[] {
+  return Object.entries(DATA.values)
+    .filter(([, r]) => r.k !== "a")
+    .map(([code, r]) => ({ code, name: r.n, kind: r.k, pop: r.p, child: r.c, working: r.w, elderly: r.e, old75: r.o }));
+}
+
+/** 5年ごとの推計値のあいだを直線でつなぎ、人口が threshold を下回る年を返す(下回らなければ null) */
+export function crossingYear(pop: number[], threshold: number): number | null {
+  for (let i = 0; i < pop.length - 1; i++) {
+    if (pop[i] >= threshold && pop[i + 1] < threshold) {
+      const f = (pop[i] - threshold) / (pop[i] - pop[i + 1]);
+      return FUTURE_YEARS[i] + 5 * f;
+    }
+  }
+  return null;
+}
