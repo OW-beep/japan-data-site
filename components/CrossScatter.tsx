@@ -99,6 +99,10 @@ export default function CrossScatter({
   const toPxX = (t: number) => padL + ((t - xLo) / (xHi - xLo)) * plotW;
   const toPxY = (t: number) => padT + plotH - ((t - yLo) / (yHi - yLo)) * plotH;
 
+  const dotGroups: string[][] = [[], [], []];
+  res.points.forEach((p, i) => dotGroups[i % 3].push(`M${r1(X(p.x))} ${r1(Y(p.y))}h0`));
+  const dotPaths = dotGroups.map((g) => g.join(""));
+
   const summary = `${xm.label}と${ym.label}の散布図。全国${res.n.toLocaleString()}自治体を1点ずつ表示し、相関係数は${res.r.toFixed(2)}です。`;
 
   return (
@@ -136,11 +140,11 @@ export default function CrossScatter({
         <rect x={padL} y={padT} width={plotW} height={plotH} fill="none" stroke="#cbd5e1" />
 
         <g clipPath={`url(#clip-${xKey}-${yKey})`}>
-          <g fill="#3b82f6" fillOpacity={0.32}>
-            {res.points.map((p) => (
-              <circle key={p.code} cx={r1(X(p.x))} cy={r1(Y(p.y))} r={2.2} />
-            ))}
-          </g>
+          {/* 点は、1点ずつ <circle> にせず、3つの <path>(丸い線端の長さ0の線)にまとめて、HTMLを軽くする。
+              3組に分けて重ねるので、点が重なる所は、少し濃く見える */}
+          {dotPaths.map((d, i) => (
+            <path key={i} d={d} stroke="#3b82f6" strokeOpacity={0.24} strokeWidth={4.4} strokeLinecap="round" fill="none" />
+          ))}
           <line
             x1={r1(toPxX(lx1))}
             y1={r1(toPxY(ly1))}

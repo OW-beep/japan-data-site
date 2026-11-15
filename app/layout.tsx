@@ -89,6 +89,8 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${notoSansJP.variable} ${workSans.variable}`}>
       <head>
+        {/* RSSフィードの自動検出。ページごとの metadata(canonical)に上書きされないよう、<head> に直接置く */}
+        <link rel="alternate" type="application/rss+xml" title={`${SITE_NAME} 新着記事`} href="/feed.xml" />
         {/*
           AdSense読み込みスクリプト。
           審査通過前でもタグ自体は設置しておいて問題ありません

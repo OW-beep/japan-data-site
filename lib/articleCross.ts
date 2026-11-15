@@ -18,6 +18,8 @@ export type ArticleCross = {
   question: string;
   how: string;
   featured?: boolean;
+  /** true のときは、記事の本文で直接表示する(ArticleLayout の末尾への自動表示をしない) */
+  inline?: boolean;
   /**
    * 相関係数が小さいとき(関係がない扱い)の、説明の上書き(任意)。
    * U字のように、直線の相関では見えない関係がある記事で使う。
@@ -33,6 +35,7 @@ export const ARTICLE_CROSS: Record<string, ArticleCross> = {
     question: "所得が低い街ほど、軽自動車は多い?",
     how: "車が必要な地域で暮らすなら、車の維持費も、生活費の一部です。軽自動車が多い街は、車が日常の足になっている可能性があります。沖縄や奄美の観光地などでは、レンタカーの台数が含まれている可能性もあるので、数字だけで暮らし方は決められません。",
     featured: true,
+    inline: true,
   },
 
   "future-million-cities": {
@@ -41,6 +44,15 @@ export const ARTICLE_CROSS: Record<string, ArticleCross> = {
     question: "所得が高い街ほど、2050年まで人口を保てる?",
     how: "将来の人口は、いまの所得の高さと結びついているかを、全国の市区町村で確認できます。所得が低くても人口が保たれる赤の街、所得が高くても減る橙の街は、理由を自治体の計画で確かめてください。",
     featured: true,
+    inline: true,
+  },
+
+  "light-car-ownership-analysis": {
+    x: "index2050",
+    y: "keiCar",
+    question: "将来、人口が減る街ほど、軽自動車は多い?",
+    how: "人口が減る推計の街で、車が日常の足になっているかを、軽自動車の台数から確認できます。運転できなくなったあとの移動手段の見通しは、自治体の交通の計画で確かめてください。",
+    inline: true,
   },
 
   // ───────────── 医療・介護 ─────────────

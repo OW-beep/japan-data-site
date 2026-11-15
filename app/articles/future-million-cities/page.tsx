@@ -11,6 +11,8 @@ import {
   type FutureSeries,
 } from "@/lib/futurePopulation";
 import { shortName } from "@/lib/crossAnalysis";
+import CrossInsight from "@/components/CrossInsight";
+import { ARTICLE_CROSS } from "@/lib/articleCross";
 
 export const metadata = {
   alternates: { canonical: "/articles/future-million-cities" },
@@ -310,6 +312,8 @@ export default function Page() {
             .join("、")}です(2020年=100)。
         </p>
       </div>
+
+      <CrossInsight slug="future-million-cities-income" cfg={ARTICLE_CROSS["future-million-cities"]} />
 
       <div style={box}>
         <h2>将来の人口を、暮らしの判断にどう使うか</h2>

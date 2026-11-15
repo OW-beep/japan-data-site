@@ -14,6 +14,7 @@ import CitySummary from "@/components/city/CitySummary";
 import CityStats from "@/components/city/CityStats";
 import CityFuture from "@/components/city/CityFuture";
 import CityIncome from "@/components/city/CityIncome";
+import AffiliateRecommend from "@/components/AffiliateRecommend";
 import CityWards from "@/components/city/CityWards";
 import CityHighlights from "@/components/city/CityHighlights";
 import CityRanking from "@/components/city/CityRanking";
@@ -231,6 +232,9 @@ export default async function Page({
           ← トップページへ戻る
         </Link>
       </div>
+
+      {/* この街への引っ越しを考えている人向けの広告枠(ASPのコードを lib/affiliates.ts の moving に貼ると表示される) */}
+      <AffiliateRecommend topics={["moving"]} />
     </main>
   );
 }

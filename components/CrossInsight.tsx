@@ -21,6 +21,8 @@ export default function CrossInsight({
 }) {
   const cfg = cfgOverride ?? ARTICLE_CROSS[slug];
   if (!cfg) return null;
+  // 記事の本文で直接表示する設定(inline)は、レイアウトの自動表示では出さない
+  if (!cfgOverride && cfg.inline) return null;
   const res = analyzeCross(cfg.x, cfg.y);
   if (!res) return null;
 

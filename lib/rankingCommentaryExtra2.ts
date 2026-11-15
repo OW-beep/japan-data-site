@@ -740,6 +740,37 @@ export const EXTRA_COMMENTARY_B: Record<string, CommentaryConfig> = {
     ],
   },
 
+  "light-car": {
+    metricName: "軽自動車(四輪乗用・自家用)の台数(人口100人あたり)",
+    unit: "台",
+    digits: 1,
+    direction: "high",
+    scope: "人口3,000人以上の市区町村",
+    minPopulation: 3_000,
+    rows: () =>
+      getMunicipalities()
+        .filter((c) => c.population >= 3000)
+        .map((c) => ({ c, t: getTax(c.code) }))
+        .filter((r): r is { c: (typeof r)["c"]; t: NonNullable<(typeof r)["t"]> } => r.t != null)
+        .map((r) => ({ name: r.c.name, population: r.c.population, value: (r.t.kei / r.c.population) * 100 })),
+    facts: (rows) => [
+      share("人口100人あたり10台以上の自治体", (v) => v >= 10)(rows),
+      share("人口100人あたり1台に満たない自治体", (v) => v < 1)(rows),
+    ],
+    reading: [
+      "軽四輪の乗用・自家用の台数(令和7年4月1日現在)を、人口100人あたりに直した値です。軽自動車税の課税台数がもとで、普通車、軽貨物、営業用は含まれません。",
+      "軽自動車が多い=車が多い、ではありません。普通車が多い地域は、軽自動車の数字が小さく出ます。軽自動車の「普及の度合い」を見る数字です。",
+      "観光地では、レンタカーの台数が含まれている可能性があります。沖縄県や奄美の観光地が上位に並ぶ点は、読むときに注意してください。",
+      "人口が少ない自治体では、少数の台数の違いで値が動きます。所得や人口密度、高齢化率との関係は、関連の記事で確認できます。",
+    ],
+    relatedArticles: ["light-car-ownership-analysis", "municipal-income-analysis", "elderly-driver-accident-analysis", "shopping-access"],
+    relatedRankings: [
+      { href: "/ranking/taxable-income", label: "所得ランキング(市区町村別)" },
+      { href: "/ranking/density", label: "人口密度ランキング(低い順も掲載)" },
+      { href: "/ranking/aging", label: "高齢化率ランキング" },
+    ],
+  },
+
   "taxable-income": {
     metricName: "納税義務者1人あたり課税対象所得",
     unit: "万円",

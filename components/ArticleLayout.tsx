@@ -6,6 +6,7 @@ import AuthorByline from "@/components/AuthorByline";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import AdSense from "@/components/AdSense";
 import ReaderSolution from "@/components/ReaderSolution";
+import AffiliateRecommend from "@/components/AffiliateRecommend";
 import CrossInsight from "@/components/CrossInsight";
 import LatestArticles from "@/components/LatestArticles";
 import ShareButtons from "@/components/ShareButtons";
@@ -78,7 +79,8 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
         headline: title,
         description: summary,
         datePublished: publishedAt,
-        dateModified: meta.updatedAt,
+        // 更新日は、公開日より前にならないようにする(サイト全体のデータ更新日が、公開日より古い場合があるため)
+        dateModified: [publishedAt, meta.updatedAt].filter((v): v is string => Boolean(v)).sort().pop(),
         ...(path
           ? {
               mainEntityOfPage: {
@@ -145,6 +147,9 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
   {path && <CrossInsight slug={path.replace(/^\/articles\//, "").replace(/\/$/, "")} />}
 
   {path && <ReaderSolution slug={path.replace(/^\/articles\//, "").replace(/\/$/, "")} />}
+
+  {/* 悩みに合うアフィリエイト枠(ASPのコードを lib/affiliates.ts に貼ったトピックだけ表示される) */}
+  {path && <AffiliateRecommend slug={path.replace(/^\/articles\//, "").replace(/\/$/, "")} />}
 
   <AdSense />
 

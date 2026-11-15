@@ -36,6 +36,7 @@ const V = {
 export const COMPARE: Record<string, CompareVar[]> = {
   finance: [V.aging, V.density],
   "taxable-income": [V.aging, V.finance],
+  "light-car": [V.density, V.aging],
   "balance-ratio": [V.finance, V.aging],
   "debt-service-ratio": [V.finance, V.density],
   "tax-ratio": [V.finance, V.aging],

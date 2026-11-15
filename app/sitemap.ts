@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/ranking/area",
     "/ranking/finance",
     "/ranking/taxable-income",
+    "/ranking/light-car",
     "/ranking/decline",
     "/ranking/household",
     "/ranking/household-size",

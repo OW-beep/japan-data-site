@@ -2,6 +2,7 @@ import Link from "next/link";
 import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import CrossInsight from "@/components/CrossInsight";
+import { ARTICLE_CROSS } from "@/lib/articleCross";
 import { getMunicipalities } from "@/lib/municipalities";
 import { getTax, nationalIncomePerTaxpayer, TAX_META } from "@/lib/taxableIncome";
 import { shortName, fullName } from "@/lib/crossAnalysis";
@@ -279,6 +280,8 @@ export default function Page() {
           how: "親の住む街や、自分が将来住む街を考えるとき、高齢化率が高い街の中でも、所得が高い赤の街と、低い橙の街があります。所得は、生活費や家賃とあわせて見てください。",
         }}
       />
+
+      <CrossInsight slug="municipal-income-analysis-keicar" cfg={ARTICLE_CROSS["municipal-income-analysis"]} />
 
       <div style={box}>
         <h2>まとめ</h2>
