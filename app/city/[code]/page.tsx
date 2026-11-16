@@ -12,6 +12,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 
 import CitySummary from "@/components/city/CitySummary";
 import CityPositionVisual from "@/components/city/CityPositionVisual";
+import CityLocationMap from "@/components/city/CityLocationMap";
 import CityStats from "@/components/city/CityStats";
 import CityFuture from "@/components/city/CityFuture";
 import CityIncome from "@/components/city/CityIncome";
@@ -178,6 +179,14 @@ export default async function Page({
       </h1>
 
       <CitySummary city={city} />
+
+      <CityLocationMap
+        code={city.code}
+        prefecture={pref}
+        cityName={cityName}
+        area={city.area ?? null}
+        density={city.populationDensity ?? null}
+      />
 
       {insight && <CityPositionVisual insight={insight} />}
 

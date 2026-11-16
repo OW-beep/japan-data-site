@@ -58,6 +58,8 @@ const LAYOUT: { name: string; short: string; x: number; y: number }[] = [
   { name: "沖縄県", short: "沖縄", x: 0, y: 9 },
 ];
 
+export { LAYOUT as PREFECTURE_TILE_LAYOUT };
+
 const COLORS = ["#dbeafe", "#93c5fd", "#60a5fa", "#2563eb", "#1e3a8a"];
 const CELL = 40;
 const GAP = 3;
