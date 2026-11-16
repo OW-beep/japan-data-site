@@ -11,6 +11,7 @@ import JsonLd from "@/components/JsonLd";
 import RelatedArticles from "@/components/RelatedArticles";
 
 import CitySummary from "@/components/city/CitySummary";
+import CityPositionVisual from "@/components/city/CityPositionVisual";
 import CityStats from "@/components/city/CityStats";
 import CityFuture from "@/components/city/CityFuture";
 import CityIncome from "@/components/city/CityIncome";
@@ -92,6 +93,8 @@ export default async function Page({
   }
 
   const ranking = getCityRanking(code);
+
+  const insight = getCityInsight(code);
 
   const allCities = getCities2025();
 
@@ -175,6 +178,8 @@ export default async function Page({
       </h1>
 
       <CitySummary city={city} />
+
+      {insight && <CityPositionVisual insight={insight} />}
 
       <CityNarrative code={city.code} />
 

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 import { getMunicipalitiesPop, isShi, shortName } from "@/lib/cityPopulation";
@@ -112,6 +113,14 @@ export default function Page() {
             </tbody>
           </table>
         </div>
+        <RankingBarChart
+          title="社会増減率が高い市(人口10万人以上)"
+          items={socialTop.map((c) => ({
+            name: shortName(c.name),
+            value: c.socialRate,
+            displayValue: `+${c.socialRate.toFixed(2)}%`,
+          }))}
+        />
         <p>
           一方で、転出超過が大きい市もあります(
           {socialBottom.map((c) => `${shortName(c.name)}(${c.socialRate.toFixed(2)}%)`).join("、")})。

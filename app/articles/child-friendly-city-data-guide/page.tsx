@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 import { getMunicipalities } from "@/lib/municipalities";
@@ -132,6 +133,15 @@ export default function Page() {
             </tbody>
           </table>
         </div>
+        <RankingBarChart
+          title="子どもの割合が高い市(人口10万人以上)"
+          barColor="#be185d"
+          items={childTop.map((c) => ({
+            name: shortName(c.name),
+            value: c.childRatio,
+            displayValue: `${c.childRatio.toFixed(1)}%`,
+          }))}
+        />
         <p>
           全国の市の子ども割合は
           <Link prefetch={false} href="/ranking/child" style={link}>

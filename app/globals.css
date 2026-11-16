@@ -72,6 +72,50 @@ strong {
   padding-left: 12px;
 }
 
+.article-body h3 {
+  border-left: 3px solid #f59e0b;
+  padding-left: 10px;
+  margin-top: 1.6em;
+}
+
+/* 記事内の表: 個別にスタイル指定されていない表でも読みやすくする。
+   インラインスタイルがある表はそちらが優先されるため、影響は最小限 */
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.94em;
+  margin: 1em 0 1.4em;
+}
+
+.article-body th {
+  background: #eef2ff;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: left;
+  padding: 8px 10px;
+  border-bottom: 2px solid var(--line);
+  white-space: nowrap;
+}
+
+.article-body td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.article-body tbody tr:nth-child(even) td {
+  background: #f8fafc;
+}
+
+.article-body blockquote {
+  border-left: 4px solid #f59e0b;
+  background: #fffbeb;
+  margin: 1.2em 0;
+  padding: 12px 16px;
+  border-radius: 0 10px 10px 0;
+  color: var(--ink);
+}
+
 .article-body p {
   max-width: 34em;
   line-height: 1.95;
