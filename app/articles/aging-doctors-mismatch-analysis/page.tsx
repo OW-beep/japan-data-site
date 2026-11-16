@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import PrefectureTileMap from "@/components/PrefectureTileMap";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
 import { getMunicipalities2025 } from "@/lib/city2025";
@@ -49,6 +50,24 @@ export default function Page() {
     .filter((d) => d.age >= AGING_THRESHOLD && d.doc > avgDoc * 1.5)
     .sort((a, b) => b.doc - a.doc)
     .slice(0, 5);
+
+  // 都道府県単位の医師数(人口10万人あたり)。医師のある自治体だけで集計する
+  const prefAgg = new Map<string, { doc: number; pop: number }>();
+  for (const c of getMunicipalities2025()) {
+    if (c.doctorsCount == null) continue;
+    const pref = c.name.split(" ")[0];
+    const a = prefAgg.get(pref) ?? { doc: 0, pop: 0 };
+    a.doc += c.doctorsCount;
+    a.pop += c.population;
+    prefAgg.set(pref, a);
+  }
+  const prefDoctors: Record<string, number> = {};
+  for (const [pref, a] of prefAgg) {
+    if (a.pop > 0) prefDoctors[pref] = (a.doc / a.pop) * 100_000;
+  }
+  const prefSorted = Object.entries(prefDoctors).sort((a, b) => b[1] - a[1]);
+  const prefTop = prefSorted.slice(0, 3).map(([p]) => p).join("・");
+  const prefBottom = prefSorted.slice(-3).map(([p]) => p).join("・");
 
   const faq = [
     {
@@ -156,6 +175,28 @@ export default function Page() {
           受け止めた結果だという点です。自市の高齢化率と医師数を1対1で
           結びつけて「この街は医療が充実」と判断すると、実態とずれる
           ことがあります。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>都道府県で見ると「西に多く、首都圏に少ない」</h2>
+        <PrefectureTileMap
+          title="人口10万人あたり医師数(都道府県別)"
+          values={prefDoctors}
+          format={(v) => `${Math.round(v)}人`}
+        />
+        <p>
+          自治体単位では見えにくかった偏りが、都道府県単位だとはっきり
+          します。医師が多いのは{prefTop}など西日本が中心で、少ないのは
+          {prefBottom}と首都圏に集中しています。とくに埼玉県は
+          人口10万人あたり{prefDoctors["埼玉県"] ? Math.round(prefDoctors["埼玉県"]) : ""}
+          人と全国最少水準で、人口の多さに対して医師の育成・配置が
+          追いついていない「首都圏の医師不足」が浮かび上がります。
+          大学医学部の分布が西日本に厚いことなどが背景とされます。
+        </p>
+        <p>
+          つまり医療の偏在は、田舎だけの問題ではありません。人口が集中する
+          首都圏のベッドタウンでも、かかりつけ医の不足は起きています。
         </p>
       </div>
 
