@@ -2,7 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 
 import Script from "next/script";
-import { Noto_Sans_JP, Work_Sans } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
+import localFont from "next/font/local";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -25,9 +26,16 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600"],
+/*
+ * Work Sansはnext/font/google経由だと、VercelのTurbopackビルドで
+ * 「next/font/google queries have exactly one entry」エラーになり
+ * デプロイが失敗する(可変フォントで複数サブセットの@font-faceが
+ * 生成されるため)。そのため欧文・数字用のlatinサブセットを
+ * ローカルフォントとして自己ホストする。
+ */
+const workSans = localFont({
+  src: "./fonts/work-sans-latin.woff2",
+  weight: "400 600",
   variable: "--font-work-sans",
   display: "swap",
 });
