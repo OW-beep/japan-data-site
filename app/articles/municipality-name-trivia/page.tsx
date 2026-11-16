@@ -7,7 +7,7 @@ import JsonLd from "@/components/JsonLd";
 export const metadata = {
   alternates: { canonical: "/articles/municipality-name-trivia" },
   // 検索語は「動物の名前がつく市」「生き物の漢字がつく市」。見出し語と表記をそろえる
-  title: "動物の名前がつく市区町村一覧｜生き物の漢字を含む自治体は61",
+  title: "生き物の漢字がつく市は61｜動物の名前がつく市区町村一覧",
   description:
     "動物の名前がつく市は?全国1,740市区町村の名前を1文字ずつ調べました。生き物の漢字が入った自治体は61。日本一長い地名は「つくばみらい市」の7文字。地名という切り口から見えてくる、自治体のちょっとした物語を集めました。",
 };

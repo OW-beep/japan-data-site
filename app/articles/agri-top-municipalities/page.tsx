@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import JsonLd from "@/components/JsonLd";
 import { allAgriCities, type AgriCity } from "@/lib/agriCity";
 import { AGRI_META, oku } from "@/lib/agriOutput";
 import { isReleased, releaseDate } from "@/lib/release";
@@ -47,6 +48,26 @@ export default function Page() {
   if (!isReleased(PATH)) notFound();
   const rows = getRows();
   const types = ["畜産型", "野菜型", "米型", "果実型", "花き型", "複合型"].map((t) => ({ t, n: rows.filter((r) => r.type === t).length })).filter((x) => x.n > 0);
+  // 上位20市町村の産出額が、全国の合計に占める割合
+  const nationalTotal = allAgriCities()
+    .filter(([, a]) => a.total != null)
+    .reduce((s, [, a]) => s + (a.total ?? 0), 0);
+  const top20Total = rows.reduce((s, r) => s + (r.a.total ?? 0), 0);
+  const top20Share = nationalTotal > 0 ? (top20Total / nationalTotal) * 100 : 0;
+  const faq = [
+    {
+      q: "農業産出額が多い市町村は、何で稼いでいるのですか？",
+      a: `上位20市町村を最も大きい部門で分けると、${types.map((x) => `${x.t}が${x.n}`).join("、")}です。畜産(肉用牛・豚・鶏・生乳)は1戸あたりの規模が大きく単価も高いため、産出額の上位に畜産型が多く並びます。`,
+    },
+    {
+      q: "農業産出額の上位20市町村で、全国の何割を占めますか？",
+      a: `上位20市町村の合計は約${oku(top20Total)}億円で、全国の市町村の合計(約${oku(nationalTotal)}億円)の約${top20Share.toFixed(1)}%です。農業の産地は全国に広く分布しているため、特定の市町村への集中度は、製造業などと比べると高くありません。`,
+    },
+    {
+      q: "米どころが上位に少ないのはなぜですか？",
+      a: "米は作付面積こそ最大級ですが、面積あたりの産出額では施設野菜や畜産に及ばないことが多いためです。米型の市町村は産出額の絶対額よりも、人口あたりで見たときに上位に来るケースがあります。",
+    },
+  ];
 
   return (
     <ArticleLayout
@@ -143,6 +164,77 @@ export default function Page() {
           )。
         </p>
       </div>
+
+      <div style={box}>
+        <h2>「稼ぎ方」から見えること</h2>
+        <p>
+          上位20市町村の合計は約{oku(top20Total)}億円で、全国の市町村の合計
+          (約{oku(nationalTotal)}億円)の<strong>約{top20Share.toFixed(1)}%</strong>です。
+          つまり農業産出額は、ごく一部の町に集中しているわけではなく、全国の産地に
+          広く分散しています。それでも上位の顔ぶれにははっきりした型があります。
+        </p>
+        <p>
+          <strong>畜産型が多い理由</strong>は、規模と単価です。肉用牛や豚、鶏卵・生乳は、
+          1経営体あたりの飼養規模が大きく、年間の出荷額も大きくなります。飼料畑を含めた
+          広い土地が必要なため、北海道や南九州など、平地の広い地域が上位に並びます。
+        </p>
+        <p>
+          <strong>野菜型・花き型</strong>は、面積あたりの産出額の高さが武器です。
+          ハウスなどの施設園芸は初期投資が大きい代わりに、単価の高い品目を年に複数回
+          出荷できます。大消費地に近い産地や、日照条件のよい産地が強みを発揮します。
+        </p>
+        <p>
+          <strong>米型が上位に少ない理由</strong>は、米が面積あたりの産出額では
+          施設野菜や畜産に及ばないことが多いためです。ただし米どころは、
+          人口あたりの産出額で見ると上位に来ることがあります。見方を変えた順位は
+          <Link prefetch={false} href="/articles/agri-output-per-capita" style={link}>
+            人口あたりの農業産出額が多い市町村
+          </Link>
+          で紹介しています。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>特産品・返礼品選びへの活かし方</h2>
+        <p>
+          その町の「型」を知ると、ふるさと納税の返礼品や旅行先での特産品選びが
+          具体的になります。畜産型の町なら肉や乳製品、野菜型の町なら旬の野菜の
+          定期便といった具合に、その土地が本業として力を入れている品目を選ぶのが
+          基本です。県ごとの主力市町村は
+          <Link prefetch={false} href="/articles/agri-prefecture-top" style={link}>
+            農業産出額が最も多い市町村、47都道府県の一覧
+          </Link>
+          で確認できます。
+        </p>
+        <p>
+          一方で、産出額は「推計」であり、その町のすべての農家の売り上げを
+          足したものではありません。返礼品の品質や生産者の取り組みは自治体・
+          事業者ごとに異なるため、最終的には個別の商品説明を確認してください。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>Q&amp;A</h2>
+        {faq.map((f) => (
+          <p key={f.q}>
+            <strong>Q. {f.q}</strong>
+            <br />
+            A. {f.a}
+          </p>
+        ))}
+      </div>
+
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }}
+      />
     </ArticleLayout>
   );
 }

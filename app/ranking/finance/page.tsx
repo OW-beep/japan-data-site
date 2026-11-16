@@ -9,11 +9,12 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/finance" },
-  title: "全国自治体 財政力指数ランキング",
+  title: "財政力指数ランキング【全国自治体】高い自治体・低い自治体一覧",
   description:
-    "全国自治体の財政力指数をランキング形式で比較。自主財源だけで行政サービスをまかなえる「稼げる自治体」がわかります。",
+    "全国自治体の財政力指数をランキング形式で一覧比較。財政力指数が高い「稼げる自治体」から低い自治体まで、1.0を超えるとどうなるか、指数の見方も解説します。",
 };
 
 export default function FinanceRankingPage() {
@@ -38,6 +39,11 @@ export default function FinanceRankingPage() {
         padding: 24,
       }}
     >
+      <RankingJsonLd
+        path="/ranking/finance"
+        title="財政力指数ランキング"
+        items={ranking}
+      />
       <h1
         style={{
           fontSize: 32,

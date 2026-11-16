@@ -7,7 +7,8 @@ import { Noto_Sans_JP, Work_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
-import { SITE_URL, SITE_NAME, ADSENSE_CLIENT_ID } from "@/lib/site";
+import JsonLd from "@/components/JsonLd";
+import { SITE_URL, SITE_NAME, ADSENSE_CLIENT_ID, CONTACT_EMAIL } from "@/lib/site";
 
 /*
  * 参考サイト(honeycomb-labo.com)が使っている
@@ -105,6 +106,22 @@ export default function RootLayout({
       </head>
 
       <body>
+        {/* サイト全体の構造化データ(WebSite + Organization)。運営主体を検索エンジンに明示する */}
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: SITE_NAME,
+            url: SITE_URL,
+            inLanguage: "ja",
+            publisher: {
+              "@type": "Organization",
+              name: SITE_NAME,
+              url: SITE_URL,
+              email: CONTACT_EMAIL,
+            },
+          }}
+        />
         {/* スクリーンリーダー用 */}
         <a
           href="#main"

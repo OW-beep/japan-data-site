@@ -12,6 +12,7 @@ import CompareCTA from "../../../components/CompareCTA";
 import { getMunicipalitiesPop } from "../../../lib/cityPopulation";
 import { isReleased } from "../../../lib/release";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -46,6 +47,11 @@ export default function Page() {
         padding: "28px 24px",
       }}
     >
+      <RankingJsonLd
+        path="/ranking/population"
+        title="市区町村 人口ランキング"
+        items={top50}
+      />
       <h1
         style={{
           fontSize: 38,

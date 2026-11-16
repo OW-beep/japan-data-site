@@ -24,7 +24,12 @@ function getData() {
   const counts = TIERS.map((t) => ({ ...t, shi: shi.filter((c) => c.population >= t.min) }));
   const sortedPop = shi.map((c) => c.population).sort((a, b) => a - b);
   const median = sortedPop[Math.floor(sortedPop.length / 2)];
-  return { shi, counts, tokyo23, median, label, use2025 };
+  const smallestShi = [...shi].sort((a, b) => a.population - b.population)[0];
+  // 人口10万人以上の市に住む人の割合(全国の総人口に対する比率)
+  const totalPop = rows.reduce((s, c) => s + c.population, 0);
+  const bigPop = shi.filter((c) => c.population >= 100_000).reduce((s, c) => s + c.population, 0);
+  const bigShare = totalPop > 0 ? (bigPop / totalPop) * 100 : 0;
+  return { shi, counts, tokyo23, median, label, use2025, smallestShi, bigShare };
 }
 
 export function generateMetadata() {
@@ -40,7 +45,7 @@ export function generateMetadata() {
 export default function Page() {
   // 予約公開(lib/release.ts)。日付が来るまでは 404
   if (!isReleased("/articles/city-population-tiers")) notFound();
-  const { shi, counts, tokyo23, median, label, use2025 } = getData();
+  const { shi, counts, tokyo23, median, label, use2025, smallestShi, bigShare } = getData();
   const c = (min: number) => counts.find((x) => x.min === min)!.shi;
   const under50k = shi.length - c(50_000).length;
   const designated = shi.filter((x) => isDesignatedCity(x.name));
@@ -58,6 +63,14 @@ export default function Page() {
     {
       q: "人口10万人以上の市は全国にいくつありますか？",
       a: `${c(100_000).length}市です(全${shi.length}市のうち${((c(100_000).length / shi.length) * 100).toFixed(0)}%。${label})。市の人口の中央値は約${(median / 10000).toFixed(1)}万人でした。`,
+    },
+    {
+      q: "人口が最も少ない市はどこですか？",
+      a: `${smallestShi.name}で、人口は${smallestShi.population.toLocaleString()}人です(${label})。市になるには原則5万人以上が必要ですが、市制施行後に人口が減少した市や、合併特例で誕生した市は、5万人未満でも市として存続しています。`,
+    },
+    {
+      q: "人口10万人以上の市には、日本の人口の何割が住んでいますか？",
+      a: `約${bigShare.toFixed(0)}%です。市の数では人口10万人以上は全体の${((c(100_000).length / shi.length) * 100).toFixed(0)}%しかありませんが、人口では日本全体の約${bigShare.toFixed(0)}%が集中しています。`,
     },
   ];
 
@@ -174,6 +187,50 @@ export default function Page() {
               で確認できます。
             </>
           )}
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>人口規模で、暮らしはどう変わるか</h2>
+        <p>
+          市の数で見ると人口10万人以上は全体の{((c(100_000).length / shi.length) * 100).toFixed(0)}%しか
+          ありませんが、そこに住む人は日本の総人口の<strong>約{bigShare.toFixed(0)}%</strong>に
+          なります。日本の「ふつうの暮らし」の多くは、実は人口10万人以上の市で
+          営まれている計算です。
+        </p>
+        <p>
+          一般に、人口規模が大きい市ほど、総合病院・大学・大型商業施設・鉄道の
+          本数といった「専門的なサービス」がそろいやすくなります。一方で、
+          家賃や地価は高くなりがちです。逆に小規模な市は、住居費が抑えられる
+          代わりに、進学・通院・買い物で近隣の市へ出る前提の暮らしになります。
+          移住先を検討するときは、市の人口そのものより「車で30分圏に何があるか」を
+          含めて考えるのが現実的です。
+        </p>
+        <p>
+          なお、人口規模と行政サービスの手厚さは単純には結びつきません。
+          財政力には自治体ごとに大きな差があり、人口が少なくても財政が
+          健全な自治体、大きくても厳しい自治体があります。財政の側面は
+          <Link prefetch={false} href="/ranking/finance" style={link}>
+            財政力指数ランキング
+          </Link>
+          で確認できます。
+        </p>
+      </div>
+
+      <div style={box}>
+        <h2>人口5万人未満の市が残る理由</h2>
+        <p>
+          市の要件は人口5万人以上ですが、実際に5万人を下回る市は珍しくありません。
+          最も少ない{smallestShi.name}は{smallestShi.population.toLocaleString()}人です。
+          これは、市制を施行した後に人口が減少しても市でなくなることはないこと、
+          「平成の大合併」の時期には合併を促す特例で要件が緩和されたことが
+          理由です。人口が減っても、住所の表記や行政の区分が自動で町に戻る
+          ことはありません。
+        </p>
+        <p>
+          つまり「市かどうか」は現在の規模ではなく、歴史的な経緯で決まっている
+          部分が大きい区分です。規模を知りたいときは、区分ではなく人口の
+          実数を見る必要があります。
         </p>
       </div>
 

@@ -11,6 +11,7 @@ import JsonLd from "../../../components/JsonLd";
 import Link from "next/link";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 import SparseDensitySummary from "../../../components/ranking/SparseDensitySummary";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -83,6 +84,11 @@ export default function Page() {
         padding: 24,
       }}
     >
+      <RankingJsonLd
+        path="/ranking/density"
+        title="人口密度ランキング"
+        items={ranking}
+      />
       <h1
         style={{
           fontSize: 32,

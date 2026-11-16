@@ -9,11 +9,12 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/foreign-population" },
-  title: "全国自治体 外国人人口比率ランキング",
+  title: "外国人比率が高い自治体ランキング｜10%以上の自治体一覧",
   description:
-    "全国自治体の人口に占める外国人住民の割合をランキング形式で比較。農業・製造業の担い手として外国人労働者が多い町から、多国籍化が進む都心の区まで紹介します。",
+    "全国自治体の外国人人口比率(人口に占める外国人住民の割合)を高い順にランキング。外国人比率10%以上の自治体をすべて掲載。農業・製造業の担い手として外国人労働者が多い町から、多国籍化が進む都心の区まで紹介します。",
 };
 
 export default function Page() {
@@ -38,6 +39,11 @@ export default function Page() {
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 24 }}>
+      <RankingJsonLd
+        path="/ranking/foreign-population"
+        title="外国人人口比率ランキング"
+        items={ranking}
+      />
       <h1 style={{ fontSize: 32, marginBottom: 20 }}>
         🌏 外国人人口比率ランキング
       </h1>

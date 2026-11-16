@@ -31,7 +31,7 @@ export function generateMetadata() {
   const year = use2025 ? "2020→2025" : "最新";
   return {
     alternates: { canonical: "/articles/million-cities-population-change" },
-    title: `100万人都市の人口増減(${year})｜増えたのは${million.length}市中${inc.length}市、最大は${shortName(top.name)}(+${changePct(top).toFixed(1)}%)`,
+    title: `100万人都市の人口増減ランキング【2020→2025】増えたのは${inc.length}市`,
     description: `令和2年と令和7年の国勢調査を比べて、人口100万人以上の${million.length}都市の人口がどう変わったかを調べました。増えた都市・減った都市、100万人まであと一歩の千葉市の見通し、政令指定都市20市の増減ランキングまで。`,
   };
 }
