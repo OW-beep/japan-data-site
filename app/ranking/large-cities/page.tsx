@@ -4,6 +4,7 @@ import Link from "next/link";
 import MetricBox from "../../../components/MetricBox";
 import LargeCitySummary from "../../../components/ranking/LargeCitySummary";
 import AdSense from "../../../components/AdSense";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 import DataAsOf from "../../../components/DataAsOf";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
@@ -19,9 +20,9 @@ import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/large-cities" },
-  title: "人口50万人以上の都市ランキング｜政令指定都市など大都市を人口順に一覧比較",
+  title: "人口50万人以上の都市ランキング【2025年】全国34市を人口順に一覧",
   description:
-    "人口50万人以上の都市を人口順にランキング。100万人以上・70万人台〜90万人台・50万人台〜60万人台の3区分で、政令指定都市・特別区・その他の市の人口、面積、人口密度、高齢化率を一覧で比較できます。",
+    "人口50万人以上の都市は全国に34市(2025年国勢調査)。100万人以上・70万人台〜90万人台・50万人台〜60万人台の3区分で、政令指定都市・中核市などの人口・面積・人口密度・高齢化率を一覧で比較できます。",
 };
 
 export function generateMetadata() {
@@ -130,6 +131,7 @@ export default function LargeCitiesRankingPage() {
         padding: "28px 24px",
       }}
     >
+      <RankingJsonLd path="/ranking/large-cities" title="人口50万人以上の都市ランキング" items={ranking} />
       <h1 style={{ fontSize: 32, fontWeight: 800, marginBottom: 10 }}>
         🏙️ 人口50万人以上の都市ランキング
       </h1>

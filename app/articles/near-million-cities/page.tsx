@@ -27,7 +27,7 @@ export function generateMetadata() {
   return {
     alternates: { canonical: "/articles/near-million-cities" },
     title: `人口90万人・80万人の都市一覧(${year})｜100万人に最も近いのは${top ? shortName(top.name) : ""}`,
-    description: `人口100万人に一番近いのは${top ? shortName(top.name) : ""}(${top ? top.population.toLocaleString() : ""}人)で、あと${gap.toLocaleString()}人。90万人台は${names90}、80万人台は${names80}。100万人都市に迫る「準百万都市」を人口順に比較します。`,
+    description: `人口100万人まであとわずかの「準百万都市」を人口順に一覧。90万人台は${names90}など。最も近い都市が100万人まであと何人か、80万人台の都市も含めて2025年国勢調査で比較します。`,
   };
 }
 

@@ -5,6 +5,7 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import { dataSources } from "../../../lib/dataSources";
 import AgingSummary from "../../../components/ranking/AgingSummary";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 
@@ -47,6 +48,7 @@ export default function Page() {
         padding: "28px 24px",
       }}
     >
+      <RankingJsonLd path="/ranking/aging" title="高齢化率ランキング" items={top50} />
       <h1
         style={{
           fontSize: 38,

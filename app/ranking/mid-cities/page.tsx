@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { isReleased } from "@/lib/release";
 
 import AdSense from "@/components/AdSense";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 import DataAsOf from "@/components/DataAsOf";
 import CompareCTA from "@/components/CompareCTA";
 import JsonLd from "@/components/JsonLd";
@@ -69,6 +70,7 @@ export default function MidCitiesPage() {
   return (
     <main style={{ maxWidth: 980, margin: "0 auto", padding: "28px 24px" }}>
       <Breadcrumbs items={[{ name: "ランキング", href: "/ranking" }, { name: "人口30万人以上の都市" }]} />
+      <RankingJsonLd path="/ranking/mid-cities" title="人口30万人以上の都市ランキング" items={list} />
       <h1 style={{ fontSize: 32, fontWeight: 800, marginBottom: 10 }}>🏙️ 人口30万人以上の都市ランキング</h1>
 
       <DataAsOf text={`${label}(総務省統計局)`} />

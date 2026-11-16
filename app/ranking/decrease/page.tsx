@@ -4,6 +4,7 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import { dataSources } from "../../../lib/dataSources";
 import SmallestPopulationSummary from "../../../components/ranking/SmallestPopulationSummary";
+import RankingJsonLd from "../../../components/RankingJsonLd";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
@@ -25,6 +26,7 @@ export default function Page() {
 
   return (
     <div style={{ maxWidth: 900, margin: "0 auto", padding: 24 }}>
+      <RankingJsonLd path="/ranking/decrease" title="人口が少ない自治体ランキング" items={ranking} />
       <h1 style={{ fontSize: 32, marginBottom: 20 }}>
         📉 人口が少ない自治体ランキング
       </h1>

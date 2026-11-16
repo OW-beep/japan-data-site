@@ -6,9 +6,9 @@ import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/daytime-ratio-analysis" },
-  title: "昼夜間人口比率ランキング分析｜千代田区が1355%になる理由",
+  title: "昼夜間人口比率ランキング【2025年】千代田区1355%の理由とベッドタウンの実態",
   description:
-    "昼夜間人口比率ランキングを分析。東京都心のオフィス街が上位を占める一方、福島県の被災地では震災復興作業員の日中滞在が比率を押し上げていました。ベッドタウンとの対比から「通勤」の実態を読み解きます。",
+    "昼は人があふれ、夜は消える街はどこか。昼夜間人口比率の全国ランキングを分析すると、都心のオフィス街とベッドタウンの対比だけでなく、復興が進む福島の町という意外な顔ぶれも見えてきます。",
 };
 
 export default function Page() {
