@@ -4,12 +4,37 @@
  * 都道府県タイルマップと同じレイアウトを使い、対象自治体が属する
  * 都道府県だけをハイライトする。地図ライブラリ・外部タイル・
  * クライアントJSは使わず、サーバー側でSVGを描くため軽量。
- * 県内の詳しい位置や地形(標高)は本サイトのデータに含まれないため、
- * ここでは「どの地方の、どの都道府県か」と、面積・人口密度という
- * 地理の基本指標までを示す。
+ * 県内の詳しい位置は都道府県単位までとし、あわせて面積・人口密度と、
+ * 国土数値情報の標高メッシュを集計した地形指標(平均標高・最高標高・
+ * 標高500m以上の土地の割合)を示す。
  */
 import { PREFECTURE_TILE_LAYOUT } from "@/components/PrefectureTileMap";
 import citiesData from "@/data/cities.json";
+import elevationData from "@/data/elevation.json";
+
+const ELEVATION = elevationData as unknown as Record<string, [number, number, number]>;
+
+function elevationRankOf(code: string): { rank: number; total: number } | null {
+  const mine = ELEVATION[code];
+  if (!mine) return null;
+  const all = (citiesData as unknown as { code: string }[])
+    .map((r) => ELEVATION[r.code])
+    .filter((v) => v != null);
+  const rank = all.filter((v) => v[0] > mine[0]).length + 1;
+  return { rank, total: all.length };
+}
+
+function terrainNote(avg: number, max: number, pct500: number): string {
+  if (pct500 >= 50)
+    return "面積の半分以上が平均標高500m以上のメッシュで占められる、山がちな地形です。";
+  if (max >= 2000)
+    return `標高${max.toLocaleString()}mに達する高山を含む、起伏の大きな地形です。`;
+  if (avg >= 300) return "平均標高が高く、丘陵や山地の多い地形です。";
+  if (max >= 1000) return "標高1,000mを超える山地を含む地形です。";
+  if (avg < 30 && max < 200) return "ほぼ平坦な低地が広がる地形です。";
+  if (avg < 100) return "低地から丘陵にかけての、なだらかな地形です。";
+  return "丘陵地を中心とした地形です。";
+}
 
 const REGION: Record<string, string> = {
   北海道: "北海道",
@@ -52,6 +77,8 @@ export default function CityLocationMap({
   const region = REGION[prefecture];
   const areaRank = rankOf(code, "area");
   const densityRank = rankOf(code, "populationDensity");
+  const elev = ELEVATION[code] ?? null;
+  const elevRank = elev ? elevationRankOf(code) : null;
   const W = 11 * CELL;
   const H = 10 * CELL;
 
@@ -63,7 +90,7 @@ export default function CityLocationMap({
       <p style={{ color: "var(--muted)", lineHeight: 1.8, margin: "0 0 14px" }}>
         {cityName}は{region ? `${region}地方の` : ""}
         {prefecture}にあります。日本地図(模式図)では{prefecture}の位置を
-        色付けしています。
+        色付けしています。地形の目安として標高の集計値もあわせて示します。
       </p>
       <div style={{ display: "flex", gap: 24, flexWrap: "wrap", alignItems: "flex-start" }}>
         <svg
@@ -129,10 +156,40 @@ export default function CityLocationMap({
               </dd>
             </div>
           )}
+          {elev && (
+            <div>
+              <dt style={{ display: "inline", fontWeight: 700 }}>平均標高：</dt>
+              <dd style={{ display: "inline", margin: 0 }}>
+                約{elev[0].toLocaleString()} m
+                {elevRank && `(全国${elevRank.rank.toLocaleString()}位)`}
+              </dd>
+            </div>
+          )}
+          {elev && (
+            <div>
+              <dt style={{ display: "inline", fontWeight: 700 }}>最高標高：</dt>
+              <dd style={{ display: "inline", margin: 0 }}>
+                約{elev[1].toLocaleString()} m
+              </dd>
+            </div>
+          )}
+          {elev && elev[2] > 0 && (
+            <div>
+              <dt style={{ display: "inline", fontWeight: 700 }}>標高500m以上の土地：</dt>
+              <dd style={{ display: "inline", margin: 0 }}>約{elev[2]}%</dd>
+            </div>
+          )}
         </dl>
       </div>
+      {elev && (
+        <p style={{ color: "var(--muted)", lineHeight: 1.8, margin: "10px 0 0" }}>
+          地形の特徴：{terrainNote(elev[0], elev[1], elev[2])}
+        </p>
+      )}
       <p style={{ fontSize: 12, color: "var(--muted)", marginTop: 10 }}>
         ※模式図(タイルマップ)のため、実際の形状・面積比とは異なります。位置は都道府県単位までを示しています。
+        標高は国土交通省「国土数値情報(標高・傾斜度3次メッシュ)」を自治体別に集計した近似値です
+        (1kmメッシュの中心点が属する自治体に割り当てて集計)。
       </p>
     </section>
   );

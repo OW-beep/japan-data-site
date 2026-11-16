@@ -74,7 +74,7 @@ const COMPARE = [
 const FAQS = [
   {
     q: "納期はどれくらいですか？",
-    a: "レポートは自動生成のため、通常はご依頼から3営業日以内に納品できます。都道府県セットや法人向けの継続提供は、範囲に応じて別途ご案内します。",
+    a: "通常はご依頼から3営業日以内に納品できます。都道府県セットや法人向けの継続提供は、範囲に応じて別途ご案内します。",
   },
   {
     q: "特定の指標を深掘りしたり、比較先を指定したりできますか？",
@@ -224,7 +224,7 @@ export default function Page() {
       </div>
 
       <div style={sampleBox}>
-        <div style={sampleLabel}>サンプル③ 大規模自治体</div>
+        <div style={sampleLabel}>サンプル③</div>
         <h2 style={sampleTitle}>神奈川県 横浜市 ― 日本最大の市(人口375万人)</h2>
         <p style={sampleDesc}>
           財政健全度は158位、子育て世代吸引力は171位。
@@ -245,7 +245,7 @@ export default function Page() {
       </div>
 
       <div style={sampleBox}>
-        <div style={sampleLabel}>サンプル④ 話題の自治体</div>
+        <div style={sampleLabel}>サンプル④</div>
         <h2 style={sampleTitle}>茨城県 つくば市 ― 人口+11.2%の急成長都市</h2>
         <p style={sampleDesc}>
           財政健全度は117位、財政力指数1.06、高齢化率は18.9%。
@@ -267,7 +267,7 @@ export default function Page() {
       </div>
 
       <div style={sampleBox}>
-        <div style={sampleLabel}>サンプル⑤ ニッチな自治体</div>
+        <div style={sampleLabel}>サンプル⑤</div>
         <h2 style={sampleTitle}>東京都 青ヶ島村 ― 人口168人、日本最小の自治体</h2>
         <p style={sampleDesc}>
           住民全員が大型バス4台に乗れてしまう、日本でいちばん小さな村。
@@ -427,10 +427,6 @@ export default function Page() {
         </tbody>
       </table>
       <p style={p}>
-        価格は抑えましたが、中身は削っていません。全17ページ前後の構成、
-        掛け合わせ分析も2050年シナリオ試算も、無料サンプルと同品質の
-        レポートをお届けします。公開統計の自動分析で原価を下げ、
-        その分を価格に還元しています。
         ご希望の自治体名と用途を添えて、
         <Link prefetch={false} href="/contact" style={link}>
           お問い合わせページ
