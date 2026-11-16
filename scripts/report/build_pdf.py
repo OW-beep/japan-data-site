@@ -324,7 +324,7 @@ def build(code, out_path):
             x_ref=G.avg_of(G.MUNIS, lambda c: c.get("financeIndex")), y_ref=0,
             x_lim=(0, 2.0), y_lim=(-45, 35),
             quad_labels={(1, 1): "好循環型", (0, 1): "成長途上型",
-                         (1, 0): "豊かな縮小型", (0, 0): "縮小・依存型"})
+                         (1, 0): "豊かな縮小型", (0, 0): "縮小・調整型"})
         chart_files["scatter1"] = p1
 
         xs2, ys2 = [], []
@@ -341,7 +341,7 @@ def build(code, out_path):
             y_ref=G.avg_of(G.MUNIS, lambda c: G.doctors_per_100k(c)),
             x_lim=(15, 65), y_lim=(0, 600),
             quad_labels={(1, 1): "医療集積型", (0, 1): "都市型",
-                         (1, 0): "医療脆弱型", (0, 0): "標準型"})
+                         (1, 0): "医療広域連携型", (0, 0): "標準型"})
         chart_files["scatter2"] = p2
 
         p3 = os.path.join(tmp, "dep.png")
@@ -438,10 +438,10 @@ def build(code, out_path):
     score_rows = [
         [Paragraph("財政健全度", S["cellB"]), Paragraph("生活基盤", S["cellB"]),
          Paragraph("子育て世代吸引力", S["cellB"]), Paragraph("高齢者支援体制", S["cellB"])],
-        [Paragraph(f"{f_grade or '―'}<font size=8> ({f_rank:,}位/{fiscal_n:,}団体)</font>" if f_rank else "―", S["cell"]),
-         Paragraph(f"{l_grade or '―'}<font size=8> ({l_rank:,}位/{living_n:,}団体)</font>" if l_rank else "対象外", S["cell"]),
-         Paragraph(f"{y_grade or '―'}<font size=8> ({y_rank:,}位/{young_n:,}団体)</font>" if y_rank else "―", S["cell"]),
-         Paragraph(f"{e_grade or '―'}<font size=8> ({e_rank:,}位/{elderly_n:,}団体)</font>" if e_rank else "―", S["cell"])],
+        [Paragraph(f"{f_rank:,}位<font size=8> / {fiscal_n:,}団体</font>" if f_rank else "―", S["cell"]),
+         Paragraph(f"{l_rank:,}位<font size=8> / {living_n:,}団体</font>" if l_rank else "対象外", S["cell"]),
+         Paragraph(f"{y_rank:,}位<font size=8> / {young_n:,}団体</font>" if y_rank else "―", S["cell"]),
+         Paragraph(f"{e_rank:,}位<font size=8> / {elderly_n:,}団体</font>" if e_rank else "―", S["cell"])],
     ]
     story.append(tbl(score_rows, [W / 4] * 4, header=False, align_right_from=None))
     story.append(Spacer(1, 8 * mm))
@@ -458,7 +458,7 @@ def build(code, out_path):
         "時間のない方は、まずキーファクトとエグゼクティブサマリー(次ページ)だけでも全体像がつかめます。", S["p"]))
     story.append(Paragraph("キーファクト(この自治体の要点)", S["h2"]))
     facts = [
-        f"財政健全度:全国{f_rank:,}位/{fiscal_n:,}団体(評価{f_grade})、財政力指数{fmt(t.get('financeIndex'), 2)}",
+        f"財政健全度:全国{f_rank:,}位/{fiscal_n:,}団体、財政力指数{fmt(t.get('financeIndex'), 2)}",
         f"人口:{pop25[0]:,}人(2025年、2020年比{pop_change:+.1f}%)、高齢化率{fmt(G.aging_rate(t), 1)}%",
     ]
     if fut:
@@ -488,7 +488,7 @@ def build(code, out_path):
 
     # executive summary
     story.append(Paragraph("エグゼクティブサマリー", S["h1"]))
-    lead = (f"{pref}{name}の財政健全度は全国{fiscal_n:,}団体中{f_rank:,}位(評価{f_grade})。"
+    lead = (f"{pref}{name}の財政健全度は全国{fiscal_n:,}団体中{f_rank:,}位。"
             f"人口は2025年国勢調査で{pop25[0]:,}人(2020年比{pop_change:+.1f}%)、高齢化率は{fmt(G.aging_rate(t),1)}%。")
     if fut:
         lead += f"将来推計では2050年に{fut['p'][6]:,}人まで減少し、高齢化率は{fut['e'][6]:.1f}%に達する見通しです。"
@@ -500,7 +500,7 @@ def build(code, out_path):
     for s_ in watch:
         story.append(Paragraph(f"・{s_}", S["p"]))
     if risk:
-        story.append(Paragraph("構造的リスク", S["h3"]))
+        story.append(Paragraph("長期的な課題", S["h3"]))
         for s_ in risk:
             story.append(Paragraph(f"・{s_}", S["p"]))
     story.append(Paragraph("全国ポジション(パーセンタイル)", S["h2"]))
@@ -561,7 +561,7 @@ def build(code, out_path):
     story.append(Paragraph("3. 財政健全度", S["h1"]))
     story.append(Paragraph(
         f"財政健全度スコアは、財政力指数・経常収支比率・自主財源比率・実質公債費比率を標準化(Zスコア)して統合した本サイト独自の指標。"
-        f"{name}のスコアは{fiscal_map.get(code, 0):+.2f}で、全国{fiscal_n:,}団体中{f_rank:,}位、5段階評価では「{f_grade}」に位置する。", S["p"]))
+        f"{name}のスコアは{fiscal_map.get(code, 0):+.2f}で、全国{fiscal_n:,}団体中{f_rank:,}位に位置する。順位は優劣の判定ではなく、全国の中での立ち位置を示す物差しとして使う。", S["p"]))
     story.append(cimg(chart_files["fiscal"], W))
     story.append(Paragraph("レーダーチャート(偏差値・全国平均=50)", S["h2"]))
     radar_img = Image(chart_files["radar"], width=66 * mm, height=66 * mm)
@@ -605,8 +605,8 @@ def build(code, out_path):
     # livability
     story.append(Paragraph("5. 医療・福祉・子育て・生活基盤", S["h1"]))
     story.append(Paragraph(
-        f"生活基盤充実度は評価{l_grade or '対象外'}、子育て世代吸引力は評価{y_grade}、高齢者支援体制は評価{e_grade}。"
-        "いずれも本サイトの複合スコア(算出方法は付録)。単一指標ではなく、関連指標を束ねて地域の実力を測っている。", S["p"]))
+        f"生活基盤充実度は全国{f'{l_rank:,}位' if l_rank else '対象外'}、子育て世代吸引力は全国{f'{y_rank:,}位' if y_rank else '対象外'}、高齢者支援体制は全国{f'{e_rank:,}位' if e_rank else '対象外'}。"
+        "いずれも本サイトの複合スコア(算出方法は付録)。単一指標ではなく、関連指標を束ねて地域の特徴を測っている。順位が下位の分野は「劣っている」ではなく、その地域の苦手分野・伸びしろとして読んでほしい。", S["p"]))
     liv = [[header_para("指標"), header_para("当自治体"), header_para("全国平均"), header_para("全国順位")]]
     liv.append(eco_row("医師数/人口10万人", G.doctors_per_100k(t), lambda c: G.doctors_per_100k(c) or -1, 0))
     liv.append(eco_row("歯科医師数/人口10万人", (t["dentistsCount"] / t["population"] * 100000) if t.get("dentistsCount") is not None and t.get("population") else None,
@@ -679,8 +679,8 @@ def build(code, out_path):
             quad1 = "成長途上型"
             quad1_txt = "人口は増えているが財政力はまだ平均以下。増加した人口が税収に結びつくまでには時間差があり、子育て・教育支出が先行する局面。"
         else:
-            quad1 = "縮小・依存型"
-            quad1_txt = "財政力と人口の両方が弱い、日本で最も多い類型。単独での反転は難しく、広域連携と選択と集中が前提になる。"
+            quad1 = "縮小・調整型"
+            quad1_txt = "財政力と人口の両面で調整が要る、日本で最も多い類型。広域連携と選択と集中が前提になる。"
         story.append(Paragraph(f"{name}は「{quad1}」に位置する。{quad1_txt}", S["p"]))
     if "scatter2" in chart_files:
         story.append(Paragraph("高齢化×医療供給", S["h2"]))
@@ -692,11 +692,11 @@ def build(code, out_path):
         if ar_t >= ar_avg and dc_t >= dc_avg:
             quad2_txt = "高齢化が進んでいるが医療供給も厚い「医療集積型」。拠点病院が周辺自治体の需要も吸収している可能性が高い。"
         elif ar_t >= ar_avg and dc_t < dc_avg:
-            quad2_txt = "高齢化が進んでいるのに医療供給が薄い「医療脆弱型」。需要と供給のギャップが最も大きい類型で、広域の医療連携が生命線になる。"
+            quad2_txt = "高齢化が進む一方で、医療供給は地域内に限られる「医療広域連携型」。近隣都市との医療連携が鍵になる類型。"
         elif ar_t < ar_avg and dc_t >= dc_avg:
             quad2_txt = "高齢化が緩やかで医療供給が厚い「都市型」。医療は地域の雇用と流入の基盤にもなっている。"
         else:
-            quad2_txt = "高齢化・医療供給とも平均前後の「標準型」。今後の高齢化の進み方次第で、医療脆弱型へ移行しないかが焦点。"
+            quad2_txt = "高齢化・医療供給とも平均前後の「標準型」。今後の高齢化の進み方次第で、医療広域連携型へ移行しないかが焦点。"
         story.append(Paragraph(f"高齢化率{ar_t:.1f}%・医師数{dc_t:.0f}人/10万人で、{name}は{quad2_txt}", S["p"]))
     story.append(PageBreak())
 
@@ -812,7 +812,7 @@ def build(code, out_path):
     for s_ in watch:
         story.append(Paragraph(f"・{s_}", S["p"]))
     if risk:
-        story.append(Paragraph("構造的リスク", S["h2"]))
+        story.append(Paragraph("長期的な課題", S["h2"]))
         for s_ in risk:
             story.append(Paragraph(f"・{s_}", S["p"]))
     story.append(Paragraph("本診断は、公的統計の指標と閾値に基づくルールベースの自動診断です。個別の政策判断にあたっては、現地の事情とあわせてご検討ください。", S["small"]))
@@ -822,7 +822,7 @@ def build(code, out_path):
     story.append(Paragraph("付録:指標の定義・算出方法・出典", S["h1"]))
     story.append(Paragraph(
         "財政健全度スコア:財政力指数・経常収支比率・自主財源比率(地方税÷歳入総額)・実質公債費比率を、財政指標が揃う全国"
-        f"{fiscal_n:,}団体で標準化(Zスコア)し、「財政力＋自主財源−経常収支−公債費」で統合した。評価は分布の上位10%をS、30%をA、60%をB、85%をC、それ以下をDとした。"
+        f"{fiscal_n:,}団体で標準化(Zスコア)し、「財政力＋自主財源−経常収支−公債費」で統合した。本レポートでは順位を優劣の判定には使わず、全国の中での立ち位置を示す物差しとして扱う。"
         "生活基盤充実度:商業集積(小売店+飲食店/千人)・公民館数/万人・空き家率(逆)を標準化して統合。"
         "子育て世代吸引力:保育所定員/子ども千人・20代純移動率・婚姻率を標準化して統合。"
         "高齢者支援体制:医師数/10万人・老人ホーム数/高齢者千人・単身世帯比率(逆)を標準化して統合。", S["p"]))
