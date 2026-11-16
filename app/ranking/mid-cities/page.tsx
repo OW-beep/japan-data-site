@@ -10,6 +10,7 @@ import CompareCTA from "@/components/CompareCTA";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ClusterLinks from "@/components/ClusterLinks";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 import { isDesignatedCity } from "@/lib/designatedCities";
 import { getMunicipalitiesPop, isShi, shortName, changePct, type CityWithPop } from "@/lib/cityPopulation";
 
@@ -89,6 +90,19 @@ export default function MidCitiesPage() {
         {use2025 ? "令和7年国勢調査の人口" : "令和2年国勢調査の人口"}で数えると、30万人以上の市のうち人口が増えたのは
         {growing.length}市、減ったのは{list.length - growing.length}市です。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          30万人以上の都市は、県庁所在地と、大都市近郊のベッドタウンが中心です。
+          40万人台は18市あり、そのうち松山市(497,067人)・松戸市(496,374人)・
+          市川市(494,354人)は50万人まで1万人未満と目前です。次の国勢調査で
+          50万人以上の仲間入りをする都市が出てくるかもしれません。
+        </p>
+        <p style={{ margin: 0 }}>
+          一番下は春日井市(302,914人)です。30万人という規模は、商業施設や
+          総合病院がそろい、単独で生活圏が成り立つ目安でもあります(2025年国勢調査)。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

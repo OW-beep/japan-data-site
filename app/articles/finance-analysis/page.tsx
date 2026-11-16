@@ -304,6 +304,20 @@ export default function Page() {
           </Link>
         </p>
       </div>
+      <div style={box}>
+        <h2 style={{ fontSize: 20, fontWeight: 800, margin: "0 0 10px" }}>
+          気になる自治体を、まるごと診断する
+        </h2>
+        <p style={{ lineHeight: 1.9, margin: 0 }}>
+          この記事で扱った財政力指数に、人口の将来推計・産業・医療・住宅まで加えて、
+          特定の自治体を17ページ前後にまとめた
+          <Link prefetch={false} href="/reports" style={link}>
+            自治体調査レポート
+          </Link>
+          （単体1,980円〜）を用意しています。無料サンプル5件を公開中です。
+          自治体との商談や、進出先・移住先の検討の前にどうぞ。
+        </p>
+      </div>
     </ArticleLayout>
   );
 }

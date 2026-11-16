@@ -5,6 +5,7 @@ import MetricBox from "../../../components/MetricBox";
 import LargeCitySummary from "../../../components/ranking/LargeCitySummary";
 import AdSense from "../../../components/AdSense";
 import RankingJsonLd from "../../../components/RankingJsonLd";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import DataAsOf from "../../../components/DataAsOf";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
@@ -144,6 +145,27 @@ export default function LargeCitiesRankingPage() {
         {band50.length}の3つに分けて、人口・面積・人口密度・高齢化率を人口順に
         並べました。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          50万人というラインは、政令指定都市の人口要件の目安でもあります。顔ぶれは
+          政令指定都市と東京都の特別区が中心で、最下位は宇都宮市(511,237人)です。
+          県庁所在地や中核市クラスがぎりぎりで食い込んでいるのがこの規模の特徴で、
+          「大都市」と呼ばれる範囲の下限と言えます。
+        </p>
+        <p style={{ margin: 0 }}>
+          50万人まであと少しの都市もあります。松山市(497,067人)・松戸市(496,374人)・
+          市川市(494,354人)は1万人未満の差で、このページではなく
+          <Link prefetch={false} href="/ranking/mid-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+            人口30万人以上の都市ランキング
+          </Link>
+          に収録しています。100万人以上の都市だけを詳しく見たい方は
+          <Link prefetch={false} href="/articles/million-cities" style={{ color: "#2563eb", textDecoration: "underline" }}>
+            100万人都市一覧
+          </Link>
+          をご覧ください(いずれも2025年国勢調査)。
+        </p>
+      </RankingEditorial>
 
       <nav
         aria-label="ページ内リンク"

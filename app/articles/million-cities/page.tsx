@@ -545,6 +545,37 @@ export default function Page() {
         heading="2050年の100万人都市は、どうなる?"
         lead="人口が100万人以上の都市は、2050年にどうなるのか。国立社会保障・人口問題研究所の推計(令和5年推計)で、2050年までの人口と高齢化の見通しを、都市ごとに並べました。"
       />
+      <div style={box}>
+        <h2 style={{ fontSize: 20, fontWeight: 800, margin: "0 0 10px" }}>
+          あわせて読みたい：人口規模で都市を比べる
+        </h2>
+        <ul style={{ lineHeight: 2, margin: 0, paddingLeft: 20 }}>
+          <li>
+            <Link prefetch={false} href="/ranking/large-cities" style={link}>
+              人口50万人以上の都市ランキング（全国34市）
+            </Link>
+            ：100万人に届かない大都市も含めた一覧
+          </li>
+          <li>
+            <Link prefetch={false} href="/ranking/mid-cities" style={link}>
+              人口30万人以上の都市ランキング（全国84市）
+            </Link>
+            ：中核市クラスの都市を人口順に比較
+          </li>
+          <li>
+            <Link prefetch={false} href="/articles/designated-cities-comparison" style={link}>
+              政令指定都市20市の比較
+            </Link>
+            ：人口・面積・高齢化率で20市を比べる
+          </li>
+          <li>
+            <Link prefetch={false} href="/articles/near-million-cities" style={link}>
+              90万人・80万人都市一覧
+            </Link>
+            ：100万人に迫る「準百万都市」はどこか
+          </li>
+        </ul>
+      </div>
     </ArticleLayout>
   );
 }
