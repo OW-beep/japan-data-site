@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/retail-access" },
   title: "全国自治体 高齢者あたり小売店数ランキング",
@@ -84,6 +85,24 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          高齢者あたりの小売店が最も少ないのは、大阪府豊能町
+          (高齢者1,000人あたり6.9店)、埼玉県鳩山町(7.7店)、
+          奈良県の安堵町・三郷町と続きます。意外なことに「買い物難民」
+          の最前線は遠くの過疎地ではなく、大都市近郊のニュータウンや
+          ベッドタウンです。開発当時にできた商店が、住民の高齢化と
+          ともに閉店し、買い物は隣の市で済ませる構造になったためです。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          山間部の村では小さな商店がかえって残りやすく、この指標では
+          悪く出ません。逆に千代田区(299.9店)のような都心は商業集積で
+          跳ね上がり、「高齢者の買い物のしやすさ」とは別のものを
+          映します。このランキングは郊外の街の変化を見る指標として
+          読むのが正解です。
+        </p>
+      </RankingEditorial>
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

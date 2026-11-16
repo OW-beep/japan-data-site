@@ -10,6 +10,7 @@ import DataAsOf from "../../../components/DataAsOf";
 
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -129,6 +130,30 @@ const top50 = ranking.slice(0, 50);
       />
 
       <AdSense />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          出生率の上位は、鹿児島県の徳之島町(2.25)・天城町(2.24)、
+          沖縄県の宜野座村(2.20)と、奄美・沖縄の離島が独占します。
+          島ぐるみで子育てをする文化と、住宅にゆとりがあることが
+          背景にあると見られます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          下位には豊島区・中野区といった大都市の区と並んで、
+          大阪府豊能町(0.92)が入ります。豊能町は
+          <Link prefetch={false} href="/ranking/retail-access" style={{ color: "#2563eb", textDecoration: "underline" }}>
+            高齢者あたり小売店数
+          </Link>
+          でもワースト級で、「高齢化したニュータウン」の象徴的な
+          存在です。なお人口の少ない自治体では年ごとの変動が
+          大きいため、順位は単年ではなく傾向で見ることを
+          おすすめします。子育て環境の多面的な見方は
+          <Link prefetch={false} href="/articles/child-friendly-city-data-guide" style={{ color: "#2563eb", textDecoration: "underline" }}>
+            子育てしやすい街の見方ガイド
+          </Link>
+          にまとめています。
+        </p>
+      </RankingEditorial>
 
       <div
         style={{

@@ -11,6 +11,8 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
+import Link from "next/link";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/area" },
   title: "全国自治体 面積ランキング",
@@ -83,6 +85,25 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          最も面積が広いのは岐阜県高山市で2,177.61km²。東京都全体
+          (約2,194km²)にほぼ匹敵する広さです。最も狭い富山県
+          舟橋村(3.47km²)との差は約630倍。上位には浜松市・
+          日光市など、平成の大合併で生まれた市が並び、この
+          ランキングは実質的に「合併の歴史ランキング」でもあります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          ただし面積の広さは暮らしの広さとは別物です。広い自治体ほど
+          山林の割合が高く、人が住める土地は限られます。実態に近い
+          広さを見たいときは、可住地面積で割った
+          <Link prefetch={false} href="/ranking/habitable-density" style={{ color: "#2563eb", textDecoration: "underline" }}>
+            可住地人口密度ランキング
+          </Link>
+          とあわせてご覧ください。
+        </p>
+      </RankingEditorial>
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

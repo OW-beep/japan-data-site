@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/unemployment" },
   title: "全国自治体 完全失業率ランキング",
@@ -86,6 +87,25 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          完全失業率の上位には、北海道の上砂川町(11.9%)と、
+          福岡県の福智町・水巻町・川崎町など筑豊地方の町が並びます。
+          いずれも旧産炭地。炭鉱の閉山から半世紀以上がたっても、
+          雇用構造の転換がいまだ終わっていないことが、統計に
+          はっきり残っています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          一方で最下位は占冠村(0.6%)など小さな村が占めます。
+          自営や家族経営が中心の村では「失業」という状態自体が
+          統計に表れにくく、働き手が不足していても失業率は
+          上がりません。高齢化が進んだ自治体では、仕事を辞めた人が
+          労働力人口から抜けるため、失業率が低く見えることもあります。
+          雇用の実態は、有効求人倍率など別の指標とあわせて
+          判断してください。
+        </p>
+      </RankingEditorial>
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

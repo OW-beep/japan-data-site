@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/decrease" },
   title: "全国自治体 人口が少ない自治体ランキング",
@@ -50,6 +51,24 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          日本で最も人口が少ない自治体は、東京都の青ヶ島村で168人
+          (2025年国勢調査)。渡名喜村(沖縄・233人)、野迫川村
+          (奈良・289人)と、離島と山村が並びます。人口1,000人未満の
+          自治体は44、3,000人未満は192にのぼります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          「小さい=衰退」とは限りません。青ヶ島村の課題は人口の
+          少なさそのものより、本土との交通アクセスです。本土では
+          平成の大合併で自治体の大型化が進みましたが、離島には
+          合併という選択肢自体がありません。一方で、職員体制や
+          議会など自治体運営の固定費は人口に比例して下がらないため、
+          小規模な自治体ほど財政は地方交付税への依存度で見る
+          必要があります。
+        </p>
+      </RankingEditorial>
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

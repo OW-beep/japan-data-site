@@ -11,6 +11,7 @@ import {
 } from "../../../lib/prefectureStats";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/traffic-accident-rate" },
   title: "都道府県別 交通事故発生件数ランキング｜人口10万人あたり",
@@ -80,6 +81,24 @@ export default function TrafficAccidentRankingPage() {
           </p>
 
           <AdSense />
+
+          <RankingEditorial>
+            <p style={{ margin: "0 0 10px" }}>
+              人口10万人あたりの事故件数は、静岡県(494.5件)が最も多く、
+              島根県(107.8件)の約4.6倍です。ただしこの数字は「その県で起きた
+              事故」を「住民の数」で割ったもの。通過交通が多い県は、
+              住民の実感より高く出ます。静岡は東名・新東名・国道1号が
+              県を横断する「通過の県」で、上位の群馬県(479.3件)も
+              車への依存度が高い県です。
+            </p>
+            <p style={{ margin: "0 0 10px" }}>
+              逆に下位は島根・秋田・鳥取・岩手・新潟と、交通量そのものが
+              少ない県が並びます。つまりこのランキングは「運転の荒さ」
+              というより「車の量と流れ」を映したもの。住民1人あたりの
+              事故リスクを知りたいなら、運転者数あたり・走行距離あたりの
+              統計とあわせて見る必要があります。
+            </p>
+          </RankingEditorial>
 
           <RankingInsightFAQ
             metricName="交通事故発生件数(人口10万人あたり)"

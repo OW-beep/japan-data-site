@@ -70,6 +70,26 @@ export const metadata: Metadata = {
     locale: "ja_JP",
 
     type: "website",
+
+    images: [
+      {
+        url: "/images/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "全国自治体データランキング",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: SITE_NAME,
+
+    description:
+      "人口・出生率・高齢化率・財政力指数など全国1741自治体を比較",
+
+    images: ["/images/og-default.png"],
   },
 
   robots: {
