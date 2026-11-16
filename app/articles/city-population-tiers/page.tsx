@@ -84,6 +84,7 @@ export default function Page() {
       path="/articles/city-population-tiers"
       tags={["population"]}
       publishedAt={releaseDate("/articles/city-population-tiers", "2026-10-15")}
+      updatedAt="2026-11-16"
       dataNote={`${label}(総務省統計局)。「市」のみ集計し、東京都特別区は含めていません。`}
       top3={[
         { rank: 1, name: "人口100万人以上", value: `${c(1_000_000).length}市` },

@@ -36,7 +36,7 @@ export function generateMetadata() {
     // 検索で実際に使われている語(「人口100万人以上の都市」「100万人都市」)を、前半に両方入れる。
     // 続けて「いつの数字か」と、答えを見ただけでは分からない続き(あと○人)を置く。
     title: `人口100万人以上の都市は${ranking.length}市【2025年】一覧とランキング`,
-    description: `100万人都市(百万都市)は日本に${ranking.length}市(${year}。東京23区は1市として計算)。人口順の一覧表に加え、100万人まであと${gap.toLocaleString()}人の${shortName(next?.name ?? "")}、2020年からの増減、政令指定都市でも100万人に届かない都市までまとめました。2050年も100万人を保てる都市はどこかも、将来推計で分析しています。`,
+    description: `人口100万人以上の都市の一覧とランキング。100万人まであと${gap.toLocaleString()}人の${shortName(next?.name ?? "")}、2020年からの増減、2050年も100万人を保てる都市はどこかまで分析しました。日本に${ranking.length}市(${year}。東京23区は1市として計算)で、政令指定都市でも100万人に届かない都市もわかります。`,
   };
 }
 
@@ -125,6 +125,7 @@ export default function Page() {
       path="/articles/million-cities"
       tags={["population"]}
       publishedAt="2026-02-13"
+      updatedAt="2026-11-16"
       top3={[
         {
           rank: 1,

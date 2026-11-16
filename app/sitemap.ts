@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages = [
     "",
+    "/en/hidden-gems",
     "/ranking",
     "/ranking/population",
     "/ranking/birth-rate",

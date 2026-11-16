@@ -78,6 +78,7 @@ export default function Page() {
       path={PATH}
       tags={["industry"]}
       publishedAt={releaseDate(PATH, "2026-10-16")}
+      updatedAt="2026-11-16"
       dataNote="農林水産省「市町村別農業産出額(推計)」令和6年(令和8年7月24日公表、同年9月18日訂正)を加工して作成。東京都は特別区を1つにまとめた値。"
       top3={nat.slice(0, 3).map((r, i) => ({ rank: i + 1, name: `${r.pref} ${r.top[0].city}`, value: `${oku(r.top[0].total)}億円` }))}
     >

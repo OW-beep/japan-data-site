@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+import OperatorMark from "@/components/OperatorMark";
+
 export const metadata: Metadata = {
   alternates: { canonical: "/about" },
   title: "このサイトについて",
@@ -37,6 +39,35 @@ export default function Page() {
       </p>
 
       <h2 style={h2}>運営者情報</h2>
+      <div
+        style={{
+          display: "flex",
+          gap: 16,
+          alignItems: "center",
+          background: "#f8fafc",
+          border: "1px solid #e5e7eb",
+          borderRadius: 12,
+          padding: "16px 18px",
+          margin: "12px 0 16px",
+        }}
+      >
+        <OperatorMark size={56} />
+        <div>
+          <div style={{ fontWeight: 800, fontSize: 16, color: "#111827" }}>
+            全国自治体データランキング 運営者
+          </div>
+          <div style={{ fontSize: 13, color: "#1d4ed8", fontWeight: 600, margin: "2px 0 4px" }}>
+            元自治体職員・現データコンサルタント
+          </div>
+          <div style={{ fontSize: 13, color: "#4b5563", lineHeight: 1.8 }}>
+            運営形態：個人運営／お問い合わせ：
+            <a href="/contact" style={link}>
+              お問い合わせページ
+            </a>
+            からご連絡ください
+          </div>
+        </div>
+      </div>
       <p style={p}>
         当サイトは個人が運営しています。
       </p>

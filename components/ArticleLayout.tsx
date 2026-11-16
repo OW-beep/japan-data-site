@@ -31,6 +31,7 @@ children,
 rankingLink,
 tags,
 publishedAt,
+updatedAt,
 path,
 dataNote,
 }: {
@@ -43,6 +44,8 @@ children: React.ReactNode;
 rankingLink: string;
 tags?: TagKey[];
 publishedAt?: string;
+/** 内容を加筆・修正した日(公開日より後の場合だけ「最終更新」として表示する) */
+updatedAt?: string;
 /** 記事のURLパス(例: "/articles/million-cities")。
  *  渡すと Article 構造化データに mainEntityOfPage / url を含める。 */
 path?: string;
@@ -69,6 +72,15 @@ return ( <main style={container}> {tags && <ArticleTags tags={tags} />}
   </p>
 
   {publishedAt && <PublishedDate date={publishedAt} />}
+  {publishedAt && updatedAt && updatedAt > publishedAt && (
+    <p style={{ fontSize: 13, color: "#9ca3af", marginTop: -10, marginBottom: 8 }}>
+      最終更新：
+      {(() => {
+        const d = new Date(updatedAt);
+        return `${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日`;
+      })()}
+    </p>
+  )}
   <DataAsOf text={dataNote} />
 
   {publishedAt && (

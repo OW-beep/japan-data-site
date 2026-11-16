@@ -102,6 +102,7 @@ export default function Page() {
       path={PATH}
       tags={["industry"]}
       publishedAt={releaseDate(PATH, "2026-10-16")}
+      updatedAt="2026-11-16"
       dataNote={`農業産出額: 農林水産省「市町村別農業産出額(推計)」令和6年(令和8年7月24日公表、9月18日訂正)。人口: ${label}。東京都特別区は集計の単位が異なるため除く。`}
       top3={all.slice(0, 3).map((x, i) => ({ rank: i + 1, name: `${x.pref} ${x.city}`, value: `${man(x.perCap)}万円` }))}
     >
