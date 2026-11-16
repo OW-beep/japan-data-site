@@ -1,6 +1,18 @@
 import A8Banner from "@/components/A8Banner";
 import { AFFILIATE_COPY, AFFILIATE_SLOTS, type AffiliateTopic } from "@/lib/affiliates";
-import { affiliateTopicsFor } from "@/lib/affiliateMap";
+import { affiliateTopicsFor, hasExistingAffiliate } from "@/lib/affiliateMap";
+
+/**
+ * ふるさと納税の需要期(10〜12月)だけのフォールバック。
+ * 記事の悩みに合うトピックが無い(または未設定で何も出ない)記事でも、
+ * 記事の末尾に1枠だけ、ふるさと納税の枠を出す。本文中にすでに
+ * ふるさと納税の枠がある記事には重ねない。静的生成のため、
+ * 判定はビルド時点の日付で行う(デプロイのたびに切り替わる)。
+ */
+function isFurusatoSeason(): boolean {
+  const m = new Date().getMonth(); // 0=1月
+  return m >= 9 && m <= 11;
+}
 
 /**
  * 記事の末尾などに出す、悩みに合ったアフィリエイトの枠(広告)。
@@ -17,7 +29,17 @@ export default function AffiliateRecommend({
   topics?: AffiliateTopic[];
 }) {
   const list = topics ?? (slug ? affiliateTopicsFor(slug) : []);
-  const active = list.filter((t) => AFFILIATE_SLOTS[t] != null);
+  let active = list.filter((t) => AFFILIATE_SLOTS[t] != null);
+  if (
+    active.length === 0 &&
+    topics === undefined &&
+    slug &&
+    AFFILIATE_SLOTS.furusato != null &&
+    !hasExistingAffiliate(slug, "furusato") &&
+    isFurusatoSeason()
+  ) {
+    active = ["furusato"];
+  }
   if (active.length === 0) return null;
 
   return (

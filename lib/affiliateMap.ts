@@ -47,6 +47,11 @@ const MAX_TOPICS_FOR: Record<string, number> = {
   "light-car-ownership-analysis": 2, // 車・引っ越しのどちらも
 };
 
+/** その記事の本文に、すでにそのトピックのA8枠があるか(末尾に重ねて出さないための判定) */
+export function hasExistingAffiliate(slug: string, topic: AffiliateTopic): boolean {
+  return (EXISTING[slug] ?? []).includes(topic);
+}
+
 export function affiliateTopicsFor(slug: string): AffiliateTopic[] {
   const sol = ARTICLE_SOLUTIONS[slug];
   if (!sol || EXCLUDE.has(slug)) return [];

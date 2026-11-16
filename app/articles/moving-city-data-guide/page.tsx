@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import RakutenGifts from "@/components/RakutenGifts";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
@@ -232,6 +233,13 @@ export default function Page() {
           前に一度「住む側」で数日過ごしてみることをおすすめします。
         </p>
       </div>
+
+      {/* 引っ越し準備をする人向けの実用品導線(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="引っ越し ダンボール セット"
+        heading="楽天市場で引っ越し用品を見る"
+        hits={3}
+      />
 
       <div style={box}>
         <h2>Q&amp;A</h2>

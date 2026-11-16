@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import RakutenGifts from "@/components/RakutenGifts";
 import JsonLd from "@/components/JsonLd";
 import { allAgriCities, type AgriCity } from "@/lib/agriCity";
 import { AGRI_META, oku } from "@/lib/agriOutput";
@@ -223,6 +224,13 @@ export default function Page() {
           </p>
         ))}
       </div>
+
+      {/* 特産品・返礼品への活かし方を読んだ人向けに、実商品への導線を置く(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="特産品 お取り寄せ グルメ"
+        heading="楽天市場で全国の特産品を見る"
+        hits={3}
+      />
 
       <JsonLd
         data={{

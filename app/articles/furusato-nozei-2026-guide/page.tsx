@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
 import AffiliateSlot from "@/components/AffiliateSlot";
+import RakutenGifts from "@/components/RakutenGifts";
 import FurusatoTimeline from "@/components/FurusatoTimeline";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
@@ -125,6 +126,13 @@ export default function Page() {
 
       {/* 「期限」で来た人が、次に探すのは寄付先。期限の表のすぐ下に置く(PR表記はA8Banner側で表示) */}
       <AffiliateSlot topic="furusato" />
+
+      {/* 具体的な返礼品を探す人向けに、楽天の実商品も並べる(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="ふるさと納税 返礼品"
+        heading="楽天ふるさと納税で人気の返礼品"
+        hits={3}
+      />
 
       <div style={box}>
         <h2>ワンストップ特例が使えないケース</h2>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import ArticleLayout from "@/components/ArticleLayout";
+import RakutenGifts from "@/components/RakutenGifts";
 import RankingBarChart from "@/components/RankingBarChart";
 import JsonLd from "@/components/JsonLd";
 import CompareCTA from "@/components/CompareCTA";
@@ -227,6 +228,13 @@ export default function Page() {
         </p>
         <CompareCTA />
       </div>
+
+      {/* 子育て用品を探す人向けの導線(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="知育玩具 絵本 セット"
+        heading="楽天市場で知育玩具・絵本を見る"
+        hits={3}
+      />
 
       <div style={box}>
         <h2>Q&amp;A</h2>
