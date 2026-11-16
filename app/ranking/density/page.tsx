@@ -11,6 +11,7 @@ import JsonLd from "../../../components/JsonLd";
 import Link from "next/link";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import RankingJsonLd from "../../../components/RankingJsonLd";
 import SparseDensitySummary from "../../../components/ranking/SparseDensitySummary";
 import { withTop1 } from "@/lib/rankingMeta";
@@ -99,6 +100,25 @@ export default function Page() {
       </h1>
 
       <DataAsOf text="人口:令和7年国勢調査(確定値)、面積:国土地理院" />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          人口密度は、自治体の「面積」に強く左右される指標です。
+          最も高い東京都豊島区は23,483人/km²の一方、人口10万人以上の
+          市で最も低い北海道北見市は76人/km²と、約300倍の開きがあります。
+          ただし北見市の市域には広大な山林・農地が含まれており、
+          「密度が低い=まばらに暮らしている」とは限りません。合併で
+          市域が広くなった市ほど、密度は低く出る構造があります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          実際に人が住める土地だけを分母にした
+          <a href="/ranking/habitable-density" style={{ color: "#2563eb" }}>
+            可住地人口密度ランキング
+          </a>
+          と比べると、順位の顔ぶれが大きく変わります。暮らしの密集感を
+          知りたいときは、そちらが実態に近い指標です。
+        </p>
+      </RankingEditorial>
 
       <a
         href="/articles/density-analysis"

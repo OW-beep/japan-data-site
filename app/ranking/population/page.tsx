@@ -12,6 +12,7 @@ import CompareCTA from "../../../components/CompareCTA";
 import { getMunicipalitiesPop } from "../../../lib/cityPopulation";
 import { isReleased } from "../../../lib/release";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import RankingJsonLd from "../../../components/RankingJsonLd";
 import { withTop1 } from "@/lib/rankingMeta";
 
@@ -76,6 +77,27 @@ export default function Page() {
         東京都の特別区(千代田区など)は独立した自治体として個別に、
         政令指定都市の区(横浜市港北区など)は市の内訳として、各市のページに掲載しています。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          人口は、少数の大きな自治体に集中しています。上位10自治体だけで
+          全国の人口の約16%を占め、人口10万人以上の自治体は277と
+          全体の2割に満たない一方で、人口の大部分はその277自治体に
+          住んでいます。100万人以上の市は11(東京都特別区部を1つと
+          数えると12)で、その顔ぶれと増減は
+          <a href="/articles/million-cities" style={{ color: "#2563eb" }}>
+            人口100万人以上の都市の分析
+          </a>
+          で詳しく見ています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          もう一つ大切なのは、人口の大きさと「勢い」は別だということです。
+          財政力指数と人口増減を掛け合わせた分析では、相関は強いものの、
+          財政力の高い自治体の約7割は人口が減っていました。順位表の
+          「大きさ」だけでなく、増減率のランキングとあわせて見ることで、
+          街の現在地と方向性の両方が分かります。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="人口とは？"

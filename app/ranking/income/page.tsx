@@ -11,6 +11,7 @@ import {
 import { hasPrefectureStatsData as checkReady } from "../../../lib/prefectureStats";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/income" },
   title: "都道府県別 平均年収ランキング",
@@ -39,6 +40,23 @@ export default function IncomeRankingPage() {
       </h1>
 
       <DataAsOf />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          都道府県の平均年収は、その地域の「産業の顔」を映します。
+          本社機能や金融・ITが集まる地域は高く、一次産業や観光の
+          比重が大きい地域は低く出る傾向があります。個人の稼ぎの
+          多さというより、どんな仕事が多い地域かを示す数字です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          読み方には2つ注意があります。第一に「平均」は高所得の
+          一部の人に引っ張られるため、典型的な世帯の実感とは
+          ずれます。第二に、年収は家賃や物価とセットで見るべき
+          数字です。年収が高くても家賃の高い大都市では、可処分の
+          余裕は地方と変わらないこともあります。移住の検討では、
+          地価のランキングと並べて見るのが実践的です。
+        </p>
+      </RankingEditorial>
 
       {!ready || ranking.length === 0 ? (
         <div

@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 import RankingJsonLd from "../../../components/RankingJsonLd";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/foreign-population" },
@@ -49,6 +50,22 @@ export default function Page() {
       </h1>
 
       <DataAsOf />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          外国人比率が高い自治体は、大きく2つのタイプに分かれます。
+          一つは、自動車や電子部品などの工場が集まり、技能実習生や
+          特定技能の働き手が多い製造業の街。もう一つは、大学や
+          国際機関、観光地を抱える街です。比率の背景にある産業を
+          見ると、その街の成り立ちが分かります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          なお「比率」と「人数」は別の話です。人数では大都市圏が
+          圧倒的に多く、比率で上位の小規模な自治体とは顔ぶれが
+          異なります。このページでは比率の順位とあわせて、
+          10%以上の自治体をすべて掲載しています。
+        </p>
+      </RankingEditorial>
 
       <a
         href="/articles/foreign-population"

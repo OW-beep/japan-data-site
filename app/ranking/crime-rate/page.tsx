@@ -10,6 +10,7 @@ import {
 } from "../../../lib/prefectureStats";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/crime-rate" },
   title: "都道府県別 刑法犯認知件数ランキング｜人口千人あたり",
@@ -34,6 +35,23 @@ export default function CrimeRateRankingPage() {
       </h1>
 
       <DataAsOf />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          刑法犯の「認知件数」は、警察が把握した件数であって、
+          実際に起きた犯罪の総数そのものではありません。届出の
+          されやすさや、警察の取り締まりの重点によっても増減します。
+          この数字だけで「治安の良し悪し」を断定することはできません。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          もう一つ、人口あたりで比べる際の落とし穴があります。
+          繁華街や観光地を抱える都市部では、昼間に流入する人が
+          多いため、住民の人口を分母にすると件数が高く出ます。
+          住む街の安全性を考えるときは、件数の多い罪種(自転車盗や
+          万引きが多いのか、凶悪犯なのか)まで含めて見ることが
+          大切です。
+        </p>
+      </RankingEditorial>
 
       <a
         href="/articles/crime-rate-analysis"
