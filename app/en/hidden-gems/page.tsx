@@ -201,6 +201,20 @@ export default function Page() {
           Explore the full data (in Japanese) →
         </Link>
       </p>
+      <p style={{ fontSize: 14, color: "#4b5563", lineHeight: 1.9 }}>
+        More in English:{" "}
+        <Link prefetch={false} href="/en/akiya" style={{ color: "#2563eb" }}>
+          Akiya: where the empty houses really are
+        </Link>
+        {" · "}
+        <Link prefetch={false} href="/en/growing-towns" style={{ color: "#2563eb" }}>
+          Japan is shrinking — but these towns are growing
+        </Link>
+        {" · "}
+        <Link prefetch={false} href="/en" style={{ color: "#2563eb" }}>
+          All English guides
+        </Link>
+      </p>
     </main>
   );
 }
