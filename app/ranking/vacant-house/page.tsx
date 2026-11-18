@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -71,6 +72,29 @@ export default function VacantHouseRankingPage() {
       >
         📖 分析記事「別荘地と旧産炭地、2つの空き家率」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          上位の顔ぶれを見ると、このランキングは「人が去った街」の表では
+          ないことが分かります。1位の軽井沢町は70.4%、2位の那須町は
+          61.7%、3位の熱海市は53.4%と、上位には別荘地・保養地が並びます。
+          ここでの「空き家」の多くは、普段は使われていない別荘や
+          セカンドハウスです。一方で旧産炭地の夕張市も39.4%で10位に
+          入っており、同じ「空き家率が高い」でも成り立ちは大きく異なります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          読み方のコツは、率の高さだけで判断しないことです。調査対象の
+          1,059自治体の中央値は14.3%で、30%を超えるのは37自治体だけです。
+          また
+          <a href="/articles/vacant-land-price-analysis" style={{ color: "#2563eb" }}>
+            空き家率と地価を掛け合わせた分析
+          </a>
+          では相関が−0.48と、「空き家が多い街ほど地価は低い」傾向がある
+          一方、軽井沢町のように空き家率も地価も高い例外もあります。
+          移住先を検討するときは、地価や人口の動きと並べて見るのが
+          おすすめです。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

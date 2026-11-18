@@ -12,6 +12,7 @@ import RelatedArticles from "@/components/RelatedArticles";
 
 import CitySummary from "@/components/city/CitySummary";
 import CityPositionVisual from "@/components/city/CityPositionVisual";
+import FunabashiDeepDive from "@/components/city/FunabashiDeepDive";
 import CityLocationMap from "@/components/city/CityLocationMap";
 import CityStats from "@/components/city/CityStats";
 import CityFuture from "@/components/city/CityFuture";
@@ -189,6 +190,9 @@ export default async function Page({
       />
 
       {insight && <CityPositionVisual insight={insight} />}
+
+      {/* 船橋市(12204)だけの特設「深掘り分析」。ほかの自治体ページには表示しない */}
+      {city.code === "12204" && <FunabashiDeepDive />}
 
       <CityNarrative code={city.code} />
 

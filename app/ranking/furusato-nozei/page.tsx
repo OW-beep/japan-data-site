@@ -8,6 +8,7 @@ import CompareCTA from "../../../components/CompareCTA";
 import AffiliateSlot from "../../../components/AffiliateSlot";
 import JsonLd from "../../../components/JsonLd";
 import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import Link from "next/link";
 import { getFurusatoNozeiRanking } from "../../../lib/furusatoNozei";
 
@@ -64,6 +65,30 @@ export default function Page() {
       </h1>
 
       <DataAsOf />
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          総額の上位には、返礼品の強い自治体が並びます。1位の大阪府
+          泉佐野市は230億円、2位の北海道白糠町は223億円、3位の宮崎県
+          都城市は217億円です。ただ、全国の受入総額1兆3,088億円に
+          対して1位のシェアは1.8%、上位10自治体を合わせても13.1%に
+          とどまります。100億円を超えるのは14自治体だけで、中央値は
+          2.6億円です。「一部の自治体に極端に集中」というより、
+          「突出したトップ層と、薄く広い裾野」という形をしています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          人口1人あたりに直すと、順位は大きく入れ替わります。白糠町は
+          1人あたり306万円で、総額と1人あたりの両方に顔を出す数少ない
+          自治体ですが、総額トップ10と1人あたりトップ20に重なるのは
+          北海道の4自治体だけです。総額は自治体の「規模」、1人あたりは
+          「住民1人にとっての存在感」を映す指標と言えます。なお
+          <a href="/articles/furusato-nozei-finance-analysis" style={{ color: "#2563eb" }}>
+            受入額と財政力指数を掛け合わせた分析
+          </a>
+          では相関が−0.44で、財政力の弱い自治体ほど受け入れている
+          傾向も確認されています。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="ふるさと納税 受入額"

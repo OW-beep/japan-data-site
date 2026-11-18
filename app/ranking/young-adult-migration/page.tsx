@@ -6,6 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import YoungAdultMigrationSummary from "../../../components/ranking/YoungAdultMigrationSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
@@ -68,6 +69,29 @@ export default function YoungAdultMigrationRankingPage() {
       >
         📖 分析記事「若者に選ばれる街」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          20代の純移動がプラスなのは287自治体、全体の18.2%だけです。
+          上位には墨田区(人口1,000人あたり+14.2)、中央区+13.4、
+          品川区+12.7と都心の区が並び、進学・就職の受け皿になって
+          いることが分かります。都心以外では、観光の働き口が多い
+          竹富町が+16.0で1位に入りました。若者の移動は、進学・就職と
+          いったライフイベントの節目に強く引っ張られる動きです。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          下位の大きなマイナスは、読み方に注意が要ります。岬町−63.7、
+          白子町−60.4といった町では、高校卒業後の進学・就職で世代ごと
+          出ていく動きが、人口の小ささゆえに率へ大きく跳ね返ります。
+          人が去ること自体が問題なのではなく、進学先・就職先が町内に
+          乏しい構造の表れと見るのが正確です。若者の流入がそのまま
+          子育て世代の定着につながるかは、
+          <a href="/ranking/child" style={{ color: "#2563eb" }}>
+            子ども人口割合ランキング
+          </a>
+          と重ねると見えてきます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

@@ -4,6 +4,7 @@ import RankCard from "../../../components/RankCard";
 import MetricBox from "../../../components/MetricBox";
 import { dataSources } from "../../../lib/dataSources";
 import AdSense from "../../../components/AdSense";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { getMunicipalities } from "../../../lib/municipalities";
 import { getTax, nationalIncomePerTaxpayer } from "../../../lib/taxableIncome";
 
@@ -46,6 +47,28 @@ export default function TaxableIncomeRankingPage() {
       >
         📖 所得が高い街・低い街と、暮らしとの関係を分析した記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          上位は東京都心の区が占め、1位の港区は1,810万円と、全国の
+          納税義務者1人あたり平均387.5万円の4.7倍に達します。渋谷区
+          1,394万円、千代田区1,291万円が続きますが、全国平均を超える
+          自治体は147と全体の1割に満たず、中央値は311万円です。
+          少数の高所得地域が平均を引っ張り上げる、右に裾の長い
+          分布になっています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          読み違えやすいのは、これが「住民の平均年収」ではない点です。
+          対象は住民税の所得割を納める人だけで、年金生活者や非課税の
+          人は含まれません。さらに株式の売却益なども入るため、資産所得の
+          多い地域では実感より高く出ます。給与だけの水準を見たいときは
+          <a href="/ranking/income" style={{ color: "#2563eb" }}>
+            平均年収ランキング
+          </a>
+          と見比べると、このランキングとの違いから所得の「中身」が
+          見えてきます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

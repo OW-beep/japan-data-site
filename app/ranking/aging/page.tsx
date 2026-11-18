@@ -11,6 +11,7 @@ import DataAsOf from "../../../components/DataAsOf";
 
 import { getAgeRows, nationalRates } from "../../../lib/ageRates";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -78,6 +79,29 @@ export default function Page() {
           </>
         )}
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          上位は小規模な町村が占めます。1位の群馬県南牧村は68.9%で、
+          50%以上の自治体は111、40%以上は611と、全体の3分の1を
+          超えます。ただし上位5自治体はいずれも人口2,000人未満の村で、
+          人口10万人以上の277自治体では、40%を超えるのは北海道小樽市
+          (42.2%)だけです。高齢化率の高さは、まず「規模の小さな自治体」
+          の現象として表れています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          もう一つ知っておきたいのは、「全国平均」とのずれです。全国の
+          高齢化率28.7%は人口の多い都市に引っ張られた加重平均で、
+          自治体を1つずつ並べた中央値は36.4%あります。つまり「ふつうの
+          自治体」はすでに36%台です。逆に20%を切るのは26自治体だけで、
+          東京都中央区(14.2%)のような都心部が中心です。
+          <a href="/articles/aging-doctors-mismatch-analysis" style={{ color: "#2563eb" }}>
+            高齢化率と医師数を掛け合わせた分析
+          </a>
+          では相関が−0.14と弱く、高齢化が進んだ自治体ほど医師が少ない
+          とは限らない点も、あわせて確認したいところです。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="高齢化率とは？"

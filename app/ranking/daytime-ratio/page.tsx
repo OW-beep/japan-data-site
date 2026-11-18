@@ -6,6 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import DaytimeRatioSummary from "../../../components/ranking/DaytimeRatioSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
@@ -66,6 +67,29 @@ export default function DaytimeRatioRankingPage() {
       >
         📖 分析記事「千代田区が1355%になる理由」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          この比率が100%を超える自治体は586と、全体の3分の1にとどまります。
+          上位は千代田区の1,355.4%を筆頭に、中央区374.4%、港区373.4%と
+          都心のオフィス街が並び、夜の人口の何倍もの人が昼間に集まる
+          「働く場所」そのものです。顔ぶれは都心だけではなく、名古屋港の
+          物流・工場が集まる飛島村282.5%や、復興作業の拠点となっている
+          大熊町588.6%など、産業の集積が昼の人口を押し上げる例も目立ちます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          一方で、七ヶ浜町67.1%や舟橋村70.7%のように100%を大きく
+          下回る自治体は、住民が昼間に市街地へ出ていくベッドタウンです。
+          比率の低さは衰退の印ではなく、「住む場所」として選ばれている
+          ことの裏返しでもあります。昼の活気と夜の暮らしは別の顔なので、
+          この比率は人口の多さと並べて見るのがおすすめです。昼間に人が
+          集まる街では飲食店の集積も進みやすく、その関係は
+          <a href="/articles/daytime-restaurant-density-analysis" style={{ color: "#2563eb" }}>
+            昼間人口と飲食店密度の分析
+          </a>
+          で確かめています。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

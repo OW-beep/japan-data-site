@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/doctors" },
   title: "全国自治体 医師数ランキング(人口10万人あたり)",
@@ -55,6 +56,30 @@ export default function Page() {
       >
         📖 医師数ランキング分析を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          上位は、医科大学の附属病院がある自治体が占めます。1位の
+          東京都千代田区は2,902人、2位の福井県永平寺町は2,215人、
+          3位の岩手県矢巾町は2,010人と続きます。永平寺町には福井大学、
+          矢巾町には岩手医科大学、6位の栃木県壬生町(1,705人)には
+          獨協医科大学の附属病院があります。人口の少ない町に大病院が
+          1つあるだけで値が跳ね上がるため、上位は「医療が充実した街」
+          というより「拠点病院の所在地」の表になっています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          反対に、数字の低さも鵜呑みにできません。自治体の中央値は
+          142人で、医師が1人もいない自治体は29、100人を下回る自治体は
+          592と約3分の1にのぼります。ただ、受診は自治体の境界を越えて
+          行われるため、この値だけで「医療が手薄な街」とは判断
+          できません。
+          <a href="/articles/aging-doctors-mismatch-analysis" style={{ color: "#2563eb" }}>
+            高齢化率と医師数を掛け合わせた分析
+          </a>
+          でも相関は−0.14と弱く、高齢化が進んだ自治体ほど医師が
+          少ないとは限らないことが分かっています。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

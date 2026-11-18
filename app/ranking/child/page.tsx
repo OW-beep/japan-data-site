@@ -6,6 +6,7 @@ import { dataSources } from "../../../lib/dataSources";
 import ChildSummary from "../../../components/ranking/ChildSummary";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { getAgeRows, nationalRates } from "../../../lib/ageRates";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
 import { withTop1 } from "@/lib/rankingMeta";
@@ -56,6 +57,29 @@ export default function Page() {
           {nat.child >= nat.child2020 ? "上昇" : "低下"}しました。
         </p>
       )}
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          全国の割合が10.8%まで下がるなか、上位には沖縄県と離島部が
+          並びます。1位の三島村24.7%は全国の2倍超で、十島村20.1%、
+          八重瀬町19.5%、南風原町18.7%と続きます。顔ぶれのもう一つの
+          軸は、熊本市近郊の嘉島町18.7%のような、子育て世代が流入する
+          大都市近郊の町で、「出生が多い地域」と「子育て世代が移り
+          住む地域」の2タイプが上位を作っています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          ただし、この割合は年齢構成の結果であり、「子育て支援の
+          手厚さ」そのものを測る指標ではありません。15%以上の自治体は
+          48しかなく、半数の869自治体は10%を下回ります。また人口の
+          小さな村では、子どもの数が数十人動くだけで順位が大きく
+          変わります。割合だけでなく子どもの実数や保育の受け皿と
+          合わせて見ることが大切で、見方は
+          <a href="/articles/child-friendly-city-data-guide" style={{ color: "#2563eb" }}>
+            子育てしやすい街のデータガイド
+          </a>
+          にまとめています。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"
