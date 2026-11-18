@@ -7,6 +7,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getFiscalHealthScores } from "../../../lib/compositeScores";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RakutenGifts from "../../../components/RakutenGifts";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/fiscal-health-composite" },
   title: "財政健全度スコア ランキング｜4指標統合の独自指数",
@@ -71,6 +72,13 @@ export default function FiscalHealthRankingPage() {
       </div>
 
       <RankingCommentary slug="fiscal-health-composite" />
+
+      {/* 自治体の財政に関心を持った人向けに、ふるさと納税の返礼品への導線を置く(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="ふるさと納税 返礼品"
+        heading="楽天市場でふるさと納税の返礼品を見る"
+        hits={3}
+      />
 
     </main>
   );

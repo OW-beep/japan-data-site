@@ -4,6 +4,7 @@ import ArticleLayout from "@/components/ArticleLayout";
 import RankingBarChart from "@/components/RankingBarChart";
 import PersonalNote from "@/components/PersonalNote";
 import JsonLd from "@/components/JsonLd";
+import RakutenGifts from "@/components/RakutenGifts";
 
 export const metadata = {
   alternates: { canonical: "/articles/bedroom-town-finance-analysis" },
@@ -175,6 +176,13 @@ export default function Page() {
           </p>
         ))}
       </div>
+
+      {/* ベッドタウンの住民は、ふるさと納税で他の自治体へ寄付する側でもある。その受け皿となる返礼品への導線を置く(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="ふるさと納税 返礼品"
+        heading="楽天市場でふるさと納税の返礼品を見る"
+        hits={3}
+      />
 
       <JsonLd
         data={{

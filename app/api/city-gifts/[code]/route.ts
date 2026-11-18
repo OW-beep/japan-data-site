@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 
 import { getAgriCity } from "@/lib/agriCity";
+import { getCity } from "@/lib/getCity";
+import { getCityInsight } from "@/lib/cityInsight";
 import { searchRakutenItems } from "@/lib/rakuten";
 
 /**
@@ -8,10 +10,11 @@ import { searchRakutenItems } from "@/lib/rakuten";
  * ページを開いてブロックの近くまでスクロールされたときだけブラウザから呼ばれる
  * (ビルド時にAPIを何百回も呼ばないため。components/city/LazyGifts.tsx)。
  *
- * 検索語は、その自治体の「強み」(lib/agriCity.ts)から、ここで決める。
+ * 検索語は、その自治体のデータから、ここで決める。
  * 呼び出し側から任意のキーワードを受け取らないので、楽天APIの枠を他の用途に使われることはない。
  * 結果はCDNにキャッシュされるので、同じ自治体への2回目以降は楽天APIを呼ばない。
  *
+ * 【農業の強みがある自治体】(components/city/CityStrengths.tsx のブロック用)
  * 商品が見つからなかったときは、検索語を段階的に広げる。どの段階でも、結果は
  * 「商品名か販売元(自治体名)に、その市町村名(または県名)が書かれているもの」だけに絞る。
  * 楽天の検索は語を緩く照合するため、絞らないと別の自治体の商品が混ざる(実際に混ざった)。
@@ -20,26 +23,52 @@ import { searchRakutenItems } from "@/lib/rakuten";
  *   3. ふるさと納税 {強み1番目の品目} {都道府県名}(県名で絞る)         → 見出し「{都道府県名}産の{品目}を楽天市場で見る」
  * 3は市町村単位ではないので、見出しもそれに合わせる(実際と違う産地を名乗らないため)。
  *
+ * 【強みがない自治体】(components/city/CityFurusato.tsx のブロック用)
+ * その自治体自身の返礼品だけを出す。検索語は「ふるさと納税 {市町村名}」の1段のみで、
+ * 県単位などには広げない(市町村単位のブロックと銘打っているため)。
+ * 結果は同じく市町村名で絞り、0件なら何も返さない(ページ側も何も表示しない)。
+ * 政令指定都市の区・集計行など、自治体そのものではないコードには返さない
+ * (ふるさと納税の寄付先は市町村単位のため)。
+ *
  * 動作確認: ブラウザで /api/city-gifts/23231(田原市)を開く。
  *   reason が "keys_missing" → 環境変数 RAKUTEN_APP_ID / RAKUTEN_ACCESS_KEY が未設定
  *   reason が "no_results"   → 楽天側で該当商品が0件(Vercelのログに [rakuten] の詳細が出る)
+ *   reason が "no_city"      → 自治体そのものではないコード(区・集計行など)
  */
 const OK = "public, s-maxage=21600, stale-while-revalidate=86400";
 const MISS = "public, s-maxage=3600";
 
 export async function GET(_req: Request, { params }: { params: Promise<{ code: string }> }) {
   const { code } = await params;
-  const a = /^\d{5}$/.test(code) ? getAgriCity(code) : null;
+  const valid = /^\d{5}$/.test(code);
+  const a = valid ? getAgriCity(code) : null;
   const top = a?.strengths[0];
-  if (!a || !top) {
-    return NextResponse.json({ items: [], reason: "no_strength" }, { headers: { "Cache-Control": OK } });
-  }
   if (!process.env.RAKUTEN_APP_ID || !process.env.RAKUTEN_ACCESS_KEY) {
     // キー未設定。設定してもすぐ反映されるよう、長くキャッシュしない
     return NextResponse.json({ items: [], reason: "keys_missing" }, { headers: { "Cache-Control": "no-store" } });
   }
 
   const fits = (it: { name: string; shopName: string }, word: string) => it.name.includes(word) || it.shopName.includes(word);
+
+  // 農業の強みがない自治体は、その自治体自身のふるさと納税返礼品だけを出す
+  // (CityFurusato 用)。自治体そのものではないコード(区・集計行)には返さない。
+  if (!a || !top) {
+    const city = valid ? getCity(code) : undefined;
+    if (!city || !getCityInsight(code)) {
+      return NextResponse.json({ items: [], reason: "no_city" }, { headers: { "Cache-Control": OK } });
+    }
+    // name は「千葉県 船橋市」形式。寄付先としての自治体名(「船橋市」)だけを使う
+    const short = city.name.split(" ").slice(1).join(" ") || city.name;
+    const found = await searchRakutenItems(`ふるさと納税 ${short}`, 10, { maxAttempts: 2, backoff429Ms: 1500 });
+    const items = (found ?? []).filter((it) => fits(it, short)).slice(0, 3);
+    if (items.length > 0) {
+      return NextResponse.json(
+        { items, heading: `${short}のふるさと納税 返礼品を楽天市場で見る` },
+        { headers: { "Cache-Control": OK } },
+      );
+    }
+    return NextResponse.json({ items: [], reason: "no_results" }, { headers: { "Cache-Control": MISS } });
+  }
 
   const attempts: { keyword: string; heading: string; word: string }[] = [
     ...a.strengths.slice(0, 2).map((st) => ({

@@ -25,7 +25,9 @@ import NearbyCities from "@/components/city/NearbyCities";
 import CityCompare from "@/components/city/CityCompare";
 import RelatedRankings from "@/components/city/RelatedRankings";
 import CityNarrative from "@/components/city/CityNarrative";
+import CityProfileAnalysis from "@/components/city/CityProfileAnalysis";
 import CityStrengths from "@/components/city/CityStrengths";
+import CityFurusato from "@/components/city/CityFurusato";
 import { getCityInsight } from "@/lib/cityInsight";
 import { isCityIndexable, CITY_INDEX_MIN_POP } from "@/lib/indexPolicy";
 
@@ -196,7 +198,17 @@ export default async function Page({
 
       <CityNarrative code={city.code} />
 
+      {/* index対象の自治体だけ、タイプ判定つきの「プロフィール分析」を追加する(テンプレ感の解消)。
+          船橋市は専用の深掘りがあるため除く */}
+      {isCityIndexable(city.code) && city.code !== "12204" && (
+        <CityProfileAnalysis code={city.code} />
+      )}
+
       <CityStrengths code={city.code} />
+
+      {/* その自治体自身のふるさと納税返礼品(楽天)。強みがある自治体では CityStrengths 側の
+          ブロックが同じ役割を担うため、CityFurusato 側では出さない(ブロックは1つだけ) */}
+      <CityFurusato code={city.code} />
 
       <CityStats city={city} />
 

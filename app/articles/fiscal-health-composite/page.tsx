@@ -6,6 +6,7 @@ import PersonalNote from "@/components/PersonalNote";
 import BookRecommendation from "@/components/BookRecommendation";
 import { BOOKS } from "@/lib/amazonBooks";
 import JsonLd from "@/components/JsonLd";
+import RakutenGifts from "@/components/RakutenGifts";
 
 export const metadata = {
   alternates: { canonical: "/articles/fiscal-health-composite" },
@@ -246,6 +247,13 @@ export default function Page() {
           </p>
         ))}
       </div>
+
+      {/* 自治体の財政に関心を持った人向けに、ふるさと納税の返礼品への導線を置く(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="ふるさと納税 返礼品"
+        heading="楽天市場でふるさと納税の返礼品を見る"
+        hits={3}
+      />
 
       <JsonLd
         data={{

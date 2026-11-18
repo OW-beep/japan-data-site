@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import ArticleLayout from "@/components/ArticleLayout";
 import JsonLd from "@/components/JsonLd";
+import RakutenGifts from "@/components/RakutenGifts";
 import { allAgriCities } from "@/lib/agriCity";
 import { AGRI_META, getAgriItem, oku } from "@/lib/agriOutput";
 import { isReleased, releaseDate } from "@/lib/release";
@@ -217,6 +218,13 @@ export default function Page() {
           )。
         </p>
       </div>
+
+      {/* 農産物はふるさと納税の返礼品の中心でもあるため、特産品・返礼品への導線を置く(APIキー未設定なら非表示) */}
+      <RakutenGifts
+        keyword="ふるさと納税 特産品 返礼品"
+        heading="楽天市場でふるさと納税の特産品・返礼品を見る"
+        hits={3}
+      />
 
       <JsonLd
         data={{
