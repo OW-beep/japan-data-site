@@ -9,6 +9,8 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalitiesForHouseholds } from "../../../lib/households2025";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/household-size" },
   title: "全国自治体 平均世帯人員ランキング",
@@ -19,14 +21,15 @@ export const metadata: Metadata = {
 export default function Page() {
   // 人口と世帯数は、必ず同じ年にそろえる。令和7年の世帯数が取得済みなら令和7年、未取得なら令和2年(lib/households2025.ts)
   const { list, label, use2025 } = getMunicipalitiesForHouseholds(false);
-  const ranking = list
+  const all = list
     .filter((c) => c.households != null && c.households > 0)
     .map((c) => ({
       ...c,
       avgSize: c.population / (c.households ?? 1),
     }))
-    .sort((a, b) => b.avgSize - a.avgSize)
-    .slice(0, 50);
+    .sort((a, b) => b.avgSize - a.avgSize);
+
+  const ranking = all.slice(0, 50);
 
   const average =
     ranking.reduce((s, c) => s + c.avgSize, 0) / ranking.length;
@@ -67,6 +70,30 @@ export default function Page() {
         📖 世帯データランキング分析を読む →
       </a>
 
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          平均世帯人員が3人以上になる自治体は、全国1,740のうち
+          わずか6つしかありません。自治体を並べた中央値は2.29人で、
+          「平均的な世帯像」はすでに2人強です。2人を切る自治体も
+          213あり、単身世帯と二人世帯が多数派になった姿が
+          数字に表れています(令和7年国勢調査ベース)。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          上位は長野県川上村(3.64人)、群馬県川場村(3.26人)、
+          秋田県大潟村(3.22人)など、家族経営の農業が残る町村が
+          中心で、3世代同居や親子での営農が世帯を大きくしています。
+          下位には単身世帯の多い地域に加え、帰還世帯の多くが
+          単身・二人世帯である福島県大熊町(1.23人)のような
+          特殊な事情の自治体も含まれます。一人暮らしの街選びでは、
+          世帯人員の小さい地域ほど単身向けの住宅や店舗が
+          そろっている可能性があり、
+          <a href="/articles/young-single-city-guide" style={{ color: "#2563eb" }}>
+            一人暮らしの街選びガイド
+          </a>
+          も参考になります。
+        </p>
+      </RankingEditorial>
+
       <MetricBox
         title="指標定義"
         unit="人"
@@ -92,6 +119,16 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="平均世帯人員"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `${c.avgSize.toFixed(2)}人`,
+        }))}
+        totalCount={all.length}
+        topNote="1世帯あたりの人数が最も多い自治体です。全国で平均世帯人員が3人以上の自治体は6つだけです。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

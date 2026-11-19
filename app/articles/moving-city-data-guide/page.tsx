@@ -238,7 +238,7 @@ export default function Page() {
       <RakutenGifts
         keyword="引っ越し ダンボール セット"
         heading="楽天市場で引っ越し用品を見る"
-        hits={3}
+        hits={5}
       />
 
       <div style={box}>

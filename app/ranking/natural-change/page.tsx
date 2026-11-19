@@ -9,11 +9,13 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/natural-change" },
   title: "全国自治体 自然増減率ランキング（出生数-死亡数）",
   description:
-    "出生数から死亡数を引いた自然増減率を全国自治体でランキング。全国1740自治体のうち自然増加なのはわずか34自治体だけという実態を、社会増減率(転入出)とあわせて紹介します。",
+    "出生数から死亡数を引いた自然増減率を全国自治体でランキング。全国1740自治体のうち自然増加なのはわずか16自治体だけという実態を、社会増減率(転入出)とあわせて紹介します。",
 };
 
 export default function Page() {
@@ -58,6 +60,31 @@ export default function Page() {
         📖 自然増減率ランキング分析を読む →
       </a>
 
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          出生数が死亡数を上回る「自然増」の自治体は、全国1,740のうち
+          わずか16しかありません。自治体を並べた中央値は−12.6‰(人口
+          千人あたり)で、自然減が圧倒的な多数派です。プラスになった
+          16自治体の顔ぶれは、沖縄県の若い年齢構成の自治体(座間味村、
+          南風原町、中城村、豊見城市、宜野湾市)、東京都心の中央区・
+          港区・千代田区、子育て世代が集まる郊外の栗東市・長久手市・
+          日進市・粕屋町・野々市市という、性格の異なる3つのタイプに
+          分かれます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          人口10万人以上の市に限ると、自然増は都心3区だけです。
+          つまり、人口が増えている都市のほとんどは、自然減を
+          <a href="/ranking/decline" style={{ color: "#2563eb" }}>
+            社会増減(転入超過)
+          </a>
+          で補っている姿です。「子育てしやすい街」を探すときも、
+          自然増減だけで判断せず、転入の動きとあわせて見ることが
+          大切です。なお下位には、高齢化率の高い村に加え、避難指示の
+          影響が残る福島県の町村が並んでおり、年齢構成と特殊事情の
+          両方を割り引いて読む必要があります。
+        </p>
+      </RankingEditorial>
+
       <MetricBox
         title="指標定義"
         unit="‰(人口千人あたり)"
@@ -80,6 +107,16 @@ export default function Page() {
       />
 
       <AdSense />
+
+      <RankingInsightFAQ
+        metricName="自然増減率"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `${c.naturalRate.toFixed(1)}‰`,
+        }))}
+        totalCount={base.length}
+        topNote="出生数が死亡数を最も大きく上回った自治体です。自然増の自治体は全国でも16しかありません。"
+      />
 
       <div style={{ marginTop: 20 }}>
         {ranking.map((c, i) => (

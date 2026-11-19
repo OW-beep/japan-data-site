@@ -230,7 +230,7 @@ export default function Page() {
       <RakutenGifts
         keyword="特産品 お取り寄せ グルメ"
         heading="楽天市場で全国の特産品を見る"
-        hits={3}
+        hits={5}
       />
 
       <JsonLd

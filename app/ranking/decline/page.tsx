@@ -10,6 +10,8 @@ import { dataSources } from "../../../lib/dataSources";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/decline" },
   title: "全国自治体 社会増減率ランキング(転入超過・転出超過)",
@@ -72,6 +74,32 @@ export default function Page() {
         プラスが大きいほど転入が転出を上回る「転入超過」、マイナスが大きいほど
         「転出超過」を意味します。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          転入超過になっているのは402自治体で、全体の23%にとどまります。
+          自治体を並べた中央値は−0.38%で、「ふつうの自治体」は緩やかな
+          転出超過です。ただし人口10万人以上の自治体に限ると46.6%が
+          転入超過になり、規模の大きい都市ほど人の移動ではプラスに
+          なりやすい構造が見えます。上位も東京都中央区(+4.43%)のような
+          都心部と、都城市(+1.26%)のような地方の拠点都市が中心です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          一方、両端の数字には特殊な事情が含まれます。1位の福島県大熊町
+          (+6.73%)は帰還の動き、下位には避難指示の影響が残る福島県の
+          町村や、能登半島地震の被災地である珠洲市が並びます。率の大きさ
+          だけで「人気の街・不人気の街」と読むのは早計です。また社会増減は
+          人口変動の半分で、出生と死亡による
+          <a href="/ranking/natural-change" style={{ color: "#2563eb" }}>
+            自然増減
+          </a>
+          と合わせたものが総人口の増減になります。移住先選びの観点では
+          <a href="/articles/moving-city-data-guide" style={{ color: "#2563eb" }}>
+            移住先の選び方ガイド
+          </a>
+          も参考にしてください。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="社会増減率とは？"
@@ -174,6 +202,16 @@ export default function Page() {
       </p>
 
       <DeclineSummary top50={top50} bottom50={bottom50} average={average} />
+
+      <RankingInsightFAQ
+        metricName="社会増減率"
+        items={[...top50, ...[...bottom50].reverse()].map((c) => ({
+          name: c.name,
+          displayValue: `${c.rate.toFixed(2)}%`,
+        }))}
+        totalCount={ranking.length}
+        topNote="転入者数が転出者数を最も大きく上回った自治体です。なお上位には帰還の動きがある自治体も含まれます。"
+      />
 
       <div style={{ marginTop: 30 }}>
         <Link prefetch={false} href="/ranking" style={{ color: "#2563eb" }}>

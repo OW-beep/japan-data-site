@@ -60,7 +60,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ code: s
     // name は「千葉県 船橋市」形式。寄付先としての自治体名(「船橋市」)だけを使う
     const short = city.name.split(" ").slice(1).join(" ") || city.name;
     const found = await searchRakutenItems(`ふるさと納税 ${short}`, 10, { maxAttempts: 2, backoff429Ms: 1500 });
-    const items = (found ?? []).filter((it) => fits(it, short)).slice(0, 3);
+    const items = (found ?? []).filter((it) => fits(it, short)).slice(0, 5);
     if (items.length > 0) {
       return NextResponse.json(
         { items, heading: `${short}のふるさと納税 返礼品を楽天市場で見る` },
@@ -83,7 +83,7 @@ export async function GET(_req: Request, { params }: { params: Promise<{ code: s
     // 絞り込みで減るので、多め(10件)に取って、条件に合う上位3件を使う
     // ブラウザを待たせすぎないよう、やり直しは2回・短い待ちにする(ビルド用の長い待ちは使わない)
     const found = await searchRakutenItems(t.keyword, 10, { maxAttempts: 2, backoff429Ms: 1500 });
-    const items = (found ?? []).filter((it) => fits(it, t.word)).slice(0, 3);
+    const items = (found ?? []).filter((it) => fits(it, t.word)).slice(0, 5);
     if (items.length > 0) {
       return NextResponse.json({ items, heading: t.heading }, { headers: { "Cache-Control": OK } });
     }

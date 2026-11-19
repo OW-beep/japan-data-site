@@ -223,7 +223,7 @@ export default function Page() {
       <RakutenGifts
         keyword="ふるさと納税 特産品 返礼品"
         heading="楽天市場でふるさと納税の特産品・返礼品を見る"
-        hits={3}
+        hits={5}
       />
 
       <JsonLd

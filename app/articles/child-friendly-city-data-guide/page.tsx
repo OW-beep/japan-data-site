@@ -233,7 +233,7 @@ export default function Page() {
       <RakutenGifts
         keyword="知育玩具 絵本 セット"
         heading="楽天市場で知育玩具・絵本を見る"
-        hits={3}
+        hits={5}
       />
 
       <div style={box}>

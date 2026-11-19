@@ -131,7 +131,7 @@ export default function Page() {
       <RakutenGifts
         keyword="ふるさと納税 返礼品"
         heading="楽天ふるさと納税で人気の返礼品"
-        hits={3}
+        hits={5}
       />
 
       <div style={box}>

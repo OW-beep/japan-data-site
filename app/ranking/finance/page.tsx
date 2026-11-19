@@ -9,6 +9,8 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
+import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import RankingJsonLd from "../../../components/RankingJsonLd";
 import RakutenGifts from "../../../components/RakutenGifts";
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
 };
 
 export default function FinanceRankingPage() {
-  const ranking = getMunicipalities()
+  const all = getMunicipalities()
     .filter(
       (c) =>
         c.financeIndex != null &&
@@ -29,8 +31,9 @@ export default function FinanceRankingPage() {
       (a, b) =>
         (b.financeIndex ?? 0) -
         (a.financeIndex ?? 0)
-    )
-    .slice(0, 100);
+    );
+
+  const ranking = all.slice(0, 100);
 
   return (
     <main
@@ -73,6 +76,35 @@ export default function FinanceRankingPage() {
         📖 なぜ小さな村が全国トップなのか、分析記事を読む →
       </a>
 
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          1.0以上(自前の収入で需要を賄える水準)は70自治体だけで、
+          全体の4%ほどです。上位は愛知県飛島村(2.02)、青森県六ヶ所村
+          (1.62)、長野県軽井沢町(1.50)、北海道泊村(1.49)と、港湾・
+          エネルギー施設・リゾートといった「税源が偏在する」小規模
+          自治体が並び、都市部の自治体で上位に入るのは東京都武蔵野市
+          (1.48)など少数です。自治体を並べた中央値は0.44で、
+          「ふつうの自治体」は必要な経費の半分弱を自前の収入で
+          賄っている計算になります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          人口10万人以上の市に限ると中央値は0.79まで上がり、1.0以上も
+          28市あります。人口規模が大きいほど税源が厚くなる傾向は
+          明確です。ただし財政力指数が低くても、地方交付税によって
+          行政サービスの財源は確保される仕組みのため、指数の低さが
+          そのままサービスの弱さにはつながりません。借金の重さや
+          経常的な支出の硬直度まで含めた見方は
+          <a href="/ranking/fiscal-health-composite" style={{ color: "#2563eb" }}>
+            財政健全度スコア
+          </a>
+          、財政力と人口増減の関係は
+          <a href="/articles/finance-population-cross-analysis" style={{ color: "#2563eb" }}>
+            掛け合わせ分析
+          </a>
+          で扱っています。
+        </p>
+      </RankingEditorial>
+
       <MetricBox
         title="指標定義"
         unit=""
@@ -96,6 +128,16 @@ export default function FinanceRankingPage() {
 
       <AdSense />
 
+      <RankingInsightFAQ
+        metricName="財政力指数"
+        items={ranking.map((c) => ({
+          name: c.name,
+          displayValue: `${(c.financeIndex ?? 0).toFixed(2)}`,
+        }))}
+        totalCount={all.length}
+        topNote="港湾や工業用地などの大きな税源を持つ自治体です。財政力指数が1.0を超えると、地方交付税に頼らず自前の収入で運営できる水準とされます。"
+      />
+
       <div
         style={{
           marginTop: 20,
@@ -118,7 +160,7 @@ export default function FinanceRankingPage() {
       <RakutenGifts
         keyword="ふるさと納税 返礼品"
         heading="楽天市場でふるさと納税の返礼品を見る"
-        hits={3}
+        hits={5}
       />
 
     </main>

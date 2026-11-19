@@ -106,6 +106,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/articles",
     "/about",
     "/editorial-policy",
+    "/methodology",
+    "/tools/match",
     "/discoveries",
     "/privacy",
     "/terms",

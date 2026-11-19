@@ -19,7 +19,7 @@ type Props = {
  * ページ数が多い場所(自治体ページ)では、ビルド時のAPI呼び出しを避けるため
  * components/city/LazyGifts.tsx を使う。
  */
-export default async function RakutenGifts({ keyword, heading = "楽天市場で見る", hits = 3 }: Props) {
+export default async function RakutenGifts({ keyword, heading = "楽天市場で見る", hits = 5 }: Props) {
   const items = await searchRakutenItems(keyword, hits);
   if (!items || items.length === 0) return null;
   return <RakutenGiftsView items={items} heading={heading} />;

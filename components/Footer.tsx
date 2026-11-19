@@ -47,6 +47,7 @@ export default function Footer() {
             <li><Link prefetch={false} href="/discoveries" style={footerLink}>意外な発見</Link></li>
             <li><a href="/feed.xml" style={footerLink}>RSS(新着記事)</a></li>
             <li><Link prefetch={false} href="/editorial-policy" style={footerLink}>編集方針</Link></li>
+            <li><Link prefetch={false} href="/methodology" style={footerLink}>データの出典と算出方法</Link></li>
             <li><Link prefetch={false} href="/privacy" style={footerLink}>プライバシーポリシー</Link></li>
             <li><Link prefetch={false} href="/terms" style={footerLink}>利用規約</Link></li>
             <li><Link prefetch={false} href="/contact" style={footerLink}>お問い合わせ</Link></li>
