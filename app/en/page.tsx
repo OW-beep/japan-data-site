@@ -69,6 +69,16 @@ const ARTICLES = [
     desc: "Between the 2020 and 2025 censuses, 1,571 of 1,740 municipalities lost people. The steepest falls — Suzu and Wajima after the Noto earthquake, Yubari at −23.5% — and the three forces behind them.",
   },
   {
+    href: "/en/income-and-population",
+    title: "Do Richer Towns in Japan Grow?",
+    desc: "Taxable income per taxpayer × population change across all 1,740 municipalities: correlation 0.40, and 72.8% of the towns that grew are in the top income quarter. But a rich town hall, rich residents and a growing town are three different things — Tobishima proves it.",
+  },
+  {
+    href: "/en/foreign-residents",
+    title: "Foreign Residents Are Quietly Slowing Japan's Population Decline",
+    desc: "Across all 1,740 municipalities, the quarter with the most foreign residents lost 3.9% of its people in five years; the quarter with the fewest lost 8.6%. The mechanism is not arrivals but age structure — a census cross-analysis with the exceptions kept in.",
+  },
+  {
     href: "/en/fiscal-health",
     title: "Fiscal Strength: The Towns That Fund Themselves",
     desc: "Only 70 of 1,717 municipalities can fund standard services from their own taxes. The fiscal-strength ranking — nuclear plants, ports, resorts — and why a rich town hall doesn't always mean a growing town.",

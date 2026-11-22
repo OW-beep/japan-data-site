@@ -22,6 +22,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/en/safest-towns",
     "/en/oldest-towns",
     "/en/youngest-towns",
+    "/en/foreign-residents",
+    "/en/income-and-population",
     "/en/richest-towns",
     "/en/emptiest-places",
     "/en/biggest-cities",

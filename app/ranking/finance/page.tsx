@@ -15,9 +15,11 @@ import RankingJsonLd from "../../../components/RankingJsonLd";
 import RakutenGifts from "../../../components/RakutenGifts";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/finance" },
-  title: "財政力指数ランキング【全国自治体】高い自治体・低い自治体一覧",
+  // Bing実績(2026-11-22分析): キーワード「財政力指数」550表示・CTR 0.91%(7.88位)。
+  // タイトルに1位の実名・実数(飛島村2.02)を入れて、検索意図に直接答える形にした
+  title: "財政力指数ランキング｜1位は愛知県飛島村(2.02)全国自治体一覧",
   description:
-    "全国自治体の財政力指数をランキング形式で一覧比較。財政力指数が高い「稼げる自治体」から低い自治体まで、1.0を超えるとどうなるか、指数の見方も解説します。",
+    "1位は愛知県飛島村(2.02)。全国自治体の財政力指数をランキング形式で一覧比較。1.0以上の自治体は全国で70だけです。財政力指数が高い「稼げる自治体」から低い自治体まで、1.0を超えるとどうなるか、指数の見方も解説します。",
 };
 
 export default function FinanceRankingPage() {

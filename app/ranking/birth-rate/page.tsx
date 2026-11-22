@@ -15,7 +15,9 @@ import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/birth-rate" },
-  title: "全国自治体 出生率ランキング【合計特殊出生率】",
+  // Bing実績(2026-11-22分析): キーワード「合計特殊出生率」180表示・CTR 1.67%。
+  // 財政力指数ランキングと同様、タイトルに1位の実名・実数(徳之島町2.25)を入れた
+  title: "出生率ランキング【合計特殊出生率】1位は徳之島町(2.25)｜全国自治体一覧",
   description:
     "全国自治体の合計特殊出生率をランキング形式で比較。出生率が高い自治体・低い自治体の傾向や地域差がわかります。",
 };
