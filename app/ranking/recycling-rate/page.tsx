@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/recycling-rate" },
   title: "全国自治体 ごみのリサイクル率ランキング｜大崎町など優等生自治体",
@@ -57,6 +58,15 @@ export default function RecyclingRateRankingPage() {
       >
         📖 分析記事「大崎町はなぜリサイクル率日本一なのか」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          リサイクル率の中央値は17.5%、平均は20.0%です。20%以上の自治体は655、30%以上は219あります。上位は日高市(99.7%)、中土佐町(99.6%)、美祢市(97.2%)と、排出されたごみのほぼ全量が資源化された計算になる自治体が並びます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          ただし、リサイクル率は対象とするごみの範囲や資源化の数え方が自治体で異なる場合があり、数字の単純な比較には注意が必要です。高い数値は「ごみがほとんど出ない」という意味ではなく、分別と資源化の仕組みが徹底している姿と読むのが正確です。地域の取り組みの本気度を測る目安としてご覧ください。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

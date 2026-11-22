@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/education-expense" },
   title: "全国自治体 教育費ランキング｜住民一人あたりで比較",
@@ -66,6 +67,15 @@ export default function EducationExpenseRankingPage() {
       >
         📖 教育費ランキング分析記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          住民1人あたりの教育費の中央値は59,052円です。1位は豊頃町の691,045円で中央値の11倍を超え、上位には小規模な自治体が並びます。人口の少ない自治体では、校舎の建て替えや学校の整備といった単年度の大きな支出が、1人あたりの数字を大きく押し上げます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          教育費の多さは、そのまま教育の手厚さとは限りません。建設費のような一時的な支出と、毎年かかる運営の支出が合算されているためです。子育て環境を見るときは、<a href="/ranking/school-crowding" style={{ color: "#2563eb" }}>小学校あたりの子ども数</a>など、日常の姿を映す指標とあわせて確認することをおすすめします。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

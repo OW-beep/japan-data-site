@@ -9,6 +9,7 @@ import Link from "next/link";
 import { getCapitalElevationRanking } from "../../../lib/capitalElevation";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/capital-elevation" },
   title: "都道府県庁所在地 標高ランキング｜1位は長野市371.5m",
@@ -66,6 +67,15 @@ export default function Page() {
           海に面した県庁とで、大きな差があります。
         </p>
       </div>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          47都道府県庁所在地の標高の平均は41.6mです。最も高い長野市(371.5m)、甲府市(270.4m)、山形市(198.6m)と内陸の盆地にある都市が上位を占め、100m以上は6都市だけです。一方、10m未満は23都市とほぼ半数を占め、最も低い長崎市(2.1m)、横浜市(2.5m)、青森市(2.6m)はいずれも海に面した立地です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          県庁所在地の標高は、その土地の気候や地形の「顔」を映します。標高の高さは寒さや雪の多さと、低い立地は水への備えと結びつきやすいものです。移住や旅行で県庁所在地を訪れる際の、気候の目安として眺めると面白いランキングです。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

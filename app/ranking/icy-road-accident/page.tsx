@@ -4,6 +4,7 @@ import Link from "next/link";
 import MetricBox from "../../../components/MetricBox";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import RakutenGifts from "../../../components/RakutenGifts";
@@ -102,6 +103,15 @@ export default function IcyRoadAccidentRankingPage() {
         </Link>
         をご覧ください。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          全国の人身事故に占める凍結・積雪路面の事故の割合は1.5%ですが、対象751自治体のうち406自治体では、凍結・積雪路面の事故が1件もありませんでした。事故のある地域に限れば、黒石市(36.4%)、五所川原市(33.3%)、小樽市(30.3%)と、雪国では人身事故の約3件に1件が凍結・積雪路面で起きている計算です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          この割合は雪の多さだけでなく、冬の交通量や道路環境も映します。割合の高い地域は、冬の装備や運転への備えが日常の一部になっている地域でもあります。冬に訪れる際の心構えの目安として、また移住先の冬の暮らしを想像する材料としてご覧ください。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

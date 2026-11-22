@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/manufacturing" },
   title: "全国自治体 第2次産業(製造業・建設業など)就業者比率ランキング",
@@ -68,6 +69,15 @@ export default function Page() {
       >
         📖 産業構造分析の記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          第2次産業(製造業・建設業など)の就業者比率の中央値は25.1%です。50%を超えるのは忍野村(53.6%)、大泉町(51.6%)、高浜市(51.1%)など4自治体だけで、大規模な工場を抱える自治体が並びます。40%以上の自治体も74にとどまり、「ものづくりの街」は全国的には少数派です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          上位には浪江町(51.4%)のように、復興事業を含む建設業が比率を押し上げている例もあります。第2次産業は製造業と建設業を合わせた区分のため、顔ぶれを見るときは中身の違いを意識すると読み違えません。雇用の形の多様さは、<a href="/ranking/industry-diversity-index" style={{ color: "#2563eb" }}>産業の集中度</a>の指標でも確認できます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

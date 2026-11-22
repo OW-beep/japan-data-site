@@ -6,6 +6,7 @@ import { isReleased } from "@/lib/release";
 import AdSense from "@/components/AdSense";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import DataAsOf from "@/components/DataAsOf";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 import { AGRI_GROUPS, AGRI_META, getAgriItem, oku, topPublished } from "@/lib/agriOutput";
 
 export const metadata: Metadata = {
@@ -41,6 +42,15 @@ export default function AgriHubPage() {
         ただし、これは都道府県の産出額を作付面積や飼養頭数などで市町村に割り振った<strong>推計</strong>で、市町村ごとの価格や
         単収の違いは反映されません。実際の販売額や収穫量とは一致しない点に注意してください。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          農業産出額の総合1位は田原市の933.6億円で、都城市(920.7億円)、新潟市(710.1億円)、別海町(703.0億円)、鉾田市(663.8億円)が続きます。田原市は総合に加えてキャベツと花きでも1位、都城市は肉用牛と豚で1位と、「農業の強い市町村」は複数の品目にまたがって顔を出します。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          顔ぶれは、畜産の大規模産地(都城市、別海町)、野菜の大産地(田原市、鉾田市)、水田地帯の大都市(新潟市)とタイプさまざまです。この数値は、都道府県の産出額を作付面積や飼養頭数などで市町村に割り振った推計のため、実際の販売額とは一致しません。品目別に見ることで、その地域の農業の「得意分野」が浮かび上がります。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

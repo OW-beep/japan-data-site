@@ -4,6 +4,7 @@ import Link from "next/link";
 import MetricBox from "../../../components/MetricBox";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import { dataSources } from "../../../lib/dataSources";
@@ -83,6 +84,15 @@ export default function AgingGapRankingPage() {
       <Link prefetch={false} href="/articles/aging-gap" style={linkBtn}>
         📖 分析記事「少子高齢化ギャップ分析」もあわせて読む →
       </Link>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          高齢化率から子ども(0〜14歳)の割合を引いたギャップの中央値は26.5ポイントです。最も大きい南牧村は66.6ポイント(高齢化率68.9%、子ども2.3%)でした。そして2025年のデータでは、子どもの割合が高齢者の割合を上回る自治体は1つもありません。最もギャップの小さい中央区でも0.5ポイントと、高齢者の方が多い側にあります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          このギャップは、少子化と高齢化の進み方を1つの数字で見るための指標です。<a href="/ranking/aging" style={{ color: "#2563eb" }}>高齢化率</a>が同程度でも、子どもが多い自治体と少ない自治体では将来の姿が異なります。ギャップの小さい側には、中央区、長久手市、三島村のように、子育て世代の流入や若い年齢構成を持つ自治体が並びます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

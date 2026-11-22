@@ -7,6 +7,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { dataSources } from "../../../lib/dataSources";
 import { getMunicipalities } from "../../../lib/municipalities";
 import { getPopulationBasis } from "../../../lib/population2025";
@@ -114,6 +115,15 @@ export default function TrafficAccidentCityPage() {
         </Link>
         をご覧ください。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          人口1万人あたりの人身事故件数の中央値は19.0件です。最も多い千代田区(89.6件)は、事故の発生場所を住民人口で割るため、昼間人口の多い都心ほど数字が大きくなります。箱根町(67.2件)も、観光で訪れる車の多さを映した数字です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          浜松市(63.0件、人身事故4,818件)のように、件数そのものと人口比の両方で多い自治体もあります。逆に最も少ない自治体は2.8件で、中央値の約7分の1です。この指標は「住民の運転の傾向」ではなく、「その自治体の道路を走る交通量と人口のバランス」と読むのが正確です。都道府県単位の比較は<a href="/ranking/traffic-accident-rate" style={{ color: "#2563eb" }}>交通事故発生率ランキング</a>にあります。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

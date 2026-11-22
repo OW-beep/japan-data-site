@@ -7,6 +7,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getLivingInfrastructureScores } from "../../../lib/compositeScores";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/living-infrastructure-index" },
   title: "生活基盤充実度指数 ランキング｜商業集積・公民館・空き家率を統合",
@@ -46,6 +47,15 @@ export default function LivingInfrastructureRankingPage() {
         人口あたりの商業集積・公民館数・空き家率(逆指標)をZスコア化して合算した、
         本サイト独自の複合指数です。空き家率は別荘地などで高く出やすい点にご注意ください。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          商業施設や飲食店の集積、公民館の数、空き家率を合成した生活基盤充実度では、千代田区が突出した1位となり、2位には尾花沢市が入りました。人口あたりの施設の厚みを評価する設計のため、大きな施設がなくても地域の拠点が細かく置かれている市町村が上位に来る、顔ぶれの混ざったランキングです。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          この指数は施設の絶対数ではなく「人口あたりの厚み」を見るため、人口の少ない自治体ほど数字が動きやすい面があります。空き家率の高さはマイナスに働きます。買い物の場や集いの場への近さという、暮らしの実感に近い部分を切り取った指標としてご覧ください。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

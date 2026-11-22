@@ -8,6 +8,7 @@ import { getMunicipalities } from "../../../lib/municipalities";
 import { getTax } from "../../../lib/taxableIncome";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/light-car" },
@@ -47,6 +48,15 @@ export default function LightCarRankingPage() {
       >
         📖 軽自動車が多い街・少ない街と、所得・人口密度との関係を分析した記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          軽四輪(乗用・自家用)の人口100人あたり台数の中央値は5.5台です。1位は北谷町の17.7台で、北中城村(12.8台)、宮古島市(10.1台)、恩納村(9.1台)と沖縄県の自治体が上位を占めます。逆に渋谷区、文京区、港区はいずれも0.1台と、公共交通の発達した都心では極端に少なくなります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          この数字は普通車を含まないため、「車社会かどうか」そのものではありません。とはいえ、鉄道やバスで代替しにくい地域ほど軽自動車への依存が高まる傾向は表れています。移住先の生活費を考えるとき、車が必須かどうかは家計に直結する論点です。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

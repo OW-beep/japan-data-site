@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/elderly-home" },
   title: "全国自治体 高齢者施設数ランキング｜旭川市が「福祉の街」の理由",
@@ -67,6 +68,15 @@ export default function ElderlyHomeRankingPage() {
       >
         📖 分析記事「旭川市が福祉の街と呼ばれる理由」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          老人ホーム1施設あたりの高齢者人口の中央値は1,380人です。最も少ない西興部村は165人、粟国村は245人、階上町は252人と、小規模な自治体ほど「高齢者あたりの施設」が多くなります。小さな施設でも地域の中にあれば、この数字は小さくなります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          一方で、老人ホームが1施設もない自治体は94あります。近隣市町村と広域で施設をまかなう地域も多く、「ない」ことは福祉の弱さと同義ではありません。ただ、住み慣れた地域で介護を受けたいという希望との距離は、老後の住まいを考えるときに確認しておきたい点です。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

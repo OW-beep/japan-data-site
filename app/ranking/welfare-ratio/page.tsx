@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/welfare-ratio" },
   title: "全国自治体 民生費比率ランキング",
@@ -60,6 +61,15 @@ export default function Page() {
       >
         📖 民生費と高齢化率の関係を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          歳出に占める民生費(社会保障関係費)の割合の中央値は27.7%です。上位は練馬区(55.4%)、大田区(55.3%)、足立区(54.8%)と東京の区が並び、沖縄市(54.8%)も入ります。民生費が歳出の半分を超える自治体は26あり、高齢者福祉、子育て、生活支援といった支出が財政の中心になっています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          民生費の割合は、その自治体の人口構成を映します。割合が高いことは負担の重さであると同時に、福祉サービスへの支出規模の大きさでもあります。<a href="/ranking/balance-ratio" style={{ color: "#2563eb" }}>経常収支比率</a>(財政の余裕)とあわせて見ると、「何に使っているか」と「どれだけ余裕があるか」の両面から財政を読み解けます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { getCorporateGrowthRanking } from "../../../lib/corporateRegistration";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/corporate-growth" },
   title: "新設法人 純増数ランキング｜市区町村別(直近12か月)",
@@ -74,6 +75,15 @@ export default function Page() {
           ではなく、閉鎖数を差し引いた「実質的な企業の増減」を示します。
         </p>
       </div>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          直近12か月の新設法人の純増数(新設−閉鎖)では、渋谷区(4,428件)、中央区(2,810件)、千代田区(2,245件)、港区(2,117件)と東京の都心が上位を占めます。一方、対象1,839自治体のうち681(約37%)は閉鎖が新設を上回る純減で、純増数の中央値はわずか2件です。企業の出入りは、一部の都市への集中が進んでいます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          純増数は人口規模の影響を強く受けるため、大都市が上位になるのは自然な姿です。注目したいのは、規模の割に純増が多い自治体と、純減が続く自治体です。企業の出入りは、働く場の増減やまちの活気と結びつく先行指標として読めます。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

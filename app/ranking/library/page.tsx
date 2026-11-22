@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -71,6 +72,15 @@ export default function LibraryRankingPage() {
       >
         📖 図書館の充実度と子供の割合の関係を分析した記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          このランキングは人口10万人以上の283自治体に対象を絞っています。図書館1館あたり人口の中央値は50,924人です。最も少ない青梅市は13,354人/館(10館)、一関市は13,992人/館(8館)、北見市は14,435人/館(8館)と、分館を細かく置いている市が上位に並びます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          逆に越谷市は1館あたり341,621人と、大きな図書館に集約する方式の市もあります。館の数は分館の数え方に左右されるため、蔵書数や貸出の実績とは別の物差しです。「身近な場所に図書館があるか」という近さの指標としてご覧ください。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

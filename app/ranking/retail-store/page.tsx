@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/retail-store" },
   title: "全国自治体 大型小売店数ランキング｜人口1万人あたりで比較",
@@ -67,6 +68,15 @@ export default function RetailStoreRankingPage() {
       >
         📖 買い物難民ランキング分析記事もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          大型小売店の人口1万人あたり店舗数の中央値は1.36店です。1位は千代田区の14.55店で、住民人口に対して商業集積が大きい都心型の数字です。一方で奈半利町(6.59店)、日吉津村(5.71店)のように、大型商業施設を抱える小さな町村も上位に入り、「商圏の中心かどうか」を映した順位になっています。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          対象1,575自治体のうち大型小売店が0の自治体は329(約2割)あります。買い物は隣接市町村の店舗で済ませる前提の地域も多く、0は不便さの断定には使えません。住む場所の買い物環境を見るときは、この指標に加えて、日常の買い物を担う小規模な店や移動手段の状況もあわせて確認したいところです。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

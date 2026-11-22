@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalitiesForHouseholds } from "../../../lib/households2025";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/household" },
   title: "全国自治体 単独世帯割合ランキング",
@@ -68,6 +69,15 @@ export default function Page() {
       >
         📖 都心と被災地、単独世帯が多い2つの理由を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          単身世帯率の中央値は35.0%で、50%を超える自治体は92あります。上位には大熊町(84.6%)、占冠村(76.4%)、青ヶ島村(75.0%)のように、帰還の動きやリゾート、離島といった事情を持つ自治体と、新宿区(70.2%)のような都心が並びます。平均世帯人員で見ると、大熊町は1.23人です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          単身世帯率は、高齢者の一人暮らしだけでなく、若い単身者の流入や寮・社宅の存在でも上がります。最も低い川北町は13.7%で、家族世帯を中心とした構成です。「単身世帯が多い=高齢化が進んでいる」と決めつけず、年齢構成とあわせて読むことが大切です。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

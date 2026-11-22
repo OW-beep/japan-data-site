@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/community-center" },
   title: "全国自治体 公民館数ランキング｜集落ごとに1館の町も",
@@ -67,6 +68,15 @@ export default function CommunityCenterRankingPage() {
       >
         📖 分析記事「集落ごとに公民館がある町」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          公民館1館あたりの人口の中央値は6,156人です。最も少ない山添村は98人/館、飯豊町は103人/館で、集落ごとに小規模な館を置いてきた地域が上位に並びます。上位には阿南町、上松町、木島平村と長野県の町村が複数入っており、地域の集いの場を細かく維持してきた歴史がうかがえます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          一方、対象1,575自治体のうち公民館が1館もない自治体は281(約18%)あります。都市部では公民館に相当する役割を別の公共施設や民間施設が担うことも多く、「0館」は地域活動の弱さと同義ではありません。人口あたりの館数が多い地域は、身近な拠点が多い反面、維持や担い手の確保が今後の論点になります。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

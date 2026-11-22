@@ -6,13 +6,13 @@ const PATH = "/en/tokyo-wards";
 
 export const metadata = {
   alternates: { canonical: PATH },
-  title: "Tokyo's 23 Wards Compared: Population, Density, Income and Ageing | Japan Municipal Data",
+  title: "Tokyo's 23 Special Wards Ranked by Income, Population & Density | Japan Municipal Data",
   description:
-    "Tokyo's 23 special wards are 23 separate municipalities holding 9.94 million people. Compared in one table: Setagaya is a near-million city, Minato averages ¥18.1M income, Adachi ¥3.9M — a 4.6x gap inside one 'city'. 2025 census and tax data.",
+    "All 23 Tokyo wards in one table, ranked by population, density, ageing and income. Minato is the richest ward at ¥18.1M average income — 4.6x Adachi's ¥3.9M. Setagaya is the largest (954,737 people), Toshima the densest. 2025 census and tax data.",
   openGraph: {
-    title: "Tokyo's 23 Wards, Compared",
+    title: "Tokyo's 23 Wards Ranked: Income, Population, Density & Ageing",
     description:
-      "One city, 23 municipalities: income from ¥3.9M to ¥18.1M, density from 5,719 to 23,182 per km². The full ward table.",
+      "Minato averages ¥18.1M income, Adachi ¥3.9M — a 4.6x gap inside one city. All 23 wards compared in one table (2025 census & tax data).",
     images: ["/images/og-default.png"],
   },
 };

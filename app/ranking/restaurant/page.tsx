@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/restaurant" },
   title: "全国自治体 飲食店密度ランキング｜オフィス街と温泉地が上位に",
@@ -66,6 +67,15 @@ export default function RestaurantRankingPage() {
       >
         📖 分析記事「オフィス街と温泉地が上位」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          飲食店の人口1,000人あたり店舗数の中央値は3.38店です。千代田区(45.40店)、中央区(24.34店)と都心が突出し、箱根町(19.48店)、竹富町(18.01店)といった観光地が続きます。住民の数ではなく、昼間人口と観光客の需要の大きさを映した順位です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          このため、この指標は「地元の人が外食に困らないか」よりも「商圏・観光地としての集客力」に近い性格を持ちます。暮らしの利便性を見たい場合は、<a href="/ranking/retail-store" style={{ color: "#2563eb" }}>大型小売店のランキング</a>など、日常の買い物に近い指標とあわせて見るのがおすすめです。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

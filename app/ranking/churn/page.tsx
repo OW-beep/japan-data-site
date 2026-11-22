@@ -4,6 +4,7 @@ import Link from "next/link";
 import MetricBox from "../../../components/MetricBox";
 import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import JsonLd from "../../../components/JsonLd";
 import CompareCTA from "../../../components/CompareCTA";
 import { dataSources } from "../../../lib/dataSources";
@@ -90,6 +91,15 @@ export default function ChurnRankingPage() {
       >
         📖 分析記事「人口の入れ替わり率」もあわせて読む →
       </Link>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          人口の入れ替わり率(転入者数と転出者数の合計÷人口)の中央値は5.8%です。上位は大熊町(35.6%)、浪江町(30.8%)、富岡町(30.7%)と、帰還の動きが続く福島県の自治体が占め、竹富町(30.4%)、田尻町(26.1%)が続きます。最も低い勝山市は2.9%で、10倍以上の開きがあります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          入れ替わりが激しいことと、人口が増えることは別です。上位100自治体のうち36は、転入超過率が±0.5%以内に収まる「人は動くが人口はほぼ変わらない」タイプでした。人口の純増減だけでは見えない、その街の流動性の姿を映す指標です。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

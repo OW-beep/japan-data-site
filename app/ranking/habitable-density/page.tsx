@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -64,6 +65,15 @@ export default function Page() {
       >
         📖 可住地人口密度ランキング分析を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          山林や湖沼を除いた「可住地」だけに絞った人口密度では、豊島区(23,483人/km²)、中野区(22,762人/km²)、台東区(22,556人/km²)と東京の区が上位を占め、中央値は441人/km²です。面積の広い山がちな自治体でも、実際に人が暮らす範囲の密度が見えるのがこの指標の特徴です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          最も低い幌加内町は8人/km²、檜枝岐村は9人/km²で、上位とは3,000倍近い開きがあります。密度の低さは、除雪や移動の負担と表裏一体である一方、土地の広さや自然の近さという魅力でもあります。通常の<a href="/ranking/density" style={{ color: "#2563eb" }}>人口密度</a>と見比べると、数字の違いの理由が見えてきます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

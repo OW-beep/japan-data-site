@@ -5,6 +5,7 @@ import { isReleased } from "@/lib/release";
 
 import AdSense from "@/components/AdSense";
 import DataAsOf from "@/components/DataAsOf";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 import CompareCTA from "@/components/CompareCTA";
 import JsonLd from "@/components/JsonLd";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -75,6 +76,15 @@ export default function SmallestCitiesPage() {
           </>
         )}
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          全国792市のうち、人口5万人未満の市は313市(約4割)あり、1万人未満の市も6市あります。最も人口の少ない歌志内市は2,448人で、2020年の2,989人からさらに減りました。下位50市はすべて2020年より人口が減っており、「市」という区分と実際の規模が切り離された姿が見えます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          市の要件は本来「人口5万人以上」ですが、合併の特例などで小さな市も生まれてきました。下位には夕張市(5,610人)、三笠市(6,901人)、赤平市(8,261人)と北海道の旧産炭地が並びます。人口の少なさは行政運営の課題になる一方、住民と行政の距離の近さという面もあります。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

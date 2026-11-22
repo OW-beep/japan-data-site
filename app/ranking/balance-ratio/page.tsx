@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/balance-ratio" },
   title: "全国自治体 経常収支比率ランキング｜財政の余裕度がわかる",
@@ -66,6 +67,15 @@ export default function BalanceRatioRankingPage() {
       >
         📖 分析記事「原発立地自治体と夕張市」もあわせて読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          経常収支比率の中央値は89.5%で、90%以上が790自治体(全体の45%)、100%を超える自治体も8つあります。最も低いのは泊村の44.5%で、発電所立地による税収が財政の余裕を生んでいます。逆に最も高い新地町は124.1%、夕張市は123.5%と、経常的な収入だけでは経常的な支出を賄えない水準です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          この指標は単年度の姿を映すため、大規模な建設事業や災害復旧の年には跳ね上がります。また、低いことがそのまま健全さとも限らず、必要な投資を先送りしていないかは別の視点が必要です。<a href="/ranking/finance" style={{ color: "#2563eb" }}>財政力指数</a>(税収の強さ)と並べると、「稼ぐ力」と「余裕」の違いが見えてきます。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

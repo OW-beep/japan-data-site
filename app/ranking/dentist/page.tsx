@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/dentist" },
   title: "全国自治体 歯科医師数ランキング｜人口10万人あたりで比較",
@@ -67,6 +68,15 @@ export default function DentistRankingPage() {
       >
         📖 歯科医師数ランキング分析記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          人口10万人あたりの歯科医師数の中央値は59.3人です。1位の千代田区は2,539.0人と中央値の40倍以上で、文京区(386.6人)など大学病院や歯科大学が集まる自治体が上位に並びます。勤務地ベースの集計のため、診療の場が集まる場所ほど数字が大きくなる指標です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          一方で、対象1,575自治体のうち歯科医師が1人もいない自治体が20あります。ただし、近隣の市町村へ通う前提の地域も多く、「0人」は歯科医療が届かないことと同義ではありません。住民の通いやすさは、<a href="/ranking/doctors" style={{ color: "#2563eb" }}>医師数ランキング</a>などとあわせて見る必要があります。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

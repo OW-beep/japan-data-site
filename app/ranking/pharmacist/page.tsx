@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/pharmacist" },
   title: "全国自治体 薬剤師数ランキング｜人口10万人あたりで比較",
@@ -67,6 +68,15 @@ export default function PharmacistRankingPage() {
       >
         📖 薬剤師数ランキング分析記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          人口10万人あたりの薬剤師数の中央値は169.9人です。1位の千代田区は7,828.4人と突出していますが、これは調剤薬局だけでなく、医薬品メーカーや卸売業、大学病院で働く薬剤師も含んだ「勤務地ベース」の数字です。2位の中央区(2,905.2人)、3位の港区(1,467.3人)と、都心への集中が際立ちます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          薬剤師が1人もいない自治体は21あります。もっとも、薬局の有無と薬剤師数は別の話で、小さな自治体では近隣市の薬局を使う前提の地域も少なくありません。数字の大きさよりも、中央値(約170人)からどれだけ離れているかで、その地域の医療・医薬品産業の集まり方を読む指標です。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

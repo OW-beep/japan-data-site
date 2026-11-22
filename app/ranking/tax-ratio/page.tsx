@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/tax-ratio" },
   title: "全国自治体 地方税自主財源比率ランキング",
@@ -59,6 +60,15 @@ export default function Page() {
       >
         📖 財政の中身分析の記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          歳入に占める地方税の割合の中央値は20.2%です。見方を変えると、典型的な自治体の歳入の約8割は、国からの地方交付税や補助金などで成り立っています。割合が50%を超えるのは35自治体だけで、飛島村(63.8%)、田尻町(61.5%)、山中湖村(60.8%)と、大規模施設の立地や観光・空港のある自治体が並びます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          この割合が低いことは、そのまま自治体の弱さではありません。地方交付税は、税収の少ない自治体でも標準的な行政サービスを行えるようにするための再配分の仕組みだからです。むしろ注目したいのは、割合の高い自治体が「何によって稼いでいるか」で、特定の施設への依存は将来の変動リスクにもなります。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

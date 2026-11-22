@@ -9,6 +9,7 @@ import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities } from "../../../lib/municipalities";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/debt-service-ratio" },
   title: "全国自治体 実質公債費比率ランキング｜借金返済の負担度",
@@ -60,6 +61,15 @@ export default function DebtServiceRatioRankingPage() {
       >
         📖 実質公債費比率ランキング分析記事を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          実質公債費比率の中央値は7.3%です。早期健全化基準の25%を超えるのは夕張市(67.4%)だけで、2位の与謝野町(17.2%)とも大きく離れています。比率が0%以下の自治体も81あり、過去の借入の返済負担には自治体間で大きな差があります。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          この比率は3か年の平均で算出され、「今どれだけ借りているか」よりも「過去の借入の返済が、現在の財政をどれだけ圧迫しているか」を示します。夕張市の突出した数字は、財政再生に取り組んできた歩みを映したものです。高い自治体は、借金そのものより返済の期間中である、と読むのが正確です。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"

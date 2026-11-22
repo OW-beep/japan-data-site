@@ -7,6 +7,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getIndustryDiversityScores } from "../../../lib/compositeScores";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/industry-diversity-index" },
   title: "産業の多様性指数(HHI) ランキング｜産業集中度を独自算出",
@@ -46,6 +47,15 @@ export default function IndustryDiversityRankingPage() {
         産業別就業者比率から算出したハーフィンダール・ハーシュマン指数(HHI)です。
         1.0に近いほど特定の産業への一極集中、0.33に近いほどバランス型を示します。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          産業の集中度(HHI)が最も高いのは千代田区と草津町で、どちらも第3次産業が就業者の91.3%を占めます。都心のオフィス街と温泉観光の町は性格こそ違いますが、「1つの産業への特化」という点では同じ姿です。上位には渋谷区、港区、新宿区と都心が続きます。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          逆に集中度が低い(産業が分散している)のは鮭川村(0.35)、鹿部町(0.35)、横浜町(0.34)で、第1次から第3次までが分散した農村・漁村です。産業への集中は専門性と効率の裏返しであり、分散は景気の波への強さと表裏一体です。どちらが良いかではなく、地域経済の「形」の違いとして読む指標です。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

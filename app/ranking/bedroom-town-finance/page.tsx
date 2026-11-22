@@ -7,6 +7,7 @@ import RankingInsightFAQ from "../../../components/ranking/RankingInsightFAQ";
 import { getBedroomTownFinanceScores } from "../../../lib/compositeScores";
 
 import RankingCommentary from "@/components/ranking/RankingCommentary";
+import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/bedroom-town-finance" },
   title: "ベッドタウン財政力ランキング｜昼夜間人口比率×財政力指数",
@@ -47,6 +48,15 @@ export default function BedroomTownFinanceRankingPage() {
         表示しています。財政力指数が高いほど、雇用を生まなくても税収基盤が強い
         「豊かなベッドタウン」であることを示します。
       </p>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          昼夜間人口比率が低い(=ベッドタウン度が高い)順では、七ヶ浜町(67.1)、舟橋村(70.7)、中山町(73.4)と、大都市近郊の町村が上位に並びます。ただしベッドタウン度が高い上位100自治体のうち、財政力指数が1.0以上なのは市川市(1.07)だけでした。「豊かなベッドタウン」は、実は少数派です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          上位100の中で財政力が比較的高いのは、市川市のほか知多市(0.94)、稲城市(0.94)、流山市(0.93)、茅ヶ崎市(0.92)と、都心へのアクセスが良く人口規模もある市です。ベッドタウンの財政は、住民の所得水準や人口規模に支えられる面が大きく、昼夜比の低さだけでは豊かさは決まりません。
+        </p>
+      </RankingEditorial>
 
       <AdSense />
 

@@ -8,6 +8,7 @@ import AdSense from "../../../components/AdSense";
 import DataAsOf from "../../../components/DataAsOf";
 import { getMunicipalities2025 } from "../../../lib/city2025";
 import RankingCommentary from "../../../components/ranking/RankingCommentary";
+import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
@@ -64,6 +65,15 @@ export default function Page() {
       >
         📖 学校規模ランキング分析を読む →
       </a>
+
+      <RankingEditorial>
+        <p style={{ margin: "0 0 10px" }}>
+          小学校1校あたりの子ども人口の中央値は422人です。最も多い長泉町は2,079人、早島町は1,974人、南風原町は1,944人と、子育て世代の流入が続く成長エリアが上位に並びます。学校の新設や増築、学区の見直しが課題になりやすい地域です。
+        </p>
+        <p style={{ margin: "0 0 10px" }}>
+          逆に下位は渡名喜村(13人)、青ヶ島村(15人)、早川町(20人)と、小規模な学校が地域の核になっている自治体です。この数字は実際の1校あたり児童数ではなく、子どもの人口を学校数で割った目安です。学校の統廃合は通学距離や地域の事情で判断されるもので、数字だけで良し悪しは決められません。
+        </p>
+      </RankingEditorial>
 
       <MetricBox
         title="指標定義"
