@@ -64,14 +64,22 @@ export async function generateMetadata({
   const short0 = city.name.split(" ").slice(1).join(" ") || city.name;
   const indexable = isCityIndexable(code);
 
-  // タイトルには検索されている語(人口・面積・財政力指数など)を入れる。
-  // 説明文には、その自治体の順位・増減など、そのページにしかない数字を入れる。
-  const title = ins
-    ? `${short0}(${pref0})の人口・面積・財政力指数【${ins.use2025 ? "2025年国勢調査" : "最新"}】`
-    : `${city.name}の人口・面積・人口密度`;
-  const description = ins
-    ? `${city.name}の人口は${ins.pop.toLocaleString()}人(2020年比${ins.popChangePct > 0 ? "+" : ""}${ins.popChangePct.toFixed(1)}%、全国${ins.popRank}位)。高齢化率${ins.elderlyRate.toFixed(1)}%、子ども割合${ins.childRate.toFixed(1)}%。面積・人口密度・財政力指数と全国順位を掲載。`
-    : `${city.name}の人口・面積・人口密度・出生率・高齢化率などを掲載しています。`;
+  // タイトルは「答え先行」にする:「○○市 人口」で検索した人が、タイトルだけで
+  // 人口そのものと全国・県内の順位まで分かる形にする(v22・CTR改善)。
+  // 数字は getCityInsight(ページ本文と同じ令和7年国勢調査ベース)から取る。
+  // 2025年データが使えない自治体(ins がない/2020年ベース)では、従来の形式にフォールバックする。
+  const title =
+    ins && ins.use2025
+      ? `${short0}の人口は${ins.pop.toLocaleString()}人【2025年国勢調査】全国${ins.popRank}位・${pref0}内${ins.popRankInPref}位`
+      : ins
+        ? `${short0}(${pref0})の人口・面積・財政力指数【最新】`
+        : `${city.name}の人口・面積・人口密度`;
+  const description =
+    ins && ins.use2025
+      ? `${city.name}の人口は${ins.pop.toLocaleString()}人(2020年比${ins.popChangePct > 0 ? "+" : ""}${ins.popChangePct.toFixed(1)}%、全国${ins.popRank}位・${pref0}内${ins.popRankInPref}位)。高齢化率${ins.elderlyRate.toFixed(1)}%、子ども割合${ins.childRate.toFixed(1)}%${ins.financeIndex != null ? `、財政力指数${ins.financeIndex.toFixed(2)}` : ""}。面積・人口密度・財政力指数と全国順位を掲載。`
+      : ins
+        ? `${city.name}の人口は${ins.pop.toLocaleString()}人(2020年比${ins.popChangePct > 0 ? "+" : ""}${ins.popChangePct.toFixed(1)}%、全国${ins.popRank}位)。高齢化率${ins.elderlyRate.toFixed(1)}%、子ども割合${ins.childRate.toFixed(1)}%。面積・人口密度・財政力指数と全国順位を掲載。`
+        : `${city.name}の人口・面積・人口密度・出生率・高齢化率などを掲載しています。`;
 
   return {
     title,

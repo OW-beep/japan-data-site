@@ -47,6 +47,7 @@ export default function FiscalHealthRankingPage() {
       <p style={{ fontSize: 13, color: "#6b7280", marginBottom: 20, lineHeight: 1.8 }}>
         財政力指数・経常収支比率・自主財源比率・実質公債費比率の4指標をZスコア化して
         合算した、本サイト独自の複合指数です。公式な財政健全度の判定基準ではありません。
+        対象は、人口3,000人以上で4指標が揃う1,552自治体です。
       </p>
 
       <RankingEditorial>
