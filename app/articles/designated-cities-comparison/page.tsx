@@ -14,9 +14,9 @@ import FuturePopulationTable from "@/components/FuturePopulationTable";
 export const metadata = {
   alternates: { canonical: "/articles/designated-cities-comparison" },
   title:
-    "政令指定都市 人口ランキング20市一覧【2025年国勢調査】面積・高齢化率も比較",
+    "政令指定都市の人口ランキング【2025年国勢調査】1位は横浜市375万人｜20市すべて比較",
   description:
-    "政令指定都市20市を2025年国勢調査の人口順に一覧比較。面積・人口密度・高齢化率で並べ替えると、同じ「政令指定都市」でも都市の姿がまったく違います。人口100万人に届かない政令市はどこかも解説。",
+    "令和7年国勢調査による政令指定都市20市の人口ランキング。1位は横浜市（3,750,952人）、最下位は静岡市（658,781人）。100万人に届かない政令市は9市あります。",
 };
 
 type Row = City & {
@@ -364,7 +364,7 @@ export default function Page() {
           </Link>
           {" ｜ "}
           <Link prefetch={false} href="/ranking/population" style={link}>
-            人口ランキング
+            市区町村の人口ランキング
           </Link>
           {" ｜ "}
           <Link prefetch={false} href="/ranking/density" style={link}>

@@ -336,7 +336,7 @@ export default function Page() {
         <p>
           外国人比率そのものの順位は
           <Link prefetch={false} href="/ranking/foreign-population" style={link}>
-            外国人比率ランキング
+            外国人比率が高い自治体ランキング
           </Link>
           、出生と死亡のバランスは
           <Link prefetch={false} href="/ranking/natural-change" style={link}>

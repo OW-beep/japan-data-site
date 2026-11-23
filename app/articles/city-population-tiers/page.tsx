@@ -216,6 +216,18 @@ export default function Page() {
           </Link>
           で確認できます。
         </p>
+        <p>
+          全自治体の人口そのものの順位は
+          <Link prefetch={false} href="/ranking/population" style={link}>
+            市区町村の人口ランキング
+          </Link>
+          、面積あたりの密集度で見た順位は
+          <Link prefetch={false} href="/ranking/density" style={link}>
+            人口密度ランキング
+          </Link>
+          にまとめています。規模の区分とあわせて見ると、都市の立ち位置が
+          より立体的に分かります。
+        </p>
       </div>
 
       <div style={box}>

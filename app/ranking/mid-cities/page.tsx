@@ -26,11 +26,10 @@ function getRows() {
 
 export function generateMetadata(): Metadata {
   const { list, use2025 } = getRows();
-  const last = list[list.length - 1];
   return {
     alternates: { canonical: "/ranking/mid-cities" },
     title: `人口30万人以上の都市ランキング${use2025 ? "(2025年国勢調査)" : ""}｜全国${list.length}市を人口順に`,
-    description: `人口30万人以上の市は全国に${list.length}市(${use2025 ? "令和7年国勢調査" : "令和2年国勢調査"})。最も少ないのは${shortName(last.name)}(${last.population.toLocaleString()}人)。政令指定都市・中核市クラスを人口順に並べ、2020年からの増減も一覧で比較できます。`,
+    description: `人口30万人以上の市を人口順にランキング(${use2025 ? "令和7年国勢調査" : "令和2年国勢調査"})。政令指定都市・中核市クラスを中心に、全都市を一覧で掲載。2020年からの増減も比較できます。`,
   };
 }
 

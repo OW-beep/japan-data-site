@@ -231,6 +231,14 @@ export default function Page() {
           <Link prefetch={false} href="/ranking/large-cities" style={link}>
             人口50万人以上の都市ランキングを見る
           </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/ranking/population" style={link}>
+            市区町村の人口ランキング
+          </Link>
+          {" ｜ "}
+          <Link prefetch={false} href="/ranking/density" style={link}>
+            人口密度ランキング
+          </Link>
         </p>
 
         <CompareCTA />

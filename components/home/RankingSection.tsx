@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const rankings = [
-  { href: "/ranking/population", emoji: "👥", title: "人口" },
+  { href: "/ranking/population", emoji: "👥", title: "市区町村の人口ランキング" },
   { href: "/ranking/large-cities", emoji: "🌆", title: "人口50万人以上の都市" },
   { href: "/ranking/churn", emoji: "🔄", title: "人口の入れ替わり率" },
   { href: "/ranking/traffic-accident-city", emoji: "🚗", title: "交通事故(市区町村別)" },
@@ -10,7 +10,7 @@ const rankings = [
   { href: "/ranking/birth-rate", emoji: "👶", title: "出生率" },
   { href: "/ranking/child", emoji: "🧒", title: "子ども人口" },
   { href: "/ranking/aging", emoji: "🧓", title: "高齢化率" },
-  { href: "/ranking/density", emoji: "🏙️", title: "人口密度" },
+  { href: "/ranking/density", emoji: "🏙️", title: "人口密度ランキング" },
   { href: "/ranking/area", emoji: "🗺️", title: "面積" },
   { href: "/ranking/finance", emoji: "💰", title: "財政力指数" },
   { href: "/ranking/decline", emoji: "📊", title: "社会増減率" },
