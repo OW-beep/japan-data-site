@@ -10,9 +10,9 @@ import Link from "next/link";
 
 export const metadata = {
   alternates: { canonical: "/articles/finance-analysis" },
-  title: "財政力指数ランキング分析【2025年】なぜ小さな村が全国トップなのか",
+  title: "財政力指数1位は飛島村2.02｜小さな村が上位に並ぶ理由とランキング分析",
   description:
-    "財政力指数ランキング1位は、人口4,600人ほどの村です。なぜ大都市ではなく小さな自治体が上位に並ぶのか。原発・工場立地と自治体財政の関係を、全自治体のデータから分析します。",
+    "財政力指数ランキング1位は、愛知県・飛島村の2.02。なぜ大都市ではなく小さな自治体が上位に並ぶのか。原発・工場立地と自治体財政の関係を、全自治体のデータから分析します。",
 };
 
 export default function Page() {

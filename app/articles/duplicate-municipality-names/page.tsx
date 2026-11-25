@@ -6,7 +6,7 @@ import CompareCTA from "@/components/CompareCTA";
 
 export const metadata = {
   alternates: { canonical: "/articles/duplicate-municipality-names" },
-  title: "同じ名前の自治体はいくつある？｜池田町は全国に4つ",
+  title: "同じ名前の自治体は25組・57市町村｜府中市・伊達市など全国の重複地名一覧",
   description:
     "全国1,740市区町村の名前を調べると、25組・57自治体で名前が重複していることが分かりました。「池田町」は北海道・福井県・長野県・岐阜県の4つに存在し、人口は10倍以上違います。",
 };

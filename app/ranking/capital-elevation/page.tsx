@@ -12,7 +12,7 @@ import RankingCommentary from "@/components/ranking/RankingCommentary";
 import RankingEditorial from "@/components/ranking/RankingEditorial";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/capital-elevation" },
-  title: "都道府県庁所在地 標高ランキング｜1位は長野市371.5m",
+  title: "県庁所在地の標高ランキング｜1位は長野市371.5m・47都道府県庁所在地を比較",
   description:
     "国土地理院のデータをもとにした、都道府県庁所在地の標高ランキング。1位は長野市の371.5m、最も低いのは長崎市の2.1mです。",
 };

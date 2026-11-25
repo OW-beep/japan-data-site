@@ -15,9 +15,9 @@ import RankingEditorial from "../../../components/ranking/RankingEditorial";
 import Link from "next/link";
 export const metadata: Metadata = {
   alternates: { canonical: "/ranking/area" },
-  title: "全国自治体 面積ランキング",
+  title: "面積が広い自治体ランキング｜1位は高山市2,177.61km²・全国市区町村の面積を比較",
   description:
-    "全国自治体の面積(国土地理院公表値)をランキング形式で比較。面積が広い自治体・狭い自治体の特徴がわかります。",
+    "全国市区町村の面積ランキング（国土地理院公表値）。最も広い高山市（2,177.61km²）から最も狭い自治体まで、面積の広い・狭い自治体の特徴もあわせて掲載。",
 };
 
 export default function Page() {
