@@ -13,7 +13,7 @@ import { withTop1 } from "@/lib/rankingMeta";
 
 const baseMetadata: Metadata = {
   alternates: { canonical: "/ranking/school-crowding" },
-  title: "全国自治体 小学校1校あたり子ども人口ランキング",
+  title: "小学校1校あたり子ども人口ランキング｜最大1校2,079人、学校の混み具合を全国比較",
   description:
     "全国自治体の小学校1校あたりの子ども人口(0〜14歳)をランキング形式で比較。子育て世代の転入が続く自治体で学校のキャパシティが追いついていない実態や、逆に児童数が極端に少ない過疎地域の学校維持の実態を紹介します。",
 };

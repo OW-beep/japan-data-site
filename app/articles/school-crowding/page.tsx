@@ -6,7 +6,7 @@ import PersonalNote from "@/components/PersonalNote";
 
 export const metadata = {
   alternates: { canonical: "/articles/school-crowding" },
-  title: "学校規模ランキング分析｜1校2293人の町も",
+  title: "学校規模ランキング分析｜1校2,293人の町と、1校数十人の町の差",
   description:
     "全国自治体の小学校1校あたりの子ども人口を分析。子育て世代の急増に学校整備が追いつかない自治体と、児童数十人でも学校を維持し続ける過疎地域、両極端の実態を紹介します。",
 };

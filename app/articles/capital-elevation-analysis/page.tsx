@@ -7,9 +7,9 @@ import { getCapitalElevationRanking } from "@/lib/capitalElevation";
 
 export const metadata = {
   alternates: { canonical: "/articles/capital-elevation-analysis" },
-  title: "県庁所在地の標高ランキング【47都道府県一覧】日本一は長野市371.5m",
+  title: "県庁所在地の標高ランキング｜1位は長野市371.5m、上位3市はすべて盆地だった",
   description:
-    "国土地理院のデータで都道府県庁所在地の標高を比較。1位長野市(371.5m)・2位甲府市(270.4m)・3位山形市(198.6m)は、いずれも周囲を山に囲まれた「盆地」の都市でした。",
+    "47都道府県庁所在地の標高ランキング。1位は長野市（371.5m）。上位3市（長野・甲府・山形）はいずれも盆地の都市です。なぜ盆地の県庁所在地が高いのかを地形から読み解きます。",
 };
 
 export default function Page() {
